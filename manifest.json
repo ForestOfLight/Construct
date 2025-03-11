@@ -1,0 +1,40 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Canopy Extension Example",
+		"description": "Example extension for §l§aCanopy§r by §aForestOfLight§r.",
+		"uuid": "e4e844d5-f45b-4623-82a7-534d44bb4c6f",
+		"min_engine_version": [1, 21, 60],
+		"version": [1, 0, 0]
+	},
+	"modules": [
+		{
+			"description": "Behavior Pack Module",
+			"type": "data",
+			"uuid": "1ce9eab8-0d4a-4e40-a899-575791a1b40d",
+			"version": [1, 0, 0]
+		},
+		{
+			"description": "Gametest Module",
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/main.js",
+			"uuid": "839a937e-b4f9-4484-84a4-0db984822f25",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.18.0-beta"
+		},
+		{
+			"uuid": "bcf34368-ed0c-4cf7-938e-582cccf9950d", // Canopy RP
+			"version": [1, 0, 2]
+		},
+		{
+			"uuid": "7f6b23df-a583-476b-b0e4-87457e65f7c0", // Canopy BP
+			"version": [1, 3, 8]
+		}
+	]
+}
