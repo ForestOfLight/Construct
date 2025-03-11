@@ -1,4 +1,4 @@
-import { MolangVariableMap, system, world } from "@minecraft/server";
+import { system, world } from "@minecraft/server";
 import { Vector } from "../lib/Vector";
 
 const drawFrequency = 8;
@@ -17,6 +17,7 @@ export class Outliner {
         this.dimension = world.getDimension(dimension);
         this.min = new Vector(min.x, min.y, min.z);
         this.max = new Vector(max.x, max.y, max.z);
+        this.startDraw();
     }
 
     startDraw() {

@@ -1,4 +1,3 @@
-import { world } from '@minecraft/server';
 import { Structure } from './Structure';
 
 class StructureCollection {
@@ -9,8 +8,9 @@ class StructureCollection {
     }
 
     add(name) {
-        const struct = world.structureManager.get(name);
-        this.#structures[name] = new Structure(name, struct);
+        const structure = new Structure(name);
+        this.#structures[name] = structure;
+        return structure;
     }
 
     get(name) {
@@ -25,14 +25,6 @@ class StructureCollection {
         const struct = this.get(name);
         struct.remove();
         delete this.#structures[name];
-    }
-
-    place(name, dimensionId, location) {
-        const struct = this.get(name);
-        if (!struct) {
-            throw new Error(`Structure ${name} not found.`);
-        }
-        struct.place(dimensionId, location);
     }
 }
 
