@@ -1,9 +1,9 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Canopy Extension Example",
-		"description": "Example extension for §l§aCanopy§r by §aForestOfLight§r.",
-		"uuid": "e4e844d5-f45b-4623-82a7-534d44bb4c6f",
+		"name": "StrucTool",
+		"description": "Survival building extension for §l§aCanopy§r by §aForestOfLight§r.",
+		"uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58",
 		"min_engine_version": [1, 21, 60],
 		"version": [1, 0, 0]
 	},
@@ -11,7 +11,7 @@
 		{
 			"description": "Behavior Pack Module",
 			"type": "data",
-			"uuid": "1ce9eab8-0d4a-4e40-a899-575791a1b40d",
+			"uuid": "f4d52ae1-2c26-4938-b8c2-7e455d495620",
 			"version": [1, 0, 0]
 		},
 		{
@@ -19,7 +19,7 @@
 			"type": "script",
 			"language": "javascript",
 			"entry": "scripts/main.js",
-			"uuid": "839a937e-b4f9-4484-84a4-0db984822f25",
+			"uuid": "8bb9a1e4-0531-4b93-8ade-3880bfe1e2fc",
 			"version": [1, 0, 0]
 		}
 	],
@@ -29,6 +29,10 @@
 			"version": "1.18.0-beta"
 		},
 		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.4.0-beta"
+		},
+		{
 			"uuid": "bcf34368-ed0c-4cf7-938e-582cccf9950d", // Canopy RP
 			"version": [1, 0, 2]
 		},
@@ -36,5 +40,9 @@
 			"uuid": "7f6b23df-a583-476b-b0e4-87457e65f7c0", // Canopy BP
 			"version": [1, 3, 8]
 		}
-	]
+	],
+	"metadata": {
+		"authors": [ "ForestOfLight" ],
+		"license": "MIT"
+	}
 }
