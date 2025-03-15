@@ -8,6 +8,9 @@ class StructureCollection {
     }
 
     add(name) {
+        if (this.#structures[name]) {
+            throw new Error(`Structure ${name} already exists.`);
+        }
         const structure = new Structure(name);
         this.#structures[name] = structure;
         return structure;
@@ -25,6 +28,10 @@ class StructureCollection {
         const struct = this.get(name);
         struct.remove();
         delete this.#structures[name];
+    }
+
+    getStructuresAtLocation(location) {
+        return Object.values(this.#structures).filter(structure => structure.isLocationActive(structure.toStructureCoords(location)));
     }
 }
 

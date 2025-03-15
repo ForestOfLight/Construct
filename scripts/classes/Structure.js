@@ -6,7 +6,7 @@ export class Structure {
     #options = {
         isPlaced: false,
         dimensionId: MinecraftDimensionTypes.overworld,
-        location: { x: 0, y: 0, z: 0 },
+        worldLocation: { x: 0, y: 0, z: 0 },
         rotation: 0,
         mirror: false,
         currentLayer: 0
@@ -39,7 +39,7 @@ export class Structure {
     }
 
     getLocation() {
-        return this.#options.location;
+        return this.#options.worldLocation;
     }
 
     getHeight() {
@@ -70,51 +70,34 @@ export class Structure {
         }
     }
 
-    getBlock(location) {
-        return this.#structure.getBlockPermutation(location);
+    getBlock(structureLocation) {
+        return this.#structure.getBlockPermutation(structureLocation);
     }
 
     getBounds() {
+        return {
+            min: { x: 0, y: 0, z: 0 },
+            max: this.#structure.size
+        };
+    }
+
+    getLayeredBounds() {
         if (!this.#options.isPlaced)
             throw new Error(`[StrucTool] Structure '${this.name}' is not placed.`);
         return {
-            min: { 
-                x: this.#options.location.x, 
-                y: this.#options.location.y, 
-                z: this.#options.location.z 
-            },
-            max: { 
-                x: this.#options.location.x + this.#structure.size.x,
-                y: this.#options.location.y + this.#structure.size.y,
-                z: this.#options.location.z + this.#structure.size.z
-            }
-        }
+            min: { x: 0, y: this.#options.currentLayer - 1, z: 0 },
+            max: { x: this.#structure.size.x, y: this.#options.currentLayer, z: this.#structure.size.z }
+        };
     }
 
-    getLayeredBounds(useUnder = false) {
-        if (!this.#options.isPlaced)
-            throw new Error(`[StrucTool] Structure '${this.name}' is not placed.`);
-        if (useUnder) {
-            return {
-                min: { x: this.#options.location.x, y: this.#options.location.y, z: this.#options.location.z },
-                max: { x: this.#options.location.x + this.#structure.size.x, y: this.#options.location.y + this.#options.currentLayer, z: this.#options.location.z + this.#structure.size.z }
-            }
-        } else {
-            return {
-                min: { x: this.#options.location.x, y: this.#options.location.y + this.#options.currentLayer - 1,z: this.#options.location.z },
-                max: { x: this.#options.location.x + this.#structure.size.x, y: this.#options.location.y + this.#options.currentLayer, z: this.#options.location.z + this.#structure.size.z }
-            }
-        }
-    }
-
-    place(dimensionId, location) {
+    place(dimensionId, worldLocation) {
         this.#options = {
             isPlaced: true,
             dimensionId,
-            location: { x: Math.floor(location.x), y: Math.floor(location.y), z: Math.floor(location.z) },
+            worldLocation: { x: Math.floor(worldLocation.x), y: Math.floor(worldLocation.y), z: Math.floor(worldLocation.z) },
         };
         this.updateOptions();
-        this.outliner = new Outliner(dimensionId, this.getBounds().min, this.getBounds().max);
+        this.outliner = new Outliner(dimensionId, this.toGlobalCoords(this.getBounds().min), this.toGlobalCoords(this.getBounds().max));
     }
 
     remove() {
@@ -131,6 +114,45 @@ export class Structure {
         this.#options.currentLayer = layer;
         this.updateOptions();
         this.outliner.stopDraw();
-        this.outliner = new Outliner(this.#options.dimensionId, this.getLayeredBounds().min, this.getLayeredBounds().max);
+        const { min, max } = this.getLayeredBounds();
+        this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(min), this.toGlobalCoords(max));
+    }
+
+    isLocationInStructure(structureLocation) {
+        const { min, max } = this.getBounds();
+        return structureLocation.x >= min.x && structureLocation.x < max.x
+            && structureLocation.y >= min.y && structureLocation.y < max.y
+            && structureLocation.z >= min.z && structureLocation.z < max.z;
+    }
+
+    isLocationInLayer(structureLocation) {
+        const { min, max } = this.getLayeredBounds(true);
+        return structureLocation.x >= min.x && structureLocation.x < max.x
+            && structureLocation.y >= min.y && structureLocation.y < max.y
+            && structureLocation.z >= min.z && structureLocation.z < max.z;
+    }
+
+    isLocationActive(structureLocation) {
+        if (!this.#options.isPlaced)
+            return false
+        if (this.#options.currentLayer > 0)
+            return this.isLocationInLayer(structureLocation);
+        return this.isLocationInStructure(structureLocation);
+    }
+
+    toGlobalCoords(structureLocation) {
+        return {
+            x: this.#options.worldLocation.x + structureLocation.x,
+            y: this.#options.worldLocation.y + structureLocation.y,
+            z: this.#options.worldLocation.z + structureLocation.z
+        };
+    }
+
+    toStructureCoords(worldLocation) {
+        return {
+            x: worldLocation.x - this.#options.worldLocation.x,
+            y: worldLocation.y - this.#options.worldLocation.y,
+            z: worldLocation.z - this.#options.worldLocation.z
+        };
     }
 }

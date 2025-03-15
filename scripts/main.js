@@ -1,4 +1,5 @@
 // Rules
+import './rules/easyPlace';
 
 // Commands
-import './commands/struct.js';
+import './commands/struct';
