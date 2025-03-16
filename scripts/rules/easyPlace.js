@@ -1,8 +1,9 @@
 import { Rule } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
-import { EntityComponentTypes, GameMode, system, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { structureCollection } from '../classes/StructureCollection';
-import { bannedEasyPlaceBlocks } from '../data';
+import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
+    blockIdToItemStackMap } from '../data';
 
 const easyPlace = new Rule({
     identifier: 'easyPlace',
@@ -16,9 +17,8 @@ function onPlayerPlaceBlock(event) {
     const { player, block } = event;
     if (!player || !block) return;
     const structureBlock = fetchStructureBlock(block.location);
-    if (!structureBlock || isBannedBlock(structureBlock))
+    if (!structureBlock)
         return;
-    const states = structureBlock.getAllStates();
     tryPlaceBlock(event, player, block, structureBlock);
 }
 
@@ -30,36 +30,76 @@ function fetchStructureBlock(location) {
     return structure.getBlock(structure.toStructureCoords(location));
 }
 
-function isBannedBlock(structureBlock) {
-    return bannedEasyPlaceBlocks.some(bannedId => structureBlock.type.id.replace('minecraft:', '') === bannedId);
-}
-
 function tryPlaceBlock(event, player, block, structureBlock) {
+    if (isBannedBlock(player, structureBlock)) return;
+    structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
         placeBlock(block, structureBlock);
     } else if (player.getGameMode() === GameMode.survival) {
+        structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(event, player, block, structureBlock);
     }
 }
 
+function isBannedBlock(player, structureBlock) {
+    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    if (bannedBlocks.includes(blockId))
+        return true;
+    if (bannedDimensionBlocks[player.dimension.id.replace('minecraft:', '')]?.includes(blockId))
+        return true;
+    const allowedStates = whitelistedBlockStates[blockId];
+    if (allowedStates) {
+        for (const [stateKey, stateValue] of Object.entries(allowedStates)) {
+            if (structureBlock.getState(stateKey) !== stateValue)
+                return true;
+        }
+    }
+    return false;
+}
+
+function tryConvertBannedToValidBlock(structureBlock) {
+    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    if (Object.keys(bannedToValidBlockMap).includes(blockId))
+        return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.getAllStates());
+    return structureBlock;
+}
+
+function tryConvertToDefaultState(structureBlock) {
+    const newStates = {};
+    for (const [stateKey, stateValue] of Object.entries(structureBlock.getAllStates())) {
+        if (resetToBlockStates[stateKey] !== void 0 && stateValue !== resetToBlockStates[stateKey])
+            newStates[stateKey] = resetToBlockStates[stateKey];
+        else
+            newStates[stateKey] = stateValue;
+    }
+    return BlockPermutation.resolve(structureBlock.type.id, newStates);
+}
+
 function tryPlaceBlockSurvival(event, player, block, structureBlock) {
-    const itemSlotToUse = fetchMatchingItemSlot(player, structureBlock);
+    const placeableItemStack = getPlaceableItemStack(structureBlock);
+    console.warn(`Looking for item to place ${structureBlock?.type.id} (${placeableItemStack?.typeId})...`);
+    const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
         event.cancel = true;
         placeBlock(block, structureBlock, itemSlotToUse);
     }
 }
 
-function fetchMatchingItemSlot(player, structureBlock) {
-    const itemToMatch = structureBlock.getItemStack();
-    if (!itemToMatch)
+function getPlaceableItemStack(structureBlock) {
+    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const newItemId = blockIdToItemStackMap[blockId];
+    return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
+}
+
+function fetchMatchingItemSlot(player, itemToMatchId) {
+    if (!itemToMatchId)
         return void 0;
     const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
     if (!inventory)
         return void 0;
     for (let index = 0; index < inventory.size; index++) {
         const itemSlot = inventory.getSlot(index);
-        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatch.typeId)
+        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
             return itemSlot;
     }
 }
@@ -67,11 +107,23 @@ function fetchMatchingItemSlot(player, structureBlock) {
 function placeBlock(block, structureBlock, itemSlot) {
     system.run(() => {
         if (itemSlot) {
-            if (itemSlot.amount === 1)
-                itemSlot.setItem(void 0);
-            else
-                itemSlot.amount--;
+            consumeItem(itemSlot);
         }
         block.setPermutation(structureBlock);
     });
+}
+
+function consumeItem(itemSlot) {
+    if (specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]) {
+        consumeSpecial(itemSlot);
+    } else {
+        if (itemSlot.amount === 1)
+            itemSlot.setItem(void 0);
+        else
+            itemSlot.amount--;
+    }
+}
+
+function consumeSpecial(itemSlot) {
+    itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
 }

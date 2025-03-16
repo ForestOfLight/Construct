@@ -1,22 +1,32 @@
-export const bannedEasyPlaceBlocks = [
-    'air', 'bed', 
+export const bannedBlocks = [
+    'air', 'bed', 'piston_arm_collision', 'sticky_piston_arm_collision', "skeleton_skull", 'standing_banner', 'wall_banner',
     'wooden_door', 'spruce_door', 'birch_door', 'jungle_door', 'acacia_door', 'dark_oak_door', 'mangrove_door', 'cherry_door', 'pale_oak_door', 
     'bamboo_door', 'iron_door', 'crimson_door', 'warped_door', 'copper_door', 'exposed_copper_door', 'weathered_copper_door', 'oxidized_copper_door',
     'waxed_copper_door', 'waxed_exposed_copper_door', 'waxed_weathered_copper_door', 'waxed_oxidized_copper_door',
-    'piston_arm_collision', 'sticky_piston_arm_collision', "skeleton_skull"
+    'seagrass', 'kelp'
 ];
+
+export const bannedDimensionBlocks = {
+    'overworld': [],
+    'nether': ['water'],
+    'end': []
+};
+
+export const whitelistedBlockStates = {
+    'water': { liquid_depth: 0 },
+    'lava': { liquid_depth: 0 }
+};
 
 export const bannedToValidBlockMap = {
     'lit_furnace': 'furnace',
     'lit_smoker': 'smoker',
     'lit_blast_furnace': 'blast_furnace',
     'lit_redstone_ore': 'redstone_ore',
-    'unlit_redstone_torch': 'redstone_torch',
-    'bubble_column': 'water',
-    // 'seagrass'? 'tall_seagrass'? kelp?
+    'lit_redstone_lamp': 'redstone_lamp',
+    'unlit_redstone_torch': 'redstone_torch'
 };
 
-export const defaultStates = {
+export const resetToBlockStates = {
     growth: 0,
     age: 0,
     height: 0,
@@ -25,15 +35,49 @@ export const defaultStates = {
     redstone_signal: 0,
     cluster_count: 0,
     respawn_anchor_charge: 0,
-    turtle_egg_count: "one_egg",
-    cauldron_liquid: "water"
+    turtle_egg_count: 0,
+    cluster_count: 0
 };
 
-export const allowedBlockStates = {
-    water: { depth_level: 0 },
-    lava: { depth_level: 0 }
+export const chainedStatePlacements = {
+    cauldron: {
+        cauldron_liquid: {
+            water: ['water_bucket'],
+            lava: ['lava_bucket']
+        }
+    },
+    sea_pickle: {
+        cluster_count: {
+            1: ['sea_pickle'],
+            2: ['sea_pickle', 'sea_pickle'],
+            3: ['sea_pickle', 'sea_pickle', 'sea_pickle']
+        }
+    },
+    turtle_egg: {
+        turtle_egg_count: {
+            two_eggs: ['turtle_egg'],
+            three_eggs: ['turtle_egg', 'turtle_egg'],
+            four_eggs: ['turtle_egg', 'turtle_egg', 'turtle_egg']
+        }
+    },
+    respawn_anchor: {
+        respawn_anchor_charge: {
+            1: ['glowstone'],
+            2: ['glowstone', 'glowstone'],
+            3: ['glowstone', 'glowstone', 'glowstone'],
+            4: ['glowstone', 'glowstone', 'glowstone', 'glowstone']
+        }
+    }
 };
 
-export const bannedDimensionBlocks = {
-    'nether': ['water', 'bubble_column']
+export const blockIdToItemStackMap = {
+    'water': 'water_bucket',
+    'lava': 'lava_bucket',
+    'fire': 'fire_charge',
+    'soul_fire': 'fire_charge',
 };
+
+export const specialItemPlacementConversions = {
+    'water_bucket': 'bucket',
+    'lava_bucket': 'bucket'
+}
