@@ -1,54 +1,56 @@
 import { Rule } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
-import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
-import { structureCollection } from '../classes/StructureCollection';
+import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
+import { Raycaster } from '../classes/Raycaster';
 
-const ARROW_SLOT = 35;
-
+let runner = void 0;
 const easyPlace = new Rule({
-    identifier: 'easyPlace',
-    description: { text: 'Simplifies placing blocks in a structure (arrow in bottom right inventory slot).' },
-    onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
-    onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
+    identifier: 'fastEasyPlace',
+    description: { text: 'Looking at structure blocks with an arrow in your hand will place them.' },
+    onEnableCallback: () => { runner = system.runInterval(onTick, 2); },
+    onDisableCallback: () => { system.clearRun(runner); }
 })
 extension.addRule(easyPlace);
 
-function onPlayerPlaceBlock(event) {
-    const { player, block } = event;
-    if (!player || !block || !hasArrowInCorrectSlot(player)) return;
-    const structureBlock = fetchStructureBlock(block.location);
+function onTick() {
+    for (const player of world.getAllPlayers()) {
+        if (!player)
+            continue;
+        processEasyPlace(player);
+    }
+}
+
+function processEasyPlace(player) {
+    if (!player || !isHoldingArrow(player)) return;
+    const structureBlock = Raycaster.getTargetedStructureBlock(player, { isFirst: true });
     if (!structureBlock)
         return;
-    tryPlaceBlock(event, player, block, structureBlock);
+    const worldBlock = player.dimension.getBlock(structureBlock.location);
+    tryPlaceBlock(player, worldBlock, structureBlock.permutation);
 }
 
-function hasArrowInCorrectSlot(player) {
-    const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!inventory)
+function isHoldingArrow(player) {
+    const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
+    if (!mainhandItemStack)
         return false;
-    const arrowSlot = inventory.getSlot(ARROW_SLOT);
-    return arrowSlot.hasItem() && arrowSlot.typeId === 'minecraft:arrow';
+    return mainhandItemStack.typeId === 'minecraft:arrow';
 }
 
-function fetchStructureBlock(location) {
-    const locatedStructures = structureCollection.getStructuresAtLocation(location);
-    if (locatedStructures.length === 0)
-        return void 0;
-    const structure = locatedStructures[0];
-    return structure.getBlock(structure.toStructureCoords(location));
-}
-
-function tryPlaceBlock(event, player, block, structureBlock) {
-    if (isBannedBlock(player, structureBlock)) return;
+function tryPlaceBlock(player, worldBlock, structureBlock) {
+    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(worldBlock)) return;
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
-        placeBlock(block, structureBlock);
+        placeBlock(worldBlock, structureBlock);
     } else if (player.getGameMode() === GameMode.survival) {
         structureBlock = tryConvertToDefaultState(structureBlock);
-        tryPlaceBlockSurvival(event, player, block, structureBlock);
+        tryPlaceBlockSurvival(player, worldBlock, structureBlock);
     }
+}
+
+function locationIsPlaceable(worldBlock) {
+    return worldBlock.isAir;
 }
 
 function isBannedBlock(player, structureBlock) {
@@ -85,12 +87,11 @@ function tryConvertToDefaultState(structureBlock) {
     return BlockPermutation.resolve(structureBlock.type.id, newStates);
 }
 
-function tryPlaceBlockSurvival(event, player, block, structureBlock) {
+function tryPlaceBlockSurvival(player, block, structureBlock) {
     const placeableItemStack = getPlaceableItemStack(structureBlock);
     // console.warn(`Looking for item to place ${structureBlock?.type.id} (${placeableItemStack?.typeId})...`);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
-        event.cancel = true;
         placeBlock(block, structureBlock, itemSlotToUse);
     }
 }

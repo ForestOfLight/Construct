@@ -1,7 +1,6 @@
 import { Command } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
 import { structureCollection } from '../classes/StructureCollection';
-import { system } from '@minecraft/server';
 import { MaterialCounter } from '../classes/MaterialCounter';
 
 const structCmd = new Command({

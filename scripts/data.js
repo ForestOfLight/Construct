@@ -39,37 +39,6 @@ export const resetToBlockStates = {
     cluster_count: 0
 };
 
-export const chainedStatePlacements = {
-    cauldron: {
-        cauldron_liquid: {
-            water: ['water_bucket'],
-            lava: ['lava_bucket']
-        }
-    },
-    sea_pickle: {
-        cluster_count: {
-            1: ['sea_pickle'],
-            2: ['sea_pickle', 'sea_pickle'],
-            3: ['sea_pickle', 'sea_pickle', 'sea_pickle']
-        }
-    },
-    turtle_egg: {
-        turtle_egg_count: {
-            two_eggs: ['turtle_egg'],
-            three_eggs: ['turtle_egg', 'turtle_egg'],
-            four_eggs: ['turtle_egg', 'turtle_egg', 'turtle_egg']
-        }
-    },
-    respawn_anchor: {
-        respawn_anchor_charge: {
-            1: ['glowstone'],
-            2: ['glowstone', 'glowstone'],
-            3: ['glowstone', 'glowstone', 'glowstone'],
-            4: ['glowstone', 'glowstone', 'glowstone', 'glowstone']
-        }
-    }
-};
-
 export const blockIdToItemStackMap = {
     'water': 'water_bucket',
     'lava': 'lava_bucket',

@@ -33,6 +33,14 @@ class StructureCollection {
     getStructuresAtLocation(location) {
         return Object.values(this.#structures).filter(structure => structure.isLocationActive(structure.toStructureCoords(location)));
     }
+
+    fetchStructureBlock(location) {
+        const locatedStructures = this.getStructuresAtLocation(location);
+        if (locatedStructures.length === 0)
+            return void 0;
+        const structure = locatedStructures[0];
+        return structure.getBlock(structure.toStructureCoords(location));
+    }
 }
 
 export const structureCollection = new StructureCollection();
