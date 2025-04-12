@@ -1,13 +1,12 @@
 import { Command } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
 import { structureCollection } from '../classes/StructureCollection';
-import { system } from '@minecraft/server';
 import { MaterialCounter } from '../classes/MaterialCounter';
 
 const structCmd = new Command({
     name: 'struct',
     description: { text: 'Manages current StrucTool structures.' },
-    usage: 'struct',
+    usage: 'struct <name> <add/remove/place/layer/info> [args...]',
     callback: structCommand,
     args: [
         { type: 'string', name: 'name' },
@@ -41,7 +40,17 @@ function structCommand(sender, args) {
 }
 
 function addStructure(sender, name) {
-    structureCollection.add(name);
+    try {
+        structureCollection.add(name);
+    } catch (e) {
+        if (e.message.includes('already exists')) {
+            sender.sendMessage({ text: `§cStructure '${name}' already exists.` });
+            return;
+        } else {
+            sender.sendMessage({ text: `§cFailed to add structure '${name}'.` });
+            throw e;
+        }
+    }
     sender.sendMessage({ text: `§7Added structure '${name}'` });
 }
 
@@ -63,8 +72,16 @@ function placeStructure(sender, name) {
         try {
             structure = structureCollection.add(name);
         } catch (e) {
-            sender.sendMessage({ text: `§cStructure '${name}' not found.` });
-            return;
+            if (e.message.includes('already exists')) {
+                sender.sendMessage({ text: `§cStructure '${name}' already exists.` });
+                return;
+            } else if (e.message.includes('not found')) {
+                sender.sendMessage({ text: `§cStructure '${name}' not found.` });
+                return;
+            } else {
+                sender.sendMessage({ text: `§cFailed to place structure '${name}'.` });
+                throw e;
+            }
         }
     }
     structure.place(sender.dimension.id, sender.location);

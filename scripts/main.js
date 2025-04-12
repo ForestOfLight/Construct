@@ -1,4 +1,9 @@
 // Rules
+import './rules/easyPlace';
+import './rules/fastEasyPlace';
 
 // Commands
-import './commands/struct.js';
+import './commands/struct';
+
+// Other
+import './classes/BlockInfo';
