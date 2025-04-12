@@ -1,11 +1,11 @@
-import { MinecraftDimensionTypes, world } from "@minecraft/server";
+import { world } from "@minecraft/server";
 import { Outliner } from "./Outliner";
 
 export class Structure {
     #structure;
     #options = {
         isPlaced: false,
-        dimensionId: MinecraftDimensionTypes.overworld,
+        dimensionId: 'minecraft:overworld',
         worldLocation: { x: 0, y: 0, z: 0 },
         rotation: 0,
         mirror: false,
