@@ -5,11 +5,11 @@ import { structureCollection } from '../classes/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 
-const ARROW_SLOT = 35;
+const ACTION_SLOT = 35;
 
 const easyPlace = new Rule({
     identifier: 'easyPlace',
-    description: { text: 'Simplifies placing blocks in a structure (arrow in bottom right inventory slot).' },
+    description: { text: 'Simplifies placing blocks in a structure (paper in bottom right inventory slot).' },
     onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
     onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
 })
@@ -17,19 +17,19 @@ extension.addRule(easyPlace);
 
 function onPlayerPlaceBlock(event) {
     const { player, block } = event;
-    if (!player || !block || !hasArrowInCorrectSlot(player)) return;
+    if (!player || !block || !hasActionItemInCorrectSlot(player)) return;
     const structureBlock = fetchStructureBlock(block.location);
     if (!structureBlock)
         return;
     tryPlaceBlock(event, player, block, structureBlock);
 }
 
-function hasArrowInCorrectSlot(player) {
+function hasActionItemInCorrectSlot(player) {
     const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
     if (!inventory)
         return false;
-    const arrowSlot = inventory.getSlot(ARROW_SLOT);
-    return arrowSlot.hasItem() && arrowSlot.typeId === 'minecraft:arrow';
+    const actionSlot = inventory.getSlot(ACTION_SLOT);
+    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper';
 }
 
 function fetchStructureBlock(location) {
