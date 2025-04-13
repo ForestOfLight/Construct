@@ -53,11 +53,14 @@ class StructureCollection {
         return Object.values(this.structures).filter(structure => structure.isLocationActive(dimensionId, structure.toStructureCoords(location), options));
     }
 
+    getStructure(dimensionId, location, options = {}) {
+        return this.getStructures(dimensionId, location, options)[0];
+    }
+
     fetchStructureBlock(dimensionId, location) {
-        const locatedStructures = this.getStructures(dimensionId, location);
-        if (locatedStructures.length === 0)
+        const structure = this.getStructure(dimensionId, location);
+        if (!structure)
             return void 0;
-        const structure = locatedStructures[0];
         return structure.getBlock(structure.toStructureCoords(location));
     }
 
@@ -70,7 +73,7 @@ class StructureCollection {
     rename(instanceName, newName) {
         const structure = this.get(instanceName);
         if (this.structures[newName])
-            throw new Error(`Instance ${newName} already exists.`);
+            throw new Error(`Instance '${newName}' already exists.`);
         structure.rename(newName);
         this.structures[newName] = structure;
         delete this.structures[instanceName];

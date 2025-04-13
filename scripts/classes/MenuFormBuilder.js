@@ -46,7 +46,7 @@ export class MenuFormBuilder {
         let body = "How to Add Structures:\n"
         body += "§7- Save a structure using a structure block or the /structure command.\n"
         body += "§7OR\n"
-        body += "§7- Add a mcstructure file to this pack's structures folder. It will not appear in the list of structures, so enter the filename (without '.mcstructure') as the Structure ID.";
+        body += "§7- Add a .mcstructure file to this pack's structures folder. When selecting your structure, select the 'Other' option and then use the filename (without '.mcstructure') as the Structure ID. After its first use, it will be added to the list of structures.";
         return new ActionFormData()
             .title(this.menuTitle)
             .body(body);

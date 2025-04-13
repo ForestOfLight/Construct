@@ -110,8 +110,13 @@ export class InstanceEditForm {
                 this.player.sendMessage('§cInstance name cannot be empty.');
                 return;
             }
-            structureCollection.rename(this.instanceName, newName);
-            this.instanceName = newName;
+            try {
+                structureCollection.rename(this.instanceName, newName);
+                this.instanceName = newName;
+            } catch (e) {
+                this.player.sendMessage(`§cError renaming instance: ${e.message}`);
+                return;
+            }
         });
     }
 

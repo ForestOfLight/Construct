@@ -59,6 +59,10 @@ export class StructureInstance {
         return this.#structure;
     }
 
+    getStructureId() {
+        return this.#options.structureId;
+    }
+
     getLocation() {
         return { dimensionId: this.#options.dimensionId, location: this.#options.worldLocation };
     }

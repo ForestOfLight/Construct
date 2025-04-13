@@ -10,9 +10,8 @@ export class Raycaster {
         let location = startLocation;
         let distance = 0;
         while (distance < maxDistance) {
-            const locatedStructures = structureCollection.getStructures(dimension.id, location, { useLayers });
-            if (locatedStructures.length !== 0) {
-                const structure = locatedStructures[0];
+            const structure = structureCollection.getStructure(dimension.id, location, { useLayers });
+            if (structure) {
                 const block = structure.getBlock(structure.toStructureCoords(location));
                 if (block?.type.id !== 'minecraft:air') {
                     blocks.push({
@@ -22,8 +21,14 @@ export class Raycaster {
                     if (getFirst)
                         break;
                 }
-                if (collideWithWorldBlocks && !dimension.getBlock(location)?.isAir)
-                    break;
+                try {
+                    if (collideWithWorldBlocks && !dimension.getBlock(location)?.isAir)
+                        break;
+                } catch (e) {
+                    if (e.name === 'LocationOutOfWorldBoundariesError')
+                        break;
+                    throw e;
+                }
             }
             location = {
                 x: location.x + (direction.x*this.STEP_SIZE),

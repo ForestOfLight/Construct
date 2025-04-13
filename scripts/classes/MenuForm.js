@@ -2,7 +2,6 @@ import { forceShow } from '../utils';
 import { structureCollection } from './StructureCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceEditForm } from './InstanceEditForm';
-import { world } from '@minecraft/server';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = true } = {}) {
@@ -13,7 +12,7 @@ export class MenuForm {
     async show(jumpToInstance = true) {
         let instanceName;
         if (jumpToInstance) {
-            instanceName = this.getInstanceNameAtLocation();
+            instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useLayers: false })?.name;
             if (instanceName) {
                 new InstanceEditForm(this.player, instanceName);
                 return;
@@ -23,14 +22,6 @@ export class MenuForm {
         if (!instanceName)
             return;
         new InstanceEditForm(this.player, instanceName);
-    }
-
-    getInstanceNameAtLocation() {
-        const locatedStructures = structureCollection.getStructures(this.player.dimension.id, this.player.location, { useLayers: false });
-        if (locatedStructures.length === 0)
-            return void 0;
-        const structure = locatedStructures[0];
-        return structure.name;
     }
 
     async getInstanceNameFromForm() {
