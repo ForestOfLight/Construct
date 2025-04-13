@@ -1,4 +1,5 @@
 import { structureCollection } from "./StructureCollection";
+import { world } from "@minecraft/server";
 
 export class Raycaster {
     static STEP_SIZE = 0.2;
@@ -9,12 +10,10 @@ export class Raycaster {
         let location = startLocation;
         let distance = 0;
         while (distance < maxDistance) {
-            const locatedStructures = structureCollection.getStructuresAtLocation(location);
+            const locatedStructures = structureCollection.getStructures(dimension.id, location);
             if (locatedStructures.length !== 0) {
                 const structure = locatedStructures[0];
                 const block = structure.getBlock(structure.toStructureCoords(location));
-                if (collideWithWorldBlocks && !dimension.getBlock(location)?.isAir)
-                    break;
                 if (block?.type.id !== 'minecraft:air') {
                     blocks.push({
                         permutation: block,
@@ -23,6 +22,8 @@ export class Raycaster {
                     if (getFirst)
                         break;
                 }
+                if (collideWithWorldBlocks && !dimension.getBlock(location)?.isAir)
+                    break;
             }
             location = {
                 x: location.x + (direction.x*this.STEP_SIZE),

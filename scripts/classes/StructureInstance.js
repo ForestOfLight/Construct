@@ -2,10 +2,12 @@ import { world } from "@minecraft/server";
 import { Outliner } from "./Outliner";
 
 export class StructureInstance {
+    name;
     #structure;
     #options = {
-        isPlaced: false,
-        dimensionId: 'minecraft:overworld',
+        structureId: void 0,
+        isEnabled: false,
+        dimensionId: void 0,
         worldLocation: { x: 0, y: 0, z: 0 },
         rotation: 0,
         mirror: false,
@@ -14,13 +16,14 @@ export class StructureInstance {
 
     constructor(instanceName, structureId) {
         this.name = instanceName;
-        this.structureId = structureId;
         this.#structure = world.structureManager.get(structureId);
-        if (!this.#structure) {
-            throw new Error(`[StrucTool] Structure '${this.structureId}' not found.`);
-        }
+        if (!this.#structure)
+            throw new Error(`[StrucTool] Structure '${structureId}' not found.`);
         this.#options = this.loadOptions();
-        this.#options.isPlaced = false;
+        this.#options.structureId = structureId;
+        if (this.#options.isEnabled)
+            this.refreshOutliner();
+        this.updateOptions();
     }
 
     loadOptions() {
@@ -30,6 +33,21 @@ export class StructureInstance {
             world.setDynamicProperty(`structOptions:${this.name}`, JSON.stringify(this.#options));
         }
         return this.#options;
+    }
+
+    delete() {
+        this.disable();
+        world.setDynamicProperty(`structOptions:${this.name}`, void 0);
+        this.#structure = void 0;
+        this.#options = void 0;
+        delete this.outliner;
+    }
+
+    static parseOptions(instanceName) {
+        const options = JSON.parse(world.getDynamicProperty(`structOptions:${instanceName}`));
+        if (!options)
+            throw new Error(`[StrucTool] Instance '${instanceName}' not found.`);
+        return options;
     }
 
     updateOptions() {
@@ -84,7 +102,7 @@ export class StructureInstance {
     }
 
     getLayeredBounds() {
-        if (!this.#options.isPlaced)
+        if (!this.#options.isEnabled)
             throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
         return {
             min: { x: 0, y: this.#options.currentLayer - 1, z: 0 },
@@ -92,22 +110,30 @@ export class StructureInstance {
         };
     }
 
-    place(dimensionId, worldLocation) {
-        this.#options.isPlaced = true;
-        this.move(dimensionId, worldLocation);
+    rename(newName) {
+        world.setDynamicProperty(`structOptions:${this.name}`, void 0);
+        this.name = newName;
+        world.setDynamicProperty(`structOptions:${this.name}`, JSON.stringify(this.#options));
     }
 
-    removePlacement() {
-        if (!this.#options.isPlaced)
-            throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
-        this.#options.isPlaced = false;
+    place(dimensionId, worldLocation) {
+        this.move(dimensionId, worldLocation);
+        this.enable();
+    }
+
+    enable() {
+        this.#options.isEnabled = true;
+        this.updateOptions();
+        this.refreshOutliner();
+    }
+
+    disable() {
+        this.#options.isEnabled = false;
         this.updateOptions();
         this.outliner.stopDraw();
     }
 
     move(dimensionId, location) {
-        if (!this.#options.isPlaced)
-            throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
         this.#options.dimensionId = dimensionId;
         this.#options.worldLocation = { x: Math.floor(location.x), y: Math.floor(location.y), z: Math.floor(location.z) };
         this.updateOptions();
@@ -116,13 +142,15 @@ export class StructureInstance {
 
     setLayer(layer) {
         if (layer < 0 || layer > this.#structure.size.y)
-            throw new Error(`[StrucTool] Instance '${this.name}' of '${this.structureId}' does not have layer ${layer}.`);
+            throw new Error(`[StrucTool] Layer ${layer} is out of bounds.`);
         this.#options.currentLayer = layer;
         this.updateOptions();
         this.refreshOutliner();
     }
 
     refreshOutliner() {
+        if (!this.#options.isEnabled)
+            return;
         if (this.outliner)
             this.outliner.stopDraw();
         if (this.#options.currentLayer > 0) {
@@ -133,26 +161,30 @@ export class StructureInstance {
         }
     }
 
-    isLocationInStructure(structureLocation) {
+    isLocationInStructure(dimensionId, structureLocation) {
+        if (this.#options.dimensionId !== dimensionId)
+            return false
         const { min, max } = this.getBounds();
         return structureLocation.x >= min.x && structureLocation.x < max.x
             && structureLocation.y >= min.y && structureLocation.y < max.y
             && structureLocation.z >= min.z && structureLocation.z < max.z;
     }
 
-    isLocationInLayer(structureLocation) {
+    isLocationInLayer(dimensionId, structureLocation) {
+        if (!this.#options.isEnabled || this.#options.dimensionId !== dimensionId)
+            return false
         const { min, max } = this.getLayeredBounds(true);
         return structureLocation.x >= min.x && structureLocation.x < max.x
             && structureLocation.y >= min.y && structureLocation.y < max.y
             && structureLocation.z >= min.z && structureLocation.z < max.z;
     }
 
-    isLocationActive(structureLocation) {
-        if (!this.#options.isPlaced)
+    isLocationActive(dimensionId, structureLocation, { useLayers = true } = {}) {
+        if (!this.#options.isEnabled || this.#options.dimensionId !== dimensionId)
             return false
-        if (this.#options.currentLayer > 0)
-            return this.isLocationInLayer(structureLocation);
-        return this.isLocationInStructure(structureLocation);
+        if (useLayers && this.#options.currentLayer !== 0)
+            return this.isLocationInLayer(dimensionId, structureLocation);
+        return this.isLocationInStructure(dimensionId, structureLocation);
     }
 
     toGlobalCoords(structureLocation) {
@@ -171,7 +203,37 @@ export class StructureInstance {
         };
     }
 
-    isPlaced() {
-        return this.#options.isPlaced;
+    isEnabled() {
+        return this.#options.isEnabled;
+    }
+
+    hasLocation() {
+        return this.#options.dimensionId && this.#options.worldLocation.x !== 0 && this.#options.worldLocation.y !== 0 && this.#options.worldLocation.z !== 0;
+    }
+
+    hasLayers() {
+        return this.#structure.size.y > 1;
+    }
+
+    isAtMaxLayer() {
+        return !this.hasLayers || this.#options.currentLayer >= this.#structure.size.y;
+    }
+
+    isAtMinLayer() {
+        return !this.hasLayers || this.#options.currentLayer <= 0;
+    }
+
+    increaseLayer() {
+        if (this.isAtMaxLayer())
+            this.setLayer(0);
+        else
+            this.setLayer(this.#options.currentLayer + 1);
+    }
+
+    decreaseLayer() {
+        if (this.isAtMinLayer())
+            this.setLayer(this.#structure.size.y);
+        else
+            this.setLayer(this.#options.currentLayer - 1);
     }
 }

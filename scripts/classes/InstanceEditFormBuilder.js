@@ -2,23 +2,24 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from './MenuFormBuilder';
 
 export class InstanceEditFormBuilder {
-    static buildInstance(instanceName, currentOptions, commonOptions) {
+    static buildInstance(instance, options) {
+        const location = instance.getLocation();
         const form = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-            .body(`Instance: §2${instanceName}`)
-        currentOptions.forEach(option => {
-            form.button(`${option}`);
-        });
-        commonOptions.forEach(option => {
+        let body = `Instance: §2${instance.name}\n`;
+        if (instance.hasLocation())
+            body += `§7(${location.location.x} ${location.location.y} ${location.location.z} in ${location.dimensionId})\n`;
+        form.body(body);
+        options.forEach(option => {
             form.button(`${option}`);
         });
         return form;
     }
 
-    static buildRenameInstance() {
+    static buildRenameInstance(currentName) {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
-            .textField('Enter a new name for the instance:', 'example_instance')
+            .textField('Enter a new name for the instance:', currentName)
             .submitButton('Rename');
     }
 

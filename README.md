@@ -30,13 +30,11 @@ Removes a structure.
 
 ## Roadmap
 
-- [ ] place structure using form **(in progress)**
+- [x] Form to manage structure
 - [x] easyPlace rule
-- [x] Make a viewable material list
-- [ ] Make automatic material gathering from inventories
-- [ ] structure movement & rotation
-- [ ] structuraMode & holoprintMode rules for ease of use
-- [ ] more litematica features!
+- [ ] Automatic material gathering from inventories
+- [ ] Structure movement & rotation
+- [ ] More litematica features!
 
 ## Issues & Suggestions
 

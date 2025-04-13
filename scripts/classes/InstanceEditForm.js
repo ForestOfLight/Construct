@@ -1,27 +1,28 @@
 import { structureCollection } from './StructureCollection';
 import { MenuForm } from '../classes/MenuForm';
-import { ActionFormData } from '@minecraft/server-ui';
 import { InstanceEditOptions } from './InstanceEditOptions';
 import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
 
 export class InstanceEditForm {
     instanceName;
-    options = {
-        isPlaced: [
+    #buttons = {
+        isEnabled: [
             InstanceEditOptions.NextLayer,
             InstanceEditOptions.PreviousLayer,
             InstanceEditOptions.SetLayer,
             InstanceEditOptions.Move,
-            InstanceEditOptions.Rotate,
-            InstanceEditOptions.Mirror,
-            InstanceEditOptions.RemovePlacement,
+            InstanceEditOptions.RenameInstance,
+            InstanceEditOptions.DisableInstance,
         ],
-        notPlaced: [
-            InstanceEditOptions.PlaceInstance
+        isNotEnabledAndIsNotPlaced: [
+            InstanceEditOptions.PlaceInstance,
+            InstanceEditOptions.RenameInstance
+        ],
+        isNotEnabledButIsPlaced: [
+            InstanceEditOptions.EnableInstance,
+            InstanceEditOptions.RenameInstance
         ],
         common: [
-            InstanceEditOptions.MaterialsList,
-            InstanceEditOptions.RenameInstance,
             InstanceEditOptions.DeleteInstance,
             InstanceEditOptions.MainMenu
         ]
@@ -35,57 +36,65 @@ export class InstanceEditForm {
     }
 
     show() {
-        const currentOptions = this.instance.isPlaced() ? this.options.isPlaced : this.options.notPlaced;
-        InstanceEditFormBuilder.buildInstance(this.instanceName, currentOptions, this.options.common).show(this.player).then((response) => {
+        const currentOptions = this.getActiveOptions();
+        InstanceEditFormBuilder.buildInstance(this.instance, currentOptions).show(this.player).then((response) => {
             if (response.canceled) return;
-            let selectedOption;
-            if (this.instance.isPlaced())
-                selectedOption = this.options.isPlaced[response.selection] || this.options.common[response.selection-this.options.isPlaced.length];
-            else
-                selectedOption = this.options.notPlaced[response.selection] || this.options.common[response.selection-this.options.notPlaced.length];
-            this.handleOption(selectedOption);
+            this.handleOption(currentOptions[response.selection]);
         });
+    }
+
+    getActiveOptions() {
+        let currentOptions = [];
+        if (this.instance.isEnabled())
+            currentOptions = this.#buttons.isEnabled;
+        else if (this.instance.hasLocation())
+            currentOptions = this.#buttons.isNotEnabledButIsPlaced;
+        else
+            currentOptions = this.#buttons.isNotEnabledAndIsNotPlaced;
+        currentOptions = currentOptions.concat(this.#buttons.common);
+
+        if (!this.instance.hasLayers())
+            currentOptions = currentOptions.filter(option => 
+                option !== InstanceEditOptions.SetLayer
+                && option !== InstanceEditOptions.NextLayer
+                && option !== InstanceEditOptions.PreviousLayer
+            );
+        return currentOptions;
     }
 
     handleOption(option) {
         switch (option) {
+            case InstanceEditOptions.EnableInstance:
+                this.instance.enable();
+                break;
+            case InstanceEditOptions.DisableInstance:
+                this.instance.disable();
+                break;
             case InstanceEditOptions.PlaceInstance:
                 this.instance.place(this.player.dimension.id, this.player.location);
-                break;
-            case InstanceEditOptions.RemovePlacement:
-                this.instance.removePlacement();
                 break;
             case InstanceEditOptions.RenameInstance:
                 this.renameInstanceForm();
                 break;
             case InstanceEditOptions.DeleteInstance:
-                this.structureCollection.remove(this.instanceName);
+                structureCollection.delete(this.instanceName);
                 break;
             case InstanceEditOptions.NextLayer:
-                this.instance.setLayer(this.instance.getLayer() + 1);
+                this.instance.increaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
             case InstanceEditOptions.PreviousLayer:
-                this.instance.setLayer(this.instance.getLayer() - 1);
+                this.instance.decreaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
             case InstanceEditOptions.SetLayer:
                 this.setLayerForm();
                 break;
-            case InstanceEditOptions.Rotate:
-                this.player.sendMessage('§cRotating not implemented yet.');
-                break;
-            case InstanceEditOptions.Mirror:
-                this.player.sendMessage('§cMirroring not implemented yet.');
-                break;
             case InstanceEditOptions.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditOptions.MaterialsList:
-                this.player.sendMessage('§cMaterial list not implemented yet.');
-                break;
             case InstanceEditOptions.MainMenu:
-                new MenuForm(this.player);
+                new MenuForm(this.player, { jumpToInstance: false });
                 break;
             default:
                 this.player.sendMessage(`§cUnknown option: ${option}`);
@@ -94,7 +103,16 @@ export class InstanceEditForm {
     }
 
     renameInstanceForm() {
-
+        InstanceEditFormBuilder.buildRenameInstance(this.instanceName).show(this.player).then((response) => {
+            if (response.canceled) return;
+            const newName = response.formValues[0];
+            if (newName === '') {
+                this.player.sendMessage('§cInstance name cannot be empty.');
+                return;
+            }
+            structureCollection.rename(this.instanceName, newName);
+            this.instanceName = newName;
+        });
     }
 
     setLayerForm() {

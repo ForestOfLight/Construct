@@ -8,6 +8,21 @@ class StructureCollection {
         this.structures = {};
     }
 
+    loadExistingStructures() {
+        world.getDynamicPropertyIds().filter(id => id.startsWith('structOptions:')).forEach(id => {
+            const instanceName = id.replace('structOptions:', '');
+            let structureId;
+            try {
+                structureId = StructureInstance.parseOptions(instanceName).structureId;
+                this.structures[instanceName] = new StructureInstance(instanceName, structureId);
+            } catch (e) {
+                world.sendMessage(`§c[StrucTool] Error loading structure instance '${instanceName}'. It will be removed.`);
+                world.setDynamicProperty(id, void 0);
+                throw e;
+            }
+        });
+    }
+
     add(instanceName, structureId) {
         if (this.structures[instanceName])
             throw new Error(`Instance ${instanceName} already exists.`);
@@ -24,9 +39,9 @@ class StructureCollection {
         return structure;
     }
 
-    remove(instanceName) {
+    delete(instanceName) {
         const struct = this.get(instanceName);
-        struct.removePlacement();
+        struct.delete();
         delete this.structures[instanceName];
     }
 
@@ -34,12 +49,12 @@ class StructureCollection {
         return Object.keys(this.structures);
     }
 
-    getStructuresAtLocation(location) {
-        return Object.values(this.structures).filter(structure => structure.isLocationActive(structure.toStructureCoords(location)));
+    getStructures(dimensionId, location, options = {}) {
+        return Object.values(this.structures).filter(structure => structure.isLocationActive(dimensionId, structure.toStructureCoords(location), options));
     }
 
-    fetchStructureBlock(location) {
-        const locatedStructures = this.getStructuresAtLocation(location);
+    fetchStructureBlock(dimensionId, location) {
+        const locatedStructures = this.getStructures(dimensionId, location);
         if (locatedStructures.length === 0)
             return void 0;
         const structure = locatedStructures[0];
@@ -56,6 +71,7 @@ class StructureCollection {
         const structure = this.get(instanceName);
         if (this.structures[newName])
             throw new Error(`Instance ${newName} already exists.`);
+        structure.rename(newName);
         this.structures[newName] = structure;
         delete this.structures[instanceName];
         structure.name = newName;
@@ -63,3 +79,7 @@ class StructureCollection {
 }
 
 export const structureCollection = new StructureCollection();
+
+world.afterEvents.worldLoad.subscribe(() => {
+    structureCollection.loadExistingStructures();
+});

@@ -1,15 +1,13 @@
 export const InstanceEditOptions = Object.freeze({
-    Unknown: "unknown",
-    MainMenu: 'Back to Main Menu',
-    PlaceInstance: 'Place Instance',
-    RemovePlacement: 'Remove Placement',
+    Unknown: 'Unknown',
+    MainMenu: '<<',
+    PlaceInstance: '§aPlace Instance',
+    EnableInstance: '§aEnable Instance',
+    DisableInstance: '§cDisable Instance',
     RenameInstance: 'Rename Instance',
     DeleteInstance: '§cDelete Instance',
     NextLayer: 'Increase Layer',
     PreviousLayer: 'Decrease Layer',
     SetLayer: 'Set Layer',
-    Move: 'Move Here',
-    Rotate: 'Rotate',
-    Mirror: 'Mirror',
-    MaterialsList: 'Get Materials List',
+    Move: 'Move Here'
 });

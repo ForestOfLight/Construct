@@ -4,26 +4,32 @@ import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceEditForm } from './InstanceEditForm';
 
 export class MenuForm {
-    constructor(player) {
+    constructor(player, { jumpToInstance = true } = {}) {
         this.player = player;
-        this.show();
+        this.show(jumpToInstance);
     }
 
-    async show() {
-        let instanceName = this.getInstanceFromLocation();
-        if (!instanceName)
-            instanceName = await this.getInstanceNameFromForm();
+    async show(jumpToInstance = true) {
+        let instanceName;
+        if (jumpToInstance) {
+            instanceName = this.getInstanceNameAtLocation();
+            if (instanceName) {
+                new InstanceEditForm(this.player, instanceName);
+                return;
+            }
+        }
+        instanceName = await this.getInstanceNameFromForm();
         if (!instanceName)
             return;
         new InstanceEditForm(this.player, instanceName);
     }
 
-    getInstanceFromLocation() {
-        const locatedStructures = structureCollection.getStructuresAtLocation(this.player.location);
+    getInstanceNameAtLocation() {
+        const locatedStructures = structureCollection.getStructures(this.player.dimension.id, this.player.location, { useLayers: false });
         if (locatedStructures.length === 0)
             return void 0;
         const structure = locatedStructures[0];
-        return structure.instanceName;
+        return structure.name;
     }
 
     async getInstanceNameFromForm() {

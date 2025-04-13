@@ -8,7 +8,7 @@ import { Raycaster } from '../classes/Raycaster';
 let runner = void 0;
 const easyPlace = new Rule({
     identifier: 'fastEasyPlace',
-    description: { text: "Looking at structure blocks with paper named 'easyPlace' in your hand will place them." },
+    description: { text: "Looking at structure blocks with a paper named 'easyPlace' in your hand will place them." },
     onEnableCallback: () => { runner = system.runInterval(onTick, 2); },
     onDisableCallback: () => { system.clearRun(runner); }
 })
@@ -39,7 +39,7 @@ function isHoldingActionItem(player) {
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
-    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(worldBlock)) return;
+    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock)) return;
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
         placeBlock(worldBlock, structureBlock);
@@ -49,11 +49,13 @@ function tryPlaceBlock(player, worldBlock, structureBlock) {
     }
 }
 
-function locationIsPlaceable(worldBlock) {
+function locationIsPlaceable(player, worldBlock) {
     return worldBlock.isAir;
 }
 
 function isBannedBlock(player, structureBlock) {
+    if (!structureBlock)
+        return true;
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     if (bannedBlocks.includes(blockId))
         return true;

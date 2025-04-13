@@ -18,7 +18,7 @@ extension.addRule(easyPlace);
 function onPlayerPlaceBlock(event) {
     const { player, block } = event;
     if (!player || !block || !hasActionItemInCorrectSlot(player)) return;
-    const structureBlock = fetchStructureBlock(block.location);
+    const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
     tryPlaceBlock(event, player, block, structureBlock);
@@ -30,14 +30,6 @@ function hasActionItemInCorrectSlot(player) {
         return false;
     const actionSlot = inventory.getSlot(ACTION_SLOT);
     return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'easyPlace';
-}
-
-function fetchStructureBlock(location) {
-    const locatedStructures = structureCollection.getStructuresAtLocation(location);
-    if (locatedStructures.length === 0)
-        return void 0;
-    const structure = locatedStructures[0];
-    return structure.getBlock(structure.toStructureCoords(location));
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
