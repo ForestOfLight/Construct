@@ -35,7 +35,7 @@ class BlockInfo {
     }
 
     static getFormattedStates(states) {
-        return Object.entries(states).map(([key, value]) => `§7${key}: ${value}`).join('\n');
+        return Object.entries(states).map(([key, value]) => `§7${key}: §3${value}`).join('\n');
     }
 }
 
