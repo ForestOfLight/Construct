@@ -2,6 +2,7 @@ import { forceShow } from '../utils';
 import { structureCollection } from './StructureCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceEditForm } from './InstanceEditForm';
+import { world } from '@minecraft/server';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = true } = {}) {
@@ -36,6 +37,10 @@ export class MenuForm {
         try {
             return forceShow(this.player, MenuFormBuilder.buildAllInstanceName()).then((response) => {
                 if (response.canceled) return;
+                if (response.selection === structureCollection.getInstanceNames().length + 1) {
+                    MenuFormBuilder.buildHowToAddNewStructures().show(this.player);
+                    return;
+                }
                 const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
                 return selectedInstanceName || this.createNewInstance();
             });

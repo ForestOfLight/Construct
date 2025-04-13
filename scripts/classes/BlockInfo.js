@@ -13,7 +13,7 @@ class BlockInfo {
     }
 
     static showStructureBlockInfo(player) {
-        const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true });
+        const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useLayers: false });
         if (!block && this.shownToLastTick.has(player.id)) {
             player.onScreenDisplay.setActionBar({ text: 'Structure:\n§7None' });
             this.shownToLastTick.delete(player.id);

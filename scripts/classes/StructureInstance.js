@@ -19,6 +19,7 @@ export class StructureInstance {
         this.#structure = world.structureManager.get(structureId);
         if (!this.#structure)
             throw new Error(`[StrucTool] Structure '${structureId}' not found.`);
+        this.#structure.saveToWorld();
         this.#options = this.loadOptions();
         this.#options.structureId = structureId;
         if (this.#options.isEnabled)

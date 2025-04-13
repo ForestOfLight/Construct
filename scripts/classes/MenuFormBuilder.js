@@ -12,6 +12,7 @@ export class MenuFormBuilder {
             allInstanceNameForm.button(`§2${instanceName}`);
         });
         allInstanceNameForm.button('Create New Instance');
+        allInstanceNameForm.button('How to Add New Structures');
         return allInstanceNameForm;
     }
 
@@ -39,5 +40,15 @@ export class MenuFormBuilder {
             .title(this.menuTitle)
             .textField('Enter the Structure ID:', 'example_structure')
             .submitButton('Submit');
+    }
+
+    static buildHowToAddNewStructures() {
+        let body = "How to Add Structures:\n"
+        body += "§7- Save a structure using a structure block or the /structure command.\n"
+        body += "§7OR\n"
+        body += "§7- Add a mcstructure file to this pack's structures folder. It will not appear in the list of structures, so enter the filename (without '.mcstructure') as the Structure ID.";
+        return new ActionFormData()
+            .title(this.menuTitle)
+            .body(body);
     }
 }
