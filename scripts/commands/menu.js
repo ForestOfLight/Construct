@@ -1,7 +1,5 @@
 import { Command } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
-import { structureCollection } from '../classes/StructureCollection';
-import { MaterialCounter } from '../classes/MaterialCounter';
 import { world, system } from '@minecraft/server';
 import { MenuForm } from '../classes/MenuForm';
 

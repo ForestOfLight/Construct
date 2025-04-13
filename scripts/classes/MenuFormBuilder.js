@@ -4,7 +4,7 @@ import { structureCollection } from './StructureCollection';
 export class MenuFormBuilder {
     static menuTitle = '§l§2StrucTool §8Menu';
 
-    static buildAllInstanceNameForm() {
+    static buildAllInstanceName() {
         const allInstanceNameForm = new ActionFormData()
             .title(this.menuTitle)
             .body('Select an instance:');
@@ -15,14 +15,14 @@ export class MenuFormBuilder {
         return allInstanceNameForm;
     }
 
-    static buildNewInstanceForm() {
+    static buildNewInstance() {
         return new ModalFormData()
             .title(this.menuTitle)
             .textField('Enter a name for the new instance:', 'example_instance')
             .submitButton('Submit');
     }
 
-    static buildAllStructuresForm() {
+    static buildAllStructures() {
         const allStructuresForm = new ActionFormData()
             .title(this.menuTitle)
             .body('Select a structure:');
@@ -34,7 +34,7 @@ export class MenuFormBuilder {
         return allStructuresForm;
     }
 
-    static buildOtherStructureForm() {
+    static buildOtherStructure() {
         return new ModalFormData()
             .title(this.menuTitle)
             .textField('Enter the Structure ID:', 'example_structure')

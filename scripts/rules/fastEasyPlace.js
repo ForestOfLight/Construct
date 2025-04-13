@@ -8,7 +8,7 @@ import { Raycaster } from '../classes/Raycaster';
 let runner = void 0;
 const easyPlace = new Rule({
     identifier: 'fastEasyPlace',
-    description: { text: 'Looking at structure blocks with paper in your hand will place them.' },
+    description: { text: "Looking at structure blocks with paper named 'easyPlace' in your hand will place them." },
     onEnableCallback: () => { runner = system.runInterval(onTick, 2); },
     onDisableCallback: () => { system.clearRun(runner); }
 })
@@ -35,7 +35,7 @@ function isHoldingActionItem(player) {
     const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
     if (!mainhandItemStack)
         return false;
-    return mainhandItemStack.typeId === 'minecraft:paper';
+    return mainhandItemStack.typeId === 'minecraft:paper' && mainhandItemStack.nameTag === 'easyPlace';
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {

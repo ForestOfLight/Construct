@@ -115,7 +115,7 @@ export class StructureInstance {
     }
 
     setLayer(layer) {
-        if (layer < 1 || layer > this.#structure.size.y)
+        if (layer < 0 || layer > this.#structure.size.y)
             throw new Error(`[StrucTool] Instance '${this.name}' of '${this.structureId}' does not have layer ${layer}.`);
         this.#options.currentLayer = layer;
         this.updateOptions();
@@ -129,7 +129,7 @@ export class StructureInstance {
             const { min, max } = this.getLayeredBounds();
             this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(min), this.toGlobalCoords(max));
         } else {
-            this.outliner = new Outliner(dimensionId, this.toGlobalCoords(this.getBounds().min), this.toGlobalCoords(this.getBounds().max));
+            this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(this.getBounds().min), this.toGlobalCoords(this.getBounds().max));
         }
     }
 

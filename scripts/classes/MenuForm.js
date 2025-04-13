@@ -28,7 +28,7 @@ export class MenuForm {
 
     async getInstanceNameFromForm() {
         try {
-            return forceShow(this.player, MenuFormBuilder.buildAllInstanceNameForm()).then((response) => {
+            return forceShow(this.player, MenuFormBuilder.buildAllInstanceName()).then((response) => {
                 if (response.canceled) return;
                 const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
                 return selectedInstanceName || this.createNewInstance();
@@ -43,7 +43,7 @@ export class MenuForm {
     }
 
     async createNewInstance() {
-        return MenuFormBuilder.buildNewInstanceForm().show(this.player).then(async (response) => {
+        return MenuFormBuilder.buildNewInstance().show(this.player).then(async (response) => {
             if (response.canceled)
                 return;
             const instanceName = response.formValues[0];
@@ -58,7 +58,7 @@ export class MenuForm {
     }
 
     async getStructureId() {
-        return MenuFormBuilder.buildAllStructuresForm().show(this.player).then((response) => {
+        return MenuFormBuilder.buildAllStructures().show(this.player).then((response) => {
             if (response.canceled)
                 return;
             const selectedStructureId = structureCollection.getWorldStructureIds()[response.selection];
@@ -67,7 +67,7 @@ export class MenuForm {
     }
 
     getOtherStructureId() {
-        return MenuFormBuilder.buildOtherStructureForm().show(this.player).then((response) => {
+        return MenuFormBuilder.buildOtherStructure().show(this.player).then((response) => {
             if (response.canceled)
                 return;
             const structureId = response.formValues[0];

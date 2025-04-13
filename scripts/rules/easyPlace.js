@@ -9,7 +9,7 @@ const ACTION_SLOT = 35;
 
 const easyPlace = new Rule({
     identifier: 'easyPlace',
-    description: { text: 'Simplifies placing blocks in a structure (paper in bottom right inventory slot).' },
+    description: { text: "Simplifies placing blocks in a structure (paper named 'easyPlace' in bottom right inventory slot)." },
     onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
     onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
 })
@@ -29,7 +29,7 @@ function hasActionItemInCorrectSlot(player) {
     if (!inventory)
         return false;
     const actionSlot = inventory.getSlot(ACTION_SLOT);
-    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper';
+    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'easyPlace';
 }
 
 function fetchStructureBlock(location) {

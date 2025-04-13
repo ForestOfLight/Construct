@@ -2,6 +2,7 @@ import { structureCollection } from './StructureCollection';
 import { MenuForm } from '../classes/MenuForm';
 import { ActionFormData } from '@minecraft/server-ui';
 import { InstanceEditOptions } from './InstanceEditOptions';
+import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
 
 export class InstanceEditForm {
     instanceName;
@@ -34,8 +35,8 @@ export class InstanceEditForm {
     }
 
     show() {
-        const form = this.buildInstanceForm();
-        form.show(this.player).then((response) => {
+        const currentOptions = this.instance.isPlaced() ? this.options.isPlaced : this.options.notPlaced;
+        InstanceEditFormBuilder.buildInstance(this.instanceName, currentOptions, this.options.common).show(this.player).then((response) => {
             if (response.canceled) return;
             let selectedOption;
             if (this.instance.isPlaced())
@@ -44,20 +45,6 @@ export class InstanceEditForm {
                 selectedOption = this.options.notPlaced[response.selection] || this.options.common[response.selection-this.options.notPlaced.length];
             this.handleOption(selectedOption);
         });
-    }
-
-    buildInstanceForm() {
-        const instanceOptions = this.instance.isPlaced() ? this.options.isPlaced : this.options.notPlaced;
-        const form = new ActionFormData()
-            .title('§l§2StrucTool §8Menu')
-            .body(`Instance: §2${this.instanceName}`)
-        instanceOptions.forEach(option => {
-            form.button(`${option}`);
-        });
-        this.options.common.forEach(option => {
-            form.button(`${option}`);
-        });
-        return form;
     }
 
     handleOption(option) {
@@ -111,6 +98,10 @@ export class InstanceEditForm {
     }
 
     setLayerForm() {
-        // should have a toggle for if it should layer the structure or notw
+        InstanceEditFormBuilder.buildSetLayer(this.instance.getBounds().max.y, this.instance.getLayer()).show(this.player).then((response) => {
+            if (response.canceled) return;
+            const selectedLayer = response.formValues[0];
+            this.instance.setLayer(parseInt(selectedLayer));
+        });
     }
 }
