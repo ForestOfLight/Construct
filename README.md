@@ -31,10 +31,13 @@ Removes a structure.
 ## Roadmap
 
 - [x] Form to manage structure
+- [x] Structure naming & movement
 - [x] easyPlace rule
+- [ ] Automatic Armor stand posing
 - [ ] Automatic material gathering from inventories
-- [ ] Structure movement & rotation
-- [ ] More litematica features!
+- [ ] Correct block placement checking
+- [ ] Structure Mirroring & Rotation
+- [ ] Structure Merging into SuperStructures
 
 ## Issues & Suggestions
 
