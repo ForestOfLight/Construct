@@ -33,7 +33,8 @@ function hasActionItemInCorrectSlot(player) {
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
-    if (isBannedBlock(player, structureBlock)) return;
+    if (isBannedBlock(player, structureBlock))
+        preventAction(event, player);
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
         placeBlock(block, structureBlock);
@@ -41,6 +42,13 @@ function tryPlaceBlock(event, player, block, structureBlock) {
         structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(event, player, block, structureBlock);
     }
+}
+
+function preventAction(event, player) {
+    event.cancel = true;
+    system.run(() => {
+        player.onScreenDisplay.setActionBar('§cAction prevented by easyPlace.');
+    });
 }
 
 function isBannedBlock(player, structureBlock) {
