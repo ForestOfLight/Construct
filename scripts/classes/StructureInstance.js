@@ -1,7 +1,7 @@
 import { world } from "@minecraft/server";
 import { Outliner } from "./Outliner";
 
-export class Structure {
+export class StructureInstance {
     #structure;
     #options = {
         isPlaced: false,
@@ -12,13 +12,15 @@ export class Structure {
         currentLayer: 0
     };
 
-    constructor(structureName) {
-        this.name = structureName;
-        this.#structure = world.structureManager.get(structureName);
+    constructor(instanceName, structureId) {
+        this.name = instanceName;
+        this.structureId = structureId;
+        this.#structure = world.structureManager.get(structureId);
         if (!this.#structure) {
-            throw new Error(`[StrucTool] Structure '${structureName}' not found.`);
+            throw new Error(`[StrucTool] Structure '${this.structureId}' not found.`);
         }
         this.#options = this.loadOptions();
+        this.#options.isPlaced = false;
     }
 
     loadOptions() {
@@ -39,7 +41,7 @@ export class Structure {
     }
 
     getLocation() {
-        return this.#options.worldLocation;
+        return { dimensionId: this.#options.dimensionId, location: this.#options.worldLocation };
     }
 
     getHeight() {
@@ -47,7 +49,7 @@ export class Structure {
     }
 
     getLayer() {
-        return this.#options.currentLayer;
+        return this.#options.currentLayer || 0;
     }
 
     *getBlocks() {
@@ -83,7 +85,7 @@ export class Structure {
 
     getLayeredBounds() {
         if (!this.#options.isPlaced)
-            throw new Error(`[StrucTool] Structure '${this.name}' is not placed.`);
+            throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
         return {
             min: { x: 0, y: this.#options.currentLayer - 1, z: 0 },
             max: { x: this.#structure.size.x, y: this.#options.currentLayer, z: this.#structure.size.z }
@@ -91,31 +93,44 @@ export class Structure {
     }
 
     place(dimensionId, worldLocation) {
-        this.#options = {
-            isPlaced: true,
-            dimensionId,
-            worldLocation: { x: Math.floor(worldLocation.x), y: Math.floor(worldLocation.y), z: Math.floor(worldLocation.z) },
-        };
-        this.updateOptions();
-        this.outliner = new Outliner(dimensionId, this.toGlobalCoords(this.getBounds().min), this.toGlobalCoords(this.getBounds().max));
+        this.#options.isPlaced = true;
+        this.move(dimensionId, worldLocation);
     }
 
-    remove() {
+    removePlacement() {
         if (!this.#options.isPlaced)
-            throw new Error(`[StrucTool] Structure '${this.name}' is not placed.`);
+            throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
         this.#options.isPlaced = false;
         this.updateOptions();
         this.outliner.stopDraw();
     }
 
+    move(dimensionId, location) {
+        if (!this.#options.isPlaced)
+            throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
+        this.#options.dimensionId = dimensionId;
+        this.#options.worldLocation = { x: Math.floor(location.x), y: Math.floor(location.y), z: Math.floor(location.z) };
+        this.updateOptions();
+        this.refreshOutliner();
+    }
+
     setLayer(layer) {
         if (layer < 1 || layer > this.#structure.size.y)
-            throw new Error(`[StrucTool] Structure '${this.name}' does not have layer ${layer}.`);
+            throw new Error(`[StrucTool] Instance '${this.name}' of '${this.structureId}' does not have layer ${layer}.`);
         this.#options.currentLayer = layer;
         this.updateOptions();
-        this.outliner.stopDraw();
-        const { min, max } = this.getLayeredBounds();
-        this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(min), this.toGlobalCoords(max));
+        this.refreshOutliner();
+    }
+
+    refreshOutliner() {
+        if (this.outliner)
+            this.outliner.stopDraw();
+        if (this.#options.currentLayer > 0) {
+            const { min, max } = this.getLayeredBounds();
+            this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(min), this.toGlobalCoords(max));
+        } else {
+            this.outliner = new Outliner(dimensionId, this.toGlobalCoords(this.getBounds().min), this.toGlobalCoords(this.getBounds().max));
+        }
     }
 
     isLocationInStructure(structureLocation) {
@@ -154,5 +169,9 @@ export class Structure {
             y: worldLocation.y - this.#options.worldLocation.y,
             z: worldLocation.z - this.#options.worldLocation.z
         };
+    }
+
+    isPlaced() {
+        return this.#options.isPlaced;
     }
 }
