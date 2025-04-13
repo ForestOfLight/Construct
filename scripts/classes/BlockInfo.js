@@ -21,7 +21,11 @@ class BlockInfo {
         const states = block.getAllStates();
         if (Object.keys(states).length === 0)
             return `Structure:\n§a${block.type.id}`;
-        return `Structure:\n§a${block.type.id}\n§7${JSON.stringify(block.getAllStates())}`;
+        return `Structure:\n§a${block.type.id}\n§7${this.getFormattedStates(states)}`;
+    }
+
+    static getFormattedStates(states) {
+        return Object.entries(states).map(([key, value]) => `§7${key}: ${value}`).join('\n');
     }
 }
 
