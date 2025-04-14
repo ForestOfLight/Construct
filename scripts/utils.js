@@ -1,4 +1,4 @@
-import { system } from '@minecraft/server';
+import { system, EntityComponentTypes } from '@minecraft/server';
 import { FormCancelationReason } from '@minecraft/server-ui';
 
 export async function forceShow(player, form, timeout = Infinity) {
@@ -12,3 +12,16 @@ export async function forceShow(player, form, timeout = Infinity) {
     }
     throw new Error("Menu timed out.");
 };
+
+export function fetchMatchingItemSlot(entity, itemToMatchId) {
+    if (!itemToMatchId)
+        return void 0;
+    const inventory = entity.getComponent(EntityComponentTypes.Inventory)?.container;
+    if (!inventory)
+        return void 0;
+    for (let index = 0; index < inventory.size; index++) {
+        const itemSlot = inventory.getSlot(index);
+        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
+            return itemSlot;
+    }
+}

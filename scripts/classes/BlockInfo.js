@@ -1,5 +1,6 @@
-import { system, world } from '@minecraft/server';
+import { GameMode, system, world } from '@minecraft/server';
 import { Raycaster } from '../classes/Raycaster';
+import { fetchMatchingItemSlot } from '../utils';
 
 class BlockInfo {
     static shownToLastTick = new Set();
@@ -20,22 +21,34 @@ class BlockInfo {
         }
         if (!block)
             return;
-        player.onScreenDisplay.setActionBar({ text: this.getFormattedBlockInfo(block.permutation) });
+        player.onScreenDisplay.setActionBar({ text: this.getFormattedBlockInfo(player, block.permutation) });
         this.shownToLastTick.add(player.id);
     }
 
-    static getFormattedBlockInfo(block) {
-        const header = 'Structure:\n'
+    static getFormattedBlockInfo(player, block) {
+        return 'Structure:' + this.getSupplyMessage(player, block) + '\n' + this.getBlockMessage(block);
+    }
+
+    static getBlockMessage(block) {
         if (!block)
-            return header + '§7Unknown';
+            return '§7Unknown';
         const states = block.getAllStates();
         if (Object.keys(states).length === 0)
-            return header + `§a${block.type.id}`;
-        return header + `§a${block.type.id}\n§7${this.getFormattedStates(states)}`;
+            return `§a${block.type.id}`;
+        else
+            return `§a${block.type.id}\n§7${this.getFormattedStates(states)}`;
     }
 
     static getFormattedStates(states) {
         return Object.entries(states).map(([key, value]) => `§7${key}: §3${value}`).join('\n');
+    }
+
+    static getSupplyMessage(player, block) {
+        const itemStack = fetchMatchingItemSlot(player, block.getItemStack()?.typeId);
+        const isInSurvival = player.getGameMode() === GameMode.survival;
+        if (!itemStack && isInSurvival)
+            return ' §c[No Supply]';
+        return '';
     }
 }
 
