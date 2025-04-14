@@ -4,6 +4,7 @@ import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, wo
 import { structureCollection } from '../classes/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
+import { fetchMatchingItemSlot } from '../utils';
 
 const ACTION_SLOT = 35;
 
@@ -16,7 +17,7 @@ const easyPlace = new Rule({
 extension.addRule(easyPlace);
 
 function onPlayerPlaceBlock(event) {
-    const { player, block } = event;
+    const { player, block, permutationBeingPlaced } = event;
     if (!player || !block || !hasActionItemInCorrectSlot(player)) return;
     const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
@@ -33,8 +34,8 @@ function hasActionItemInCorrectSlot(player) {
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
-    if (isBannedBlock(player, structureBlock))
-        preventAction(event, player);
+    if (shouldPreventAction(player, structureBlock))
+        return preventAction(event, player);
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
         placeBlock(block, structureBlock);
@@ -42,6 +43,10 @@ function tryPlaceBlock(event, player, block, structureBlock) {
         structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(event, player, block, structureBlock);
     }
+}
+
+function shouldPreventAction(player, structureBlock) {
+    return isBannedBlock(player, structureBlock);
 }
 
 function preventAction(event, player) {
@@ -92,6 +97,8 @@ function tryPlaceBlockSurvival(event, player, block, structureBlock) {
     if (itemSlotToUse) {
         event.cancel = true;
         placeBlock(block, structureBlock, itemSlotToUse);
+    } else {
+        preventAction(event, player);
     }
 }
 
@@ -99,19 +106,6 @@ function getPlaceableItemStack(structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
     return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
-}
-
-function fetchMatchingItemSlot(player, itemToMatchId) {
-    if (!itemToMatchId)
-        return void 0;
-    const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!inventory)
-        return void 0;
-    for (let index = 0; index < inventory.size; index++) {
-        const itemSlot = inventory.getSlot(index);
-        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
-            return itemSlot;
-    }
 }
 
 function placeBlock(block, structureBlock, itemSlot) {
