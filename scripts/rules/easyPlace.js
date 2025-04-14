@@ -5,11 +5,11 @@ import { structureCollection } from '../classes/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 
-const ARROW_SLOT = 35;
+const ACTION_SLOT = 35;
 
 const easyPlace = new Rule({
     identifier: 'easyPlace',
-    description: { text: 'Simplifies placing blocks in a structure (arrow in bottom right inventory slot).' },
+    description: { text: "Simplifies placing blocks in a structure (paper named 'easyPlace' in bottom right inventory slot)." },
     onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
     onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
 })
@@ -17,31 +17,24 @@ extension.addRule(easyPlace);
 
 function onPlayerPlaceBlock(event) {
     const { player, block } = event;
-    if (!player || !block || !hasArrowInCorrectSlot(player)) return;
-    const structureBlock = fetchStructureBlock(block.location);
+    if (!player || !block || !hasActionItemInCorrectSlot(player)) return;
+    const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
     tryPlaceBlock(event, player, block, structureBlock);
 }
 
-function hasArrowInCorrectSlot(player) {
+function hasActionItemInCorrectSlot(player) {
     const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
     if (!inventory)
         return false;
-    const arrowSlot = inventory.getSlot(ARROW_SLOT);
-    return arrowSlot.hasItem() && arrowSlot.typeId === 'minecraft:arrow';
-}
-
-function fetchStructureBlock(location) {
-    const locatedStructures = structureCollection.getStructuresAtLocation(location);
-    if (locatedStructures.length === 0)
-        return void 0;
-    const structure = locatedStructures[0];
-    return structure.getBlock(structure.toStructureCoords(location));
+    const actionSlot = inventory.getSlot(ACTION_SLOT);
+    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'easyPlace';
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
-    if (isBannedBlock(player, structureBlock)) return;
+    if (isBannedBlock(player, structureBlock))
+        preventAction(event, player);
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
         placeBlock(block, structureBlock);
@@ -49,6 +42,13 @@ function tryPlaceBlock(event, player, block, structureBlock) {
         structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(event, player, block, structureBlock);
     }
+}
+
+function preventAction(event, player) {
+    event.cancel = true;
+    system.run(() => {
+        player.onScreenDisplay.setActionBar('§cAction prevented by easyPlace.');
+    });
 }
 
 function isBannedBlock(player, structureBlock) {

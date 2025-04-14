@@ -1,21 +1,18 @@
-import { world } from "@minecraft/server";
 import { structureCollection } from "./StructureCollection";
+import { world } from "@minecraft/server";
 
 export class Raycaster {
     static STEP_SIZE = 0.2;
 
-    static getStructureBlocks(dimension, startLocation, direction, { maxDistance, getFirst = true, collideWithWorldBlocks = true }) {
+    static getStructureBlocks(dimension, startLocation, direction, { maxDistance = 7, getFirst = true, collideWithWorldBlocks = true, useLayers = true }) {
         // Can probably be optimized by the fact that we only need full blocks and aren't checking for partial blocks
         const blocks = [];
         let location = startLocation;
         let distance = 0;
         while (distance < maxDistance) {
-            const locatedStructures = structureCollection.getStructuresAtLocation(location);
-            if (locatedStructures.length !== 0) {
-                const structure = locatedStructures[0];
+            const structure = structureCollection.getStructure(dimension.id, location, { useLayers });
+            if (structure) {
                 const block = structure.getBlock(structure.toStructureCoords(location));
-                if (collideWithWorldBlocks && !dimension.getBlock(location)?.isAir)
-                    break;
                 if (block?.type.id !== 'minecraft:air') {
                     blocks.push({
                         permutation: block,
@@ -23,6 +20,14 @@ export class Raycaster {
                     });
                     if (getFirst)
                         break;
+                }
+                try {
+                    if (collideWithWorldBlocks && !dimension.getBlock(location)?.isAir)
+                        break;
+                } catch (e) {
+                    if (e.name === 'LocationOutOfWorldBoundariesError')
+                        break;
+                    throw e;
                 }
             }
             location = {
@@ -36,11 +41,11 @@ export class Raycaster {
         return blocks;
     }
 
-    static getTargetedStructureBlock(player, { isFirst = true, collideWithWorldBlocks = true }) {
+    static getTargetedStructureBlock(player, { isFirst = true, collideWithWorldBlocks = true, useLayers = true } = {}) {
         const startLocation = player.getHeadLocation();
         const direction = player.getViewDirection();
         const maxDistance = 7;
-        const blocks = this.getStructureBlocks(player.dimension, startLocation, direction, { maxDistance, getFirst: isFirst, collideWithWorldBlocks });
+        const blocks = this.getStructureBlocks(player.dimension, startLocation, direction, { maxDistance, getFirst: isFirst, collideWithWorldBlocks, useLayers });
         if (blocks.length === 0)
             return void 0;
         return isFirst ? blocks[0] : blocks[blocks.length - 1];

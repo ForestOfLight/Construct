@@ -1,24 +1,42 @@
 import { system, world } from '@minecraft/server';
 import { Raycaster } from '../classes/Raycaster';
 
-system.runInterval(() => {
-    for (const player of world.getAllPlayers()) {
-        if (!player)
-            continue;
-        showStructureBlockInfo(player);
+class BlockInfo {
+    static shownToLastTick = new Set();
+
+    static onTick() {
+        for (const player of world.getAllPlayers()) {
+            if (!player)
+                continue;
+            this.showStructureBlockInfo(player);
+        }
     }
-});
 
-function showStructureBlockInfo(player) {
-    const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true });
-    if (!block)
-        return;
-    player.onScreenDisplay.setActionBar({ text: getFormattedBlockInfo(block.permutation) });
+    static showStructureBlockInfo(player) {
+        const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useLayers: false });
+        if (!block && this.shownToLastTick.has(player.id)) {
+            player.onScreenDisplay.setActionBar({ text: 'Structure:\n§7None' });
+            this.shownToLastTick.delete(player.id);
+        }
+        if (!block)
+            return;
+        player.onScreenDisplay.setActionBar({ text: this.getFormattedBlockInfo(block.permutation) });
+        this.shownToLastTick.add(player.id);
+    }
+
+    static getFormattedBlockInfo(block) {
+        const header = 'Structure:\n'
+        if (!block)
+            return header + '§7Unknown';
+        const states = block.getAllStates();
+        if (Object.keys(states).length === 0)
+            return header + `§a${block.type.id}`;
+        return header + `§a${block.type.id}\n§7${this.getFormattedStates(states)}`;
+    }
+
+    static getFormattedStates(states) {
+        return Object.entries(states).map(([key, value]) => `§7${key}: §3${value}`).join('\n');
+    }
 }
 
-function getFormattedBlockInfo(block) {
-    const states = block.getAllStates();
-    if (Object.keys(states).length === 0)
-        return `Structure:\n§a${block.type.id}`;
-    return `Structure:\n§a${block.type.id}\n§7${JSON.stringify(block.getAllStates())}`;
-}
+system.runInterval(() => BlockInfo.onTick());

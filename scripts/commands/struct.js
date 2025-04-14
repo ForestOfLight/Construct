@@ -17,7 +17,7 @@ const structCmd = new Command({
 extension.addCommand(structCmd);
 
 function structCommand(sender, args) {
-    const { option, name, arg3 } = args;
+    const { name, option, arg3 } = args;
     switch (option) {
         case 'add':
             addStructure(sender, name);
@@ -41,7 +41,7 @@ function structCommand(sender, args) {
 
 function addStructure(sender, name) {
     try {
-        structureCollection.add(name);
+        structureCollection.add(name, name);
     } catch (e) {
         if (e.message.includes('already exists')) {
             sender.sendMessage({ text: `§cStructure '${name}' already exists.` });
@@ -70,7 +70,7 @@ function placeStructure(sender, name) {
         structure = structureCollection.get(name);
     } catch (e) {
         try {
-            structure = structureCollection.add(name);
+            structure = structureCollection.add(name, name);
         } catch (e) {
             if (e.message.includes('already exists')) {
                 sender.sendMessage({ text: `§cStructure '${name}' already exists.` });
@@ -108,8 +108,8 @@ function printInfo(sender, name) {
         sender.sendMessage({ text: `§cStructure '${name}' not found.` });
         return;
     }
-    const location = structure.getLocation();
-    sender.sendMessage({ text: `§7Structure '${name}' at [${location.x} ${location.y} ${location.z}]` });
+    const { dimensionId, location } = structure.getLocation();
+    sender.sendMessage({ text: `§7Structure '${name}' at [${location.x} ${location.y} ${location.z}] in '${dimensionId}'` });
     sender.sendMessage({ text: `§7Current Layer: ${structure.getLayer()}` });
     sender.sendMessage({ text: `§7Materials: ${MaterialCounter.getPrintable(name)}` });
 }
