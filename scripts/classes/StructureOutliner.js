@@ -9,10 +9,17 @@ export class StructureOutliner {
     }
 
     pullInstanceData() {
-        this.dimension = this.instance.getDimension();
-        this.bounds = this.instance.getBounds();
-        this.bounds.min = this.instance.toGlobalCoords(this.bounds.min);
-        this.bounds.max = this.instance.toGlobalCoords(this.bounds.max);
+        try {
+            this.dimension = this.instance.getDimension();
+            this.bounds = this.instance.getBounds();
+            this.bounds.min = this.instance.toGlobalCoords(this.bounds.min);
+            this.bounds.max = this.instance.toGlobalCoords(this.bounds.max);
+        } catch (e) {
+            if (e.name === 'InvalidStructureError')
+                this.outliner.stopDraw();
+            else
+                throw e;
+        }
     }
 
     refresh() {

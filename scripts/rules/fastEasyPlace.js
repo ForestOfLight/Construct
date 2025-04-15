@@ -8,7 +8,7 @@ import { Raycaster } from '../classes/Raycaster';
 let runner = void 0;
 const easyPlace = new Rule({
     identifier: 'fastEasyPlace',
-    description: { text: "Looking at structure blocks with a paper named 'easyPlace' in your hand will place them." },
+    description: { text: "Looking at a structure block with a paper named 'easyPlace' in your hand will place it." },
     onEnableCallback: () => { runner = system.runInterval(onTick, 2); },
     onDisableCallback: () => { system.clearRun(runner); }
 })

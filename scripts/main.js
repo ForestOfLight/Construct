@@ -3,8 +3,7 @@ import './rules/easyPlace';
 import './rules/fastEasyPlace';
 
 // Commands
-import './commands/struct';
-import './commands/menu';
+import './commands/structool';
 
 // Other
 import './classes/BlockInfo';
