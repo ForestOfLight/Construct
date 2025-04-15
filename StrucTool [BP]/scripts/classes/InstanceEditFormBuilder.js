@@ -37,11 +37,11 @@ export class InstanceEditFormBuilder {
         const buildStatisticsForm = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
         let message = '';
-        const structureVerifier = new StructureVerifier(instance);
+        const structureVerifier = new StructureVerifier(instance, { shouldRender: true });
         const statistics = await structureVerifier.verifyStructure();
         message += `§fStatistics for §a${instance.name}§f:\n`;
         message += `§7Blocks: §2${instance.getTotalVolume() - statistics.correctlyAir}\n`;
-        message += `§7Correct: §a${this.getFormattedStatistic(statistics, BlockVerificationLevel.TypeAndStateMatch)}\n`;
+        message += `§7Correct: §a${this.getFormattedStatistic(statistics, BlockVerificationLevel.Match)}\n`;
         message += `§7Block State Incorrect: §e${this.getFormattedStatistic(statistics, BlockVerificationLevel.TypeMatch)}\n`;
         message += `§7Incorrect: §c${this.getFormattedStatistic(statistics, BlockVerificationLevel.NoMatch)}\n`;
         message += `§7Missing: §c${this.getFormattedStatistic(statistics, BlockVerificationLevel.Missing)}\n`;

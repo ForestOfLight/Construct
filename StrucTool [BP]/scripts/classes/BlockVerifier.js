@@ -14,14 +14,14 @@ export class BlockVerifier {
 
     evaluatePermutations(worldPermutation, structPermutation) {
         if (this.isCorrectlyAir(worldPermutation, structPermutation))
-            return this.air();
+            return BlockVerificationLevel.Air;
         if (this.isMissing(worldPermutation, structPermutation))
-            return this.missing();
+            return BlockVerificationLevel.Missing;
         if (this.isExactMatch(worldPermutation, structPermutation))
-            return this.matchingPermutations();
+            return BlockVerificationLevel.Match;
         if (this.isTypeMatch(worldPermutation, structPermutation))
-            return this.matchingTypes();
-        return this.matchingNone();
+            return BlockVerificationLevel.TypeMatch;
+        return BlockVerificationLevel.NoMatch;
     }
 
     isCorrectlyAir(worldPermutation, structPermutation) {
@@ -38,25 +38,5 @@ export class BlockVerifier {
 
     isExactMatch(worldPermuation, structurePermuation) {
         return worldPermuation.matches(structurePermuation.type.id, structurePermuation.getAllStates());
-    }
-
-    air() {
-        return BlockVerificationLevel.isAir;
-    }
-
-    missing() {
-        return BlockVerificationLevel.Missing;
-    }
-
-    matchingPermutations() {
-        return BlockVerificationLevel.TypeAndStateMatch;
-    }
-
-    matchingTypes() {
-        return BlockVerificationLevel.TypeMatch;
-    }
-
-    matchingNone() {
-        return BlockVerificationLevel.NoMatch;
     }
 }

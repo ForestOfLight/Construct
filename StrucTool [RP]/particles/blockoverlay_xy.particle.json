@@ -2,7 +2,7 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "structool:blockoverlay",
+			"identifier": "structool:blockoverlay_xy",
 			"basic_render_parameters": {
 				"material": "particles_blend",
 				"texture": "textures/particle/white"
@@ -21,10 +21,10 @@
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [0.5, 0.5],
-				"facing_camera_mode": "emitter_transform_xz"
+				"facing_camera_mode": "emitter_transform_xy"
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": [1, 0, 0, 0.5]
+				"color": [0, 0, 0, 0.5]
 			}
 		}
 	}

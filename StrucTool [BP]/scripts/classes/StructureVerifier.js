@@ -1,11 +1,17 @@
 import { BlockVerifier } from "./BlockVerifier";
 import { BlockVerificationLevel } from "./BlockVerificationLevel";
+import { BlockVerificationLevelRender } from "./BlockVerificationLevelRender";
 
 export class StructureVerifier {
-    constructor(instance) {
+    shouldRender;
+    isComplete;
+
+    constructor(instance, { shouldRender = false } = {}) {
         this.instance = instance;
         this.blockVerificationLevels = {};
         this.statistics = {};
+        this.shouldRender = shouldRender;
+        this.isComplete = false;
         this.initStatistics();
     }
 
@@ -30,10 +36,12 @@ export class StructureVerifier {
     *verifyBlocks() {
         for (const block of this.instance.getBlocks()) {
             const verificationLevel = this.verifyBlock(block.location);
-            if (verificationLevel !== BlockVerificationLevel.isAir)
+            if (verificationLevel !== BlockVerificationLevel.Air)
                 this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
             else
                 this.statistics.correctlyAir++;
+            if (this.shouldRender)
+                new BlockVerificationLevelRender(this.instance.getDimension(), this.instance.toGlobalCoords(block.location), verificationLevel);
             yield;
         }
         this.isComplete = true;
@@ -49,7 +57,7 @@ export class StructureVerifier {
     // verifyBlocks() {
     //     for (const block of this.instance.getBlocks()) {
     //     const verificationLevel = this.verifyBlock(block.location);
-    //     if (verificationLevel !== BlockVerificationLevel.isAir)
+    //     if (verificationLevel !== BlockVerificationLevel.Air)
     //         this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
     //     else
     //         this.statistics.correctlyAir++;
