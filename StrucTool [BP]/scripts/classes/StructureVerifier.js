@@ -17,20 +17,44 @@ export class StructureVerifier {
 
     async runVerifier() {
         return new Promise((resolve) => {
-            this.verifyBlocks();
-            resolve();
+            system.runJob(this.verifyBlocks);
+            const checker = system.runInterval(() => {
+                if (this.isComplete) {
+                    system.clearRun(checker);
+                    resolve();
+                }
+            }, 1);
         });
     }
-
-    verifyBlocks() {
+    
+    *verifyBlocks() {
         for (const block of this.instance.getBlocks()) {
             const verificationLevel = this.verifyBlock(block.location);
             if (verificationLevel !== BlockVerificationLevel.isAir)
                 this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
             else
                 this.statistics.correctlyAir++;
+            yield;
         }
+        this.isComplete = true;
     }
+
+    // async runVerifier() {
+    //     return new Promise((resolve) => {
+    //         this.verifyBlocks();
+    //         resolve();
+    //     });
+    // }
+
+    // verifyBlocks() {
+    //     for (const block of this.instance.getBlocks()) {
+    //     const verificationLevel = this.verifyBlock(block.location);
+    //     if (verificationLevel !== BlockVerificationLevel.isAir)
+    //         this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
+    //     else
+    //         this.statistics.correctlyAir++;
+    //     }
+    // }
 
     verifyBlock(location) {
         const worldBlock = this.instance.getDimension().getBlock(this.instance.toGlobalCoords(location));
