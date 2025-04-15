@@ -92,12 +92,8 @@ export class StructureInstance {
 
     *getBlocks() {
         const max = this.#structure.size;
-        for (let x = 0; x < max.x; x++) {
-            for (let y = 0; y < max.y; y++) {
-                for (let z = 0; z < max.z; z++) {
-                    yield this.#structure.getBlockPermutation({ x, y, z });
-                }
-            }
+        for (let y = 0; y < max.y; y++) {
+            yield * this.getLayerBlocks(y);
         }
     }
 
@@ -105,7 +101,9 @@ export class StructureInstance {
         const max = this.#structure.size;
         for (let x = 0; x < max.x; x++) {
             for (let z = 0; z < max.z; z++) {
-                yield this.#structure.getBlockPermutation({ x, y, z });
+                const blockPermutation = this.#structure.getBlockPermutation({ x, y, z });
+                blockPermutation.location = { x, y, z };
+                yield blockPermutation;
             }
         }
     }

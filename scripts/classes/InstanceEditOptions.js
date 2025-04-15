@@ -9,5 +9,6 @@ export const InstanceEditOptions = Object.freeze({
     NextLayer: 'Increase Layer',
     PreviousLayer: 'Decrease Layer',
     SetLayer: 'Set Layer',
-    Move: 'Move Here'
+    Move: 'Move Here',
+    Statistics: 'Statistics',
 });

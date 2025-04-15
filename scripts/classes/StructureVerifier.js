@@ -1,43 +1,55 @@
 import { BlockVerifier } from "./BlockVerifier";
 import { BlockVerificationLevel } from "./BlockVerificationLevel";
-import { system } from "@minecraft/server";
 
 export class StructureVerifier {
-    constructor(stucture) {
-        this.structure = structure;
+    constructor(instance) {
+        this.instance = instance;
         this.blockVerificationLevels = {};
         this.statistics = {};
         this.initStatistics();
     }
 
-    verifyStructure() {
-        system.runJob(this.verifyBlocks());
+    async verifyStructure() {
+        await this.runVerifier();
         this.parseStatistics();
+        return this.statistics;
     }
 
-    *verifyBlocks() {
-        for (const block of this.structure.getBlocks()) {
-            this.blockVerificationLevels[block.location] = this.verifyBlock(block.location);
-            yield;
+    async runVerifier() {
+        return new Promise((resolve) => {
+            this.verifyBlocks();
+            resolve();
+        });
+    }
+
+    verifyBlocks() {
+        for (const block of this.instance.getBlocks()) {
+            const verificationLevel = this.verifyBlock(block.location);
+            if (verificationLevel !== BlockVerificationLevel.isAir)
+                this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
+            else
+                this.statistics.correctlyAir++;
         }
     }
 
     verifyBlock(location) {
-        const worldBlock = this.structure.getDimension().getBlock(location);
+        const worldBlock = this.instance.getDimension().getBlock(this.instance.toGlobalCoords(location));
         if (!worldBlock)
             throw new Error(`Block at ${JSON.stringify(location)} could not be accessed.`);
-        const blockVerifier = new BlockVerifier(worldBlock, this.structure);
+        const blockVerifier = new BlockVerifier(worldBlock, this.instance);
         return blockVerifier.verify();
     }
 
     initStatistics() {
-        for (const verificationlevel of Object.keys(BlockVerificationLevel)) {
+        for (const verificationlevel of Object.values(BlockVerificationLevel)) {
             this.statistics[verificationlevel] = 0;
         }
+        this.statistics.percentages = {};
+        this.statistics.correctlyAir = 0;
     }
 
     parseStatistics() {
-        for (const blockVerificationLevel of Object.keys(this.statistics)) {
+        for (const blockVerificationLevel of Object.values(BlockVerificationLevel)) {
             this.parseStatistic(blockVerificationLevel);
         }
     }
@@ -48,6 +60,6 @@ export class StructureVerifier {
                 this.statistics[verificationlevel]++;
             }
         }
-        this.statistics.percentages[blockVerificationLevel] = this.statistics[blockVerificationLevel] / this.structure.getTotalVolume() * 100;
+        this.statistics.percentages[blockVerificationLevel] = this.statistics[blockVerificationLevel] / (this.instance.getTotalVolume() - this.statistics.correctlyAir) * 100;
     }
 }

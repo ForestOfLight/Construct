@@ -11,6 +11,7 @@ export class InstanceEditForm {
             InstanceEditOptions.PreviousLayer,
             InstanceEditOptions.SetLayer,
             InstanceEditOptions.Move,
+            InstanceEditOptions.Statistics,
             InstanceEditOptions.RenameInstance,
             InstanceEditOptions.DisableInstance,
         ],
@@ -93,6 +94,9 @@ export class InstanceEditForm {
             case InstanceEditOptions.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
+            case InstanceEditOptions.Statistics:
+                this.statisticsForm();
+                break;
             case InstanceEditOptions.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
                 break;
@@ -104,7 +108,8 @@ export class InstanceEditForm {
 
     renameInstanceForm() {
         InstanceEditFormBuilder.buildRenameInstance(this.instanceName).show(this.player).then((response) => {
-            if (response.canceled) return;
+            if (response.canceled)
+                return;
             const newName = response.formValues[0];
             if (newName === '') {
                 this.player.sendMessage('§cInstance name cannot be empty.');
@@ -122,9 +127,15 @@ export class InstanceEditForm {
 
     setLayerForm() {
         InstanceEditFormBuilder.buildSetLayer(this.instance.getBounds().max.y, this.instance.getLayer()).show(this.player).then((response) => {
-            if (response.canceled) return;
+            if (response.canceled)
+                return;
             const selectedLayer = response.formValues[0];
             this.instance.setLayer(parseInt(selectedLayer));
         });
+    }
+
+    async statisticsForm() {
+        const form = await InstanceEditFormBuilder.buildStatistics(this.instance)
+        form.show(this.player);
     }
 }

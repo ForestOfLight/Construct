@@ -1,19 +1,20 @@
 import { BlockVerificationLevel } from "./BlockVerificationLevel";
 
 export class BlockVerifier {
-    constructor(block, structure) {
+    constructor(block, instance) {
         this.block = block;
-        this.blockLocationInStructure = structure.toStructureCoords(block.location);
-        this.structure = structure;
+        this.instance = instance;
+        this.blockLocationInStructure = instance.toStructureCoords(block.location);
     }
 
     verify() {
-        const worldPermutation = this.block.permutation;
-        const structPermutation = this.structure.getBlock(this.blockLocationInStructure);
-        return this.evaluatePermutations(worldPermutation, structPermutation);
+        const structPermutation = this.instance.getBlock(this.blockLocationInStructure);
+        return this.evaluatePermutations(this.block.permutation, structPermutation);
     }
 
     evaluatePermutations(worldPermutation, structPermutation) {
+        if (this.isCorrectlyAir(worldPermutation, structPermutation))
+            return this.air();
         if (this.isMissing(worldPermutation, structPermutation))
             return this.missing();
         if (this.isExactMatch(worldPermutation, structPermutation))
@@ -21,6 +22,10 @@ export class BlockVerifier {
         if (this.isTypeMatch(worldPermutation, structPermutation))
             return this.matchingTypes();
         return this.matchingNone();
+    }
+
+    isCorrectlyAir(worldPermutation, structPermutation) {
+        return worldPermutation.type.id === "minecraft:air" && structPermutation.type.id === "minecraft:air";
     }
 
     isMissing(worldPermutation, structPermutation) {
@@ -35,22 +40,23 @@ export class BlockVerifier {
         return worldPermuation.matches(structurePermuation.type.id, structurePermuation.getAllStates());
     }
 
+    air() {
+        return BlockVerificationLevel.isAir;
+    }
+
     missing() {
         return BlockVerificationLevel.Missing;
     }
 
     matchingPermutations() {
-        console.warn(`Block ${this.block.typeId} matches structure block ${structPermutation.typeId}`);
         return BlockVerificationLevel.TypeAndStateMatch;
     }
 
     matchingTypes() {
-        console.warn(`Block ${this.block.typeId} matches structure block ${structPermutation.typeId}`);
         return BlockVerificationLevel.TypeMatch;
     }
 
     matchingNone() {
-        console.warn(`Block ${this.block.typeId} does not match structure block ${structPermutation.typeId}`);
         return BlockVerificationLevel.NoMatch;
     }
 }
