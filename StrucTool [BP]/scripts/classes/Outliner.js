@@ -6,8 +6,8 @@ export class Outliner {
     dimension;
     min = new Vector();
     max = new Vector();
-    drawParticle = "minecraft:villager_happy";
-    drawFrequency = 8;
+    drawParticle = "structool:outline";
+    drawFrequency = 20;
     
     #drawParticles = [];
     #runner = null;

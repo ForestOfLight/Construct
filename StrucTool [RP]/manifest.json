@@ -1,0 +1,31 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "StrucTool [RP] v1.0.0",
+        "description": "Survival building extension for §l§aCanopy§r by §aForestOfLight§r.",
+        "uuid": "375ec465-3dc1-429f-8b4c-a337889e1ed4",
+        "version": [1, 0, 0],
+        "min_engine_version": [1,17,0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "7f6b23df-a583-476b-b0e4-87457e65f7c0",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58", // StrucTool BP
+            "version": [1, 0, 0]
+        },
+        {
+            "uuid": "7f6b23df-a583-476b-b0e4-87457e65f7c0", // Canopy BP
+            "version": [1, 3, 9]
+        }
+    ],
+    "metadata": {
+        "authors": [ "ForestOfLight" ],
+        "license": "MIT"
+    }
+  }
