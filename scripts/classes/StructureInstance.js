@@ -1,5 +1,6 @@
 import { world } from "@minecraft/server";
 import { Outliner } from "./Outliner";
+import { StructureOutliner } from "./StructureOutliner";
 
 export class StructureInstance {
     name;
@@ -13,6 +14,7 @@ export class StructureInstance {
         mirror: false,
         currentLayer: 0
     };
+    outliner = void 0;
 
     constructor(instanceName, structureId) {
         this.name = instanceName;
@@ -22,9 +24,8 @@ export class StructureInstance {
         this.#structure.saveToWorld();
         this.#options = this.loadOptions();
         this.#options.structureId = structureId;
-        if (this.#options.isEnabled)
-            this.refreshOutliner();
         this.updateOptions();
+        this.outliner = new StructureOutliner(this);
     }
 
     loadOptions() {
@@ -73,6 +74,16 @@ export class StructureInstance {
 
     getLayer() {
         return this.#options.currentLayer || 0;
+    }
+
+    getDimension() {
+        let dimension;
+        try {
+            dimension = world.getDimension(this.#options.dimensionId);
+        } catch (e) {
+            dimension = world.getDimension("minecraft:overworld");
+        }
+        return dimension;
     }
 
     getBlock(structureLocation) {
@@ -139,7 +150,7 @@ export class StructureInstance {
     disable() {
         this.#options.isEnabled = false;
         this.updateOptions();
-        this.outliner.stopDraw();
+        this.refreshOutliner();
     }
 
     move(dimensionId, location) {
@@ -158,16 +169,7 @@ export class StructureInstance {
     }
 
     refreshOutliner() {
-        if (!this.#options.isEnabled)
-            return;
-        if (this.outliner)
-            this.outliner.stopDraw();
-        if (this.#options.currentLayer > 0) {
-            const { min, max } = this.getLayeredBounds();
-            this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(min), this.toGlobalCoords(max));
-        } else {
-            this.outliner = new Outliner(this.#options.dimensionId, this.toGlobalCoords(this.getBounds().min), this.toGlobalCoords(this.getBounds().max));
-        }
+        this.outliner.refresh();
     }
 
     isLocationInStructure(dimensionId, structureLocation) {
@@ -218,6 +220,10 @@ export class StructureInstance {
 
     hasLocation() {
         return this.#options.dimensionId && this.#options.worldLocation.x !== 0 && this.#options.worldLocation.y !== 0 && this.#options.worldLocation.z !== 0;
+    }
+
+    isUsingLayers() {
+        return this.hasLayers() && this.#options.currentLayer !== 0;
     }
 
     hasLayers() {

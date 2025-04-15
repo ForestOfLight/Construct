@@ -5,20 +5,16 @@ import { MenuForm } from '../classes/MenuForm';
 
 const ACTION_ITEM = 'minecraft:paper';
 
-const structCmd = new Command({
-    name: 'menu',
-    description: { text: 'Manages current StrucTool structures.' },
-    usage: 'menu',
-    callback: structCommand
+const structoolCmd = new Command({
+    name: 'structool',
+    description: { text: 'Opens the StrucTool Menu. Using a paper will also open the menu.' },
+    usage: 'structool',
+    callback: (sender) => new MenuForm(sender)
 });
-extension.addCommand(structCmd);
+extension.addCommand(structoolCmd);
 
 world.beforeEvents.itemUse.subscribe((event) => {
     if (!event.source || event.itemStack?.typeId !== ACTION_ITEM) return;
     event.cancel = true;
-    system.run(() => structCommand(event.source));
+    system.run(() => structoolCmd.getCallback()(event.source));
 });
-
-function structCommand(sender) {
-    new MenuForm(sender);
-}

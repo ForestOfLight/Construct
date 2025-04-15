@@ -27,11 +27,8 @@ export class MenuForm {
     async getInstanceNameFromForm() {
         try {
             return forceShow(this.player, MenuFormBuilder.buildAllInstanceName()).then((response) => {
-                if (response.canceled) return;
-                if (response.selection === structureCollection.getInstanceNames().length + 1) {
-                    MenuFormBuilder.buildHowToAddNewStructures().show(this.player);
+                if (response.canceled)
                     return;
-                }
                 const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
                 return selectedInstanceName || this.createNewInstance();
             });
@@ -63,6 +60,10 @@ export class MenuForm {
         return MenuFormBuilder.buildAllStructures().show(this.player).then((response) => {
             if (response.canceled)
                 return;
+            if (response.selection === structureCollection.getWorldStructureIds().length + 1) {
+                MenuFormBuilder.buildHowTo().show(this.player);
+                return;
+            }
             const selectedStructureId = structureCollection.getWorldStructureIds()[response.selection];
             return selectedStructureId || this.getOtherStructureId();
         });

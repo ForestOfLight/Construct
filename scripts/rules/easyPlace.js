@@ -10,7 +10,7 @@ const ACTION_SLOT = 35;
 
 const easyPlace = new Rule({
     identifier: 'easyPlace',
-    description: { text: "Simplifies placing blocks in a structure (paper named 'easyPlace' in bottom right inventory slot)." },
+    description: { text: "Automatically places the correct block in a structure (paper named 'easyPlace' in bottom right inventory slot)." },
     onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
     onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
 })

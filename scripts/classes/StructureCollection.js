@@ -50,7 +50,18 @@ class StructureCollection {
     }
 
     getStructures(dimensionId, location, options = {}) {
-        return Object.values(this.structures).filter(structure => structure.isLocationActive(dimensionId, structure.toStructureCoords(location), options));
+        return Object.values(this.structures).filter(structure => {
+            try {
+                return structure.isLocationActive(dimensionId, structure.toStructureCoords(location), options)
+            } catch (e) {
+                if (e.name === 'InvalidStructureError') {
+                    structureCollection.delete(structure.name);
+                    return false;
+                } else {
+                    throw e;
+                }
+            }
+        });
     }
 
     getStructure(dimensionId, location, options = {}) {
