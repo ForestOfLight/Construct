@@ -1,5 +1,7 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from './MenuFormBuilder';
+import { StructureVerifier } from './StructureVerifier';
+import { BlockVerificationLevel } from './BlockVerificationLevel';
 
 export class InstanceEditFormBuilder {
     static buildInstance(instance, options) {
@@ -29,5 +31,25 @@ export class InstanceEditFormBuilder {
             .label('Use the slider to select the layer. Use 0 for all layers.')
             .slider("Layer", 0, maxLayer, 1, currentLayer)
             .submitButton('Set Layer');
+    }
+
+    static async buildStatistics(instance) {
+        const buildStatisticsForm = new ActionFormData()
+            .title(MenuFormBuilder.menuTitle)
+        let message = '';
+        const structureVerifier = new StructureVerifier(instance);
+        const statistics = await structureVerifier.verifyStructure();
+        message += `§fStatistics for §a${instance.name}§f:\n`;
+        message += `§7Blocks: §2${instance.getTotalVolume() - statistics.correctlyAir}\n`;
+        message += `§7Correct: §a${this.getFormattedStatistic(statistics, BlockVerificationLevel.TypeAndStateMatch)}\n`;
+        message += `§7Block State Incorrect: §e${this.getFormattedStatistic(statistics, BlockVerificationLevel.TypeMatch)}\n`;
+        message += `§7Incorrect: §c${this.getFormattedStatistic(statistics, BlockVerificationLevel.NoMatch)}\n`;
+        message += `§7Missing: §c${this.getFormattedStatistic(statistics, BlockVerificationLevel.Missing)}\n`;
+        buildStatisticsForm.body(message);
+        return buildStatisticsForm;
+    }
+
+    static getFormattedStatistic(statistics, blockVerificationLevel) {
+        return `${statistics[blockVerificationLevel]} (${statistics.percentages[blockVerificationLevel].toFixed(2)}%%)`;
     }
 }

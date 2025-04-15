@@ -86,14 +86,14 @@ export class StructureInstance {
         return dimension;
     }
 
+    getBlock(structureLocation) {
+        return this.#structure.getBlockPermutation(structureLocation);
+    }
+
     *getBlocks() {
         const max = this.#structure.size;
-        for (let x = 0; x < max.x; x++) {
-            for (let y = 0; y < max.y; y++) {
-                for (let z = 0; z < max.z; z++) {
-                    yield this.#structure.getBlockPermutation({ x, y, z });
-                }
-            }
+        for (let y = 0; y < max.y; y++) {
+            yield * this.getLayerBlocks(y);
         }
     }
 
@@ -101,13 +101,11 @@ export class StructureInstance {
         const max = this.#structure.size;
         for (let x = 0; x < max.x; x++) {
             for (let z = 0; z < max.z; z++) {
-                yield this.#structure.getBlockPermutation({ x, y, z });
+                const blockPermutation = this.#structure.getBlockPermutation({ x, y, z });
+                blockPermutation.location = { x, y, z };
+                yield blockPermutation;
             }
         }
-    }
-
-    getBlock(structureLocation) {
-        return this.#structure.getBlockPermutation(structureLocation);
     }
 
     getBounds() {
@@ -124,6 +122,10 @@ export class StructureInstance {
             min: { x: 0, y: this.#options.currentLayer - 1, z: 0 },
             max: { x: this.#structure.size.x, y: this.#options.currentLayer, z: this.#structure.size.z }
         };
+    }
+
+    getTotalVolume() {
+        return this.#structure.size.x * this.#structure.size.y * this.#structure.size.z;
     }
 
     rename(newName) {
@@ -246,5 +248,9 @@ export class StructureInstance {
             this.setLayer(this.#structure.size.y);
         else
             this.setLayer(this.#options.currentLayer - 1);
+    }
+
+    getDimension() {
+        return world.getDimension(this.#options.dimensionId);
     }
 }
