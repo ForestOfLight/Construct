@@ -5,7 +5,6 @@ export class StructureOutliner {
         this.instance = instance;
         this.pullInstanceData();
         this.outliner = new Outliner(this.dimension, this.bounds.min, this.bounds.max);
-        this.refresh();
     }
 
     pullInstanceData() {

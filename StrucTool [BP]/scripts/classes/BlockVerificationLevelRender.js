@@ -1,0 +1,69 @@
+import { MolangVariableMap } from "@minecraft/server";
+import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
+import { Vector } from "../lib/Vector";
+
+export class BlockVerificationLevelRender {
+    opacity = 0.2;
+    lifetime = 0;
+
+    constructor(dimensionLocation, verificationLevel, lifetime = 5) {
+        this.dimension = dimensionLocation.dimension;
+        this.location = new Vector(dimensionLocation.location.x, dimensionLocation.location.y, dimensionLocation.location.z);
+        this.verificationLevel = verificationLevel;
+        this.lifetime = lifetime;
+        this.renderBlock();
+    }
+
+    renderBlock() {
+        for (const particleLocation of this.getParticleLocations()) {
+            const color = this.getRGBAMolang();
+            if (!color)
+                return;
+            color.setFloat("lifetime", this.lifetime);
+            try {
+                this.dimension.spawnParticle(particleLocation.particleType, particleLocation.location, color);
+            } catch {
+                /* pass */
+            }
+        }
+    }
+
+    getParticleLocations() {
+        const bottomFace = new Vector(0.5, 0, 0.5);
+        const topFace = new Vector(0.5, 1, 0.5);
+        const leftFace = new Vector(1, 0.5, 0.5);
+        const rightFace = new Vector(0, 0.5, 0.5);
+        const frontFace = new Vector(0.5, 0.5, 1);
+        const backFace = new Vector(0.5, 0.5, 0);
+        return [
+            { particleType: "structool:blockoverlay_xz", location: this.location.add(topFace) },
+            { particleType: "structool:blockoverlay_xz", location: this.location.add(bottomFace) },
+            { particleType: "structool:blockoverlay_yz", location: this.location.add(leftFace) },
+            { particleType: "structool:blockoverlay_yz", location: this.location.add(rightFace) },
+            { particleType: "structool:blockoverlay_xy", location: this.location.add(frontFace) },
+            { particleType: "structool:blockoverlay_xy", location: this.location.add(backFace) }
+        ];
+    }
+
+    getRGBAMolang() {
+        const rgb = this.verificationLevelToRGB();
+        if (!rgb) return;
+        rgb.alpha = this.opacity;
+        const molang = new MolangVariableMap();
+        molang.setColorRGBA("face_color", rgb);
+        return molang;
+    }
+
+    verificationLevelToRGB() {
+        switch (this.verificationLevel) {
+            case BlockVerificationLevel.NoMatch:
+                return { red: 1, green: 0, blue: 0};
+            case BlockVerificationLevel.TypeMatch:
+                return { red: 1, green: 1, blue: 0};
+            case BlockVerificationLevel.Missing:
+                return { red: 0, green: 0, blue: 1};
+            default:
+                return void 0;
+        }
+    }
+}

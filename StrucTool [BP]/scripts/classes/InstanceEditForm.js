@@ -1,7 +1,8 @@
 import { structureCollection } from './StructureCollection';
 import { MenuForm } from '../classes/MenuForm';
-import { InstanceEditOptions } from './InstanceEditOptions';
+import { InstanceEditOptions } from './enums/InstanceEditOptions';
 import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
+import { FormCancelationReason } from '@minecraft/server-ui';
 
 export class InstanceEditForm {
     instanceName;
@@ -135,7 +136,10 @@ export class InstanceEditForm {
     }
 
     async statisticsForm() {
-        const form = await InstanceEditFormBuilder.buildStatistics(this.instance)
-        form.show(this.player);
+        const statsForm = await InstanceEditFormBuilder.buildStatistics(this.instance)
+        statsForm.form.show(this.player).then((response) => {
+            if (response.canceled && response.cancelationReason === FormCancelationReason.UserBusy)
+                this.player.sendMessage(statsForm.stats);
+        });
     }
 }
