@@ -1,4 +1,4 @@
-import { BlockVerificationLevel } from "./BlockVerificationLevel";
+import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
 
 export class BlockVerifier {
     constructor(block, instance) {

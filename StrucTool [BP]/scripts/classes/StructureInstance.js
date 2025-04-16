@@ -1,6 +1,7 @@
 import { world } from "@minecraft/server";
 import { Outliner } from "./Outliner";
 import { StructureOutliner } from "./StructureOutliner";
+import { StructureVerifier } from "./StructureVerifier";
 
 export class StructureInstance {
     name;
@@ -15,6 +16,7 @@ export class StructureInstance {
         currentLayer: 0
     };
     outliner = void 0;
+    verifier = void 0;
 
     constructor(instanceName, structureId) {
         this.name = instanceName;
@@ -25,7 +27,7 @@ export class StructureInstance {
         this.#options = this.loadOptions();
         this.#options.structureId = structureId;
         this.updateOptions();
-        this.outliner = new StructureOutliner(this);
+        this.refreshBox();
     }
 
     loadOptions() {
@@ -102,6 +104,8 @@ export class StructureInstance {
         for (let x = 0; x < max.x; x++) {
             for (let z = 0; z < max.z; z++) {
                 const blockPermutation = this.#structure.getBlockPermutation({ x, y, z });
+                if (!blockPermutation)
+                    yield void 0;
                 blockPermutation.location = { x, y, z };
                 yield blockPermutation;
             }
@@ -128,6 +132,14 @@ export class StructureInstance {
         return this.#structure.size.x * this.#structure.size.y * this.#structure.size.z;
     }
 
+    getActiveVolume() {
+        if (!this.#options.isEnabled)
+            return 0;
+        if (this.#options.currentLayer === 0)
+            return this.getTotalVolume();
+        return this.#structure.size.x * this.#structure.size.z;
+    }
+
     rename(newName) {
         world.setDynamicProperty(`structOptions:${this.name}`, void 0);
         this.name = newName;
@@ -142,20 +154,20 @@ export class StructureInstance {
     enable() {
         this.#options.isEnabled = true;
         this.updateOptions();
-        this.refreshOutliner();
+        this.refreshBox();
     }
 
     disable() {
         this.#options.isEnabled = false;
         this.updateOptions();
-        this.refreshOutliner();
+        this.refreshBox();
     }
 
     move(dimensionId, location) {
         this.#options.dimensionId = dimensionId;
         this.#options.worldLocation = { x: Math.floor(location.x), y: Math.floor(location.y), z: Math.floor(location.z) };
         this.updateOptions();
-        this.refreshOutliner();
+        this.refreshBox();
     }
 
     setLayer(layer) {
@@ -163,11 +175,18 @@ export class StructureInstance {
             throw new Error(`[StrucTool] Layer ${layer} is out of bounds.`);
         this.#options.currentLayer = layer;
         this.updateOptions();
-        this.refreshOutliner();
+        this.refreshBox();
     }
 
-    refreshOutliner() {
+    refreshBox() {
+        if (!this.hasLocation())
+            return;
+        if (!this.outliner)
+            this.outliner = new StructureOutliner(this);
+        if (!this.verifier)
+            this.verifier = new StructureVerifier(this, { shouldRender: true });
         this.outliner.refresh();
+        this.verifier.refresh();
     }
 
     isLocationInStructure(dimensionId, structureLocation) {

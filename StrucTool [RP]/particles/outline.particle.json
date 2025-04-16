@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "structool:outline",
 			"basic_render_parameters": {
-				"material": "particles_blend",
+				"material": "particles_alpha",
 				"texture": "textures/particle/particles"
 			}
 		},
@@ -30,7 +30,12 @@
 				}
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": [0, 0.66667, 0, 1]
+				"color": [
+					"variable.dot_color.r", 
+					"variable.dot_color.g", 
+					"variable.dot_color.b",
+					"variable.dot_color.a"
+				]
 			}
 		}
 	}

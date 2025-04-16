@@ -4,5 +4,6 @@ export const BlockVerificationLevel = Object.freeze({
     TypeMatch: 2,
     Match: 3,
     Missing: 4,
-    Air: 5
+    Air: 5,
+    Skipped: 6
 });

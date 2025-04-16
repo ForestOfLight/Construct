@@ -1,23 +1,21 @@
-import { system, world } from "@minecraft/server";
+import { MolangVariableMap, system, world } from "@minecraft/server";
 import { Vector } from "../lib/Vector";
-
 
 export class Outliner {
     dimension;
     min = new Vector();
     max = new Vector();
     drawParticle = "structool:outline";
-    drawFrequency = 20;
+    drawFrequency = 10;
     
     #drawParticles = [];
-    #runner = null;
+    #runner = void 0;
 
     constructor(dimension, min, max) {
         this.dimension = dimension;
         this.min = new Vector(min.x, min.y, min.z);
         this.max = new Vector(max.x, max.y, max.z);
         this.vertices = this.getVertices(min, max);
-        this.startDraw();
     }
 
     startDraw() {
@@ -25,18 +23,28 @@ export class Outliner {
     }
 
     stopDraw() {
+        if (!this.#runner)
+            return;
         system.clearRun(this.#runner);
+        this.#runner = void 0;
     }
 
     draw() {
-        this.#drawParticles.length = 0;
-        this.#drawParticles.push(...this.getVerticeParticleLocations());
-        this.#drawParticles.push(...this.getCubiodParticleLocations());
+        this.drawParticles(this.getVerticeParticles(), () => { 
+            return { red: 1, green: 1, blue: 1, alpha: 1 }
+        });
+        this.drawParticles(this.getCubiodEdgeParticles(), this.getNextParticleColor.bind(this));
+    }
 
+    drawParticles(particleLocations, colorCallback) {
+        this.#drawParticles.length = 0;
+        this.#drawParticles.push(...particleLocations);
         for (const [particleType, location] of this.#drawParticles) {
+            const molang = new MolangVariableMap();
+            molang.setColorRGBA("dot_color", colorCallback());
             try {
-                this.dimension.spawnParticle(particleType, location);
-            } catch {
+                this.dimension.spawnParticle(particleType, location, molang);
+            } catch (e) {
                 /* pass */
             }
         }
@@ -62,11 +70,11 @@ export class Outliner {
         this.vertices = this.getVertices(min, max);
     }
 
-    getVerticeParticleLocations() {
+    getVerticeParticles() {
         return this.vertices.map((v) => [this.drawParticle, v]);
     }
 
-    getCubiodParticleLocations() {
+    getCubiodEdgeParticles() {
         const edges = [
             [0, 1],
             [0, 2],
@@ -96,5 +104,15 @@ export class Outliner {
     addStandaloneParticles(locations) {
         for (const location of locations)
             this.vertices.push(new Vector(location.x, location.y, location.z));
+    }
+
+    getNextParticleColor() {
+        if (this.lastWasBlack) {
+            this.lastWasBlack = false;
+            return { red: 1, green: 1, blue: 0, alpha: 1 };
+        } else {
+            this.lastWasBlack = true;
+            return { red: 0.15, green: 0.15, blue: 0.15, alpha: 1 };
+        }
     }
 }

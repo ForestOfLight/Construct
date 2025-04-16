@@ -1,97 +1,85 @@
 import { BlockVerifier } from "./BlockVerifier";
-import { BlockVerificationLevel } from "./BlockVerificationLevel";
+import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
 import { BlockVerificationLevelRender } from "./BlockVerificationLevelRender";
+import { system, TicksPerSecond } from "@minecraft/server";
 
 export class StructureVerifier {
     shouldRender;
     isComplete;
+    interval = 5*20;
+    #runner;
 
     constructor(instance, { shouldRender = false } = {}) {
+        this.shouldRender = shouldRender;
         this.instance = instance;
-        this.blockVerificationLevels = {};
-        this.statistics = {};
+        this.interval = Math.max(instance.getActiveVolume() / 50, 20);
+    }
+
+    startContinuousVerification() {
+        this.#runner = system.runInterval(() => {
+            this.verifyStructure();
+        }, this.interval);
+    }
+
+    stopContinuousVerification() {
+        if (!this.#runner)
+            return;
+        system.clearRun(this.#runner);
+        this.#runner = void 0;
+    }
+
+    refresh() {
+        this.stopContinuousVerification();
+        if (!this.instance.isEnabled())
+            return;
+        this.startContinuousVerification();
+    }
+
+    init(shouldRender) {
+        this.blockVerificationLevels = { correctlyAir: 0 };
         this.shouldRender = shouldRender;
         this.isComplete = false;
-        this.initStatistics();
     }
 
     async verifyStructure() {
-        await this.runVerifier();
-        this.parseStatistics();
-        return this.statistics;
-    }
-
-    async runVerifier() {
+        this.init(this.shouldRender);
         return new Promise((resolve) => {
-            system.runJob(this.verifyBlocks);
+            if (this.instance.isUsingLayers())
+                system.runJob(this.verifyBlocks(this.instance.getLayerBlocks(this.instance.getLayer()-1)));
+            else
+                system.runJob(this.verifyBlocks(this.instance.getBlocks()));
             const checker = system.runInterval(() => {
                 if (this.isComplete) {
                     system.clearRun(checker);
-                    resolve();
+                    resolve(this.blockVerificationLevels);
                 }
             }, 1);
         });
     }
     
-    *verifyBlocks() {
-        for (const block of this.instance.getBlocks()) {
+    *verifyBlocks(blocks) {
+        for (const block of blocks) {
             const verificationLevel = this.verifyBlock(block.location);
-            if (verificationLevel !== BlockVerificationLevel.Air)
+            if (verificationLevel === BlockVerificationLevel.Air) {
+                this.blockVerificationLevels.correctlyAir++;
+            } else {
                 this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
-            else
-                this.statistics.correctlyAir++;
-            if (this.shouldRender)
-                new BlockVerificationLevelRender(this.instance.getDimension(), this.instance.toGlobalCoords(block.location), verificationLevel);
-            yield;
+                if (this.shouldRender) {
+                    const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(block.location) };
+                    new BlockVerificationLevelRender(dimensionLocation, verificationLevel, this.interval/TicksPerSecond);
+                }
+            }
+            yield void 0;
         }
         this.isComplete = true;
     }
 
-    // async runVerifier() {
-    //     return new Promise((resolve) => {
-    //         this.verifyBlocks();
-    //         resolve();
-    //     });
-    // }
-
-    // verifyBlocks() {
-    //     for (const block of this.instance.getBlocks()) {
-    //     const verificationLevel = this.verifyBlock(block.location);
-    //     if (verificationLevel !== BlockVerificationLevel.Air)
-    //         this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
-    //     else
-    //         this.statistics.correctlyAir++;
-    //     }
-    // }
-
     verifyBlock(location) {
         const worldBlock = this.instance.getDimension().getBlock(this.instance.toGlobalCoords(location));
-        if (!worldBlock)
-            throw new Error(`Block at ${JSON.stringify(location)} could not be accessed.`);
+        if (!worldBlock) {
+            return BlockVerificationLevel.Skipped;
+        }
         const blockVerifier = new BlockVerifier(worldBlock, this.instance);
         return blockVerifier.verify();
-    }
-
-    initStatistics() {
-        for (const verificationlevel of Object.values(BlockVerificationLevel)) {
-            this.statistics[verificationlevel] = 0;
-        }
-        this.statistics.percentages = {};
-        this.statistics.correctlyAir = 0;
-    }
-
-    parseStatistics() {
-        for (const blockVerificationLevel of Object.values(BlockVerificationLevel)) {
-            this.parseStatistic(blockVerificationLevel);
-        }
-    }
-
-    parseStatistic(blockVerificationLevel) {
-        for (const verificationlevel of Object.values(this.blockVerificationLevels)) {
-            if (blockVerificationLevel === verificationlevel) {
-                this.statistics[verificationlevel]++;
-            }
-        }
-        this.statistics.percentages[blockVerificationLevel] = this.statistics[blockVerificationLevel] / (this.instance.getTotalVolume() - this.statistics.correctlyAir) * 100;
     }
 }

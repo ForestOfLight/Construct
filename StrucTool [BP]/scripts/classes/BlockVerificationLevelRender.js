@@ -1,57 +1,67 @@
 import { MolangVariableMap } from "@minecraft/server";
-import { BlockVerificationLevel } from "./BlockVerificationLevel";
+import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
 import { Vector } from "../lib/Vector";
 
 export class BlockVerificationLevelRender {
-    opacity = 0.5;
+    opacity = 0.2;
+    lifetime = 0;
 
-    constructor(dimension, globalLocation, verificationLevel) {
-        this.dimension = dimension;
-        this.location = new Vector(globalLocation.x, globalLocation.y, globalLocation.z);
+    constructor(dimensionLocation, verificationLevel, lifetime = 5) {
+        this.dimension = dimensionLocation.dimension;
+        this.location = new Vector(dimensionLocation.location.x, dimensionLocation.location.y, dimensionLocation.location.z);
         this.verificationLevel = verificationLevel;
+        this.lifetime = lifetime;
         this.renderBlock();
     }
 
     renderBlock() {
-        for (const [key, value] of Object.entries(this.getParticleLocations())) {
-            this.dimension.spawnParticle(key, value, this.getRGBAMolang());
+        for (const particleLocation of this.getParticleLocations()) {
+            const color = this.getRGBAMolang();
+            if (!color)
+                return;
+            color.setFloat("lifetime", this.lifetime);
+            try {
+                this.dimension.spawnParticle(particleLocation.particleType, particleLocation.location, color);
+            } catch {
+                /* pass */
+            }
         }
     }
 
     getParticleLocations() {
-        const bottomFace = new Vector(0, 0, 0);
-        const topFace = new Vector(0, 1, 0);
-        const leftFace = new Vector(0.5, 0.5, 0);
-        const rightFace = new Vector(-0.5, 0.5, 0);
-        const frontFace = new Vector(0, 0.5, 0.5);
-        const backFace = new Vector(0, 0.5, -0.5);
-        return {
-            "structool:blockerlay_xz": this.location.add(topFace),
-            "structool:blockerlay_xz": this.location.add(bottomFace),
-            "structool:blockerlay_yz": this.location.add(leftFace),
-            "structool:blockerlay_yz": this.location.add(rightFace),
-            "structool:blockerlay_xy": this.location.add(frontFace),
-            "structool:blockerlay_xy": this.location.add(backFace),
-        }
+        const bottomFace = new Vector(0.5, 0, 0.5);
+        const topFace = new Vector(0.5, 1, 0.5);
+        const leftFace = new Vector(1, 0.5, 0.5);
+        const rightFace = new Vector(0, 0.5, 0.5);
+        const frontFace = new Vector(0.5, 0.5, 1);
+        const backFace = new Vector(0.5, 0.5, 0);
+        return [
+            { particleType: "structool:blockoverlay_xz", location: this.location.add(topFace) },
+            { particleType: "structool:blockoverlay_xz", location: this.location.add(bottomFace) },
+            { particleType: "structool:blockoverlay_yz", location: this.location.add(leftFace) },
+            { particleType: "structool:blockoverlay_yz", location: this.location.add(rightFace) },
+            { particleType: "structool:blockoverlay_xy", location: this.location.add(frontFace) },
+            { particleType: "structool:blockoverlay_xy", location: this.location.add(backFace) }
+        ];
     }
 
     getRGBAMolang() {
         const rgb = this.verificationLevelToRGB();
         if (!rgb) return;
         rgb.alpha = this.opacity;
-        return new MolangVariableMap().setColorRGBA("minecraft:particle_appearance_tinting", rgb);
+        const molang = new MolangVariableMap();
+        molang.setColorRGBA("face_color", rgb);
+        return molang;
     }
 
     verificationLevelToRGB() {
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
-                return [1, 0, 0];
+                return { red: 1, green: 0, blue: 0};
             case BlockVerificationLevel.TypeMatch:
-                return [1, 1, 0];
-            case BlockVerificationLevel.Match:
-                return [0, 1, 0];
+                return { red: 1, green: 1, blue: 0};
             case BlockVerificationLevel.Missing:
-                return [0, 0, 1];
+                return { red: 0, green: 0, blue: 1};
             default:
                 return void 0;
         }
