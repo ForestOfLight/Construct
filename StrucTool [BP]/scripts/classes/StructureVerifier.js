@@ -1,7 +1,7 @@
 import { BlockVerifier } from "./BlockVerifier";
 import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
 import { BlockVerificationLevelRender } from "./BlockVerificationLevelRender";
-import { system, TicksPerSecond, world } from "@minecraft/server";
+import { system, TicksPerSecond } from "@minecraft/server";
 
 const MIN_TRACK_PLAYER_DISTANCE = 0;
 const MAX_TRACK_PLAYER_DISTANCE = 7;
@@ -9,18 +9,20 @@ const MIN_LIFETIME = 8;
 
 export class StructureVerifier {
     instance;
-    blockVerificationLevels;
-    shouldRender;
-    trackPlayerDistance;
     intervalOrLifetime;
+
+    locationsToVerify;
+    blocksToVerify;
+    blockVerificationLevels;
     isBlockPopulationComplete;
     isVerificationComplete;
     #runner;
 
-    constructor(instance, { shouldRender = false, trackPlayerDistance = 1, intervalOrLifetime = 10 } = {}) {
+    constructor(instance, { isEnabled = false, trackPlayerDistance = 1, intervalOrLifetime = 10 } = {}) {
         this.instance = instance;
         this.intervalOrLifetime = Math.max(intervalOrLifetime, MIN_LIFETIME);
-        this.setOptions({ shouldRender, trackPlayerDistance });
+        this.instance.options.setVerifierEnabled(isEnabled);
+        this.instance.options.setVerifierDistance(trackPlayerDistance);
     }
 
     startContinuousVerification() {
@@ -43,6 +45,14 @@ export class StructureVerifier {
         this.startContinuousVerification();
     }
 
+    isEnabled() {
+        return this.instance.options.verifier.isEnabled;
+    }
+
+    getTrackPlayerDistance() {
+        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, this.instance.options.trackPlayerDistance));
+    }
+
     init() {
         this.locationsToVerify = new Set();
         this.blocksToVerify = [];
@@ -51,18 +61,13 @@ export class StructureVerifier {
         this.isVerificationComplete = false;
     }
 
-    setOptions({ shouldRender = false, trackPlayerDistance = 0 }) {
-        this.blockVerificationLevels = { correctlyAir: 0 };
-        this.shouldRender = shouldRender;
-        this.trackPlayerDistance = Math.min(trackPlayerDistance, MAX_TRACK_PLAYER_DISTANCE);
-        this.isVerificationComplete = false;
-    }
-
-    async verifyStructure() {
+    async verifyStructure(shouldRender = true) {
+        if (!this.isEnabled())
+            return;
         this.init();
         return new Promise(async (resolve) => {
             await this.populateBlocksToVerify();
-            system.runJob(this.verifyBlocks(this.blocksToVerify));
+            system.runJob(this.verifyBlocks(this.blocksToVerify, shouldRender));
             const checker = system.runInterval(() => {
                 if (this.isVerificationComplete) {
                     system.clearRun(checker);
@@ -74,8 +79,10 @@ export class StructureVerifier {
 
     populateBlocksToVerify() {
         return new Promise((resolve) => {
-            if (this.trackPlayerDistance == 0)
-                return this.instance.getBlocks();
+            if (this.getTrackPlayerDistance == 0) {
+                this.blocksToVerify = this.instance.getAllBlocks();
+                resolve();
+            }
             this.locationsToVerify = new Set();
             for (const player of this.instance.getDimension().getPlayers())
                 system.runJob(this.populateActiveLocationsNearPlayer(player));
@@ -90,11 +97,12 @@ export class StructureVerifier {
     }
 
     *populateActiveLocationsNearPlayer(player) {
-        for (let x = -this.trackPlayerDistance; x < this.trackPlayerDistance; x++) {
-            for (let y = -this.trackPlayerDistance; y < this.trackPlayerDistance; y++) {
-                for (let z = -this.trackPlayerDistance; z < this.trackPlayerDistance; z++) {
+        const distance = this.getTrackPlayerDistance();
+        for (let x = -distance; x < distance; x++) {
+            for (let y = -distance; y < distance; y++) {
+                for (let z = -distance; z < distance; z++) {
                     const structureLocation = this.instance.toStructureCoords({ x: player.location.x + x, y: player.location.y + y, z: player.location.z + z });
-                    if (this.instance.isLocationActive(player.dimension.id, structureLocation, { useLayers: true })) {
+                    if (this.instance.isLocationActive(player.dimension.id, structureLocation, { useActiveLayer: true })) {
                         this.locationsToVerify.add({ x: structureLocation.x, y: structureLocation.y, z: structureLocation.z });
                         yield void 0;
                     }
@@ -104,14 +112,14 @@ export class StructureVerifier {
         this.isBlockPopulationComplete = true;
     }
     
-    *verifyBlocks(blocks) {
+    *verifyBlocks(blocks, shouldRender) {
         for (const block of blocks) {
             const verificationLevel = this.verifyBlock(block.location);
             if (verificationLevel === BlockVerificationLevel.Air) {
                 this.blockVerificationLevels.correctlyAir++;
             } else {
                 this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
-                if (this.shouldRender) {
+                if (shouldRender) {
                     const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(block.location) };
                     new BlockVerificationLevelRender(dimensionLocation, verificationLevel, this.intervalOrLifetime/TicksPerSecond);
                 }

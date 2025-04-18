@@ -1,4 +1,4 @@
-export const InstanceEditOptions = Object.freeze({
+export const InstanceEditButtons = Object.freeze({
     Unknown: 'Unknown',
     MainMenu: '<<',
     Place: '§aPlace Instance',

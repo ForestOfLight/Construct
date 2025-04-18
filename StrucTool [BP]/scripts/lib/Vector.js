@@ -1,6 +1,5 @@
 /**
- * Part of ItemStack Database by @gameza_src
- * Unknown author
+ * Unknown author, with additions.
  */
 const isVec3Symbol = Symbol("isVec3");
 export function Vector(x = 0, y = 0, z = 0) {
@@ -23,6 +22,7 @@ Vector.multiply = function multiply(vec, num) {
 }
 Vector.isVec3 = function isVec3(vec) { return vec[isVec3Symbol] === true; }
 Vector.floor = function floor(vec) { return { x: Math.floor(vec.x), y: Math.floor(vec.y), z: Math.floor(vec.z), __proto__: Vector.prototype }; }
+Vector.volume = function volume(a, b) { const [min, max] = Vector.sort(a, b); return (max.x - min.x) * (max.y - min.y) * (max.z - min.z); }
 Vector.projection = function projection(a, b) { return Vector.multiply(b, Vector.dot(a, b) / ((b.x * b.x + b.y * b.y + b.z * b.z) ** 2)); }
 Vector.rejection = function rejection(a, b) { return Vector.subtract(a, Vector.projection(a, b)); }
 Vector.reflect = function reflect(v, n) { return Vector.subtract(v, Vector.multiply(n, 2 * Vector.dot(v, n))); }
@@ -56,6 +56,7 @@ Vector.prototype = {
     cross(vec) { return Vector.cross(this, vec); },
     dot(vec) { return Vector.dot(this, vec); },
     floor() { return Vector.floor(this); },
+    volume(vec) { return Vector.volume(this, vec); },
     add(vec) { return Vector.add(this, vec); },
     subtract(vec) { return Vector.subtract(this, vec); },
     multiply(num) { return Vector.multiply(this, num); },

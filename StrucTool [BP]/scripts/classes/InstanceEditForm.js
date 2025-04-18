@@ -1,7 +1,7 @@
 import { structureCollection } from './StructureCollection';
 import { MenuForm } from '../classes/MenuForm';
 import { forceShow } from '../utils';
-import { InstanceEditOptions } from './enums/InstanceEditOptions';
+import { InstanceEditButtons } from './enums/InstanceEditButtons';
 import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 
@@ -9,26 +9,26 @@ export class InstanceEditForm {
     instanceName;
     #buttons = {
         isEnabled: [
-            InstanceEditOptions.NextLayer,
-            InstanceEditOptions.PreviousLayer,
-            InstanceEditOptions.SetLayer,
-            InstanceEditOptions.Move,
-            InstanceEditOptions.Statistics,
-            InstanceEditOptions.Settings,
-            InstanceEditOptions.Rename,
-            InstanceEditOptions.Disable,
+            InstanceEditButtons.NextLayer,
+            InstanceEditButtons.PreviousLayer,
+            InstanceEditButtons.SetLayer,
+            InstanceEditButtons.Move,
+            InstanceEditButtons.Statistics,
+            InstanceEditButtons.Settings,
+            InstanceEditButtons.Rename,
+            InstanceEditButtons.Disable,
         ],
         isNotEnabledAndIsNotPlaced: [
-            InstanceEditOptions.Place,
-            InstanceEditOptions.Rename
+            InstanceEditButtons.Place,
+            InstanceEditButtons.Rename
         ],
         isNotEnabledButIsPlaced: [
-            InstanceEditOptions.Enable,
-            InstanceEditOptions.Rename
+            InstanceEditButtons.Enable,
+            InstanceEditButtons.Rename
         ],
         common: [
-            InstanceEditOptions.Delete,
-            InstanceEditOptions.MainMenu
+            InstanceEditButtons.Delete,
+            InstanceEditButtons.MainMenu
         ]
     }
 
@@ -59,51 +59,51 @@ export class InstanceEditForm {
 
         if (!this.instance.hasLayers())
             currentOptions = currentOptions.filter(option => 
-                option !== InstanceEditOptions.SetLayer
-                && option !== InstanceEditOptions.NextLayer
-                && option !== InstanceEditOptions.PreviousLayer
+                option !== InstanceEditButtons.SetLayer
+                && option !== InstanceEditButtons.NextLayer
+                && option !== InstanceEditButtons.PreviousLayer
             );
         return currentOptions;
     }
 
     handleOption(option) {
         switch (option) {
-            case InstanceEditOptions.Enable:
+            case InstanceEditButtons.Enable:
                 this.instance.enable();
                 break;
-            case InstanceEditOptions.Disable:
+            case InstanceEditButtons.Disable:
                 this.instance.disable();
                 break;
-            case InstanceEditOptions.Place:
+            case InstanceEditButtons.Place:
                 this.instance.place(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditOptions.Rename:
+            case InstanceEditButtons.Rename:
                 this.renameInstanceForm();
                 break;
-            case InstanceEditOptions.Delete:
+            case InstanceEditButtons.Delete:
                 structureCollection.delete(this.instanceName);
                 break;
-            case InstanceEditOptions.NextLayer:
+            case InstanceEditButtons.NextLayer:
                 this.instance.increaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
-            case InstanceEditOptions.PreviousLayer:
+            case InstanceEditButtons.PreviousLayer:
                 this.instance.decreaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
-            case InstanceEditOptions.SetLayer:
+            case InstanceEditButtons.SetLayer:
                 this.setLayerForm();
                 break;
-            case InstanceEditOptions.Move:
+            case InstanceEditButtons.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditOptions.Statistics:
+            case InstanceEditButtons.Statistics:
                 this.statisticsForm();
                 break;
-            case InstanceEditOptions.MainMenu:
+            case InstanceEditButtons.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
                 break;
-            case InstanceEditOptions.Settings:
+            case InstanceEditButtons.Settings:
                 this.settingsForm();
                 break;
             default:
@@ -135,8 +135,7 @@ export class InstanceEditForm {
         InstanceEditFormBuilder.buildSetLayer(this.instance.getBounds().max.y, this.instance.getLayer()).show(this.player).then((response) => {
             if (response.canceled)
                 return;
-            const selectedLayer = response.formValues[0];
-            this.instance.setLayer(parseInt(selectedLayer));
+            this.instance.setLayer(parseInt(response.formValues[0]));
         });
     }
 
@@ -152,9 +151,8 @@ export class InstanceEditForm {
         InstanceEditFormBuilder.buildSettings(this.instance).show(this.player).then((response) => {
             if (response.canceled)
                 return;
-            const shouldRender = response.formValues[0];
-            const trackPlayerDistance = response.formValues[1];
-            this.instance.setVerifierOptions({ shouldRender, trackPlayerDistance });
+            this.instance.setVerifierEnabled(response.formValues[0]);
+            this.instance.setVerifierDistance(response.formValues[1]);
         });
     }
 }
