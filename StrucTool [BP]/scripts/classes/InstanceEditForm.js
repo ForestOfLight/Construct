@@ -1,5 +1,6 @@
 import { structureCollection } from './StructureCollection';
 import { MenuForm } from '../classes/MenuForm';
+import { forceShow } from '../utils';
 import { InstanceEditOptions } from './enums/InstanceEditOptions';
 import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
@@ -13,19 +14,20 @@ export class InstanceEditForm {
             InstanceEditOptions.SetLayer,
             InstanceEditOptions.Move,
             InstanceEditOptions.Statistics,
-            InstanceEditOptions.RenameInstance,
-            InstanceEditOptions.DisableInstance,
+            InstanceEditOptions.Settings,
+            InstanceEditOptions.Rename,
+            InstanceEditOptions.Disable,
         ],
         isNotEnabledAndIsNotPlaced: [
-            InstanceEditOptions.PlaceInstance,
-            InstanceEditOptions.RenameInstance
+            InstanceEditOptions.Place,
+            InstanceEditOptions.Rename
         ],
         isNotEnabledButIsPlaced: [
-            InstanceEditOptions.EnableInstance,
-            InstanceEditOptions.RenameInstance
+            InstanceEditOptions.Enable,
+            InstanceEditOptions.Rename
         ],
         common: [
-            InstanceEditOptions.DeleteInstance,
+            InstanceEditOptions.Delete,
             InstanceEditOptions.MainMenu
         ]
     }
@@ -39,7 +41,7 @@ export class InstanceEditForm {
 
     show() {
         const currentOptions = this.getActiveOptions();
-        InstanceEditFormBuilder.buildInstance(this.instance, currentOptions).show(this.player).then((response) => {
+        forceShow(this.player, InstanceEditFormBuilder.buildInstance(this.instance, currentOptions)).then((response) => {
             if (response.canceled) return;
             this.handleOption(currentOptions[response.selection]);
         });
@@ -66,19 +68,19 @@ export class InstanceEditForm {
 
     handleOption(option) {
         switch (option) {
-            case InstanceEditOptions.EnableInstance:
+            case InstanceEditOptions.Enable:
                 this.instance.enable();
                 break;
-            case InstanceEditOptions.DisableInstance:
+            case InstanceEditOptions.Disable:
                 this.instance.disable();
                 break;
-            case InstanceEditOptions.PlaceInstance:
+            case InstanceEditOptions.Place:
                 this.instance.place(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditOptions.RenameInstance:
+            case InstanceEditOptions.Rename:
                 this.renameInstanceForm();
                 break;
-            case InstanceEditOptions.DeleteInstance:
+            case InstanceEditOptions.Delete:
                 structureCollection.delete(this.instanceName);
                 break;
             case InstanceEditOptions.NextLayer:
@@ -100,6 +102,9 @@ export class InstanceEditForm {
                 break;
             case InstanceEditOptions.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
+                break;
+            case InstanceEditOptions.Settings:
+                this.settingsForm();
                 break;
             default:
                 this.player.sendMessage(`§cUnknown option: ${option}`);
@@ -140,6 +145,16 @@ export class InstanceEditForm {
         statsForm.form.show(this.player).then((response) => {
             if (response.canceled && response.cancelationReason === FormCancelationReason.UserBusy)
                 this.player.sendMessage(statsForm.stats);
+        });
+    }
+
+    settingsForm() {
+        InstanceEditFormBuilder.buildSettings(this.instance).show(this.player).then((response) => {
+            if (response.canceled)
+                return;
+            const shouldRender = response.formValues[0];
+            const trackPlayerDistance = response.formValues[1];
+            this.instance.setVerifierOptions({ shouldRender, trackPlayerDistance });
         });
     }
 }

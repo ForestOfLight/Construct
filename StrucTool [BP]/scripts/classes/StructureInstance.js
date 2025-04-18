@@ -1,5 +1,5 @@
 import { world } from "@minecraft/server";
-import { Outliner } from "./Outliner";
+import { Vector } from "../lib/Vector";
 import { StructureOutliner } from "./StructureOutliner";
 import { StructureVerifier } from "./StructureVerifier";
 
@@ -13,7 +13,12 @@ export class StructureInstance {
         worldLocation: { x: 0, y: 0, z: 0 },
         rotation: 0,
         mirror: false,
-        currentLayer: 0
+        currentLayer: 0,
+        verifier: {
+            shouldRender: true,
+            trackPlayerDistance: 5,
+            intervalOrLifetime: 10
+        }
     };
     outliner = void 0;
     verifier = void 0;
@@ -83,39 +88,44 @@ export class StructureInstance {
         try {
             dimension = world.getDimension(this.#options.dimensionId);
         } catch (e) {
+            console.warn(`[StrucTool] Dimension '${this.#options.dimensionId}' not found. Defaulting to 'minecraft:overworld'.`);
             dimension = world.getDimension("minecraft:overworld");
         }
         return dimension;
     }
 
     getBlock(structureLocation) {
-        return this.#structure.getBlockPermutation(structureLocation);
+        const blockPermutation = this.#structure.getBlockPermutation({ x: structureLocation.x, y: structureLocation.y, z: structureLocation.z });
+        if (!blockPermutation)
+            return void 0;
+        blockPermutation.location = structureLocation;
+        return blockPermutation;
     }
 
-    *getBlocks() {
-        const max = this.#structure.size;
-        for (let y = 0; y < max.y; y++) {
-            yield * this.getLayerBlocks(y);
+    *getBlocks(locations = void 0) {
+        if (locations === void 0) {
+            for (let y = 0; y < this.#structure.size.y; y++) {
+                yield * this.getLayerBlocks(y);
+            }
+        } else {
+            for (const location of locations) {
+                yield this.getBlock(location);
+            }
         }
     }
 
     *getLayerBlocks(y) {
-        const max = this.#structure.size;
-        for (let x = 0; x < max.x; x++) {
-            for (let z = 0; z < max.z; z++) {
-                const blockPermutation = this.#structure.getBlockPermutation({ x, y, z });
-                if (!blockPermutation)
-                    yield void 0;
-                blockPermutation.location = { x, y, z };
-                yield blockPermutation;
+        for (let x = 0; x < this.#structure.size.x; x++) {
+            for (let z = 0; z < this.#structure.size.z; z++) {
+                yield this.getBlock({ x, y, z });
             }
         }
     }
 
     getBounds() {
         return {
-            min: { x: 0, y: 0, z: 0 },
-            max: this.#structure.size
+            min: new Vector(0, 0, 0),
+            max: new Vector(this.#structure.size.x, this.#structure.size.y, this.#structure.size.z)
         };
     }
 
@@ -123,8 +133,8 @@ export class StructureInstance {
         if (!this.#options.isEnabled)
             throw new Error(`[StrucTool] Instance '${this.name}' is not placed.`);
         return {
-            min: { x: 0, y: this.#options.currentLayer - 1, z: 0 },
-            max: { x: this.#structure.size.x, y: this.#options.currentLayer, z: this.#structure.size.z }
+            min: new Vector(0, this.#options.currentLayer - 1, 0),
+            max: new Vector(this.#structure.size.x, this.#options.currentLayer, this.#structure.size.z)
         };
     }
 
@@ -184,7 +194,7 @@ export class StructureInstance {
         if (!this.outliner)
             this.outliner = new StructureOutliner(this);
         if (!this.verifier)
-            this.verifier = new StructureVerifier(this, { shouldRender: true });
+            this.verifier = new StructureVerifier(this, { shouldRender: this.#options.verifier.shouldRender, trackPlayerDistance: this.#options.verifier.trackPlayerDistance });
         this.outliner.refresh();
         this.verifier.refresh();
     }
@@ -216,19 +226,19 @@ export class StructureInstance {
     }
 
     toGlobalCoords(structureLocation) {
-        return {
-            x: this.#options.worldLocation.x + structureLocation.x,
-            y: this.#options.worldLocation.y + structureLocation.y,
-            z: this.#options.worldLocation.z + structureLocation.z
-        };
+        return new Vector(
+            this.#options.worldLocation.x + structureLocation.x,
+            this.#options.worldLocation.y + structureLocation.y,
+            this.#options.worldLocation.z + structureLocation.z
+        );
     }
 
     toStructureCoords(worldLocation) {
-        return {
-            x: worldLocation.x - this.#options.worldLocation.x,
-            y: worldLocation.y - this.#options.worldLocation.y,
-            z: worldLocation.z - this.#options.worldLocation.z
-        };
+        return new Vector(
+            worldLocation.x - this.#options.worldLocation.x,
+            worldLocation.y - this.#options.worldLocation.y,
+            worldLocation.z - this.#options.worldLocation.z
+        );
     }
 
     isEnabled() {
@@ -271,5 +281,14 @@ export class StructureInstance {
 
     getDimension() {
         return world.getDimension(this.#options.dimensionId);
+    }
+
+    setVerifierOptions({ shouldRender, trackPlayerDistance, intervalOrLifetime }) {
+        this.#options.verifier.shouldRender = shouldRender;
+        this.#options.verifier.trackPlayerDistance = trackPlayerDistance;
+        this.#options.verifier.intervalOrLifetime = intervalOrLifetime;
+        this.updateOptions();
+        this.verifier.setOptions(this.#options.verifier);
+        this.verifier.refresh();
     }
 }

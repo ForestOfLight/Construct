@@ -2,6 +2,7 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from './MenuFormBuilder';
 import { StructureVerifier } from './StructureVerifier';
 import { StructureStatistics } from './StructureStatistics';
+import { TicksPerSecond } from '@minecraft/server';
 
 export class InstanceEditFormBuilder {
     static buildInstance(instance, options) {
@@ -36,11 +37,19 @@ export class InstanceEditFormBuilder {
     static async buildStatistics(instance) {
         const buildStatisticsForm = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        const structureVerifier = new StructureVerifier(instance);
+        const structureVerifier = new StructureVerifier(instance, { shouldRender: true, trackPlayerDistance: 0, intervalOrLifetime: 30 * TicksPerSecond });
         const verification = await structureVerifier.verifyStructure();
         const statistics = new StructureStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
         buildStatisticsForm.body(statsMessage);
         return { form: buildStatisticsForm, stats: statsMessage };
+    }
+
+    static buildSettings(instance) {
+        return new ModalFormData()
+            .title(MenuFormBuilder.menuTitle)
+            .toggle('Toggle block validation.', instance.verifier.shouldRender)
+            .slider('Use the slider to restrict how far from players block validation occurs. Use 0 for no restriction.', 0, 10, 1, instance.verifier.trackPlayerDistance)
+            .submitButton('§aApply');
     }
 }
