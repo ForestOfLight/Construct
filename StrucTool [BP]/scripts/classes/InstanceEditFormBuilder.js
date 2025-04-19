@@ -26,14 +26,6 @@ export class InstanceEditFormBuilder {
             .submitButton('Rename');
     }
 
-    static buildSetLayer(maxLayer, currentLayer) {
-        return new ModalFormData()
-            .title(MenuFormBuilder.menuTitle)
-            .label('Use the slider to select the layer. Use 0 for all layers.')
-            .slider("Layer", 0, maxLayer, 1, currentLayer)
-            .submitButton('Set Layer');
-    }
-
     static async buildStatistics(instance) {
         const buildStatisticsForm = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
@@ -47,8 +39,10 @@ export class InstanceEditFormBuilder {
 
     static buildSettings(instance) {
         return new ModalFormData()
-            .title(MenuFormBuilder.menuTitle)
+        .title(MenuFormBuilder.menuTitle)
+            .label('Use the slider to select the layer. Use 0 for all layers.')
             .toggle('Toggle block validation.', instance.options.verifier.isEnabled)
+            .slider("Layer", 0, maxLayer, 1, currentLayer)
             .submitButton('§aApply');
     }
 }

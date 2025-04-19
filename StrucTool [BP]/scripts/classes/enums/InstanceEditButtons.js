@@ -8,7 +8,6 @@ export const InstanceEditButtons = Object.freeze({
     Delete: '§cDelete Instance',
     NextLayer: 'Increase Layer',
     PreviousLayer: 'Decrease Layer',
-    SetLayer: 'Set Layer',
     Move: 'Move Here',
     Statistics: 'Statistics',
     Settings: 'Settings'

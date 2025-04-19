@@ -91,8 +91,8 @@ export class InstanceEditForm {
                 this.instance.decreaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
-            case InstanceEditButtons.SetLayer:
-                this.setLayerForm();
+            case InstanceEditButtons.Settings:
+                this.settingsForm();
                 break;
             case InstanceEditButtons.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
@@ -102,9 +102,6 @@ export class InstanceEditForm {
                 break;
             case InstanceEditButtons.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
-                break;
-            case InstanceEditButtons.Settings:
-                this.settingsForm();
                 break;
             default:
                 this.player.sendMessage(`§cUnknown option: ${option}`);
@@ -152,6 +149,7 @@ export class InstanceEditForm {
             if (response.canceled)
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
+            this.instance.setLayer(parseInt(response.formValues[1]));
         });
     }
 }
