@@ -12,7 +12,7 @@ export class MenuForm {
     async show(jumpToInstance = true) {
         let instanceName;
         if (jumpToInstance) {
-            instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useLayers: false })?.name;
+            instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
             if (instanceName) {
                 new InstanceEditForm(this.player, instanceName);
                 return;

@@ -13,8 +13,8 @@ export class Outliner {
 
     constructor(dimension, min, max) {
         this.dimension = dimension;
-        this.min = new Vector(min.x, min.y, min.z);
-        this.max = new Vector(max.x, max.y, max.z);
+        this.min = Vector.from(min);
+        this.max = Vector.from(max);
         this.vertices = this.getVertices(min, max);
     }
 
@@ -65,8 +65,8 @@ export class Outliner {
 
     setVertices(dimension, min, max) {
         this.dimension = dimension;
-        this.min = new Vector(min.x, min.y, min.z);
-        this.max = new Vector(max.x, max.y, max.z);
+        this.min = Vector.from(min);
+        this.max = Vector.from(max);
         this.vertices = this.getVertices(min, max);
     }
 
@@ -103,7 +103,7 @@ export class Outliner {
 
     addStandaloneParticles(locations) {
         for (const location of locations)
-            this.vertices.push(new Vector(location.x, location.y, location.z));
+            this.vertices.push(Vector.from(location));
     }
 
     getNextParticleColor() {

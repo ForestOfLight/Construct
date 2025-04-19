@@ -30,7 +30,7 @@ export class StructureOutliner {
         this.outliner.stopDraw();
         if (!this.instance.isEnabled())
             return;
-        if (this.instance.isUsingLayers())
+        if (this.instance.hasLayerSelected())
             this.layeredDraw();
         else
             this.boxDraw();

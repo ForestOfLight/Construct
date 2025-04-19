@@ -4,13 +4,13 @@ import { Vector } from "../lib/Vector";
 
 export class BlockVerificationLevelRender {
     opacity = 0.2;
-    lifetime = 0;
+    lifetimeSeconds = 0;
 
-    constructor(dimensionLocation, verificationLevel, lifetime = 5) {
+    constructor(dimensionLocation, verificationLevel, lifetimeSeconds = 5) {
         this.dimension = dimensionLocation.dimension;
-        this.location = new Vector(dimensionLocation.location.x, dimensionLocation.location.y, dimensionLocation.location.z);
+        this.location = Vector.from(dimensionLocation.location);
         this.verificationLevel = verificationLevel;
-        this.lifetime = lifetime;
+        this.lifetimeSeconds = lifetimeSeconds;
         this.renderBlock();
     }
 
@@ -19,7 +19,7 @@ export class BlockVerificationLevelRender {
             const color = this.getRGBAMolang();
             if (!color)
                 return;
-            color.setFloat("lifetime", this.lifetime);
+            color.setFloat("lifetime", this.lifetimeSeconds);
             try {
                 this.dimension.spawnParticle(particleLocation.particleType, particleLocation.location, color);
             } catch {

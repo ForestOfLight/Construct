@@ -31,7 +31,8 @@ export class StructureStatistics {
     }
 
     getNonAirBlocks() {
-        return this.instance.getActiveVolume() - this.verification.correctlyAir;
+        const activeBounds = this.instance.getActiveBounds();
+        return activeBounds.min.volume(activeBounds.max) - this.verification.correctlyAir;
     }
 
     getStat(blockVerificationLevel) {
@@ -44,8 +45,8 @@ export class StructureStatistics {
 
     getMessage() {
         let message = '';
-        message += `§fStatistics for §a${this.instance.name}§f:`;
-        if (this.instance.isUsingLayers())
+        message += `§fStatistics for §a${this.instance.getName()}§f:`;
+        if (this.instance.hasLayerSelected())
             message += ` §7(layer ${this.instance.getLayer()})`;
         message += `\n§7Blocks: §2${this.getNonAirBlocks()}\n`;
         const skipped = this.getSkipped();

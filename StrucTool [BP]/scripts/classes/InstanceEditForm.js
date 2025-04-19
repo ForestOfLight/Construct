@@ -1,6 +1,7 @@
 import { structureCollection } from './StructureCollection';
 import { MenuForm } from '../classes/MenuForm';
-import { InstanceEditOptions } from './enums/InstanceEditOptions';
+import { forceShow } from '../utils';
+import { InstanceEditButtons } from './enums/InstanceEditButtons';
 import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 
@@ -8,25 +9,26 @@ export class InstanceEditForm {
     instanceName;
     #buttons = {
         isEnabled: [
-            InstanceEditOptions.NextLayer,
-            InstanceEditOptions.PreviousLayer,
-            InstanceEditOptions.SetLayer,
-            InstanceEditOptions.Move,
-            InstanceEditOptions.Statistics,
-            InstanceEditOptions.RenameInstance,
-            InstanceEditOptions.DisableInstance,
+            InstanceEditButtons.NextLayer,
+            InstanceEditButtons.PreviousLayer,
+            InstanceEditButtons.SetLayer,
+            InstanceEditButtons.Move,
+            InstanceEditButtons.Statistics,
+            InstanceEditButtons.Settings,
+            InstanceEditButtons.Rename,
+            InstanceEditButtons.Disable,
         ],
         isNotEnabledAndIsNotPlaced: [
-            InstanceEditOptions.PlaceInstance,
-            InstanceEditOptions.RenameInstance
+            InstanceEditButtons.Place,
+            InstanceEditButtons.Rename
         ],
         isNotEnabledButIsPlaced: [
-            InstanceEditOptions.EnableInstance,
-            InstanceEditOptions.RenameInstance
+            InstanceEditButtons.Enable,
+            InstanceEditButtons.Rename
         ],
         common: [
-            InstanceEditOptions.DeleteInstance,
-            InstanceEditOptions.MainMenu
+            InstanceEditButtons.Delete,
+            InstanceEditButtons.MainMenu
         ]
     }
 
@@ -39,7 +41,7 @@ export class InstanceEditForm {
 
     show() {
         const currentOptions = this.getActiveOptions();
-        InstanceEditFormBuilder.buildInstance(this.instance, currentOptions).show(this.player).then((response) => {
+        forceShow(this.player, InstanceEditFormBuilder.buildInstance(this.instance, currentOptions)).then((response) => {
             if (response.canceled) return;
             this.handleOption(currentOptions[response.selection]);
         });
@@ -57,49 +59,52 @@ export class InstanceEditForm {
 
         if (!this.instance.hasLayers())
             currentOptions = currentOptions.filter(option => 
-                option !== InstanceEditOptions.SetLayer
-                && option !== InstanceEditOptions.NextLayer
-                && option !== InstanceEditOptions.PreviousLayer
+                option !== InstanceEditButtons.SetLayer
+                && option !== InstanceEditButtons.NextLayer
+                && option !== InstanceEditButtons.PreviousLayer
             );
         return currentOptions;
     }
 
     handleOption(option) {
         switch (option) {
-            case InstanceEditOptions.EnableInstance:
+            case InstanceEditButtons.Enable:
                 this.instance.enable();
                 break;
-            case InstanceEditOptions.DisableInstance:
+            case InstanceEditButtons.Disable:
                 this.instance.disable();
                 break;
-            case InstanceEditOptions.PlaceInstance:
+            case InstanceEditButtons.Place:
                 this.instance.place(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditOptions.RenameInstance:
+            case InstanceEditButtons.Rename:
                 this.renameInstanceForm();
                 break;
-            case InstanceEditOptions.DeleteInstance:
+            case InstanceEditButtons.Delete:
                 structureCollection.delete(this.instanceName);
                 break;
-            case InstanceEditOptions.NextLayer:
+            case InstanceEditButtons.NextLayer:
                 this.instance.increaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
-            case InstanceEditOptions.PreviousLayer:
+            case InstanceEditButtons.PreviousLayer:
                 this.instance.decreaseLayer();
                 new InstanceEditForm(this.player, this.instanceName);
                 break;
-            case InstanceEditOptions.SetLayer:
+            case InstanceEditButtons.SetLayer:
                 this.setLayerForm();
                 break;
-            case InstanceEditOptions.Move:
+            case InstanceEditButtons.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditOptions.Statistics:
+            case InstanceEditButtons.Statistics:
                 this.statisticsForm();
                 break;
-            case InstanceEditOptions.MainMenu:
+            case InstanceEditButtons.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
+                break;
+            case InstanceEditButtons.Settings:
+                this.settingsForm();
                 break;
             default:
                 this.player.sendMessage(`§cUnknown option: ${option}`);
@@ -130,8 +135,7 @@ export class InstanceEditForm {
         InstanceEditFormBuilder.buildSetLayer(this.instance.getBounds().max.y, this.instance.getLayer()).show(this.player).then((response) => {
             if (response.canceled)
                 return;
-            const selectedLayer = response.formValues[0];
-            this.instance.setLayer(parseInt(selectedLayer));
+            this.instance.setLayer(parseInt(response.formValues[0]));
         });
     }
 
@@ -140,6 +144,14 @@ export class InstanceEditForm {
         statsForm.form.show(this.player).then((response) => {
             if (response.canceled && response.cancelationReason === FormCancelationReason.UserBusy)
                 this.player.sendMessage(statsForm.stats);
+        });
+    }
+
+    settingsForm() {
+        InstanceEditFormBuilder.buildSettings(this.instance).show(this.player).then((response) => {
+            if (response.canceled)
+                return;
+            this.instance.setVerifierEnabled(response.formValues[0]);
         });
     }
 }

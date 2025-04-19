@@ -4,7 +4,7 @@ class MaterialCounter {
     static getAll(name) {
         const structure = structureCollection.get(name);
         const materials = {};
-        for (const block of structure.getBlocks()) {
+        for (const block of structure.getAllBlocks()) {
             const typeId = block?.getItemStack()?.typeId.replace('minecraft:', '');
             if (!typeId) continue;
             if (!materials[typeId]) {
@@ -32,7 +32,7 @@ class MaterialCounter {
     static getPrintable(name) {
         const structure = structureCollection.get(name);
         const materials = {};
-        for (const block of structure.getBlocks()) {
+        for (const block of structure.getAllBlocks()) {
             const itemStack = block?.getItemStack();
             const typeId = itemStack?.typeId.replace('minecraft:', '');
             if (!typeId) continue;

@@ -1,3 +1,4 @@
+import { InstanceOptions } from './InstanceOptions';
 import { StructureInstance } from './StructureInstance';
 import { world } from '@minecraft/server';
 
@@ -8,12 +9,12 @@ class StructureCollection {
         this.structures = {};
     }
 
-    loadExistingStructures() {
-        world.getDynamicPropertyIds().filter(id => id.startsWith('structOptions:')).forEach(id => {
-            const instanceName = id.replace('structOptions:', '');
+    loadExistingInstances() {
+        world.getDynamicPropertyIds().filter(id => id.startsWith('instanceOptions:')).forEach(id => {
+            const instanceName = id.replace('instanceOptions:', '');
             let structureId;
             try {
-                structureId = StructureInstance.parseOptions(instanceName).structureId;
+                structureId = InstanceOptions.getInstanceStrucetureId(instanceName);
                 this.structures[instanceName] = new StructureInstance(instanceName, structureId);
             } catch (e) {
                 world.sendMessage(`§c[StrucTool] Error loading structure instance '${instanceName}'. It will be removed.`);
@@ -95,5 +96,5 @@ class StructureCollection {
 export const structureCollection = new StructureCollection();
 
 world.afterEvents.worldLoad.subscribe(() => {
-    structureCollection.loadExistingStructures();
+    structureCollection.loadExistingInstances();
 });
