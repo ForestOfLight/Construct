@@ -22,7 +22,10 @@ Vector.multiply = function multiply(vec, num) {
 }
 Vector.isVec3 = function isVec3(vec) { return vec[isVec3Symbol] === true; }
 Vector.floor = function floor(vec) { return { x: Math.floor(vec.x), y: Math.floor(vec.y), z: Math.floor(vec.z), __proto__: Vector.prototype }; }
-Vector.volume = function volume(a, b) { const [min, max] = Vector.sort(a, b); return (max.x - min.x) * (max.y - min.y) * (max.z - min.z); }
+Vector.volume = function volume(a, b) {
+    const [min, max] = Vector.sort(a, b);
+    return (max.x - min.x) * (max.y - min.y) * (max.z - min.z);
+}
 Vector.projection = function projection(a, b) { return Vector.multiply(b, Vector.dot(a, b) / ((b.x * b.x + b.y * b.y + b.z * b.z) ** 2)); }
 Vector.rejection = function rejection(a, b) { return Vector.subtract(a, Vector.projection(a, b)); }
 Vector.reflect = function reflect(v, n) { return Vector.subtract(v, Vector.multiply(n, 2 * Vector.dot(v, n))); }

@@ -1,4 +1,5 @@
 import { Vector } from "../lib/Vector";
+import { world } from "@minecraft/server";
 
 export class InstanceOptions {
     instanceName = void 0;
@@ -12,6 +13,11 @@ export class InstanceOptions {
         trackPlayerDistance: 5,
         intervalOrLifetime: 10
     };
+
+    static getInstanceStrucetureId(instanceName) {
+        const options = new InstanceOptions(instanceName, void 0);
+        return options.structureId;
+    }
 
     constructor(instanceName, structureId) {
         this.instanceName = instanceName;
@@ -43,7 +49,7 @@ export class InstanceOptions {
     }
 
     getDimension() {
-        return world.getDimension(this.options.dimensionId);
+        return world.getDimension(this.dimensionId);
     }
 
     enable() {

@@ -3,6 +3,7 @@ import { StructureOutliner } from "./StructureOutliner";
 import { StructureVerifier } from "./StructureVerifier";
 import { InstanceOptions } from "./InstanceOptions";
 import { Structure } from "./Structure";
+import { TicksPerSecond } from "@minecraft/server";
 
 export class StructureInstance {
     options;
@@ -18,11 +19,11 @@ export class StructureInstance {
 
     delete() {
         this.disable();
-        this.options.clear();
         delete this.options;
         delete this.structure;
         delete this.outliner;
         delete this.verifier;
+        this.options.clear();
     }
 
     refreshBox() {
@@ -34,6 +35,10 @@ export class StructureInstance {
             this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled, trackPlayerDistance: this.options.verifier.trackPlayerDistance });
         this.outliner.refresh();
         this.verifier.refresh();
+    }
+
+    getName() {
+        return this.options.instanceName;
     }
 
     getStructureId() {
@@ -111,6 +116,15 @@ export class StructureInstance {
             && structureLocation.z >= bounds.min.z && structureLocation.z < bounds.max.z;
     }
 
+    getAllActiveLocations() {
+        if (!this.options.isEnabled)
+            throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
+        if (this.hasLayerSelected())
+            return this.structure.getLayerLocations(this.getLayer()-1);
+        else
+            return this.structure.getAllLocations();
+    }
+
     isEnabled() {
         return this.options.isEnabled;
     }
@@ -177,6 +191,12 @@ export class StructureInstance {
 
     setVerifierDistance(distance) {
         this.options.setVerifierDistance(distance);
+        if (this.options.verifier.trackPlayerDistance === 0) {
+            const bounds = this.getBounds();
+            this.options.verifier.intervalOrLifetime = Math.max(bounds.min.volume(bounds.max) / TicksPerSecond, 2*TicksPerSecond);
+        } else {
+            this.options.verifier.intervalOrLifetime = 10;
+        }
         this.verifier.refresh();
     }
 

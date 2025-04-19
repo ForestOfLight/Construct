@@ -45,7 +45,7 @@ export class StructureStatistics {
 
     getMessage() {
         let message = '';
-        message += `§fStatistics for §a${this.instance.name}§f:`;
+        message += `§fStatistics for §a${this.instance.getName()}§f:`;
         if (this.instance.hasLayerSelected())
             message += ` §7(layer ${this.instance.getLayer()})`;
         message += `\n§7Blocks: §2${this.getNonAirBlocks()}\n`;

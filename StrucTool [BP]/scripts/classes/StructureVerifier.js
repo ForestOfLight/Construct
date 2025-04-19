@@ -2,6 +2,7 @@ import { BlockVerifier } from "./BlockVerifier";
 import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
 import { BlockVerificationLevelRender } from "./BlockVerificationLevelRender";
 import { system, TicksPerSecond } from "@minecraft/server";
+import { Vector } from "../lib/Vector";
 
 const MIN_TRACK_PLAYER_DISTANCE = 0;
 const MAX_TRACK_PLAYER_DISTANCE = 7;
@@ -12,17 +13,20 @@ export class StructureVerifier {
     intervalOrLifetime;
 
     locationsToVerify;
-    blocksToVerify;
     blockVerificationLevels;
-    isBlockPopulationComplete;
+    isLocationPopulationComplete;
     isVerificationComplete;
-    #runner;
 
-    constructor(instance, { isEnabled = false, trackPlayerDistance = 1, intervalOrLifetime = 10 } = {}) {
+    #runner;
+    #verifyJob;
+    #populateJob = {};
+
+    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, intervalOrLifetime = 10 } = {}) {
         this.instance = instance;
         this.intervalOrLifetime = Math.max(intervalOrLifetime, MIN_LIFETIME);
         this.instance.options.setVerifierEnabled(isEnabled);
         this.instance.options.setVerifierDistance(trackPlayerDistance);
+        this.locationsToVerify = new Set();
     }
 
     startContinuousVerification() {
@@ -50,14 +54,13 @@ export class StructureVerifier {
     }
 
     getTrackPlayerDistance() {
-        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, this.instance.options.trackPlayerDistance));
+        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, this.instance.options.verifier.trackPlayerDistance));
     }
 
     init() {
-        this.locationsToVerify = new Set();
-        this.blocksToVerify = [];
+        this.locationsToVerify.clear();
         this.blockVerificationLevels = { correctlyAir: 0 };
-        this.isBlockPopulationComplete = false;
+        this.isLocationPopulationComplete = false;
         this.isVerificationComplete = false;
     }
 
@@ -66,8 +69,10 @@ export class StructureVerifier {
             return;
         this.init();
         return new Promise(async (resolve) => {
-            await this.populateBlocksToVerify();
-            system.runJob(this.verifyBlocks(this.blocksToVerify, shouldRender));
+            await this.populateLocationsToVerify();
+            if (this.#verifyJob)
+                system.clearJob(this.#verifyJob);
+            this.verifyJob = system.runJob(this.verifyBlocks(this.locationsToVerify, shouldRender));
             const checker = system.runInterval(() => {
                 if (this.isVerificationComplete) {
                     system.clearRun(checker);
@@ -77,22 +82,23 @@ export class StructureVerifier {
         });
     }
 
-    populateBlocksToVerify() {
+    async populateLocationsToVerify() {
         return new Promise((resolve) => {
-            if (this.getTrackPlayerDistance == 0) {
-                this.blocksToVerify = this.instance.getAllBlocks();
+            if (this.getTrackPlayerDistance() === 0) {
+                this.locationsToVerify = this.instance.getAllActiveLocations();
                 resolve();
+            } else {
+                for (const job of Object.values(this.#populateJob))
+                    system.clearJob(job);
+                for (const player of this.instance.getDimension().getPlayers())
+                    this.#populateJob[player.id] = system.runJob(this.populateActiveLocationsNearPlayer(player));
+                const checker = system.runInterval(() => {
+                    if (this.isLocationPopulationComplete) {
+                        system.clearRun(checker);
+                        resolve();
+                    }
+                }, 1);
             }
-            this.locationsToVerify = new Set();
-            for (const player of this.instance.getDimension().getPlayers())
-                system.runJob(this.populateActiveLocationsNearPlayer(player));
-            this.blocksToVerify = this.instance.getBlocks(this.locationsToVerify);
-            const checker = system.runInterval(() => {
-                if (this.isBlockPopulationComplete) {
-                    system.clearRun(checker);
-                    resolve();
-                }
-            }, 1);
         });
     }
 
@@ -101,26 +107,27 @@ export class StructureVerifier {
         for (let x = -distance; x < distance; x++) {
             for (let y = -distance; y < distance; y++) {
                 for (let z = -distance; z < distance; z++) {
-                    const structureLocation = this.instance.toStructureCoords({ x: player.location.x + x, y: player.location.y + y, z: player.location.z + z });
+                    const worldLocation = Vector.from(player.location).add(new Vector(x, y, z)).floor();;
+                    const structureLocation = this.instance.toStructureCoords(worldLocation);
                     if (this.instance.isLocationActive(player.dimension.id, structureLocation, { useActiveLayer: true })) {
-                        this.locationsToVerify.add({ x: structureLocation.x, y: structureLocation.y, z: structureLocation.z });
-                        yield void 0;
+                        this.locationsToVerify.add(structureLocation);
                     }
+                    yield void 0;
                 }
             }
         }
-        this.isBlockPopulationComplete = true;
+        this.isLocationPopulationComplete = true;
     }
     
-    *verifyBlocks(blocks, shouldRender) {
-        for (const block of blocks) {
-            const verificationLevel = this.verifyBlock(block.location);
+    *verifyBlocks(locations, shouldRender) {
+        for (const location of locations) {
+            const verificationLevel = this.verifyBlock(location);
             if (verificationLevel === BlockVerificationLevel.Air) {
                 this.blockVerificationLevels.correctlyAir++;
             } else {
-                this.blockVerificationLevels[JSON.stringify(block.location)] = verificationLevel;
+                this.blockVerificationLevels[JSON.stringify(location)] = verificationLevel;
                 if (shouldRender) {
-                    const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(block.location) };
+                    const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(location) };
                     new BlockVerificationLevelRender(dimensionLocation, verificationLevel, this.intervalOrLifetime/TicksPerSecond);
                 }
             }

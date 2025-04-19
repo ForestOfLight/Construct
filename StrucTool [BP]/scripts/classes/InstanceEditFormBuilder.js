@@ -9,7 +9,7 @@ export class InstanceEditFormBuilder {
         const location = instance.getLocation();
         const form = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        let body = `Instance: §a${instance.name}\n§fStructure: §2${instance.options.getStructureId()}\n`;
+        let body = `Instance: §a${instance.getName()}\n§fStructure: §2${instance.getStructureId()}\n`;
         if (instance.hasLocation())
             body += `§7(${location.location.x} ${location.location.y} ${location.location.z} in ${location.dimensionId})\n`;
         form.body(body);
@@ -49,7 +49,6 @@ export class InstanceEditFormBuilder {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
             .toggle('Toggle block validation.', instance.options.verifier.isEnabled)
-            .slider('Use the slider to restrict how far from players block validation occurs. Use 0 for no restriction.', 0, 10, 1, instance.verifier.trackPlayerDistance)
             .submitButton('§aApply');
     }
 }

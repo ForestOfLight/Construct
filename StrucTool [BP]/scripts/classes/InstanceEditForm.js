@@ -152,7 +152,6 @@ export class InstanceEditForm {
             if (response.canceled)
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
-            this.instance.setVerifierDistance(response.formValues[1]);
         });
     }
 }
