@@ -52,13 +52,13 @@ export class StructureInstance {
     getDimension() {
         return this.options.getDimension();
     }
+    
+    getLayer() {
+        return this.options.currentLayer;
+    }
 
     getMaxLayer() {
         return this.structure.getHeight();
-    }
-
-    getLayer() {
-        return this.options.currentLayer;
     }
 
     getBounds() {
@@ -72,18 +72,18 @@ export class StructureInstance {
         if (!this.options.isEnabled)
             throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
-            return this.getLayeredBounds();
+            return this.getLayerBounds(this.getLayer());
         return this.getBounds();
     }
 
-    getLayeredBounds() {
+    getLayerBounds(layer) {
         if (!this.options.isEnabled)
             throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
         const min = this.structure.getMin();
         const max = this.structure.getMax();
         return {
-            min: new Vector(min.x, this.options.currentLayer - 1, min.z),
-            max: new Vector(max.x, this.options.currentLayer, max.z)
+            min: new Vector(min.x, layer - 1, min.z),
+            max: new Vector(max.x, layer, max.z)
         };
     }
 
@@ -101,6 +101,14 @@ export class StructureInstance {
 
     getAllBlocks() {
         return this.structure.getAllBlocks();
+    }
+
+    getActiveBlocks() {
+        if (!this.options.isEnabled)
+            throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
+        if (this.hasLayerSelected())
+            return this.getLayerBlocks(this.getLayer());
+        return this.getAllBlocks();
     }
 
     isLocationActive(dimensionId, structureLocation, { useActiveLayer = true } = {}) {

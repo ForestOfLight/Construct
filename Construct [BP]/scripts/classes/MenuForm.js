@@ -4,16 +4,16 @@ import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceEditForm } from './InstanceEditForm';
 
 export class MenuForm {
-    constructor(player, { jumpToInstance = true } = {}) {
+    constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
         this.player = player;
-        this.show(jumpToInstance);
+        this.show(jumpToInstance, instanceName);
     }
 
-    async show(jumpToInstance = true) {
-        let instanceName;
+    async show(jumpToInstance = false, instanceName = void 0) {
         if (jumpToInstance) {
-            instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
-            if (instanceName) {
+            if (!instanceName)
+                instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
+            if (structureCollection.get(instanceName)) {
                 new InstanceEditForm(this.player, instanceName);
                 return;
             }

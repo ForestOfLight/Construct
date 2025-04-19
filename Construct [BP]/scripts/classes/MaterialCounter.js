@@ -1,38 +1,43 @@
-import { structureCollection } from '../classes/StructureCollection';
-
 class MaterialCounter {
-    static getAll(name) {
-        const structure = structureCollection.get(name);
-        const materials = {};
-        for (const block of structure.getAllBlocks()) {
-            const typeId = block?.getItemStack()?.typeId.replace('minecraft:', '');
-            if (!typeId) continue;
-            if (!materials[typeId]) {
-                materials[typeId] = 0;
-            }
-            materials[typeId]++;
-        }
-        return materials;
+    instance
+    materials;
+
+    constructor(instance) {
+        this.instance = instance;
+        this.materials = {};
     }
 
-    static getLayer(name, layer) {
-        const structure = structureCollection.get(name);
-        const materials = {};
-        for (const block of structure.getLayerBlocks(layer)) {
-            const typeId = block?.getItemStack()?.typeId.replace('minecraft:', '');
-            if (!typeId) continue;
-            if (!materials[typeId]) {
-                materials[typeId] = 0;
-            }
-            materials[typeId]++;
-        }
-        return materials;
+    populateAll() {
+        for (const layer = 0; layer < this.instance.getMaxLayer(); layer++)
+            this.getLayer(layer)
     }
 
-    static getPrintable(name) {
-        const structure = structureCollection.get(name);
+    populateLayer(layer) {
+        for (const block of this.instance.getLayerBlocks(layer))
+            this.countBlock(block)
+    }
+
+    populateActive() {
+        for (const block of this.instance.getActiveBlocks())
+            this.countBlock(block)
+    }
+
+    countBlock(block) {
+        const itemStack = block?.getItemStack();
+        const typeId = itemStack?.typeId;
+        if (!typeId) return;
+        if (!this.materials[typeId])
+            this.materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
+        this.materials[typeId].count++;
+    }
+
+    clear() {
+        this.materials = {}; // does this leak memory??
+    }
+
+    toString() {
         const materials = {};
-        for (const block of structure.getAllBlocks()) {
+        for (const block of this.instance.getAllBlocks()) {
             const itemStack = block?.getItemStack();
             const typeId = itemStack?.typeId.replace('minecraft:', '');
             if (!typeId) continue;

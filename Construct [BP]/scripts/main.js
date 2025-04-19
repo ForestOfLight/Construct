@@ -1,9 +1,10 @@
 // Rules
 import './rules/easyPlace';
 import './rules/fastEasyPlace';
+import './rules/materialGrabber';
 
 // Commands
-import './commands/structool';
+import './commands/construct';
 
 // Other
 import './classes/BlockInfo';

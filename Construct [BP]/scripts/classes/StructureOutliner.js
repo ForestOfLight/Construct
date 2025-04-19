@@ -1,4 +1,4 @@
-import { Outliner } from '../classes/Outliner';
+import { Outliner } from './Outliner';
 
 export class StructureOutliner {
     constructor(instance) {

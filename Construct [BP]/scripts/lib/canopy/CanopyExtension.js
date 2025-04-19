@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 import { world } from '@minecraft/server';
-import IPC from '../../lib/ipc/ipc';
+import IPC from '../ipc/ipc';
 import Command from './Command';
 import Rule from './Rule';
 import { CommandCallbackRequest, CommandPrefixRequest, Ready, RegisterCommand, RegisterExtension, RegisterRule, RuleValueRequest, RuleValueSet, CommandPrefixResponse, RuleValueResponse } from './extension.ipc';

@@ -1,5 +1,5 @@
 import { structureCollection } from './StructureCollection';
-import { MenuForm } from '../classes/MenuForm';
+import { MenuForm } from './MenuForm';
 import { forceShow } from '../utils';
 import { InstanceEditButtons } from './enums/InstanceEditButtons';
 import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
