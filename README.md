@@ -12,33 +12,48 @@
 
 ---
 
-Intro paragraph.
+The closest thing Bedrock has to **Litematica**. This addon allows you to create and manage ghost structures in your world, making it easier to build them in survival. Construct offers these convenient features:
+
+- **Block Validation**: Highlights incorrectly placed blocks.
+- **Easy Place**: Always places blocks correctly.
+- **Structure Management**: Create, edit, and delete structures.
+
+[IMAGE HERE]
 
 > [!IMPORTANT]
-> This addon is a **Canopy Extension**, which means **Canopy** must be installed in your world for it to work.
+> This is a standalone addon, but it is also a **Canopy Extension**, which means **Canopy** can be installed in your world for a few extra features.
 > [Download **Canopy** here!](https://github.com/ForestOfLight/Canopy)
 
 ## Usage
 
-All commands are prefixed with `./`. Do `./help` for more information.
+### Construct Menu
 
-**Usage: `./struct add <name>`**
-Adds a new structure.
+The main Construct menu can be accessed using a `paper` item. Using it will open a GUI where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style, including the ability build in layers.
 
-**Usage: `./struct remove <name>`**
-Removes a structure.
+*Pro tip: You can name the paper after a structure instance to automagically select it when you open the menu!*
+
+### Adding New Structures
+
+Construct uses Minecraft's vanilla structure system so that you can easily create and build new structures.
+
+- The simplest way to add a new structure to the structure list is to save it using a structure block.
+- Importing structures from other worlds is as simple as dropping the `.mcstructure` file in Construct's `Construct [BP]/structures` folder. Then, to select your structure in the Construct menu, choose "Other" when presented with the structures and enter the filename (without including ".mcstructure"). You only need to do this once with new structures, since Construct will save them for future use!
+
+### Commands
+
+**Usage: `./construct`**
+Shows the construct form. Only available when **Canopy** is installed.
 
 ## Roadmap
 
-- [x] Form to manage structure
+- [x] Form to manage structures
 - [x] Structure naming & movement
-- [x] easyPlace rule
-- [ ] Automatic Armor stand posing
+- [x] Easyplace
+- [x] Correct block placement checking
 - [ ] Automatic material gathering from inventories
-- [ ] Correct block placement checking
 - [ ] Structure Mirroring & Rotation
 - [ ] Structure Merging into SuperStructures
 
 ## Issues & Suggestions
 
-If you have any issues or suggestions, please open an issue on this repo. Additionally, if you're interested in contributing to the project, feel free to open a pull request! 
+If you have any issues or suggestions, please don't hesitate to open an issue on this repo. Additionally, if you're interested in contributing to the project, feel free to open a pull request!
