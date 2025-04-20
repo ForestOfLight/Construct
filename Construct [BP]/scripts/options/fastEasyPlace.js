@@ -1,22 +1,24 @@
-import { Rule } from '../lib/canopy/CanopyExtension';
-import { extension } from '../config';
+import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 import { Raycaster } from '../classes/Raycaster';
 
+const PROCESS_INTERVAL = 2;
+
 let runner = void 0;
-const easyPlace = new Rule({
+const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
-    description: { text: "Looking at a structure block with a paper named 'easyPlace' in your hand will place it." },
-    onEnableCallback: () => { runner = system.runInterval(onTick, 2); },
-    onDisableCallback: () => { system.clearRun(runner); }
-})
-extension.addRule(easyPlace);
+    displayName: 'Fast Easy Place',
+    description: 'Place structure blocks just by looking at them.',
+    howToUse: "Look at structure blocks with a paper named 'Easy Place' in your hand to place them.",
+});
+
+system.runInterval(onTick, PROCESS_INTERVAL);
 
 function onTick() {
     for (const player of world.getAllPlayers()) {
-        if (!player)
+        if (!player || !builderOption.isEnabled(player.id))
             continue;
         processEasyPlace(player);
     }
@@ -35,7 +37,7 @@ function isHoldingActionItem(player) {
     const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
     if (!mainhandItemStack)
         return false;
-    return mainhandItemStack.typeId === 'minecraft:paper' && mainhandItemStack.nameTag === 'easyPlace';
+    return mainhandItemStack.typeId === 'minecraft:paper' && mainhandItemStack.nameTag === 'Easy Place';
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {

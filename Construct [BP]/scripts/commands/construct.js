@@ -2,13 +2,14 @@ import { Command } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
 import { world, system } from '@minecraft/server';
 import { MenuForm } from '../classes/MenuForm';
+import { structureCollection } from '../classes/Structure/StructureCollection'
 
 const ACTION_ITEM = 'minecraft:paper';
 
 const menuCmd = new Command({
-    name: 'structool',
-    description: { text: 'Opens the StrucTool Menu. Using a paper will also open the menu.' },
-    usage: 'structool',
+    name: 'construct',
+    description: { text: 'Opens the Construct Menu. Using a paper will also open the menu.' },
+    usage: 'construct',
     callback: (sender) => openMenu(sender)
 });
 extension.addCommand(menuCmd);
@@ -21,7 +22,11 @@ world.beforeEvents.itemUse.subscribe((event) => {
 
 function openMenu(sender, event = void 0) {
     const options = { jumpToInstance: true }
-    if (event)
-        options.instanceName = event.itemStack?.typeId;
+    if (event) {
+        const instanceNames = structureCollection.getInstanceNames();
+        const instanceName = event.itemStack?.nameTag;
+        if (instanceNames.includes(instanceName))
+            options.instanceName = instanceName;
+    }
     new MenuForm(sender, options);
 }

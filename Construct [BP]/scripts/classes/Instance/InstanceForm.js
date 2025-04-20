@@ -1,34 +1,33 @@
-import { structureCollection } from './StructureCollection';
-import { MenuForm } from './MenuForm';
-import { forceShow } from '../utils';
-import { InstanceEditButtons } from './enums/InstanceEditButtons';
-import { InstanceEditFormBuilder } from './InstanceEditFormBuilder';
+import { structureCollection } from '../Structure/StructureCollection';
+import { MenuForm } from '../MenuForm';
+import { forceShow } from '../../utils';
+import { InstanceButtons } from '../Enums/InstanceButtons';
+import { InstanceFormBuilder } from './InstanceFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 
-export class InstanceEditForm {
+export class InstanceForm {
     instanceName;
     #buttons = {
         isEnabled: [
-            InstanceEditButtons.NextLayer,
-            InstanceEditButtons.PreviousLayer,
-            InstanceEditButtons.SetLayer,
-            InstanceEditButtons.Move,
-            InstanceEditButtons.Statistics,
-            InstanceEditButtons.Settings,
-            InstanceEditButtons.Rename,
-            InstanceEditButtons.Disable,
+            InstanceButtons.NextLayer,
+            InstanceButtons.PreviousLayer,
+            InstanceButtons.Move,
+            InstanceButtons.Statistics,
+            InstanceButtons.Settings,
+            InstanceButtons.Rename,
+            InstanceButtons.Disable
         ],
         isNotEnabledAndIsNotPlaced: [
-            InstanceEditButtons.Place,
-            InstanceEditButtons.Rename
+            InstanceButtons.Place,
+            InstanceButtons.Rename
         ],
         isNotEnabledButIsPlaced: [
-            InstanceEditButtons.Enable,
-            InstanceEditButtons.Rename
+            InstanceButtons.Enable,
+            InstanceButtons.Rename
         ],
         common: [
-            InstanceEditButtons.Delete,
-            InstanceEditButtons.MainMenu
+            InstanceButtons.Delete,
+            InstanceButtons.MainMenu
         ]
     }
 
@@ -41,7 +40,7 @@ export class InstanceEditForm {
 
     show() {
         const currentOptions = this.getActiveOptions();
-        forceShow(this.player, InstanceEditFormBuilder.buildInstance(this.instance, currentOptions)).then((response) => {
+        forceShow(this.player, InstanceFormBuilder.buildInstance(this.instance, currentOptions)).then((response) => {
             if (response.canceled) return;
             this.handleOption(currentOptions[response.selection]);
         });
@@ -59,48 +58,48 @@ export class InstanceEditForm {
 
         if (!this.instance.hasLayers())
             currentOptions = currentOptions.filter(option => 
-                option !== InstanceEditButtons.SetLayer
-                && option !== InstanceEditButtons.NextLayer
-                && option !== InstanceEditButtons.PreviousLayer
+                option !== InstanceButtons.SetLayer
+                && option !== InstanceButtons.NextLayer
+                && option !== InstanceButtons.PreviousLayer
             );
         return currentOptions;
     }
 
     handleOption(option) {
         switch (option) {
-            case InstanceEditButtons.Enable:
+            case InstanceButtons.Enable:
                 this.instance.enable();
                 break;
-            case InstanceEditButtons.Disable:
+            case InstanceButtons.Disable:
                 this.instance.disable();
                 break;
-            case InstanceEditButtons.Place:
+            case InstanceButtons.Place:
                 this.instance.place(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditButtons.Rename:
+            case InstanceButtons.Rename:
                 this.renameInstanceForm();
                 break;
-            case InstanceEditButtons.Delete:
+            case InstanceButtons.Delete:
                 structureCollection.delete(this.instanceName);
                 break;
-            case InstanceEditButtons.NextLayer:
+            case InstanceButtons.NextLayer:
                 this.instance.increaseLayer();
-                new InstanceEditForm(this.player, this.instanceName);
+                new InstanceForm(this.player, this.instanceName);
                 break;
-            case InstanceEditButtons.PreviousLayer:
+            case InstanceButtons.PreviousLayer:
                 this.instance.decreaseLayer();
-                new InstanceEditForm(this.player, this.instanceName);
+                new InstanceForm(this.player, this.instanceName);
                 break;
-            case InstanceEditButtons.Settings:
+            case InstanceButtons.Settings:
                 this.settingsForm();
                 break;
-            case InstanceEditButtons.Move:
+            case InstanceButtons.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
-            case InstanceEditButtons.Statistics:
+            case InstanceButtons.Statistics:
                 this.statisticsForm();
                 break;
-            case InstanceEditButtons.MainMenu:
+            case InstanceButtons.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
                 break;
             default:
@@ -110,7 +109,7 @@ export class InstanceEditForm {
     }
 
     renameInstanceForm() {
-        InstanceEditFormBuilder.buildRenameInstance(this.instanceName).show(this.player).then((response) => {
+        InstanceFormBuilder.buildRenameInstance(this.instanceName).show(this.player).then((response) => {
             if (response.canceled)
                 return;
             const newName = response.formValues[0];
@@ -129,7 +128,7 @@ export class InstanceEditForm {
     }
 
     setLayerForm() {
-        InstanceEditFormBuilder.buildSetLayer(this.instance.getBounds().max.y, this.instance.getLayer()).show(this.player).then((response) => {
+        InstanceFormBuilder.buildSetLayer(this.instance.getBounds().max.y, this.instance.getLayer()).show(this.player).then((response) => {
             if (response.canceled)
                 return;
             this.instance.setLayer(parseInt(response.formValues[0]));
@@ -137,7 +136,7 @@ export class InstanceEditForm {
     }
 
     async statisticsForm() {
-        const statsForm = await InstanceEditFormBuilder.buildStatistics(this.instance)
+        const statsForm = await InstanceFormBuilder.buildStatistics(this.instance)
         statsForm.form.show(this.player).then((response) => {
             if (response.canceled && response.cancelationReason === FormCancelationReason.UserBusy)
                 this.player.sendMessage(statsForm.stats);
@@ -145,11 +144,15 @@ export class InstanceEditForm {
     }
 
     settingsForm() {
-        InstanceEditFormBuilder.buildSettings(this.instance).show(this.player).then((response) => {
+        InstanceFormBuilder.buildSettings(this.instance).show(this.player).then((response) => {
             if (response.canceled)
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
-            this.instance.setLayer(parseInt(response.formValues[1]));
+            if (response.formValues[1])
+                this.instance.setVerifierDistance(5);
+            else
+                this.instance.setVerifierDistance(0);
+            this.instance.setLayer(parseInt(response.formValues[2]));
         });
     }
 }

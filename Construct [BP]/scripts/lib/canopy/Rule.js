@@ -30,13 +30,11 @@ class Rule {
     #contingentRules;
     #independentRules;
 
-    constructor({ identifier, description, contingentRules = [], independentRules = [], onEnableCallback = () => {}, onDisableCallback = () => {} }) {
+    constructor({ identifier, description, contingentRules = [], independentRules = [] }) {
         this.#identifier = identifier;
         this.#description = description;
         this.#contingentRules = contingentRules;
         this.#independentRules = independentRules;
-        this.onEnable = onEnableCallback;
-        this.onDisable = onDisableCallback;
     }
 
     getID() {
@@ -65,10 +63,6 @@ class Rule {
     }
     
     setValue(value) {
-        if (value === true)
-            this.onEnable();
-        else
-            this.onDisable();
         world.setDynamicProperty(this.#identifier, value);
     }
 }

@@ -5,7 +5,7 @@ export class Outliner {
     dimension;
     min = new Vector();
     max = new Vector();
-    drawParticle = "structool:outline";
+    drawParticle = "construct:outline";
     drawFrequency = 10;
     
     #drawParticles = [];

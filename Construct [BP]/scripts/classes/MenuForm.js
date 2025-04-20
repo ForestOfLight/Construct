@@ -1,7 +1,8 @@
 import { forceShow } from '../utils';
-import { structureCollection } from './StructureCollection';
+import { structureCollection } from './Structure/StructureCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
-import { InstanceEditForm } from './InstanceEditForm';
+import { InstanceForm } from './Instance/InstanceForm';
+import { BuilderForm } from './Builder/BuilderForm';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
@@ -13,15 +14,15 @@ export class MenuForm {
         if (jumpToInstance) {
             if (!instanceName)
                 instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
-            if (structureCollection.get(instanceName)) {
-                new InstanceEditForm(this.player, instanceName);
+            if (instanceName) {
+                new InstanceForm(this.player, instanceName);
                 return;
             }
         }
         instanceName = await this.getInstanceNameFromForm();
         if (!instanceName)
             return;
-        new InstanceEditForm(this.player, instanceName);
+        new InstanceForm(this.player, instanceName);
     }
 
     async getInstanceNameFromForm() {
@@ -29,8 +30,15 @@ export class MenuForm {
             return forceShow(this.player, MenuFormBuilder.buildAllInstanceName()).then((response) => {
                 if (response.canceled)
                     return;
-                const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
-                return selectedInstanceName || this.createNewInstance();
+                let selection = response.selection;
+                if (selection === 0) {
+                    new BuilderForm(this.player);
+                    return void 0;
+                } else {
+                    selection--;
+                    const selectedInstanceName = structureCollection.getInstanceNames()[selection];
+                    return selectedInstanceName || this.createNewInstance();
+                }
             });
         } catch (e) {
             if (e.message === 'Menu timed out.') {

@@ -1,24 +1,24 @@
-import { Rule } from '../lib/canopy/CanopyExtension';
-import { extension } from '../config';
+import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
-import { structureCollection } from '../classes/StructureCollection';
+import { structureCollection } from '../classes/Structure/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 import { fetchMatchingItemSlot } from '../utils';
 
-const ACTION_SLOT = 35;
+const ACTION_SLOT = 27;
 
-const easyPlace = new Rule({
+const builderOption = new BuilderOption({
     identifier: 'easyPlace',
-    description: { text: "Automatically places the correct block in a structure (paper named 'easyPlace' in bottom right inventory slot)." },
-    onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
-    onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
-})
-extension.addRule(easyPlace);
+    displayName: 'Easy Place',
+    description: 'Always place the correct structure block.',
+    howToUse: "Place blocks in a structure with a paper named 'Easy Place' in the inventory slot above your first hotbar slot to always place the correct block."
+});
+
+world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 
 function onPlayerPlaceBlock(event) {
-    const { player, block, permutationBeingPlaced } = event;
-    if (!player || !block || !hasActionItemInCorrectSlot(player)) return;
+    const { player, block } = event;
+    if (!player || !block || !builderOption.isEnabled(player.id) || !hasActionItemInCorrectSlot(player)) return;
     const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
@@ -30,7 +30,7 @@ function hasActionItemInCorrectSlot(player) {
     if (!inventory)
         return false;
     const actionSlot = inventory.getSlot(ACTION_SLOT);
-    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'easyPlace';
+    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'Easy Place';
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
