@@ -70,7 +70,7 @@ export class StructureInstance {
 
     getActiveBounds() {
         if (!this.options.isEnabled)
-            throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
+            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.getLayerBounds(this.getLayer());
         return this.getBounds();
@@ -78,7 +78,7 @@ export class StructureInstance {
 
     getLayerBounds(layer) {
         if (!this.options.isEnabled)
-            throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
+            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         const min = this.structure.getMin();
         const max = this.structure.getMax();
         return {
@@ -105,7 +105,7 @@ export class StructureInstance {
 
     getActiveBlocks() {
         if (!this.options.isEnabled)
-            throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
+            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.getLayerBlocks(this.getLayer());
         return this.getAllBlocks();
@@ -126,7 +126,7 @@ export class StructureInstance {
 
     getAllActiveLocations() {
         if (!this.options.isEnabled)
-            throw new Error(`[StrucTool] Instance '${this.options.instanceName}' is not placed.`);
+            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.structure.getLayerLocations(this.getLayer()-1);
         else
@@ -187,7 +187,7 @@ export class StructureInstance {
 
     setLayer(layer) {
         if (layer < 0 || layer > this.getMaxLayer())
-            throw new Error(`[StrucTool] Layer ${layer} is out of bounds.`);
+            throw new Error(`[Construct] Layer ${layer} is out of bounds.`);
         this.options.setLayer(layer);
         this.refreshBox();
     }

@@ -36,12 +36,12 @@ export class BlockVerificationLevelRender {
         const frontFace = new Vector(0.5, 0.5, 1);
         const backFace = new Vector(0.5, 0.5, 0);
         return [
-            { particleType: "structool:blockoverlay_xz", location: this.location.add(topFace) },
-            { particleType: "structool:blockoverlay_xz", location: this.location.add(bottomFace) },
-            { particleType: "structool:blockoverlay_yz", location: this.location.add(leftFace) },
-            { particleType: "structool:blockoverlay_yz", location: this.location.add(rightFace) },
-            { particleType: "structool:blockoverlay_xy", location: this.location.add(frontFace) },
-            { particleType: "structool:blockoverlay_xy", location: this.location.add(backFace) }
+            { particleType: "construct:blockoverlay_xz", location: this.location.add(topFace) },
+            { particleType: "construct:blockoverlay_xz", location: this.location.add(bottomFace) },
+            { particleType: "construct:blockoverlay_yz", location: this.location.add(leftFace) },
+            { particleType: "construct:blockoverlay_yz", location: this.location.add(rightFace) },
+            { particleType: "construct:blockoverlay_xy", location: this.location.add(frontFace) },
+            { particleType: "construct:blockoverlay_xy", location: this.location.add(backFace) }
         ];
     }
 

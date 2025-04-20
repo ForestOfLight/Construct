@@ -17,7 +17,7 @@ class StructureCollection {
                 structureId = InstanceOptions.getInstanceStrucetureId(instanceName);
                 this.structures[instanceName] = new StructureInstance(instanceName, structureId);
             } catch (e) {
-                world.sendMessage(`§c[StrucTool] Error loading structure instance '${instanceName}'. It will be removed.`);
+                world.sendMessage(`§c[Construct] Error loading structure instance '${instanceName}'. It will be removed.`);
                 world.setDynamicProperty(id, void 0);
                 throw e;
             }

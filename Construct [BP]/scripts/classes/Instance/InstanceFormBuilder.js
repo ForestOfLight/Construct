@@ -1,10 +1,10 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
-import { MenuFormBuilder } from './MenuFormBuilder';
+import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from './StructureVerifier';
 import { StructureStatistics } from './StructureStatistics';
 import { TicksPerSecond } from '@minecraft/server';
 
-export class InstanceEditFormBuilder {
+export class InstanceFormBuilder {
     static buildInstance(instance, options) {
         const location = instance.getLocation();
         const form = new ActionFormData()
@@ -41,7 +41,7 @@ export class InstanceEditFormBuilder {
         return new ModalFormData()
         .title(MenuFormBuilder.menuTitle)
             .label('Use the slider to select the layer. Use 0 for all layers.')
-            .toggle('Toggle block validation.', instance.options.verifier.isEnabled)
+            .toggle('Block Validation', instance.options.verifier.isEnabled)
             .slider("Layer", 0, maxLayer, 1, currentLayer)
             .submitButton('§aApply');
     }

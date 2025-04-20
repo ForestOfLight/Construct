@@ -1,7 +1,9 @@
-import { Vector } from "../lib/Vector";
+import { Vector } from "../../lib/Vector";
 import { world } from "@minecraft/server";
+import { Option } from "../Option";
 
-export class InstanceOptions {
+export class InstanceOptions extends Option {
+    #DP_NAMESPACE = "instanceOptions";
     instanceName = void 0;
     structureId = void 0;
     isEnabled = false;
@@ -26,26 +28,16 @@ export class InstanceOptions {
     }
 
     save() {
-        world.setDynamicProperty(`instanceOptions:${this.instanceName}`, JSON.stringify(this));
+        this.saveToDP(this.#DP_NAMESPACE, this.instanceName, this);
     }
 
     load() {
-        try {
-            const options = JSON.parse(world.getDynamicProperty(`instanceOptions:${this.instanceName}`));
-            if (options)
-                Object.assign(this, options);
-            else
-                throw new Error("Options not found");
-        } catch {
-            this.save();
-            const options = JSON.parse(world.getDynamicProperty(`instanceOptions:${this.instanceName}`) || "{}");
-            Object.assign(this, options);
-        }
+        this.loadFromDP(this.#DP_NAMESPACE, this.instanceName);
         this.worldLocation = Vector.from(this.worldLocation);
     }
     
     clear() {
-        world.setDynamicProperty(`instanceOptions:${this.instanceName}`, void 0);
+        this.clearDP(this.#DP_NAMESPACE, this.instanceName);
     }
 
     getDimension() {

@@ -1,7 +1,7 @@
 import { forceShow } from '../utils';
 import { structureCollection } from './StructureCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
-import { InstanceEditForm } from './InstanceEditForm';
+import { InstanceForm } from './InstanceForm';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
@@ -14,14 +14,14 @@ export class MenuForm {
             if (!instanceName)
                 instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
             if (structureCollection.get(instanceName)) {
-                new InstanceEditForm(this.player, instanceName);
+                new InstanceForm(this.player, instanceName);
                 return;
             }
         }
         instanceName = await this.getInstanceNameFromForm();
         if (!instanceName)
             return;
-        new InstanceEditForm(this.player, instanceName);
+        new InstanceForm(this.player, instanceName);
     }
 
     async getInstanceNameFromForm() {

@@ -2,7 +2,7 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { structureCollection } from './StructureCollection';
 
 export class MenuFormBuilder {
-    static menuTitle = '§l§2StrucTool §8Menu';
+    static menuTitle = '§l§2Construct §8Menu';
 
     static buildAllInstanceName() {
         const allInstanceNameForm = new ActionFormData()

@@ -1,5 +1,4 @@
-import { Rule } from '../lib/canopy/CanopyExtension';
-import { extension } from '../config';
+import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { structureCollection } from '../classes/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
@@ -8,13 +7,14 @@ import { fetchMatchingItemSlot } from '../utils';
 
 const ACTION_SLOT = 35;
 
-const easyPlace = new Rule({
+new BuilderOption({
     identifier: 'easyPlace',
-    description: { text: "Automatically places the correct block in a structure (paper named 'easyPlace' in bottom right inventory slot)." },
+    displayName: 'Easy Place',
+    description: 'Always place the correct block.',
+    howToUse: "Place blocks in a structure with a paper named 'Easy Place' in the bottom right slot of your inventory to always place the correct block.",
     onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
     onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
 })
-extension.addRule(easyPlace);
 
 function onPlayerPlaceBlock(event) {
     const { player, block, permutationBeingPlaced } = event;
@@ -30,7 +30,7 @@ function hasActionItemInCorrectSlot(player) {
     if (!inventory)
         return false;
     const actionSlot = inventory.getSlot(ACTION_SLOT);
-    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'easyPlace';
+    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'Easy Place';
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {

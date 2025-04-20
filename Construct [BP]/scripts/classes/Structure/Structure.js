@@ -9,7 +9,7 @@ export class Structure {
         this.structureId = structureId;
         this.#structure = world.structureManager.get(structureId);
         if (!this.#structure)
-            throw new Error(`[StrucTool] Structure '${structureId}' not found.`);
+            throw new Error(`[Construct] Structure '${structureId}' not found.`);
         this.#structure.saveToWorld();
     }
 

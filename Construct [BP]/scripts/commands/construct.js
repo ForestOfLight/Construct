@@ -6,9 +6,9 @@ import { MenuForm } from '../classes/MenuForm';
 const ACTION_ITEM = 'minecraft:paper';
 
 const menuCmd = new Command({
-    name: 'structool',
-    description: { text: 'Opens the StrucTool Menu. Using a paper will also open the menu.' },
-    usage: 'structool',
+    name: 'construct',
+    description: { text: 'Opens the Construct Menu. Using a paper will also open the menu.' },
+    usage: 'construct',
     callback: (sender) => openMenu(sender)
 });
 extension.addCommand(menuCmd);

@@ -1,10 +1,11 @@
-import { Rule } from '../lib/canopy/CanopyExtension';
-import { extension } from '../config';
+import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { world } from '@minecraft/server';
 
-const easyPlace = new Rule({
+new BuilderOption({
     identifier: 'materialGrabber',
-    description: { text: "Automatically grabs structure materials out of inventories. Use a paper named 'materialGrabber' to get started." },
+    displayName: 'Material Grabber',
+    description: 'Pulls structure items from inventories.',
+    howToUse: "Interact with inventories using a paper named 'Material Grabber' to pull structure items from them.",
     onEnableCallback: () => {
         world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteract);
         world.beforeEvents.playerInteractWithEntity.subscribe(onPlayerInteract);
@@ -14,7 +15,6 @@ const easyPlace = new Rule({
         world.beforeEvents.playerInteractWithEntity.unsubscribe(onPlayerInteract);
     }
 })
-extension.addRule(easyPlace);
 
 function onPlayerInteract(event) {
     // get inventory
