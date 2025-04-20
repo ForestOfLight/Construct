@@ -5,18 +5,18 @@
     <p><b>Construct</b></p>
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/ForestOfLight/Construct/total?label=Github%20downloads&logo=github)]([https://](https://github.com/ForestOfLight/Construct/releases))
-[![Codacy Quality](https://app.codacy.com/project/badge/Grade/10040a714ad84a2f912d4dae9d3f6e57)](https://app.codacy.com/gh/ForestOfLight/Construct/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![Minecraft - Version](https://img.shields.io/badge/Minecraft-v1.21.70_(Bedrock)-brightgreen)](https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs)
 [![Discord](https://badgen.net/discord/members/9KGche8fxm?icon=discord&label=Discord&list=what)](https://discord.gg/9KGche8fxm)
 </div>
 
 ---
 
-The closest thing Bedrock has to **Litematica**. This addon allows you to create and manage ghost structures in your world, making it easier to build them in survival. Construct offers these convenient features:
+Give yourself the tools to ease the survival building process with Construct: an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and many more:
 
 - **Block Validation**: Highlights incorrectly placed blocks.
 - **Easy Place**: Always places blocks correctly.
-- **Structure Management**: Create, edit, and delete structures.
+- **Layered Display**: Build structures in layers.
+- **Structure Management**: Create and edit many structures at once.
 
 [IMAGE HERE]
 
@@ -41,8 +41,8 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
 
 ### Commands
 
-**Usage: `./construct`**
-Shows the construct form. Only available when **Canopy** is installed.
+**Usage: `./construct`**  
+Shows the construct form. Only available while **Canopy** is installed.
 
 ## Roadmap
 
