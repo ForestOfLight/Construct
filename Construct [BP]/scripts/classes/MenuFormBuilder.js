@@ -1,13 +1,14 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
-import { structureCollection } from './StructureCollection';
+import { structureCollection } from './Structure/StructureCollection';
 
 export class MenuFormBuilder {
-    static menuTitle = '§l§2Construct §8Menu';
+    static menuTitle = '§l§2Construct';
 
     static buildAllInstanceName() {
         const allInstanceNameForm = new ActionFormData()
             .title(this.menuTitle)
             .body('Select an instance:');
+        allInstanceNameForm.button('Builder Settings');
         structureCollection.getInstanceNames().forEach(instanceName => {
             allInstanceNameForm.button(`§2${instanceName}`);
         });

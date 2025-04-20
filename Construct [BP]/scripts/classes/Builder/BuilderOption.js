@@ -1,18 +1,16 @@
 import { BuilderOptions } from "./BuilderOptions";
-import { Option } from "../Option";
+import { world } from "@minecraft/server";
 
-export class BuilderOption extends Option {
-    playerId;
+export class BuilderOption {
     identifier;
     displayName;
     description;
-    value;
+    howToUse;
     #onEnable;
     #onDisable;
     #DP_NAMESPACE = "builderOptions";
 
-    constructor({ player, identifier, displayName, description, howToUse, onEnableCallback = () => {}, onDisableCallback = () => {} }) {
-        this.playerId = player.id;
+    constructor({ identifier, displayName, description, howToUse, onEnableCallback = () => {}, onDisableCallback = () => {} }) {
         this.identifier = identifier;
         this.displayName = displayName;
         this.description = description;
@@ -22,32 +20,24 @@ export class BuilderOption extends Option {
         BuilderOptions.add(this);
     }
 
-    save() {
-        this.saveToDP(this.#DP_NAMESPACE, `${this.playerId}:${this.identifier}`, this);
-    }
-
-    load() {
-        this.loadFromDP(this.#DP_NAMESPACE, `${this.playerId}:${this.identifier}`);
-        this.value = this.value ?? false;
-    }
-
-    clear() {
-        this.clearDP(this.#DP_NAMESPACE, `${this.playerId}:${this.identifier}`);
-    }
-
-    getValue() {
-        return this.value;
+    isEnabled(playerId) {
+        return world.getDynamicProperty(`${this.#DP_NAMESPACE}:${playerId}:${this.identifier}`) === true;
     }
     
-    setValue(value) {
+    setValue(playerId, value) {
         if (value)
-            this.#onEnable();
+            this.#onEnable(playerId);
         else
-            this.#onDisable();
-        if (this.value !== value) {
-            this.value = value;
+            this.#onDisable(playerId);
+        if (this.isEnabled(playerId) !== value) {
+            this.save(playerId, value);
             return value;
         }
+        this.save(playerId, value);
         return void 0;
+    }
+
+    save(playerId, value) {
+        world.setDynamicProperty(`${this.#DP_NAMESPACE}:${playerId}:${this.identifier}`, value);
     }
 }

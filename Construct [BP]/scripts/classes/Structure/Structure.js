@@ -1,5 +1,5 @@
 import { world } from "@minecraft/server";
-import { Vector } from "../lib/Vector";
+import { Vector } from "../../lib/Vector";
 
 export class Structure {
     structureId;

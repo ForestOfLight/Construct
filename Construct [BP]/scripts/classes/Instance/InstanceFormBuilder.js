@@ -1,7 +1,7 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
-import { StructureVerifier } from './StructureVerifier';
-import { StructureStatistics } from './StructureStatistics';
+import { StructureVerifier } from '../Verifier/StructureVerifier';
+import { StructureStatistics } from '../Structure/StructureStatistics';
 import { TicksPerSecond } from '@minecraft/server';
 
 export class InstanceFormBuilder {
@@ -29,7 +29,7 @@ export class InstanceFormBuilder {
     static async buildStatistics(instance) {
         const buildStatisticsForm = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        const structureVerifier = new StructureVerifier(instance, { isEnabled: true, trackPlayerDistance: 0, intervalOrLifetime: 30 * TicksPerSecond });
+        const structureVerifier = new StructureVerifier(instance, { isEnabled: true, trackPlayerDistance: 0, intervalOrLifetime: 30 * TicksPerSecond, isStandalone: true });
         const verification = await structureVerifier.verifyStructure();
         const statistics = new StructureStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
@@ -39,10 +39,11 @@ export class InstanceFormBuilder {
 
     static buildSettings(instance) {
         return new ModalFormData()
-        .title(MenuFormBuilder.menuTitle)
+            .title(MenuFormBuilder.menuTitle)
             .label('Use the slider to select the layer. Use 0 for all layers.')
             .toggle('Block Validation', instance.options.verifier.isEnabled)
-            .slider("Layer", 0, maxLayer, 1, currentLayer)
-            .submitButton('§aApply');
+            .toggle('Distance-Based Block Validation', instance.verifier.getTrackPlayerDistance() !== 0)
+            .slider("Layer", 0, instance.getMaxLayer(), 1, instance.getLayer())
+            .submitButton('§2Apply');
     }
 }

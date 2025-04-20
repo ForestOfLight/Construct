@@ -1,6 +1,6 @@
 import { MolangVariableMap } from "@minecraft/server";
-import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
-import { Vector } from "../lib/Vector";
+import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
+import { Vector } from "../../lib/Vector";
 
 export class BlockVerificationLevelRender {
     opacity = 0.2;

@@ -1,8 +1,8 @@
-import { Vector } from "../lib/Vector";
-import { StructureOutliner } from "./StructureOutliner";
-import { StructureVerifier } from "./StructureVerifier";
+import { Vector } from "../../lib/Vector";
+import { StructureOutliner } from "../Structure/StructureOutliner";
+import { StructureVerifier } from "../Verifier/StructureVerifier";
+import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
-import { Structure } from "./Structure";
 import { TicksPerSecond } from "@minecraft/server";
 
 export class StructureInstance {
@@ -19,11 +19,11 @@ export class StructureInstance {
 
     delete() {
         this.disable();
+        this.options.clear();
         delete this.options;
         delete this.structure;
         delete this.outliner;
         delete this.verifier;
-        this.options.clear();
     }
 
     refreshBox() {

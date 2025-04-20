@@ -1,5 +1,6 @@
-import { InstanceOptions } from './InstanceOptions';
-import { StructureInstance } from './StructureInstance';
+import { InvalidInstanceError } from '../Errors/InvalidInstanceError';
+import { InstanceOptions } from '../Instance/InstanceOptions';
+import { StructureInstance } from '../Instance/StructureInstance';
 import { world } from '@minecraft/server';
 
 class StructureCollection {
@@ -26,7 +27,7 @@ class StructureCollection {
 
     add(instanceName, structureId) {
         if (this.structures[instanceName])
-            throw new Error(`Instance ${instanceName} already exists.`);
+            throw new InvalidInstanceError(`Instance ${instanceName} already exists.`);
         const structure = new StructureInstance(instanceName, structureId);
         this.structures[instanceName] = structure;
         return structure;
@@ -34,9 +35,8 @@ class StructureCollection {
 
     get(instanceName) {
         const structure = this.structures[instanceName];
-        if (!structure) {
-            throw new Error(`Instance ${instanceName} not found.`);
-        }
+        if (!structure)
+            throw new InvalidInstanceError(`Instance ${instanceName} not found.`);
         return structure;
     }
 

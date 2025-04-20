@@ -4,19 +4,21 @@ import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlo
     blockIdToItemStackMap } from '../data';
 import { Raycaster } from '../classes/Raycaster';
 
+const PROCESS_INTERVAL = 2;
+
 let runner = void 0;
-new BuilderOption({
+const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
     displayName: 'Fast Easy Place',
     description: 'Place structure blocks just by looking at them.',
     howToUse: "Look at structure blocks with a paper named 'Easy Place' in your hand to place them.",
-    onEnableCallback: () => { runner = system.runInterval(onTick, 2); },
-    onDisableCallback: () => { system.clearRun(runner); }
-})
+});
+
+system.runInterval(onTick, PROCESS_INTERVAL);
 
 function onTick() {
     for (const player of world.getAllPlayers()) {
-        if (!player)
+        if (!player || !builderOption.isEnabled(player.id))
             continue;
         processEasyPlace(player);
     }

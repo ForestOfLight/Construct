@@ -1,34 +1,23 @@
-import { world } from "@minecraft/server";
-import { BuilderOption } from "./BuilderOption";
-
 export class BuilderOptions {
-    playerId = void 0;
-    options = {};
+    static options = {};
 
-    constructor(playerId) {
-        this.playerId = playerId;
-        this.loadOptions();
+    static add(builderOption) {
+        this.options[builderOption.identifier] = builderOption;
     }
 
-    loadOptions() {
-        const optionDPs = world.getDynamicPropertyIds().filter((id) => id.startsWith(`builderOptions:${this.playerId}:`));
-        for (const optionDP of optionDPs)
-            new BuilderOption(JSON.parse(world.getDynamicProperty(optionDP)));
+    static get(optionId) {
+        return this.options[optionId];
     }
 
-    add(builderOption) {
-        this.options[builderOption.identifer] = builderOption;
+    static getOptionIds() {
+        return Object.keys(this.options).sort((a, b) => a - b);
     }
 
-    get(id) {
-        return this.options[id];
+    static isEnabled(optionId, playerId) {
+        return this.options[optionId].isEnabled(playerId);
     }
 
-    getValue(id) {
-        return this.options[id].getValue();
-    }
-
-    setValue(id, value) {
-        return this.options[id].setValue(value);
+    static setValue(optionId, playerId, value) {
+        return this.options[optionId].setValue(playerId, value);
     }
 }

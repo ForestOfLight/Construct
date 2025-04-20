@@ -4,22 +4,33 @@ import { Builder } from "./Builder";
 export class Builders {
     static builders = {};
 
-    add(playerId) {
+    static add(playerId) {
+        if (this.builders[playerId])
+            return;
         this.builders[playerId] = new Builder(playerId);
     }
 
-    remove(playerId) {
+    static remove(playerId) {
         delete this.builders[playerId];
     }
 
-    get(id) {
+    static get(id) {
         return this.builders[id];
     }
 
-    onJoin(playerId) {
+    static onJoin(playerId) {
         this.add(playerId);
+    }
+
+    static onLeave(playerId) {
+        this.remove(playerId);
     }
 }
 
 world.afterEvents.playerJoin.subscribe((event) => Builders.onJoin(event.playerId));
-world.beforeEvents.playerLeave.subscribe((event) => Builders.onLeave(event.player));
+world.beforeEvents.playerLeave.subscribe((event) => Builders.onLeave(event.player.id));
+world.afterEvents.worldLoad.subscribe((event) => {
+    for (const player of world.getAllPlayers()) {
+        Builders.onJoin(player.id);
+    }
+});

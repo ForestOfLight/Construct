@@ -1,4 +1,4 @@
-import { structureCollection } from "./StructureCollection";
+import { structureCollection } from "./Structure/StructureCollection";
 import { world } from "@minecraft/server";
 
 export class Raycaster {

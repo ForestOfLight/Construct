@@ -22,6 +22,7 @@ export class InstanceOptions extends Option {
     }
 
     constructor(instanceName, structureId) {
+        super();
         this.instanceName = instanceName;
         this.structureId = structureId;
         this.load();

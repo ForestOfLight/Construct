@@ -1,8 +1,8 @@
 import { BlockVerifier } from "./BlockVerifier";
-import { BlockVerificationLevel } from "./enums/BlockVerificationLevel";
-import { BlockVerificationLevelRender } from "./BlockVerificationLevelRender";
+import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
+import { BlockVerificationLevelRender } from "../Verifier/BlockVerificationLevelRender";
 import { system, TicksPerSecond } from "@minecraft/server";
-import { Vector } from "../lib/Vector";
+import { Vector } from "../../lib/Vector";
 
 const MIN_TRACK_PLAYER_DISTANCE = 0;
 const MAX_TRACK_PLAYER_DISTANCE = 7;
@@ -21,11 +21,17 @@ export class StructureVerifier {
     #verifyJob;
     #populateJob = {};
 
-    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, intervalOrLifetime = 10 } = {}) {
+    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, intervalOrLifetime = 10, isStandalone: isIndependent = false } = {}) {
         this.instance = instance;
         this.intervalOrLifetime = Math.max(intervalOrLifetime, MIN_LIFETIME);
-        this.instance.options.setVerifierEnabled(isEnabled);
-        this.instance.options.setVerifierDistance(trackPlayerDistance);
+        if (isIndependent) {
+            this.isIndependent = isIndependent;
+            this.enabled = isEnabled;
+            this.trackPlayerDistance = trackPlayerDistance;
+        } else {
+            this.instance.options.setVerifierEnabled(isEnabled);
+            this.instance.options.setVerifierDistance(trackPlayerDistance);
+        }
         this.locationsToVerify = new Set();
     }
 
@@ -50,11 +56,18 @@ export class StructureVerifier {
     }
 
     isEnabled() {
+        if (this.isIndependent)
+            return this.enabled;
         return this.instance.options.verifier.isEnabled;
     }
 
     getTrackPlayerDistance() {
-        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, this.instance.options.verifier.trackPlayerDistance));
+        let distance;
+        if (this.isIndependent)
+            distance = this.trackPlayerDistance;
+        else
+            distance = this.instance.options.verifier.trackPlayerDistance
+        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, distance));
     }
 
     init() {

@@ -1,7 +1,7 @@
-import { structureCollection } from './StructureCollection';
+import { structureCollection } from '../Structure/StructureCollection';
 import { MenuForm } from '../MenuForm';
 import { forceShow } from '../../utils';
-import { InstanceButtons } from '../enums/InstanceButtons';
+import { InstanceButtons } from '../Enums/InstanceButtons';
 import { InstanceFormBuilder } from './InstanceFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 
@@ -11,12 +11,11 @@ export class InstanceForm {
         isEnabled: [
             InstanceButtons.NextLayer,
             InstanceButtons.PreviousLayer,
-            InstanceButtons.SetLayer,
             InstanceButtons.Move,
             InstanceButtons.Statistics,
             InstanceButtons.Settings,
             InstanceButtons.Rename,
-            InstanceButtons.Disable,
+            InstanceButtons.Disable
         ],
         isNotEnabledAndIsNotPlaced: [
             InstanceButtons.Place,
@@ -149,7 +148,11 @@ export class InstanceForm {
             if (response.canceled)
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
-            this.instance.setLayer(parseInt(response.formValues[1]));
+            if (response.formValues[1])
+                this.instance.setVerifierDistance(5);
+            else
+                this.instance.setVerifierDistance(0);
+            this.instance.setLayer(parseInt(response.formValues[2]));
         });
     }
 }

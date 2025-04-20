@@ -1,7 +1,10 @@
-// Rules
-import './rules/easyPlace';
-import './rules/fastEasyPlace';
-import './rules/materialGrabber';
+// Setup
+import './classes/Builder/Builders';
+
+// Options
+import './options/easyPlace';
+import './options/fastEasyPlace';
+import './options/materialGrabber';
 
 // Commands
 import './commands/construct';

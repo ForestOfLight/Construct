@@ -1,4 +1,4 @@
-import { Outliner } from './Outliner';
+import { Outliner } from '../Outliner';
 
 export class StructureOutliner {
     constructor(instance) {
@@ -42,7 +42,7 @@ export class StructureOutliner {
     }
 
     layeredDraw() {
-        const { min, max } = this.instance.getLayeredBounds();
+        const { min, max } = this.instance.getLayerBounds(this.instance.getLayer());
         this.outliner.setVertices(this.dimension, this.instance.toGlobalCoords(min), this.instance.toGlobalCoords(max));
         this.outliner.addStandaloneParticles(this.getCornerVertices());
     }

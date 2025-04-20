@@ -1,24 +1,24 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
-import { structureCollection } from '../classes/StructureCollection';
+import { structureCollection } from '../classes/Structure/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 import { fetchMatchingItemSlot } from '../utils';
 
-const ACTION_SLOT = 35;
+const ACTION_SLOT = 27;
 
-new BuilderOption({
+const builderOption = new BuilderOption({
     identifier: 'easyPlace',
     displayName: 'Easy Place',
-    description: 'Always place the correct block.',
-    howToUse: "Place blocks in a structure with a paper named 'Easy Place' in the bottom right slot of your inventory to always place the correct block.",
-    onEnableCallback: () => { world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock); },
-    onDisableCallback: () => { world.beforeEvents.playerPlaceBlock.unsubscribe(onPlayerPlaceBlock); }
-})
+    description: 'Always place the correct structure block.',
+    howToUse: "Place blocks in a structure with a paper named 'Easy Place' in the inventory slot above your first hotbar slot to always place the correct block."
+});
+
+world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 
 function onPlayerPlaceBlock(event) {
-    const { player, block, permutationBeingPlaced } = event;
-    if (!player || !block || !hasActionItemInCorrectSlot(player)) return;
+    const { player, block } = event;
+    if (!player || !block || !builderOption.isEnabled(player.id) || !hasActionItemInCorrectSlot(player)) return;
     const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
