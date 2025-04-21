@@ -4,6 +4,7 @@ import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
 import { TicksPerSecond } from "@minecraft/server";
+import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 
 export class StructureInstance {
     options;
@@ -70,7 +71,7 @@ export class StructureInstance {
 
     getActiveBounds() {
         if (!this.options.isEnabled)
-            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
+            throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.getLayerBounds(this.getLayer());
         return this.getBounds();
@@ -78,7 +79,7 @@ export class StructureInstance {
 
     getLayerBounds(layer) {
         if (!this.options.isEnabled)
-            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
+            throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         const min = this.structure.getMin();
         const max = this.structure.getMax();
         return {
@@ -105,7 +106,7 @@ export class StructureInstance {
 
     getActiveBlocks() {
         if (!this.options.isEnabled)
-            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
+            throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.getLayerBlocks(this.getLayer());
         return this.getAllBlocks();
@@ -126,7 +127,7 @@ export class StructureInstance {
 
     getAllActiveLocations() {
         if (!this.options.isEnabled)
-            throw new Error(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
+            throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.structure.getLayerLocations(this.getLayer()-1);
         else

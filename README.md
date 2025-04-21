@@ -26,6 +26,8 @@ Give yourself the tools to ease the survival building process with Construct: an
 
 ## Usage
 
+Construct's latest release can be downloaded from its [Releases Page](https://github.com/ForestOfLight/Construct/releases) right here on GitHub. Install it just like any other addon, though make sure the Beta APIs experiment is enabled!
+
 ### Construct Menu
 
 The main Construct menu can be accessed using a `paper` item. Using it will open a GUI where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style, including the ability build in layers.
