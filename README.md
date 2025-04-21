@@ -1,6 +1,6 @@
 <div align="center">
     <a href="./icon.png">
-        <img src="./icon.png" alt="Construct Icon" width="100" height="100">
+        <img src="./icon.png" alt="Construct Icon" width="130" height="130">
     </a>
     <p><b>Construct</b></p>
 
