@@ -11,15 +11,15 @@
 
 ---
 
-Give yourself the tools to ease the survival building process with Construct: an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and many more:
+Give yourself the tools to ease the survival building process with Construct: an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
 
-- **Block Validation**: Highlights incorrectly placed blocks.
+- **Layered Building**: Build structures in layers.
+- **Block Validation**: Highlights incorrect blocks.
 - **Easy Place**: Always places blocks correctly.
-- **Material Grabbing**: Pulls the required materials from chests in just one click.
-- **Layered Display**: Build structures in layers.
+- **Material Grabbing**: Pulls required materials from chests in just one click.
 - **Structure Management**: Create and edit many structures at once.
 
-[IMAGE HERE]
+![Construct Demo Image](./demo.png)
 
 > [!IMPORTANT]
 > This is a standalone addon, but it is also a **Canopy Extension**, which means **Canopy** can be installed in your world for a few extra features.
@@ -31,7 +31,7 @@ Construct's latest release can be downloaded from its [Releases Page](https://gi
 
 ### Construct Menu
 
-The main Construct menu can be accessed using a `paper` item. Using it will open a GUI where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style, including the ability build in layers.
+The main Construct menu can be accessed using a `paper` item. Using it will open a GUI where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
 
 *Pro tip: You can name the paper after a structure instance to automagically select it when you open the menu!*
 
