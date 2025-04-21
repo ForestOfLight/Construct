@@ -1,6 +1,6 @@
 <div align="center">
-    <a href="./Construct[BP]/pack_icon.png">
-        <img src="./Construct[BP]/pack_icon.png" alt="Construct Icon" width="100" height="100">
+    <a href="./icon.png">
+        <img src="./icon.png" alt="Construct Icon" width="100" height="100">
     </a>
     <p><b>Construct</b></p>
 
