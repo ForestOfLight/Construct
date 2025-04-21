@@ -59,7 +59,14 @@ export class MenuForm {
             const structureId = await this.getStructureId();
             if (!structureId)
                 return;
-            structureCollection.add(instanceName, structureId);
+            try {
+                structureCollection.add(instanceName, structureId);
+            } catch (e) {
+                if (e.name === 'InvalidInstanceError') {
+                    this.player.sendMessage(`§cInstance '${instanceName}' already exists. Try again with a new name.`);
+                    return void 0;
+                }
+            }
             return instanceName;
         });
     }
