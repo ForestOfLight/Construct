@@ -109,10 +109,10 @@ export class Outliner {
     getNextParticleColor() {
         if (this.lastWasBlack) {
             this.lastWasBlack = false;
-            return { red: 1, green: 1, blue: 0, alpha: 1 };
+            return { red: 0.93333333, green: 0.77647059, blue: 0.13333333, alpha: 1 };
         } else {
             this.lastWasBlack = true;
-            return { red: 0.15, green: 0.15, blue: 0.15, alpha: 1 };
+            return { red: 0.09019608, green: 0.09019608, blue: 0.09019608, alpha: 1 };
         }
     }
 }
