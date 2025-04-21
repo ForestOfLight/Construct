@@ -19,7 +19,11 @@ Give yourself the tools to ease the survival building process with Construct: an
 - **Material Grabbing**: Pulls required materials from chests in just one click.
 - **Structure Management**: Create and edit many structures at once.
 
-![Construct Demo Image](./demo.png)
+<div align="center">
+    <a href="./demo.png">
+        <img src="./demo.png" alt="Construct Icon" height="350">
+    </a>
+</div>
 
 > [!IMPORTANT]
 > This is a standalone addon, but it is also a **Canopy Extension**, which means **Canopy** can be installed in your world for a few extra features.
