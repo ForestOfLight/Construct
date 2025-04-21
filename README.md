@@ -1,6 +1,6 @@
 <div align="center">
-    <a href="./Construct [BP]/pack_icon.png">
-        <img src="./Construct [BP]/pack_icon.png" alt="Construct Icon" width="100" height="100">
+    <a href="./Construct[BP]/pack_icon.png">
+        <img src="./Construct[BP]/pack_icon.png" alt="Construct Icon" width="100" height="100">
     </a>
     <p><b>Construct</b></p>
 
@@ -21,7 +21,7 @@ Give yourself the tools to ease the survival building process with Construct: an
 
 <div align="center">
     <a href="./demo.png">
-        <img src="./demo.png" alt="Construct Icon" height="350">
+        <img src="./demo.png" alt="Construct Structure Demo" height="350">
     </a>
 </div>
 
