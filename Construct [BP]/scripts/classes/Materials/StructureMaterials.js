@@ -1,10 +1,15 @@
-class MaterialCounter {
-    instance
+class StructureMaterials {
+    instance;
     materials;
 
     constructor(instance) {
         this.instance = instance;
         this.materials = {};
+    }
+
+    refresh() {
+        this.clear();
+        this.populateActive();
     }
 
     populateAll() {
@@ -32,47 +37,33 @@ class MaterialCounter {
     }
 
     clear() {
-        this.materials = {}; // does this leak memory??
+        for (const key in this.materials)
+            delete this.materials[key];
     }
 
     toString() {
-        const materials = {};
-        for (const block of this.instance.getAllBlocks()) {
-            const itemStack = block?.getItemStack();
-            const typeId = itemStack?.typeId.replace('minecraft:', '');
-            if (!typeId) continue;
-            if (!materials[typeId]) {
-                materials[typeId] = { count: 0, maxStack: itemStack.maxAmount };
-            }
-            materials[typeId].count++;
-        }
         let message = [];
-        for (const blockType in materials) {
-            let count = materials[blockType].count;
+        for (const blockType in this.materials) {
+            let count = this.materials[blockType].count;
             let countStr = '';
-            const maxStack = materials[blockType].maxStack;
-            const fullShulker = 27 * maxStack;
-            if (count >= fullShulker) {
+            const stackSize = this.materials[blockType].stackSize;
+            const fullShulker = 27 * stackSize;
+            if (count >= fullShulker)
                 countStr = `${Math.floor(count / fullShulker)} sb`;
-            }
-            if (count > fullShulker) {
+            if (count > fullShulker)
                 countStr += ' + ';
-            }
             count %= fullShulker;
-            if (count >= maxStack) {
-                countStr += `${Math.floor(count / maxStack)} stack`;
-            }
-            if (count > maxStack) {
+            if (count >= stackSize)
+                countStr += `${Math.floor(count / stackSize)} stack`;
+            if (count > stackSize)
                 countStr += ' + ';
-            }
-            count %= maxStack;
-            if (count > 0) {
+            count %= stackSize;
+            if (count > 0)
                 countStr += count;
-            }
             message.push(`  ${blockType}: ${countStr}`);
         }
         return message.sort().join('\n');
     }
 }
 
-export { MaterialCounter };
+export { StructureMaterials };

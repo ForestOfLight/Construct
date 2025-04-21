@@ -5,12 +5,14 @@ import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
 import { TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
+import { StructureMaterials } from "../Materials/StructureMaterials";
 
 export class StructureInstance {
     options;
     structure = void 0;
     verifier = void 0;
     outliner = void 0;
+    materials = void 0;
 
     constructor(instanceName, structureId) {
         this.structure = new Structure(structureId);
@@ -28,6 +30,9 @@ export class StructureInstance {
     }
 
     refreshBox() {
+        if (!this.materials)
+            this.materials = new StructureMaterials(this);
+        this.materials.refresh();
         if (!this.hasLocation())
             return;
         if (!this.outliner)
@@ -132,6 +137,10 @@ export class StructureInstance {
             return this.structure.getLayerLocations(this.getLayer()-1);
         else
             return this.structure.getAllLocations();
+    }
+
+    getActiveMaterials() {
+        return this.materials;
     }
 
     isEnabled() {
