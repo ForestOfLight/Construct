@@ -82,7 +82,7 @@ class StructureMaterials {
             const stackSize = this.materials[blockType].stackSize;
             const fullShulker = 27 * stackSize;
             if (count >= fullShulker)
-                countStr = `${Math.floor(count / fullShulker)} sb`;
+                countStr = `${Math.floor(count / fullShulker)} \uE200`;
             if (count > fullShulker)
                 countStr += ' + ';
             count %= fullShulker;
