@@ -36,7 +36,8 @@ export const resetToBlockStates = {
     cluster_count: 0,
     respawn_anchor_charge: 0,
     turtle_egg_count: 0,
-    cluster_count: 0
+    cluster_count: 0,
+    end_portal_eye_bit: false
 };
 
 export const blockIdToItemStackMap = {

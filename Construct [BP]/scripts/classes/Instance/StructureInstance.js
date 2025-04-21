@@ -114,7 +114,7 @@ export class StructureInstance {
         if (!this.options.isEnabled)
             throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
-            return this.getLayerBlocks(this.getLayer());
+            return this.getLayerBlocks(this.getLayer() - 1);
         return this.getAllBlocks();
     }
 
