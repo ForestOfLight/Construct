@@ -1,6 +1,7 @@
 import { MaterialsFormBuilder } from './MaterialsFormBuilder';
 import { forceShow } from '../../utils';
 import { Builders } from '../Builder/Builders';
+import { structureCollection } from '../Structure/StructureCollection';
 
 export class MaterialsForm {
     constructor(player) {
@@ -10,14 +11,13 @@ export class MaterialsForm {
 
     show() {
         try {
-            return forceShow(this.player, MaterialsFormBuilder.buildInstanceSelector()).then((response) => {
+            return forceShow(this.player, MaterialsFormBuilder.buildInstanceSelector(this.player)).then((response) => {
                 if (response.canceled)
                     return;
-                let selection = response.selection;
-                const selectedInstanceName = structureCollection.getInstanceNames()[selection];
+                const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
                 if (selectedInstanceName) {
                     this.setActiveInstance(selectedInstanceName);
-                    this.player.sendMessage(`§8Selected instance for material grabber: §2${selectedInstanceName}`);
+                    this.player.sendMessage(`§7Selected instance for material grabber: §2${selectedInstanceName}`);
                     return;
                 }
             });

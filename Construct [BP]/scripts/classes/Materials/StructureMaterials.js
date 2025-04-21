@@ -9,12 +9,45 @@ class StructureMaterials {
 
     refresh() {
         this.clear();
-        this.populateActive();
+        this.populateInstance();
+    }
+
+    populateInstance() {
+        try {
+            if (this.instance.hasLocation())
+                this.populateActive();
+            else
+                this.populateAll();
+        } catch (e) {
+            if (e.name === 'InstanceNotPlacedError')
+                this.clear();
+            else
+                throw e;
+        }
+    }
+
+    get(itemType) {
+        return this.materials[itemType];
+    }
+
+    isEmpty() {
+        return Object.keys(this.materials).length === 0;
+    }
+
+    has(itemType) {
+        return this.materials[itemType] !== undefined;
+    }
+
+    remove(itemType, amount) {
+        if (!this.materials[itemType]) return;
+        this.materials[itemType].count -= amount;
+        if (this.materials[itemType].count <= 0)
+            delete this.materials[itemType];
     }
 
     populateAll() {
-        for (const layer = 0; layer < this.instance.getMaxLayer(); layer++)
-            this.getLayer(layer)
+        for (let layer = 0; layer < this.instance.getMaxLayer(); layer++)
+            this.populateLayer(layer)
     }
 
     populateLayer(layer) {

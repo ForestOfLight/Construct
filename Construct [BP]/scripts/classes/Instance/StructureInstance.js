@@ -27,20 +27,21 @@ export class StructureInstance {
         delete this.structure;
         delete this.outliner;
         delete this.verifier;
+        delete this.materials;
     }
 
     refreshBox() {
-        if (!this.materials)
-            this.materials = new StructureMaterials(this);
-        this.materials.refresh();
         if (!this.hasLocation())
             return;
         if (!this.outliner)
             this.outliner = new StructureOutliner(this);
         if (!this.verifier)
             this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled, trackPlayerDistance: this.options.verifier.trackPlayerDistance });
+        if (!this.materials)
+            this.materials = new StructureMaterials(this);
         this.outliner.refresh();
         this.verifier.refresh();
+        this.materials.refresh();
     }
 
     getName() {
@@ -186,8 +187,8 @@ export class StructureInstance {
     }
 
     place(dimensionId, worldLocation) {
-        this.move(dimensionId, worldLocation);
         this.enable();
+        this.move(dimensionId, worldLocation);
     }
 
     move(dimensionId, worldLocation) {

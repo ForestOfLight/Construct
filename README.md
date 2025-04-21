@@ -15,6 +15,7 @@ Give yourself the tools to ease the survival building process with Construct: an
 
 - **Block Validation**: Highlights incorrectly placed blocks.
 - **Easy Place**: Always places blocks correctly.
+- **Material Grabbing**: Pulls the required materials from chests in just one click.
 - **Layered Display**: Build structures in layers.
 - **Structure Management**: Create and edit many structures at once.
 
@@ -52,7 +53,7 @@ Shows the construct form. Only available while **Canopy** is installed.
 - [x] Structure naming & movement
 - [x] Easyplace
 - [x] Correct block placement checking
-- [ ] Automatic material gathering from inventories
+- [x] Automatic material gathering from inventories
 - [ ] Structure Mirroring & Rotation
 - [ ] Structure Merging into SuperStructures
 

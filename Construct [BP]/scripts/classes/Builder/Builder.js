@@ -2,7 +2,7 @@ import { BuilderOptions } from "./BuilderOptions";
 
 export class Builder {
     playerId;
-    materialInstanceName;
+    materialInstanceName = void 0;
 
     constructor(playerId) {
         this.playerId = playerId;
