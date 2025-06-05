@@ -5,6 +5,8 @@ import { StructureStatistics } from '../Structure/StructureStatistics';
 import { TicksPerSecond } from '@minecraft/server';
 
 export class InstanceFormBuilder {
+    static structureVerifier;
+
     static buildInstance(instance, options) {
         const location = instance.getLocation();
         const form = new ActionFormData()
@@ -29,9 +31,12 @@ export class InstanceFormBuilder {
     static async buildStatistics(instance) {
         const buildStatisticsForm = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        const structureVerifier = new StructureVerifier(instance, { isEnabled: true, trackPlayerDistance: 0, intervalOrLifetime: 30 * TicksPerSecond, isStandalone: true });
-        const verification = await structureVerifier.verifyStructure();
+        if (this.structureVerifier)
+            throw new Error('StructureVerifier is already running.');
+        this.structureVerifier = new StructureVerifier(instance, { isEnabled: true, trackPlayerDistance: 0, intervalOrLifetime: 30 * TicksPerSecond, isStandalone: true });
+        const verification = await this.structureVerifier.verifyStructure();
         const statistics = new StructureStatistics(instance, verification);
+        this.structureVerifier = void 0;
         const statsMessage = statistics.getMessage();
         buildStatisticsForm.body(statsMessage);
         return { form: buildStatisticsForm, stats: statsMessage };
@@ -41,7 +46,7 @@ export class InstanceFormBuilder {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
             .toggle('Block Validation', { defaultValue: instance.options.verifier.isEnabled, tooltip: 'Shows missing and incorrect block overlay.' })
-            .toggle('Distance-Based Block Validation', { defaultValue: instance.verifier.getTrackPlayerDistance() !== 0, tooltip: 'If enabled, the verifier will only check blocks within a certain distance from the player.' })
+            .toggle('Distance-Based Block Validation', { defaultValue: instance.verifier.getTrackPlayerDistance() !== 0, tooltip: `If enabled, the verifier will only check within ${instance.verifier.getTrackPlayerDistance()} blocks of the player. This should stay enabled unless your structure is very small.` })
             .label('Use the slider to select the layer. Use 0 for all layers.')
             .slider("Layer", 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1 })
             .submitButton('§2Apply');

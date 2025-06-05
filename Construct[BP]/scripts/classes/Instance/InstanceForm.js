@@ -136,7 +136,15 @@ export class InstanceForm {
     }
 
     async statisticsForm() {
-        const statsForm = await InstanceFormBuilder.buildStatistics(this.instance)
+        let statsForm;
+        try {
+            statsForm = await InstanceFormBuilder.buildStatistics(this.instance);
+        } catch (e) {
+            if (e.message === 'StructureVerifier is already running.') {
+                this.player.sendMessage('§cA verification is already in progress. Please wait until it finishes.');
+                return;
+            }
+        }
         statsForm.form.show(this.player).then((response) => {
             if (response.canceled && response.cancelationReason === FormCancelationReason.UserBusy)
                 this.player.sendMessage(statsForm.stats);

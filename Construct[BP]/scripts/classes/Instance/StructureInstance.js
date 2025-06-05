@@ -149,7 +149,7 @@ export class StructureInstance {
     }
 
     hasLocation() {
-        return this.options.dimensionId && this.options.worldLocation.x !== 0 && this.options.worldLocation.y !== 0 && this.options.worldLocation.z !== 0;
+        return this.options.dimensionId && (this.options.worldLocation.x !== 0 || this.options.worldLocation.y !== 0 || this.options.worldLocation.z !== 0);
     }
 
     hasLayers() {
