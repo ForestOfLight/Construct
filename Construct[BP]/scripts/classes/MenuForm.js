@@ -91,6 +91,10 @@ export class MenuForm {
             const structureId = response.formValues[0];
             if (structureId === '')
                 return void 0;
+            if (!structureCollection.getWorldStructureIds().includes(structureId)) {
+                this.player.sendMessage(`§cStructure ID '${structureId}' not found. If you're looking for a structure that you put in the structures folder, please restart your world and try again.`);
+                return void 0;
+            }
             return structureId;
         });
     }

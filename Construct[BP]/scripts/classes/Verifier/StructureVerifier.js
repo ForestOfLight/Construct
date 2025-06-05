@@ -103,8 +103,11 @@ export class StructureVerifier {
             } else {
                 for (const job of Object.values(this.#populateJob))
                     system.clearJob(job);
-                for (const player of this.instance.getDimension().getPlayers())
+                for (const player of this.instance.getDimension().getPlayers()) {
+                    if (!player)
+                        continue;
                     this.#populateJob[player.id] = system.runJob(this.populateActiveLocationsNearPlayer(player));
+                }
                 const checker = system.runInterval(() => {
                     if (this.isLocationPopulationComplete) {
                         system.clearRun(checker);

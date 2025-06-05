@@ -28,7 +28,11 @@ export class Builders {
 }
 
 world.afterEvents.playerJoin.subscribe((event) => Builders.onJoin(event.playerId));
-world.beforeEvents.playerLeave.subscribe((event) => Builders.onLeave(event.player.id));
+world.beforeEvents.playerLeave.subscribe((event) => {
+    if (!event.player)
+        return;
+    Builders.onLeave(event.player.id);
+});
 world.afterEvents.worldLoad.subscribe((event) => {
     for (const player of world.getAllPlayers()) {
         Builders.onJoin(player.id);

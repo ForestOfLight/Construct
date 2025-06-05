@@ -40,10 +40,10 @@ export class InstanceFormBuilder {
     static buildSettings(instance) {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
+            .toggle('Block Validation', { defaultValue: instance.options.verifier.isEnabled, tooltip: 'Shows missing and incorrect block overlay.' })
+            .toggle('Distance-Based Block Validation', { defaultValue: instance.verifier.getTrackPlayerDistance() !== 0, tooltip: 'If enabled, the verifier will only check blocks within a certain distance from the player.' })
             .label('Use the slider to select the layer. Use 0 for all layers.')
-            .toggle('Block Validation', instance.options.verifier.isEnabled)
-            .toggle('Distance-Based Block Validation', instance.verifier.getTrackPlayerDistance() !== 0)
-            .slider("Layer", 0, instance.getMaxLayer(), 1, instance.getLayer())
+            .slider("Layer", 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1 })
             .submitButton('§2Apply');
     }
 }

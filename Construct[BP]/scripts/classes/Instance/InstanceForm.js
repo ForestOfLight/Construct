@@ -152,7 +152,7 @@ export class InstanceForm {
                 this.instance.setVerifierDistance(5);
             else
                 this.instance.setVerifierDistance(0);
-            this.instance.setLayer(parseInt(response.formValues[2]));
+            this.instance.setLayer(parseInt(response.formValues[3]));
         });
     }
 }

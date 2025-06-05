@@ -10,7 +10,7 @@ export class MenuFormBuilder {
             .body('Select an instance:');
         allInstanceNameForm.button('Builder Settings');
         structureCollection.getInstanceNames().forEach(instanceName => {
-            allInstanceNameForm.button(`§2${instanceName}`);
+            allInstanceNameForm.button(`${structureCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
         });
         allInstanceNameForm.button('Create New Instance');
         return allInstanceNameForm;

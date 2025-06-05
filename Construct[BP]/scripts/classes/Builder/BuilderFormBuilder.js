@@ -8,7 +8,7 @@ export class BuilderFormBuilder {
             .title(MenuFormBuilder.menuTitle);
         for (const optionId of BuilderOptions.getOptionIds()) {
             const option = BuilderOptions.get(optionId);
-            form.toggle(`${option.displayName} - ${option.description}`, option.isEnabled(player.id));
+            form.toggle(`${option.displayName} - ${option.description}`, { defaultValue: option.isEnabled(player.id) });
         }
         form.submitButton('§2Apply');
         return form;
