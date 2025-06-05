@@ -4,7 +4,7 @@
 		"name": "Construct [BP] v1.0.0",
 		"description": "Survival building addon by §aForestOfLight§r.",
 		"uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58",
-		"min_engine_version": [1, 21, 70],
+		"min_engine_version": [1, 21, 80],
 		"version": [1, 0, 0]
 	},
 	"modules": [

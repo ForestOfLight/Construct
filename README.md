@@ -5,7 +5,7 @@
     <p><b>Construct</b></p>
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/ForestOfLight/Construct/total?label=Github%20downloads&logo=github)]([https://](https://github.com/ForestOfLight/Construct/releases))
-[![Minecraft - Version](https://img.shields.io/badge/Minecraft-v1.21.70_(Bedrock)-brightgreen)](https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs)
+[![Minecraft - Version](https://img.shields.io/badge/Minecraft-v1.21.80_(Bedrock)-brightgreen)](https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs)
 [![Discord](https://badgen.net/discord/members/9KGche8fxm?icon=discord&label=Discord&list=what)](https://discord.gg/9KGche8fxm)
 </div>
 
