@@ -10,5 +10,6 @@ export const InstanceButtons = Object.freeze({
     PreviousLayer: 'Decrease Layer',
     Move: 'Move Here',
     Statistics: 'Statistics',
-    Settings: 'Settings'
+    Settings: 'Settings',
+    Materials: 'Material List'
 });

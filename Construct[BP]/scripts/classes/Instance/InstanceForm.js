@@ -12,8 +12,9 @@ export class InstanceForm {
             InstanceButtons.NextLayer,
             InstanceButtons.PreviousLayer,
             InstanceButtons.Move,
-            InstanceButtons.Statistics,
             InstanceButtons.Settings,
+            InstanceButtons.Statistics,
+            InstanceButtons.Materials,
             InstanceButtons.Rename,
             InstanceButtons.Disable
         ],
@@ -90,14 +91,17 @@ export class InstanceForm {
                 this.instance.decreaseLayer();
                 new InstanceForm(this.player, this.instanceName);
                 break;
-            case InstanceButtons.Settings:
-                this.settingsForm();
-                break;
             case InstanceButtons.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
+            case InstanceButtons.Settings:
+                this.settingsForm();
+                break;
             case InstanceButtons.Statistics:
                 this.statisticsForm();
+                break;
+            case InstanceButtons.Materials:
+                this.materialsForm();
                 break;
             case InstanceButtons.MainMenu:
                 new MenuForm(this.player, { jumpToInstance: false });
@@ -160,7 +164,15 @@ export class InstanceForm {
                 this.instance.setVerifierDistance(5);
             else
                 this.instance.setVerifierDistance(0);
-            this.instance.setLayer(parseInt(response.formValues[3]));
+            this.instance.setLayer(parseInt(response.formValues[2]));
+        });
+    }
+
+    materialsForm(onlyShowMissingMaterials = false) {
+        forceShow(this.player, InstanceFormBuilder.buildMaterialList(this.instance, onlyShowMissingMaterials, this.player)).then((response) => {
+            if (response.canceled) return;
+            if (response.selection === 0)
+                this.materialsForm(!onlyShowMissingMaterials);
         });
     }
 }

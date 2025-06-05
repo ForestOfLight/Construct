@@ -3,7 +3,7 @@ import { MenuFormBuilder } from "../MenuFormBuilder";
 import { structureCollection } from "../Structure/StructureCollection";
 import { Builders } from "../Builder/Builders";
 
-export class MaterialsFormBuilder {
+export class MaterialGrabberFormBuilder {
     static menuTitle = MenuFormBuilder.menuTitle + ' Material Grabber';
 
     static buildInstanceSelector(player) {
