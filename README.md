@@ -58,7 +58,7 @@ Shows the construct form. Only available while **Canopy** is installed.
 - [x] Easyplace
 - [x] Correct block placement checking
 - [x] Automatic material gathering from inventories
-- [ ] Structure Mirroring & Rotation
+- [x] Material list
 - [ ] Structure Merging into SuperStructures
 
 ## Issues & Suggestions
