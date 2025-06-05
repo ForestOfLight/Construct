@@ -2,7 +2,7 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { StructureStatistics } from '../Structure/StructureStatistics';
-import { TicksPerSecond } from '@minecraft/server';
+import { EntityComponentTypes, TicksPerSecond } from '@minecraft/server';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -46,9 +46,39 @@ export class InstanceFormBuilder {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
             .toggle('Block Validation', { defaultValue: instance.options.verifier.isEnabled, tooltip: 'Shows missing and incorrect block overlay.' })
-            .toggle('Distance-Based Block Validation', { defaultValue: instance.verifier.getTrackPlayerDistance() !== 0, tooltip: `If enabled, the verifier will only check within ${instance.verifier.getTrackPlayerDistance()} blocks of the player. This should stay enabled unless your structure is very small.` })
-            .label('Use the slider to select the layer. Use 0 for all layers.')
-            .slider("Layer", 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1 })
+            .toggle('Distance-Based Block Validation', { defaultValue: instance.verifier.getTrackPlayerDistance() !== 0, tooltip: `If enabled, the verifier will only check within ${instance.verifier.getTrackPlayerDistance()} blocks of the player. This should stay enabled unless your structure is very small or in layer mode.` })
+            .slider("Layer", 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: 'Changes the active layer. Use 0 for all layers.' })
             .submitButton('§2Apply');
+    }
+
+    static buildMaterialList(instance, onlyMissing = false, player = false) {
+        const materials = instance.getActiveMaterials();
+        const form = new ActionFormData()
+            .title(MenuFormBuilder.menuTitle)
+        const bodyText = { rawtext: [] };
+        let buttonText = void 0;
+        if (onlyMissing) {
+            const inventoryContainer = player?.getComponent(EntityComponentTypes.Inventory)?.container;
+            if (!inventoryContainer) {
+                form.body('§cNo player inventory found.');
+                return form;
+            }
+            bodyText.rawtext.push({ text: `§cMaterials Missing From Inventory:` });
+            if (instance.hasLayerSelected())
+                bodyText.rawtext.push({ text: ` §7(layer ${instance.getLayer()})` });
+            bodyText.rawtext.push({ text: `§f\n\n` });
+            bodyText.rawtext.push(materials.formatString(materials.getMaterialsDifference(inventoryContainer)));
+            buttonText = "Show All Materials";
+        } else {
+            bodyText.rawtext.push({ text: `§aAll Materials:` });
+            if (instance.hasLayerSelected())
+                bodyText.rawtext.push({ text: ` §7(layer ${instance.getLayer()})` });
+            bodyText.rawtext.push({ text: `§f\n\n` });
+            bodyText.rawtext.push(materials.formatString());
+            buttonText = "Show Missing Materials";
+        }
+        form.body(bodyText);
+        form.button(buttonText);
+        return form;
     }
 }

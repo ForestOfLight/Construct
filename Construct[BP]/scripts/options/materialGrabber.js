@@ -1,6 +1,6 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { EntityComponentTypes, ItemStack, Player, world, system } from '@minecraft/server';
-import { MaterialsForm } from '../classes/Materials/MaterialsForm';
+import { MaterialGrabberForm } from '../classes/Materials/MaterialGrabberForm';
 import { Builders } from '../classes/Builder/Builders';
 import { structureCollection } from '../classes/Structure/StructureCollection';
 
@@ -19,7 +19,7 @@ function onItemUse(event) {
     if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.source.id))
         return;
     event.cancel = true;
-    system.run(() => new MaterialsForm(event.source));
+    system.run(() => new MaterialGrabberForm(event.source));
 }
 
 function onPlayerInteract(event) {

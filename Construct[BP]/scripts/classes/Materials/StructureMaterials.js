@@ -1,3 +1,5 @@
+import { ItemStack } from "@minecraft/server";
+
 class StructureMaterials {
     instance;
     materials;
@@ -74,28 +76,54 @@ class StructureMaterials {
             delete this.materials[key];
     }
 
-    toString() {
-        let message = [];
-        for (const blockType in this.materials) {
-            let count = this.materials[blockType].count;
+    formatString(otherMaterials = void 0) {
+        const materials = otherMaterials || this.materials;
+        let message = { rawtext: [] };
+        const sortedTypes = Object.keys(materials).sort(
+            (a, b) => materials[b].count - materials[a].count
+        );
+        for (const blockType of sortedTypes) {
+            let count = materials[blockType].count;
             let countStr = '';
-            const stackSize = this.materials[blockType].stackSize;
+            const stackSize = materials[blockType].stackSize;
             const fullShulker = 27 * stackSize;
             if (count >= fullShulker)
-                countStr = `${Math.floor(count / fullShulker)} \uE200`;
-            if (count > fullShulker)
+                countStr = `${Math.floor(count / fullShulker)}\uE200`;
+            if (count > fullShulker && count % fullShulker > 0)
                 countStr += ' + ';
             count %= fullShulker;
-            if (count >= stackSize)
-                countStr += `${Math.floor(count / stackSize)} stack`;
-            if (count > stackSize)
+            if (count >= stackSize) {
+                const numStacks = Math.floor(count / stackSize);
+                countStr += `${numStacks} stack`;
+                if (numStacks > 1)
+                    countStr += 's';
+            }
+            if (count > stackSize && count % stackSize > 0)
                 countStr += ' + ';
             count %= stackSize;
             if (count > 0)
                 countStr += count;
-            message.push(`  ${blockType}: ${countStr}`);
+            message.rawtext.push({ text: '§3' });
+            message.rawtext.push({ translate: new ItemStack(blockType).localizationKey })
+            message.rawtext.push({ text: `§f: ${countStr}\n` });
         }
-        return message.sort().join('\n');
+        return message;
+    }
+
+    getMaterialsDifference(container) {
+        const missingMaterials = JSON.parse(JSON.stringify(this.materials));
+        for (let slotIndex = 0; slotIndex < container.size; slotIndex++) {
+            const slot = container.getSlot(slotIndex);
+            if (slot.hasItem()) {
+                const itemType = slot.getItem().typeId;
+                if (!missingMaterials[itemType])
+                    continue;
+                missingMaterials[itemType].count -= slot.amount;
+                if (missingMaterials[itemType].count <= 0)
+                    delete missingMaterials[itemType];
+            }
+        }
+        return missingMaterials;
     }
 }
 
