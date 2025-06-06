@@ -35,7 +35,7 @@ Construct's latest release can be downloaded from its [Releases Page](https://gi
 
 ### Construct Menu
 
-The main Construct menu can be accessed using a `paper` item. Using it will open a GUI where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
+The main Construct menu can be accessed using a `paper` item. Using it will open a menu where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
 
 *Pro tip: You can name the paper after a structure instance to automagically select it when you open the menu!*
 
