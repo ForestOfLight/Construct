@@ -1,17 +1,19 @@
 import { Vector } from "../../lib/Vector";
-import { StructureOutliner } from "../Structure/StructureOutliner";
+import { StructureOutliner } from "../Render/StructureOutliner";
 import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
 import { TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
+import { VerificationRenderer } from "../Render/VerificationRenderer";
 
 export class StructureInstance {
     options;
     structure = void 0;
-    verifier = void 0;
     outliner = void 0;
+    verifier = void 0;
+    verificationRenderer = void 0;
     materials = void 0;
 
     constructor(instanceName, structureId) {
@@ -27,6 +29,7 @@ export class StructureInstance {
         delete this.structure;
         delete this.outliner;
         delete this.verifier;
+        delete this.verificationRenderer;
         delete this.materials;
     }
 
@@ -36,11 +39,14 @@ export class StructureInstance {
         if (!this.outliner)
             this.outliner = new StructureOutliner(this);
         if (!this.verifier)
-            this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled, trackPlayerDistance: this.options.verifier.trackPlayerDistance });
+            this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled });
+        if (!this.verificationRenderer)
+            this.verificationRenderer = new VerificationRenderer(this);
         if (!this.materials)
             this.materials = new StructureMaterials(this);
         this.outliner.refresh();
         this.verifier.refresh();
+        this.verificationRenderer.refresh();
         this.materials.refresh();
     }
 
@@ -57,7 +63,7 @@ export class StructureInstance {
     }
 
     getDimension() {
-        return this.options.getDimension();
+        return this.options?.getDimension();
     }
     
     getLayer() {
@@ -206,17 +212,18 @@ export class StructureInstance {
     setVerifierEnabled(enable) {
         this.options.setVerifierEnabled(enable);
         this.verifier.refresh();
+        this.verificationRenderer.refresh();
     }
 
     setVerifierDistance(distance) {
         this.options.setVerifierDistance(distance);
         if (this.options.verifier.trackPlayerDistance === 0) {
             const bounds = this.getBounds();
-            this.options.verifier.intervalOrLifetime = Math.max(bounds.min.volume(bounds.max) / TicksPerSecond, 2*TicksPerSecond);
+            this.options.verifier.particleLifetime = Math.max(bounds.min.volume(bounds.max) / TicksPerSecond, 2*TicksPerSecond);
         } else {
-            this.options.verifier.intervalOrLifetime = 10;
+            this.options.verifier.particleLifetime = 10;
         }
-        this.verifier.refresh();
+        this.verificationRenderer.refresh();
     }
 
     increaseLayer() {

@@ -13,7 +13,7 @@ export class InstanceOptions extends Option {
     verifier = {
         isEnabled: true,
         trackPlayerDistance: 5,
-        intervalOrLifetime: 10
+        particleLifetime: 10
     };
 
     static getInstanceStrucetureId(instanceName) {

@@ -9,24 +9,23 @@ export class StructureStatistics {
 
     init() {
         this.statistics = {};
-        for (const verificationLevel of Object.values(BlockVerificationLevel)) {
+        for (const verificationLevel of Object.values(BlockVerificationLevel))
             this.statistics[verificationLevel] = 0;
-        }
         this.statistics.correctlyAir = 0;
     }
 
     parse() {
         this.init();
-        for (const blockVerificationLevel of Object.values(BlockVerificationLevel)) {
+        for (const blockVerificationLevel of Object.values(BlockVerificationLevel))
             this.parseStatistic(blockVerificationLevel);
-        }
     }
 
     parseStatistic(blockVerificationLevel) {
-        for (const verificationlevel of Object.values(this.verification)) {
-            if (blockVerificationLevel === verificationlevel) {
-                this.statistics[verificationlevel]++;
-            }
+        for (const [location, verificationLevel] of Object.entries(this.verification)) {
+            if (location === 'correctlyAir')
+                continue;
+            if (blockVerificationLevel === verificationLevel)
+                this.statistics[verificationLevel]++;
         }
     }
 

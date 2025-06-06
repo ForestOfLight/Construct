@@ -3,10 +3,9 @@ import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { StructureStatistics } from '../Structure/StructureStatistics';
 import { EntityComponentTypes, TicksPerSecond } from '@minecraft/server';
+import { BlockVerificationLevel } from '../Enums/BlockVerificationLevel';
 
 export class InstanceFormBuilder {
-    static structureVerifier;
-
     static buildInstance(instance, options) {
         const location = instance.getLocation();
         const form = new ActionFormData()
@@ -33,10 +32,9 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
         if (this.structureVerifier)
             throw new Error('StructureVerifier is already running.');
-        this.structureVerifier = new StructureVerifier(instance, { isEnabled: true, trackPlayerDistance: 0, intervalOrLifetime: 30 * TicksPerSecond, isStandalone: true });
-        const verification = await this.structureVerifier.verifyStructure();
+        const structureVerifier = new StructureVerifier(instance, { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true });
+        const verification = await structureVerifier.verifyStructure(true);
         const statistics = new StructureStatistics(instance, verification);
-        this.structureVerifier = void 0;
         const statsMessage = statistics.getMessage();
         buildStatisticsForm.body(statsMessage);
         return { form: buildStatisticsForm, stats: statsMessage };
@@ -46,7 +44,6 @@ export class InstanceFormBuilder {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
             .toggle('Block Validation', { defaultValue: instance.options.verifier.isEnabled, tooltip: 'Shows missing and incorrect block overlay.' })
-            .toggle('Distance-Based Block Validation', { defaultValue: instance.verifier.getTrackPlayerDistance() !== 0, tooltip: `If enabled, the verifier will only check within ${instance.verifier.getTrackPlayerDistance()} blocks of the player. This should stay enabled unless your structure is very small or in layer mode.` })
             .slider("Layer", 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: 'Changes the active layer. Use 0 for all layers.' })
             .submitButton('§2Apply');
     }
