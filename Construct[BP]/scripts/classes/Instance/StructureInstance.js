@@ -250,6 +250,7 @@ export class StructureInstance {
         world.beforeEvents.playerLeave.subscribe(event => {
             system.run(() => {
                 if (world.getAllPlayers().length === 0) {
+                    console.info(`[Construct] No players are online. Disabling instance: '${this.options.instanceName}'`);
                     this.disable();
                     this.shouldEnableOnJoin = true;
                 }
@@ -257,6 +258,7 @@ export class StructureInstance {
         });
         world.afterEvents.playerJoin.subscribe(event => {
             if (this.shouldEnableOnJoin) {
+                console.info(`[Construct] A player rejoined. Re-enabling instance: '${this.options.instanceName}'`);
                 this.enable();
                 this.shouldEnableOnJoin = false;
             }

@@ -13,7 +13,6 @@ export class VerificationRenderer {
 
     constructor(instance) {
         this.instance = instance;
-        const bounds = this.instance.getActiveBounds();
         this.lastRenderedChunk = 0;
     }
 
