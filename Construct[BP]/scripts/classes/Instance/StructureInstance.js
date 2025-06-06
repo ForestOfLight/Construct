@@ -3,7 +3,7 @@ import { StructureOutliner } from "../Render/StructureOutliner";
 import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
-import { TicksPerSecond } from "@minecraft/server";
+import { world, system, TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
 import { VerificationRenderer } from "../Render/VerificationRenderer";
@@ -20,6 +20,7 @@ export class StructureInstance {
         this.structure = new Structure(structureId);
         this.options = new InstanceOptions(instanceName, structureId);
         this.refreshBox();
+        this.subscribeToEvents();
     }
 
     delete() {
@@ -48,6 +49,10 @@ export class StructureInstance {
         this.verifier.refresh();
         this.verificationRenderer.refresh();
         this.materials.refresh();
+    }
+
+    subscribeToEvents() {
+        this.disableInstanceWhenNoPlayersOnline();
     }
 
     getName() {
@@ -238,6 +243,24 @@ export class StructureInstance {
             this.setLayer(this.getMaxLayer());
         else
             this.setLayer(this.options.currentLayer - 1);
+    }
+
+    disableInstanceWhenNoPlayersOnline() {
+        // This prevents a memory leak when no players are online.
+        world.beforeEvents.playerLeave.subscribe(event => {
+            system.run(() => {
+                if (world.getAllPlayers().length === 0) {
+                    this.disable();
+                    this.shouldEnableOnJoin = true;
+                }
+            })
+        });
+        world.afterEvents.playerJoin.subscribe(event => {
+            if (this.shouldEnableOnJoin) {
+                this.enable();
+                this.shouldEnableOnJoin = false;
+            }
+        });
     }
 
     toGlobalCoords(structureLocation) {
