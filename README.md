@@ -11,7 +11,7 @@
 
 ---
 
-Give yourself the tools to ease the survival building process with Construct: an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
+Give yourself the tools to ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
 
 - **Layered Building**: Build structures in layers.
 - **Block Validation**: Highlights incorrect blocks.
