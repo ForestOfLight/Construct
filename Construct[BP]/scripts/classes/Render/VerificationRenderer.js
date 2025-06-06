@@ -98,6 +98,6 @@ export class VerificationRenderer {
 
     shouldUseLargeStructureRendering() {
         const bounds = this.instance.getActiveBounds();
-        return bounds.min.volume(bounds.max) > 300;
+        return this.instance.hasLayerSelected() || bounds.min.volume(bounds.max) > 300;
     }
 }
