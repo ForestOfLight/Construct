@@ -10,7 +10,7 @@ let runner = void 0;
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
     displayName: 'Fast Easy Place',
-    description: 'Place structure blocks just by looking at them.',
+    description: 'Place correct structure blocks just by looking at them.',
     howToUse: "Look at structure blocks with a paper named 'Easy Place' in your hand to place them.",
 });
 

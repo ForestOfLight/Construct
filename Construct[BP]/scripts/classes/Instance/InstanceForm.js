@@ -148,6 +148,11 @@ export class InstanceForm {
                 this.player.sendMessage('§cA verification is already in progress. Please wait until it finishes.');
                 return;
             }
+            throw e;
+        }
+        if (!statsForm) {
+            this.player.sendMessage('§cFailed to build statistics form.');
+            return;
         }
         statsForm.form.show(this.player).then((response) => {
             if (response.canceled && response.cancelationReason === FormCancelationReason.UserBusy)
@@ -160,11 +165,7 @@ export class InstanceForm {
             if (response.canceled)
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
-            if (response.formValues[1])
-                this.instance.setVerifierDistance(5);
-            else
-                this.instance.setVerifierDistance(0);
-            this.instance.setLayer(parseInt(response.formValues[2]));
+            this.instance.setLayer(parseInt(response.formValues[1]));
         });
     }
 
