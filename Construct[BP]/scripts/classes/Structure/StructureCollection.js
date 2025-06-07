@@ -15,7 +15,7 @@ class StructureCollection {
             const instanceName = id.replace('instanceOptions:', '');
             let structureId;
             try {
-                structureId = InstanceOptions.getInstanceStrucetureId(instanceName);
+                structureId = InstanceOptions.getInstanceStructureId(instanceName);
                 this.structures[instanceName] = new StructureInstance(instanceName, structureId);
             } catch (e) {
                 world.sendMessage(`§c[Construct] Error loading structure instance '${instanceName}'. It will be removed.`);

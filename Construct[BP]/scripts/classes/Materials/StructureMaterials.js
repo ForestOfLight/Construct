@@ -1,4 +1,5 @@
-import { ItemStack } from "@minecraft/server";
+import { ItemStack, system } from "@minecraft/server";
+import { Vector } from "../../lib/Vector";
 
 class StructureMaterials {
     instance;
@@ -16,10 +17,10 @@ class StructureMaterials {
 
     populateInstance() {
         try {
-            if (this.instance.hasLocation())
-                this.populateActive();
+            if (this.instance.hasLocation() && this.instance.isEnabled())
+                system.runJob(this.populateActive());
             else
-                this.populateAll();
+                system.runJob(this.populateAll());
         } catch (e) {
             if (e.name === 'InstanceNotPlacedError')
                 this.clear();
@@ -47,19 +48,28 @@ class StructureMaterials {
             delete this.materials[itemType];
     }
 
-    populateAll() {
-        for (let layer = 0; layer < this.instance.getMaxLayer(); layer++)
-            this.populateLayer(layer)
+    *populateAll() {
+        for (let layer = 0; layer < this.instance.getMaxLayer(); layer++) {
+            for (const block of this.instance.getLayerBlocks(layer)) {
+                this.countBlock(block)
+                yield void 0;
+            }
+        }
     }
 
-    populateLayer(layer) {
-        for (const block of this.instance.getLayerBlocks(layer))
-            this.countBlock(block)
-    }
-
-    populateActive() {
-        for (const block of this.instance.getActiveBlocks())
-            this.countBlock(block)
+    *populateActive() {
+        const bounds = this.instance.getActiveBounds();
+        for (let y = bounds.min.y; y < bounds.max.y; y++) {
+            for (let z = bounds.min.z; z < bounds.max.z; z++) {
+                for (let x = bounds.min.x; x < bounds.max.x; x++) {
+                    const location = new Vector(x, y, z);
+                    const block = this.instance.getBlock(location);
+                    if (!block) continue;
+                    this.countBlock(block);
+                    yield void 0;
+                }
+            }
+        }
     }
 
     countBlock(block) {

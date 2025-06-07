@@ -8,6 +8,7 @@ export class VerificationRenderer {
     instance;
     lastRenderedChunk;
     bounds;
+    shortestDimension;
     #runner;
     #renderQueue = [];
 
@@ -42,14 +43,26 @@ export class VerificationRenderer {
     prepareRenderQueue() {
         this.#renderQueue = [];
         const bounds = this.instance.getActiveBounds();
-        for (let y = bounds.min.y; y < bounds.max.y; y++) {
+            for (let y = bounds.min.y; y < bounds.max.y; y++) {
+                this.prepareRenderQueueLayer(bounds, y);
+            }
+        this.lastRenderedChunk = 0;
+    }
+
+    prepareRenderQueueLayer(bounds, y) {
+        if (bounds.max.x < bounds.max.z) {
+            for (let z = bounds.min.z; z < bounds.max.z; z++) {
+                for (let x = bounds.min.x; x < bounds.max.x; x++) {
+                    this.#renderQueue.push({ x, y, z });
+                }
+            }
+        } else {
             for (let x = bounds.min.x; x < bounds.max.x; x++) {
                 for (let z = bounds.min.z; z < bounds.max.z; z++) {
                     this.#renderQueue.push({ x, y, z });
                 }
             }
         }
-        this.lastRenderedChunk = 0;
     }
 
     renderNextChunk() {
@@ -61,11 +74,12 @@ export class VerificationRenderer {
 
     renderNextChunkForLargeStructure() {
         const bounds = this.instance.getActiveBounds();
-        const maxChunk = (bounds.min.volume(bounds.max) / bounds.max.x) / (bounds.max.y - bounds.min.y);
+        const shortestSideLength = Math.min(bounds.max.x, bounds.max.z);
+        const maxChunk = (bounds.min.volume(bounds.max) / shortestSideLength) / (bounds.max.y - bounds.min.y);
         const lifetime = (maxChunk * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
         const verificationLevels = this.instance.verifier.getLastVerificationLevels();
         const dimension = this.instance.getDimension();
-        const chunk = this.#renderQueue.splice(0, bounds.max.x);
+        const chunk = this.#renderQueue.splice(0, shortestSideLength);
         for (const location of chunk) {
             const verificationLevel = verificationLevels[JSON.stringify(location)];
             if (!verificationLevel)
@@ -97,6 +111,7 @@ export class VerificationRenderer {
 
     shouldUseLargeStructureRendering() {
         const bounds = this.instance.getActiveBounds();
-        return this.instance.hasLayerSelected() || bounds.min.volume(bounds.max) > 300;
+        const maxVolume = 343;
+        return this.instance.hasLayerSelected() || bounds.min.volume(bounds.max) > maxVolume;
     }
 }

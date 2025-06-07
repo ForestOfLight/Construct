@@ -16,7 +16,7 @@ export class InstanceOptions extends Option {
         particleLifetime: 10
     };
 
-    static getInstanceStrucetureId(instanceName) {
+    static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);
         return options.structureId;
     }

@@ -6,6 +6,8 @@ import { EntityComponentTypes, TicksPerSecond } from '@minecraft/server';
 import { BlockVerificationLevel } from '../Enums/BlockVerificationLevel';
 
 export class InstanceFormBuilder {
+    static structureVerifier;
+
     static buildInstance(instance, options) {
         const location = instance.getLocation();
         const form = new ActionFormData()
@@ -32,10 +34,11 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
         if (this.structureVerifier)
             throw new Error('StructureVerifier is already running.');
-        const structureVerifier = new StructureVerifier(instance, { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true });
-        const verification = await structureVerifier.verifyStructure(true);
+        this.structureVerifier = new StructureVerifier(instance, { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true });
+        const verification = await this.structureVerifier.verifyStructure(true);
         const statistics = new StructureStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
+        this.structureVerifier = void 0;
         buildStatisticsForm.body(statsMessage);
         return { form: buildStatisticsForm, stats: statsMessage };
     }
