@@ -8,7 +8,7 @@ const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
     displayName: 'Material Grabber',
     description: 'Pulls structure items from inventories.',
-    howToUse: "Interact with inventories using an item named 'Material Grabber' to pull structure items from them.",
+    howToUse: "Interact with inventories using an item named 'Material Grabber' to pull structure items from them."
 });
 
 world.beforeEvents.itemUse.subscribe(onItemUse);
@@ -40,7 +40,8 @@ function onPlayerInteract(event) {
 }
 
 function isActionItem(itemStack) {
-    return itemStack?.nameTag === 'Material Grabber';
+    return itemStack?.nameTag?.toLowerCase().includes('material')
+        && itemStack?.nameTag?.toLowerCase().includes('grabber');
 }
 
 function getActiveMaterials(player) {

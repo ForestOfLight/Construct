@@ -11,7 +11,7 @@ const builderOption = new BuilderOption({
     identifier: 'easyPlace',
     displayName: 'Easy Place',
     description: 'Always place the correct structure block.',
-    howToUse: "Place blocks in a structure with a paper named 'Easy Place' in the inventory slot above your first hotbar slot to always place the correct block."
+    howToUse: "Name a paper 'Easy Place', then put it in the inventory slot above your first hotbar slot to always place the correct blocks in a structure."
 });
 
 world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
@@ -30,7 +30,10 @@ function hasActionItemInCorrectSlot(player) {
     if (!inventory)
         return false;
     const actionSlot = inventory.getSlot(ACTION_SLOT);
-    return actionSlot.hasItem() && actionSlot.typeId === 'minecraft:paper' && actionSlot.nameTag === 'Easy Place';
+    return actionSlot.hasItem() 
+        && actionSlot.typeId === 'minecraft:paper'
+        && actionSlot.nameTag?.toLowerCase().includes('easy')
+        && actionSlot.nameTag?.toLowerCase().includes('place');
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
@@ -52,7 +55,7 @@ function shouldPreventAction(player, structureBlock) {
 function preventAction(event, player) {
     event.cancel = true;
     system.run(() => {
-        player.onScreenDisplay.setActionBar('§cAction prevented by easyPlace.');
+        player.onScreenDisplay.setActionBar('§cAction prevented by Easy Place.');
     });
 }
 
