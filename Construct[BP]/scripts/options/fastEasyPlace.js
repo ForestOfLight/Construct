@@ -21,8 +21,10 @@ function giveActionItem(playerId) {
     const player = world.getEntity(playerId);
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
     const itemStack = new ItemStack('construct:easy_place');
-    if (!container.contains(itemStack))
-        container.addItem(itemStack);
+    if (!container.contains(itemStack)) {
+        const remainingItemStack = container.addItem(itemStack);
+        player.dimension.spawnItem(remainingItemStack, player.location);
+    }
 }
 
 function removeActionItem(playerId) {
