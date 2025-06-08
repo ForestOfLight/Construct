@@ -16,14 +16,14 @@ world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteract);
 world.beforeEvents.playerInteractWithEntity.subscribe(onPlayerInteract);
 
 function onItemUse(event) {
-    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.source.id))
+    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.source?.id))
         return;
     event.cancel = true;
     system.run(() => new MaterialGrabberForm(event.source));
 }
 
 function onPlayerInteract(event) {
-    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.player.id))
+    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.player?.id))
         return;
     const player = event.player;
     const target = event.block || event.target;
@@ -40,8 +40,7 @@ function onPlayerInteract(event) {
 }
 
 function isActionItem(itemStack) {
-    return itemStack?.nameTag?.toLowerCase().includes('material')
-        && itemStack?.nameTag?.toLowerCase().includes('grabber');
+    return itemStack.typeId === 'construct:material_grabber';
 }
 
 function getActiveMaterials(player) {

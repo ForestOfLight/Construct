@@ -11,7 +11,7 @@ const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
     displayName: 'Fast Easy Place',
     description: 'Place correct structure blocks just by looking at them.',
-    howToUse: "Hold a paper named 'Easy Place' in your hand and look at blocks in a structure to place them."
+    howToUse: "Hold the Easy Place item in your main hand and look at blocks in a structure to place them."
 });
 
 system.runInterval(onTick, PROCESS_INTERVAL);
@@ -37,9 +37,7 @@ function isHoldingActionItem(player) {
     const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
     if (!mainhandItemStack)
         return false;
-    return mainhandItemStack.typeId === 'minecraft:paper'
-        && mainhandItemStack.nameTag?.toLowerCase().includes('easy')
-        && mainhandItemStack.nameTag?.toLowerCase().includes('place');
+    return mainhandItemStack.typeId === 'construct:easy_place';
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {

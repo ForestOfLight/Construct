@@ -1,0 +1,14 @@
+{
+  "resource_pack_name": "Construct Resource Pack",
+  "texture_data": {
+    "construct:tool_picker": {
+      "textures": "textures/items/tool_picker"
+    },
+    "construct:easy_place": {
+        "textures": "textures/items/easy_place"
+    },
+    "construct:material_grabber": {
+        "textures": "textures/items/material_grabber"
+    }
+  }
+}

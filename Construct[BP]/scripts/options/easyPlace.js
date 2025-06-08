@@ -1,5 +1,5 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { structureCollection } from '../classes/Structure/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
@@ -11,29 +11,25 @@ const builderOption = new BuilderOption({
     identifier: 'easyPlace',
     displayName: 'Easy Place',
     description: 'Always place the correct structure block.',
-    howToUse: "Name a paper 'Easy Place', then put it in the inventory slot above your first hotbar slot to always place the correct blocks in a structure."
+    howToUse: "Hold the Easy Place item in your offhand to always place the correct blocks in a structure."
 });
 
 world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 
 function onPlayerPlaceBlock(event) {
     const { player, block } = event;
-    if (!player || !block || !builderOption.isEnabled(player.id) || !hasActionItemInCorrectSlot(player)) return;
+    if (!player || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
     const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
     tryPlaceBlock(event, player, block, structureBlock);
 }
 
-function hasActionItemInCorrectSlot(player) {
-    const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!inventory)
+function isHoldingActionItem(player) {
+    const offhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Offhand);
+    if (!offhandItemStack)
         return false;
-    const actionSlot = inventory.getSlot(ACTION_SLOT);
-    return actionSlot.hasItem() 
-        && actionSlot.typeId === 'minecraft:paper'
-        && actionSlot.nameTag?.toLowerCase().includes('easy')
-        && actionSlot.nameTag?.toLowerCase().includes('place');
+    return offhandItemStack.typeId === 'construct:easy_place';
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {

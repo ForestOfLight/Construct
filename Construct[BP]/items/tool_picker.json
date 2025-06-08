@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "construct:tool_picker",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": {
+        "texture": "construct:tool_picker"
+      },
+      "minecraft:display_name": {
+        "value": "Construct Tool Picker"
+      },
+      "minecraft:wearable": {
+        "dispensable": true,
+        "slot": "slot.weapon.offhand"
+      }
+    }
+  }
+}
