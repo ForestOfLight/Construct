@@ -21,7 +21,8 @@ function giveActionItem(playerId) {
     const itemStack = new ItemStack('construct:easy_place');
     if (!container.contains(itemStack)) {
         const remainingItemStack = container.addItem(itemStack);
-        player.dimension.spawnItem(remainingItemStack, player.location);
+        if (remainingItemStack)
+            player.dimension.spawnItem(remainingItemStack, player.location);
     }
 }
 
