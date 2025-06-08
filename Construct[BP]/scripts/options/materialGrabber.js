@@ -8,7 +8,7 @@ const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
     displayName: 'Material Grabber',
     description: 'Pulls structure items from inventories.',
-    howToUse: "Interact with inventories using an item named 'Material Grabber' to pull structure items from them.",
+    howToUse: "Interact with inventories using the Material Grabber item to pull structure items from them.",
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });

@@ -10,7 +10,7 @@ const builderOption = new BuilderOption({
     identifier: 'easyPlace',
     displayName: 'Easy Place',
     description: 'Always place the correct structure block.',
-    howToUse: "Hold the Easy Place item in your offhand to always place the correct blocks in a structure.",
+    howToUse: "Hold the Easy Place item in your offhand and place blocks in a structure to have them be corrected automatically.",
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
