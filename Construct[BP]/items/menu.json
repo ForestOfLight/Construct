@@ -3,7 +3,7 @@
   "minecraft:item": {
     "description": {
       "identifier": "construct:menu",
-      "category": "Items"
+      "category": "Equipment"
     },
     "components": {
       "minecraft:max_stack_size": 1,

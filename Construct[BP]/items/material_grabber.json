@@ -3,7 +3,7 @@
   "minecraft:item": {
     "description": {
       "identifier": "construct:material_grabber",
-      "category": "Items"
+      "category": "Equipment"
     },
     "components": {
       "minecraft:max_stack_size": 1,
