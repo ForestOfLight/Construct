@@ -62,6 +62,10 @@ function onPlayerInteract(event) {
     }
 }
 
+function isActionItem(itemStack) {
+    return itemStack?.typeId === 'construct:material_grabber';
+}
+
 function openInstanceSelectionForm(player, event) {
     event.cancel = true;
     system.run(() => new MaterialGrabberForm(player));
@@ -80,10 +84,6 @@ function tryGrabMaterials(player, target, focusedInstanceName, event) {
     system.run(() => transferMaterialsToPlayer(player, targetContainer, materials));
 }
 
-function isActionItem(itemStack) {
-    return itemStack?.typeId === 'construct:material_grabber';
-}
-
 function getActiveMaterials(focusedInstanceName) {
     const instance = structureCollection.get(focusedInstanceName);
     return instance?.getActiveMaterials();
@@ -99,6 +99,7 @@ function transferMaterialsToPlayer(player, targetContainer, materials) {
         const slot = targetContainer.getSlot(slotIndex);
         transferCount += tryTransferToPlayer(slot, playerContainer, materials);
     }
+    playSoundEffect(player, transferCount);
     sendTransferMessage(player, transferCount);
     materials.refresh();
 }
@@ -129,6 +130,11 @@ function tryTransferToPlayer(slot, playerContainer, materials) {
             return tryTransferAmountToPlayer(slot, playerContainer, materials, grabAmount);
     }
     return 0;
+}
+
+function playSoundEffect(player, transferCount) {
+    if (transferCount !== 0)
+        player.dimension.playSound('block.itemframe.remove_item', player.location, { pitch: 1.2 });
 }
 
 function tryTransferAmountToPlayer(slot, playerContainer, materials, grabAmount) {

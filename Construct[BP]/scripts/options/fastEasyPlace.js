@@ -4,8 +4,9 @@ import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlo
     blockIdToItemStackMap } from '../data';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
+import { blocks } from '../blocks';
 
-const PROCESS_INTERVAL = 2;
+const PROCESS_INTERVAL = 2; // Fast Easy Place will attempt to place twice when at an interval of 1.
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
@@ -167,6 +168,7 @@ function placeBlock(player, block, structureBlock, itemSlot) {
         if (itemSlot)
             consumeItem(itemSlot);
         block.setPermutation(structureBlock);
+        playSoundEffect(player, structureBlock);
     });
 }
 
@@ -183,4 +185,11 @@ function consumeItem(itemSlot) {
 
 function consumeSpecial(itemSlot) {
     itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
+}
+
+function playSoundEffect(player, structureBlock) {
+    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const blockData = blocks[blockId];
+    const blockSound = blockData['sound'] || 'stone';
+    player.dimension.playSound('dig.' + blockSound, player.location);
 }
