@@ -13,10 +13,10 @@
 
 Give yourself the tools to ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
 
-- **Layered Building**: Build structures in layers.
-- **Block Validation**: Highlights incorrect blocks.
 - **Easy Place**: Always places blocks correctly.
+- **Block Validation**: Highlights incorrect blocks.
 - **Material Grabbing**: Pulls required materials from chests in just one click.
+- **Layered Building**: Build structures in layers.
 - **Structure Management**: Create and edit many structures at once.
 
 <div align="center">
@@ -26,7 +26,7 @@ Give yourself the tools to ease the survival building process with Construct, an
 </div>
 
 > [!IMPORTANT]
-> This is a standalone addon, but it is also a **Canopy Extension**, which means **Canopy** can be installed in your world for a few extra features.
+> This is a standalone addon, but it is also a **Canopy Extension**, which means **Canopy** can be installed in your world for the best experience!
 > [Download **Canopy** here!](https://github.com/ForestOfLight/Canopy)
 
 ## Usage
@@ -35,9 +35,11 @@ Construct's latest release can be downloaded from its [Releases Page](https://gi
 
 ### Construct Menu
 
-The main Construct menu can be accessed using a `paper` item. Using it will open a menu where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
+Use `/construct:item` to get the Construct item, which opens the Construct menu. This item is also available in the Creative inventory under the "Equipment" tab. Using the Construct item will open a menu where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
 
-*Pro tip: You can name the paper after a structure instance to automagically select it when you open the menu!*
+*Pro tip: You can name the Construct item after a structure instance to automagically select it when you open the menu!*
+
+Don't forget to check out the **Builder Settings** tab, where you can improve your building experience with Easy Place and Material Grabbing options!
 
 ### Adding New Structures
 
@@ -47,6 +49,9 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
 - Importing structures from other worlds is as simple as dropping the `.mcstructure` file in Construct's `Construct [BP]/structures` folder. Then, to select your structure in the Construct menu, choose "Other" when presented with the structures and enter the filename (without including ".mcstructure"). You only need to do this once with new structures, since Construct will save them for future use!
 
 ### Commands
+
+**Usage: `/construct:item`**  
+Gives you the Construct item. Use it to open the Construct menu.
 
 **Usage: `./construct`**  
 Shows the construct form. Only available while **Canopy** is installed.
