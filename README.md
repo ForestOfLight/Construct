@@ -18,6 +18,7 @@ Give yourself the tools to ease the survival building process with Construct, an
 - **Material Grabbing**: Pulls required materials from chests in just one click.
 - **Layered Building**: Build structures in layers.
 - **Structure Management**: Create and edit many structures at once.
+- **Structure Importing**: Import structures from other worlds quickly and easily.
 
 <div align="center">
     <a href="./demo.png">
