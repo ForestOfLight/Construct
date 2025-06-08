@@ -10,10 +10,7 @@ const menuCmd = new Command({
     name: 'construct',
     description: { text: 'Gives you the Construct item. Use it to open the Construct menu.' },
     usage: 'construct',
-    callback: (sender) => { 
-        const origin = { sourceEntity: sender }; 
-        givePlayerConstructItem(origin);
-    }
+    callback: (sender) => openMenu(sender)
 });
 extension.addCommand(menuCmd);
 
