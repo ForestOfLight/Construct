@@ -7,7 +7,6 @@ import { Builders } from '../classes/Builder/Builders';
 
 const PROCESS_INTERVAL = 2;
 
-let runner = void 0;
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
     displayName: 'Fast Easy Place',
@@ -21,8 +20,11 @@ function giveActionItem(playerId) {
     const player = world.getEntity(playerId);
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
     const itemStack = new ItemStack('construct:easy_place');
-    if (!container.contains(itemStack))
-        container.addItem(itemStack);
+    if (!container.contains(itemStack)) {
+        const remainingItemStack = container.addItem(itemStack);
+        if (remainingItemStack)
+            player.dimension.spawnItem(remainingItemStack, player.location);
+    }
 }
 
 function removeActionItem(playerId) {
@@ -44,22 +46,20 @@ function removeActionItem(playerId) {
 }
 
 system.runInterval(onTick, PROCESS_INTERVAL);
+world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteractWithBlock);
 
 function onTick() {
     for (const player of world.getAllPlayers()) {
-        if (player && builderOption.isEnabled(player.id) && player.inputInfo.lastInputModeUsed === InputMode.Touch)
+        if (player && builderOption.isEnabled(player.id))
             processEasyPlace(player);
     }
 }
 
-world.beforeEvents.itemUse.subscribe(event => {
-    const player = event.source;
-    if (player && builderOption.isEnabled(event.source?.id) && player.inputInfo.lastInputModeUsed !== InputMode.Touch) {
-        system.run(() => {
-            processEasyPlace(event.source);
-        });
-    }
-});
+function onPlayerInteractWithBlock(event) {
+    const { player, block, isFirstEvent } = event;
+    if (!player || !isFirstEvent || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
+    preventAction(event, player);
+}
 
 function processEasyPlace(player) {
     if (!player || !isHoldingActionItem(player)) return;
@@ -70,6 +70,13 @@ function processEasyPlace(player) {
     tryPlaceBlock(player, worldBlock, structureBlock.permutation);
 }
 
+function preventAction(event, player) {
+    event.cancel = true;
+    system.run(() => {
+        player.onScreenDisplay.setActionBar('§cAction prevented by Easy Place.');
+    });
+}
+
 function isHoldingActionItem(player) {
     const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
     if (!mainhandItemStack)
@@ -78,17 +85,17 @@ function isHoldingActionItem(player) {
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
-    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock)) return;
+    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(worldBlock)) return;
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.creative) {
-        placeBlock(worldBlock, structureBlock);
+        placeBlock(player, worldBlock, structureBlock);
     } else if (player.getGameMode() === GameMode.survival) {
         structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(player, worldBlock, structureBlock);
     }
 }
 
-function locationIsPlaceable(player, worldBlock) {
+function locationIsPlaceable(worldBlock) {
     return worldBlock.isAir;
 }
 
@@ -130,10 +137,9 @@ function tryConvertToDefaultState(structureBlock) {
 
 function tryPlaceBlockSurvival(player, block, structureBlock) {
     const placeableItemStack = getPlaceableItemStack(structureBlock);
-    // console.warn(`Looking for item to place ${structureBlock?.type.id} (${placeableItemStack?.typeId})...`);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
-        placeBlock(block, structureBlock, itemSlotToUse);
+        placeBlock(player, block, structureBlock, itemSlotToUse);
     }
 }
 
@@ -156,11 +162,10 @@ function fetchMatchingItemSlot(player, itemToMatchId) {
     }
 }
 
-function placeBlock(block, structureBlock, itemSlot) {
+function placeBlock(player, block, structureBlock, itemSlot) {
     system.run(() => {
-        if (itemSlot) {
+        if (itemSlot)
             consumeItem(itemSlot);
-        }
         block.setPermutation(structureBlock);
     });
 }
