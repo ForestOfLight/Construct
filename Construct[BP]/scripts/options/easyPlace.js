@@ -1,39 +1,62 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { structureCollection } from '../classes/Structure/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 import { fetchMatchingItemSlot } from '../utils';
-
-const ACTION_SLOT = 27;
+import { Builders } from '../classes/Builder/Builders';
 
 const builderOption = new BuilderOption({
     identifier: 'easyPlace',
     displayName: 'Easy Place',
     description: 'Always place the correct structure block.',
-    howToUse: "Name a paper 'Easy Place', then put it in the inventory slot above your first hotbar slot to always place the correct blocks in a structure."
+    howToUse: "Hold the Easy Place item in your offhand to always place the correct blocks in a structure.",
+    onEnableCallback: (playerId) => giveActionItem(playerId),
+    onDisableCallback: (playerId) => removeActionItem(playerId)
 });
+
+function giveActionItem(playerId) {
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    const itemStack = new ItemStack('construct:easy_place');
+    if (!container.contains(itemStack))
+        container.addItem(itemStack);
+}
+
+function removeActionItem(playerId) {
+    const builder = Builders.get(playerId);
+    if (builder.isOptionEnabled('fastEasyPlace'))
+        return;
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    for (let i = 0; i < container.size; i++) {
+        const itemStack = container.getItem(i);
+        if (itemStack?.typeId === 'construct:easy_place')
+            container.setItem(i, void 0);
+    }
+    const equipment = player.getComponent(EntityComponentTypes.Equippable);
+    const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
+    if (offhandItemStack?.typeId === 'construct:easy_place') {
+        equipment.setEquipment(EquipmentSlot.Offhand, void 0);
+    }
+}
 
 world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 
 function onPlayerPlaceBlock(event) {
     const { player, block } = event;
-    if (!player || !block || !builderOption.isEnabled(player.id) || !hasActionItemInCorrectSlot(player)) return;
+    if (!player || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
     const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
     tryPlaceBlock(event, player, block, structureBlock);
 }
 
-function hasActionItemInCorrectSlot(player) {
-    const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!inventory)
+function isHoldingActionItem(player) {
+    const offhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Offhand);
+    if (!offhandItemStack)
         return false;
-    const actionSlot = inventory.getSlot(ACTION_SLOT);
-    return actionSlot.hasItem() 
-        && actionSlot.typeId === 'minecraft:paper'
-        && actionSlot.nameTag?.toLowerCase().includes('easy')
-        && actionSlot.nameTag?.toLowerCase().includes('place');
+    return offhandItemStack.typeId === 'construct:easy_place';
 }
 
 function tryPlaceBlock(event, player, block, structureBlock) {
@@ -95,7 +118,6 @@ function tryConvertToDefaultState(structureBlock) {
 
 function tryPlaceBlockSurvival(event, player, block, structureBlock) {
     const placeableItemStack = getPlaceableItemStack(structureBlock);
-    // console.warn(`Looking for item to place ${structureBlock?.type.id} (${placeableItemStack?.typeId})...`);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
         event.cancel = true;

@@ -1,16 +1,16 @@
 import { Command } from '../lib/canopy/CanopyExtension';
 import { extension } from '../config';
-import { world, system } from '@minecraft/server';
+import { world, system, EntityComponentTypes, ItemStack } from '@minecraft/server';
 import { MenuForm } from '../classes/MenuForm';
 import { structureCollection } from '../classes/Structure/StructureCollection'
 
-const ACTION_ITEM = 'minecraft:paper';
+const ACTION_ITEM = 'construct:menu';
 
 const menuCmd = new Command({
     name: 'construct',
-    description: { text: 'Opens the Construct Menu. Using a paper will also open the menu.' },
+    description: { text: 'Gives you the Construct item. Use it to open the Construct menu.' },
     usage: 'construct',
-    callback: (sender) => openMenu(sender)
+    callback: (sender) => sender.getComponent(EntityComponentTypes.Inventory)?.container?.addItem(new ItemStack(ACTION_ITEM))
 });
 extension.addCommand(menuCmd);
 

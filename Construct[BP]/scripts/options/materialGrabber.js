@@ -1,5 +1,5 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { EntityComponentTypes, ItemStack, Player, world, system } from '@minecraft/server';
+import { EntityComponentTypes, ItemStack, Player, world, system, EquipmentSlot } from '@minecraft/server';
 import { MaterialGrabberForm } from '../classes/Materials/MaterialGrabberForm';
 import { Builders } from '../classes/Builder/Builders';
 import { structureCollection } from '../classes/Structure/StructureCollection';
@@ -8,28 +8,66 @@ const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
     displayName: 'Material Grabber',
     description: 'Pulls structure items from inventories.',
-    howToUse: "Interact with inventories using an item named 'Material Grabber' to pull structure items from them."
+    howToUse: "Interact with inventories using an item named 'Material Grabber' to pull structure items from them.",
+    onEnableCallback: (playerId) => giveActionItem(playerId),
+    onDisableCallback: (playerId) => removeActionItem(playerId)
 });
+
+function giveActionItem(playerId) {
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    const itemStack = new ItemStack('construct:material_grabber');
+    if (!container.contains(itemStack))
+        container.addItem(itemStack);
+}
+
+function removeActionItem(playerId) {
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    for (let i = 0; i < container.size; i++) {
+        const itemStack = container.getItem(i);
+        if (itemStack?.typeId === 'construct:material_grabber')
+            container.setItem(i, void 0);
+    }
+    const equipment = player.getComponent(EntityComponentTypes.Equippable);
+    const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
+    if (offhandItemStack?.typeId === 'construct:material_grabber') {
+        equipment.setEquipment(EquipmentSlot.Offhand, void 0);
+    }
+}
 
 world.beforeEvents.itemUse.subscribe(onItemUse);
 world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteract);
 world.beforeEvents.playerInteractWithEntity.subscribe(onPlayerInteract);
 
 function onItemUse(event) {
-    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.source.id))
+    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.source?.id))
         return;
-    event.cancel = true;
-    system.run(() => new MaterialGrabberForm(event.source));
+    openInstanceSelectionForm(event.source, event);
 }
 
 function onPlayerInteract(event) {
-    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.player.id))
+    if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.player?.id))
         return;
     const player = event.player;
     const target = event.block || event.target;
+    const focusedInstanceName = Builders.get(player.id).materialInstanceName;
+    if (!focusedInstanceName) {
+        openInstanceSelectionForm(player, event);
+    } else {
+        tryGrabMaterials(player, target, focusedInstanceName, event);
+    }
+}
+
+function openInstanceSelectionForm(player, event) {
+    event.cancel = true;
+    system.run(() => new MaterialGrabberForm(player));
+}
+
+function tryGrabMaterials(player, target, focusedInstanceName, event) {
     if (target instanceof Player)
         return;
-    const materials = getActiveMaterials(player);
+    const materials = getActiveMaterials(focusedInstanceName);
     if (!materials)
         return;
     const targetContainer = target.getComponent(EntityComponentTypes.Inventory)?.container;
@@ -40,18 +78,12 @@ function onPlayerInteract(event) {
 }
 
 function isActionItem(itemStack) {
-    return itemStack?.nameTag?.toLowerCase().includes('material')
-        && itemStack?.nameTag?.toLowerCase().includes('grabber');
+    return itemStack?.typeId === 'construct:material_grabber';
 }
 
-function getActiveMaterials(player) {
-    const focusedInstanceName = Builders.get(player.id).materialInstanceName;
-    if (!focusedInstanceName)
-        return void 0;
-    const structure = structureCollection.get(focusedInstanceName);
-    if (!structure)
-        return void 0;
-    return structure.getActiveMaterials();
+function getActiveMaterials(focusedInstanceName) {
+    const instance = structureCollection.get(focusedInstanceName);
+    return instance?.getActiveMaterials();
 }
 
 function transferMaterialsToPlayer(player, targetContainer, materials) {
