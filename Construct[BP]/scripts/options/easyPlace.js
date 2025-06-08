@@ -4,15 +4,42 @@ import { structureCollection } from '../classes/Structure/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 import { fetchMatchingItemSlot } from '../utils';
-
-const ACTION_SLOT = 27;
+import { Builders } from '../classes/Builder/Builders';
 
 const builderOption = new BuilderOption({
     identifier: 'easyPlace',
     displayName: 'Easy Place',
     description: 'Always place the correct structure block.',
-    howToUse: "Hold the Easy Place item in your offhand to always place the correct blocks in a structure."
+    howToUse: "Hold the Easy Place item in your offhand to always place the correct blocks in a structure.",
+    onEnableCallback: (playerId) => giveActionItem(playerId),
+    onDisableCallback: (playerId) => removeActionItem(playerId)
 });
+
+function giveActionItem(playerId) {
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    const itemStack = new ItemStack('construct:easy_place');
+    if (!container.contains(itemStack))
+        container.addItem(itemStack);
+}
+
+function removeActionItem(playerId) {
+    const builder = Builders.get(playerId);
+    if (builder.isOptionEnabled('fastEasyPlace'))
+        return;
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    for (let i = 0; i < container.size; i++) {
+        const itemStack = container.getItem(i);
+        if (itemStack?.typeId === 'construct:easy_place')
+            container.setItem(i, void 0);
+    }
+    const equipment = player.getComponent(EntityComponentTypes.Equippable);
+    const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
+    if (offhandItemStack?.typeId === 'construct:easy_place') {
+        equipment.setEquipment(EquipmentSlot.Offhand, void 0);
+    }
+}
 
 world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 
@@ -91,7 +118,6 @@ function tryConvertToDefaultState(structureBlock) {
 
 function tryPlaceBlockSurvival(event, player, block, structureBlock) {
     const placeableItemStack = getPlaceableItemStack(structureBlock);
-    // console.warn(`Looking for item to place ${structureBlock?.type.id} (${placeableItemStack?.typeId})...`);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
         event.cancel = true;

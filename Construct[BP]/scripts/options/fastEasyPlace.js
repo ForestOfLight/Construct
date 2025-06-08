@@ -1,8 +1,9 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, InputMode, ItemStack, system, world } from '@minecraft/server';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
     blockIdToItemStackMap } from '../data';
 import { Raycaster } from '../classes/Raycaster';
+import { Builders } from '../classes/Builder/Builders';
 
 const PROCESS_INTERVAL = 2;
 
@@ -11,18 +12,54 @@ const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
     displayName: 'Fast Easy Place',
     description: 'Place correct structure blocks just by looking at them.',
-    howToUse: "Hold the Easy Place item in your main hand and look at blocks in a structure to place them."
+    howToUse: "Hold the Easy Place item in your main hand and look at blocks in a structure to place them.",
+    onEnableCallback: (playerId) => giveActionItem(playerId),
+    onDisableCallback: (playerId) => removeActionItem(playerId)
 });
+
+function giveActionItem(playerId) {
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    const itemStack = new ItemStack('construct:easy_place');
+    if (!container.contains(itemStack))
+        container.addItem(itemStack);
+}
+
+function removeActionItem(playerId) {
+    const builder = Builders.get(playerId);
+    if (builder.isOptionEnabled('easyPlace'))
+        return;
+    const player = world.getEntity(playerId);
+    const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
+    for (let i = 0; i < container.size; i++) {
+        const itemStack = container.getItem(i);
+        if (itemStack?.typeId === 'construct:easy_place')
+            container.setItem(i, void 0);
+    }
+    const equipment = player.getComponent(EntityComponentTypes.Equippable);
+    const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
+    if (offhandItemStack?.typeId === 'construct:easy_place') {
+        equipment.setEquipment(EquipmentSlot.Offhand, void 0);
+    }
+}
 
 system.runInterval(onTick, PROCESS_INTERVAL);
 
 function onTick() {
     for (const player of world.getAllPlayers()) {
-        if (!player || !builderOption.isEnabled(player.id))
-            continue;
-        processEasyPlace(player);
+        if (player && builderOption.isEnabled(player.id) && player.inputInfo.lastInputModeUsed === InputMode.Touch)
+            processEasyPlace(player);
     }
 }
+
+world.beforeEvents.itemUse.subscribe(event => {
+    const player = event.source;
+    if (player && builderOption.isEnabled(event.source?.id) && player.inputInfo.lastInputModeUsed !== InputMode.Touch) {
+        system.run(() => {
+            processEasyPlace(event.source);
+        });
+    }
+});
 
 function processEasyPlace(player) {
     if (!player || !isHoldingActionItem(player)) return;

@@ -3,7 +3,6 @@ import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { StructureStatistics } from '../Structure/StructureStatistics';
 import { EntityComponentTypes, TicksPerSecond } from '@minecraft/server';
-import { BlockVerificationLevel } from '../Enums/BlockVerificationLevel';
 
 export class InstanceFormBuilder {
     static structureVerifier;

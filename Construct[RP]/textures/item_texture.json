@@ -1,8 +1,8 @@
 {
   "resource_pack_name": "Construct Resource Pack",
   "texture_data": {
-    "construct:tool_picker": {
-      "textures": "textures/items/tool_picker"
+    "construct:menu": {
+      "textures": "textures/items/menu"
     },
     "construct:easy_place": {
         "textures": "textures/items/easy_place"

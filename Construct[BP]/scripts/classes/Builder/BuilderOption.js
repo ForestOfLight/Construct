@@ -25,12 +25,12 @@ export class BuilderOption {
     }
     
     setValue(playerId, value) {
-        if (value)
-            this.#onEnable(playerId);
-        else
-            this.#onDisable(playerId);
         if (this.isEnabled(playerId) !== value) {
             this.save(playerId, value);
+            if (value)
+                this.#onEnable(playerId);
+            else
+                this.#onDisable(playerId);
             return value;
         }
         this.save(playerId, value);
