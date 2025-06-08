@@ -3,7 +3,7 @@
   "minecraft:item": {
     "description": {
       "identifier": "construct:easy_place",
-      "category": "Equipment"
+      "category": "Items"
     },
     "components": {
       "minecraft:max_stack_size": 1,
