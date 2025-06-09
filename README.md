@@ -58,6 +58,10 @@ Gives you the Construct item. Use it to open the Construct menu.
 **Usage: `./construct`**  
 Shows the construct form. Only available while **Canopy** is installed.
 
+## Join the Community
+
+Need help, want to discuss technical Minecraft, or follow future updates? [**Join our Discord!**](https://discord.gg/9KGche8fxm)
+
 ## Roadmap
 
 - [x] Form to manage structures
