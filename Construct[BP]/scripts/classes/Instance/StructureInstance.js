@@ -249,12 +249,12 @@ export class StructureInstance {
         // This prevents a memory leak when no players are online.
         world.beforeEvents.playerLeave.subscribe(event => {
             system.run(() => {
-                if (world.getAllPlayers().length === 0) {
+                if (world.getAllPlayers().length === 0 && this.options.isEnabled) {
                     console.info(`[Construct] No players are online. Disabling instance: '${this.options.instanceName}'`);
                     this.disable();
                     this.shouldEnableOnJoin = true;
                 }
-            })
+            });
         });
         world.afterEvents.playerJoin.subscribe(event => {
             if (this.shouldEnableOnJoin) {
