@@ -34,7 +34,7 @@
 		},
 		{
 			"uuid": "375ec465-3dc1-429f-8b4c-a337889e1ed4", // Construct RP
-			"version": [1, 0, 0]
+			"version": [1, 0, 1]
 		}
 	],
 	"metadata": {
