@@ -6,7 +6,7 @@
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/ForestOfLight/Construct/total?label=Github%20downloads&logo=github)](https://github.com/ForestOfLight/Construct/releases)
 [![Curseforge Downloads](https://cf.way2muchnoise.eu/full_1283139_downloads.svg)](https://www.curseforge.com/minecraft-bedrock/addons/construct)
-[![Minecraft - Version](https://img.shields.io/badge/Minecraft-v1.21.80_(Bedrock)-brightgreen)](https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs)
+[![Minecraft - Version](https://img.shields.io/badge/Minecraft-v1.21.90_(Bedrock)-brightgreen)](https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs)
 [![Discord](https://badgen.net/discord/members/9KGche8fxm?icon=discord&label=Discord&list=what)](https://discord.gg/9KGche8fxm)
 </div>
 
@@ -56,7 +56,7 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
 Gives you the Construct item. Use it to open the Construct menu.
 
 **Usage: `./construct`**  
-Shows the construct form. Only available while **Canopy** is installed.
+Shows the Construct menu. Only available while **Canopy** is installed.
 
 ## Join the Community
 

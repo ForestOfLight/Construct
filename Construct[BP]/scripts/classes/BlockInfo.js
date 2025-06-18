@@ -45,7 +45,7 @@ class BlockInfo {
 
     static getSupplyMessage(player, block) {
         const itemStack = fetchMatchingItemSlot(player, block.getItemStack()?.typeId);
-        const isInSurvival = player.getGameMode() === GameMode.survival;
+        const isInSurvival = player.getGameMode() === GameMode.Survival;
         if (!itemStack && isInSurvival)
             return ' §c[No Supply]';
         return '';

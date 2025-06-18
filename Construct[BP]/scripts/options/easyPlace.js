@@ -1,9 +1,9 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { structureCollection } from '../classes/Structure/StructureCollection';
-import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
+import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, 
     blockIdToItemStackMap } from '../data';
-import { fetchMatchingItemSlot } from '../utils';
+import { fetchMatchingItemSlot, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
 
 const builderOption = new BuilderOption({
@@ -66,9 +66,10 @@ function tryPlaceBlock(event, player, block, structureBlock) {
     if (shouldPreventAction(player, structureBlock))
         return preventAction(event, player);
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
-    if (player.getGameMode() === GameMode.creative) {
-        placeBlock(block, structureBlock);
-    } else if (player.getGameMode() === GameMode.survival) {
+    if (player.getGameMode() === GameMode.Creative) {
+        event.cancel = true;
+        placeBlock(player, block, structureBlock);
+    } else if (player.getGameMode() === GameMode.Survival) {
         structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(event, player, block, structureBlock);
     }
@@ -134,35 +135,4 @@ function getPlaceableItemStack(structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
     return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
-}
-
-function placeBlock(player, block, structureBlock, itemSlot) {
-    system.run(() => {
-        if (itemSlot)
-            consumeItem(itemSlot);
-        block.setPermutation(structureBlock);
-        playSoundEffect(player, block, structureBlock);
-    });
-}
-
-function consumeItem(itemSlot) {
-    if (specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]) {
-        consumeSpecial(itemSlot);
-    } else {
-        if (itemSlot.amount === 1)
-            itemSlot.setItem(void 0);
-        else
-            itemSlot.amount--;
-    }
-}
-
-function consumeSpecial(itemSlot) {
-    itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
-}
-
-function playSoundEffect(player, block, structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
-    const blockData = blocks[blockId];
-    const blockSound = blockData['sound'] || 'stone';
-    player.dimension.playSound('dig.' + blockSound, block.location);
 }
