@@ -8,7 +8,7 @@ const ACTION_ITEM = 'construct:menu';
 
 const menuCmd = new Command({
     name: 'construct',
-    description: { text: 'Gives you the Construct item. Use it to open the Construct menu.' },
+    description: { text: 'Opens the Construct menu.' },
     usage: 'construct',
     callback: (sender) => openMenu(sender)
 });

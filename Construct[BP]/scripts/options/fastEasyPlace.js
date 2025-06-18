@@ -1,10 +1,10 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, InputMode, ItemStack, system, world } from '@minecraft/server';
-import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, specialItemPlacementConversions, 
+import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, 
     blockIdToItemStackMap } from '../data';
+import { placeBlock } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
-import { blocks } from '../blocks';
 
 const PROCESS_INTERVAL = 2; // Fast Easy Place will attempt to place twice when at an interval of 1.
 
@@ -88,9 +88,9 @@ function isHoldingActionItem(player) {
 function tryPlaceBlock(player, worldBlock, structureBlock) {
     if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(worldBlock)) return;
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
-    if (player.getGameMode() === GameMode.creative) {
+    if (player.getGameMode() === GameMode.Creative) {
         placeBlock(player, worldBlock, structureBlock);
-    } else if (player.getGameMode() === GameMode.survival) {
+    } else if (player.getGameMode() === GameMode.Survival) {
         structureBlock = tryConvertToDefaultState(structureBlock);
         tryPlaceBlockSurvival(player, worldBlock, structureBlock);
     }
@@ -139,9 +139,8 @@ function tryConvertToDefaultState(structureBlock) {
 function tryPlaceBlockSurvival(player, block, structureBlock) {
     const placeableItemStack = getPlaceableItemStack(structureBlock);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
-    if (itemSlotToUse) {
+    if (itemSlotToUse)
         placeBlock(player, block, structureBlock, itemSlotToUse);
-    }
 }
 
 function getPlaceableItemStack(structureBlock) {
@@ -161,35 +160,4 @@ function fetchMatchingItemSlot(player, itemToMatchId) {
         if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
             return itemSlot;
     }
-}
-
-function placeBlock(player, block, structureBlock, itemSlot) {
-    system.run(() => {
-        if (itemSlot)
-            consumeItem(itemSlot);
-        block.setPermutation(structureBlock);
-        playSoundEffect(player, structureBlock);
-    });
-}
-
-function consumeItem(itemSlot) {
-    if (specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]) {
-        consumeSpecial(itemSlot);
-    } else {
-        if (itemSlot.amount === 1)
-            itemSlot.setItem(void 0);
-        else
-            itemSlot.amount--;
-    }
-}
-
-function consumeSpecial(itemSlot) {
-    itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
-}
-
-function playSoundEffect(player, structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
-    const blockData = blocks[blockId];
-    const blockSound = blockData['sound'] || 'stone';
-    player.dimension.playSound('dig.' + blockSound, player.location);
 }
