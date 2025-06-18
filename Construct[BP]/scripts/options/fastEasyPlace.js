@@ -168,7 +168,7 @@ function placeBlock(player, block, structureBlock, itemSlot) {
         if (itemSlot)
             consumeItem(itemSlot);
         block.setPermutation(structureBlock);
-        playSoundEffect(player, structureBlock);
+        playSoundEffect(player, block, structureBlock);
     });
 }
 
@@ -187,9 +187,9 @@ function consumeSpecial(itemSlot) {
     itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
 }
 
-function playSoundEffect(player, structureBlock) {
+function playSoundEffect(player, block, structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const blockData = blocks[blockId];
     const blockSound = blockData['sound'] || 'stone';
-    player.dimension.playSound('dig.' + blockSound, player.location);
+    player.dimension.playSound('dig.' + blockSound, block.location);
 }

@@ -124,7 +124,7 @@ function tryPlaceBlockSurvival(event, player, block, structureBlock) {
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
         event.cancel = true;
-        placeBlock(block, structureBlock, itemSlotToUse);
+        placeBlock(player, block, structureBlock, itemSlotToUse);
     } else {
         preventAction(event, player);
     }
@@ -136,12 +136,12 @@ function getPlaceableItemStack(structureBlock) {
     return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
 }
 
-function placeBlock(block, structureBlock, itemSlot) {
+function placeBlock(player, block, structureBlock, itemSlot) {
     system.run(() => {
-        if (itemSlot) {
+        if (itemSlot)
             consumeItem(itemSlot);
-        }
         block.setPermutation(structureBlock);
+        playSoundEffect(player, block, structureBlock);
     });
 }
 
@@ -158,4 +158,11 @@ function consumeItem(itemSlot) {
 
 function consumeSpecial(itemSlot) {
     itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
+}
+
+function playSoundEffect(player, block, structureBlock) {
+    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const blockData = blocks[blockId];
+    const blockSound = blockData['sound'] || 'stone';
+    player.dimension.playSound('dig.' + blockSound, block.location);
 }
