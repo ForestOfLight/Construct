@@ -97,7 +97,7 @@ function tryPlaceBlock(player, worldBlock, structureBlock) {
 }
 
 function locationIsPlaceable(worldBlock) {
-    return worldBlock.isAir;
+    return worldBlock.isAir || worldBlock.isLiquid;
 }
 
 function isBannedBlock(player, structureBlock) {

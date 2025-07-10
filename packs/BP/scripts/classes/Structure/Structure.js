@@ -31,6 +31,7 @@ export class Structure {
         if (!blockPermutation)
             return void 0;
         blockPermutation.location = structureLocation;
+        blockPermutation.isWaterlogged = this.#structure.getIsWaterlogged(blockPermutation.location);
         return blockPermutation;
     }
 

@@ -1,4 +1,4 @@
-import { system, EntityComponentTypes } from '@minecraft/server';
+import { system, EntityComponentTypes, LiquidType } from '@minecraft/server';
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { specialItemPlacementConversions } from './data';
 import { blocks } from './blocks';
@@ -33,6 +33,7 @@ export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume 
         if (itemSlotToConsume)
             consumeItem(itemSlotToConsume);
         placedBlock.setPermutation(blockToPlace);
+        handleWaterlogging(placedBlock, blockToPlace);
         playBlockPlacementSound(player, placedBlock, blockToPlace);
     });
 }
@@ -46,6 +47,11 @@ function consumeItem(itemSlot) {
         else
             itemSlot.amount--;
     }
+}
+
+function handleWaterlogging(block, structureBlock) {
+    if (block.isLiquid && structureBlock.canContainLiquid(LiquidType.Water))
+        block.setWaterlogged(true);
 }
 
 function playBlockPlacementSound(player, block, structureBlock) {

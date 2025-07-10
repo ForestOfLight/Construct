@@ -36,7 +36,8 @@ export class BlockVerifier {
         return worldPermuation.type.id === structurePermuation.type.id;
     }
 
-    isExactMatch(worldPermuation, structurePermuation) {
-        return worldPermuation.matches(structurePermuation.type.id, structurePermuation.getAllStates());
+    isExactMatch(worldPermutation, structurePermutation) {
+        return worldPermutation.matches(structurePermutation.type.id, structurePermutation.getAllStates())
+            && this.block.isWaterlogged === structurePermutation.isWaterlogged;
     }
 }
