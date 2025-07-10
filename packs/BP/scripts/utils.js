@@ -21,11 +21,15 @@ export function fetchMatchingItemSlot(entity, itemToMatchId) {
     const inventory = entity.getComponent(EntityComponentTypes.Inventory)?.container;
     if (!inventory)
         return void 0;
+    let smallestItemSlot;
     for (let index = 0; index < inventory.size; index++) {
         const itemSlot = inventory.getSlot(index);
-        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
-            return itemSlot;
+        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId) {
+            if (!smallestItemSlot || itemSlot.amount < smallestItemSlot.amount)
+                smallestItemSlot = itemSlot;
+        }
     }
+    return smallestItemSlot;
 }
 
 export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume = void 0) {

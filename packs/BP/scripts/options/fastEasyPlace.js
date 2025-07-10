@@ -1,8 +1,8 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, InputMode, ItemStack, system, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, 
     blockIdToItemStackMap } from '../data';
-import { placeBlock } from '../utils';
+import { placeBlock, fetchMatchingItemSlot } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
 
@@ -147,17 +147,4 @@ function getPlaceableItemStack(structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
     return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
-}
-
-function fetchMatchingItemSlot(player, itemToMatchId) {
-    if (!itemToMatchId)
-        return void 0;
-    const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!inventory)
-        return void 0;
-    for (let index = 0; index < inventory.size; index++) {
-        const itemSlot = inventory.getSlot(index);
-        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
-            return itemSlot;
-    }
 }
