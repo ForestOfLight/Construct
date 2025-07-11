@@ -7,7 +7,7 @@ import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
 import { Vector } from '../lib/Vector';
 
-const PROCESS_INTERVAL = 2; // Fast Easy Place will attempt to place twice when at an interval of 1.
+const locationsPlacedLastTick = new Set();
 const PLAYER_COLLISION_BOX = { width: 0.6, height: 1.8 };
 
 const builderOption = new BuilderOption({
@@ -48,7 +48,7 @@ function removeActionItem(playerId) {
     }
 }
 
-system.runInterval(onTick, PROCESS_INTERVAL);
+system.runInterval(onTick);
 world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteractWithBlock);
 
 function onTick() {
@@ -70,6 +70,12 @@ function processEasyPlace(player) {
     if (!structureBlock)
         return;
     const worldBlock = player.dimension.getBlock(structureBlock.location);
+    if (locationsPlacedLastTick.has(JSON.stringify(worldBlock.location)))
+        return;
+    locationsPlacedLastTick.add(JSON.stringify(worldBlock.location));
+    system.runTimeout(() => {
+        locationsPlacedLastTick.delete(JSON.stringify(worldBlock.location));
+    }, 2);
     tryPlaceBlock(player, worldBlock, structureBlock.permutation);
 }
 
