@@ -19,7 +19,8 @@ function giveActionItem(playerId) {
     const player = world.getEntity(playerId);
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
     const itemStack = new ItemStack('construct:easy_place');
-    if (!container.contains(itemStack)) {
+    const offhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Offhand);
+    if (!container.contains(itemStack) && offhandItemStack?.typeId !== 'construct:easy_place') {
         const remainingItemStack = container.addItem(itemStack);
         if (remainingItemStack)
             player.dimension.spawnItem(remainingItemStack, player.location);
