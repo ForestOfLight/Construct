@@ -1,7 +1,7 @@
 import { system, EntityComponentTypes, LiquidType } from '@minecraft/server';
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { specialItemPlacementConversions } from './data';
-import { blocks } from './blocks';
+import { blocks, block_sounds } from './blocks';
 
 export async function forceShow(player, form, timeout = Infinity) {
     const startTick = system.currentTick;
@@ -21,11 +21,15 @@ export function fetchMatchingItemSlot(entity, itemToMatchId) {
     const inventory = entity.getComponent(EntityComponentTypes.Inventory)?.container;
     if (!inventory)
         return void 0;
+    let smallestItemSlot;
     for (let index = 0; index < inventory.size; index++) {
         const itemSlot = inventory.getSlot(index);
-        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
-            return itemSlot;
+        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId) {
+            if (!smallestItemSlot || itemSlot.amount < smallestItemSlot.amount)
+                smallestItemSlot = itemSlot;
+        }
     }
+    return smallestItemSlot;
 }
 
 export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume = void 0) {
@@ -58,10 +62,7 @@ function playBlockPlacementSound(player, block, structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const blockData = blocks[blockId];
     let blockSound = blockData['sound'] || 'stone';
-    if (['glass', 'terracotta'].includes(blockSound))
-        blockSound = 'stone';
-    let blockSoundId = 'dig.' + blockSound;
-    if (['iron', 'calcite'].includes(blockSound))
-        blockSoundId = 'place.' + blockSound;
+    let blockSoundId = block_sounds[blockSound].events.place?.sound
+        || block_sounds[block_sounds[blockSound].base].events.place?.sound;
     player.dimension.playSound(blockSoundId, block.location);
 }

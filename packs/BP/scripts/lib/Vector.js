@@ -31,6 +31,11 @@ Vector.rejection = function rejection(a, b) { return Vector.subtract(a, Vector.p
 Vector.reflect = function reflect(v, n) { return Vector.subtract(v, Vector.multiply(n, 2 * Vector.dot(v, n))); }
 Vector.lerp = function lerp(a, b, t) { return Vector.multiply(a, 1 - t).add(Vector.multiply(b, t)); }
 Vector.distance = function distance(a, b) { return Vector.magnitude(Vector.subtract(a, b)); }
+Vector.intersect = function intersect(maxA, minA, maxB, minB) {
+    return (maxA.x >= minB.x && minA.x <= maxB.x) &&
+           (maxA.y >= minB.y && minA.y <= maxB.y) &&
+           (maxA.z >= minB.z && minA.z <= maxB.z);
+}
 Vector.from = function from(object) {
     if (Vector.isVec3(object)) return object;
     if (Array.isArray(object)) return new Vector(object[0], object[1], object[2]);
