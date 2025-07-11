@@ -5,8 +5,10 @@ import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlo
 import { placeBlock, fetchMatchingItemSlot } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
+import { Vector } from '../lib/Vector';
 
 const PROCESS_INTERVAL = 2; // Fast Easy Place will attempt to place twice when at an interval of 1.
+const PLAYER_COLLISION_BOX = { width: 0.6, height: 1.8 };
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
@@ -86,7 +88,7 @@ function isHoldingActionItem(player) {
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
-    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(worldBlock)) return;
+    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock)) return;
     structureBlock = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.Creative) {
         placeBlock(player, worldBlock, structureBlock);
@@ -96,8 +98,8 @@ function tryPlaceBlock(player, worldBlock, structureBlock) {
     }
 }
 
-function locationIsPlaceable(worldBlock) {
-    return worldBlock.isAir || worldBlock.isLiquid;
+function locationIsPlaceable(player, worldBlock) {
+    return (worldBlock.isAir || worldBlock.isLiquid) && !isBlockInsidePlayer(player, worldBlock);
 }
 
 function isBannedBlock(player, structureBlock) {
@@ -147,4 +149,14 @@ function getPlaceableItemStack(structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
     return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
+}
+
+function isBlockInsidePlayer(player, worldBlock) {
+    const playerLocation = Vector.from(player.location);
+    const blockLocation = Vector.from(worldBlock.location);
+    const playerMin = playerLocation.subtract({ x: PLAYER_COLLISION_BOX.width / 2, y: -0.1, z: PLAYER_COLLISION_BOX.width / 2 });
+    const playerMax = playerLocation.add({ x: PLAYER_COLLISION_BOX.width / 2, y: PLAYER_COLLISION_BOX.height, z: PLAYER_COLLISION_BOX.width / 2 });
+    const blockMin = blockLocation;
+    const blockMax = blockLocation.add({ x: 1, y: 1, z: 1 });
+    return Vector.intersect(playerMax, playerMin, blockMax, blockMin);
 }
