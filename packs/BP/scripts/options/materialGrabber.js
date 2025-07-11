@@ -55,11 +55,10 @@ function onPlayerInteract(event) {
     const player = event.player;
     const target = event.block || event.target;
     const focusedInstanceName = Builders.get(player.id).materialInstanceName;
-    if (!focusedInstanceName) {
+    if (!focusedInstanceName || !structureCollection.has(focusedInstanceName))
         openInstanceSelectionForm(player, event);
-    } else {
+    else
         tryGrabMaterials(player, target, focusedInstanceName, event);
-    }
 }
 
 function isActionItem(itemStack) {
