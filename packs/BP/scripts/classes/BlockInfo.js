@@ -32,11 +32,13 @@ class BlockInfo {
     static getBlockMessage(block) {
         if (!block)
             return '§7Unknown';
+        let output = `§a${block.type.id}`;
         const states = block.getAllStates();
-        if (Object.keys(states).length === 0)
-            return `§a${block.type.id}`;
-        else
-            return `§a${block.type.id}\n§7${this.getFormattedStates(states)}`;
+        if (Object.keys(states).length > 0)
+            output += `\n§7${this.getFormattedStates(states)}`;
+        if (block.isWaterlogged)
+            output += `\n§7isWaterlogged: §3true`;
+        return output;
     }
 
     static getFormattedStates(states) {

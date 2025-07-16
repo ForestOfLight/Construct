@@ -70,7 +70,7 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Correct block placement checking
 - [x] Automatic material gathering from inventories
 - [x] Material list
-- [ ] Structure Merging into SuperStructures
+- [ ] Block texture display
 
 ## Issues & Suggestions
 

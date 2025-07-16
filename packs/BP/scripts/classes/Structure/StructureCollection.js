@@ -40,6 +40,10 @@ class StructureCollection {
         return structure;
     }
 
+    has(instanceName) {
+        return Boolean(this.structures[instanceName]);
+    }
+
     delete(instanceName) {
         const struct = this.get(instanceName);
         struct.delete();

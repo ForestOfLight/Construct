@@ -1,18 +1,16 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, InputMode, ItemStack, system, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { structureCollection } from '../classes/Structure/StructureCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, 
     blockIdToItemStackMap } from '../data';
-import { placeBlock } from '../utils';
-import { Raycaster } from '../classes/Raycaster';
+import { fetchMatchingItemSlot, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
 
-const PROCESS_INTERVAL = 2; // Fast Easy Place will attempt to place twice when at an interval of 1.
-
 const builderOption = new BuilderOption({
-    identifier: 'fastEasyPlace',
-    displayName: 'Fast Easy Place',
-    description: 'Place correct structure blocks just by looking at them.',
-    howToUse: "Hold the Easy Place item in your main hand and look at blocks in a structure to place them.",
+    identifier: 'easyPlace',
+    displayName: 'Easy Place',
+    description: 'Always place the correct structure block.',
+    howToUse: "Hold the Easy Place item in your offhand and place blocks in a structure to have them be corrected automatically.",
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
@@ -21,7 +19,8 @@ function giveActionItem(playerId) {
     const player = world.getEntity(playerId);
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
     const itemStack = new ItemStack('construct:easy_place');
-    if (!container.contains(itemStack)) {
+    const offhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Offhand);
+    if (!container.contains(itemStack) && offhandItemStack?.typeId !== 'construct:easy_place') {
         const remainingItemStack = container.addItem(itemStack);
         if (remainingItemStack)
             player.dimension.spawnItem(remainingItemStack, player.location);
@@ -30,7 +29,7 @@ function giveActionItem(playerId) {
 
 function removeActionItem(playerId) {
     const builder = Builders.get(playerId);
-    if (builder.isOptionEnabled('easyPlace'))
+    if (builder.isOptionEnabled('fastEasyPlace'))
         return;
     const player = world.getEntity(playerId);
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
@@ -46,29 +45,39 @@ function removeActionItem(playerId) {
     }
 }
 
-system.runInterval(onTick, PROCESS_INTERVAL);
-world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteractWithBlock);
+world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 
-function onTick() {
-    for (const player of world.getAllPlayers()) {
-        if (player && builderOption.isEnabled(player.id))
-            processEasyPlace(player);
+function onPlayerPlaceBlock(event) {
+    const { player, block } = event;
+    if (!player || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
+    const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
+    if (!structureBlock)
+        return;
+    tryPlaceBlock(event, player, block, structureBlock);
+}
+
+function isHoldingActionItem(player) {
+    const offhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Offhand);
+    if (!offhandItemStack)
+        return false;
+    return offhandItemStack.typeId === 'construct:easy_place';
+}
+
+function tryPlaceBlock(event, player, block, structureBlock) {
+    if (shouldPreventAction(player, structureBlock))
+        return preventAction(event, player);
+    structureBlock = tryConvertBannedToValidBlock(structureBlock);
+    if (player.getGameMode() === GameMode.Creative) {
+        event.cancel = true;
+        placeBlock(player, block, structureBlock);
+    } else if (player.getGameMode() === GameMode.Survival) {
+        structureBlock = tryConvertToDefaultState(structureBlock);
+        tryPlaceBlockSurvival(event, player, block, structureBlock);
     }
 }
 
-function onPlayerInteractWithBlock(event) {
-    const { player, block, isFirstEvent } = event;
-    if (!player || !isFirstEvent || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
-    preventAction(event, player);
-}
-
-function processEasyPlace(player) {
-    if (!player || !isHoldingActionItem(player)) return;
-    const structureBlock = Raycaster.getTargetedStructureBlock(player, { isFirst: true });
-    if (!structureBlock)
-        return;
-    const worldBlock = player.dimension.getBlock(structureBlock.location);
-    tryPlaceBlock(player, worldBlock, structureBlock.permutation);
+function shouldPreventAction(player, structureBlock) {
+    return isBannedBlock(player, structureBlock);
 }
 
 function preventAction(event, player) {
@@ -78,31 +87,7 @@ function preventAction(event, player) {
     });
 }
 
-function isHoldingActionItem(player) {
-    const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
-    if (!mainhandItemStack)
-        return false;
-    return mainhandItemStack.typeId === 'construct:easy_place';
-}
-
-function tryPlaceBlock(player, worldBlock, structureBlock) {
-    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(worldBlock)) return;
-    structureBlock = tryConvertBannedToValidBlock(structureBlock);
-    if (player.getGameMode() === GameMode.Creative) {
-        placeBlock(player, worldBlock, structureBlock);
-    } else if (player.getGameMode() === GameMode.Survival) {
-        structureBlock = tryConvertToDefaultState(structureBlock);
-        tryPlaceBlockSurvival(player, worldBlock, structureBlock);
-    }
-}
-
-function locationIsPlaceable(worldBlock) {
-    return worldBlock.isAir;
-}
-
 function isBannedBlock(player, structureBlock) {
-    if (!structureBlock)
-        return true;
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     if (bannedBlocks.includes(blockId))
         return true;
@@ -136,28 +121,19 @@ function tryConvertToDefaultState(structureBlock) {
     return BlockPermutation.resolve(structureBlock.type.id, newStates);
 }
 
-function tryPlaceBlockSurvival(player, block, structureBlock) {
+function tryPlaceBlockSurvival(event, player, block, structureBlock) {
     const placeableItemStack = getPlaceableItemStack(structureBlock);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
-    if (itemSlotToUse)
+    if (itemSlotToUse) {
+        event.cancel = true;
         placeBlock(player, block, structureBlock, itemSlotToUse);
+    } else {
+        preventAction(event, player);
+    }
 }
 
 function getPlaceableItemStack(structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
     return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
-}
-
-function fetchMatchingItemSlot(player, itemToMatchId) {
-    if (!itemToMatchId)
-        return void 0;
-    const inventory = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!inventory)
-        return void 0;
-    for (let index = 0; index < inventory.size; index++) {
-        const itemSlot = inventory.getSlot(index);
-        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId)
-            return itemSlot;
-    }
 }

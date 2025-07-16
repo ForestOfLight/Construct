@@ -3,7 +3,10 @@ export const bannedBlocks = [
     'wooden_door', 'spruce_door', 'birch_door', 'jungle_door', 'acacia_door', 'dark_oak_door', 'mangrove_door', 'cherry_door', 'pale_oak_door', 
     'bamboo_door', 'iron_door', 'crimson_door', 'warped_door', 'copper_door', 'exposed_copper_door', 'weathered_copper_door', 'oxidized_copper_door',
     'waxed_copper_door', 'waxed_exposed_copper_door', 'waxed_weathered_copper_door', 'waxed_oxidized_copper_door',
-    'seagrass', 'kelp', 'dried_ghast'
+    'seagrass', 'kelp', 'dried_ghast', 'undyed_shulker_box', 'white_shulker_box', 'orange_shulker_box', 'magenta_shulker_box',
+    'light_blue_shulker_box', 'yellow_shulker_box', 'lime_shulker_box', 'pink_shulker_box', 'gray_shulker_box',
+    'light_gray_shulker_box', 'cyan_shulker_box', 'purple_shulker_box', 'blue_shulker_box', 'brown_shulker_box',
+    'green_shulker_box', 'red_shulker_box', 'black_shulker_box'
 ];
 
 export const bannedDimensionBlocks = {
