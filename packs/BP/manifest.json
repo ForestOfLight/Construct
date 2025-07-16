@@ -1,11 +1,11 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Construct [BP] v1.0.1",
+		"name": "Construct [BP] v1.0.2",
 		"description": "Survival building addon by §aForestOfLight§r.",
 		"uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58",
 		"min_engine_version": [1, 21, 90],
-		"version": [1, 0, 1]
+		"version": [1, 0, 2]
 	},
 	"modules": [
 		{
@@ -34,7 +34,7 @@
 		},
 		{
 			"uuid": "375ec465-3dc1-429f-8b4c-a337889e1ed4", // Construct RP
-			"version": [1, 0, 1]
+			"version": [1, 0, 2]
 		}
 	],
 	"metadata": {
