@@ -4,5 +4,5 @@ export const extension = new CanopyExtension({
     author: 'ForestOfLight',
     name: 'Construct',
     description: 'Survival building addon by §aForestOfLight§r.',
-    version: '1.0.2'
+    version: '1.0.3'
 });
