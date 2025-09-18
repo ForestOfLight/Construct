@@ -18,9 +18,10 @@ system.beforeEvents.startup.subscribe((event) => {
     const command = {
         name: 'construct:item',
         description: 'Gives you the Construct item. Use it to open the Construct menu.',
-        permissionLevel: CommandPermissionLevel.Any
+        permissionLevel: CommandPermissionLevel.Any,
+        cheatsRequired: false
     };
-    event.customCommandRegistry.registerCommand(command, givePlayerConstructItem)
+    event.customCommandRegistry.registerCommand(command, givePlayerConstructItem);
 });
 
 function givePlayerConstructItem(origin) {
