@@ -15,6 +15,7 @@ export class StructureInstance {
     verifier = void 0;
     verificationRenderer = void 0;
     materials = void 0;
+    flexMovingPlayerId = void 0;
 
     constructor(instanceName, structureId) {
         this.structure = new Structure(structureId);
@@ -243,6 +244,23 @@ export class StructureInstance {
             this.setLayer(this.getMaxLayer());
         else
             this.setLayer(this.options.currentLayer - 1);
+    }
+
+    startFlexibleMove(player) {
+        this.flexMovingPlayerId = player.id;
+        this.disable();
+        // create flex movement outliner
+    }
+
+    stopFlexibleMove(finalLocation) {
+        // disable flex movement outliner
+        this.move(this.getDimension(), finalLocation);
+        this.enable();
+        this.flexMovingPlayerId = void 0;
+    }
+
+    isFlexibleMoving() {
+        return this.flexMovingPlayerId !== void 0;
     }
 
     disableInstanceWhenNoPlayersOnline() {

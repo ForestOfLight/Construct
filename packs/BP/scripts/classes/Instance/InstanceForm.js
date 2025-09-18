@@ -4,6 +4,7 @@ import { forceShow } from '../../utils';
 import { InstanceButtons } from '../Enums/InstanceButtons';
 import { InstanceFormBuilder } from './InstanceFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
+import { FlexibleInstanceMove } from './FlexibleInstanceMove';
 
 export class InstanceForm {
     instanceName;
@@ -93,6 +94,9 @@ export class InstanceForm {
                 break;
             case InstanceButtons.Move:
                 this.instance.move(this.player.dimension.id, this.player.location);
+                break;
+            case InstanceButtons.FlexibleMove:
+                new FlexibleInstanceMove(this.instance, this.player);
                 break;
             case InstanceButtons.Settings:
                 this.settingsForm();
