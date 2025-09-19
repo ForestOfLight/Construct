@@ -1,4 +1,4 @@
-import { MolangVariableMap, system, world } from "@minecraft/server";
+import { MolangVariableMap, system, TicksPerSecond, world } from "@minecraft/server";
 import { Vector } from "../lib/Vector";
 
 export class Outliner {
@@ -6,15 +6,18 @@ export class Outliner {
     min = new Vector();
     max = new Vector();
     drawParticle = "construct:outline";
-    drawFrequency = 10;
+    drawFrequency;
+    particleLifetime;
     
     #drawParticles = [];
     #runner = void 0;
 
-    constructor(dimension, min, max) {
+    constructor(dimension, min, max, drawFrequency = 10, particleLifetime = 20) {
         this.dimension = dimension;
         this.min = Vector.from(min);
         this.max = Vector.from(max);
+        this.drawFrequency = drawFrequency;
+        this.particleLifetime = particleLifetime;
         this.vertices = this.getVertices(min, max);
     }
 
@@ -42,6 +45,8 @@ export class Outliner {
         for (const [particleType, location] of this.#drawParticles) {
             const molang = new MolangVariableMap();
             molang.setColorRGBA("dot_color", colorCallback());
+            const lifetimeSeconds = this.particleLifetime / TicksPerSecond;
+            molang.setFloat("lifetime", lifetimeSeconds);
             try {
                 this.dimension.spawnParticle(particleType, location, molang);
             } catch (e) {

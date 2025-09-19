@@ -5,6 +5,7 @@ import { InstanceButtons } from '../Enums/InstanceButtons';
 import { InstanceFormBuilder } from './InstanceFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { FlexibleInstanceMove } from './FlexibleInstanceMove';
+import { Builders } from '../Builder/Builders';
 
 export class InstanceForm {
     instanceName;
@@ -13,6 +14,7 @@ export class InstanceForm {
             InstanceButtons.NextLayer,
             InstanceButtons.PreviousLayer,
             InstanceButtons.Move,
+            InstanceButtons.FlexibleMove,
             InstanceButtons.Settings,
             InstanceButtons.Statistics,
             InstanceButtons.Materials,
@@ -96,7 +98,7 @@ export class InstanceForm {
                 this.instance.move(this.player.dimension.id, this.player.location);
                 break;
             case InstanceButtons.FlexibleMove:
-                new FlexibleInstanceMove(this.instance, this.player);
+                this.flexibleMovement();
                 break;
             case InstanceButtons.Settings:
                 this.settingsForm();
@@ -133,6 +135,11 @@ export class InstanceForm {
                 return;
             }
         });
+    }
+
+    flexibleMovement() {
+        const builder = Builders.get(this.player.id);
+        builder.flexibleInstanceMovement = new FlexibleInstanceMove(this.instance, this.player);
     }
 
     setLayerForm() {
