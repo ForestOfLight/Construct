@@ -71,8 +71,6 @@ export class FlexibleInstanceMove {
         if (playerMovement.isSneaking())
             velocity.y -= 1;
 
-        if (velocity.length > 0)
-            velocity = velocity.normalized;
         return velocity.multiply(speedFactor);
     }
 
