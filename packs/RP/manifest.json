@@ -1,10 +1,10 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Construct [RP] v1.0.3",
+        "name": "Construct [RP] v1.0.4",
         "description": "Survival building addon by §aForestOfLight§r.",
         "uuid": "375ec465-3dc1-429f-8b4c-a337889e1ed4",
-        "version": [1, 0, 3],
+        "version": [1, 0, 4],
         "min_engine_version": [1,17,1]
     },
     "modules": [
@@ -17,7 +17,7 @@
     "dependencies": [
         {
             "uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58", // Construct BP
-            "version": [1, 0, 3]
+            "version": [1, 0, 4]
         }
     ],
     "metadata": {

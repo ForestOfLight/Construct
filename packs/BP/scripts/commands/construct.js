@@ -3,8 +3,9 @@ import { extension } from '../config';
 import { world, system, EntityComponentTypes, ItemStack, CommandPermissionLevel, CustomCommandStatus, Player } from '@minecraft/server';
 import { MenuForm } from '../classes/MenuForm';
 import { structureCollection } from '../classes/Structure/StructureCollection'
+import { Builders } from '../classes/Builder/Builders';
 
-const ACTION_ITEM = 'construct:menu';
+export const MENU_ITEM = 'construct:menu';
 
 const menuCmd = new Command({
     name: 'construct',
@@ -18,9 +19,10 @@ system.beforeEvents.startup.subscribe((event) => {
     const command = {
         name: 'construct:item',
         description: 'Gives you the Construct item. Use it to open the Construct menu.',
-        permissionLevel: CommandPermissionLevel.Any
+        permissionLevel: CommandPermissionLevel.Any,
+        cheatsRequired: false
     };
-    event.customCommandRegistry.registerCommand(command, givePlayerConstructItem)
+    event.customCommandRegistry.registerCommand(command, givePlayerConstructItem);
 });
 
 function givePlayerConstructItem(origin) {
@@ -28,7 +30,7 @@ function givePlayerConstructItem(origin) {
     if (player instanceof Player === false)
         return { status: CustomCommandStatus.Failure, message: 'This command can only be used by players.' };
     system.run(() => {
-        const givenItemStack = player.getComponent(EntityComponentTypes.Inventory)?.container?.addItem(new ItemStack(ACTION_ITEM));
+        const givenItemStack = player.getComponent(EntityComponentTypes.Inventory)?.container?.addItem(new ItemStack(MENU_ITEM));
         if (givenItemStack)
             player.sendMessage('§cFailed to give you the Construct item.');
         else
@@ -38,12 +40,17 @@ function givePlayerConstructItem(origin) {
 }
 
 world.beforeEvents.itemUse.subscribe((event) => {
-    if (!event.source || event.itemStack?.typeId !== ACTION_ITEM) return;
+    if (!event.source || event.itemStack?.typeId !== MENU_ITEM) return;
     event.cancel = true;
-    system.run(() => openMenu(event.source, event));
+    const builder = Builders.get(event.source.id);
+    system.run(() => {
+        if (builder.isFlexibleInstanceMoving())
+            return;
+        openMenu(event.source, event);
+    });
 });
 
-function openMenu(sender, event = void 0) {
+function openMenu(player, event = void 0) {
     const options = { jumpToInstance: true }
     if (event) {
         const instanceNames = structureCollection.getInstanceNames();
@@ -51,5 +58,5 @@ function openMenu(sender, event = void 0) {
         if (instanceNames.includes(instanceName))
             options.instanceName = instanceName;
     }
-    new MenuForm(sender, options);
+    new MenuForm(player, options);
 }

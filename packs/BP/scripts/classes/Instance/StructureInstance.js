@@ -15,6 +15,7 @@ export class StructureInstance {
     verifier = void 0;
     verificationRenderer = void 0;
     materials = void 0;
+    flexMovingPlayerId = void 0;
 
     constructor(instanceName, structureId) {
         this.structure = new Structure(structureId);
@@ -243,6 +244,10 @@ export class StructureInstance {
             this.setLayer(this.getMaxLayer());
         else
             this.setLayer(this.options.currentLayer - 1);
+    }
+
+    isFlexibleMoving() {
+        return this.flexMovingPlayerId !== void 0;
     }
 
     disableInstanceWhenNoPlayersOnline() {
