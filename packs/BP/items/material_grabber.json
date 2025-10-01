@@ -11,7 +11,7 @@
         "texture": "construct:material_grabber"
       },
       "minecraft:display_name": {
-        "value": "Material Grabber"
+        "value": "construct.materialGrabber.name"
       },
       "minecraft:wearable": {
         "dispensable": true,

@@ -113,7 +113,7 @@ export class InstanceForm {
                 new MenuForm(this.player, { jumpToInstance: false });
                 break;
             default:
-                this.player.sendMessage(`§cUnknown option: ${option}`);
+                this.player.sendMessage({ translate: 'construct.menu.instance.unknownOption', with: [option] });
                 break;
         }
     }
@@ -124,15 +124,14 @@ export class InstanceForm {
                 return;
             const newName = response.formValues[0];
             if (newName === '') {
-                this.player.sendMessage('§cInstance name cannot be empty.');
+                this.player.sendMessage({ translate: 'construct.menu.instance.nameEmpty' });
                 return;
             }
             try {
                 structureCollection.rename(this.instanceName, newName);
                 this.instanceName = newName;
             } catch (e) {
-                this.player.sendMessage(`§cError renaming instance: ${e.message}`);
-                return;
+                this.player.sendMessage({ translate: 'construct.instance.rename.error', with: [e.message] });
             }
         });
     }

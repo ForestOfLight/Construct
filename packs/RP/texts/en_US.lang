@@ -1,0 +1,31 @@
+## Items
+construct.menu.name=Construct
+construct.easyPlace.name=Easy Place
+construct.materialGrabber.name=Material Grabber
+
+construct.option.enabled=is now enabled!
+construct.option.disabled=is now disabled.
+
+construct.menu.open.closeChat=§8Close your chat window to access the menu.
+construct.menu.open.timeout=§8Menu timed out.
+construct.menu.submit=§2Apply
+construct.menu.instance.button.unknown=Unknown
+construct.menu.instance.button.place=§aPlace Instance
+construct.menu.instance.button.enable=§aEnable Instance
+construct.menu.instance.button.disable=§cDisable Instance
+construct.menu.instance.button.rename=Rename Instance
+construct.menu.instance.button.delete=§cDelete Instance
+construct.menu.instance.button.nextLayer=Increase Layer
+construct.menu.instance.button.previousLayer=Decrease Layer
+construct.menu.instance.button.move=Move Here
+construct.menu.instance.button.flexibleMove=Flexible Move
+construct.menu.instance.button.statistics=Statistics
+construct.menu.instance.button.settings=Settings
+construct.menu.instance.button.materials=Material List
+construct.menu.instance.unknownOption=§cUnknown option: %s
+construct.menu.instance.nameEmpty=§cInstance name cannot be empty.
+
+construct.instance.flexibleMove.alreadyMoving=§cThis instance is already being moved.
+construct.instance.flexibleMove.start=§aNow moving "%s". Use the Construct item when finished.
+construct.instance.flexibleMove.finish=§aMoved "%1" to %2.
+construct.instance.rename.error=§cError renaming instance: %s

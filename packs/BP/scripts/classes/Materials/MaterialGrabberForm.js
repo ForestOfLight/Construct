@@ -23,7 +23,7 @@ export class MaterialGrabberForm {
             });
         } catch (e) {
             if (e.message === 'Menu timed out.') {
-                this.player.sendMessage('§8Menu timed out.');
+                this.player.sendMessage({ translate: 'construct.menu.open.timeout' });
                 return;
             }
             throw e;
