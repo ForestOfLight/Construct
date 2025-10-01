@@ -11,7 +11,7 @@
         "texture": "construct:easy_place"
       },
       "minecraft:display_name": {
-        "value": "Easy Place"
+        "value": "construct.easyPlace.name"
       },
       "minecraft:wearable": {
         "dispensable": true,

@@ -11,7 +11,7 @@
         "texture": "construct:menu"
       },
       "minecraft:display_name": {
-        "value": "Construct"
+        "value": "construct.menu.name"
       },
       "minecraft:wearable": {
         "dispensable": true,

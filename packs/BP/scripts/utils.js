@@ -8,7 +8,7 @@ export async function forceShow(player, form, timeout = Infinity) {
     while ((system.currentTick - startTick) < timeout) {
         const response = await form.show(player);
         if (startTick + 1 === system.currentTick && response.cancelationReason === FormCancelationReason.UserBusy)
-            player.sendMessage("§8Close your chat window to access the menu.");
+            player.sendMessage({ translate: 'construct.menu.open.closeChat' });
         if (response.cancelationReason !== FormCancelationReason.UserBusy)
             return response;
     }
