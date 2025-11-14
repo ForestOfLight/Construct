@@ -15,8 +15,8 @@ const runnerByPlayer = {};
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
     displayName: 'Fast Easy Place',
-    description: 'Place correct structure blocks just by looking at them.',
-    howToUse: "Hold the Easy Place item in your main hand and look at blocks in a structure to place them.",
+    description: 'Place correct structure blocks just by clicking on them.',
+    howToUse: "Hold the Easy Place item in your main hand and use it on missing blocks in a structure to place them.",
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
