@@ -9,6 +9,8 @@ import { Vector } from '../lib/Vector';
 
 const locationsPlacedLastTick = new Set();
 const PLAYER_COLLISION_BOX = { width: 0.6, height: 1.8 };
+const ACTION_ITEM = 'construct:easy_place';
+const runnerByPlayer = {};
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
@@ -22,9 +24,9 @@ const builderOption = new BuilderOption({
 function giveActionItem(playerId) {
     const player = world.getEntity(playerId);
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
-    const itemStack = new ItemStack('construct:easy_place');
+    const itemStack = new ItemStack(ACTION_ITEM);
     const offhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Offhand);
-    if (!container.contains(itemStack) && offhandItemStack?.typeId !== 'construct:easy_place') {
+    if (!container.contains(itemStack) && offhandItemStack?.typeId !== ACTION_ITEM) {
         const remainingItemStack = container.addItem(itemStack);
         if (remainingItemStack)
             player.dimension.spawnItem(remainingItemStack, player.location);
@@ -39,24 +41,38 @@ function removeActionItem(playerId) {
     const container = player.getComponent(EntityComponentTypes.Inventory)?.container;
     for (let i = 0; i < container.size; i++) {
         const itemStack = container.getItem(i);
-        if (itemStack?.typeId === 'construct:easy_place')
+        if (itemStack?.typeId === ACTION_ITEM)
             container.setItem(i, void 0);
     }
     const equipment = player.getComponent(EntityComponentTypes.Equippable);
     const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
-    if (offhandItemStack?.typeId === 'construct:easy_place') {
+    if (offhandItemStack?.typeId === ACTION_ITEM) {
         equipment.setEquipment(EquipmentSlot.Offhand, void 0);
     }
 }
 
-system.runInterval(onTick);
+system.runInterval(onPlacingTick);
 world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteractWithBlock);
+world.afterEvents.itemStartUse.subscribe(onItemStartUse);
+world.afterEvents.itemStopUse.subscribe(onItemStopUse);
 
-function onTick() {
-    for (const player of world.getAllPlayers()) {
-        if (player && builderOption.isEnabled(player.id))
-            processEasyPlace(player);
-    }
+function onItemStartUse(event) {
+    if (event.itemStack?.typeId !== ACTION_ITEM)
+        return;
+    runnerByPlayer[event.source.id] = system.runInterval((() => onPlacingTick(event.source)));
+}
+
+function onItemStopUse(event) {
+    if (event.itemStack?.typeId !== ACTION_ITEM)
+        return;
+    const playerRunnerId = runnerByPlayer[event.source.id];
+    if (playerRunnerId)
+        system.clearRun(playerRunnerId);
+}
+
+function onPlacingTick(player) {
+    if (player && builderOption.isEnabled(player.id))
+        processEasyPlace(player);
 }
 
 function onPlayerInteractWithBlock(event) {
@@ -91,7 +107,7 @@ function isHoldingActionItem(player) {
     const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
     if (!mainhandItemStack)
         return false;
-    return mainhandItemStack.typeId === 'construct:easy_place';
+    return mainhandItemStack.typeId === ACTION_ITEM;
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
