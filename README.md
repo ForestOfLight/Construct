@@ -71,6 +71,7 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Automatic material gathering from inventories
 - [x] Material list
 - [x] Flexible structure movement
+- [ ] Translation support
 - [ ] Block texture display
 
 ## Issues & Suggestions
