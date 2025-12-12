@@ -1,11 +1,11 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Construct [BP] v1.0.5",
+		"name": "Construct [BP] v1.0.6",
 		"description": "Survival building addon by §aForestOfLight§r.",
 		"uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58",
-		"min_engine_version": [1, 21, 120],
-		"version": [1, 0, 5]
+		"min_engine_version": [1, 21, 130],
+		"version": [1, 0, 6]
 	},
 	"modules": [
 		{
@@ -26,7 +26,7 @@
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": "2.4.0-beta"
+			"version": "2.5.0-beta"
 		},
 		{
 			"module_name": "@minecraft/server-ui",
@@ -34,7 +34,7 @@
 		},
 		{
 			"uuid": "375ec465-3dc1-429f-8b4c-a337889e1ed4", // Construct RP
-			"version": [1, 0, 5]
+			"version": [1, 0, 6]
 		}
 	],
 	"metadata": {
