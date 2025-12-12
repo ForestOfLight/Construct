@@ -11,12 +11,18 @@ export class InstanceFormBuilder {
         const location = instance.getLocation();
         const form = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        let body = `Instance: §a${instance.getName()}\n§fStructure: §2${instance.getStructureId()}\n`;
+        let body = { rawtext: [
+            { translate: 'construct.instance.menu.body', with: [instance.getName(), instance.getStructureId()] },
+            { text: '\n' }
+        ]};
         if (instance.hasLocation())
-            body += `§7(${location.location.x} ${location.location.y} ${location.location.z} in ${location.dimensionId})\n`;
+            body.rawtext.push([
+                { translate: 'construct.instance.menu.location', with: [String(location.location.x), String(location.location.y), String(location.location.z), location.dimensionId] },
+                { text: '\n' }
+            ]);
         form.body(body);
         options.forEach(option => {
-            form.button(`${option}`);
+            form.button({ translate: option });
         });
         return form;
     }
@@ -24,8 +30,8 @@ export class InstanceFormBuilder {
     static buildRenameInstance(currentName) {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
-            .textField('Enter a new name for the instance:', currentName)
-            .submitButton('Rename');
+            .textField({ translate: 'construct.isntance.menu.rename' }, currentName)
+            .submitButton({ translate: 'construct.menu.instance.button.rename' });
     }
 
     static async buildStatistics(instance) {
@@ -45,9 +51,9 @@ export class InstanceFormBuilder {
     static buildSettings(instance) {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
-            .toggle('Block Validation', { defaultValue: instance.options.verifier.isEnabled, tooltip: 'Shows missing and incorrect block overlay.' })
-            .slider("Layer", 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: 'Changes the active layer. Use 0 for all layers.' })
-            .submitButton('§2Apply');
+            .toggle({ translate: 'construct.instance.option.validation' }, { defaultValue: instance.options.verifier.isEnabled, tooltip: { translate: 'construct.instance.option.validation.description' }})
+            .slider({ translate: 'construct.instance.option.layer'}, 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: { translate: 'construct.instance.option.layer.description' }})
+            .submitButton({ translate: 'construct.menu.submit' });
     }
 
     static buildMaterialList(instance, onlyMissing = false, player = false) {
@@ -59,25 +65,25 @@ export class InstanceFormBuilder {
         if (onlyMissing) {
             const inventoryContainer = player?.getComponent(EntityComponentTypes.Inventory)?.container;
             if (!inventoryContainer) {
-                form.body('§cNo player inventory found.');
+                form.body({ translate: 'construct.instance.materials.noinventory' });
                 return form;
             }
-            bodyText.rawtext.push({ text: `§cMaterials Missing From Inventory:` });
+            bodyText.rawtext.push({ translate: 'construct.instance.materials.missing' });
             if (instance.hasLayerSelected())
-                bodyText.rawtext.push({ text: ` §7(layer ${instance.getLayer()})` });
+                bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
             bodyText.rawtext.push({ text: `§f\n\n` });
             bodyText.rawtext.push(materials.formatString(materials.getMaterialsDifference(inventoryContainer)));
-            buttonText = "Show All Materials";
+            buttonText = "construct.instance.materials.all.button";
         } else {
-            bodyText.rawtext.push({ text: `§aAll Materials:` });
+            bodyText.rawtext.push({ translate: `construct.instance.materials.all` });
             if (instance.hasLayerSelected())
-                bodyText.rawtext.push({ text: ` §7(layer ${instance.getLayer()})` });
+                bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
             bodyText.rawtext.push({ text: `§f\n\n` });
             bodyText.rawtext.push(materials.formatString());
-            buttonText = "Show Missing Materials";
+            buttonText = "construct.instance.materials.missing.button";
         }
         form.body(bodyText);
-        form.button(buttonText);
+        form.button({ translate: buttonText });
         return form;
     }
 }

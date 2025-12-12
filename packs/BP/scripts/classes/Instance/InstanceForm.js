@@ -155,13 +155,13 @@ export class InstanceForm {
             statsForm = await InstanceFormBuilder.buildStatistics(this.instance);
         } catch (e) {
             if (e.message === 'StructureVerifier is already running.') {
-                this.player.sendMessage('§cA verification is already in progress. Please wait until it finishes.');
+                this.player.sendMessage({ translate: 'construct.instance.validation.alreadyRunning' });
                 return;
             }
             throw e;
         }
         if (!statsForm) {
-            this.player.sendMessage('§cFailed to build statistics form.');
+            this.player.sendMessage({ translation: 'construct.instance.validation.formfail' });
             return;
         }
         statsForm.form.show(this.player).then((response) => {
