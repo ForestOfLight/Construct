@@ -2,56 +2,58 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { structureCollection } from './Structure/StructureCollection';
 
 export class MenuFormBuilder {
-    static menuTitle = '§l§2Construct';
+    static menuTitle = { translate: 'construct.mainmenu.title' };
 
     static buildAllInstanceName() {
         const allInstanceNameForm = new ActionFormData()
             .title(this.menuTitle)
-            .body('Select an instance:');
-        allInstanceNameForm.button('Builder Settings');
+            .body({ translate: 'construct.mainmenu.selectinstance' });
+        allInstanceNameForm.button({ translate: 'construct.mainmenu.settings' });
         structureCollection.getInstanceNames().forEach(instanceName => {
             allInstanceNameForm.button(`${structureCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
         });
-        allInstanceNameForm.button('Create New Instance');
+        allInstanceNameForm.button({ translate: 'construct.mainmenu.newinstance' });
         return allInstanceNameForm;
     }
 
     static buildNewInstance() {
         return new ModalFormData()
             .title(this.menuTitle)
-            .textField('Enter a name for the new instance:', 'example_instance')
-            .submitButton('Submit');
+            .textField({ translate: 'construct.mainmenu.newinstance.prompt' }, { translate: 'construct.mainmenu.newinstance.placeholder' })
+            .submitButton({ translate: 'construct.menu.submit' });
     }
 
     static buildAllStructures() {
         const allStructuresForm = new ActionFormData()
             .title(this.menuTitle)
-            .body('Select a structure:');
+            .body({ translate: construct.mainmenu.selectstructure.header });
         structureCollection.getWorldStructureIds().forEach(structureId => {
             const structureName = structureId.replace('mystructure:', '');
             allStructuresForm.button(`§2${structureName}`);
         });
-        allStructuresForm.button('Other');
-        allStructuresForm.button('How to Add/Remove Structures');
+        allStructuresForm.button({ translate: 'construct.mainmenu.selectstructure.other' });
+        allStructuresForm.button({ translate: 'construct.mainmenu.selectstructure.howto' });
         return allStructuresForm;
     }
 
     static buildOtherStructure() {
         return new ModalFormData()
             .title(this.menuTitle)
-            .textField('Enter the Structure ID:', 'example_structure')
-            .submitButton('Submit');
+            .textField({ translate: 'construct.mainmenu.selectstructure.other.prompt' }, { translate: 'construct.mainmenu.selectstructure.other.placeholder' })
+            .submitButton({ translate: 'construct.menu.submit' });
     }
 
     static buildHowTo() {
-        let body = "§aHow to Add Structures:\n"
-        body += "§7- Save a structure using a §fstructure block§7 or the §f/structure§7 command.\n"
-        body += "§7§lOR§r\n"
-        body += "§7- Add a §f.mcstructure§7 file to this pack's §fstructures folder§7. When selecting your structure, select the §fOther§7 option and then use the filename (without '.mcstructure') as the §fStructure ID§7. After its first use, it will be added to the list of structures.";
-        body += "\n\n§cHow to Remove Structures:\n"
-        body += "§7- Use the §f/structure delete§7 command to remove a structure from the world.\n"
+        const message = { rawtext: [
+            { translate: 'construct.mainmenu.selectstructure.howto.add.header' }, { text: '\n' },
+            { translate: 'construct.mainmenu.selectstructure.howto.add.structureblock' }, { text: '\n' },
+            { translate: 'construct.mainmenu.selectstructure.howto.add.or' }, { text: '\n' },
+            { translate: 'construct.mainmenu.selectstructure.howto.add.mcstructure' }, { text: '\n' },
+            { text: '\n' }, { translate: 'construct.mainmenu.selectstructure.howto.remove.header' }, { text: '\n' },
+            { translate: 'construct.mainmenu.selectstructure.howto.remove.body' }, { text: '\n' },
+        ] };
         return new ActionFormData()
             .title(this.menuTitle)
-            .body(body);
+            .body(message);
     }
 }

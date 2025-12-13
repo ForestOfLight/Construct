@@ -10,7 +10,7 @@
         "texture": "construct:easy_place"
       },
       "minecraft:display_name": {
-        "value": "construct.easyPlace.name"
+        "value": "construct.easyplace.name"
       },
       "minecraft:max_stack_size": 1,
       "minecraft:wearable": {

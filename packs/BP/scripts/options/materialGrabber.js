@@ -6,9 +6,9 @@ import { structureCollection } from '../classes/Structure/StructureCollection';
 
 const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
-    displayName: 'Material Grabber',
-    description: 'Pulls structure items from inventories.',
-    howToUse: "Interact with inventories using the Material Grabber item to pull structure items from them.",
+    displayName: { translate: 'construct.option.materialgrabber.name' },
+    description: { translate: 'construct.option.materialgrabber.description' },
+    howToUse: { translate: 'construct.option.materialgrabber.howto' },
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
@@ -113,13 +113,12 @@ function ignoreAlreadyGathered(materials, playerContainer) {
 }
 
 function sendTransferMessage(player, transferCount) {
-    if (transferCount === 0) {
-        player.onScreenDisplay.setActionBar('§7Grabbed 0 items.');
-    } else if (transferCount === 1) {
-        player.onScreenDisplay.setActionBar('§aGrabbed 1 item.');
-    } else {
-        player.onScreenDisplay.setActionBar(`§aGrabbed ${transferCount} item(s).`);
-    }
+    if (transferCount === 0)
+        player.onScreenDisplay.setActionBar({ translate: 'construct.option.materialgrabber.grabbed.zero' });
+    else if (transferCount === 1)
+        player.onScreenDisplay.setActionBar({ translate: 'construct.option.materialgrabber.grabbed.one' });
+    else
+        player.onScreenDisplay.setActionBar({ translate: 'construct.option.materialgrabber.grabbed.many', with: [String(transferCount)] });
 }
 
 function tryTransferToPlayer(slot, playerContainer, materials) {

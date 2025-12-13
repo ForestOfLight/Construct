@@ -43,18 +43,22 @@ export class StructureStatistics {
     }
 
     getMessage() {
-        let message = '';
-        message += `§fStatistics for §a${this.instance.getName()}§f:`;
+        const message = { rawtext: [] };
+        message.rawtext.push({ translate: 'construct.structure.statistics.header', with: [this.instance.getName()] });
         if (this.instance.hasLayerSelected())
-            message += ` §7(layer ${this.instance.getLayer()})`;
-        message += `\n§7Blocks: §2${this.getNonAirBlocks()}\n`;
+            message.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
+        message.rawtext.push({ rawtext: [
+            { text: '\n' },
+            { translate: 'construct.structure.statistics.blocks', with: [String(this.getNonAirBlocks())] },
+            { text: '\n' }
+        ]});
         const skipped = this.getSkipped();
         if (skipped > 0)
-            message += `§c[!] This analysis skipped ${skipped} blocks.\n`;
-        message += `§7Correct: §a${this.formatStat(this.getStat(BlockVerificationLevel.Match))}\n`;
-        message += `§7Block State Incorrect: §e${this.formatStat(this.getStat(BlockVerificationLevel.TypeMatch))}\n`;
-        message += `§7Incorrect: §c${this.formatStat(this.getStat(BlockVerificationLevel.NoMatch))}\n`;
-        message += `§7Missing: §3${this.formatStat(this.getStat(BlockVerificationLevel.Missing))}\n`;
+            message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.skipped', with: [String(skipped)] }, { text: '\n' }] });
+        message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.correct', with: [this.formatStat(this.getStat(BlockVerificationLevel.Match))] }, { text: '\n' }] });
+        message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.stateincorrect', with: [this.formatStat(this.getStat(BlockVerificationLevel.TypeMatch))] }, { text: '\n' }] });
+        message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.incorrect', with: [this.formatStat(this.getStat(BlockVerificationLevel.NoMatch))] }, { text: '\n' }] });
+        message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.missing', with: [this.formatStat(this.getStat(BlockVerificationLevel.Missing))] }, { text: '\n' }] });
         return message;
     }
 

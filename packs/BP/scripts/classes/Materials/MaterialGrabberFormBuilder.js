@@ -10,12 +10,13 @@ export class MaterialGrabberFormBuilder {
         const allInstanceNameForm = new ActionFormData()
             .title(this.menuTitle);
         const currInstanceName = Builders.get(player.id).materialInstanceName;
-        let body = '§7Current instance: ';
+        const body = { rawtext: [{ translate: 'construct.materials.grabber.menu.header' }] };
         if (currInstanceName)
-            body += `§2${currInstanceName}`;
+            body.rawtext.push({ text: `§2${currInstanceName}` });
         else
-            body += '§7None';
-        body += '\n§7Select an instance:';
+            body.rawtext.push({ translate: 'construct.materials.grabber.menu.noinstance' });
+        body.rawtext.push({ text: '\n' });
+        body.rawtext.push({ translate: 'construct.materials.grabber.menu.selectinstance' });
         allInstanceNameForm.body(body);
         structureCollection.getInstanceNames().forEach(instanceName => {
             allInstanceNameForm.button(`§2${instanceName}`);

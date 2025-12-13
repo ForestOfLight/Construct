@@ -8,15 +8,15 @@ import { Builders } from '../classes/Builder/Builders';
 import { Vector } from '../lib/Vector';
 
 const locationsPlacedLastTick = new Set();
-const PLAYER_COLLISION_BOX = { width: 0.6, height: 1.8 };
 const ACTION_ITEM = 'construct:easy_place';
+const PLAYER_COLLISION_BOX = { width: 0.6, height: 1.8 };
 const runnerByPlayer = {};
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
-    displayName: 'Fast Easy Place',
-    description: 'Place correct structure blocks just by clicking on them.',
-    howToUse: "Hold the Easy Place item in your main hand and use it on missing blocks in a structure to place them.",
+    displayName: { translate: 'construct.option.fasteasyplace.name' },
+    description: { translate: 'construct.option.fasteasyplace.description' },
+    howToUse: { translate: 'construct.option.fasteasyplace.howto' },
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
@@ -99,7 +99,7 @@ function processEasyPlace(player) {
 function preventAction(event, player) {
     event.cancel = true;
     system.run(() => {
-        player.onScreenDisplay.setActionBar('§cAction prevented by Easy Place.');
+        player.onScreenDisplay.setActionBar({ translate: 'construct.option.easyplace.actionprevented' });
     });
 }
 

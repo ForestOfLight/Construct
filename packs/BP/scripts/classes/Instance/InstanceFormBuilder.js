@@ -68,14 +68,14 @@ export class InstanceFormBuilder {
                 form.body({ translate: 'construct.instance.materials.noinventory' });
                 return form;
             }
-            bodyText.rawtext.push({ translate: 'construct.instance.materials.missing' });
+            bodyText.rawtext.push({ translate: 'construct.instance.materials.missing.header' });
             if (instance.hasLayerSelected())
                 bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
             bodyText.rawtext.push({ text: `§f\n\n` });
             bodyText.rawtext.push(materials.formatString(materials.getMaterialsDifference(inventoryContainer)));
             buttonText = "construct.instance.materials.all.button";
         } else {
-            bodyText.rawtext.push({ translate: `construct.instance.materials.all` });
+            bodyText.rawtext.push({ translate: `construct.instance.materials.all.header` });
             if (instance.hasLayerSelected())
                 bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
             bodyText.rawtext.push({ text: `§f\n\n` });
