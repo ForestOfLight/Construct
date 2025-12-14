@@ -16,29 +16,41 @@ class BlockInfo {
     static showStructureBlockInfo(player) {
         const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useActiveLayer: true });
         if (!block && this.shownToLastTick.has(player.id)) {
-            player.onScreenDisplay.setActionBar({ text: 'Structure:\n§7None' });
+            player.onScreenDisplay.setActionBar({ rawtext: [
+                { translate: 'construct.blockinfo.header' },
+                { text: '\n' },
+                { translate: 'construct.blockinfo.none' }
+            ]});
             this.shownToLastTick.delete(player.id);
         }
         if (!block)
             return;
-        player.onScreenDisplay.setActionBar({ text: this.getFormattedBlockInfo(player, block.permutation) });
+        player.onScreenDisplay.setActionBar(this.getFormattedBlockInfo(player, block.permutation));
         this.shownToLastTick.add(player.id);
     }
 
     static getFormattedBlockInfo(player, block) {
-        return 'Structure:' + this.getSupplyMessage(player, block) + '\n' + this.getBlockMessage(block);
+        return { rawtext: [
+            { translate: 'construct.blockinfo.header' },
+            this.getSupplyMessage(player, block),
+            { text: '\n' },
+            this.getBlockMessage(block)
+        ] };
     }
 
     static getBlockMessage(block) {
         if (!block)
-            return '§7Unknown';
-        let output = `§a${block.type.id}`;
+            return { translate: 'construct.blockinfo.unknown' };
+        const message = { rawtext: [{ text: '§a' }, { translate: block.type.id }]};
         const states = block.getAllStates();
         if (Object.keys(states).length > 0)
-            output += `\n§7${this.getFormattedStates(states)}`;
+            message.rawtext.push({ text: `\n§7${this.getFormattedStates(states)}` });
         if (block.isWaterlogged)
-            output += `\n§7isWaterlogged: §3true`;
-        return output;
+            message.rawtext.push({ rawtext: [
+                { text: '\n§7' },
+                { translate: 'construct.blockinfo.waterlogged' }
+            ]});
+        return message;
     }
 
     static getFormattedStates(states) {
@@ -49,8 +61,8 @@ class BlockInfo {
         const itemStack = fetchMatchingItemSlot(player, block.getItemStack()?.typeId);
         const isInSurvival = player.getGameMode() === GameMode.Survival;
         if (!itemStack && isInSurvival)
-            return ' §c[No Supply]';
-        return '';
+            return { translate: 'construct.blockinfo.nosupply' };
+        return { text: '' };
     }
 }
 
