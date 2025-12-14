@@ -23,7 +23,7 @@ export class FlexibleInstanceMove {
 
     tryStart() {
         if (this.instance.isFlexibleMoving()) {
-            this.sendFeedback('§cThis instance is already being moved.');
+            this.sendFeedback({ translate: 'construct.instance.flexibleMove.alreadyMoving' });
             return;
         }
         this.start();
@@ -48,7 +48,7 @@ export class FlexibleInstanceMove {
         this.allowPlayerMovement(false);
         world.beforeEvents.itemUse.subscribe(this.onPlayerUseItemBound);
         world.beforeEvents.playerLeave.unsubscribe(this.onPlayerLeaveBound);
-        this.sendFeedback(`§aNow moving "${this.instance.getName()}". Use the Construct item when finished.`);
+        this.sendFeedback({ translate: 'construct.instance.flexibleMove.start', with: [this.instance.getName()] });
     }
 
     onFlexibleMovementTick() {
@@ -109,7 +109,10 @@ export class FlexibleInstanceMove {
         builder.flexibleInstanceMovement = void 0;
         world.beforeEvents.itemUse.unsubscribe(this.onPlayerUseItemBound);
         world.beforeEvents.playerLeave.unsubscribe(this.onPlayerLeaveBound);
-        this.sendFeedback(`§aMoved "${this.instance.getName()}" to ${this.currentInstanceLocation.floor()}.`);
+        this.sendFeedback({ translate: 'construct.instance.flexibleMove.finish', with: [
+            this.instance.getName(), 
+            String(this.currentInstanceLocation.floor())
+        ] });
     }
 
     allowPlayerMovement(enable) {

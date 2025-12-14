@@ -113,7 +113,7 @@ export class InstanceForm {
                 new MenuForm(this.player, { jumpToInstance: false });
                 break;
             default:
-                this.player.sendMessage(`§cUnknown option: ${option}`);
+                this.player.sendMessage({ translate: 'construct.menu.instance.unknownOption', with: [option] });
                 break;
         }
     }
@@ -124,15 +124,14 @@ export class InstanceForm {
                 return;
             const newName = response.formValues[0];
             if (newName === '') {
-                this.player.sendMessage('§cInstance name cannot be empty.');
+                this.player.sendMessage({ translate: 'construct.menu.instance.nameEmpty' });
                 return;
             }
             try {
                 structureCollection.rename(this.instanceName, newName);
                 this.instanceName = newName;
             } catch (e) {
-                this.player.sendMessage(`§cError renaming instance: ${e.message}`);
-                return;
+                this.player.sendMessage({ translate: 'construct.instance.rename.error', with: [e.message] });
             }
         });
     }
@@ -156,13 +155,13 @@ export class InstanceForm {
             statsForm = await InstanceFormBuilder.buildStatistics(this.instance);
         } catch (e) {
             if (e.message === 'StructureVerifier is already running.') {
-                this.player.sendMessage('§cA verification is already in progress. Please wait until it finishes.');
+                this.player.sendMessage({ translate: 'construct.instance.validation.alreadyRunning' });
                 return;
             }
             throw e;
         }
         if (!statsForm) {
-            this.player.sendMessage('§cFailed to build statistics form.');
+            this.player.sendMessage({ translation: 'construct.instance.validation.formfail' });
             return;
         }
         statsForm.form.show(this.player).then((response) => {

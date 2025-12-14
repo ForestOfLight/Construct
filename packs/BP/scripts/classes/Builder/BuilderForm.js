@@ -20,10 +20,21 @@ export class BuilderForm {
         for (let i = 0; i < optionIds.length; i++) {
             const option = BuilderOptions.get(optionIds[i]);
             const changedToValue = option.setValue(this.player.id, formValues[i]);
-            if (changedToValue === true) 
-                this.player.sendMessage(`§a${option.displayName} is now enabled!§7 ${option.howToUse}`);
-            else if (changedToValue === false)
-                this.player.sendMessage(`§c${option.displayName} is now disabled.`)
+            if (changedToValue === true) {
+                this.player.sendMessage({ rawtext: [
+                    { text: `§a` },
+                    option.displayName,
+                    { translate: 'construct.option.enabled' },
+                    { text: `§7 ` },
+                    option.howToUse
+                ]});
+            } else if (changedToValue === false) {
+                this.player.sendMessage({ rawtext: [
+                    { text: `§c` },
+                    option.displayName,
+                    { translate: 'construct.option.disabled' }
+                ]});
+            }
         }
     }
 

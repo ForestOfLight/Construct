@@ -9,7 +9,7 @@ export const MENU_ITEM = 'construct:menu';
 
 const menuCmd = new Command({
     name: 'construct',
-    description: { text: 'Opens the Construct menu.' },
+    description: { translate: 'construct.commands.construct' },
     usage: 'construct',
     callback: (sender) => openMenu(sender)
 });
@@ -18,7 +18,7 @@ extension.addCommand(menuCmd);
 system.beforeEvents.startup.subscribe((event) => {
     const command = {
         name: 'construct:item',
-        description: 'Gives you the Construct item. Use it to open the Construct menu.',
+        description: 'construct.commands.item',
         permissionLevel: CommandPermissionLevel.Any,
         cheatsRequired: false
     };
@@ -28,13 +28,13 @@ system.beforeEvents.startup.subscribe((event) => {
 function givePlayerConstructItem(origin) {
     const player = origin.sourceEntity;
     if (player instanceof Player === false)
-        return { status: CustomCommandStatus.Failure, message: 'This command can only be used by players.' };
+        return { status: CustomCommandStatus.Failure, message: 'construct.commands.item.denyorigin' };
     system.run(() => {
         const givenItemStack = player.getComponent(EntityComponentTypes.Inventory)?.container?.addItem(new ItemStack(MENU_ITEM));
         if (givenItemStack)
-            player.sendMessage('§cFailed to give you the Construct item.');
+            player.sendMessage({ translate: 'construct.commands.item.fail' });
         else
-            player.sendMessage('§aYou recieved the Construct item! Use it to open the Construct menu.');
+            player.sendMessage({ translate: 'construct.commands.item.success' });
     });
     return { status: CustomCommandStatus.Success };
 }

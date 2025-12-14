@@ -1,16 +1,15 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { structureCollection } from '../classes/Structure/StructureCollection';
-import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, 
-    blockIdToItemStackMap } from '../data';
+import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, blockIdToItemStackMap } from '../data';
 import { fetchMatchingItemSlot, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
 
 const builderOption = new BuilderOption({
     identifier: 'easyPlace',
-    displayName: 'Easy Place',
-    description: 'Always place the correct structure block.',
-    howToUse: "Hold the Easy Place item in your offhand and place blocks in a structure to have them be corrected automatically.",
+    displayName: { translate: 'construct.option.easyplace.name' },
+    description: { translate: 'construct.option.easyplace.description' },
+    howToUse: { translate: 'construct.option.easyplace.howto' },
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
@@ -83,7 +82,7 @@ function shouldPreventAction(player, structureBlock) {
 function preventAction(event, player) {
     event.cancel = true;
     system.run(() => {
-        player.onScreenDisplay.setActionBar('§cAction prevented by Easy Place.');
+        player.onScreenDisplay.setActionBar({ translate: 'construct.option.easyplace.actionprevented' });
     });
 }
 

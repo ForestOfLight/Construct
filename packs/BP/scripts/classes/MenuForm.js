@@ -42,7 +42,7 @@ export class MenuForm {
             });
         } catch (e) {
             if (e.message === 'Menu timed out.') {
-                this.player.sendMessage('§8Menu timed out.');
+                this.player.sendMessage({ translate: 'construct.menu.open.timeout' });
                 return;
             }
             throw e;
@@ -63,11 +63,11 @@ export class MenuForm {
                 structureCollection.add(instanceName, structureId);
             } catch (e) {
                 if (e.name === 'InvalidInstanceError') {
-                    this.player.sendMessage(`§cInstance '${instanceName}' already exists. Try again with a new name.`);
+                    this.player.sendMessage({ translate: 'construct.mainmenu.instance.exists', with: [instanceName] });
                     return void 0;
                 }
                 if (e.name === 'InvalidStructureError') {
-                    this.player.sendMessage(`§cStructure ID '${structureId}' not found. If you're looking for a structure that you put in the structures folder, please restart your world and try again.`);
+                    this.player.sendMessage({ translate: 'construct.mainmenu.instance.notfound', with: [structureId] });
                     return void 0;
                 }
                 throw e;

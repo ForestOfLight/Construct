@@ -17,13 +17,13 @@ export class MaterialGrabberForm {
                 const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
                 if (selectedInstanceName) {
                     this.setActiveInstance(selectedInstanceName);
-                    this.player.sendMessage(`§7Selected instance for material grabber: §2${selectedInstanceName}`);
+                    this.player.sendMessage({ translate: 'construct.materials.grabber.menu.success', with: [selectedInstanceName] });
                     return;
                 }
             });
         } catch (e) {
             if (e.message === 'Menu timed out.') {
-                this.player.sendMessage('§8Menu timed out.');
+                this.player.sendMessage({ translate: 'construct.menu.open.timeout' });
                 return;
             }
             throw e;
