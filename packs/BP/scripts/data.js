@@ -26,7 +26,9 @@ export const bannedToValidBlockMap = {
     'lit_blast_furnace': 'blast_furnace',
     'lit_redstone_ore': 'redstone_ore',
     'lit_redstone_lamp': 'redstone_lamp',
-    'unlit_redstone_torch': 'redstone_torch'
+    'unlit_redstone_torch': 'redstone_torch',
+    'powered_comparator': 'unpowered_comparator',
+    'powered_repeater': 'unpowered_repeater'
 };
 
 export const resetToBlockStates = {
