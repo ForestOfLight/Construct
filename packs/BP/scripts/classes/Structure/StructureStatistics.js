@@ -46,7 +46,7 @@ export class StructureStatistics {
         const message = { rawtext: [] };
         message.rawtext.push({ translate: 'construct.structure.statistics.header', with: [this.instance.getName()] });
         if (this.instance.hasLayerSelected())
-            message.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
+            message.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(this.instance.getLayer())] });
         message.rawtext.push({ rawtext: [
             { text: '\n' },
             { translate: 'construct.structure.statistics.blocks', with: [String(this.getNonAirBlocks())] },

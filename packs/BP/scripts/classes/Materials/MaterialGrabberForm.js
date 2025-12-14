@@ -17,7 +17,7 @@ export class MaterialGrabberForm {
                 const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
                 if (selectedInstanceName) {
                     this.setActiveInstance(selectedInstanceName);
-                    this.player.sendMessage({ translate: 'construct.materials.grabber.menu.success' });
+                    this.player.sendMessage({ translate: 'construct.materials.grabber.menu.success', with: [selectedInstanceName] });
                     return;
                 }
             });

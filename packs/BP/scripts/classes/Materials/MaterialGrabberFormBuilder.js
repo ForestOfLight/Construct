@@ -4,7 +4,7 @@ import { structureCollection } from "../Structure/StructureCollection";
 import { Builders } from "../Builder/Builders";
 
 export class MaterialGrabberFormBuilder {
-    static menuTitle = MenuFormBuilder.menuTitle + ' Material Grabber';
+    static menuTitle = { rawtext: [MenuFormBuilder.menuTitle, { translate: 'construct.materials.grabber.menu.title' }] };
 
     static buildInstanceSelector(player) {
         const allInstanceNameForm = new ActionFormData()

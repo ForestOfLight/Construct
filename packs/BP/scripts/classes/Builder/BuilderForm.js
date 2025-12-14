@@ -26,7 +26,7 @@ export class BuilderForm {
                     option.displayName,
                     { translate: 'construct.option.enabled' },
                     { text: `§7 ` },
-                    { translate: option.howToUse }
+                    option.howToUse
                 ]});
             } else if (changedToValue === false) {
                 this.player.sendMessage({ rawtext: [

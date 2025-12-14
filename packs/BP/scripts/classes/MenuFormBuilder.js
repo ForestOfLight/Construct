@@ -26,7 +26,7 @@ export class MenuFormBuilder {
     static buildAllStructures() {
         const allStructuresForm = new ActionFormData()
             .title(this.menuTitle)
-            .body({ translate: construct.mainmenu.selectstructure.header });
+            .body({ translate: 'construct.mainmenu.selectstructure.header' });
         structureCollection.getWorldStructureIds().forEach(structureId => {
             const structureName = structureId.replace('mystructure:', '');
             allStructuresForm.button(`§2${structureName}`);

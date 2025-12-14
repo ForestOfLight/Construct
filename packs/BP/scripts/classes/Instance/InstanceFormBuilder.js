@@ -11,14 +11,13 @@ export class InstanceFormBuilder {
         const location = instance.getLocation();
         const form = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        let body = { rawtext: [
-            { translate: 'construct.instance.menu.body', with: [instance.getName(), instance.getStructureId()] },
-            { text: '\n' }
+        const body = { rawtext: [
+            { translate: 'construct.instance.menu.body', with: [instance.getName(), instance.getStructureId()] }
         ]};
         if (instance.hasLocation())
-            body.rawtext.push([
-                { translate: 'construct.instance.menu.location', with: [String(location.location.x), String(location.location.y), String(location.location.z), location.dimensionId] },
-                { text: '\n' }
+            body.rawtext.push(...[
+                { text: '\n' },
+                { translate: 'construct.instance.menu.location', with: [String(location.location.x), String(location.location.y), String(location.location.z), location.dimensionId] }
             ]);
         form.body(body);
         options.forEach(option => {
