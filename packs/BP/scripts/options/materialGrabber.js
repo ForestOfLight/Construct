@@ -43,6 +43,8 @@ world.beforeEvents.itemUse.subscribe(onItemUse);
 world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteract);
 world.beforeEvents.playerInteractWithEntity.subscribe(onPlayerInteract);
 
+const BANNED_ITEMTYPES = [/shulker_box/g];
+
 function onItemUse(event) {
     if (!isActionItem(event.itemStack) || !builderOption.isEnabled(event.source?.id))
         return;
@@ -122,7 +124,7 @@ function sendTransferMessage(player, transferCount) {
 }
 
 function tryTransferToPlayer(slot, playerContainer, materials) {
-    if (slot.hasItem() && materials.has(slot.typeId)) {
+    if (slot.hasItem() && materials.has(slot.typeId) && !isBannedItemType(slot.typeId)) {
         const grabAmount = Math.min(slot.amount, materials.get(slot.typeId).count);
         if (grabAmount > 0)
             return tryTransferAmountToPlayer(slot, playerContainer, materials, grabAmount);
@@ -205,4 +207,12 @@ function emptySlotPass(inventory, itemStack) {
 
 function isSlotAvailableForStacking(slot, itemStack) {
     return slot.hasItem() && slot.isStackableWith(itemStack) && slot.amount !== slot.maxAmount;
+}
+
+function isBannedItemType(itemTypeId) {
+    for (const regex of BANNED_ITEMTYPES) {
+        if (itemTypeId.match(regex))
+            return true;
+    }
+    return false;
 }
