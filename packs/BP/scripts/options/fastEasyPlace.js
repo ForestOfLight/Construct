@@ -147,6 +147,8 @@ function tryConvertBannedToValidBlock(structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     if (Object.keys(bannedToValidBlockMap).includes(blockId))
         return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.getAllStates());
+    if (blockId === "bubble_column" && structureBlock.isWaterlogged)
+        return BlockPermutation.resolve('minecraft:water');
     return structureBlock;
 }
 

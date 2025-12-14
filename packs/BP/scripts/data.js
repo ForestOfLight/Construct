@@ -54,4 +54,4 @@ export const blockIdToItemStackMap = {
 export const specialItemPlacementConversions = {
     'water_bucket': 'bucket',
     'lava_bucket': 'bucket'
-}
+};
