@@ -9,7 +9,6 @@ import { Vector } from '../lib/Vector';
 
 const locationsPlacedLastTick = new Set();
 const ACTION_ITEM = 'construct:easy_place';
-const PLAYER_COLLISION_BOX = { width: 0.6, height: 1.8 };
 const runnerByPlayer = {};
 
 const builderOption = new BuilderOption({
@@ -177,11 +176,11 @@ function getPlaceableItemStack(structureBlock) {
 }
 
 function isBlockInsidePlayer(player, worldBlock) {
-    const playerLocation = Vector.from(player.location);
-    const blockLocation = Vector.from(worldBlock.location);
-    const playerMin = playerLocation.subtract({ x: PLAYER_COLLISION_BOX.width / 2, y: -0.1, z: PLAYER_COLLISION_BOX.width / 2 });
-    const playerMax = playerLocation.add({ x: PLAYER_COLLISION_BOX.width / 2, y: PLAYER_COLLISION_BOX.height, z: PLAYER_COLLISION_BOX.width / 2 });
-    const blockMin = blockLocation;
-    const blockMax = blockLocation.add({ x: 1, y: 1, z: 1 });
+    const playerAABB = player.getAABB();
+    const playerCenter = Vector.from(playerAABB.center);
+    const playerMin = playerCenter.subtract({ x: playerAABB.extent.x, y: playerAABB.extent.y - 0.001, z: playerAABB.extent.z });
+    const playerMax = playerCenter.add(playerAABB.extent);
+    const blockMin = Vector.from(worldBlock.location);
+    const blockMax = blockMin.add({ x: 1, y: 1, z: 1 });
     return Vector.intersect(playerMax, playerMin, blockMax, blockMin);
 }
