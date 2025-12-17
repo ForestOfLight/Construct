@@ -1,0 +1,108 @@
+## Items
+construct.menu.name=Adeiladu
+construct.easyplace.name=Lle Hawdd
+construct.materialgrabber.name=Grabwr Deunyddiau
+
+## Menus
+construct.menu.open.closechat=§8Caewch eich ffenestr sgwrsio i gael mynediad at y ddewislen.
+construct.menu.open.timeout=§8Mae'r amser dewislen wedi dod i ben.
+construct.menu.submit=§2Gwneud cais
+construct.menu.instance.button.unknown=Anhysbys
+construct.menu.instance.button.place=§aEnghraifft Lle
+construct.menu.instance.button.enable=§aEnghraifft Lle
+construct.menu.instance.button.disable=§cAnalluogi'r Enghraifft
+construct.menu.instance.button.rename=Ailenwi'r Enghraifft
+construct.menu.instance.button.delete=§cDileu Enghraifft
+construct.menu.instance.button.nextLayer=Cynyddu'r Haen
+construct.menu.instance.button.previousLayer=Lleihau'r Haen
+construct.menu.instance.button.move=Symud Yma
+construct.menu.instance.button.flexibleMove=Symud Hyblyg
+construct.menu.instance.button.statistics=Ystadegau
+construct.menu.instance.button.settings=Gosodiadau
+construct.menu.instance.button.materials=Rhestr Deunyddiau
+construct.menu.instance.unknownOption=§cDewis anhysbys: %s
+construct.menu.instance.nameEmpty=§cNi all enw'r achos fod yn wag.
+
+construct.instance.flexibleMove.alreadyMoving=§cMae'r achos hwn eisoes yn cael ei symud.
+construct.instance.flexibleMove.start=§aNawr yn symud "%s". Defnyddiwch yr eitem Adeiladu ar ôl gorffen. ## Mewnosod llinyn: enw'r enghraifft
+construct.instance.flexibleMove.finish=§aSymudwyd "%1" i %2. ## Mewnosod llinynnau: enw'r achos, cyfesurynnau
+construct.instance.rename.error=§cGwall wrth ailenwi'r enghraifft: %s
+construct.instance.validation.alreadyRunning=§cMae dilysu eisoes ar y gweill. Arhoswch nes iddo orffen.
+construct.instance.validation.formfail=§cMethwyd creu ffurflen ystadegau.
+construct.instance.menu.body=Enghraifft: §a%1\n§fStrwythur: §2%2 ## Mewnosod llinynnau: enw'r enghraifft, enw'r strwythur
+construct.instance.menu.location=§7(%1 %2 %3 yn %4) ## Yn cael ei ychwanegu at y corff pan fydd yr enghraifft wedi'i gosod. Mewnosod llinynnau: cyfesurynnau x, y, z, dimensiwn
+construct.isntance.menu.rename=Rhowch enw newydd ar gyfer yr enghraifft:
+construct.instance.option.validation=Dilysu Bloc
+construct.instance.option.validation.description=Yn dangos gorchudd bloc coll ac anghywir.
+construct.instance.option.layer=Haen
+construct.instance.option.layer.description=Yn newid yr haen weithredol. Defnyddiwch 0 ar gyfer pob haen.
+construct.instance.materials.noinventory=§cNi chanfuwyd rhestr eiddo chwaraewyr.
+construct.instance.materials.missing.header=§cDeunyddiau sydd ar Goll o'r Rhestr Eiddo:
+construct.instance.materials.missing.button=Dangos Deunyddiau Coll
+construct.instance.materials.layer= §7(haen %s) ## Yn cael ei ychwanegu at y pennawd pan fydd yr enghraifft yn y modd haen. Mewnosod llinyn: rhif yr haen
+construct.instance.materials.all.header=§aPob Deunydd:
+construct.instance.materials.all.button=Dangos yr Holl Ddeunyddiau
+
+construct.materials.grabber.menu.title= Grabwr Deunyddiau
+construct.materials.grabber.menu.success=§7 Enghraifft a ddewiswyd ar gyfer cipiwr deunydd: §2%s	## Insert string: instance name
+construct.materials.grabber.menu.header=§7Enghraifft gyfredol:
+construct.materials.grabber.menu.noinstance=§7Dim
+construct.materials.grabber.menu.selectinstance=§7Dewiswch enghraifft:
+
+construct.structure.statistics.header=§fYstadegau ar gyfer §a%s§f:	## Insert string: instance name
+construct.structure.statistics.blocks=§7Blociau: §2%s	## Insert string: number of non-air blocks in the structure
+construct.structure.statistics.skipped=§c[!] Hepgorodd y dadansoddiad hwn %s bloc.	## Insert string: number of blocks the analysis skipped
+construct.structure.statistics.correct=§7Cywir: §a%s	## Insert string: number of correctly placed blocks
+construct.structure.statistics.stateincorrect=§7Cyflwr y Bloc Anghywir: §e%s	## Insert string: number of incorrectly stated blocks
+construct.structure.statistics.incorrect=§7Anghywir: §c%s	## Insert string: number of incorrectly placed blocks
+construct.structure.statistics.missing=§7Ar goll: §3%s	## Insert string: number of missing blocks
+
+## Structure Block Info Display
+construct.blockinfo.header=Strwythur:
+construct.blockinfo.none=§7Dim
+construct.blockinfo.nosupply= §c[Dim Cyflenwad]	## When the targeted block is not in the player's inventory
+construct.blockinfo.unknown=§7Anhysbys
+construct.blockinfo.waterlogged=§7ynWedi'i Lawntio â Dŵr: §3gwir
+construct.mainmenu.instance.exists=§cMae'r enghraifft '%s' eisoes yn bodoli. Rhowch gynnig arall arni gydag enw newydd.	## Insert string: instance name
+construct.mainmenu.instance.notfound=§cNi chanfuwyd ID Strwythur '%s'. Os ydych chi'n chwilio am strwythur rydych chi wedi'i roi yn y ffolder strwythurau, ailgychwynwch eich byd a rhoi.	## Insert string: structure name
+construct.mainmenu.title=§l§2Construct	## This is the name of the pack.
+construct.mainmenu.selectinstance=Dewiswch enghraifft:
+construct.mainmenu.settings=Gosodiadau Adeiladwr
+construct.mainmenu.newinstance=Creu Enghraifft Newydd
+construct.mainmenu.newinstance.prompt=Rhowch enw ar gyfer yr achos newydd:
+construct.mainmenu.newinstance.placeholder=enghraifft_enghraifft	## The placeholder text in the textbox where the user enters the instance name.
+construct.mainmenu.selectstructure.header=Dewiswch strwythur:
+construct.mainmenu.selectstructure.other=Arall
+construct.mainmenu.selectstructure.howto=Sut i Ychwanegu/Dileu Strwythurau
+construct.mainmenu.selectstructure.other.prompt=Rhowch ID y Strwythur:
+construct.mainmenu.selectstructure.other.placeholder=enghraifft_strwythur	## The placeholder text in the textbox where the user enters the structure name.
+construct.mainmenu.selectstructure.howto.add.header=§Sut i Ychwanegu Strwythurau:
+construct.mainmenu.selectstructure.howto.add.structureblock=§7- Cadwch strwythur gan ddefnyddio bloc §fstructure§7 neu'r gorchymyn §f/structure§7.
+construct.mainmenu.selectstructure.howto.add.or=§7§lNEU§r
+construct.mainmenu.selectstructure.howto.add.mcstructure=§7- Ychwanegwch ffeil §f.mcstructure§7 at ffolder §fstructures§7 y pecyn hwn. Wrth ddewis eich strwythur, dewiswch yr opsiwn §fArall§7 ac yna defnyddiwch enw'r ffeil (heb '.mcstructure') fel yr §fStructure ID§7. Ar ôl ei ddefnyddio gyntaf, bydd yn cael ei ychwanegu at y rhestr o strwythurau.
+construct.mainmenu.selectstructure.howto.remove.header=§cSut i Dynnu Strwythurau:
+construct.mainmenu.selectstructure.howto.remove.body=§7- Defnyddiwch y gorchymyn §f/structure delete§7 i gael gwared ar strwythur o'r byd.
+
+## Commands
+construct.commands.construct=Yn agor y ddewislen Adeiladu.
+construct.commands.item=Yn rhoi'r eitem Adeiladu i chi. Defnyddiwch hi i agor y ddewislen Adeiladu.
+construct.commands.item.denyorigin=Dim ond chwaraewyr all ddefnyddio'r gorchymyn hwn.
+construct.commands.item.fail=§cMethwyd rhoi'r eitem Adeiladu i chi.
+construct.commands.item.success=§aRydych chi wedi derbyn yr eitem Adeiladu! Defnyddiwch hi i agor y ddewislen Adeiladu.
+
+## Options
+construct.option.enabled= wedi'i alluogi nawr!
+construct.option.disabled= wedi'i analluogi nawr.
+construct.option.easyplace.name=Lle Hawdd
+construct.option.easyplace.description=Rhowch y bloc strwythur cywir bob amser.
+construct.option.easyplace.howto=Daliwch yr eitem Lleoli Hawdd yn eich llaw uniongyrchol a gosodwch flociau mewn enghraifft i'w cywiro'n awtomatig.
+construct.option.easyplace.actionprevented=§cGweithred wedi'i hatal gan Easy Place.
+construct.option.fasteasyplace.name=Lle Cyflym Hawdd
+construct.option.fasteasyplace.description=Rhowch y blociau strwythur cywir trwy glicio arnyn nhw.
+construct.option.fasteasyplace.howto=Daliwch yr eitem Lleoli Hawdd yn eich prif law a'i ddefnyddio ar flociau coll mewn strwythur i'w gosod.
+construct.option.materialgrabber.name=Grabwr Deunyddiau
+construct.option.materialgrabber.description=Yn tynnu eitemau strwythur o rhestr eiddo.
+construct.option.materialgrabber.howto=Rhyngweithio â rhestrau eiddo gan ddefnyddio'r eitem Cipiwr Deunyddiau i dynnu eitemau strwythur oddi wrthynt.
+construct.option.materialgrabber.grabbed.zero=§7Wedi cipio 0 eitem.
+construct.option.materialgrabber.grabbed.one=§aWedi cipio 1 eitem.
+construct.option.materialgrabber.grabbed.many=§aCipiwyd %s o eitemau.	## Insert string: number of items transferred to the player
