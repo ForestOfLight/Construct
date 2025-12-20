@@ -12,6 +12,7 @@ class BlockInfo {
             this.showStructureBlockInfo(player);
         }
     }
+
     static showStructureBlockInfo(player) {
         const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useActiveLayer: true });
         if (!block && this.shownToLastTick.has(player.id)) {

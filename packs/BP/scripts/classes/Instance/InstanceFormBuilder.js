@@ -31,7 +31,7 @@ export class InstanceFormBuilder {
     static buildRenameInstance(currentName) {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
-            .textField({ translate: 'construct.isntance.menu.rename' }, currentName)
+            .textField({ translate: 'construct.instance.menu.rename' }, currentName) //instance but not isntance
             .submitButton({ translate: 'construct.menu.instance.button.rename' });
     }
 
