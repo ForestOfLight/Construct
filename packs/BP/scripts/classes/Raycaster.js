@@ -16,7 +16,7 @@ export class Raycaster {
                 if (block?.type.id !== 'minecraft:air') {
                     blocks.push({
                         permutation: block,
-                        location: location
+                        location: location,
                     });
                     if (getFirst)
                         break;
