@@ -68,7 +68,7 @@ construct.mainmenu.instance.exists=§c项目名称"%s"已被占用, 请尝试使
 construct.mainmenu.instance.notfound=§c未找到结构ID"%s"; 若你查找的是已放入structures文件夹的结构, 请重启存档后重试  ## 插入字符串: 结构名称
 construct.mainmenu.title=§l§2投影·构建  ## 这是addon的名称
 construct.mainmenu.selectinstance=请选择一个项目:
-construct.mainmenu.settings=构建设置
+construct.mainmenu.settings=构建器设置
 construct.mainmenu.newinstance=创建新项目
 construct.mainmenu.newinstance.prompt=请输入新项目的名称:
 construct.mainmenu.newinstance.placeholder=示例_项目  ## 用户输入项目名称的文本框中的占位符文本
@@ -89,16 +89,16 @@ construct.mainmenu.selectstructure.howto.remove.body=§7-使用§f/structure del
 construct.commands.construct=打开投影构筑菜单
 construct.commands.item=获得投影构筑菜单物品,可以使用它打开投影构筑菜单
 construct.commands.item.denyorigin=此命令只能由玩家使用
-construct.commands.item.fail=§c给予投影构筑菜单物品时发送错误
-construct.commands.item.success=§a您获得了投影构筑菜单物品, 使用它以打开投影构筑菜单
+construct.commands.item.fail=§c给予投影构筑菜单物品时发生错误
+construct.commands.item.success=§a您已获得投影构筑菜单物品, 使用它以打开投影构筑菜单
 
 ## 选项
 
 construct.option.enabled=现已启用!
-construct.option.disabled=现已禁用
+construct.option.disabled=现已禁用!
 construct.option.easyplace.name=便捷放置
 construct.option.easyplace.description=帮助放置正确的方块
-construct.option.easyplace.howto=把"便捷放置器"物品持于副手, 在项目中放置方块时自动修正方块
+construct.option.easyplace.howto=将"便捷放置器"物品放在副手槽位, 在项目中放置方块时自动修正方块
 construct.option.easyplace.actionprevented=§c操作被便捷放置功能阻止
 construct.option.fasteasyplace.name=快速放置
 construct.option.fasteasyplace.description=使用即可放置建筑对应的所需方块
