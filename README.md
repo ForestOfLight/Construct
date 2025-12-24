@@ -71,9 +71,13 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Automatic material gathering from inventories
 - [x] Material list
 - [x] Flexible structure movement
-- [ ] Translation support
+- [x] Translation support
 - [ ] Block texture display
 
 ## Issues & Suggestions
 
 If you have any issues or suggestions, please don't hesitate to open an issue on this repo. Additionally, if you're interested in contributing to the project, feel free to open a pull request!
+
+### Adding Translations
+
+Construct currently only supports American English, but has translation capabilities. If you would like to contribute a translation, please join our Discord and reach out!
