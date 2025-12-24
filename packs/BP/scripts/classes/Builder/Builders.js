@@ -35,6 +35,8 @@ world.beforeEvents.playerLeave.subscribe((event) => {
 });
 world.afterEvents.worldLoad.subscribe((event) => {
     for (const player of world.getAllPlayers()) {
+        if (!player)
+            continue;
         Builders.onJoin(player.id);
     }
 });
