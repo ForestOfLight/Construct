@@ -34,6 +34,9 @@ export class MenuForm {
                 if (selection === 0) {
                     new BuilderForm(this.player);
                     return void 0;
+                } else if (selection == structureCollection.getInstanceNames().length + 2) {
+                    MenuFormBuilder.buildHowTo().show(this.player);
+                    return void 0;
                 } else {
                     selection--;
                     const selectedInstanceName = structureCollection.getInstanceNames()[selection];
@@ -80,10 +83,6 @@ export class MenuForm {
         return MenuFormBuilder.buildAllStructures().show(this.player).then((response) => {
             if (response.canceled)
                 return;
-            if (response.selection === structureCollection.getWorldStructureIds().length + 1) {
-                MenuFormBuilder.buildHowTo().show(this.player);
-                return;
-            }
             const selectedStructureId = structureCollection.getWorldStructureIds()[response.selection];
             return selectedStructureId || this.getOtherStructureId();
         });

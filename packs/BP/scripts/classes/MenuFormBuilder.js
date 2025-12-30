@@ -13,6 +13,7 @@ export class MenuFormBuilder {
             allInstanceNameForm.button(`${structureCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
         });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.newinstance' });
+        allInstanceNameForm.button({ translate: 'construct.mainmenu.howto' });
         return allInstanceNameForm;
     }
 
@@ -45,12 +46,12 @@ export class MenuFormBuilder {
 
     static buildHowTo() {
         const message = { rawtext: [
-            { translate: 'construct.mainmenu.selectstructure.howto.add.header' }, { text: '\n' },
-            { translate: 'construct.mainmenu.selectstructure.howto.add.structureblock' }, { text: '\n' },
-            { translate: 'construct.mainmenu.selectstructure.howto.add.or' }, { text: '\n' },
-            { translate: 'construct.mainmenu.selectstructure.howto.add.mcstructure' }, { text: '\n' },
-            { text: '\n' }, { translate: 'construct.mainmenu.selectstructure.howto.remove.header' }, { text: '\n' },
-            { translate: 'construct.mainmenu.selectstructure.howto.remove.body' }, { text: '\n' },
+            { translate: 'construct.mainmenu.howto.add.header' }, { text: '\n' },
+            { translate: 'construct.mainmenu.howto.add.structureblock' }, { text: '\n' },
+            { translate: 'construct.mainmenu.howto.add.or' }, { text: '\n' },
+            { translate: 'construct.mainmenu.howto.add.mcstructure' }, { text: '\n' },
+            { text: '\n' }, { translate: 'construct.mainmenu.howto.remove.header' }, { text: '\n' },
+            { translate: 'construct.mainmenu.howto.remove.body' }, { text: '\n' },
         ] };
         return new ActionFormData()
             .title(this.menuTitle)

@@ -37,7 +37,7 @@ Construct's latest release can be downloaded from its [Releases Page](https://gi
 
 ### Construct Menu
 
-Use `/construct:item` to get the Construct item, which opens the Construct menu. This item is also available in the Creative inventory under the "Items" tab. Using the Construct item will open a menu where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
+Use `/construct:construct` to get the Construct item, which opens the Construct menu. This item is also available in the Creative inventory under the "Items" tab. Using the Construct item will open a menu where you can manage your structures instances. You can create new instances of structures, edit existing ones, and delete them when you no longer need them. There are plenty options available to customize your building style!
 
 *Pro tip: You can name the Construct item after a structure instance to automagically select it when you open the menu!*
 
