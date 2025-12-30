@@ -140,7 +140,8 @@ function playSoundEffect(player, transferCount) {
 function tryTransferAmountToPlayer(slot, playerContainer, materials, grabAmount) {
     const itemStack = slot.getItem();
     if (canAddItem(playerContainer, itemStack)) {
-        const itemStackToAdd = new ItemStack(itemStack.typeId, grabAmount);
+        const itemStackToAdd = itemStack.clone();
+        itemStackToAdd.amount = grabAmount;
         addItem(playerContainer, itemStackToAdd);
         materials.remove(itemStack.typeId, grabAmount);
         removeAmount(slot, grabAmount);
@@ -185,7 +186,8 @@ function partiallyFilledSlotPass(inventory, itemStack) {
             const remainderAmount = Math.max(0, (slot.amount + itemStack.amount) - slot.maxAmount);
             slot.amount += itemStack.amount - remainderAmount;
             if (remainderAmount > 0) {
-                const remainderStack = new ItemStack(itemStack.typeId, remainderAmount);
+                const remainderStack = itemStack.clone();
+                remainderStack.amount = remainderAmount;
                 addItem(inventory, remainderStack);
             }
             return true;
