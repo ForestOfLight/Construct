@@ -2,7 +2,7 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { StructureStatistics } from '../Structure/StructureStatistics';
-import { EntityComponentTypes, TicksPerSecond } from '@minecraft/server';
+import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -15,10 +15,11 @@ export class InstanceFormBuilder {
             { translate: 'construct.instance.menu.body', with: [instance.getName(), instance.getStructureId()] }
         ]};
         if (instance.hasLocation())
-            body.rawtext.push(...[
-                { text: '\n' },
-                { translate: 'construct.instance.menu.location', with: [String(location.location.x), String(location.location.y), String(location.location.z), location.dimensionId] }
-            ]);
+                body.rawtext.push(...[
+                    { text: '\n' },
+                    //{translate:world.getDimension(location.dimensionId).localizationKey},---to be compatible with language files, this method is not used
+                    { translate: 'construct.instance.menu.location', with: {rawtext: [{text:String(location.location.x)}, {text:String(location.location.y)}, {text:String(location.location.z)},{translate:world.getDimension(location.dimensionId).localizationKey}]} }
+                ]);
         form.body(body);
         options.forEach(option => {
             form.button({ translate: option });
@@ -29,7 +30,7 @@ export class InstanceFormBuilder {
     static buildRenameInstance(currentName) {
         return new ModalFormData()
             .title(MenuFormBuilder.menuTitle)
-            .textField({ translate: 'construct.isntance.menu.rename' }, currentName)
+            .textField({ translate: 'construct.instance.menu.rename' }, currentName) //instance but not isntance
             .submitButton({ translate: 'construct.menu.instance.button.rename' });
     }
 
