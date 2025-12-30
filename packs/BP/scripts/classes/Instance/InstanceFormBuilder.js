@@ -2,8 +2,7 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { StructureStatistics } from '../Structure/StructureStatistics';
-import {EntityComponentTypes, TicksPerSecond} from '@minecraft/server';
-import {dim} from "../zh_CN";
+import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -19,7 +18,7 @@ export class InstanceFormBuilder {
                 body.rawtext.push(...[
                     { text: '\n' },
                     //{translate:world.getDimension(location.dimensionId).localizationKey},---to be compatible with language files, this method is not used
-                    { translate: 'construct.instance.menu.location', with: [String(location.location.x), String(location.location.y), String(location.location.z), dim[location.dimensionId]] } //all dim names automatically translated
+                    { translate: 'construct.instance.menu.location', with: {rawtext: [{text:String(location.location.x)}, {text:String(location.location.y)}, {text:String(location.location.z)},{translate:world.getDimension(location.dimensionId).localizationKey}]} }
                 ]);
         form.body(body);
         options.forEach(option => {
