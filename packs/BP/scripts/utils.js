@@ -1,6 +1,6 @@
 import { system, EntityComponentTypes, LiquidType, ItemStack } from '@minecraft/server';
 import { FormCancelationReason } from '@minecraft/server-ui';
-import { specialItemPlacementConversions } from './data';
+import { specialItemPlacementConversions } from './options/easyPlaceConversions';
 import { blocks, block_sounds } from './blocks';
 
 export async function forceShow(player, form, timeout = Infinity) {
