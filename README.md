@@ -52,11 +52,8 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
 
 ### Commands
 
-**Usage: `/construct:item`**  
+**Usage: `/construct:construct`**  
 Gives you the Construct item. Use it to open the Construct menu.
-
-**Usage: `./construct`**  
-Shows the Construct menu. Only available while **Canopy** is installed.
 
 ## Join the Community
 

@@ -85,11 +85,10 @@ construct.mainmenu.howto.remove.header=§cHow to Remove Structures:
 construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 command to remove a structure from the world.
 
 ## Commands
-construct.commands.construct=Opens the Construct menu.
-construct.commands.item=Gives you the Construct item. Use it to open the Construct menu.
-construct.commands.item.denyorigin=This command can only be used by players.
-construct.commands.item.fail=§cFailed to give you the Construct item.
-construct.commands.item.success=§aYou recieved the Construct item! Use it to open the Construct menu.
+construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
+construct.commands.construct.denyorigin=This command can only be used by players.
+construct.commands.construct.fail=§cFailed to give you the Construct item.
+construct.commands.construct.success=§aYou recieved the Construct item! Use it to open the Construct menu.
 
 ## Options
 construct.option.enabled= is now enabled!
