@@ -86,6 +86,8 @@ function processEasyPlace(player) {
     if (!structureBlock)
         return;
     const worldBlock = player.dimension.getBlock(structureBlock.location);
+    if (!worldBlock)
+        return;
     if (locationsPlacedLastTick.has(JSON.stringify(worldBlock.location)))
         return;
     locationsPlacedLastTick.add(JSON.stringify(worldBlock.location));
@@ -103,10 +105,14 @@ function preventAction(event, player) {
 }
 
 function isHoldingActionItem(player) {
-    const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
-    if (!mainhandItemStack)
+    try {
+        const mainhandItemStack = player.getComponent(EntityComponentTypes.Equippable).getEquipment(EquipmentSlot.Mainhand);
+        if (!mainhandItemStack)
+            return false;
+        return mainhandItemStack.typeId === ACTION_ITEM;
+    } catch {
         return false;
-    return mainhandItemStack.typeId === ACTION_ITEM;
+    }
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
