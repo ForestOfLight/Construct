@@ -43,10 +43,10 @@ Don't forget to check out the **Builder Settings** tab, where you can improve yo
 
 Construct uses Minecraft's vanilla structure system so that you can easily create and build new structures.
 
-- The simplest way to add a new structure to the structure list is to save it using a structure block. This will only save the structure to the world you're in.
+- The simplest way to add a new structure to the structure list is to save it using a structure block or the /structure command. This will only save the structure to the world you're in.
 - Importing structures from other worlds:
     1. Move the `Construct[BP]` to your `com.mojang/development_behavior_packs` folder.
-    2. Drop your `.mcstructure` file in Construct's `Construct [BP]/structures` folder. 
+    2. Drop your `.mcstructure` file in Construct's `Construct[BP]/structures` folder. 
     3. Restart your world.
     4. Your structure should now be in in Construct's structure list!
 
