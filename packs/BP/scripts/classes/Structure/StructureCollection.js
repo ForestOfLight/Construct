@@ -81,9 +81,21 @@ class StructureCollection {
     }
 
     getWorldStructureIds() {
-        return world.structureManager.getWorldStructureIds()
-            .filter(id => id.startsWith('mystructure:'))
-            .map(id => id.replace('mystructure:', ''));
+        const structureManager = world.structureManager;
+        const packIds = [...new Set(structureManager.getPackStructureIds()
+            .map(id => id.replace('mystructure:', '')))
+        ];
+        const packIdSet = new Set(packIds);
+        let worldStructureIds = [];
+        try {
+            worldStructureIds = structureManager.getWorldStructureIds()
+                .filter(id => id.startsWith('mystructure:'))
+                .map(id => id.replace('mystructure:', ''))
+                .filter(id => !packIdSet.has(id));
+        } catch (error) {
+            console.warn('Failed to fetch world structure IDs. They will be ignored. Error:', error);
+        }
+        return [...packIds, ...worldStructureIds];
     }
 
     rename(instanceName, newName) {
