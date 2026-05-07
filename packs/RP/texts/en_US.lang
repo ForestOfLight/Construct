@@ -78,9 +78,9 @@ construct.mainmenu.selectstructure.other=Other
 construct.mainmenu.selectstructure.other.prompt=Enter the Structure ID:
 construct.mainmenu.selectstructure.other.placeholder=example_structure	## The placeholder text in the textbox where the user enters the structure name.
 construct.mainmenu.howto.add.header=§aHow to Add Structures:
-construct.mainmenu.howto.add.structureblock=§7- Save a structure using a §fstructure block§7 or the §f/structure§7 command.
+construct.mainmenu.howto.add.structureblock=§7Save a structure using a §fstructure block§7 or the §f/structure§7 command. This structure will only be available in the world you saved it in.
 construct.mainmenu.howto.add.or=§7§lOR§r
-construct.mainmenu.howto.add.mcstructure=§7- Add a §f.mcstructure§7 file to this pack's §fstructures folder§7. When selecting your structure, select the §fOther§7 option and then use the filename (without '.mcstructure') as the §fStructure ID§7. After its first use, it will be added to the list of structures.
+construct.mainmenu.howto.add.mcstructure=§7To transfer structures §fbetween worlds§7: \n  1. Move Construct's behavior pack to your §fcom.mojang > development_behavior_packs§7. \n  2. Add a §f.mcstructure§7 file to the Construct behavior pack's §fstructures§7 folder. \n  3. Restart your world. \nYour structure should now be in the structures list. If it is not, select the §fOther§7 option and then use the filename (without '.mcstructure') as the §fStructure ID§7. After its first use, it will be added to the list of structures.
 construct.mainmenu.howto.remove.header=§cHow to Remove Structures:
 construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 command to remove a structure from the world.
 
