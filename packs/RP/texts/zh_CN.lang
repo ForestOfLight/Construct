@@ -188,3 +188,8 @@ construct.commands.materials=Print the material list for an instance.
 construct.commands.materials.headerAll=§eMaterials for "%1":§r
 construct.commands.materials.headerMissing=§eMissing materials for "%1":§r
 construct.commands.materials.empty=§7(no materials)
+
+## construct:tag
+construct.commands.tag=Rename the held Construct item to an instance name for quick-open.
+construct.commands.tag.success=§aTagged held Construct item with instance "%1".
+construct.commands.tag.notHoldingItem=§cYou must be holding a Construct item.

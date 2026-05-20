@@ -26,6 +26,7 @@ import './commands/OptionCommand';
 import './commands/InfoCommand';
 import './commands/StatsCommand';
 import './commands/MaterialsCommand';
+import './commands/TagCommand';
 
 // Other
 import './classes/BlockInfo';
