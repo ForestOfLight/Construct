@@ -182,3 +182,9 @@ construct.commands.info.bounds=§7Bounds:§r (%1, %2, %3) -> (%4, %5, %6)
 ## construct:stats
 construct.commands.stats=Run the structure verifier and print statistics.
 construct.commands.stats.alreadyRunning=§cA verification is already in progress.
+
+## construct:materials
+construct.commands.materials=Print the material list for an instance.
+construct.commands.materials.headerAll=§eMaterials for "%1":§r
+construct.commands.materials.headerMissing=§eMissing materials for "%1":§r
+construct.commands.materials.empty=§7(no materials)
