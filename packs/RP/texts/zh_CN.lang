@@ -158,3 +158,7 @@ construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.
 ## construct:prevlayer
 construct.commands.prevlayer=Step layer down by one (wraps 0 to max).
 construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.
+
+## construct:verifier
+construct.commands.verifier=Toggle block validation overlay for an instance.
+construct.commands.verifier.success=§aSet instance "%1" verifier=%2.
