@@ -17,6 +17,7 @@ import './commands/RenameCommand';
 import './commands/ListCommand';
 import './commands/PlaceCommand';
 import './commands/MoveCommand';
+import './commands/ActiveCommand';
 
 // Other
 import './classes/BlockInfo';

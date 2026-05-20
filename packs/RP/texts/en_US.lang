@@ -140,3 +140,8 @@ construct.commands.place.success=§aPlaced instance "%1" at %2 %3 %4 in %5.
 construct.commands.move=Reposition an instance without toggling its enabled state.
 construct.commands.move.success=§aMoved instance "%1" to %2 %3 %4 in %5.
 construct.commands.move.posRequired=§cMust provide coordinates when not running as a player.
+
+## construct:active
+construct.commands.active=Enable or disable an instance.
+construct.commands.active.success=§aSet instance "%1" active=%2.
+construct.commands.error.noLocation=§cInstance "%1" has no saved location.
