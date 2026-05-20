@@ -135,3 +135,8 @@ construct.commands.list.row=§a%1§r §8[§r%2§8]§r §7%3§r
 ## construct:place
 construct.commands.place=Place an instance at world coordinates (enables it).
 construct.commands.place.success=§aPlaced instance "%1" at %2 %3 %4 in %5.
+
+## construct:move
+construct.commands.move=Reposition an instance without toggling its enabled state.
+construct.commands.move.success=§aMoved instance "%1" to %2 %3 %4 in %5.
+construct.commands.move.posRequired=§cMust provide coordinates when not running as a player.
