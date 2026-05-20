@@ -167,3 +167,14 @@ construct.commands.verifier.success=§aSet instance "%1" verifier=%2.
 construct.commands.option=Toggle a per-player builder option.
 construct.commands.option.success=§aSet option "%1" = %2.
 construct.commands.option.unknownOption=§cUnknown option "%1".
+
+## construct:info
+construct.commands.info=Print instance details to chat.
+construct.commands.info.header=§e=== Instance "%1" ===§r
+construct.commands.info.structure=§7Structure:§r %1
+construct.commands.info.enabled=§7Enabled:§r %1
+construct.commands.info.location=§7Location:§r %1 %2 %3 in %4
+construct.commands.info.noLocation=§7Location:§r (none)
+construct.commands.info.layer=§7Layer:§r %1 / %2
+construct.commands.info.verifier=§7Verifier:§r %1
+construct.commands.info.bounds=§7Bounds:§r (%1, %2, %3) -> (%4, %5, %6)
