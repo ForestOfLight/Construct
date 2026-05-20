@@ -150,3 +150,7 @@ construct.commands.error.noLocation=§cInstance "%1" has no saved location.
 construct.commands.layer=Set the active layer of an instance (0 = whole structure).
 construct.commands.layer.success=§aSet instance "%1" layer to %2.
 construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "%2" (max %3).
+
+## construct:nextlayer
+construct.commands.nextlayer=Step layer up by one (wraps max to 0).
+construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.

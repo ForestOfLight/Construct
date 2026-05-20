@@ -19,6 +19,7 @@ import './commands/PlaceCommand';
 import './commands/MoveCommand';
 import './commands/ActiveCommand';
 import './commands/LayerCommand';
+import './commands/NextLayerCommand';
 
 // Other
 import './classes/BlockInfo';
