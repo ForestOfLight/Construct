@@ -110,3 +110,9 @@ construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert str
 ## CLI shared errors
 construct.commands.error.instanceNotFound=§cInstance "%1" not found.
 construct.commands.error.notAPlayer=§cThis command can only be used by players.
+
+## construct:new
+construct.commands.new=Create a new instance bound to a structure.
+construct.commands.new.success=§aCreated instance "%1" bound to structure "%2".
+construct.commands.new.duplicateName=§cAn instance named "%1" already exists.
+construct.commands.new.unknownStructure=§cNo structure with id "%1" found in the world.

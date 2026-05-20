@@ -11,6 +11,7 @@ import './classes/MenuItemHandler';
 
 // Commands
 import './commands/ConstructCommand';
+import './commands/NewCommand';
 
 // Other
 import './classes/BlockInfo';
