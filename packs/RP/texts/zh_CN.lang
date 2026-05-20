@@ -145,3 +145,8 @@ construct.commands.move.posRequired=§cMust provide coordinates when not running
 construct.commands.active=Enable or disable an instance.
 construct.commands.active.success=§aSet instance "%1" active=%2.
 construct.commands.error.noLocation=§cInstance "%1" has no saved location.
+
+## construct:layer
+construct.commands.layer=Set the active layer of an instance (0 = whole structure).
+construct.commands.layer.success=§aSet instance "%1" layer to %2.
+construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "%2" (max %3).
