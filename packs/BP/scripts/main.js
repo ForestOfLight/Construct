@@ -24,6 +24,7 @@ import './commands/PrevLayerCommand';
 import './commands/VerifierCommand';
 import './commands/OptionCommand';
 import './commands/InfoCommand';
+import './commands/StatsCommand';
 
 // Other
 import './classes/BlockInfo';
