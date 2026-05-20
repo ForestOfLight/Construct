@@ -86,7 +86,6 @@ construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 comman
 
 ## Commands
 construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
-construct.commands.construct.denyorigin=This command can only be used by players.
 construct.commands.construct.fail=§cFailed to give you the Construct item.
 construct.commands.construct.success=§aYou recieved the Construct item! Use it to open the Construct menu.
 

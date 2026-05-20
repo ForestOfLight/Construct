@@ -1,4 +1,4 @@
-import { CustomCommandStatus, system, world } from '@minecraft/server';
+import { CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
 import { structureCollection } from '../classes/Structure/StructureCollection';
 import { commandError } from '../classes/Commands/lib/commandError';

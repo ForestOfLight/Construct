@@ -1,4 +1,4 @@
-import { CustomCommandParamType, CustomCommandStatus, system, world } from '@minecraft/server';
+import { CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
 import { findInstance } from '../classes/Commands/lib/findInstance';
 import { commandError } from '../classes/Commands/lib/commandError';
