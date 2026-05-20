@@ -125,3 +125,9 @@ construct.commands.delete.success=§aDeleted instance "%1".
 construct.commands.rename=Rename an existing instance.
 construct.commands.rename.success=§aRenamed instance "%1" to "%2".
 construct.commands.rename.duplicateName=§cAn instance named "%1" already exists.
+
+## construct:list
+construct.commands.list=List all registered instances.
+construct.commands.list.empty=§7No instances registered.
+construct.commands.list.header=§eRegistered instances (%1):§r
+construct.commands.list.row=§a%1§r §8[§r%2§8]§r §7%3§r
