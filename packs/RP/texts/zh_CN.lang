@@ -106,3 +106,7 @@ construct.option.materialgrabber.howto=使用"材料收集器"物品与箱子等
 construct.option.materialgrabber.grabbed.zero=§7已收集 0 个物品
 construct.option.materialgrabber.grabbed.one=§a已收集 1 个物品
 construct.option.materialgrabber.grabbed.many=§a已收集 %s 个物品	## 插入字符串: 收集给玩家的物品数
+
+## CLI shared errors
+construct.commands.error.instanceNotFound=§cInstance "%1" not found.
+construct.commands.error.notAPlayer=§cThis command can only be used by players.

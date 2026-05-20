@@ -106,3 +106,7 @@ construct.option.materialgrabber.howto=Interact with inventories using the Mater
 construct.option.materialgrabber.grabbed.zero=§7Grabbed 0 items.
 construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
+
+## CLI shared errors
+construct.commands.error.instanceNotFound=§cInstance "%1" not found.
+construct.commands.error.notAPlayer=§cThis command can only be used by players.
