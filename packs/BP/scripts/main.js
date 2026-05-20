@@ -20,6 +20,7 @@ import './commands/MoveCommand';
 import './commands/ActiveCommand';
 import './commands/LayerCommand';
 import './commands/NextLayerCommand';
+import './commands/PrevLayerCommand';
 
 // Other
 import './classes/BlockInfo';

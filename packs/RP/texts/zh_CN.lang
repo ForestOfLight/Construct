@@ -154,3 +154,7 @@ construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "
 ## construct:nextlayer
 construct.commands.nextlayer=Step layer up by one (wraps max to 0).
 construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.
+
+## construct:prevlayer
+construct.commands.prevlayer=Step layer down by one (wraps 0 to max).
+construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.
