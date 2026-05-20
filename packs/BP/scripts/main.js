@@ -13,6 +13,7 @@ import './classes/MenuItemHandler';
 import './commands/ConstructCommand';
 import './commands/NewCommand';
 import './commands/DeleteCommand';
+import './commands/RenameCommand';
 
 // Other
 import './classes/BlockInfo';

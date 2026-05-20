@@ -120,3 +120,8 @@ construct.commands.new.unknownStructure=§cNo structure with id "%1" found in th
 ## construct:delete
 construct.commands.delete=Permanently delete an instance.
 construct.commands.delete.success=§aDeleted instance "%1".
+
+## construct:rename
+construct.commands.rename=Rename an existing instance.
+construct.commands.rename.success=§aRenamed instance "%1" to "%2".
+construct.commands.rename.duplicateName=§cAn instance named "%1" already exists.
