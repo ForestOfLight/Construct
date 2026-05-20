@@ -162,3 +162,8 @@ construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.
 ## construct:verifier
 construct.commands.verifier=Toggle block validation overlay for an instance.
 construct.commands.verifier.success=§aSet instance "%1" verifier=%2.
+
+## construct:option
+construct.commands.option=Toggle a per-player builder option.
+construct.commands.option.success=§aSet option "%1" = %2.
+construct.commands.option.unknownOption=§cUnknown option "%1".

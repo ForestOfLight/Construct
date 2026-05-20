@@ -22,6 +22,7 @@ import './commands/LayerCommand';
 import './commands/NextLayerCommand';
 import './commands/PrevLayerCommand';
 import './commands/VerifierCommand';
+import './commands/OptionCommand';
 
 // Other
 import './classes/BlockInfo';
