@@ -6,8 +6,11 @@ import './options/easyPlace';
 import './options/fastEasyPlace';
 import './options/materialGrabber';
 
+// Menu item handler
+import './classes/MenuItemHandler';
+
 // Commands
-import './commands/construct';
+import './commands/ConstructCommand';
 
 // Other
 import './classes/BlockInfo';

@@ -1,6 +1,6 @@
 import { InputPermissionCategory, world, system } from "@minecraft/server";
 import { Outliner } from "../Outliner";
-import { MENU_ITEM } from "../../commands/construct";
+import { MENU_ITEM } from "../../consts";
 import { Vector } from "../../lib/Vector";
 import { PlayerMovement } from "../PlayerMovement";
 import { Builders } from "../Builder/Builders";
