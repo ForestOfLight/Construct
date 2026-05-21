@@ -1,7 +1,8 @@
-import { CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { structureCollection } from '../classes/Structure/StructureCollection';
-import { commandError } from '../classes/Commands/lib/commandError';
+import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
+import { StructureNotFoundError } from '../classes/Errors/StructureNotFoundError';
 
 export class NewCommand extends Command {
     constructor() {
@@ -12,35 +13,38 @@ export class NewCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String },
                 { name: 'structureId', type: CustomCommandParamType.String }
             ],
+            permissionLevel: CommandPermissionLevel.Any,
             callback: (source, instanceName, structureId) => this.run(source, instanceName, structureId)
         });
     }
 
     run(source, instanceName, structureId) {
-        try {
-            if (structureCollection.has(instanceName)) {
-                system.run(() => source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.new.duplicateName', with: [instanceName] }]
-                }));
-                return { status: CustomCommandStatus.Failure };
-            }
-            if (!structureCollection.getWorldStructureIds().includes(structureId)) {
-                system.run(() => source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.new.unknownStructure', with: [structureId] }]
-                }));
-                return { status: CustomCommandStatus.Failure };
-            }
-            system.run(() => {
-                structureCollection.add(instanceName, structureId);
-                source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.new.success', with: [instanceName, structureId] }]
-                });
-            });
-            return { status: CustomCommandStatus.Success };
-        } catch (err) {
-            return commandError(source, err);
-        }
+        this.tryAddStructure(source, instanceName, structureId);
+        return { status: CustomCommandStatus.Success };
     }
+
+    tryAddStructure(source, instanceName, structureId) {
+        system.run(() => {
+            try {
+                this.addStructure(source, instanceName, structureId);
+            } catch (error) {
+                this.handleStructureAdditionErrors(source, error);
+            }
+        });
+    }
+
+    addStructure(source, instanceName, structureId) {
+        structureCollection.add(instanceName, structureId);
+        source.sendMessage({ translate: 'construct.commands.new.success', with: [instanceName, structureId] });
+    }
+
+    handleStructureAdditionErrors(source, error) {
+        if (error instanceof InstanceExistsError || error instanceof StructureNotFoundError)
+            error.sendTo(source);
+        else
+            throw error;
+    }
+
 }
 
 export const newCommand = new NewCommand();

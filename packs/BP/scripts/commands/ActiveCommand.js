@@ -1,7 +1,6 @@
-import { CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { findInstance } from '../classes/Commands/lib/findInstance';
-import { commandError } from '../classes/Commands/lib/commandError';
+import { CustomCommandParamType, CustomCommandStatus, CommandPermissionLevel, system } from '@minecraft/server';
+import { structureCollection } from '../classes/Structure/StructureCollection';
 
 export class ActiveCommand extends Command {
     constructor() {
@@ -12,32 +11,29 @@ export class ActiveCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String },
                 { name: 'state', type: CustomCommandParamType.Boolean }
             ],
+            permissionLevel: CommandPermissionLevel.Any,
             callback: (source, instanceName, state) => this.run(source, instanceName, state)
         });
     }
 
     run(source, instanceName, state) {
-        try {
-            const instance = findInstance(source, instanceName);
-            if (!instance) return { status: CustomCommandStatus.Failure };
-            if (state && !instance.hasLocation()) {
-                system.run(() => source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.error.noLocation', with: [instanceName] }]
-                }));
-                return { status: CustomCommandStatus.Failure };
-            }
-            system.run(() => {
-                if (state) instance.enable();
-                else instance.disable();
-                source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.active.success',
-                                with: [instanceName, String(state)] }]
-                });
-            });
-            return { status: CustomCommandStatus.Success };
-        } catch (err) {
-            return commandError(source, err);
+        const instance = structureCollection.get(instanceName);
+        if (state && !instance.hasLocation()) {
+            source.sendMessage({ translate: 'construct.commands.error.noLocation', with: [instanceName] });
+            return void 0;
         }
+        system.run(() => {
+            if (state)
+                instance.enable();
+            else
+                instance.disable();
+            this.sendFeedback(source, instanceName, state);
+        });
+        return { status: CustomCommandStatus.Success };
+    }
+
+    sendFeedback(source, instanceName, state) {
+        source.sendMessage({ translate: state ? 'construct.commands.active.true' : 'construct.commands.active.false', with: [instanceName] });
     }
 }
 

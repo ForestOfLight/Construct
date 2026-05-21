@@ -3,3 +3,4 @@
 /.regolith
 docs/
 .claude
+node_modules/

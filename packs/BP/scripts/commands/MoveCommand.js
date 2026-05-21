@@ -1,10 +1,8 @@
-import { CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { findInstance } from '../classes/Commands/lib/findInstance';
-import { commandError } from '../classes/Commands/lib/commandError';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, world } from '@minecraft/server';
+import { Vector } from '../lib/Vector';
+import { structureCollection } from '../classes/Structure/StructureCollection';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
-import { BlockCommandOrigin } from '../classes/Commands/BlockCommandOrigin';
-import { EntityCommandOrigin } from '../classes/Commands/EntityCommandOrigin';
 
 export class MoveCommand extends Command {
     constructor() {
@@ -15,47 +13,34 @@ export class MoveCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             optionalParameters: [
-                { name: 'pos', type: CustomCommandParamType.Location }
+                { name: 'dimensionId', type: CustomCommandParamType.Enum }, // Enum defined in PlaceCommand.js
+                { name: 'location', type: CustomCommandParamType.Location }
             ],
-            callback: (source, instanceName, pos) => this.run(source, instanceName, pos)
+            permissionLevel: CommandPermissionLevel.Any,
+            callback: (source, instanceName, dimensionId, location) => this.run(source, instanceName, dimensionId, location)
         });
     }
 
-    run(source, instanceName, pos) {
-        try {
-            const instance = findInstance(source, instanceName);
-            if (!instance) return { status: CustomCommandStatus.Failure };
-            let dimensionId;
-            let location = pos;
-            if (location === undefined) {
-                if (!(source instanceof PlayerCommandOrigin))
-                    return { status: CustomCommandStatus.Failure, message: 'construct.commands.move.posRequired' };
-                const player = source.getSource();
-                location = player.location;
-                dimensionId = player.dimension.id;
-            } else {
-                dimensionId = this.resolveDimensionId(source);
-            }
-            system.run(() => {
-                instance.move(dimensionId, location);
-                source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.move.success',
-                                with: [instanceName, String(Math.floor(location.x)), String(Math.floor(location.y)),
-                                       String(Math.floor(location.z)), dimensionId.replace('minecraft:', '')] }]
-                });
-            });
-            return { status: CustomCommandStatus.Success };
-        } catch (err) {
-            return commandError(source, err);
+    run(source, instanceName, dimensionId, location) {
+        const instance = structureCollection.get(instanceName);
+        if (dimensionId === void 0 || location === void 0) {
+            if (!(source instanceof PlayerCommandOrigin))
+                return { status: CustomCommandStatus.Failure, message: 'construct.commands.move.locationRequired' };
+            const player = source.getSource();
+            location = player.location;
+            dimensionId = player.dimension.id;
         }
+        this.assertDimensionExists(dimensionId);
+        const flooredLocation = Vector.from(location).floor();
+        system.run(() => {
+            instance.move(dimensionId, flooredLocation);
+            source.sendMessage({ translate: 'construct.commands.move.success', with: [instanceName, flooredLocation.toString(), dimensionId.replace('minecraft:', '')] });
+        });
+        return { status: CustomCommandStatus.Success };
     }
 
-    resolveDimensionId(source) {
-        if (source instanceof PlayerCommandOrigin || source instanceof EntityCommandOrigin)
-            return source.getSource().dimension.id;
-        if (source instanceof BlockCommandOrigin)
-            return source.getSource().dimension.id;
-        return 'minecraft:overworld';
+    assertDimensionExists(dimensionId) {
+        return world.getDimension(dimensionId) !== void 0;
     }
 }
 

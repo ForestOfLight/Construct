@@ -1,4 +1,4 @@
-import { CustomCommandSource, CustomCommandStatus, Player, system } from "@minecraft/server";
+import { CustomCommandParamType, CustomCommandSource, CustomCommandStatus, Player, RawMessageError, system } from "@minecraft/server";
 import { Commands } from "./Commands.js";
 import { BlockCommandOrigin } from "./BlockCommandOrigin";
 import { EntityCommandOrigin } from "./EntityCommandOrigin";
@@ -60,8 +60,15 @@ export class Command {
         this.callback = (origin, ...args) => {
             const source = Command.resolveCommandOrigin(origin);
             if (this.#commandSourceIsNotAllowed(source))
-                return { status: CustomCommandStatus.Failure, message: 'commands.generic.invalidsource' };
-            return this.customCommand.callback(source, ...args);
+                return { status: CustomCommandStatus.Failure, message: 'construct.error.invalidCommandSource' };
+            try {
+                return this.customCommand.callback(source, ...args);
+            } catch (error) {
+                if (error instanceof RawMessageError)
+                    error.sendTo(source);
+                else
+                    throw error;
+            }
         }
     }
 
@@ -88,6 +95,8 @@ export class Command {
             return [];
         for (const parameter of parameters) {
             if (parameter.name)
+                parameter.name = `${parameter.name}`;
+            if (parameter.type === CustomCommandParamType.Enum)
                 parameter.name = `${PACK_IDENTIFIER}:${parameter.name}`;
         }
         return parameters;

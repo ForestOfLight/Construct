@@ -57,15 +57,6 @@ construct.structure.statistics.stateincorrect=§7Block State Incorrect: §e%s	##
 construct.structure.statistics.incorrect=§7Incorrect: §c%s	## Insert string: number of incorrectly placed blocks
 construct.structure.statistics.missing=§7Missing: §3%s	## Insert string: number of missing blocks
 
-## Structure Block Info Display
-construct.blockinfo.header=Structure:
-construct.blockinfo.none=§7None
-construct.blockinfo.nosupply= §c[No Supply]	## When the targeted block is not in the player's inventory
-construct.blockinfo.unknown=§7Unknown
-construct.blockinfo.waterlogged=§7isWaterlogged: §3true
-
-construct.mainmenu.instance.exists=§cInstance '%s' already exists. Try again with a new name.	## Insert string: instance name
-construct.mainmenu.instance.notfound=§cStructure ID '%s' not found. If you're looking for a structure that you put in the structures folder, please restart your world and try again.	## Insert string: structure name
 construct.mainmenu.title=§l§2Construct	## This is the name of the pack.
 construct.mainmenu.selectinstance=Select an instance:
 construct.mainmenu.howto=How to Add/Remove Structures
@@ -84,12 +75,14 @@ construct.mainmenu.howto.add.mcstructure=§7To transfer structures §fbetween wo
 construct.mainmenu.howto.remove.header=§cHow to Remove Structures:
 construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 command to remove a structure from the world.
 
-## Commands
-construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
-construct.commands.construct.fail=§cFailed to give you the Construct item.
-construct.commands.construct.success=§aYou recieved the Construct item! Use it to open the Construct menu.
+## Structure Block Info Display
+construct.blockinfo.header=Structure:
+construct.blockinfo.none=§7None
+construct.blockinfo.nosupply= §c[No Supply]	## When the targeted block is not in the player's inventory
+construct.blockinfo.unknown=§7Unknown
+construct.blockinfo.waterlogged=§7isWaterlogged: §3true
 
-## Options
+## Builder Options
 construct.option.enabled= is now enabled!
 construct.option.disabled= is now disabled.
 construct.option.easyplace.name=Easy Place
@@ -106,14 +99,14 @@ construct.option.materialgrabber.grabbed.zero=§7Grabbed 0 items.
 construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
 
-## CLI shared errors
-construct.commands.error.instanceNotFound=§cInstance "%1" not found.
-construct.commands.error.notAPlayer=§cThis command can only be used by players.
+## Commands
+construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
+construct.commands.construct.fail=§cFailed to give you the Construct item.
+construct.commands.construct.success=§aYou recieved the Construct item! Use it to open the Construct menu.
 
 ## construct:new
 construct.commands.new=Create a new instance bound to a structure.
 construct.commands.new.success=§aCreated instance "%1" bound to structure "%2".
-construct.commands.new.duplicateName=§cAn instance named "%1" already exists.
 construct.commands.new.unknownStructure=§cNo structure with id "%1" found in the world.
 
 ## construct:delete
@@ -123,30 +116,34 @@ construct.commands.delete.success=§aDeleted instance "%1".
 ## construct:rename
 construct.commands.rename=Rename an existing instance.
 construct.commands.rename.success=§aRenamed instance "%1" to "%2".
-construct.commands.rename.duplicateName=§cAn instance named "%1" already exists.
 
 ## construct:list
 construct.commands.list=List all registered instances.
 construct.commands.list.empty=§7No instances registered.
-construct.commands.list.header=§eRegistered instances (%1):§r
+construct.commands.list.header=§aRegistered instances (%1):§r
 construct.commands.list.row=§a%1§r §8[§r%2§8]§r §7%3§r
+construct.commands.list.row.enabled=enabled
+construct.commands.list.row.disabled=disabled
+construct.commands.list.row.location= at %1 in %2
+construct.commands.list.row.nolocation= (no location)
 
 ## construct:place
 construct.commands.place=Place an instance at world coordinates (enables it).
-construct.commands.place.success=§aPlaced instance "%1" at %2 %3 %4 in %5.
+construct.commands.place.success=§aPlaced instance "%1" at %2 in %3.
 
 ## construct:move
 construct.commands.move=Reposition an instance without toggling its enabled state.
-construct.commands.move.success=§aMoved instance "%1" to %2 %3 %4 in %5.
-construct.commands.move.posRequired=§cMust provide coordinates when not running as a player.
+construct.commands.move.success=§aMoved instance "%1" to %2 in %3.
+construct.commands.move.locationRequired=§cMust provide a dimension and coordinates when not running as a player.
 
 ## construct:active
 construct.commands.active=Enable or disable an instance.
-construct.commands.active.success=§aSet instance "%1" active=%2.
+construct.commands.active.true=§aEnabled instance "%1".
+construct.commands.active.false=§aDisabled instance "%1".
 construct.commands.error.noLocation=§cInstance "%1" has no saved location.
 
 ## construct:layer
-construct.commands.layer=Set the active layer of an instance (0 = whole structure).
+construct.commands.layer=Set the active layer of an instance (Use 0 for the whole structure).
 construct.commands.layer.success=§aSet instance "%1" layer to %2.
 construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "%2" (max %3).
 
@@ -160,7 +157,8 @@ construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.
 
 ## construct:verifier
 construct.commands.verifier=Toggle block validation overlay for an instance.
-construct.commands.verifier.success=§aSet instance "%1" verifier=%2.
+construct.commands.verifier.enabled=§aEnabled verifier for instance "%1".
+construct.commands.verifier.disabled=§aDisabled verifier for instance "%1".
 
 ## construct:option
 construct.commands.option=Toggle a per-player builder option.
@@ -169,26 +167,34 @@ construct.commands.option.unknownOption=§cUnknown option "%1".
 
 ## construct:info
 construct.commands.info=Print instance details to chat.
-construct.commands.info.header=§e=== Instance "%1" ===§r
+construct.commands.info.header=§a=== Instance Info for "%1" ===§r
 construct.commands.info.structure=§7Structure:§r %1
-construct.commands.info.enabled=§7Enabled:§r %1
-construct.commands.info.location=§7Location:§r %1 %2 %3 in %4
+construct.commands.info.location=§7Location:§r %1 in %2
 construct.commands.info.noLocation=§7Location:§r (none)
+construct.commands.info.enabled=§7Enabled:§r %1
 construct.commands.info.layer=§7Layer:§r %1 / %2
-construct.commands.info.verifier=§7Verifier:§r %1
-construct.commands.info.bounds=§7Bounds:§r (%1, %2, %3) -> (%4, %5, %6)
+construct.commands.info.verifier=§7Verifier running:§r %1
+construct.commands.info.size=§7Size:§r %1 (%2 blocks)
 
 ## construct:stats
 construct.commands.stats=Run the structure verifier and print statistics.
-construct.commands.stats.alreadyRunning=§cA verification is already in progress.
+construct.commands.stats.alreadyRunning=§cA verification is already in progress. Please wait until it finishes.
 
 ## construct:materials
 construct.commands.materials=Print the material list for an instance.
-construct.commands.materials.headerAll=§eMaterials for "%1":§r
-construct.commands.materials.headerMissing=§eMissing materials for "%1":§r
+construct.commands.materials.headerAll=§aMaterials for "%1":§r
+construct.commands.materials.headerMissing=§aMissing materials for "%1":§r
 construct.commands.materials.empty=§7(no materials)
 
 ## construct:tag
 construct.commands.tag=Rename the held Construct item to an instance name for quick-open.
 construct.commands.tag.success=§aTagged held Construct item with instance "%1".
 construct.commands.tag.notHoldingItem=§cYou must be holding a Construct item.
+
+## Errors
+construct.error.invalidCommandSource=§cThis command cannot be run from this source.
+construct.error.instanceNotFound=§cInstance "%1" not found.	## Insert string: instance name
+construct.error.instanceExists=§cInstance "%1" already exists. Try again with a new name.	## Insert string: instance name
+construct.error.structureNotFound=§cStructure ID "%1" not found. If you're looking for a structure that you put in the structures folder, please restart your world and try again.	## Insert string: structure name
+construct.error.dimensionNotFound=§cDimension "%1" not found.	## Insert string: dimension name
+construct.error.notAPlayer=§cThis command can only be used by players.

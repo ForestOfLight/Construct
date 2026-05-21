@@ -1,7 +1,6 @@
-import { CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { findInstance } from '../classes/Commands/lib/findInstance';
-import { commandError } from '../classes/Commands/lib/commandError';
+import { structureCollection } from '../classes/Structure/StructureCollection';
 
 export class VerifierCommand extends Command {
     constructor() {
@@ -12,25 +11,23 @@ export class VerifierCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String },
                 { name: 'state', type: CustomCommandParamType.Boolean }
             ],
+            permissionLevel: CommandPermissionLevel.Any,
             callback: (source, instanceName, state) => this.run(source, instanceName, state)
         });
     }
 
     run(source, instanceName, state) {
-        try {
-            const instance = findInstance(source, instanceName);
-            if (!instance) return { status: CustomCommandStatus.Failure };
-            system.run(() => {
-                instance.setVerifierEnabled(state);
-                source.sendMessage({
-                    rawtext: [{ translate: 'construct.commands.verifier.success',
-                                with: [instanceName, String(state)] }]
-                });
-            });
-            return { status: CustomCommandStatus.Success };
-        } catch (err) {
-            return commandError(source, err);
-        }
+        const instance = structureCollection.get(instanceName);
+        if (state)
+            instance.setVerifierEnabled(true);
+        else
+            instance.setVerifierEnabled(false);
+        this.sendFeedback(source, instanceName, state);
+        return { status: CustomCommandStatus.Success };
+    }
+
+    sendFeedback(source, instanceName, state) {
+        source.sendMessage({ translate: state ? 'construct.commands.verifier.enabled' : 'construct.commands.verifier.disabled', with: [instanceName] });
     }
 }
 

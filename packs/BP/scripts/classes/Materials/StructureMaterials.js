@@ -1,5 +1,6 @@
 import { ItemStack, system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
+import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 
 class StructureMaterials {
     instance;
@@ -21,11 +22,11 @@ class StructureMaterials {
                 system.runJob(this.populateActive());
             else
                 system.runJob(this.populateAll());
-        } catch (e) {
-            if (e.name === 'InstanceNotPlacedError')
+        } catch (error) {
+            if (error instanceof InstanceNotPlacedError)
                 this.clear();
             else
-                throw e;
+                throw error;
         }
     }
 

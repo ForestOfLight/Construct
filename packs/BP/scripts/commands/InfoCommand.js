@@ -1,7 +1,7 @@
-import { CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { findInstance } from '../classes/Commands/lib/findInstance';
-import { commandError } from '../classes/Commands/lib/commandError';
+import { structureCollection } from '../classes/Structure/StructureCollection';
+import { Vector } from '../lib/Vector';
 
 export class InfoCommand extends Command {
     constructor() {
@@ -11,46 +11,63 @@ export class InfoCommand extends Command {
             mandatoryParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
+            permissionLevel: CommandPermissionLevel.Any,
             callback: (source, instanceName) => this.run(source, instanceName)
         });
     }
 
     run(source, instanceName) {
-        try {
-            const instance = findInstance(source, instanceName);
-            if (!instance) return { status: CustomCommandStatus.Failure };
-            const rawtext = [
-                { translate: 'construct.commands.info.header', with: [instance.getName()] },
-                { text: '\n' },
-                { translate: 'construct.commands.info.structure', with: [instance.getStructureId()] },
-                { text: '\n' },
-                { translate: 'construct.commands.info.enabled', with: [String(instance.isEnabled())] },
-                { text: '\n' }
-            ];
-            if (instance.hasLocation()) {
-                const { dimensionId, location } = instance.getLocation();
-                rawtext.push({ translate: 'construct.commands.info.location',
-                    with: [String(location.x), String(location.y), String(location.z),
-                           dimensionId.replace('minecraft:', '')] });
-            } else {
-                rawtext.push({ translate: 'construct.commands.info.noLocation' });
-            }
-            rawtext.push({ text: '\n' });
-            rawtext.push({ translate: 'construct.commands.info.layer',
-                with: [String(instance.getLayer()), String(instance.getMaxLayer())] });
-            rawtext.push({ text: '\n' });
-            rawtext.push({ translate: 'construct.commands.info.verifier',
-                with: [String(instance.options.verifier.isEnabled)] });
-            rawtext.push({ text: '\n' });
-            const bounds = instance.getBounds();
-            rawtext.push({ translate: 'construct.commands.info.bounds',
-                with: [String(bounds.min.x), String(bounds.min.y), String(bounds.min.z),
-                       String(bounds.max.x), String(bounds.max.y), String(bounds.max.z)] });
-            system.run(() => source.sendMessage({ rawtext }));
-            return { status: CustomCommandStatus.Success };
-        } catch (err) {
-            return commandError(source, err);
-        }
+        const instance = structureCollection.get(instanceName);
+        const message = { rawtext: [
+            this.getHeaderText(instance),
+            { text: '\n' },
+            this.getStructureIdText(instance),
+            { text: '\n' },
+            this.getLocationText(instance),
+            { text: '\n' },
+            this.getEnabledText(instance),
+            { text: '\n' },
+            this.getLayerText(instance),
+            { text: '\n' },
+            this.getVerifierText(instance),
+            { text: '\n' },
+            this.getSizeText(instance)
+        ]};
+        source.sendMessage(message);
+        return { status: CustomCommandStatus.Success };
+    }
+
+    getHeaderText(instance) {
+        return { translate: 'construct.commands.info.header', with: [instance.getName()] };
+    }
+
+    getStructureIdText(instance) {
+        return { translate: 'construct.commands.info.structure', with: [instance.getStructureId()] };
+    }
+
+    getLocationText(instance) {
+        if (!instance.hasLocation())
+            return { translate: 'construct.commands.info.noLocation' };
+        const { dimensionId, location } = instance.getLocation();
+        return { translate: 'construct.commands.info.location', with: [location.toString(), dimensionId.replace('minecraft:', '')] };
+    }
+
+    getEnabledText(instance) {
+        return { translate: 'construct.commands.info.enabled', with: [String(instance.isEnabled())] };
+    }
+
+    getLayerText(instance) {
+        return { translate: 'construct.commands.info.layer', with: [String(instance.getLayer()), String(instance.getMaxLayer())] };
+    }
+
+    getVerifierText(instance) {
+        const verifier = instance.options.verifier;
+        return { translate: 'construct.commands.info.verifier', with: [String(verifier.isEnabled)] };
+    }
+
+    getSizeText(instance) {
+        const bounds = instance.getBounds();
+        return { translate: 'construct.commands.info.size', with: [bounds.max.toString(), Vector.volume(bounds.min, bounds.max).toString()] };
     }
 }
 

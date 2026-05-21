@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@minecraft/server": "^2.8.0-beta.1.26.21-stable"
+  }
+}

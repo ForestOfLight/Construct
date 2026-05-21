@@ -26,6 +26,7 @@ export class InstanceOptions extends Option {
         this.instanceName = instanceName;
         this.structureId = structureId;
         this.load();
+        this.save();
     }
 
     save() {

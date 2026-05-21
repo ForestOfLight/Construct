@@ -1,7 +1,9 @@
-import { InvalidInstanceError } from '../Errors/InvalidInstanceError';
+import { InstanceExistsError } from '../Errors/InstanceExistsError';
+import { InstanceNotFoundError } from '../Errors/InstanceNotFoundError';
+import { StructureNotFoundError } from '../Errors/StructureNotFoundError';
 import { InstanceOptions } from '../Instance/InstanceOptions';
 import { StructureInstance } from '../Instance/StructureInstance';
-import { world } from '@minecraft/server';
+import { InvalidStructureError, world } from '@minecraft/server';
 
 class StructureCollection {
     structures;
@@ -27,7 +29,7 @@ class StructureCollection {
 
     add(instanceName, structureId) {
         if (this.structures[instanceName])
-            throw new InvalidInstanceError(`Instance ${instanceName} already exists.`);
+            throw new InstanceExistsError(instanceName);
         const structure = new StructureInstance(instanceName, structureId);
         this.structures[instanceName] = structure;
         return structure;
@@ -36,7 +38,7 @@ class StructureCollection {
     get(instanceName) {
         const structure = this.structures[instanceName];
         if (!structure)
-            throw new InvalidInstanceError(`Instance ${instanceName} not found.`);
+            throw new InstanceNotFoundError(instanceName);
         return structure;
     }
 
@@ -58,12 +60,12 @@ class StructureCollection {
         return Object.values(this.structures).filter(structure => {
             try {
                 return structure.isLocationActive(dimensionId, structure.toStructureCoords(location), options)
-            } catch (e) {
-                if (e.name === 'InvalidStructureError') {
-                    structureCollection.delete(structure.name);
+            } catch (error) {
+                if (error instanceof StructureNotFoundError || error instanceof InvalidStructureError) {
+                    this.delete(structure.name);
                     return false;
                 } else {
-                    throw e;
+                    throw error;
                 }
             }
         });
@@ -101,7 +103,7 @@ class StructureCollection {
     rename(instanceName, newName) {
         const structure = this.get(instanceName);
         if (this.structures[newName])
-            throw new Error(`Instance '${newName}' already exists.`);
+            throw new InstanceExistsError(newName);
         structure.rename(newName);
         this.structures[newName] = structure;
         delete this.structures[instanceName];
