@@ -17,7 +17,7 @@ import './commands/RenameCommand';
 import './commands/InstancesCommand';
 import './commands/PlaceCommand';
 import './commands/MoveCommand';
-import './commands/ActiveCommand';
+import './commands/EnableCommand';
 import './commands/LayerCommand';
 import './commands/NextLayerCommand';
 import './commands/PrevLayerCommand';

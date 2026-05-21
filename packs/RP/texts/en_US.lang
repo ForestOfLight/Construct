@@ -136,10 +136,10 @@ construct.commands.move=Reposition a Construct instance without toggling its ena
 construct.commands.move.success=§aMoved instance "%1" to %2 in %3.
 construct.commands.move.locationRequired=§cMust provide a dimension and coordinates when not running as a player.
 
-## construct:active
-construct.commands.active=Enable or disable a Construct instance.
-construct.commands.active.true=§aEnabled instance "%1".
-construct.commands.active.false=§aDisabled instance "%1".
+## construct:enable
+construct.commands.enable=Enable or disable a Construct instance.
+construct.commands.enable.true=§aEnabled instance "%1".
+construct.commands.enable.false=§aDisabled instance "%1".
 construct.commands.error.noLocation=§cInstance "%1" has no saved location.
 
 ## construct:layer
