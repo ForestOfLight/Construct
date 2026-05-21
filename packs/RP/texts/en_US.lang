@@ -165,16 +165,16 @@ construct.commands.option=Toggle your Construct builder options.
 construct.commands.option.success=§aSet option "%1" to %2.
 construct.commands.option.unknownOption=§cUnknown option "%1".
 
-## construct:info
-construct.commands.info=Print Construct instance details to chat.
-construct.commands.info.header=§a=== Instance Info for "%1" ===§r
-construct.commands.info.structure=§7Structure:§r %1
-construct.commands.info.location=§7Location:§r %1 in %2
-construct.commands.info.noLocation=§7Location:§r (none)
-construct.commands.info.enabled=§7Enabled:§r %1
-construct.commands.info.layer=§7Layer:§r %1 / %2
-construct.commands.info.verifier=§7Verifier running:§r %1
-construct.commands.info.size=§7Size:§r %1 (%2 blocks)
+## construct:instanceinfo
+construct.commands.instanceinfo=Print Construct instance details to chat.
+construct.commands.instanceinfo.header=§a=== Instance Info for "%1" ===§r
+construct.commands.instanceinfo.structure=§7Structure:§r %1
+construct.commands.instanceinfo.location=§7Location:§r %1 in %2
+construct.commands.instanceinfo.noLocation=§7Location:§r (none)
+construct.commands.instanceinfo.enabled=§7Enabled:§r %1
+construct.commands.instanceinfo.layer=§7Layer:§r %1 / %2
+construct.commands.instanceinfo.verifier=§7Verifier running:§r %1
+construct.commands.instanceinfo.size=§7Size:§r %1 (%2 blocks)
 
 ## construct:stats
 construct.commands.stats=Run the Construct structure verifier and print statistics.

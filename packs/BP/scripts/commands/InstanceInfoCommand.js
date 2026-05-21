@@ -3,11 +3,11 @@ import { Command } from '../classes/Commands/Command';
 import { structureCollection } from '../classes/Structure/StructureCollection';
 import { Vector } from '../lib/Vector';
 
-export class InfoCommand extends Command {
+export class InstanceInfoCommand extends Command {
     constructor() {
         super({
-            name: 'info',
-            description: 'construct.commands.info',
+            name: 'instanceinfo',
+            description: 'construct.commands.instanceinfo',
             mandatoryParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
@@ -38,37 +38,37 @@ export class InfoCommand extends Command {
     }
 
     getHeaderText(instance) {
-        return { translate: 'construct.commands.info.header', with: [instance.getName()] };
+        return { translate: 'construct.commands.instanceinfo.header', with: [instance.getName()] };
     }
 
     getStructureIdText(instance) {
-        return { translate: 'construct.commands.info.structure', with: [instance.getStructureId()] };
+        return { translate: 'construct.commands.instanceinfo.structure', with: [instance.getStructureId()] };
     }
 
     getLocationText(instance) {
         if (!instance.hasLocation())
-            return { translate: 'construct.commands.info.noLocation' };
+            return { translate: 'construct.commands.instanceinfo.noLocation' };
         const { dimensionId, location } = instance.getLocation();
-        return { translate: 'construct.commands.info.location', with: [location.toString(), dimensionId.replace('minecraft:', '')] };
+        return { translate: 'construct.commands.instanceinfo.location', with: [location.toString(), dimensionId.replace('minecraft:', '')] };
     }
 
     getEnabledText(instance) {
-        return { translate: 'construct.commands.info.enabled', with: [String(instance.isEnabled())] };
+        return { translate: 'construct.commands.instanceinfo.enabled', with: [String(instance.isEnabled())] };
     }
 
     getLayerText(instance) {
-        return { translate: 'construct.commands.info.layer', with: [String(instance.getLayer()), String(instance.getMaxLayer())] };
+        return { translate: 'construct.commands.instanceinfo.layer', with: [String(instance.getLayer()), String(instance.getMaxLayer())] };
     }
 
     getVerifierText(instance) {
         const verifier = instance.options.verifier;
-        return { translate: 'construct.commands.info.verifier', with: [String(verifier.isEnabled)] };
+        return { translate: 'construct.commands.instanceinfo.verifier', with: [String(verifier.isEnabled)] };
     }
 
     getSizeText(instance) {
         const bounds = instance.getBounds();
-        return { translate: 'construct.commands.info.size', with: [bounds.max.toString(), Vector.volume(bounds.min, bounds.max).toString()] };
+        return { translate: 'construct.commands.instanceinfo.size', with: [bounds.max.toString(), Vector.volume(bounds.min, bounds.max).toString()] };
     }
 }
 
-export const infoCommand = new InfoCommand();
+export const instanceInfoCommand = new InstanceInfoCommand();
