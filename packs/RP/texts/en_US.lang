@@ -104,10 +104,10 @@ construct.commands.construct=Gives you the Construct item. Use it to open the Co
 construct.commands.construct.fail=§cFailed to give you the Construct item.
 construct.commands.construct.success=§aYou recieved the Construct item! Use it to open the Construct menu.
 
-## construct:new
-construct.commands.new=Create a new instance bound to a structure.
-construct.commands.new.success=§aCreated instance "%1" bound to structure "%2".
-construct.commands.new.unknownStructure=§cNo structure with id "%1" found in the world.
+## construct:create
+construct.commands.create=Create a new Construct instance bound to a structure.
+construct.commands.create.success=§aCreated instance "%1" bound to structure "%2".
+construct.commands.create.unknownStructure=§cNo structure with id "%1" found in the world.
 
 ## construct:delete
 construct.commands.delete=Permanently delete an instance.

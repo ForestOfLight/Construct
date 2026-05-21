@@ -4,11 +4,11 @@ import { structureCollection } from '../classes/Structure/StructureCollection';
 import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
 import { StructureNotFoundError } from '../classes/Errors/StructureNotFoundError';
 
-export class NewCommand extends Command {
+export class CreateCommand extends Command {
     constructor() {
         super({
-            name: 'new',
-            description: 'construct.commands.new',
+            name: 'create',
+            description: 'construct.commands.create',
             mandatoryParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String },
                 { name: 'structureId', type: CustomCommandParamType.String }
@@ -35,7 +35,7 @@ export class NewCommand extends Command {
 
     addStructure(source, instanceName, structureId) {
         structureCollection.add(instanceName, structureId);
-        source.sendMessage({ translate: 'construct.commands.new.success', with: [instanceName, structureId] });
+        source.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
     }
 
     handleStructureAdditionErrors(source, error) {
@@ -47,4 +47,4 @@ export class NewCommand extends Command {
 
 }
 
-export const newCommand = new NewCommand();
+export const createCommand = new CreateCommand();

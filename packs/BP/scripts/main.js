@@ -11,7 +11,7 @@ import './classes/MenuItemHandler';
 
 // Commands
 import './commands/ConstructCommand';
-import './commands/NewCommand';
+import './commands/CreateCommand';
 import './commands/DeleteCommand';
 import './commands/RenameCommand';
 import './commands/ListCommand';
