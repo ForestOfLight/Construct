@@ -117,15 +117,15 @@ construct.commands.delete.success=§aDeleted instance "%1".
 construct.commands.rename=Rename an existing Construct instance.
 construct.commands.rename.success=§aRenamed instance "%1" to "%2".
 
-## construct:list
-construct.commands.list=List all registered Construct instances.
-construct.commands.list.empty=§7No instances registered.
-construct.commands.list.header=§aRegistered instances (%1):§r
-construct.commands.list.row=§a%1§r §8[§r%2§8]§r §7%3§r
-construct.commands.list.row.enabled=enabled
-construct.commands.list.row.disabled=disabled
-construct.commands.list.row.location= at %1 in %2
-construct.commands.list.row.nolocation= (no location)
+## construct:instances
+construct.commands.instances=List all registered Construct instances.
+construct.commands.instances.empty=§7No instances registered.
+construct.commands.instances.header=§aRegistered instances (%1):§r
+construct.commands.instances.row=§a%1§r §8[§r%2§8]§r §7%3§r
+construct.commands.instances.row.enabled=enabled
+construct.commands.instances.row.disabled=disabled
+construct.commands.instances.row.location= at %1 in %2
+construct.commands.instances.row.nolocation= (no location)
 
 ## construct:place
 construct.commands.place=Place a Construct instance in the world.

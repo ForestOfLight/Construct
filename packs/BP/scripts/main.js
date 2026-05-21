@@ -14,7 +14,7 @@ import './commands/ConstructCommand';
 import './commands/CreateCommand';
 import './commands/DeleteCommand';
 import './commands/RenameCommand';
-import './commands/ListCommand';
+import './commands/InstancesCommand';
 import './commands/PlaceCommand';
 import './commands/MoveCommand';
 import './commands/ActiveCommand';
