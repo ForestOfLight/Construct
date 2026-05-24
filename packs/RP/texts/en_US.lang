@@ -106,75 +106,75 @@ construct.commands.construct.success=§aYou recieved the Construct item! Use it 
 
 ## construct:create
 construct.commands.create=Create a new Construct instance bound to a structure.
-construct.commands.create.success=§aCreated instance "%1" bound to structure "%2".
-construct.commands.create.unknownStructure=§cNo structure with id "%1" found in the world.
+construct.commands.create.success=§aCreated instance "%1" bound to structure "%2".	## Insert strings: instance name, structure name
+construct.commands.create.unknownStructure=§cNo structure with id "%1" found in the world.	## Insert string: structure name
 
 ## construct:delete
 construct.commands.delete=Permanently delete a Construct instance.
-construct.commands.delete.success=§aDeleted instance "%1".
+construct.commands.delete.success=§aDeleted instance "%1".	## Insert string: instance name
 
 ## construct:rename
 construct.commands.rename=Rename an existing Construct instance.
-construct.commands.rename.success=§aRenamed instance "%1" to "%2".
+construct.commands.rename.success=§aRenamed instance "%1" to "%2".	## Insert strings: old instance name, new instance name
 
 ## construct:instances
 construct.commands.instances=List all registered Construct instances.
 construct.commands.instances.empty=§7No instances registered.
-construct.commands.instances.header=§aRegistered instances (%1):§r
-construct.commands.instances.row=§a%1§r §8[§r%2§8]§r §7%3§r
+construct.commands.instances.header=§aRegistered instances (%1):§r	## Insert string: number of registered instances
+construct.commands.instances.row=§a%1§r §8[§r%2§8]§r §7%3§r	## Insert strings: instance name, enabled/disabled, location (if available)
 construct.commands.instances.row.enabled=enabled
 construct.commands.instances.row.disabled=disabled
-construct.commands.instances.row.location= at %1 in %2
+construct.commands.instances.row.location= at %1 in %2	## Insert strings: coordinates, dimension
 construct.commands.instances.row.nolocation= (no location)
 
 ## construct:place
 construct.commands.place=Place a Construct instance in the world.
-construct.commands.place.success=§aPlaced instance "%1" at %2 in %3.
+construct.commands.place.success=§aPlaced instance "%1" at %2 in %3.	## Insert strings: instance name, coordinates, dimension
 
 ## construct:move
 construct.commands.move=Reposition a Construct instance without toggling its enabled state.
-construct.commands.move.success=§aMoved instance "%1" to %2 in %3.
+construct.commands.move.success=§aMoved instance "%1" to %2 in %3.	## Insert strings: instance name, coordinates, dimension
 construct.commands.move.locationRequired=§cMust provide a dimension and coordinates when not running as a player.
 
 ## construct:enable
 construct.commands.enable=Enable or disable a Construct instance.
-construct.commands.enable.true=§aEnabled instance "%1".
-construct.commands.enable.false=§aDisabled instance "%1".
+construct.commands.enable.true=§aEnabled instance "%1".	## Insert string: instance name
+construct.commands.enable.false=§aDisabled instance "%1".	## Insert string: instance name
 construct.commands.error.noLocation=§cInstance "%1" has no saved location.
 
 ## construct:layer
 construct.commands.layer=Set the active layer of a Construct instance (Use 0 for the whole structure).
-construct.commands.layer.success=§aSet instance "%1" layer to %2.
-construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "%2" (max %3).
+construct.commands.layer.success=§aSet instance "%1" layer to %2.	## Insert strings: instance name, layer number
+construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "%2" (max %3).	## Insert strings: layer number, instance name, max layer number
 
 ## construct:nextlayer
 construct.commands.nextlayer=Step a Construct instance one layer up.
-construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.
+construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.	## Insert strings: instance name, layer number
 
 ## construct:prevlayer
 construct.commands.prevlayer=Step a Construct instance one layer down.
-construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.
+construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.	## Insert strings: instance name, layer number
 
 ## construct:verifier
 construct.commands.verifier=Toggle block validation overlay for a Construct instance.
-construct.commands.verifier.enabled=§aEnabled verifier for instance "%1".
-construct.commands.verifier.disabled=§aDisabled verifier for instance "%1".
+construct.commands.verifier.enabled=§aEnabled verifier for instance "%1".	## Insert string: instance name
+construct.commands.verifier.disabled=§aDisabled verifier for instance "%1".	## Insert string: instance name
 
 ## construct:option
 construct.commands.option=Toggle your Construct builder options.
-construct.commands.option.success=§aSet option "%1" to %2.
-construct.commands.option.unknownOption=§cUnknown option "%1".
+construct.commands.option.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
+construct.commands.option.unknownOption=§cUnknown option "%1".	## Insert string: option name
 
 ## construct:instanceinfo
 construct.commands.instanceinfo=Print Construct instance details to chat.
-construct.commands.instanceinfo.header=§a=== Instance Info for "%1" ===§r
-construct.commands.instanceinfo.structure=§7Structure:§r %1
-construct.commands.instanceinfo.location=§7Location:§r %1 in %2
-construct.commands.instanceinfo.noLocation=§7Location:§r (none)
-construct.commands.instanceinfo.enabled=§7Enabled:§r %1
-construct.commands.instanceinfo.layer=§7Layer:§r %1 / %2
-construct.commands.instanceinfo.verifier=§7Verifier running:§r %1
-construct.commands.instanceinfo.size=§7Size:§r %1 (%2 blocks)
+construct.commands.instanceinfo.header=§a=== Instance Info for "%1" ===§r	## Insert string: instance name
+construct.commands.instanceinfo.structure=§7Structure:§r %1	## Insert string: structure name
+construct.commands.instanceinfo.location=§7Location:§r %1 in %2	## Insert strings: coordinates, dimension
+construct.commands.instanceinfo.noLocation=§7Location:§r (none)	## Used when the instance has no saved location
+construct.commands.instanceinfo.enabled=§7Enabled:§r %1	## Insert string: true/false indicating whether the instance is enabled
+construct.commands.instanceinfo.layer=§7Layer:§r %1 / %2	## Insert strings: current layer, max layer
+construct.commands.instanceinfo.verifier=§7Verifier running:§r %1	## Insert string: true/false indicating whether the verifier is running
+construct.commands.instanceinfo.size=§7Size:§r %1 (%2 blocks)	## Insert strings: size (x, y, z), total block volume count
 
 ## construct:stats
 construct.commands.stats=Run the Construct structure verifier and print statistics.
@@ -182,13 +182,13 @@ construct.commands.stats.alreadyRunning=§cA verification is already in progress
 
 ## construct:materials
 construct.commands.materials=Print the material list for a Construct instance.
-construct.commands.materials.headerAll=§aMaterials for "%1":§r
-construct.commands.materials.headerMissing=§aMissing materials for "%1":§r
+construct.commands.materials.headerAll=§aMaterials for "%1":§r	## Insert string: instance name
+construct.commands.materials.headerMissing=§aMissing materials for "%1":§r	## Insert string: instance name
 construct.commands.materials.empty=§7(no materials)
 
 ## construct:tag
 construct.commands.tag=Rename the held Construct item to an instance name for quick-open.
-construct.commands.tag.success=§aTagged held Construct item with instance "%1".
+construct.commands.tag.success=§aTagged held Construct item with instance "%1".	## Insert string: instance name
 construct.commands.tag.notHoldingItem=§cYou must be holding a Construct item.
 
 ## Errors
