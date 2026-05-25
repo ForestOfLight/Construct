@@ -22,7 +22,7 @@ import './commands/LayerCommand';
 import './commands/NextLayerCommand';
 import './commands/PrevLayerCommand';
 import './commands/VerifierCommand';
-import './commands/OptionCommand';
+import './commands/BuilderCommand';
 import './commands/InstanceInfoCommand';
 import './commands/StatsCommand';
 import './commands/MaterialsCommand';

@@ -160,10 +160,10 @@ construct.commands.verifier=Toggle block validation overlay for a Construct inst
 construct.commands.verifier.enabled=§aEnabled verifier for instance "%1".	## Insert string: instance name
 construct.commands.verifier.disabled=§aDisabled verifier for instance "%1".	## Insert string: instance name
 
-## construct:option
-construct.commands.option=Toggle your Construct builder options.
-construct.commands.option.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
-construct.commands.option.unknownOption=§cUnknown option "%1".	## Insert string: option name
+## construct:builder
+construct.commands.builder=Toggle your Construct builder options.
+construct.commands.builder.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
+construct.commands.builder.unknownOption=§cUnknown option "%1".	## Insert string: option name
 
 ## construct:instanceinfo
 construct.commands.instanceinfo=Print Construct instance details to chat.
