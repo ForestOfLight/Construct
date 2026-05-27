@@ -16,7 +16,7 @@
     ],
     "dependencies": [
         {
-            "uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58", // Construct BP
+            "uuid": "8c0c0153-d8b9-482a-889f-aef922b8fe58",
             "version": [1, 0, 9]
         }
     ],
