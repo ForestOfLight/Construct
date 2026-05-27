@@ -30,3 +30,4 @@ import './commands/TagCommand';
 
 // Other
 import './classes/BlockInfo';
+import './classes/Extensions/Ready'
