@@ -8,7 +8,7 @@ export class CommandResponseError extends Error {
         throw new Error('getRawMessage() must be implemented by subclasses of CommandResponseError');
     }
 
-    sendTo(source) {
-        source.sendMessage(this.getRawMessage());
+    sendTo(origin) {
+        origin.sendMessage(this.getRawMessage());
     }
 }

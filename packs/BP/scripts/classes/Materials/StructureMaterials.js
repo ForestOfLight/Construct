@@ -30,6 +30,10 @@ class StructureMaterials {
         }
     }
 
+    get materials() {
+        return this.materials;
+    }
+
     get(itemType) {
         return this.materials[itemType];
     }

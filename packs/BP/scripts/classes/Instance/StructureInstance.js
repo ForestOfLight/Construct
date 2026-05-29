@@ -7,6 +7,8 @@ import { world, system, TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
 import { VerificationRenderer } from "../Render/VerificationRenderer";
+import { structureCollection } from "../Structure/StructureCollection";
+import { InstanceExistsError } from "../Errors/InstanceExistsError";
 
 export class StructureInstance {
     options;
@@ -185,17 +187,24 @@ export class StructureInstance {
     }
 
     enable() {
-        this.options.enable();
+        this.options.setEnabled(true);
         this.refreshBox();
     }
 
     disable() {
-        this.options.disable();
+        this.options.setEnabled(false);
         this.refreshBox();
     }
 
     rename(newName) {
+        if (structureCollection.has(newName))
+            throw new InstanceExistsError(newName);
         this.options.rename(newName);
+    }
+
+    setStructure(structureId) {
+        this.options.structureId = structureId;
+        this.structure = new Structure(structureId);
     }
 
     place(dimensionId, worldLocation) {
@@ -276,5 +285,37 @@ export class StructureInstance {
 
     toStructureCoords(worldLocation) {
         return Vector.from(worldLocation).subtract(this.options.worldLocation);
+    }
+
+    asPacket() {
+        const dimensionLocation = this.getLocation();
+        return {
+            name: this.getName(),
+            structureId: this.getStructureId(),
+            isEnabled: this.isEnabled(),
+            dimensionId: dimensionLocation.dimensionId,
+            location: { x: dimensionLocation.location.x, y: dimensionLocation.location.y, z: dimensionLocation.location.z },
+            bounds: this.getBounds(),
+            currentLayer: this.getLayer(),
+            maxLayer: this.getMaxLayer(),
+            verifier: {
+                isEnabled: this.options.verifier.isEnabled,
+                trackPlayerDistance: this.options.verifier.trackPlayerDistance,
+                particleLifetime: this.options.verifier.particleLifetime
+            }
+        };
+    }
+
+    setOptions(newOptions) {
+        const newVerifierOptions = newOptions.verifier;
+        this.options.rename(newOptions.name);
+        this.options.setStructure(newOptions.structureId);
+        this.options.setEnabled(newOptions.isEnabled);
+        this.options.move(newOptions.dimensionId, newOptions.location);
+        this.options.setLayer(newOptions.currentLayer);
+        this.options.setVerifierEnabled(newVerifierOptions.isEnabled);
+        this.options.setVerifierDistance(newVerifierOptions.trackPlayerDistance);
+        this.options.setVerifierParticleLifetime(newVerifierOptions.particleLifetime);
+        this.options.save();
     }
 }

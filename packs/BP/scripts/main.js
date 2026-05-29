@@ -28,6 +28,8 @@ import './commands/StatsCommand';
 import './commands/MaterialsCommand';
 import './commands/TagCommand';
 
+// API
+import './API/ConstructAPI';
+
 // Other
 import './classes/BlockInfo';
-import './classes/Extensions/Ready'
