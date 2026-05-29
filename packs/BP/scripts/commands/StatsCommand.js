@@ -14,16 +14,16 @@ export class StatsCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName) => this.run(source, instanceName)
+            callback: (origin, instanceName) => this.run(origin, instanceName)
         });
     }
 
-    run(source, instanceName) {
+    run(origin, instanceName) {
         const instance = structureCollection.get(instanceName);
         if (this.structureVerifier)
             return { status: CustomCommandStatus.Failure, error: 'construct.commands.stats.alreadyRunning' };
         system.run(async () => {
-            source.sendMessage(await this.getStatsMessage(instance));
+            origin.sendMessage(await this.getStatsMessage(instance));
         });
         return { status: CustomCommandStatus.Success };
     }

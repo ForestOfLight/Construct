@@ -12,14 +12,14 @@ export class EnableCommand extends Command {
                 { name: 'state', type: CustomCommandParamType.Boolean }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, state) => this.run(source, instanceName, state)
+            callback: (origin, instanceName, state) => this.run(origin, instanceName, state)
         });
     }
 
-    run(source, instanceName, state) {
+    run(origin, instanceName, state) {
         const instance = structureCollection.get(instanceName);
         if (state && !instance.hasLocation()) {
-            source.sendMessage({ translate: 'construct.commands.error.noLocation', with: [instanceName] });
+            origin.sendMessage({ translate: 'construct.commands.error.noLocation', with: [instanceName] });
             return void 0;
         }
         system.run(() => {
@@ -27,13 +27,13 @@ export class EnableCommand extends Command {
                 instance.enable();
             else
                 instance.disable();
-            this.sendFeedback(source, instanceName, state);
+            this.sendFeedback(origin, instanceName, state);
         });
         return { status: CustomCommandStatus.Success };
     }
 
-    sendFeedback(source, instanceName, state) {
-        source.sendMessage({ translate: state ? 'construct.commands.enable.true' : 'construct.commands.enable.false', with: [instanceName] });
+    sendFeedback(origin, instanceName, state) {
+        origin.sendMessage({ translate: state ? 'construct.commands.enable.true' : 'construct.commands.enable.false', with: [instanceName] });
     }
 }
 

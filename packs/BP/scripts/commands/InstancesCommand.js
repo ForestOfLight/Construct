@@ -8,11 +8,11 @@ export class InstancesCommand extends Command {
             name: 'instances',
             description: 'construct.commands.instances',
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source) => this.run(source)
+            callback: (origin) => this.run(origin)
         });
     }
 
-    run(source) {
+    run(origin) {
         const names = structureCollection.getInstanceNames();
         if (names.length === 0)
             return { status: CustomCommandStatus.Success, message: 'construct.commands.instances.empty' };
@@ -29,7 +29,7 @@ export class InstancesCommand extends Command {
             });
             rawtext.push({ text: '\n' });
         }
-        source.sendMessage({ rawtext });
+        origin.sendMessage({ rawtext });
         return { status: CustomCommandStatus.Success };
     }
 

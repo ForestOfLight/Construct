@@ -11,12 +11,12 @@ export class ConstructCommand extends Command {
             cheatsRequired: false,
             allowedSources: [PlayerCommandOrigin],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source) => this.run(source)
+            callback: (origin) => this.run(origin)
         });
     }
 
-    run(source) {
-        const player = source.getSource();
+    run(origin) {
+        const player = origin.getSource();
         system.run(() => {
             this.giveMenuItem(player);
         });

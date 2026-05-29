@@ -11,14 +11,14 @@ export class PrevLayerCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName) => this.run(source, instanceName)
+            callback: (origin, instanceName) => this.run(origin, instanceName)
         });
     }
 
-    run(source, instanceName) {
+    run(origin, instanceName) {
         const instance = structureCollection.get(instanceName);
         instance.decreaseLayer();
-        source.sendMessage({ translate: 'construct.commands.prevlayer.success', with: [instanceName, String(instance.getLayer())] });
+        origin.sendMessage({ translate: 'construct.commands.prevlayer.success', with: [instanceName, String(instance.getLayer())] });
         return { status: CustomCommandStatus.Success };
     }
 }

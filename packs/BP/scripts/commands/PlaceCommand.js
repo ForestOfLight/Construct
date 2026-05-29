@@ -16,17 +16,17 @@ export class PlaceCommand extends Command {
                 { name: 'location', type: CustomCommandParamType.Location }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, dimensionId, location) => this.run(source, instanceName, dimensionId, location)
+            callback: (origin, instanceName, dimensionId, location) => this.run(origin, instanceName, dimensionId, location)
         });
     }
 
-    run(source, instanceName, dimensionId, location) {
+    run(origin, instanceName, dimensionId, location) {
         const instance = structureCollection.get(instanceName);
         const flooredLocation = Vector.from(location).floor();
         this.assertDimensionExists(dimensionId);
         system.run(() => {
             instance.place(dimensionId, flooredLocation);
-            source.sendMessage({ translate: 'construct.commands.place.success', with: [instanceName, flooredLocation.toString(), dimensionId.replace('minecraft:', '')] });
+            origin.sendMessage({ translate: 'construct.commands.place.success', with: [instanceName, flooredLocation.toString(), dimensionId.replace('minecraft:', '')] });
         });
         return { status: CustomCommandStatus.Success };
     }

@@ -12,18 +12,18 @@ export class RenameCommand extends Command {
                 { name: 'newName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, newName) => this.run(source, instanceName, newName)
+            callback: (origin, instanceName, newName) => this.run(origin, instanceName, newName)
         });
     }
 
-    run(source, instanceName, newName) {
+    run(origin, instanceName, newName) {
         const instance = structureCollection.get(instanceName);
         if (structureCollection.has(newName)) {
-            source.sendMessage({ translate: 'construct.error.instanceExists', with: [newName] });
+            origin.sendMessage({ translate: 'construct.error.instanceExists', with: [newName] });
             return void 0;
         }
         structureCollection.rename(instanceName, newName);
-        source.sendMessage({ translate: 'construct.commands.rename.success', with: [instanceName, newName] });
+        origin.sendMessage({ translate: 'construct.commands.rename.success', with: [instanceName, newName] });
         return { status: CustomCommandStatus.Success };
     }
 }

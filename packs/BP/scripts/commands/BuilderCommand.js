@@ -17,19 +17,19 @@ export class BuilderCommand extends Command {
                 { name: 'builderOption', values: ['easyPlace', 'fastEasyPlace', 'materialGrabber'] }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, builderOption, state) => this.run(source, builderOption, state)
+            callback: (origin, builderOption, state) => this.run(origin, builderOption, state)
         });
     }
 
-    run(source, builderOption, state) {
+    run(origin, builderOption, state) {
         if (!BuilderOptions.get(builderOption)) {
-            source.sendMessage({ translate: 'construct.commands.builder.unknownOption', with: [builderOption] });
+            origin.sendMessage({ translate: 'construct.commands.builder.unknownOption', with: [builderOption] });
             return void 0;
         }
         system.run(() => {
-            const player = source.getSource();
+            const player = origin.getSource();
             BuilderOptions.setValue(builderOption, player.id, state);
-            source.sendMessage({ translate: 'construct.commands.builder.success', with: [builderOption, String(state)] });
+            origin.sendMessage({ translate: 'construct.commands.builder.success', with: [builderOption, String(state)] });
         });
         return { status: CustomCommandStatus.Success };
     }

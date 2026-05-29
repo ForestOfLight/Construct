@@ -14,13 +14,13 @@ export class TagCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName) => this.run(source, instanceName)
+            callback: (origin, instanceName) => this.run(origin, instanceName)
         });
     }
 
-    run(source, instanceName) {
+    run(origin, instanceName) {
         const instance = structureCollection.get(instanceName);
-        const player = source.getSource();
+        const player = origin.getSource();
         const equipment = player.getComponent(EntityComponentTypes.Equippable);
         const itemStack = equipment?.getEquipment(EquipmentSlot.Mainhand);
         if (itemStack?.typeId !== MENU_ITEM)
@@ -28,7 +28,7 @@ export class TagCommand extends Command {
         system.run(() => {
             itemStack.nameTag = instanceName;
             equipment.setEquipment(EquipmentSlot.Mainhand, itemStack);
-            source.sendMessage({ translate: 'construct.commands.tag.success', with: [instanceName] });
+            origin.sendMessage({ translate: 'construct.commands.tag.success', with: [instanceName] });
         });
         return { status: CustomCommandStatus.Success };
     }

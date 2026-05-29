@@ -14,33 +14,33 @@ export class CreateCommand extends Command {
                 { name: 'structureId', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, structureId) => this.run(source, instanceName, structureId)
+            callback: (origin, instanceName, structureId) => this.run(origin, instanceName, structureId)
         });
     }
 
-    run(source, instanceName, structureId) {
-        this.tryAddStructure(source, instanceName, structureId);
+    run(origin, instanceName, structureId) {
+        this.tryAddStructure(origin, instanceName, structureId);
         return { status: CustomCommandStatus.Success };
     }
 
-    tryAddStructure(source, instanceName, structureId) {
+    tryAddStructure(origin, instanceName, structureId) {
         system.run(() => {
             try {
-                this.addStructure(source, instanceName, structureId);
+                this.addStructure(origin, instanceName, structureId);
             } catch (error) {
-                this.handleStructureAdditionErrors(source, error);
+                this.handleStructureAdditionErrors(origin, error);
             }
         });
     }
 
-    addStructure(source, instanceName, structureId) {
+    addStructure(origin, instanceName, structureId) {
         structureCollection.add(instanceName, structureId);
-        source.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
+        origin.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
     }
 
-    handleStructureAdditionErrors(source, error) {
+    handleStructureAdditionErrors(origin, error) {
         if (error instanceof InstanceExistsError || error instanceof StructureNotFoundError)
-            error.sendTo(source);
+            error.sendTo(origin);
         else
             throw error;
     }

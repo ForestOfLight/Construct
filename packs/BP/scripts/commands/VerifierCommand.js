@@ -12,22 +12,22 @@ export class VerifierCommand extends Command {
                 { name: 'state', type: CustomCommandParamType.Boolean }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, state) => this.run(source, instanceName, state)
+            callback: (origin, instanceName, state) => this.run(origin, instanceName, state)
         });
     }
 
-    run(source, instanceName, state) {
+    run(origin, instanceName, state) {
         const instance = structureCollection.get(instanceName);
         if (state)
             instance.setVerifierEnabled(true);
         else
             instance.setVerifierEnabled(false);
-        this.sendFeedback(source, instanceName, state);
+        this.sendFeedback(origin, instanceName, state);
         return { status: CustomCommandStatus.Success };
     }
 
-    sendFeedback(source, instanceName, state) {
-        source.sendMessage({ translate: state ? 'construct.commands.verifier.enabled' : 'construct.commands.verifier.disabled', with: [instanceName] });
+    sendFeedback(origin, instanceName, state) {
+        origin.sendMessage({ translate: state ? 'construct.commands.verifier.enabled' : 'construct.commands.verifier.disabled', with: [instanceName] });
     }
 }
 

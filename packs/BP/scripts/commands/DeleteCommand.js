@@ -11,15 +11,15 @@ export class DeleteCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName) => this.run(source, instanceName)
+            callback: (origin, instanceName) => this.run(origin, instanceName)
         });
     }
 
-    run(source, instanceName) {
+    run(origin, instanceName) {
         const instance = structureCollection.get(instanceName);
         system.run(() => {
             structureCollection.delete(instanceName);
-            source.sendMessage({ translate: 'construct.commands.delete.success', with: [instanceName] });
+            origin.sendMessage({ translate: 'construct.commands.delete.success', with: [instanceName] });
         });
         return { status: CustomCommandStatus.Success };
     }

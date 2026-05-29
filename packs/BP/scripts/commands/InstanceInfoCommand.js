@@ -12,11 +12,11 @@ export class InstanceInfoCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName) => this.run(source, instanceName)
+            callback: (origin, instanceName) => this.run(origin, instanceName)
         });
     }
 
-    run(source, instanceName) {
+    run(origin, instanceName) {
         const instance = structureCollection.get(instanceName);
         const message = { rawtext: [
             this.getHeaderText(instance),
@@ -33,7 +33,7 @@ export class InstanceInfoCommand extends Command {
             { text: '\n' },
             this.getSizeText(instance)
         ]};
-        source.sendMessage(message);
+        origin.sendMessage(message);
         return { status: CustomCommandStatus.Success };
     }
 

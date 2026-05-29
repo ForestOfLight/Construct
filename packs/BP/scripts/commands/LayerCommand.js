@@ -12,19 +12,19 @@ export class LayerCommand extends Command {
                 { name: 'layer', type: CustomCommandParamType.Integer }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, layer) => this.run(source, instanceName, layer)
+            callback: (origin, instanceName, layer) => this.run(origin, instanceName, layer)
         });
     }
 
-    run(source, instanceName, layer) {
+    run(origin, instanceName, layer) {
         const instance = structureCollection.get(instanceName);
         const max = instance.getMaxLayer();
         if (layer < 0 || layer > max) {
-            source.sendMessage({ translate: 'construct.commands.layer.outOfBounds', with: [String(layer), instanceName, String(max)] });
+            origin.sendMessage({ translate: 'construct.commands.layer.outOfBounds', with: [String(layer), instanceName, String(max)] });
             return void 0;
         }
         instance.setLayer(layer);
-        source.sendMessage({ translate: 'construct.commands.layer.success', with: [instanceName, String(layer)] });
+        origin.sendMessage({ translate: 'construct.commands.layer.success', with: [instanceName, String(layer)] });
         return { status: CustomCommandStatus.Success };
     }
 }

@@ -16,39 +16,39 @@ export class MaterialsCommand extends Command {
                 { name: 'missing', type: CustomCommandParamType.Boolean }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (source, instanceName, missing) => this.run(source, instanceName, missing)
+            callback: (origin, instanceName, missing) => this.run(origin, instanceName, missing)
         });
     }
 
-    run(source, instanceName, missing) {
+    run(origin, instanceName, missing) {
         const instance = structureCollection.get(instanceName);
         const onlyMissing = missing === true;
         if (onlyMissing)
-            this.assertIsPlayer(source);
+            this.assertIsPlayer(origin);
         const headerKey = onlyMissing ? 'construct.commands.materials.headerMissing' : 'construct.commands.materials.headerAll';
         const rawtext = [
             { translate: headerKey, with: [instanceName] },
             { text: '\n' }
         ];
-        const list = this.getMaterialList(source, instance, onlyMissing);
+        const list = this.getMaterialList(origin, instance, onlyMissing);
         if (!list.rawtext || list.rawtext.length === 0)
             rawtext.push({ translate: 'construct.commands.materials.empty' });
         else
             rawtext.push(list);
-        source.sendMessage({ rawtext });
+        origin.sendMessage({ rawtext });
         return { status: CustomCommandStatus.Success };
     }
 
-    assertIsPlayer(source) {
-        if (!(source instanceof PlayerCommandOrigin))
+    assertIsPlayer(origin) {
+        if (!(origin instanceof PlayerCommandOrigin))
             throw new NotAPlayerError();
     }
 
-    getMaterialList(source, instance, onlyMissing) {
+    getMaterialList(origin, instance, onlyMissing) {
         const materials = instance.getActiveMaterials();
         let container;
         if (onlyMissing) {
-            const player = source.getSource();
+            const player = origin.getSource();
             const inventoryComponent = player?.getComponent(EntityComponentTypes.Inventory);
             container = inventoryComponent?.container;
         }
