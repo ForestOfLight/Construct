@@ -1,7 +1,7 @@
 import { InstanceExistsError } from "../../classes/Errors/InstanceExistsError";
 import { InstanceNotFoundError } from "../../classes/Errors/InstanceNotFoundError";
 import { StructureNotFoundError } from "../../classes/Errors/StructureNotFoundError";
-import { APICallerError, VoidModel } from "../../lib/AddonAPIKit/AddonAPIKit";
+import { APICallerError, VoidModel } from "../../lib/AddonAPIKit";
 import { AddInstanceParameterModel, InstanceModel, InstanceNameParameterModel, InstancesModel, StructureMaterialsModel } from "../models/InstancesModel";
 
 export class InstancesController extends APIController {

@@ -1,5 +1,5 @@
 import { BuilderNotFoundError } from "../../classes/Errors/BuilderNotFoundError";
-import { APICallerError } from "../../lib/AddonAPIKit/AddonAPIKit";
+import { APICallerError } from "../../lib/AddonAPIKit";
 import { BuilderIdParameterModel } from "../models/BuildersModel";
 
 export class BuildersController extends APIController {

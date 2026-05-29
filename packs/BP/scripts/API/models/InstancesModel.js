@@ -1,4 +1,4 @@
-import { PROTO } from '../../lib/AddonAPIKit/AddonAPIKit';
+import { PROTO } from '../../lib/AddonAPIKit';
 
 const LocationModel = PROTO.Object({
     x: PROTO.Float64,

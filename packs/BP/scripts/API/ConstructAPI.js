@@ -1,4 +1,4 @@
-import { AddonAPI } from "../lib/AddonAPIKit/AddonAPIKit";
+import { AddonAPI } from "../lib/AddonAPIKit";
 import { PACK_IDENTIFIER } from "../consts";
 import { InstancesController } from "./controllers/InstancesController";
 import { structureCollection } from "../classes/Structure/StructureCollection";

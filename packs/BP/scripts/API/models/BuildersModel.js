@@ -1,4 +1,4 @@
-import { PROTO } from "../../lib/AddonAPIKit/AddonAPIKit";
+import { PROTO } from "../../lib/AddonAPIKit";
 
 export const BuilderModel = PROTO.Object({
     playerId: PROTO.String,
