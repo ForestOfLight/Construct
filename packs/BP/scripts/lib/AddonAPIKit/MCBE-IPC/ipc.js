@@ -2,7 +2,7 @@
  * @license
  * MIT License
  *
- * Copyright (c) 2025 OmniacDev
+ * Copyright (c) 2026 OmniacDev
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,10 +22,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { ScriptEventSource, system, world } from '@minecraft/server';
+import { ScriptEventSource, system } from '@minecraft/server';
+var UTIL;
+(function (UTIL) {
+    function generate_id() {
+        const r = (Math.random() * 0x100000000) >>> 0;
+        return r.toString(16).padStart(8, '0').toUpperCase();
+    }
+    UTIL.generate_id = generate_id;
+})(UTIL || (UTIL = {}));
 export var PROTO;
 (function (PROTO) {
-    class ByteQueue {
+    class Buffer {
         get end() {
             return this._length + this._offset;
         }
@@ -41,20 +49,39 @@ export var PROTO;
             this._length = 0;
             this._offset = 0;
         }
-        write(...values) {
-            this.ensure_capacity(values.length);
-            this._buffer.set(values, this.end);
-            this._length += values.length;
+        reserve(amount) {
+            this.ensure_capacity(amount);
+            const end = this.end;
+            this._length += amount;
+            return end;
         }
-        read(amount = 1) {
-            if (this._length > 0) {
-                const max_amount = amount > this._length ? this._length : amount;
-                const values = this._buffer.subarray(this._offset, this._offset + max_amount);
-                this._length -= max_amount;
-                this._offset += max_amount;
-                return globalThis.Array.from(values);
+        consume(amount) {
+            if (amount > this._length)
+                throw new Error('not enough bytes');
+            const front = this.front;
+            this._length -= amount;
+            this._offset += amount;
+            return front;
+        }
+        write(input) {
+            if (typeof input === 'number') {
+                const offset = this.reserve(1);
+                this._buffer[offset] = input;
             }
-            return [];
+            else {
+                const offset = this.reserve(input.length);
+                this._buffer.set(input, offset);
+            }
+        }
+        read(amount) {
+            if (amount === undefined) {
+                const offset = this.consume(1);
+                return this._buffer[offset];
+            }
+            else {
+                const offset = this.consume(amount);
+                return this._buffer.slice(offset, offset + amount);
+            }
         }
         ensure_capacity(size) {
             if (this.end + size > this._buffer.length) {
@@ -66,22 +93,26 @@ export var PROTO;
             }
         }
         static from_uint8array(array) {
-            const byte_queue = new ByteQueue();
-            byte_queue._buffer = array;
-            byte_queue._length = array.length;
-            byte_queue._offset = 0;
-            byte_queue._data_view = new DataView(array.buffer);
-            return byte_queue;
+            const buffer = new Buffer();
+            buffer._buffer = array;
+            buffer._length = array.length;
+            buffer._offset = 0;
+            buffer._data_view = new DataView(array.buffer);
+            return buffer;
         }
         to_uint8array() {
             return this._buffer.subarray(this._offset, this.end);
         }
     }
-    PROTO.ByteQueue = ByteQueue;
+    PROTO.Buffer = Buffer;
     let MIPS;
     (function (MIPS) {
-        function* serialize(byte_queue) {
-            const uint8array = byte_queue.to_uint8array();
+        function is_valid(str) {
+            return str.startsWith('(0x') && str.endsWith(')');
+        }
+        MIPS.is_valid = is_valid;
+        function* serialize(stream) {
+            const uint8array = stream.to_uint8array();
             let str = '(0x';
             for (let i = 0; i < uint8array.length; i++) {
                 const hex = uint8array[i].toString(16).padStart(2, '0').toUpperCase();
@@ -93,17 +124,17 @@ export var PROTO;
         }
         MIPS.serialize = serialize;
         function* deserialize(str) {
-            if (str.startsWith('(0x') && str.endsWith(')')) {
-                const result = [];
+            if (is_valid(str)) {
+                const buffer = new Buffer();
                 const hex_str = str.slice(3, str.length - 1);
                 for (let i = 0; i < hex_str.length; i++) {
                     const hex = hex_str[i] + hex_str[++i];
-                    result.push(parseInt(hex, 16));
+                    buffer.write(parseInt(hex, 16));
                     yield;
                 }
-                return ByteQueue.from_uint8array(new Uint8Array(result));
+                return buffer;
             }
-            return new ByteQueue();
+            return new Buffer();
         }
         MIPS.deserialize = deserialize;
     })(MIPS = PROTO.MIPS || (PROTO.MIPS = {}));
@@ -125,120 +156,98 @@ export var PROTO;
     };
     PROTO.Int8 = {
         *serialize(value, stream) {
-            const length = 1;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setInt8(stream.end - length, value);
+            stream.data_view.setInt8(stream.reserve(1), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getInt8(stream.front);
-            stream.read(1);
-            return value;
+            return stream.data_view.getInt8(stream.consume(1));
         }
     };
     PROTO.Int16 = {
         *serialize(value, stream) {
-            const length = 2;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setInt16(stream.end - length, value);
+            stream.data_view.setInt16(stream.reserve(2), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getInt16(stream.front);
-            stream.read(2);
-            return value;
+            return stream.data_view.getInt16(stream.consume(2));
         }
     };
     PROTO.Int32 = {
         *serialize(value, stream) {
-            const length = 4;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setInt32(stream.end - length, value);
+            stream.data_view.setInt32(stream.reserve(4), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getInt32(stream.front);
-            stream.read(4);
-            return value;
+            return stream.data_view.getInt32(stream.consume(4));
         }
     };
     PROTO.UInt8 = {
         *serialize(value, stream) {
-            const length = 1;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setUint8(stream.end - length, value);
+            stream.data_view.setUint8(stream.reserve(1), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getUint8(stream.front);
-            stream.read(1);
-            return value;
+            return stream.data_view.getUint8(stream.consume(1));
         }
     };
     PROTO.UInt16 = {
         *serialize(value, stream) {
-            const length = 2;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setUint16(stream.end - length, value);
+            stream.data_view.setUint16(stream.reserve(2), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getUint16(stream.front);
-            stream.read(2);
-            return value;
+            return stream.data_view.getUint16(stream.consume(2));
         }
     };
     PROTO.UInt32 = {
         *serialize(value, stream) {
-            const length = 4;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setUint32(stream.end - length, value);
+            stream.data_view.setUint32(stream.reserve(4), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getUint32(stream.front);
-            stream.read(4);
-            return value;
+            return stream.data_view.getUint32(stream.consume(4));
         }
     };
     PROTO.UVarInt32 = {
         *serialize(value, stream) {
+            value >>>= 0;
             while (value >= 0x80) {
                 stream.write((value & 0x7f) | 0x80);
-                value >>= 7;
+                value >>>= 7;
                 yield;
             }
             stream.write(value);
         },
         *deserialize(stream) {
             let value = 0;
-            let size = 0;
-            let byte;
-            do {
-                byte = stream.read()[0];
+            for (let size = 0; size < 5; size++) {
+                const byte = stream.read();
                 value |= (byte & 0x7f) << (size * 7);
-                size += 1;
                 yield;
-            } while ((byte & 0x80) !== 0 && size < 10);
-            return value;
+                if ((byte & 0x80) == 0)
+                    break;
+            }
+            return value >>> 0;
+        }
+    };
+    PROTO.VarInt32 = {
+        *serialize(value, stream) {
+            const zigzag = (value << 1) ^ (value >> 31);
+            yield* PROTO.UVarInt32.serialize(zigzag, stream);
+        },
+        *deserialize(stream) {
+            const zigzag = yield* PROTO.UVarInt32.deserialize(stream);
+            return (zigzag >>> 1) ^ -(zigzag & 1);
         }
     };
     PROTO.Float32 = {
         *serialize(value, stream) {
-            const length = 4;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setFloat32(stream.end - length, value);
+            stream.data_view.setFloat32(stream.reserve(4), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getFloat32(stream.front);
-            stream.read(4);
-            return value;
+            return stream.data_view.getFloat32(stream.consume(4));
         }
     };
     PROTO.Float64 = {
         *serialize(value, stream) {
-            const length = 8;
-            stream.write(...globalThis.Array(length).fill(0));
-            stream.data_view.setFloat64(stream.end - length, value);
+            stream.data_view.setFloat64(stream.reserve(8), value);
         },
         *deserialize(stream) {
-            const value = stream.data_view.getFloat64(stream.front);
-            stream.read(8);
-            return value;
+            return stream.data_view.getFloat64(stream.consume(8));
         }
     };
     PROTO.String = {
@@ -264,18 +273,17 @@ export var PROTO;
             stream.write(value ? 1 : 0);
         },
         *deserialize(stream) {
-            const value = stream.read()[0];
-            return value === 1;
+            return stream.read() !== 0;
         }
     };
     PROTO.UInt8Array = {
         *serialize(value, stream) {
             yield* PROTO.UVarInt32.serialize(value.length, stream);
-            stream.write(...value);
+            stream.write(value);
         },
         *deserialize(stream) {
             const length = yield* PROTO.UVarInt32.deserialize(stream);
-            return new Uint8Array(stream.read(length));
+            return stream.read(length);
         }
     };
     PROTO.Date = {
@@ -286,94 +294,91 @@ export var PROTO;
             return new globalThis.Date(yield* PROTO.Float64.deserialize(stream));
         }
     };
-    function Object(obj) {
+    function Object(s) {
         return {
             *serialize(value, stream) {
-                for (const key in obj) {
-                    yield* obj[key].serialize(value[key], stream);
+                for (const key in s) {
+                    yield* s[key].serialize(value[key], stream);
                 }
             },
             *deserialize(stream) {
                 const result = {};
-                for (const key in obj) {
-                    result[key] = yield* obj[key].deserialize(stream);
+                for (const key in s) {
+                    result[key] = yield* s[key].deserialize(stream);
                 }
                 return result;
             }
         };
     }
     PROTO.Object = Object;
-    function Array(value) {
+    function Array(s) {
         return {
-            *serialize(array, stream) {
-                const actualValue = typeof value === 'function' ? value() : value;
-                yield* PROTO.UVarInt32.serialize(array.length, stream);
-                for (const item of array) {
-                    yield* actualValue.serialize(item, stream);
+            *serialize(value, stream) {
+                yield* PROTO.UVarInt32.serialize(value.length, stream);
+                for (const item of value) {
+                    yield* s.serialize(item, stream);
                 }
             },
             *deserialize(stream) {
-                const actualValue = typeof value === 'function' ? value() : value;
                 const result = [];
                 const length = yield* PROTO.UVarInt32.deserialize(stream);
                 for (let i = 0; i < length; i++) {
-                    result[i] = yield* actualValue.deserialize(stream);
+                    result[i] = yield* s.deserialize(stream);
                 }
                 return result;
             }
         };
     }
     PROTO.Array = Array;
-    function Tuple(...values) {
+    function Tuple(...s) {
         return {
-            *serialize(tuple, stream) {
-                for (let i = 0; i < values.length; i++) {
-                    yield* values[i].serialize(tuple[i], stream);
+            *serialize(value, stream) {
+                for (let i = 0; i < s.length; i++) {
+                    yield* s[i].serialize(value[i], stream);
                 }
             },
             *deserialize(stream) {
                 const result = [];
-                for (let i = 0; i < values.length; i++) {
-                    result[i] = yield* values[i].deserialize(stream);
+                for (let i = 0; i < s.length; i++) {
+                    result[i] = yield* s[i].deserialize(stream);
                 }
                 return result;
             }
         };
     }
     PROTO.Tuple = Tuple;
-    function Optional(value) {
+    function Optional(s) {
         return {
-            *serialize(optional, stream) {
-                yield* PROTO.Boolean.serialize(optional !== undefined, stream);
-                if (optional !== undefined) {
-                    yield* value.serialize(optional, stream);
-                }
+            *serialize(value, stream) {
+                const def = value !== undefined;
+                yield* PROTO.Boolean.serialize(def, stream);
+                if (def)
+                    yield* s.serialize(value, stream);
             },
             *deserialize(stream) {
-                const defined = yield* PROTO.Boolean.deserialize(stream);
-                if (defined) {
-                    return yield* value.deserialize(stream);
-                }
+                const def = yield* PROTO.Boolean.deserialize(stream);
+                if (def)
+                    return yield* s.deserialize(stream);
                 return undefined;
             }
         };
     }
     PROTO.Optional = Optional;
-    function Map(key, value) {
+    function Map(kS, vS) {
         return {
-            *serialize(map, stream) {
-                yield* PROTO.UVarInt32.serialize(map.size, stream);
-                for (const [k, v] of map.entries()) {
-                    yield* key.serialize(k, stream);
-                    yield* value.serialize(v, stream);
+            *serialize(value, stream) {
+                yield* PROTO.UVarInt32.serialize(value.size, stream);
+                for (const [k, v] of value) {
+                    yield* kS.serialize(k, stream);
+                    yield* vS.serialize(v, stream);
                 }
             },
             *deserialize(stream) {
                 const size = yield* PROTO.UVarInt32.deserialize(stream);
                 const result = new globalThis.Map();
                 for (let i = 0; i < size; i++) {
-                    const k = yield* key.deserialize(stream);
-                    const v = yield* value.deserialize(stream);
+                    const k = yield* kS.deserialize(stream);
+                    const v = yield* vS.deserialize(stream);
                     result.set(k, v);
                 }
                 return result;
@@ -381,19 +386,19 @@ export var PROTO;
         };
     }
     PROTO.Map = Map;
-    function Set(value) {
+    function Set(s) {
         return {
             *serialize(set, stream) {
                 yield* PROTO.UVarInt32.serialize(set.size, stream);
-                for (const [_, v] of set.entries()) {
-                    yield* value.serialize(v, stream);
+                for (const v of set) {
+                    yield* s.serialize(v, stream);
                 }
             },
             *deserialize(stream) {
                 const size = yield* PROTO.UVarInt32.deserialize(stream);
                 const result = new globalThis.Set();
                 for (let i = 0; i < size; i++) {
-                    const v = yield* value.deserialize(stream);
+                    const v = yield* s.deserialize(stream);
                     result.add(v);
                 }
                 return result;
@@ -401,21 +406,52 @@ export var PROTO;
         };
     }
     PROTO.Set = Set;
-    PROTO.Endpoint = PROTO.String;
-    PROTO.Header = PROTO.Object({
-        guid: PROTO.String,
-        encoding: PROTO.String,
-        index: PROTO.UVarInt32,
-        final: PROTO.Boolean
-    });
+    function Cached(s, depth = 16) {
+        const cache = new globalThis.Map();
+        return {
+            *serialize(value, stream) {
+                const hit = cache.get(value);
+                if (hit !== undefined) {
+                    stream.write(hit);
+                    cache.delete(value);
+                    cache.set(value, hit);
+                }
+                else {
+                    const buffer = new PROTO.Buffer();
+                    yield* s.serialize(value, buffer);
+                    const bytes = buffer.to_uint8array();
+                    stream.write(bytes);
+                    cache.set(value, bytes);
+                    if (cache.size > depth) {
+                        const first = cache.keys().next().value;
+                        cache.delete(first);
+                    }
+                }
+            },
+            *deserialize(stream) {
+                return yield* s.deserialize(stream);
+            }
+        };
+    }
+    PROTO.Cached = Cached;
 })(PROTO || (PROTO = {}));
 export var NET;
 (function (NET) {
-    const FRAG_MAX = 2048;
-    const ENCODING = 'mcbe-ipc:v3';
-    const ENDPOINTS = new Map();
-    function* serialize(byte_queue, max_size = Infinity) {
-        const uint8array = byte_queue.to_uint8array();
+    const Endpoint = PROTO.String;
+    const Meta = PROTO.Object({
+        guid: PROTO.String,
+        signature: PROTO.String
+    });
+    const Header = PROTO.Object({
+        meta: Meta,
+        index: PROTO.UVarInt32,
+        final: PROTO.Boolean
+    });
+    const LISTENERS = new Map();
+    NET.SIGNATURE = 'mcbe-ipc:v3';
+    NET.FRAG_MAX = 2048;
+    function* serialize(buffer, max_size = Infinity) {
+        const uint8array = buffer.to_uint8array();
         const result = [];
         let acc_str = '';
         let acc_size = 0;
@@ -443,7 +479,7 @@ export var NET;
     }
     NET.serialize = serialize;
     function* deserialize(strings) {
-        const result = [];
+        const buffer = new PROTO.Buffer();
         for (let i = 0; i < strings.length; i++) {
             const str = strings[i];
             for (let j = 0; j < str.length; j++) {
@@ -451,40 +487,49 @@ export var NET;
                 if (char_code <= 0xff) {
                     const hex = str[j] + str[++j];
                     const hex_code = parseInt(hex, 16);
-                    result.push(hex_code & 0xff);
-                    result.push(hex_code >> 8);
+                    buffer.write(hex_code & 0xff);
+                    buffer.write(hex_code >> 8);
                 }
                 else {
-                    result.push(char_code & 0xff);
-                    result.push(char_code >> 8);
+                    buffer.write(char_code & 0xff);
+                    buffer.write(char_code >> 8);
                 }
                 yield;
             }
             yield;
         }
-        return PROTO.ByteQueue.from_uint8array(new Uint8Array(result));
+        return buffer;
     }
     NET.deserialize = deserialize;
     system.afterEvents.scriptEventReceive.subscribe(event => {
         system.runJob((function* () {
+            if (event.sourceType !== ScriptEventSource.Server)
+                return;
             const [serialized_endpoint, serialized_header] = event.id.split(':');
+            if (!PROTO.MIPS.is_valid(serialized_endpoint))
+                return;
             const endpoint_stream = yield* PROTO.MIPS.deserialize(serialized_endpoint);
-            const endpoint = yield* PROTO.Endpoint.deserialize(endpoint_stream);
-            const listeners = ENDPOINTS.get(endpoint);
-            if (event.sourceType === ScriptEventSource.Server && listeners) {
+            const endpoint = yield* Endpoint.deserialize(endpoint_stream);
+            const listeners = LISTENERS.get(endpoint);
+            if (listeners !== undefined && PROTO.MIPS.is_valid(serialized_header)) {
                 const header_stream = yield* PROTO.MIPS.deserialize(serialized_header);
-                const header = yield* PROTO.Header.deserialize(header_stream);
-                for (let i = 0; i < listeners.length; i++) {
-                    yield* listeners[i](header, event.message);
+                const header = yield* Header.deserialize(header_stream);
+                for (const listener of [...listeners]) {
+                    try {
+                        yield* listener(header, event.message);
+                    }
+                    catch (e) {
+                        console.error(`[MCBE-IPC] listener error while handling packet on "${endpoint}":`, e);
+                    }
                 }
             }
         })());
     });
-    function create_listener(endpoint, listener) {
-        let listeners = ENDPOINTS.get(endpoint);
-        if (!listeners) {
+    function register(endpoint, listener) {
+        let listeners = LISTENERS.get(endpoint);
+        if (listeners === undefined) {
             listeners = new Array();
-            ENDPOINTS.set(endpoint, listeners);
+            LISTENERS.set(endpoint, listeners);
         }
         listeners.push(listener);
         return () => {
@@ -492,60 +537,61 @@ export var NET;
             if (idx !== -1)
                 listeners.splice(idx, 1);
             if (listeners.length === 0) {
-                ENDPOINTS.delete(endpoint);
+                LISTENERS.delete(endpoint);
             }
         };
     }
-    function generate_id() {
-        const r = (Math.random() * 0x100000000) >>> 0;
-        return ((r & 0xff).toString(16).padStart(2, '0') +
-            ((r >> 8) & 0xff).toString(16).padStart(2, '0') +
-            ((r >> 16) & 0xff).toString(16).padStart(2, '0') +
-            ((r >> 24) & 0xff).toString(16).padStart(2, '0')).toUpperCase();
-    }
-    function* emit(endpoint, serializer, value) {
-        const guid = generate_id();
-        const endpoint_stream = new PROTO.ByteQueue();
-        yield* PROTO.Endpoint.serialize(endpoint, endpoint_stream);
+    function* emit(endpoint, serializer, value, options) {
+        const guid = options?.metaOverride?.guid ?? UTIL.generate_id();
+        const signature = options?.metaOverride?.signature ?? NET.SIGNATURE;
+        const endpoint_stream = new PROTO.Buffer();
+        yield* Endpoint.serialize(endpoint, endpoint_stream);
         const serialized_endpoint = yield* PROTO.MIPS.serialize(endpoint_stream);
-        const RUN = function* (header, serialized_packet) {
-            const header_stream = new PROTO.ByteQueue();
-            yield* PROTO.Header.serialize(header, header_stream);
-            const serialized_header = yield* PROTO.MIPS.serialize(header_stream);
-            world
-                .getDimension('overworld')
-                .runCommand(`scriptevent ${serialized_endpoint}:${serialized_header} ${serialized_packet}`);
-        };
-        const packet_stream = new PROTO.ByteQueue();
+        const packet_stream = new PROTO.Buffer();
         yield* serializer.serialize(value, packet_stream);
-        const serialized_packets = yield* serialize(packet_stream, FRAG_MAX);
+        const serialized_packets = yield* serialize(packet_stream, NET.FRAG_MAX);
         for (let i = 0; i < serialized_packets.length; i++) {
             const serialized_packet = serialized_packets[i];
-            yield* RUN({ guid, encoding: ENCODING, index: i, final: i === serialized_packets.length - 1 }, serialized_packet);
+            const header = {
+                meta: { guid, signature },
+                index: i,
+                final: i === serialized_packets.length - 1
+            };
+            const header_stream = new PROTO.Buffer();
+            yield* Header.serialize(header, header_stream);
+            const serialized_header = yield* PROTO.MIPS.serialize(header_stream);
+            system.sendScriptEvent(`${serialized_endpoint}:${serialized_header}`, serialized_packet);
         }
     }
     NET.emit = emit;
-    function listen(endpoint, serializer, callback) {
+    function listen(endpoint, deserializer, callback, options) {
         const buffer = new Map();
-        const listener = function* (payload, serialized_packet) {
-            let fragment = buffer.get(payload.guid);
-            if (!fragment) {
-                fragment = { size: -1, serialized_packets: [], data_size: 0 };
-                buffer.set(payload.guid, fragment);
+        const listener = function* (header, fragment) {
+            let packet = buffer.get(header.meta.guid);
+            if (packet === undefined) {
+                if (options?.filter?.(header.meta) === false)
+                    return;
+                packet = { size: -1, fragments: [], received: 0 };
+                buffer.set(header.meta.guid, packet);
             }
-            if (payload.final) {
-                fragment.size = payload.index + 1;
+            if (header.final) {
+                packet.size = header.index + 1;
             }
-            fragment.serialized_packets[payload.index] = serialized_packet;
-            fragment.data_size += payload.index + 1;
-            if (fragment.size !== -1 && fragment.data_size === (fragment.size * (fragment.size + 1)) / 2) {
-                const stream = yield* deserialize(fragment.serialized_packets);
-                const value = yield* serializer.deserialize(stream);
-                yield* callback(value);
-                buffer.delete(payload.guid);
+            if (packet.fragments[header.index] === undefined) {
+                packet.fragments[header.index] = fragment;
+                packet.received++;
+            }
+            else {
+                throw new Error(`received duplicate fragment ${header.index} for packet ${header.meta.guid}`);
+            }
+            if (packet.size !== -1 && packet.size === packet.received) {
+                const stream = yield* deserialize(packet.fragments);
+                const value = yield* deserializer.deserialize(stream);
+                yield* callback(value, header.meta);
+                buffer.delete(header.meta.guid);
             }
         };
-        return create_listener(endpoint, listener);
+        return register(endpoint, listener);
     }
     NET.listen = listen;
 })(NET || (NET = {}));
@@ -558,12 +604,22 @@ export var IPC;
     IPC.send = send;
     /** Sends an `invoke` message through IPC, and expects a result asynchronously. */
     function invoke(channel, serializer, value, deserializer) {
-        system.runJob(NET.emit(`ipc:${channel}:invoke`, serializer, value));
+        const id = UTIL.generate_id();
         return new Promise(resolve => {
-            const terminate = NET.listen(`ipc:${channel}:handle`, deserializer, function* (value) {
+            const terminate = NET.listen(`ipc:${channel}:handle`, deserializer, function* (value, meta) {
+                if (meta.signature.includes(`+correlation`) && meta.guid !== id)
+                    return;
                 resolve(value);
                 terminate();
+            }, {
+                filter: meta => !meta.signature.includes(`+correlation`) || meta.guid === id
             });
+            system.runJob(NET.emit(`ipc:${channel}:invoke`, serializer, value, {
+                metaOverride: {
+                    guid: id,
+                    signature: `${NET.SIGNATURE}+correlation`
+                }
+            }));
         });
     }
     IPC.invoke = invoke;
@@ -585,9 +641,16 @@ export var IPC;
     IPC.once = once;
     /** Adds a handler for an `invoke` IPC. This handler will be called whenever `invoke(channel, ...args)` is called */
     function handle(channel, deserializer, serializer, listener) {
-        return NET.listen(`ipc:${channel}:invoke`, deserializer, function* (value) {
+        return NET.listen(`ipc:${channel}:invoke`, deserializer, function* (value, meta) {
             const result = listener(value);
-            yield* NET.emit(`ipc:${channel}:handle`, serializer, result);
+            yield* NET.emit(`ipc:${channel}:handle`, serializer, result, {
+                metaOverride: meta.signature.includes(`+correlation`)
+                    ? {
+                        guid: meta.guid,
+                        signature: `${NET.SIGNATURE}+correlation`
+                    }
+                    : undefined
+            });
         });
     }
     IPC.handle = handle;
