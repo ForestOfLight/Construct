@@ -1,4 +1,4 @@
-import { AddonAPI } from "./API";
+import { AddonAPI } from "./AddonAPI";
 import { APIController } from "./APIController";
 import { VoidModel } from "./APIModels";
 import { APICallerError } from "./Errors/APICallerError";
