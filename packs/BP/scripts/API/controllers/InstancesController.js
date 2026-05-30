@@ -1,21 +1,20 @@
 import { InstanceExistsError } from "../../classes/Errors/InstanceExistsError";
 import { InstanceNotFoundError } from "../../classes/Errors/InstanceNotFoundError";
 import { StructureNotFoundError } from "../../classes/Errors/StructureNotFoundError";
-import { APICallerError, VoidModel } from "../../lib/AddonAPIKit";
+import { APICallerError, VoidModel, APIController } from "../../lib/AddonAPIKit";
 import { AddInstanceParameterModel, InstanceModel, InstanceNameParameterModel, InstancesModel, StructureMaterialsModel } from "../models/InstancesModel";
 
 export class InstancesController extends APIController {
     #context;
 
     constructor(context) {
-        super({
-            "instances": { callback: this.getInstances, parameterModel: VoidModel, returnModel: InstancesModel },
-            "instance:get": { callback: this.getInstance, parameterModel: InstanceNameParameterModel, returnModel: InstanceModel },
-            "instance:add": { callback: this.addInstance, parameterModel: AddInstanceParameterModel, returnModel: InstanceModel },
-            "instance:edit": { callback: this.editInstance, parameterModel: InstanceModel, returnModel: InstanceModel },
-            "instance:delete": { callback: this.deleteInstance, parameterModel: InstanceNameParameterModel, returnModel: VoidModel },
-            "instance:materials": { callback: this.getMaterials, parameterModel: InstanceNameParameterModel, returnModel: StructureMaterialsModel }
-        });
+        super();
+        this.addEndpoint("instances", this.getInstances, VoidModel, InstancesModel);
+        this.addEndpoint("instance:get", this.getInstance, InstanceNameParameterModel, InstanceModel);
+        this.addEndpoint("instance:add", this.addInstance, AddInstanceParameterModel, InstanceModel);
+        this.addEndpoint("instance:edit", this.editInstance, InstanceModel, InstanceModel);
+        this.addEndpoint("instance:delete", this.deleteInstance, InstanceNameParameterModel, VoidModel);
+        this.addEndpoint("instance:materials", this.getMaterials, InstanceNameParameterModel, StructureMaterialsModel);
         this.#context = context;
     }
 

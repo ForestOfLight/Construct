@@ -4,7 +4,7 @@
  * See LICENSE for details.
  */
 
-// MCBE-IPC/ipc.js
+// src/MCBE-IPC/ipc.js
 import { ScriptEventSource, system } from "@minecraft/server";
 var UTIL;
 (function(UTIL2) {
@@ -629,7 +629,7 @@ var IPC;
   IPC2.handle = handle;
 })(IPC || (IPC = {}));
 
-// Errors/APIErrorEnum.js
+// src/Errors/APIErrorEnum.js
 var APIErrorEnum = Object.freeze({
   Unknown: 0,
   Success: 1,
@@ -637,7 +637,7 @@ var APIErrorEnum = Object.freeze({
   Server: 3
 });
 
-// Errors/APICallerError.js
+// src/Errors/APICallerError.js
 var APICallerError = class extends Error {
   constructor(error) {
     super(error.message);
@@ -648,7 +648,7 @@ var APICallerError = class extends Error {
   }
 };
 
-// Errors/APIServerError.js
+// src/Errors/APIServerError.js
 var APIServerError = class extends Error {
   constructor(error) {
     super(error.message);
@@ -658,7 +658,7 @@ var APIServerError = class extends Error {
   }
 };
 
-// Errors/APIVersionMismatchError.js
+// src/Errors/APIVersionMismatchError.js
 var APIVersionMismatchError = class extends Error {
   constructor(serverApiVersion, callerApiVersion) {
     super(`API version numbers do not match (${callerApiVersion} != ${serverApiVersion}). Please use API version ${serverApiVersion}.`);
@@ -666,7 +666,7 @@ var APIVersionMismatchError = class extends Error {
   }
 };
 
-// APIModels.js
+// src/APIModels.js
 var VoidModel = PROTO.Void;
 var ErrorModel = PROTO.Optional(PROTO.Object({
   code: PROTO.Int8,
@@ -682,14 +682,50 @@ var CallModelShell = {
   apiVersion: PROTO.String,
   parameterMap: void 0
 };
+var EndpointModel = PROTO.String;
+var EndpointsModel = PROTO.Array(EndpointModel);
 
-// AddonAPI.js
+// src/APIController.js
+var APIController = class _APIController {
+  #endpoints = {};
+  constructor() {
+    if (this.constructor === _APIController)
+      throw new Error("Cannot instantiate abstract class 'APIController'");
+  }
+  get endpoints() {
+    return this.#endpoints;
+  }
+  addEndpoint(endpoint, callback, parameterModel, returnModel) {
+    this.#endpoints[endpoint] = { callback, parameterModel, returnModel };
+  }
+};
+
+// src/EndpointsController.js
+var EndpointsController = class extends APIController {
+  #api;
+  constructor(api) {
+    this.#api = api;
+    this.addEndpoint("endpoints", this.getEndpoints, VoidModel, EndpointsModel);
+    this.addEndpoint("endpoints:has", this.hasEndpoint, EndpointModel, PROTO.Boolean);
+  }
+  getEndpoints() {
+    return this.#api.endpoints;
+  }
+  hasEndpoint(endpoint) {
+    return this.getEndpoints().includes(endpoint);
+  }
+};
+
+// src/AddonAPI.js
 var AddonAPI = class {
   #name;
   #version;
+  #allEndpoints;
   constructor(name, version) {
     this.#name = name;
     this.#version = version;
+    const endpointsController = new EndpointsController(this);
+    this.setupController(endpointsController);
   }
   get name() {
     return this.#name;
@@ -699,6 +735,9 @@ var AddonAPI = class {
   }
   get endpointBase() {
     return this.#name + ":";
+  }
+  get endpoints() {
+    return this.#allEndpoints;
   }
   setupController(apiController) {
     for (const [endpoint, features] of Object.entries(apiController.endpoints)) {
@@ -715,6 +754,7 @@ var AddonAPI = class {
       const parameters = Object.values(callPacket.parameterMap);
       return this.#handleCallback(apiVersion, callback, parameters);
     });
+    this.#allEndpoints.push(endpointPath);
   }
   #handleCallback(apiVersion, callback, parameters) {
     try {
@@ -760,28 +800,40 @@ var AddonAPI = class {
   }
 };
 
-// APIController.js
-var APIController = class _APIController {
-  #endpoints;
-  constructor(endpoints) {
-    if (this.constructor === _APIController)
-      throw new Error("Cannot instantiate abstract class 'APIController'");
-    this.#endpoints = endpoints;
-  }
-  get endpoints() {
-    return this.#endpoints;
+// src/AddonAPICaller.js
+import { system as system2 } from "@minecraft/server";
+
+// src/Errors/APIEndpointNotFoundError.js
+var APIEndpointNotFoundError = class extends Error {
+  constructor(endpoint) {
+    super(`Endpoint "${endpoint}" was not found.`);
+    this.name = "APIEndpointNotFoundError";
   }
 };
 
-// AddonAPICaller.js
+// src/AddonAPICaller.js
 var AddonAPICaller = class {
+  static #validEndpointCache = [];
   static async call(endpoint, parameterModel, parameterMap, returnDataModel) {
-    return await IPC.invoke(endpoint, parameterModel, parameterMap, returnDataModel).then((result) => result.value);
+    if (this.#validEndpointCache.length === 0) {
+      const endpointBase = endpoint.split(":")[0];
+      await this.#populateValidEndpointCache(endpointBase);
+    }
+    if (this.#validEndpointCache.includes(endpoint))
+      return await IPC.invoke(endpoint, parameterModel, parameterMap, returnDataModel).then((result) => result.value);
+    else
+      throw new APIEndpointNotFoundError(endpoint);
+  }
+  static async #populateValidEndpointCache(endpointBase) {
+    const endpointsEndpoint = endpointBase + ":endpoints";
+    const validEndpoints = await IPC.invoke(endpointsEndpoint, VoidModel, void 0, PROTO.Boolean);
+    this.#validEndpointCache.push(...validEndpoints);
   }
 };
 export {
   APICallerError,
   APIController,
+  APIErrorEnum,
   AddonAPI,
   AddonAPICaller,
   PROTO,
