@@ -1,4 +1,6 @@
-import { PROTO } from '../../lib/AddonAPIKit';
+import { PROTO } from "../../lib/AddonAPIKit";
+
+// Instances
 
 const LocationModel = PROTO.Object({
     x: PROTO.Float64,
@@ -41,4 +43,18 @@ export const AddInstanceParameterModel = PROTO.Object({
 export const EditInstanceParameterModel = PROTO.Object({
     instanceName: PROTO.String,
     instance: InstanceModel
+});
+
+// Builders
+
+export const BuilderModel = PROTO.Object({
+    playerId: PROTO.String,
+    easyPlace: PROTO.Boolean,
+    fastEasyPlace: PROTO.Boolean,
+    materialGrabber: PROTO.Boolean,
+    materialInstanceName: PROTO.String
+});
+
+export const BuilderIdParameterModel = PROTO.Object({
+    playerId: PROTO.String
 });

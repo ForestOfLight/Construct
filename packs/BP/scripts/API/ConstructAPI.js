@@ -1,11 +1,11 @@
-import { AddonAPI } from "../lib/AddonAPIKit";
+import { AddonAPIServer } from "../lib/AddonAPIKit";
 import { PACK_IDENTIFIER } from "../consts";
 import { InstancesController } from "./controllers/InstancesController";
 import { structureCollection } from "../classes/Structure/StructureCollection";
 import { BuildersController } from "./controllers/BuildersController";
 import { Builders } from "../classes/Builder/Builders";
 
-class ConstructAPI extends AddonAPI {
+class ConstructAPI extends AddonAPIServer {
     constructor(version) {
         super(PACK_IDENTIFIER, version);
         const instancesController = new InstancesController(structureCollection);

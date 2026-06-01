@@ -2,7 +2,7 @@ import { InstanceExistsError } from "../../classes/Errors/InstanceExistsError";
 import { InstanceNotFoundError } from "../../classes/Errors/InstanceNotFoundError";
 import { StructureNotFoundError } from "../../classes/Errors/StructureNotFoundError";
 import { APICallerError, VoidModel, APIController } from "../../lib/AddonAPIKit";
-import { AddInstanceParameterModel, InstanceModel, InstanceNameParameterModel, InstancesModel, StructureMaterialsModel } from "../models/InstancesModel";
+import { AddInstanceParameterModel, EditInstanceParameterModel, InstanceModel, InstanceNameParameterModel, InstancesModel, StructureMaterialsModel } from "../ConstructAPIModel";
 
 export class InstancesController extends APIController {
     #context;
@@ -12,7 +12,7 @@ export class InstancesController extends APIController {
         this.addEndpoint("instances", this.getInstances, VoidModel, InstancesModel);
         this.addEndpoint("instance:get", this.getInstance, InstanceNameParameterModel, InstanceModel);
         this.addEndpoint("instance:add", this.addInstance, AddInstanceParameterModel, InstanceModel);
-        this.addEndpoint("instance:edit", this.editInstance, InstanceModel, InstanceModel);
+        this.addEndpoint("instance:edit", this.editInstance, EditInstanceParameterModel, InstanceModel);
         this.addEndpoint("instance:delete", this.deleteInstance, InstanceNameParameterModel, VoidModel);
         this.addEndpoint("instance:materials", this.getMaterials, InstanceNameParameterModel, StructureMaterialsModel);
         this.#context = context;

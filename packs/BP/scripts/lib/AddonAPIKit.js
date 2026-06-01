@@ -640,9 +640,9 @@ var APIErrorEnum = Object.freeze({
 // src/Errors/APICallerError.js
 var APICallerError = class extends Error {
   constructor(error) {
-    super(error.message);
-    this.errorName = error.name;
-    this.errorMessage = error.message;
+    const message = error.name + ": " + error.message;
+    super(message);
+    this.thrownError = error;
     this.errorCode = APIErrorEnum.Caller;
     this.name = "APICallerError";
   }
@@ -651,7 +651,8 @@ var APICallerError = class extends Error {
 // src/Errors/APIServerError.js
 var APIServerError = class extends Error {
   constructor(error) {
-    super(error.message);
+    const message = error.name + ": " + error.message;
+    super(message);
     this.thrownError = error;
     this.errorCode = APIErrorEnum.Server;
     this.name = "APIServerError";
@@ -686,12 +687,8 @@ var EndpointModel = PROTO.String;
 var EndpointsModel = PROTO.Array(EndpointModel);
 
 // src/APIController.js
-var APIController = class _APIController {
+var APIController = class {
   #endpoints = {};
-  constructor() {
-    if (this.constructor === _APIController)
-      throw new Error("Cannot instantiate abstract class 'APIController'");
-  }
   get endpoints() {
     return this.#endpoints;
   }
@@ -704,6 +701,7 @@ var APIController = class _APIController {
 var EndpointsController = class extends APIController {
   #api;
   constructor(api) {
+    super();
     this.#api = api;
     this.addEndpoint("endpoints", this.getEndpoints, VoidModel, EndpointsModel);
     this.addEndpoint("endpoints:has", this.hasEndpoint, EndpointModel, PROTO.Boolean);
@@ -716,8 +714,8 @@ var EndpointsController = class extends APIController {
   }
 };
 
-// src/AddonAPI.js
-var AddonAPI = class {
+// src/AddonAPIServer.js
+var AddonAPIServer = class {
   #name;
   #version;
   #allEndpoints;
@@ -812,30 +810,56 @@ var APIEndpointNotFoundError = class extends Error {
 };
 
 // src/AddonAPICaller.js
-var AddonAPICaller = class {
+var AddonAPICaller = class _AddonAPICaller {
   static #validEndpointCache = [];
   static async call(endpoint, parameterModel, parameterMap, returnDataModel) {
-    if (this.#validEndpointCache.length === 0) {
-      const endpointBase = endpoint.split(":")[0];
-      await this.#populateValidEndpointCache(endpointBase);
-    }
-    if (this.#validEndpointCache.includes(endpoint))
-      return await IPC.invoke(endpoint, parameterModel, parameterMap, returnDataModel).then((result) => result.value);
-    else
+    await _AddonAPICaller.#tryPopulateEndpointCache(endpoint);
+    if (_AddonAPICaller.#endpointExists(endpoint)) {
+      const response = await IPC.invoke(endpoint, parameterModel, parameterMap, returnDataModel).then((result) => result.value);
+      return _AddonAPICaller.#unwrapPacket(response);
+    } else {
       throw new APIEndpointNotFoundError(endpoint);
+    }
+  }
+  static async #tryPopulateEndpointCache(endpoint) {
+    if (_AddonAPICaller.#validEndpointCache.length === 0) {
+      const endpointBase = endpoint.split(":")[0];
+      await _AddonAPICaller.#populateValidEndpointCache(endpointBase);
+    }
+  }
+  static #endpointExists(endpoint) {
+    return _AddonAPICaller.#validEndpointCache.includes(endpoint);
   }
   static async #populateValidEndpointCache(endpointBase) {
     const endpointsEndpoint = endpointBase + ":endpoints";
     const validEndpoints = await IPC.invoke(endpointsEndpoint, VoidModel, void 0, PROTO.Boolean);
-    this.#validEndpointCache.push(...validEndpoints);
+    _AddonAPICaller.#validEndpointCache.push(...validEndpoints);
+  }
+  static #unwrapPacket(packet) {
+    const { data, error } = packet;
+    if (error.code === APIErrorEnum.Success)
+      return data;
+    else
+      _AddonAPICaller.#throwAPIError(packet.error);
+  }
+  static #throwAPIError(errorData) {
+    switch (errorData.code) {
+      case APIErrorEnum.Caller:
+        throw new APICallerError(errorData);
+      case APIErrorEnum.Server:
+        throw new APIServerError(errorData);
+      case APIErrorEnum.Unknown:
+      default:
+        throw new Error(errorData.message);
+    }
   }
 };
 export {
   APICallerError,
   APIController,
   APIErrorEnum,
-  AddonAPI,
   AddonAPICaller,
+  AddonAPIServer,
   PROTO,
   VoidModel
 };

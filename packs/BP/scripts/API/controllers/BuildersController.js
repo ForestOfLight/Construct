@@ -1,6 +1,6 @@
 import { BuilderNotFoundError } from "../../classes/Errors/BuilderNotFoundError";
 import { APICallerError } from "../../lib/AddonAPIKit";
-import { BuilderIdParameterModel } from "../models/BuildersModel";
+import { BuilderIdParameterModel } from "../ConstructAPIModel";
 
 export class BuildersController extends APIController {
     #context;
