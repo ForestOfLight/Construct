@@ -308,8 +308,9 @@ export class StructureInstance {
 
     setOptions(newOptions) {
         const newVerifierOptions = newOptions.verifier;
-        this.options.rename(newOptions.name);
-        this.options.setStructure(newOptions.structureId);
+        if (newOptions.name !== this.getName())
+            structureCollection.rename(this.getName(), newOptions.name);
+        this.setStructure(newOptions.structureId);
         this.options.setEnabled(newOptions.isEnabled);
         this.options.move(newOptions.dimensionId, newOptions.location);
         this.options.setLayer(newOptions.currentLayer);
@@ -317,5 +318,6 @@ export class StructureInstance {
         this.options.setVerifierDistance(newVerifierOptions.trackPlayerDistance);
         this.options.setVerifierParticleLifetime(newVerifierOptions.particleLifetime);
         this.options.save();
+        this.refreshBox();
     }
 }

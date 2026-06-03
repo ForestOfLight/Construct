@@ -19,6 +19,7 @@ export class Builders {
         const builder = Builders.builders[id];
         if (builder === void 0)
             throw new BuilderNotFoundError(id);
+        return builder;
     }
 
     static onJoin(playerId) {

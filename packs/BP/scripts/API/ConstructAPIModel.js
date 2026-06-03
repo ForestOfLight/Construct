@@ -1,4 +1,4 @@
-import { PROTO } from "../../lib/AddonAPIKit";
+import { PROTO } from "../lib/AddonAPIKit";
 
 // Instances
 

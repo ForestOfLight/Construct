@@ -64,7 +64,7 @@ export class InstanceOptions extends Option {
     }
 
     setLayer(layer) {
-        this.currentLayer = layer.floor();
+        this.currentLayer = Math.floor(layer);
         this.save();
     }
 

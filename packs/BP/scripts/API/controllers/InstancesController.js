@@ -48,6 +48,7 @@ export class InstancesController extends APIController {
         try {
             const instance = this.#context.get(instanceName);
             instance.setOptions(instanceOptions);
+            return instance.asPacket();
         } catch(error) {
             if (error instanceof InstanceNotFoundError || error instanceof InstanceExistsError || error instanceof StructureNotFoundError)
                 throw new APICallerError(error);

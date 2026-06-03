@@ -668,7 +668,7 @@ var APIVersionMismatchError = class extends Error {
 };
 
 // src/APIModels.js
-var VoidModel = PROTO.Void;
+var VoidModel = PROTO.Optional(PROTO.Void);
 var ErrorModel = PROTO.Optional(PROTO.Object({
   code: PROTO.Int8,
   name: PROTO.Optional(PROTO.String),
@@ -718,7 +718,7 @@ var EndpointsController = class extends APIController {
 var AddonAPIServer = class {
   #name;
   #version;
-  #allEndpoints;
+  #allEndpoints = [];
   constructor(name, version) {
     this.#name = name;
     this.#version = version;
@@ -745,12 +745,16 @@ var AddonAPIServer = class {
     }
   }
   #setupEndpoint(endpoint, callback, parameterModel, returnDataModel) {
+    const callPacketModel = this.#resolveCallModel(parameterModel);
     const returnPacketModel = this.#resolveReturnModel(returnDataModel);
     const endpointPath = this.endpointBase + endpoint;
-    IPC.handle(endpointPath, parameterModel, returnPacketModel, (callPacket) => {
+    IPC.handle(endpointPath, callPacketModel, returnPacketModel, (callPacket) => {
+      console.info(`Received at ${endpointPath}: ${JSON.stringify(callPacket)}`);
       const apiVersion = callPacket.apiVersion;
-      const parameters = Object.values(callPacket.parameterMap);
-      return this.#handleCallback(apiVersion, callback, parameters);
+      const parameters = this.#resolveParameters(callPacket);
+      const returnPacket = this.#handleCallback(apiVersion, callback, parameters);
+      console.info(`Replying ${JSON.stringify(returnPacket)}`);
+      return returnPacket;
     });
     this.#allEndpoints.push(endpointPath);
   }
@@ -764,7 +768,7 @@ var AddonAPIServer = class {
         const errorPacket2 = this.#resolveErrorPacket(error);
         return this.#bundleReturnPacket(errorPacket2);
       }
-      console.error(error);
+      console.error(error, error.stack);
       const apiError = new APIServerError(error);
       const errorPacket = this.#resolveErrorPacket(apiError);
       return this.#bundleReturnPacket(errorPacket);
@@ -776,11 +780,16 @@ var AddonAPIServer = class {
       throw new APICallerError(apiVersionMismatchError);
     }
   }
+  #resolveCallModel(parameterModel) {
+    return PROTO.Object({ ...CallModelShell, parameterMap: parameterModel });
+  }
   #resolveReturnModel(returnDataModel) {
-    let returnModel = { ...ReturnModelShell };
-    returnModel.data = returnDataModel;
-    returnModel = PROTO.Object(returnModel);
-    return returnModel;
+    return PROTO.Object({ ...ReturnModelShell, data: PROTO.Optional(returnDataModel) });
+  }
+  #resolveParameters(callPacket) {
+    if (callPacket.parameterMap === void 0)
+      return [];
+    return Object.values(callPacket.parameterMap);
   }
   #bundleReturnPacket(errorPacket, returnValue = void 0) {
     return {
@@ -810,39 +819,54 @@ var APIEndpointNotFoundError = class extends Error {
 };
 
 // src/AddonAPICaller.js
-var AddonAPICaller = class _AddonAPICaller {
-  static #validEndpointCache = [];
-  static async call(endpoint, parameterModel, parameterMap, returnDataModel) {
-    await _AddonAPICaller.#tryPopulateEndpointCache(endpoint);
-    if (_AddonAPICaller.#endpointExists(endpoint)) {
-      const response = await IPC.invoke(endpoint, parameterModel, parameterMap, returnDataModel).then((result) => result.value);
-      return _AddonAPICaller.#unwrapPacket(response);
-    } else {
+var AddonAPICaller = class {
+  #name;
+  #version;
+  #validEndpointCache = [];
+  constructor(name, version) {
+    this.#name = name;
+    this.#version = version;
+  }
+  async call(endpoint, parameterMapModel, parameterMap, returnDataModel) {
+    await this.#tryPopulateEndpointCache(endpoint);
+    if (this.#endpointExists(endpoint))
+      return this.#callDirect(endpoint, parameterMapModel, parameterMap, returnDataModel);
+    else
       throw new APIEndpointNotFoundError(endpoint);
-    }
   }
-  static async #tryPopulateEndpointCache(endpoint) {
-    if (_AddonAPICaller.#validEndpointCache.length === 0) {
+  async #tryPopulateEndpointCache(endpoint) {
+    if (this.#validEndpointCache.length === 0) {
       const endpointBase = endpoint.split(":")[0];
-      await _AddonAPICaller.#populateValidEndpointCache(endpointBase);
+      const validEndpoints = await this.#callDirect(endpointBase + ":endpoints", VoidModel, void 0, EndpointsModel);
+      this.#validEndpointCache.push(...validEndpoints);
     }
   }
-  static #endpointExists(endpoint) {
-    return _AddonAPICaller.#validEndpointCache.includes(endpoint);
+  async #callDirect(endpoint, parameterMapModel, parameterMap, returnDataModel) {
+    const parameterPacket = { apiVersion: this.#version, parameterMap };
+    const parameterModel = this.#resolveParameterModel(parameterMapModel);
+    const returnModel = this.#resolveReturnModel(returnDataModel);
+    console.info(`Sending to ${endpoint}: ${JSON.stringify(parameterPacket)}`);
+    const returnPacket = await IPC.invoke(endpoint, parameterModel, parameterPacket, returnModel);
+    console.info(`Received from ${endpoint}: ${JSON.stringify(returnPacket)}`);
+    return this.#unwrapReturnPacket(returnPacket);
   }
-  static async #populateValidEndpointCache(endpointBase) {
-    const endpointsEndpoint = endpointBase + ":endpoints";
-    const validEndpoints = await IPC.invoke(endpointsEndpoint, VoidModel, void 0, PROTO.Boolean);
-    _AddonAPICaller.#validEndpointCache.push(...validEndpoints);
+  #endpointExists(endpoint) {
+    return this.#validEndpointCache.includes(endpoint);
   }
-  static #unwrapPacket(packet) {
+  #resolveParameterModel(parameterMapModel) {
+    return PROTO.Object({ ...CallModelShell, parameterMap: parameterMapModel });
+  }
+  #resolveReturnModel(returnDataModel) {
+    return PROTO.Object({ ...ReturnModelShell, data: PROTO.Optional(returnDataModel) });
+  }
+  #unwrapReturnPacket(packet) {
     const { data, error } = packet;
     if (error.code === APIErrorEnum.Success)
       return data;
     else
-      _AddonAPICaller.#throwAPIError(packet.error);
+      this.#throwAPIError(packet.error);
   }
-  static #throwAPIError(errorData) {
+  #throwAPIError(errorData) {
     switch (errorData.code) {
       case APIErrorEnum.Caller:
         throw new APICallerError(errorData);
@@ -857,6 +881,7 @@ var AddonAPICaller = class _AddonAPICaller {
 export {
   APICallerError,
   APIController,
+  APIEndpointNotFoundError,
   APIErrorEnum,
   AddonAPICaller,
   AddonAPIServer,

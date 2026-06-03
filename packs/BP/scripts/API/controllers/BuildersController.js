@@ -1,15 +1,14 @@
 import { BuilderNotFoundError } from "../../classes/Errors/BuilderNotFoundError";
-import { APICallerError } from "../../lib/AddonAPIKit";
-import { BuilderIdParameterModel } from "../ConstructAPIModel";
+import { APICallerError, APIController } from "../../lib/AddonAPIKit";
+import { BuilderIdParameterModel, BuilderModel } from "../ConstructAPIModel";
 
 export class BuildersController extends APIController {
     #context;
 
     constructor(context) {
-        super({
-            "builders:get": { callback: this.getBuilder, parameterModel: BuilderIdParameterModel, returnModel: InstanceModel },
-            "builders:edit": { callback: this.editBuilder, parameterModel: InstanceModel, returnModel: InstanceModel }
-        });
+        super();
+        this.addEndpoint("builder:get", this.getBuilder, BuilderIdParameterModel, BuilderModel);
+        this.addEndpoint("builder:edit", this.editBuilder, BuilderModel, BuilderModel);
         this.#context = context;
     }
 
