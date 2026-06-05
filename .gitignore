@@ -1,6 +1,6 @@
 .DS_Store
 /build
 /.regolith
-docs/
+docs/superpowers
 .claude
 node_modules/
