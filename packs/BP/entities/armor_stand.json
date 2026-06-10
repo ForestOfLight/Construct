@@ -1,0 +1,79 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:armor_stand",
+      "is_experimental": false,
+      "is_summonable": true,
+      "is_spawnable": false,
+      "spawn_category": "misc"
+    },
+    "component_groups": {
+      "minecraft:nameable": {},
+      "minecraft:physics": {},
+      "minecraft:pushable_by_block": {},
+      "minecraft:pushable_by_entity": {}
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "height": 1.975,
+        "width": 0.5
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:health": {
+        "max": 6,
+        "value": 6
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "cause": "lava",
+            "damage_per_tick": 4,
+            "filters": {
+              "operator": "==",
+              "test": "in_lava",
+              "subject": "self",
+              "value": true
+            }
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:loot": {
+        "table": "loot_tables/entities/armor_stand.json"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "armor_stand",
+          "inanimate",
+          "mob"
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "minecraft:physics",
+            "minecraft:pushable_by_block",
+            "minecraft:pushable_by_entity",
+            "minecraft:nameable"
+          ]
+        }
+      },
+      "construct:claim": {
+        "remove": {
+          "component_groups": [
+            "minecraft:physics",
+            "minecraft:pushable_by_block",
+            "minecraft:pushable_by_entity",
+            "minecraft:nameable"
+          ]
+        }
+      }
+    }
+  }
+}

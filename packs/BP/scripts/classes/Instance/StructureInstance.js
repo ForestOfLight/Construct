@@ -9,6 +9,7 @@ import { StructureMaterials } from "../Materials/StructureMaterials";
 import { VerificationRenderer } from "../Render/VerificationRenderer";
 import { structureCollection } from "../Structure/StructureCollection";
 import { InstanceExistsError } from "../Errors/InstanceExistsError";
+import { ArmorStandPoser } from "../Render/ArmorStandPoser";
 
 export class StructureInstance {
     options;
@@ -18,6 +19,7 @@ export class StructureInstance {
     verificationRenderer = void 0;
     materials = void 0;
     flexMovingPlayerId = void 0;
+    armorStandPoser = void 0;
 
     constructor(instanceName, structureId) {
         this.structure = new Structure(structureId);
@@ -48,10 +50,13 @@ export class StructureInstance {
             this.verificationRenderer = new VerificationRenderer(this);
         if (!this.materials)
             this.materials = new StructureMaterials(this);
+        if (!this.armorStandPoser)
+            this.armorStandPoser = new ArmorStandPoser(this);
         this.outliner.refresh();
         this.verifier.refresh();
         this.verificationRenderer.refresh();
         this.materials.refresh();
+        this.armorStandPoser.refresh();
     }
 
     subscribeToEvents() {
@@ -241,6 +246,18 @@ export class StructureInstance {
         this.verificationRenderer.refresh();
     }
 
+    isArmorStandPoserEnabled() {
+        return this.options.armorStandPoser.isEnabled;
+    }
+
+    setArmorStandPoserEnabled(enable) {
+        this.options.setArmorStandPoserEnabled(enable);
+        if (enable)
+            this.armorStandPoser.enable();
+        else
+            this.armorStandPoser.disable();
+    }
+
     increaseLayer() {
         if (this.isAtMaxLayer())
             this.setLayer(0);
@@ -302,12 +319,17 @@ export class StructureInstance {
                 isEnabled: this.options.verifier.isEnabled,
                 trackPlayerDistance: this.options.verifier.trackPlayerDistance,
                 particleLifetime: this.options.verifier.particleLifetime
+            },
+            armorStandPoser: {
+                isEnabled: this.isArmorStandPoserEnabled(),
+                armorStandId: this.options.armorStandPoser.armorStandId
             }
         };
     }
 
     setOptions(newOptions) {
         const newVerifierOptions = newOptions.verifier;
+        const newArmorStandPoserOptions = newOptions.armorStandPoser;
         if (newOptions.name !== this.getName())
             structureCollection.rename(this.getName(), newOptions.name);
         this.setStructure(newOptions.structureId);
@@ -317,6 +339,7 @@ export class StructureInstance {
         this.options.setVerifierEnabled(newVerifierOptions.isEnabled);
         this.options.setVerifierDistance(newVerifierOptions.trackPlayerDistance);
         this.options.setVerifierParticleLifetime(newVerifierOptions.particleLifetime);
+        this.setArmorStandPoserEnabled(newArmorStandPoserOptions.isEnabled);
         this.options.save();
         this.refreshBox();
     }

@@ -22,6 +22,7 @@ import './commands/LayerCommand';
 import './commands/NextLayerCommand';
 import './commands/PrevLayerCommand';
 import './commands/VerifierCommand';
+import './commands/AutoArmorStandCommand';
 import './commands/BuilderCommand';
 import './commands/InstanceInfoCommand';
 import './commands/StatsCommand';

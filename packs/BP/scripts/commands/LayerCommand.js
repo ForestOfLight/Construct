@@ -23,7 +23,9 @@ export class LayerCommand extends Command {
             origin.sendMessage({ translate: 'construct.commands.layer.outOfBounds', with: [String(layer), instanceName, String(max)] });
             return void 0;
         }
-        instance.setLayer(layer);
+        system.run(() => {
+            instance.setLayer(layer);
+        });
         origin.sendMessage({ translate: 'construct.commands.layer.success', with: [instanceName, String(layer)] });
         return { status: CustomCommandStatus.Success };
     }

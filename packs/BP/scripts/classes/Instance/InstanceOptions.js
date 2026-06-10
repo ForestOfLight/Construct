@@ -15,6 +15,10 @@ export class InstanceOptions extends Option {
         trackPlayerDistance: 5,
         particleLifetime: 10
     };
+    armorStandPoser = {
+        isEnabled: false,
+        armorStandId: void 0
+    };
 
     static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);
@@ -80,6 +84,11 @@ export class InstanceOptions extends Option {
 
     setVerifierParticleLifetime(lifetime) {
         this.verifier.particleLifetime = lifetime;
+        this.save();
+    }
+
+    setArmorStandPoserEnabled(enable) {
+        this.armorStandPoser.isEnabled = enable;
         this.save();
     }
 }
