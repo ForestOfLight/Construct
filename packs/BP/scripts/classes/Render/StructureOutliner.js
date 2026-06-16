@@ -1,3 +1,4 @@
+import { StructureNotFoundError } from '../Errors/StructureNotFoundError';
 import { Outliner } from '../Outliner';
 
 export class StructureOutliner {
@@ -13,11 +14,11 @@ export class StructureOutliner {
             this.bounds = this.instance.getBounds();
             this.bounds.min = this.instance.toGlobalCoords(this.bounds.min);
             this.bounds.max = this.instance.toGlobalCoords(this.bounds.max);
-        } catch (e) {
-            if (e.name === 'InvalidStructureError')
+        } catch (error) {
+            if (error instanceof StructureNotFoundError)
                 this.outliner.stopDraw();
             else
-                throw e;
+                throw error;
         }
     }
 

@@ -3,6 +3,8 @@ import { structureCollection } from './Structure/StructureCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceForm } from './Instance/InstanceForm';
 import { BuilderForm } from './Builder/BuilderForm';
+import { InstanceExistsError } from './Errors/InstanceExistsError';
+import { StructureNotFoundError } from './Errors/StructureNotFoundError';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
@@ -43,12 +45,12 @@ export class MenuForm {
                     return selectedInstanceName || this.createNewInstance();
                 }
             });
-        } catch (e) {
-            if (e.message === 'Menu timed out.') {
+        } catch (error) {
+            if (error.message === 'Menu timed out.') {
                 this.player.sendMessage({ translate: 'construct.menu.open.timeout' });
                 return void 0;
             }
-            throw e;
+            throw error;
         }
     }
 
@@ -64,16 +66,12 @@ export class MenuForm {
                 return void 0;
             try {
                 structureCollection.add(instanceName, structureId);
-            } catch (e) {
-                if (e.name === 'InvalidInstanceError') {
-                    this.player.sendMessage({ translate: 'construct.mainmenu.instance.exists', with: [instanceName] });
+            } catch (error) {
+                if (error instanceof InstanceExistsError || error instanceof StructureNotFoundError) {
+                    error.sendTo(this.player);
                     return void 0;
                 }
-                if (e.name === 'InvalidStructureError') {
-                    this.player.sendMessage({ translate: 'construct.mainmenu.instance.notfound', with: [structureId] });
-                    return void 0;
-                }
-                throw e;
+                throw error;
             }
             return instanceName;
         });

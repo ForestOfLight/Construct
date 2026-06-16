@@ -26,6 +26,7 @@ export class InstanceOptions extends Option {
         this.instanceName = instanceName;
         this.structureId = structureId;
         this.load();
+        this.save();
     }
 
     save() {
@@ -45,13 +46,8 @@ export class InstanceOptions extends Option {
         return world.getDimension(this.dimensionId);
     }
 
-    enable() {
-        this.isEnabled = true;
-        this.save();
-    }
-
-    disable() {
-        this.isEnabled = false;
+    setEnabled(enable) {
+        this.isEnabled = enable;
         this.save();
     }
 
@@ -68,7 +64,7 @@ export class InstanceOptions extends Option {
     }
 
     setLayer(layer) {
-        this.currentLayer = layer;
+        this.currentLayer = Math.floor(layer);
         this.save();
     }
 
@@ -79,6 +75,11 @@ export class InstanceOptions extends Option {
 
     setVerifierDistance(distance) {
         this.verifier.trackPlayerDistance = distance;
+        this.save();
+    }
+
+    setVerifierParticleLifetime(lifetime) {
+        this.verifier.particleLifetime = lifetime;
         this.save();
     }
 }

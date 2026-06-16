@@ -1,6 +1,6 @@
 import { world } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
-import { InvalidStructureError } from "../Errors/InvalidStructureError";
+import { StructureNotFoundError } from "../Errors/StructureNotFoundError";
 
 export class Structure {
     structureId;
@@ -10,7 +10,7 @@ export class Structure {
         this.structureId = structureId;
         this.#structure = world.structureManager.get(structureId);
         if (!this.#structure)
-            throw new InvalidStructureError(`[Construct] Structure '${structureId}' not found on world.`);
+            throw new StructureNotFoundError(structureId);
         this.#structure.saveToWorld();
     }
 

@@ -1,29 +1,37 @@
 import { world } from "@minecraft/server";
 import { Builder } from "./Builder";
+import { BuilderNotFoundError } from "../Errors/BuilderNotFoundError";
 
 export class Builders {
     static builders = {};
 
     static add(playerId) {
-        if (this.builders[playerId])
+        if (Builders.builders[playerId])
             return;
-        this.builders[playerId] = new Builder(playerId);
+        Builders.builders[playerId] = new Builder(playerId);
     }
 
     static remove(playerId) {
-        delete this.builders[playerId];
+        delete Builders.builders[playerId];
     }
 
     static get(id) {
-        return this.builders[id];
+        const builder = Builders.builders[id];
+        if (builder === void 0)
+            throw new BuilderNotFoundError(id);
+        return builder;
     }
 
     static onJoin(playerId) {
-        this.add(playerId);
+        Builders.add(playerId);
     }
 
     static onLeave(playerId) {
-        this.remove(playerId);
+        Builders.remove(playerId);
+    }
+
+    static getIds() {
+        return Object.keys(Builders.builders);
     }
 }
 
