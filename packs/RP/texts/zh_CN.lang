@@ -190,7 +190,6 @@ construct.commands.materials.empty=§7(无材料)
 construct.commands.tag=将手持的投影构筑物品重命名为项目名称以快速打开
 construct.commands.tag.success=§a已将手持的投影构筑物品标记为项目"%1"
 construct.commands.tag.notHoldingItem=§c你必须手持一个投影构筑物品
-
 ## Errors
 construct.error.invalidCommandSource=§c此命令无法从此来源执行
 construct.error.instanceNotFound=§c未找到项目"%1"
