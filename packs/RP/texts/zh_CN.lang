@@ -24,13 +24,13 @@ construct.menu.instance.unknownOption=§c未知选项: %s
 construct.menu.instance.nameEmpty=§c项目名称不能为空
 
 construct.instance.flexibleMove.alreadyMoving=§c此项目已处于移动状态
-construct.instance.flexibleMove.start=§a正在移动"%s", 完成后使用"投影构筑菜单"确认	## 插入字符串: 实例名称
-construct.instance.flexibleMove.finish=§a已将"%1"移动至%2	## 插入字符串: 项目名称, 坐标
+construct.instance.flexibleMove.start=§a正在移动"%s", 完成后使用"投影构筑菜单"确认
+construct.instance.flexibleMove.finish=§a已将"%1"移动至%2
 construct.instance.rename.error=§c重命名项目时出错: %s
 construct.instance.validation.alreadyRunning=§c检验已在进行中, 请稍后
 construct.instance.validation.formfail=§c创建统计表单时出错
-construct.instance.menu.body=项目: §a%1\n§f结构: §2%2	## 插入字符串: 项目名称, 结构名称
-construct.instance.menu.location=§7(%4 %1 %2 %3 )	## 当项目已放置时添加到主体; 插入字符串: x, y, z 坐标, 维度
+construct.instance.menu.body=项目: §a%1\n§f结构: §2%2
+construct.instance.menu.location=§7(%4 %1 %2 %3 )
 construct.instance.menu.rename=请输入项目的新名称:
 construct.instance.option.validation=方块检验
 construct.instance.option.validation.description=检验并显示项目中缺失和摆放错误的方块
@@ -39,58 +39,50 @@ construct.instance.option.layer.description=更改显示层级, 调整至 0 时�
 construct.instance.materials.noinventory=§c无法读取到玩家背包
 construct.instance.materials.missing.header=§c背包中缺失的材料:
 construct.instance.materials.missing.button=显示缺失材料
-construct.instance.materials.layer= §7(第%s层)	## 当项目处于层级模式时添加到标题; 插入字符串: 图层编号
+construct.instance.materials.layer= §7(第%s层)
 construct.instance.materials.all.header=§a所有材料:
 construct.instance.materials.all.button=显示所有材料
 
 construct.materials.grabber.menu.title=材料收集器
-construct.materials.grabber.menu.success=§7成功选择"§2%s§f"为材料收集器的目标项目	## 插入字符串: 项目名称
+construct.materials.grabber.menu.success=§7成功选择"§2%s§f"为材料收集器的目标项目
 construct.materials.grabber.menu.header=§7当前项目: 
 construct.materials.grabber.menu.noinstance=§7无
 construct.materials.grabber.menu.selectinstance=§7请选择一个项目:
 
-construct.structure.statistics.header=§f"§a%s§f"的统计信息:	## 插入字符串: 项目名称
-construct.structure.statistics.blocks=§7方块总数: §2%s	## 插入字符串: 结构中非空气方块的数量
-construct.structure.statistics.skipped=§c[!]本次分析跳过了%s个方块	## 插入字符串: 分析跳过的方块数量
-construct.structure.statistics.correct=§7正确的方块: §a%s	## 插入字符串: 正确放置的方块数量
-construct.structure.statistics.stateincorrect=§7方块状态有误: §e%s	## 插入字符串: 状态错误的方块数量
-construct.structure.statistics.incorrect=§7方块位置有误: §c%s	## 插入字符串: 位置错误的方块数量
-construct.structure.statistics.missing=§7缺失方块: §3%s	## 插入字符串: 缺失的方块数量
+construct.structure.statistics.header=§f"§a%s§f"的统计信息:
+construct.structure.statistics.blocks=§7方块总数: §2%s
+construct.structure.statistics.skipped=§c[!]本次分析跳过了%s个方块
+construct.structure.statistics.correct=§7正确的方块: §a%s
+construct.structure.statistics.stateincorrect=§7方块状态有误: §e%s
+construct.structure.statistics.incorrect=§7方块位置有误: §c%s
+construct.structure.statistics.missing=§7缺失方块: §3%s
 
-## Structure Block Info Display
-construct.blockinfo.header=结构:
-construct.blockinfo.none=§7无
-construct.blockinfo.nosupply= §c[缺少材料]	## 目标方块在玩家背包中缺失
-construct.blockinfo.unknown=§7未知
-construct.blockinfo.waterlogged=§3是§7含水方块
-
-construct.mainmenu.instance.exists=§c项目名称"%s"已被占用, 请尝试使用其他名称	## 插入字符串: 项目名称
-construct.mainmenu.instance.notfound=§c未找到结构ID"%s"; 若你查找的是已放入structures文件夹的结构, 请重启存档后重试	## 插入字符串: 结构名称
-construct.mainmenu.title=§l§2投影·构建	## 这是addon的名称
+construct.mainmenu.title=§l§2投影·构建
 construct.mainmenu.selectinstance=请选择一个项目:
 construct.mainmenu.howto=如何添加/移除结构
 construct.mainmenu.settings=构建器设置
 construct.mainmenu.newinstance=创建新项目
 construct.mainmenu.newinstance.prompt=请输入新项目的名称:
-construct.mainmenu.newinstance.placeholder=示例_项目	## 用户输入项目名称的文本框中的占位符文本
+construct.mainmenu.newinstance.placeholder=示例_项目
 construct.mainmenu.selectstructure.header=请选择一个结构:
 construct.mainmenu.selectstructure.other=其他
 construct.mainmenu.selectstructure.other.prompt=请输入结构ID:
-construct.mainmenu.selectstructure.other.placeholder=示例_结构	## 用户输入结构名称的文本框中的占位符文本
+construct.mainmenu.selectstructure.other.placeholder=示例_结构
 construct.mainmenu.howto.add.header=§a如何添加结构:
-construct.mainmenu.howto.add.structureblock=§7-使用§f结构方块§7或§f/structure§7命令保存一个结构
+construct.mainmenu.howto.add.structureblock=§7- 使用§f结构方块§7或§f/structure§7命令保存一个结构。该结构仅可在你保存它的存档中使用。
 construct.mainmenu.howto.add.or=§7§l或§r
-construct.mainmenu.howto.add.mcstructure=§7-将§f.mcstructure§7文件添加到此插件的§fstructures文件夹§7; 选择结构时, 选择§f其他§7选项, 然后使用文件名(不带'.mcstructure')作为§f结构ID§7; 使用后, 它会被添加到结构列表中;
+construct.mainmenu.howto.add.mcstructure=§7要在§f不同世界间§7转移结构：\n  1. 将Construct行为包移动至你的§fcom.mojang > development_behavior_packs§7文件夹。\n  2. 将§f.mcstructure§7文件添加至Construct行为包的§fstructures§7文件夹。\n  3. 重启你的世界。\n你的结构现在应当出现在结构列表中。如果没有，选择§f其他§7选项，然后使用文件名（不带'.mcstructure'）作为§f结构ID§7。首次使用后，它将被添加到结构列表。\n  4.§l§b可使用国内『China』由EnderTrekker&wed15制作的扩展包生成网站制作独立的建筑扩展包 (网址: https://construct.mccfk.cn/)
 construct.mainmenu.howto.remove.header=§c如何移除结构:
-construct.mainmenu.howto.remove.body=§7-使用§f/structure delete§7命令从存档中移除结构
+construct.mainmenu.howto.remove.body=§7- 使用§f/structure delete§7命令从世界中移除结构
 
-## Commands
-construct.commands.construct=获得投影构筑菜单物品,可以使用它打开投影构筑菜单
-construct.commands.construct.denyorigin=此命令只能由玩家使用
-construct.commands.construct.fail=§c给予投影构筑菜单物品时发生错误
-construct.commands.construct.success=§a您已获得投影构筑菜单物品, 右键(长按)使用它以打开投影构筑菜单
+## Structure Block Info Display
+construct.blockinfo.header=结构:
+construct.blockinfo.none=§7无
+construct.blockinfo.nosupply= §c[缺少材料]
+construct.blockinfo.unknown=§7未知
+construct.blockinfo.waterlogged=§3是§7含水方块
 
-## Options
+## Builder Options
 construct.option.enabled=现已启用!
 construct.option.disabled=现已禁用!
 construct.option.easyplace.name=便捷放置
@@ -105,4 +97,104 @@ construct.option.materialgrabber.description=从箱子等容器中获取建筑�
 construct.option.materialgrabber.howto=使用"材料收集器"物品与箱子等容器交互, 即可从中获取建筑所需物品
 construct.option.materialgrabber.grabbed.zero=§7已收集 0 个物品
 construct.option.materialgrabber.grabbed.one=§a已收集 1 个物品
-construct.option.materialgrabber.grabbed.many=§a已收集 %s 个物品	## 插入字符串: 收集给玩家的物品数
+construct.option.materialgrabber.grabbed.many=§a已收集 %s 个物品
+
+## Commands
+construct.commands.construct=获得投影构筑菜单物品，可以使用它打开投影构筑菜单
+construct.commands.construct.fail=§c给予投影构筑菜单物品时发生错误
+construct.commands.construct.success=§a您已获得投影构筑菜单物品, 右键(长按)使用它以打开投影构筑菜单
+
+## construct:create
+construct.commands.create=创建一个绑定至结构的新投影项目
+construct.commands.create.success=§a已创建绑定至结构"%2"的项目"%1"
+construct.commands.create.unknownStructure=§c未在世界上找到ID为"%1"的结构
+
+## construct:delete
+construct.commands.delete=永久删除一个投影项目
+construct.commands.delete.success=§a已删除项目"%1"
+
+## construct:rename
+construct.commands.rename=重命名一个已有的投影项目
+construct.commands.rename.success=§a已将项目"%1"重命名为"%2"
+
+## construct:instances
+construct.commands.instances=列出所有已注册的投影项目
+construct.commands.instances.empty=§7没有已注册的项目
+construct.commands.instances.header=§a已注册的项目 (%1):§r
+construct.commands.instances.row=§a%1§r §8[§r%2§8]§r §7%3§r
+construct.commands.instances.row.enabled=已启用
+construct.commands.instances.row.disabled=已禁用
+construct.commands.instances.row.location= 位于%2的%1
+construct.commands.instances.row.nolocation= (无位置)
+
+## construct:place
+construct.commands.place=在世界上放置一个投影项目
+construct.commands.place.success=§a已将项目"%1"放置在%3的%2
+
+## construct:move
+construct.commands.move=重新定位一个投影项目而不改变其启用状态
+construct.commands.move.success=§a已将项目"%1"移动至%3的%2
+construct.commands.move.locationRequired=§c非玩家执行时必须提供维度和坐标
+
+## construct:enable
+construct.commands.enable=启用或禁用一个投影项目
+construct.commands.enable.true=§a已启用项目"%1"
+construct.commands.enable.false=§a已禁用项目"%1"
+construct.commands.error.noLocation=§c项目"%1"没有保存的位置
+
+## construct:layer
+construct.commands.layer=设置投影项目的激活层（使用0表示整个结构）
+construct.commands.layer.success=§a已将项目"%1"的层级设为%2
+construct.commands.layer.outOfBounds=§c层级%1超出项目"%2"的范围（最大%3）
+
+## construct:nextlayer
+construct.commands.nextlayer=将投影项目的层级提高一层
+construct.commands.nextlayer.success=§a项目"%1"已前进至层级%2
+
+## construct:prevlayer
+construct.commands.prevlayer=将投影项目的层级降低一层
+construct.commands.prevlayer.success=§a项目"%1"已后退至层级%2
+
+## construct:verifier
+construct.commands.verifier=切换投影项目的方块检验覆盖层
+construct.commands.verifier.enabled=§a已启用项目"%1"的检验功能
+construct.commands.verifier.disabled=§a已禁用项目"%1"的检验功能
+
+## construct:builder
+construct.commands.builder=切换你的投影构建器选项
+construct.commands.builder.success=§a已将选项"%1"设为%2
+construct.commands.builder.unknownOption=§c未知选项"%1"
+
+## construct:instanceinfo
+construct.commands.instanceinfo=在聊天栏打印投影项目详情
+construct.commands.instanceinfo.header=§a=== "%1" 的项目信息 ===§r
+construct.commands.instanceinfo.structure=§7结构:§r %1
+construct.commands.instanceinfo.location=§7位置:§r %2的%1
+construct.commands.instanceinfo.noLocation=§7位置:§r (无)
+construct.commands.instanceinfo.enabled=§7启用状态:§r %1
+construct.commands.instanceinfo.layer=§7层级:§r %1 / %2
+construct.commands.instanceinfo.verifier=§7检验状态:§r %1
+construct.commands.instanceinfo.size=§7尺寸:§r %1 (共%2个方块)
+
+## construct:stats
+construct.commands.stats=运行投影结构检验并打印统计数据
+construct.commands.stats.alreadyRunning=§c检验已在进行中, 请稍后
+
+## construct:materials
+construct.commands.materials=打印投影项目的材料列表
+construct.commands.materials.headerAll=§a"%1"的材料:§r
+construct.commands.materials.headerMissing=§a"%1"的缺失材料:§r
+construct.commands.materials.empty=§7(无材料)
+
+## construct:tag
+construct.commands.tag=将手持的投影构筑物品重命名为项目名称以快速打开
+construct.commands.tag.success=§a已将手持的投影构筑物品标记为项目"%1"
+construct.commands.tag.notHoldingItem=§c你必须手持一个投影构筑物品
+
+## Errors
+construct.error.invalidCommandSource=§c此命令无法从此来源执行
+construct.error.instanceNotFound=§c未找到项目"%1"
+construct.error.instanceExists=§c项目"%1"已存在。请尝试使用其他名称
+construct.error.structureNotFound=§c未找到结构ID"%1"。若你查找的是已放入structures文件夹的结构, 请重启世界后重试
+construct.error.dimensionNotFound=§c未找到维度"%1"
+construct.error.notAPlayer=§c此命令只能由玩家使用
