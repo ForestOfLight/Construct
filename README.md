@@ -50,6 +50,13 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
     2. Drop your `.mcstructure` file in Construct's `Construct[BP]/structures` folder. 
     3. Restart your world.
     4. Your structure should now be in in Construct's structure list!
+- For devices that cannot export .mcstructure files:
+    1. Export your world file.
+    2. Go to https://holoprint-mc.github.io/ and use its "Extract From World" feature to get your .mcstructures.
+- For devices that cannot manage Minecraft's files:
+    1. Go to https://sea-of-stars-studio.github.io/.
+    2. Upload your .mcstructure and generate a .mcpack with your structure inside.
+    3. Add the generated pack to the same world as Construct.
 
 ### Commands
 
@@ -80,6 +87,8 @@ If you have any issues or suggestions, please don't hesitate to open an issue on
 
 Construct currently supports American English and Chinese (thanks to [wed150](https://github.com/wed150) & [EndrTrekker](https://github.com/EndrTrekker)). If you would like to contribute a translation, please join our Discord and reach out!
 
-### Donate
+---
 
-If you appreciate my work here and would like to support the future development of my addons, please consider donating to me on [BuyMeACoffee](https://buymeacoffee.com/forestoflight). Your support is greatly appreciated!
+I'm constantly working on improvements for Construct. If you would like to show a token of appreciation for my work and support the future development of my addons, please consider [buying me a coffee](https://buymeacoffee.com/forestoflight).
+
+[![BuyMeACoffee](https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-donate-yellow.svg)](https://buymeacoffee.com/forestoflight)
