@@ -79,7 +79,7 @@ export class StructureInstance {
     }
 
     getMaxLayer() {
-        return this.structure.getHeight();
+        return this.structure?.getHeight();
     }
 
     getBounds() {
