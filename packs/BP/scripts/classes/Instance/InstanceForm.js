@@ -176,6 +176,7 @@ export class InstanceForm {
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
             this.instance.setLayer(parseInt(response.formValues[1]));
+            this.instance.setPerformanceRenderingEnabled(response.formValues[2]);
         });
     }
 

@@ -10,7 +10,7 @@ export class VerificationRenderer {
     lastRenderedChunk;
     bounds;
     shortestDimension;
-    usePerformanceRendering;
+    #usePerformanceRendering;
 
     #runner;
     #renderQueue = [];
@@ -18,11 +18,12 @@ export class VerificationRenderer {
     constructor(instance, { usePerformanceRendering }) {
         this.instance = instance;
         this.lastRenderedChunk = 0;
-        this.usePerformanceRendering = usePerformanceRendering;
+        this.#usePerformanceRendering = usePerformanceRendering;
     }
 
     refresh() {
         this.#stopContinuousRendering();
+        this.#usePerformanceRendering = this.instance.options.performanceRendering;
         if (!this.instance.isEnabled() || !this.instance.options.verifier.isEnabled)
             return;
         this.#startContinuousRendering();
@@ -115,7 +116,7 @@ export class VerificationRenderer {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)
         };
-        const blockVerificationLevelType = this.usePerformanceRendering ? BlockVerificationLevelPerformanceRender : BlockVerificationLevelParticleRender;
+        const blockVerificationLevelType = this.#usePerformanceRendering ? BlockVerificationLevelPerformanceRender : BlockVerificationLevelParticleRender;
         new blockVerificationLevelType(dimensionLocation, verificationLevel, lifetime);
     }
 }

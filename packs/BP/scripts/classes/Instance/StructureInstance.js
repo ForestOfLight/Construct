@@ -241,6 +241,11 @@ export class StructureInstance {
         this.verificationRenderer.refresh();
     }
 
+    setPerformanceRenderingEnabled(enable) {
+        this.options.setPerformanceRenderingEnabled(enable);
+        this.refreshBox();
+    }
+
     increaseLayer() {
         if (this.isAtMaxLayer())
             this.setLayer(0);

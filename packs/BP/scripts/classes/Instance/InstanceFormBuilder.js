@@ -57,6 +57,7 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
             .toggle({ translate: 'construct.instance.option.validation' }, { defaultValue: instance.options.verifier.isEnabled, tooltip: { translate: 'construct.instance.option.validation.description' }})
             .slider({ translate: 'construct.instance.option.layer'}, 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: { translate: 'construct.instance.option.layer.description' }})
+            .toggle({ translate: 'construct.instance.option.performancemode' }, { defaultValue: instance.options.performanceRendering, tooltip: { translate: 'construct.instance.option.performanceMode.description' }})
             .submitButton({ translate: 'construct.menu.submit' });
     }
 

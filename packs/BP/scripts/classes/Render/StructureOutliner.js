@@ -6,12 +6,18 @@ export class StructureOutliner {
     instance;
     #dimension;
     #bounds;
+    #usePerformanceRendering;
     #outliner;
 
     constructor(instance, { usePerformanceRendering }) {
         this.instance = instance;
         this.#pullInstanceData();
-        this.#outliner = this.#createOutliner(usePerformanceRendering);
+        this.#outliner = this.#createOutliner(this.#usePerformanceRendering);
+    }
+
+    refresh() {
+        this.#pullInstanceData();
+        this.#refreshDraw();
     }
 
     #pullInstanceData() {
@@ -20,6 +26,7 @@ export class StructureOutliner {
             this.#bounds = this.instance.getBounds();
             this.#bounds.min = this.instance.toGlobalCoords(this.#bounds.min);
             this.#bounds.max = this.instance.toGlobalCoords(this.#bounds.max);
+            this.#usePerformanceRendering = this.instance.options.performanceRendering;
         } catch (error) {
             if (error instanceof StructureNotFoundError)
                 this.#outliner.stopDraw();
@@ -28,15 +35,11 @@ export class StructureOutliner {
         }
     }
 
-    refresh() {
-        this.#pullInstanceData();
-        this.#refreshDraw();
-    }
-
     #refreshDraw() {
         this.#outliner.stopDraw();
         if (!this.instance.isEnabled())
             return;
+        this.#outliner = this.#createOutliner(this.#usePerformanceRendering);
         if (this.instance.hasLayerSelected())
             this.#layeredDraw();
         else
