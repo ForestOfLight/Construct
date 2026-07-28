@@ -83,7 +83,7 @@ Set the active layer of an instance.
 ### `construct:nextlayer <instanceName>`
 Step the layer up by one (wraps from max back to `0`).
  
-> Mirrors the "Next layer" button. Wrapping from max → `0` restores the whole-structure view.
+> Mirrors the "Next layer" button.
  
 ### `construct:prevlayer <instanceName>`
 Step the layer down by one (wraps from `0` back to max).
@@ -134,10 +134,8 @@ Print the material list for an instance.
 
 ## Utility
  
-### `construct:item`
+### `construct:construct`
 Give yourself the Construct menu item.
- 
-> Already implemented as a native custom command. Needs to be refactored to fit the new command pipeline.
  
 ### `construct:tag <instanceName>`
 Rename the held Construct item to an instance name for quick-open. Errors if the item is not a construct item or if the instance name is not registered.
@@ -145,5 +143,3 @@ Rename the held Construct item to an instance name for quick-open. Errors if the
 | Argument | Description |
 |---|---|
 | `<instanceName>` | Instance name to embed in the item's `nameTag`. Using the item in-world will jump straight to that instance's menu. |
- 
-> The item-use handler in `construct.js` already checks `itemStack.nameTag` against known instance names; this command just makes it easy to tag an item without renaming it in an anvil.
