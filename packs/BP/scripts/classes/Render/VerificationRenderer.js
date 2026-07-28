@@ -86,7 +86,7 @@ export class VerificationRenderer {
         const chunk = this.#renderQueue.splice(0, shortestSideLength);
         for (const location of chunk) {
             const verificationLevel = verificationLevels[JSON.stringify(location)];
-            this.#renderBlockVerificationLevel(dimension, location, verificationLevels, lifetime);
+            this.#renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime);
         }
     }
 
@@ -98,7 +98,7 @@ export class VerificationRenderer {
         const nextBlock = this.#renderQueue.splice(0, 1);
         for (const location of nextBlock) {
             const verificationLevel = verificationLevels[JSON.stringify(location)];
-            this.#renderBlockVerificationLevel(dimension, location, verificationLevels, lifetime);
+            this.#renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime);
         }
     }
 
@@ -108,9 +108,9 @@ export class VerificationRenderer {
         return this.instance.hasLayerSelected() || bounds.min.volume(bounds.max) > maxVolume;
     }
 
-    #renderBlockVerificationLevel(dimension, location, verificationLevel,lifetime ) {
+    #renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime) {
         if (!verificationLevel)
-            continue;
+            return;
         const dimensionLocation = {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)

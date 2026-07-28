@@ -1,6 +1,6 @@
 import { StructureNotFoundError } from '../Errors/StructureNotFoundError';
-import { OutlineParticleRender } from './ParticleRender/ParticleOutliner';
-import { OutlinePerformanceRender } from './PerformanceRender/PerformanceOutliner';
+import { OutlineParticleRender } from './ParticleRender/OutlineParticleRender';
+import { OutlinePerformanceRender } from './PerformanceRender/OutlinePerformanceRender';
 
 export class StructureOutliner {
     instance;

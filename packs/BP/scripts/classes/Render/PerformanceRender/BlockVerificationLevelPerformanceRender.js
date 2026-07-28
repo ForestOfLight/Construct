@@ -11,42 +11,49 @@ export class BlockVerificationLevelPerformanceRender {
 
     constructor(dimensionLocation, verificationLevel, lifetimeSeconds = 5) {
         this.dimension = dimensionLocation.dimension;
-        this.location = Vector.from(dimensionLocation.location);
+        this.location = dimensionLocation.location;
         this.verificationLevel = verificationLevel;
         this.lifetimeSeconds = lifetimeSeconds;
         this.#renderBlock();
     }
 
     #renderBlock() {
-        const dimensionLocation = { x: this.location.x, y: this.location.y, z: this.location.z, dimension: this.dimension };
+        const dimensionLocation = this.#toRenderLocation(this.dimension, this.location);
+        const color = this.#getRGBByVerificationLevel();
+        if (!color)
+            return;
         const debugBox = new DebugBox(dimensionLocation);
-        debugBox.scale = this.#verificationLevelToSizeScalar();
-        debugBox.color = this.#verificationLevelToRGB();
+        debugBox.color = color;
+        debugBox.scale = this.#getSizeScalarByVerificationLevel();
         debugBox.timeLeft = this.lifetimeSeconds;
         debugDrawer.addShape(debugBox);
     }
 
-    #verificationLevelToRGB() {
+    #toRenderLocation(dimension, location) {
+        return { dimension, x: location.x + 0.5, y: location.y + 0.5, z: location.z + 0.5 };
+    }
+
+    #getRGBByVerificationLevel() {
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
-                return { red: 1, green: 0, blue: 0, alpha: 1.0 };
+                return { red: 1, green: 0, blue: 0, alpha: 1 };
             case BlockVerificationLevel.TypeMatch:
-                return { red: 1, green: 1, blue: 0, alpha: 1.0 };
+                return { red: 1, green: 1, blue: 0, alpha: 1 };
             case BlockVerificationLevel.Missing:
-                return { red: 0, green: 0, blue: 1, alpha: 1.0 };
+                return { red: 0, green: 0, blue: 1, alpha: 1 };
             default:
                 return void 0;
         }
     }
 
-    #verificationLevelToSizeScalar() {
+    #getSizeScalarByVerificationLevel() {
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
                 return 1.01;
             case BlockVerificationLevel.TypeMatch:
                 return 1.01;
             case BlockVerificationLevel.Missing:
-                return 0.90;
+                return 1.00;
             default:
                 return 1.00;
         }

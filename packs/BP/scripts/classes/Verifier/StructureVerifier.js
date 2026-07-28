@@ -1,6 +1,6 @@
 import { BlockVerifier } from "./BlockVerifier";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { BlockVerificationLevelRender } from "../Render/BlockVerificationLevelRender";
+import { BlockVerificationLevelPerformanceRender } from "../Render/PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { system, TicksPerSecond } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 
@@ -123,7 +123,7 @@ export class StructureVerifier {
             this.blockVerificationLevels[JSON.stringify(location)] = verificationLevel;
             if (shouldRender) {
                 const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(location) };
-                new BlockVerificationLevelRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
+                new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
             }
         }
     }

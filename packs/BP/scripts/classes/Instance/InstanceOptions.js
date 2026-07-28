@@ -15,7 +15,7 @@ export class InstanceOptions extends Option {
         trackPlayerDistance: 5,
         particleLifetime: 10
     };
-    performanceRendering = true;
+    performanceRendering = false;
 
     static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);

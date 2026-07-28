@@ -1,5 +1,5 @@
 import { InputPermissionCategory, world, system } from "@minecraft/server";
-import { Outliner } from "../Outliner";
+import { OutlineParticleRender } from "../Render/ParticleRender/OutlineParticleRender";
 import { MENU_ITEM } from "../../consts";
 import { Vector } from "../../lib/Vector";
 import { PlayerMovement } from "../PlayerMovement";
@@ -40,7 +40,7 @@ export class FlexibleInstanceMove {
         this.instance.disable();
         const bounds = this.instance.getBounds();
         const maxWorldLocation = this.currentInstanceLocation.add(Vector.from(bounds.max));
-        this.outliner = new Outliner(this.instance.getDimension(), this.currentInstanceLocation, maxWorldLocation, 1, 1);
+        this.outliner = new OutlineParticleRender(this.instance.getDimension(), this.currentInstanceLocation, maxWorldLocation, 1, 1);
         this.outliner.startDraw();
     }
 

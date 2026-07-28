@@ -1,43 +1,59 @@
-import { IOutlineRender } from "../Render/IOutlineRender";
+import { IOutlineRender } from "../IOutlineRender";
 import { MolangVariableMap, system, TicksPerSecond } from "@minecraft/server";
-import { debugDrawer, DebugSphere, DebugLine } from "@minecraft/debug-utilities";
-import { Vector } from "../lib/Vector";
+import { Vector } from "../../../lib/Vector";
 
-export class OutlinePerformanceRender extends IOutlineRender {
+export class OutlineParticleRender extends IOutlineRender {
     dimension;
     min = new Vector();
     max = new Vector();
+    drawParticle = "construct:outline";
+    drawFrequency;
+    particleLifetime;
     
-    #shapes = [];
+    #drawParticles = [];
+    #runner = void 0;
 
-    constructor(dimension, min, max) {
+    constructor(dimension, min, max, drawFrequency = 10, particleLifetime = 20) {
+        super();
         this.dimension = dimension;
         this.min = Vector.from(min);
         this.max = Vector.from(max);
+        this.drawFrequency = drawFrequency;
+        this.particleLifetime = particleLifetime;
         this.vertices = this.getVertices(min, max);
     }
 
     startDraw() {
-        this.draw();
+        this.#runner = system.runInterval(() => this.draw(), this.drawFrequency);
     }
 
     stopDraw() {
-        this.#shapes.forEach(shape => shape.remove());
+        if (!this.#runner)
+            return;
+        system.clearRun(this.#runner);
+        this.#runner = void 0;
     }
 
     draw() {
-        this.drawShapes(this.getVerticeShapes(), () => { 
+        this.drawParticles(this.getVerticeParticles(), () => { 
             return { red: 1, green: 1, blue: 1, alpha: 1 }
         });
-        this.drawShapes(this.getCubiodEdgeLines(), this.getNextLineColor.bind(this));
+        this.drawParticles(this.getCubiodEdgeParticles(), this.getNextParticleColor.bind(this));
     }
 
-    drawShapes(shapes, colorCallback) {
-        this.#shapes.length = 0;
-        this.#shapes.push(...shapes);
-        for (const shape of this.#shapes) {
-            shape.color = colorCallback();
-            debugDrawer.addShape(shape);
+    drawParticles(particleLocations, colorCallback) {
+        this.#drawParticles.length = 0;
+        this.#drawParticles.push(...particleLocations);
+        for (const [particleType, location] of this.#drawParticles) {
+            const molang = new MolangVariableMap();
+            molang.setColorRGBA("dot_color", colorCallback());
+            const lifetimeSeconds = this.particleLifetime / TicksPerSecond;
+            molang.setFloat("lifetime", lifetimeSeconds);
+            try {
+                this.dimension.spawnParticle(particleType, location, molang);
+            } catch (e) {
+                /* pass */
+            }
         }
     }
 
@@ -61,16 +77,11 @@ export class OutlinePerformanceRender extends IOutlineRender {
         this.vertices = this.getVertices(min, max);
     }
 
-    getVerticeShapes() {
-        return this.vertices.map((vertice) => {
-            const dimensionVertice = vertice.dimension = this.dimension;
-            const sphere = new DebugSphere(dimensionVertice);
-            sphere.scale = 0.3;
-            return sphere;
-        });
+    getVerticeParticles() {
+        return this.vertices.map((v) => [this.drawParticle, v]);
     }
 
-    getCubiodEdgeLines() {
+    getCubiodEdgeParticles() {
         const edges = [
             [0, 1],
             [0, 2],
@@ -85,20 +96,16 @@ export class OutlinePerformanceRender extends IOutlineRender {
             [5, 7],
             [6, 7]
         ];
-        const edgeLines = [];
+        const edgePoints = [];
         for (const edge of edges) {
             const [startVertex, endVertex] = [this.vertices[edge[0]], this.vertices[edge[1]]];
             const resolution = Math.min(Math.floor(endVertex.subtract(startVertex).length), 16);
-            for (let i = 0; i < resolution - 1; i++) {
-                const t1 = i / resolution;
-                const t2 = (i + 1) / resolution;
-                const point1 = startVertex.lerp(endVertex, t1);
-                const point2 = startVertex.lerp(endVertex, t2);
-                const line = new DebugLine(point1, point2);
-                edgeLines.push(line);
+            for (let i = 1; i < resolution; i++) {
+                const t = i / resolution;
+                edgePoints.push(startVertex.lerp(endVertex, t));
             }
         }
-        return edgeLines;
+        return edgePoints.map((v) => [this.drawParticle, v]);
     }
 
     addStandaloneLocations(locations) {
@@ -106,7 +113,7 @@ export class OutlinePerformanceRender extends IOutlineRender {
             this.vertices.push(Vector.from(location));
     }
 
-    getNextLineColor() {
+    getNextParticleColor() {
         if (this.lastWasBlack) {
             this.lastWasBlack = false;
             return { red: 0.93333333, green: 0.77647059, blue: 0.13333333, alpha: 1 };
