@@ -41,11 +41,11 @@ export class StructureInstance {
         if (!this.hasLocation())
             return;
         if (!this.outliner)
-            this.outliner = new StructureOutliner(this);
+            this.outliner = new StructureOutliner(this, { usePerformanceRendering: this.options.performanceRendering });
         if (!this.verifier)
             this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled });
         if (!this.verificationRenderer)
-            this.verificationRenderer = new VerificationRenderer(this);
+            this.verificationRenderer = new VerificationRenderer(this, { usePerformanceRendering: this.options.performanceRendering });
         if (!this.materials)
             this.materials = new StructureMaterials(this);
         this.outliner.refresh();
@@ -302,7 +302,8 @@ export class StructureInstance {
                 isEnabled: this.options.verifier.isEnabled,
                 trackPlayerDistance: this.options.verifier.trackPlayerDistance,
                 particleLifetime: this.options.verifier.particleLifetime
-            }
+            },
+            performanceRendering: this.options.performanceRendering
         };
     }
 
@@ -317,6 +318,7 @@ export class StructureInstance {
         this.options.setVerifierEnabled(newVerifierOptions.isEnabled);
         this.options.setVerifierDistance(newVerifierOptions.trackPlayerDistance);
         this.options.setVerifierParticleLifetime(newVerifierOptions.particleLifetime);
+        this.options.setPerformanceRenderingEnabled(newOptions.performanceRendering);
         this.options.save();
         this.refreshBox();
     }

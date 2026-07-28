@@ -24,7 +24,8 @@ export const InstanceModel = PROTO.Object({
         isEnabled: PROTO.Boolean,
         trackPlayerDistance: PROTO.Int8,
         particleLifetime: PROTO.Int32
-    })
+    }),
+    performanceRendering: PROTO.Boolean
 });
 
 export const InstancesModel = PROTO.Array(InstanceModel);

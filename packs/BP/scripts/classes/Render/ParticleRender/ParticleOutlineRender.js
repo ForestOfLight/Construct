@@ -1,7 +1,8 @@
+import { IOutlineRender } from "../IOutlineRender";
 import { MolangVariableMap, system, TicksPerSecond } from "@minecraft/server";
-import { Vector } from "../lib/Vector";
+import { Vector } from "../../../lib/Vector";
 
-export class Outliner {
+export class OutlineParticleRender extends IOutlineRender {
     dimension;
     min = new Vector();
     max = new Vector();
@@ -106,7 +107,7 @@ export class Outliner {
         return edgePoints.map((v) => [this.drawParticle, v]);
     }
 
-    addStandaloneParticles(locations) {
+    addStandaloneLocations(locations) {
         for (const location of locations)
             this.vertices.push(Vector.from(location));
     }

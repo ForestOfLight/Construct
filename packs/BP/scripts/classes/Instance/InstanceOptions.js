@@ -15,6 +15,7 @@ export class InstanceOptions extends Option {
         trackPlayerDistance: 5,
         particleLifetime: 10
     };
+    performanceRendering = true;
 
     static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);
@@ -80,6 +81,11 @@ export class InstanceOptions extends Option {
 
     setVerifierParticleLifetime(lifetime) {
         this.verifier.particleLifetime = lifetime;
+        this.save();
+    }
+
+    setPerformanceRenderingEnabled(enable) {
+        this.performanceRendering = enable;
         this.save();
     }
 }

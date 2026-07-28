@@ -1,8 +1,8 @@
 import { MolangVariableMap } from "@minecraft/server";
-import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { Vector } from "../../lib/Vector";
+import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
+import { Vector } from "../../../lib/Vector";
 
-export class BlockVerificationLevelRender {
+export class BlockVerificationLevelParticleRender {
     opacity = 0.2;
     lifetimeSeconds = 0;
 
@@ -11,13 +11,13 @@ export class BlockVerificationLevelRender {
         this.location = Vector.from(dimensionLocation.location);
         this.verificationLevel = verificationLevel;
         this.lifetimeSeconds = lifetimeSeconds;
-        this.renderBlock();
+        this.#renderBlock();
     }
 
-    renderBlock() {
-        const sizeScalar = this.verificationLevelToSizeScalar();
-        for (const particle of this.getBlockParticles(sizeScalar)) {
-            const color = this.getRGBAMolang();
+    #renderBlock() {
+        const sizeScalar = this.#verificationLevelToSizeScalar();
+        for (const particle of this.#getBlockParticles(sizeScalar)) {
+            const color = this.#getRGBAMolang();
             if (!color)
                 return;
             color.setFloat("lifetime", this.lifetimeSeconds);
@@ -31,7 +31,7 @@ export class BlockVerificationLevelRender {
         }
     }
 
-    getBlockParticles(sizeScalar = 1) {
+    #getBlockParticles(sizeScalar = 1) {
         const bottomFace = new Vector(0.5, 0, 0.5);
         const topFace = new Vector(0.5, 1, 0.5);
         const leftFace = new Vector(1, 0.5, 0.5);
@@ -49,8 +49,8 @@ export class BlockVerificationLevelRender {
         ];
     }
 
-    getRGBAMolang() {
-        const rgb = this.verificationLevelToRGB();
+    #getRGBAMolang() {
+        const rgb = this.#verificationLevelToRGB();
         if (!rgb) return;
         rgb.alpha = this.opacity;
         const molang = new MolangVariableMap();
@@ -58,7 +58,7 @@ export class BlockVerificationLevelRender {
         return molang;
     }
 
-    verificationLevelToRGB() {
+    #verificationLevelToRGB() {
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
                 return { red: 1, green: 0, blue: 0};
@@ -71,7 +71,7 @@ export class BlockVerificationLevelRender {
         }
     }
 
-    verificationLevelToSizeScalar() {
+    #verificationLevelToSizeScalar() {
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
                 return 1.01;
