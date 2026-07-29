@@ -1,7 +1,7 @@
 import { MaterialGrabberFormBuilder } from './MaterialGrabberFormBuilder';
 import { forceShow } from '../../utils';
 import { Builders } from '../Builder/Builders';
-import { structureCollection } from '../Structure/StructureCollection';
+import { instanceCollection } from '../Instance/InstanceCollection';
 
 export class MaterialGrabberForm {
     constructor(player) {
@@ -14,7 +14,7 @@ export class MaterialGrabberForm {
             return forceShow(this.player, MaterialGrabberFormBuilder.buildInstanceSelector(this.player)).then((response) => {
                 if (response.canceled)
                     return;
-                const selectedInstanceName = structureCollection.getInstanceNames()[response.selection];
+                const selectedInstanceName = instanceCollection.getInstanceNames()[response.selection];
                 if (selectedInstanceName) {
                     this.setActiveInstance(selectedInstanceName);
                     this.player.sendMessage({ translate: 'construct.materials.grabber.menu.success', with: [selectedInstanceName] });

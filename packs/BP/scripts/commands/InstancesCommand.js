@@ -1,6 +1,6 @@
 import { CommandPermissionLevel, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class InstancesCommand extends Command {
     constructor() {
@@ -13,7 +13,7 @@ export class InstancesCommand extends Command {
     }
 
     run(origin) {
-        const names = structureCollection.getInstanceNames();
+        const names = instanceCollection.getInstanceNames();
         if (names.length === 0)
             return { status: CustomCommandStatus.Success, message: 'construct.commands.instances.empty' };
         const rawtext = [
@@ -21,7 +21,7 @@ export class InstancesCommand extends Command {
             { text: '\n' }
         ];
         for (const name of names) {
-            const instance = structureCollection.get(name);
+            const instance = instanceCollection.get(name);
             const status = this.formatStatus(instance);
             rawtext.push({
                 translate: 'construct.commands.instances.row',

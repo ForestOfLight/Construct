@@ -1,6 +1,6 @@
 import { BlockVerificationLevel } from '../Enums/BlockVerificationLevel.js';
 
-export class StructureStatistics {
+export class InstanceStatistics {
     constructor(instance, verification) {
         this.instance = instance;
         this.verification = verification;

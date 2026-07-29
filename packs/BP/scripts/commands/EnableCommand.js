@@ -1,6 +1,6 @@
 import { Command } from '../classes/Commands/Command';
 import { CustomCommandParamType, CustomCommandStatus, CommandPermissionLevel, system } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class EnableCommand extends Command {
     constructor() {
@@ -17,7 +17,7 @@ export class EnableCommand extends Command {
     }
 
     run(origin, instanceName, state) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         if (state && !instance.hasLocation()) {
             origin.sendMessage({ translate: 'construct.commands.error.noLocation', with: [instanceName] });
             return void 0;

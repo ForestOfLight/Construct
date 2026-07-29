@@ -1,6 +1,6 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
 import { StructureNotFoundError } from '../classes/Errors/StructureNotFoundError';
 
@@ -34,7 +34,7 @@ export class CreateCommand extends Command {
     }
 
     addStructure(origin, instanceName, structureId) {
-        structureCollection.add(instanceName, structureId);
+        instanceCollection.add(instanceName, structureId);
         origin.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
     }
 

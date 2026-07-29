@@ -1,6 +1,6 @@
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { Vector } from '../lib/Vector';
 
 export class InstanceInfoCommand extends Command {
@@ -17,7 +17,7 @@ export class InstanceInfoCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         const message = { rawtext: [
             this.getHeaderText(instance),
             { text: '\n' },

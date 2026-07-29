@@ -1,6 +1,6 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, blockIdToItemStackMap } from './easyPlaceConversions';
 import { fetchMatchingItemSlot, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
@@ -49,7 +49,7 @@ world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);
 function onPlayerPlaceBlock(event) {
     const { player, block } = event;
     if (!player || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
-    const structureBlock = structureCollection.fetchStructureBlock(block.dimension.id, block.location);
+    const structureBlock = instanceCollection.fetchStructureBlock(block.dimension.id, block.location);
     if (!structureBlock)
         return;
     tryPlaceBlock(event, player, block, structureBlock);

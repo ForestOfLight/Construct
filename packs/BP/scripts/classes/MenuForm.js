@@ -1,5 +1,5 @@
 import { forceShow } from '../utils';
-import { structureCollection } from './Structure/StructureCollection';
+import { instanceCollection } from './Instance/InstanceCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceForm } from './Instance/InstanceForm';
 import { BuilderForm } from './Builder/BuilderForm';
@@ -15,7 +15,7 @@ export class MenuForm {
     async show(jumpToInstance = false, instanceName = void 0) {
         if (jumpToInstance) {
             if (!instanceName)
-                instanceName = structureCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
+                instanceName = instanceCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
             if (instanceName) {
                 new InstanceForm(this.player, instanceName);
                 return;
@@ -36,12 +36,12 @@ export class MenuForm {
                 if (selection === 0) {
                     new BuilderForm(this.player);
                     return void 0;
-                } else if (selection == structureCollection.getInstanceNames().length + 2) {
+                } else if (selection == instanceCollection.getInstanceNames().length + 2) {
                     MenuFormBuilder.buildHowTo().show(this.player);
                     return void 0;
                 } else {
                     selection--;
-                    const selectedInstanceName = structureCollection.getInstanceNames()[selection];
+                    const selectedInstanceName = instanceCollection.getInstanceNames()[selection];
                     return selectedInstanceName || this.createNewInstance();
                 }
             });
@@ -65,7 +65,7 @@ export class MenuForm {
             if (!structureId)
                 return void 0;
             try {
-                structureCollection.add(instanceName, structureId);
+                instanceCollection.add(instanceName, structureId);
             } catch (error) {
                 if (error instanceof InstanceExistsError || error instanceof StructureNotFoundError) {
                     error.sendTo(this.player);
@@ -81,7 +81,7 @@ export class MenuForm {
         return MenuFormBuilder.buildAllStructures().show(this.player).then((response) => {
             if (response.canceled)
                 return void 0;
-            const selectedStructureId = structureCollection.getWorldStructureIds()[response.selection];
+            const selectedStructureId = instanceCollection.getWorldStructureIds()[response.selection];
             return selectedStructureId || this.getOtherStructureId();
         });
     }

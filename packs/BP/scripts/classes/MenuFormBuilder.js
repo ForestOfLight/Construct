@@ -1,5 +1,5 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
-import { structureCollection } from './Structure/StructureCollection';
+import { instanceCollection } from './Instance/InstanceCollection';
 
 export class MenuFormBuilder {
     static menuTitle = { translate: 'construct.mainmenu.title' };
@@ -9,8 +9,8 @@ export class MenuFormBuilder {
             .title(this.menuTitle)
             .body({ translate: 'construct.mainmenu.selectinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.settings' });
-        structureCollection.getInstanceNames().forEach(instanceName => {
-            allInstanceNameForm.button(`${structureCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
+        instanceCollection.getInstanceNames().forEach(instanceName => {
+            allInstanceNameForm.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
         });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.newinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.howto' });
@@ -28,7 +28,7 @@ export class MenuFormBuilder {
         const allStructuresForm = new ActionFormData()
             .title(this.menuTitle)
             .body({ translate: 'construct.mainmenu.selectstructure.header' });
-        structureCollection.getWorldStructureIds().forEach(structureId => {
+        instanceCollection.getWorldStructureIds().forEach(structureId => {
             const structureName = structureId.replace('mystructure:', '');
             allStructuresForm.button(`§2${structureName}`);
         });

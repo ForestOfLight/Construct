@@ -1,6 +1,6 @@
 import { ActionFormData } from "@minecraft/server-ui";
 import { MenuFormBuilder } from "../MenuFormBuilder";
-import { structureCollection } from "../Structure/StructureCollection";
+import { instanceCollection } from "../Instance/InstanceCollection";
 import { Builders } from "../Builder/Builders";
 
 export class MaterialGrabberFormBuilder {
@@ -18,7 +18,7 @@ export class MaterialGrabberFormBuilder {
         body.rawtext.push({ text: '\n' });
         body.rawtext.push({ translate: 'construct.materials.grabber.menu.selectinstance' });
         allInstanceNameForm.body(body);
-        structureCollection.getInstanceNames().forEach(instanceName => {
+        instanceCollection.getInstanceNames().forEach(instanceName => {
             allInstanceNameForm.button(`§2${instanceName}`);
         });
         return allInstanceNameForm;

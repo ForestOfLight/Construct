@@ -1,4 +1,4 @@
-import { structureCollection } from "./Structure/StructureCollection";
+import { instanceCollection } from "./Instance/InstanceCollection";
 
 export class Raycaster {
     static STEP_SIZE = 0.2;
@@ -9,9 +9,9 @@ export class Raycaster {
         let location = startLocation;
         let distance = 0;
         while (distance < maxDistance) {
-            const structure = structureCollection.getStructure(dimension.id, location, { useActiveLayer });
-            if (structure) {
-                const block = structure.getBlock(structure.toStructureCoords(location));
+            const instance = instanceCollection.getStructure(dimension.id, location, { useActiveLayer });
+            if (instance) {
+                const block = instance.getBlock(instance.toStructureCoords(location));
                 if (block?.type.id !== 'minecraft:air') {
                     blocks.push({
                         permutation: block,

@@ -1,7 +1,7 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, world } from '@minecraft/server';
 import { Vector } from '../lib/Vector';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 
 export class MoveCommand extends Command {
@@ -22,7 +22,7 @@ export class MoveCommand extends Command {
     }
 
     run(origin, instanceName, dimensionId, location) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         if (dimensionId === void 0 || location === void 0) {
             if (!(origin instanceof PlayerCommandOrigin))
                 return { status: CustomCommandStatus.Failure, message: 'construct.commands.move.locationRequired' };

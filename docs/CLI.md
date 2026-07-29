@@ -12,7 +12,7 @@ Create a new instance bound to a structure.
 | `<instanceName>` | Unique name for this instance. |
 | `<structureId>` | ID of a structure saved in the world (without the `mystructure:` prefix). |
  
-> Corresponds to the "create new instance" flow in the main menu. Errors if `instanceName` is already taken or `structureId` does not exist.
+> Errors if `instanceName` is already taken or `structureId` does not exist.
  
 ### `construct:delete <instanceName>`
 Permanently delete an instance.
@@ -20,8 +20,6 @@ Permanently delete an instance.
 | Argument | Description |
 |---|---|
 | `<instanceName>` | Name of the instance to delete. |
- 
-> Calls `structureCollection.delete()`. Also disables the instance and clears its saved dynamic properties before removal.
  
 ### `construct:rename <instanceName> <newInstanceName>`
 Rename an existing instance.
@@ -34,7 +32,7 @@ Rename an existing instance.
 ### `construct:list`
 List all registered instances and their status.
  
-> Prints each instance name, its bound structure ID, enabled/disabled state, and placed location (if any). Useful for scripting and quick inspection without opening the GUI.
+> Prints each instance name, its bound structure ID, enabled/disabled state, and placed location (if any).
  
 ## Placement & Movement
  
@@ -46,7 +44,7 @@ Enable and place an instance at a location.
 | `<instanceName>` | Instance to place. |
 | `<x y z>` | World coordinates. Errors if omitted. Supports tilde (`~`) notation. |
  
-> Equivalent to the "Place" button in the instance menu — enables the instance and calls `move()` in one step. If the instance already has a location, this is a move, not a fresh place.
+> If the instance already has a location, this is a move, not a fresh place.
  
 ### `construct:move <instanceName> [x y z]`
 Reposition a placed instance without toggling its enabled state.

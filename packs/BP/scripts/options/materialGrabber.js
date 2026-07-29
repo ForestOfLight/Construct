@@ -2,7 +2,7 @@ import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { EntityComponentTypes, ItemStack, Player, world, system, EquipmentSlot } from '@minecraft/server';
 import { MaterialGrabberForm } from '../classes/Materials/MaterialGrabberForm';
 import { Builders } from '../classes/Builder/Builders';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
@@ -57,7 +57,7 @@ function onPlayerInteract(event) {
     const player = event.player;
     const target = event.block || event.target;
     const focusedInstanceName = Builders.get(player.id).materialInstanceName;
-    if (!focusedInstanceName || !structureCollection.has(focusedInstanceName))
+    if (!focusedInstanceName || !instanceCollection.has(focusedInstanceName))
         openInstanceSelectionForm(player, event);
     else
         tryGrabMaterials(player, target, focusedInstanceName, event);
@@ -86,7 +86,7 @@ function tryGrabMaterials(player, target, focusedInstanceName, event) {
 }
 
 function getActiveMaterials(focusedInstanceName) {
-    const instance = structureCollection.get(focusedInstanceName);
+    const instance = instanceCollection.get(focusedInstanceName);
     return instance?.getActiveMaterials();
 }
 

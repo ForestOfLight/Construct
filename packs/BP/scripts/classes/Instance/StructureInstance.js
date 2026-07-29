@@ -7,7 +7,7 @@ import { world, system, TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
 import { VerificationRenderer } from "../Render/VerificationRenderer";
-import { structureCollection } from "../Structure/StructureCollection";
+import { instanceCollection } from "../Instance/InstanceCollection";
 import { InstanceExistsError } from "../Errors/InstanceExistsError";
 
 export class StructureInstance {
@@ -197,7 +197,7 @@ export class StructureInstance {
     }
 
     rename(newName) {
-        if (structureCollection.has(newName))
+        if (instanceCollection.has(newName))
             throw new InstanceExistsError(newName);
         this.options.rename(newName);
     }
@@ -315,7 +315,7 @@ export class StructureInstance {
     setOptions(newOptions) {
         const newVerifierOptions = newOptions.verifier;
         if (newOptions.name !== this.getName())
-            structureCollection.rename(this.getName(), newOptions.name);
+            instanceCollection.rename(this.getName(), newOptions.name);
         this.setStructure(newOptions.structureId);
         this.options.setEnabled(newOptions.isEnabled);
         this.options.move(newOptions.dimensionId, newOptions.location);

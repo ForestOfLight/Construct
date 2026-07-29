@@ -1,11 +1,11 @@
 import { InstanceExistsError } from '../Errors/InstanceExistsError';
 import { InstanceNotFoundError } from '../Errors/InstanceNotFoundError';
 import { StructureNotFoundError } from '../Errors/StructureNotFoundError';
-import { InstanceOptions } from '../Instance/InstanceOptions';
-import { StructureInstance } from '../Instance/StructureInstance';
+import { InstanceOptions } from './InstanceOptions';
+import { StructureInstance } from './StructureInstance';
 import { InvalidStructureError, world } from '@minecraft/server';
 
-class StructureCollection {
+class InstanceCollection {
     structures;
 
     constructor() {
@@ -111,8 +111,8 @@ class StructureCollection {
     }
 }
 
-export const structureCollection = new StructureCollection();
+export const instanceCollection = new InstanceCollection();
 
 world.afterEvents.worldLoad.subscribe(() => {
-    structureCollection.loadExistingInstances();
+    instanceCollection.loadExistingInstances();
 });

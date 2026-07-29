@@ -1,6 +1,6 @@
 import { Command } from '../classes/Commands/Command'; 
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, DimensionTypes, system, world } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
 import { Vector } from '../lib/Vector';
 
@@ -21,7 +21,7 @@ export class PlaceCommand extends Command {
     }
 
     run(origin, instanceName, dimensionId, location) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         const flooredLocation = Vector.from(location).floor();
         this.assertDimensionExists(dimensionId);
         system.run(() => {

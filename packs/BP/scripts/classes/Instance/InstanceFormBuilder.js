@@ -1,7 +1,7 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
-import { StructureStatistics } from '../Structure/StructureStatistics';
+import { InstanceStatistics } from './InstanceStatistics';
 import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
 
 export class InstanceFormBuilder {
@@ -45,7 +45,7 @@ export class InstanceFormBuilder {
             throw new Error('StructureVerifier is already running.');
         this.structureVerifier = new StructureVerifier(instance, { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true });
         const verification = await this.structureVerifier.verifyStructure(true);
-        const statistics = new StructureStatistics(instance, verification);
+        const statistics = new InstanceStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
         this.structureVerifier = void 0;
         buildStatisticsForm.body(statsMessage);
