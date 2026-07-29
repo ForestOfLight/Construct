@@ -78,7 +78,7 @@ construct.mainmenu.howto.remove.header=§cHow to Remove Structures:
 construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 command to remove a structure from the world.
 
 ## Structure Block Info Display
-construct.blockinfo.header=Structure: 
+construct.blockinfo.header=Structure:
 construct.blockinfo.none=§7None
 construct.blockinfo.nosupply=§c[No Supply]	## When the targeted block is not in the player's inventory
 construct.blockinfo.noeasyplace=§e[Cannot be Easy Placed]	## When the targeted block cannot be easyPlaced

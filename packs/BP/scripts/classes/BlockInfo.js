@@ -19,14 +19,14 @@ class BlockInfo {
         const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useActiveLayer: true });
         if (!block && this.shownToLastTick.has(player.id)) {
             player.onScreenDisplay.setActionBar({ rawtext: [
-                this.getFormattedHeader(block.instance),
+                this.getFormattedHeader(),
                 { translate: 'construct.blockinfo.none' }
             ]});
             this.shownToLastTick.delete(player.id);
         }
         if (!block)
             return;
-        player.onScreenDisplay.setActionBar(this.getFormattedBlockInfo(player, block.permutation));
+        player.onScreenDisplay.setActionBar(this.getFormattedBlockInfo(player, block));
         this.shownToLastTick.add(player.id);
     }
 
@@ -35,7 +35,7 @@ class BlockInfo {
         const supplyMessage = this.getSupplyMessage(player, block); 
         return { rawtext: [
             this.getFormattedHeader(block.instance),
-            this.getBlockMessage(block),
+            this.getBlockPermutationMessage(block.permutation),
             { text: '\n' },
             easyPlaceMessage,
             (easyPlaceMessage.translate && supplyMessage.translate) ? { text: ' ' } : { text: '' },
@@ -43,15 +43,14 @@ class BlockInfo {
         ] };
     }
 
-    static getFormattedHeader(instance) {
+    static getFormattedHeader(instance = void 0) {
         return { rawtext: [
             { translate: 'construct.blockinfo.header' },
-            { text: ` §7${instance.getName()}` },
-            { text: '\n' }
+            (instance != void 0) ? { text: ` §7${instance.getName()}\n` } : { text: '\n' }
         ]};
     }
 
-    static getBlockMessage(block) {
+    static getBlockPermutationMessage(block) {
         if (!block)
             return { translate: 'construct.blockinfo.unknown' };
         const message = { rawtext: [{ text: '§a' }, { translate: block.localizationKey }] };
@@ -72,17 +71,18 @@ class BlockInfo {
     }
 
     static getSupplyMessage(player, block) {
-        if (player.getGameMode() !== GameMode.Survival || fetchMatchingItemSlot(player, block.getItemStack()?.typeId))
+        if (player.getGameMode() !== GameMode.Survival || fetchMatchingItemSlot(player, block.permutation.getItemStack()?.typeId))
             return { text: '' };
         return { translate: 'construct.blockinfo.nosupply' };
     }
 
     static getEasyPlaceMessage(player, block) {
         const builder = Builders.get(player.id);
-        if (builder.isOptionEnabled('easyPlace') || builder.isOptionEnabled('fastEasyPlace'))
+        if (!builder.isOptionEnabled('easyPlace') && !builder.isOptionEnabled('fastEasyPlace'))
             return { text: '' };
-        if (isBannedBlock(player, block))
+        if (isBannedBlock(player, block.permutation))
             return { translate: 'construct.blockinfo.noeasyplace' };
+        return { text: '' };
     }
 }
 
