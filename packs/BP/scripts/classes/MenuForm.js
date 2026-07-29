@@ -15,7 +15,7 @@ export class MenuForm {
     async show(jumpToInstance = false, instanceName = void 0) {
         if (jumpToInstance) {
             if (!instanceName)
-                instanceName = instanceCollection.getStructure(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
+                instanceName = instanceCollection.getInstanceAt(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
             if (instanceName) {
                 new InstanceForm(this.player, instanceName);
                 return;

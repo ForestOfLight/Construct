@@ -1,6 +1,8 @@
 import { GameMode, system, world } from '@minecraft/server';
 import { Raycaster } from '../classes/Raycaster';
 import { fetchMatchingItemSlot } from '../utils';
+import { Builders } from './Builder/Builders';
+import { isBannedBlock } from '../options/fastEasyPlace';
 
 class BlockInfo {
     static shownToLastTick = new Set();
@@ -17,8 +19,7 @@ class BlockInfo {
         const block = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useActiveLayer: true });
         if (!block && this.shownToLastTick.has(player.id)) {
             player.onScreenDisplay.setActionBar({ rawtext: [
-                { translate: 'construct.blockinfo.header' },
-                { text: '\n' },
+                this.getFormattedHeader(block.instance),
                 { translate: 'construct.blockinfo.none' }
             ]});
             this.shownToLastTick.delete(player.id);
@@ -30,12 +31,24 @@ class BlockInfo {
     }
 
     static getFormattedBlockInfo(player, block) {
+        const easyPlaceMessage = this.getEasyPlaceMessage(player, block);
+        const supplyMessage = this.getSupplyMessage(player, block); 
+        return { rawtext: [
+            this.getFormattedHeader(block.instance),
+            this.getBlockMessage(block),
+            { text: '\n' },
+            easyPlaceMessage,
+            (easyPlaceMessage.translate && supplyMessage.translate) ? { text: ' ' } : { text: '' },
+            supplyMessage
+        ] };
+    }
+
+    static getFormattedHeader(instance) {
         return { rawtext: [
             { translate: 'construct.blockinfo.header' },
-            this.getSupplyMessage(player, block),
-            { text: '\n' },
-            this.getBlockMessage(block)
-        ] };
+            { text: ` §7${instance.getName()}` },
+            { text: '\n' }
+        ]};
     }
 
     static getBlockMessage(block) {
@@ -59,11 +72,17 @@ class BlockInfo {
     }
 
     static getSupplyMessage(player, block) {
-        const itemStack = fetchMatchingItemSlot(player, block.getItemStack()?.typeId);
-        const isInSurvival = player.getGameMode() === GameMode.Survival;
-        if (!itemStack && isInSurvival)
-            return { translate: 'construct.blockinfo.nosupply' };
-        return { text: '' };
+        if (player.getGameMode() !== GameMode.Survival || fetchMatchingItemSlot(player, block.getItemStack()?.typeId))
+            return { text: '' };
+        return { translate: 'construct.blockinfo.nosupply' };
+    }
+
+    static getEasyPlaceMessage(player, block) {
+        const builder = Builders.get(player.id);
+        if (builder.isOptionEnabled('easyPlace') || builder.isOptionEnabled('fastEasyPlace'))
+            return { text: '' };
+        if (isBannedBlock(player, block))
+            return { translate: 'construct.blockinfo.noeasyplace' };
     }
 }
 

@@ -108,28 +108,28 @@ export class StructureInstance {
         };
     }
 
-    getBlock(structureLocation) {
-        return this.structure.getBlock(structureLocation);
+    getBlockPermutation(structureLocation) {
+        return this.structure.getBlockPermutation(structureLocation);
     }
 
-    getBlocks(structureLocations) {
-        return this.structure.getBlocks(structureLocations);
+    getBlockPermutations(structureLocations) {
+        return this.structure.getBlockPermutations(structureLocations);
     }
 
     getLayerBlocks(layer) {
-        return this.structure.getLayerBlocks(layer);
+        return this.structure.getLayerBlockPermutations(layer);
     }
 
-    getAllBlocks() {
-        return this.structure.getAllBlocks();
+    getAllBlockPermutations() {
+        return this.structure.getAllBlockPermutations();
     }
 
     getActiveBlocks() {
         if (!this.options.isEnabled)
             throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
-            return this.getLayerBlocks(this.getLayer() - 1);
-        return this.getAllBlocks();
+            return this.getLayerBlockPermutations(this.getLayer() - 1);
+        return this.getAllBlockPermutations();
     }
 
     isLocationActive(dimensionId, structureLocation, { useActiveLayer = true } = {}) {

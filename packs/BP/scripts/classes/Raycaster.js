@@ -9,14 +9,11 @@ export class Raycaster {
         let location = startLocation;
         let distance = 0;
         while (distance < maxDistance) {
-            const instance = instanceCollection.getStructure(dimension.id, location, { useActiveLayer });
+            const instance = instanceCollection.getInstanceAt(dimension.id, location, { useActiveLayer });
             if (instance) {
-                const block = instance.getBlock(instance.toStructureCoords(location));
-                if (block?.type.id !== 'minecraft:air') {
-                    blocks.push({
-                        permutation: block,
-                        location: location
-                    });
+                const permutation = instance.getBlockPermutation(instance.toStructureCoords(location));
+                if (permutation?.type.id !== 'minecraft:air') {
+                    blocks.push({ permutation, location, instance});
                     if (getFirst)
                         break;
                 }

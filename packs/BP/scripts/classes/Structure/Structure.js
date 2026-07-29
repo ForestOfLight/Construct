@@ -26,7 +26,7 @@ export class Structure {
         return Vector.from(this.#structure.size);
     }
 
-    getBlock(structureLocation) {
+    getBlockPermutation(structureLocation) {
         const blockPermutation = this.#structure.getBlockPermutation(structureLocation);
         if (!blockPermutation)
             return void 0;
@@ -35,23 +35,23 @@ export class Structure {
         return blockPermutation;
     }
 
-    *getBlocks(locations) {
+    *getBlockPermutations(locations) {
         for (const location of locations) {
-            yield this.getBlock(location);
+            yield this.getBlockPermutation(location);
         }
     }
 
-    *getLayerBlocks(layer) {
+    *getLayerBlockPermutations(layer) {
         for (let x = 0; x < this.#structure.size.x; x++) {
             for (let z = 0; z < this.#structure.size.z; z++) {
-                yield this.getBlock({ x, y: layer, z });
+                yield this.getBlockPermutation({ x, y: layer, z });
             }
         }
     }
 
-    *getAllBlocks() {
+    *getAllBlockPermutations() {
         for (let y = 0; y < this.#structure.size.y; y++) {
-            yield * this.getLayerBlocks(y);
+            yield * this.getLayerBlockPermutations(y);
         }
     }
 

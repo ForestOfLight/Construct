@@ -8,7 +8,7 @@ export class BlockVerifier {
     }
 
     verify() {
-        const structPermutation = this.instance.getBlock(this.blockLocationInStructure);
+        const structPermutation = this.instance.getBlockPermutation(this.blockLocationInStructure);
         return this.evaluatePermutations(this.block.permutation, structPermutation);
     }
 

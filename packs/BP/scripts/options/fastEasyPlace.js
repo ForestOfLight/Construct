@@ -130,7 +130,7 @@ function locationIsPlaceable(player, worldBlock) {
     return (worldBlock.isAir || worldBlock.isLiquid) && !isBlockInsidePlayer(player, worldBlock);
 }
 
-function isBannedBlock(player, structureBlock) {
+export function isBannedBlock(player, structureBlock) {
     if (!structureBlock)
         return true;
     const blockId = structureBlock.type.id.replace('minecraft:', '');

@@ -6,10 +6,10 @@ import { StructureInstance } from './StructureInstance';
 import { InvalidStructureError, world } from '@minecraft/server';
 
 class InstanceCollection {
-    structures;
+    instances;
 
     constructor() {
-        this.structures = {};
+        this.instances = {};
     }
 
     loadExistingInstances() {
@@ -18,7 +18,7 @@ class InstanceCollection {
             let structureId;
             try {
                 structureId = InstanceOptions.getInstanceStructureId(instanceName);
-                this.structures[instanceName] = new StructureInstance(instanceName, structureId);
+                this.instances[instanceName] = new StructureInstance(instanceName, structureId);
             } catch (e) {
                 world.sendMessage(`§c[Construct] Error loading structure instance '${instanceName}'. It will be removed.`);
                 world.setDynamicProperty(id, void 0);
@@ -28,41 +28,41 @@ class InstanceCollection {
     }
 
     add(instanceName, structureId) {
-        if (this.structures[instanceName])
+        if (this.instances[instanceName])
             throw new InstanceExistsError(instanceName);
-        const structure = new StructureInstance(instanceName, structureId);
-        this.structures[instanceName] = structure;
-        return structure;
+        const instance = new StructureInstance(instanceName, structureId);
+        this.instances[instanceName] = instance;
+        return instance;
     }
 
     get(instanceName) {
-        const structure = this.structures[instanceName];
-        if (!structure)
+        const instance = this.instances[instanceName];
+        if (!instance)
             throw new InstanceNotFoundError(instanceName);
-        return structure;
+        return instance;
     }
 
     has(instanceName) {
-        return Boolean(this.structures[instanceName]);
+        return Boolean(this.instances[instanceName]);
     }
 
     delete(instanceName) {
-        const struct = this.get(instanceName);
-        struct.delete();
-        delete this.structures[instanceName];
+        const instance = this.get(instanceName);
+        instance.delete();
+        delete this.instances[instanceName];
     }
 
     getInstanceNames() {
-        return Object.keys(this.structures);
+        return Object.keys(this.instances);
     }
 
-    getStructures(dimensionId, location, options = {}) {
-        return Object.values(this.structures).filter(structure => {
+    getInstancesAt(dimensionId, location, options = {}) {
+        return Object.values(this.instances).filter(instance => {
             try {
-                return structure.isLocationActive(dimensionId, structure.toStructureCoords(location), options)
+                return instance.isLocationActive(dimensionId, instance.toStructureCoords(location), options)
             } catch (error) {
                 if (error instanceof StructureNotFoundError || error instanceof InvalidStructureError) {
-                    this.delete(structure.name);
+                    this.delete(instance.name);
                     return false;
                 } else {
                     throw error;
@@ -71,15 +71,15 @@ class InstanceCollection {
         });
     }
 
-    getStructure(dimensionId, location, options = {}) {
-        return this.getStructures(dimensionId, location, options)[0];
+    getInstanceAt(dimensionId, location, options = {}) {
+        return this.getInstancesAt(dimensionId, location, options)[0];
     }
 
     fetchStructureBlock(dimensionId, location) {
-        const structure = this.getStructure(dimensionId, location);
-        if (!structure)
+        const instance = this.getInstanceAt(dimensionId, location);
+        if (!instance)
             return void 0;
-        return structure.getBlock(structure.toStructureCoords(location));
+        return instance.getBlockPermutation(instance.toStructureCoords(location));
     }
 
     getWorldStructureIds() {
@@ -102,11 +102,11 @@ class InstanceCollection {
 
     rename(instanceName, newName) {
         const structure = this.get(instanceName);
-        if (this.structures[newName])
+        if (this.instances[newName])
             throw new InstanceExistsError(newName);
         structure.rename(newName);
-        this.structures[newName] = structure;
-        delete this.structures[instanceName];
+        this.instances[newName] = structure;
+        delete this.instances[instanceName];
         structure.name = newName;
     }
 }
