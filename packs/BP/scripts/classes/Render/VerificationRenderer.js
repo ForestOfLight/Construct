@@ -1,6 +1,7 @@
 import { TicksPerSecond } from "@minecraft/server";
 import { BlockVerificationLevelParticleRender } from "./ParticleRender/BlockVerificationLevelParticleRender";
 import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/BlockVerificationLevelPerformanceRender";
+import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
 
 const RENDER_LIFETIME_FACTOR_TICKS = 1;
@@ -116,7 +117,7 @@ export class VerificationRenderer {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)
         };
-        const blockVerificationLevelType = this.#usePerformanceRendering ? BlockVerificationLevelPerformanceRender : BlockVerificationLevelParticleRender;
+        const blockVerificationLevelType = this.#usePerformanceRendering ? BlockVerificationLevelPerformanceRender : BlockPreviewVerificationLevelParticleRender;
         new blockVerificationLevelType(dimensionLocation, verificationLevel, lifetime);
     }
 }

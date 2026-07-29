@@ -2,10 +2,10 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "construct:blockoverlay_xy",
+			"identifier": "construct:block_face_yz",
 			"basic_render_parameters": {
-				"material": "particles_blend",
-				"texture": "textures/particle/white"
+				"material": "particles_opaque",
+				"texture": "textures/particle/vanilla_block_atlas"
 			}
 		},
 		"components": {
@@ -21,13 +21,26 @@
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": ["variable.width", "variable.height"],
-				"facing_camera_mode": "emitter_transform_xy"
+				"facing_camera_mode": "emitter_transform_yz",
+				"uv": {
+					"texture_width": 1,
+					"texture_height": 32,
+					"flipbook": {
+						"base_UV": [ 0, 0 ],
+						"size_UV": [ 1, 1 ],
+						"step_UV": [ 0, 1 ],
+						"frames_per_second": 32,
+						"max_frame": 32,
+						"stretch_to_lifetime": true,
+						"loop": false
+					}
+				}
 			},
 			"minecraft:particle_appearance_tinting": {
 				"color": [
-					"variable.face_color.r", 
-					"variable.face_color.g", 
-					"variable.face_color.b", 
+					"variable.face_color.r",
+					"variable.face_color.g",
+					"variable.face_color.b",
 					"variable.face_color.a"
 				]
 			}

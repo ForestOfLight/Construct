@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	
+	"particle_effect": {
+		"description": {
+			"identifier": "construct:vertical_face_blend",
+			
+			"basic_render_parameters": {
+				"texture": "textures/particle/white",
+				"material": "particles_blend"
+			}
+		},
+		
+		"components": {
+			"minecraft:emitter_lifetime_once": {},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "v.lifetime"
+			},
+			"minecraft:particle_motion_parametric": {
+				"relative_position": [
+					0,
+					"v.orientation == 'top' ? v.size : -v.size",
+					0
+				],
+				"rotation": "(v.orientation == 'top' ? -1 : 1) * v.angle.initial"
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["v.size", "v.size"],
+				
+				"facing_camera_mode": "direction_z",
+				"direction": {
+					"mode": "custom",
+					
+					"custom_direction": [
+						0,
+						"v.orientation == 'top' ? -1 : 1",
+						0
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [
+					"v.face_color.r",
+					"v.face_color.g",
+					"v.face_color.b",
+					"v.face_color.a"
+				]
+			}
+		}
+	}
+}
