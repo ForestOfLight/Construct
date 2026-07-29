@@ -64,6 +64,18 @@
                 "echo": true,
                 "close": true
             }
+        },
+        {
+            "label": "regolith: release",
+            "type": "shell",
+            "command": "regolith run release",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new",
+                "close": false
+            }
         }
     ]
 }
