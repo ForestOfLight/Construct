@@ -68,19 +68,38 @@ _JAVA_STATE_OVERRIDES = {
 # Java's up face reads north, so it is a full 180 degrees out.
 _ENGINE_UP_HORIZONTAL_FACE = [0, 1, 0]
 _ENGINE_UP_VERTICAL_FACE = [0, 0, 1]
-# Which way a positive Molang rotation actually spins the quad: the opposite
-# way to the right-handed angle _derive_roll measures about the direction the
-# particle is given, hence the negation.
+# Which way a positive Molang rotation actually spins the quad, relative to
+# the right-handed angle _derive_roll measures about the direction the
+# particle is given.
 #
-# Only faces needing a quarter turn can tell the two apart, because negating
+# The two face classes need OPPOSITE signs, which looks wrong until you
+# follow what the renderer does to a vertical face. Its billboard is handed
+# the normal with y negated (see _facing) because a direction_z quad
+# otherwise comes out backwards. Negating a direction vector doesn't turn
+# the quad, it mirrors what's drawn on it - and a mirrored quad spins the
+# other way on screen. Measuring the angle about that same negated vector
+# doesn't undo a mirroring, so the handedness genuinely differs and one
+# constant can't serve both.
+#
+# Only faces needing a quarter turn can tell a sign apart, because negating
 # a roll changes what's drawn by twice the angle - and twice a half turn is
 # a full turn, which is nothing. So every plain full cube looks identical
-# either way and pins nothing down. Settled instead on blocks turned a
-# quarter of the way round: a command block and a barrel facing east both
-# want their top and bottom textures reading east, and with a positive sign
-# both read west - out by exactly the 180 degrees that doubling a quarter
-# turn gives.
-_ROLL_HANDEDNESS = -1
+# either way and pins nothing down; that is why the horizontal case went
+# unnoticed while every value it produced was 0 or 180.
+#
+# Vertical settled on blocks turned a quarter of the way round: a command
+# block and a barrel facing east both want their top and bottom textures
+# reading east, and with the opposite sign both read west.
+#
+# Horizontal settled on a sideways piston, the first quarter-turned
+# horizontal face with a texture asymmetric enough to read. piston_side is
+# drawn head-end at the image top, so a piston facing north wants that end
+# pointing north on the block's left and right faces; with the opposite sign
+# it points south, at the piston's back. The same faces on a sideways barrel
+# or log are a quarter turn out too, but barrel_side's hoops and a log's
+# bark grain are near enough symmetric top-to-bottom to hide it.
+_ROLL_HANDEDNESS_VERTICAL_FACE = -1
+_ROLL_HANDEDNESS_HORIZONTAL_FACE = 1
 
 # 'roll' matches what the real pipeline derives for an unrotated full cube
 # (see _derive_roll): 180 on the up face, 0 everywhere else. The white
@@ -143,10 +162,13 @@ def _derive_roll(normal, uv_v):
     about the normal itself, so the sign follows the same axis the engine
     spins around."""
     facing = _facing(normal)
-    engine_up = (_ENGINE_UP_VERTICAL_FACE if _is_vertical(normal)
+    vertical = _is_vertical(normal)
+    engine_up = (_ENGINE_UP_VERTICAL_FACE if vertical
                  else _ENGINE_UP_HORIZONTAL_FACE)
+    handedness = (_ROLL_HANDEDNESS_VERTICAL_FACE if vertical
+                  else _ROLL_HANDEDNESS_HORIZONTAL_FACE)
     texture_up = [-Decimal(c) for c in uv_v]
-    return _normalize_roll(_ROLL_HANDEDNESS * signed_angle(engine_up, texture_up, facing))
+    return _normalize_roll(handedness * signed_angle(engine_up, texture_up, facing))
 
 
 def _normalize_roll(degrees):

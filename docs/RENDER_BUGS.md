@@ -37,3 +37,7 @@ Keep in mind that, although we're rendering this in Bedrock edition, the render 
 #16: End gateway and end portal blocks use a black texture. Have them use the end stone texture instead. They're a special case because they use a shader instead of a texture, but the shader is not available in the data.
 
 #17: Sides of blocks with facing_direction are rotated 180 degrees from where they should be. Not in all cases though. Command block and piston back and front faces are rotated correctly, but barrels' front and back faces are rotated incorrectly. Check to see if the mcmeta data is correct for these blocks, or if the Block Preview Render system is rotating them incorrectly.
+
+#18: The missing block render is slightly too small so that the edges of the cube are not touching. Seems to be correct in debug mode, but not in normal mode.
+
+#19: Redstone dust always renders as a dot. Are there no states in the mcmeta data? If not, render it as a cross instead.

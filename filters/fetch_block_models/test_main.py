@@ -321,6 +321,25 @@ class DeriveRollTest(unittest.TestCase):
         # v running +y instead of -y means the texture reads downward.
         self.assertEqual(abs(_derive_roll([0, 0, 1], [0, 1, 0])), 180)
 
+    def test_a_quarter_turned_side_face_rolls_the_opposite_way_to_a_top_face(self):
+        # Mirrors minecraft:piston facing north, which Java draws straight
+        # from the unrotated model: its west face carries piston_side turned
+        # a quarter turn (the model's own "rotation": 270), leaving the
+        # texture reading north - toward the piston's head, which is where
+        # piston_side's head end belongs.
+        #
+        # The two face classes take opposite signs (see the handedness
+        # constants in main.py), so this has to be pinned separately from the
+        # top-face cases above - the sign being shared is what left every
+        # quarter-turned side face a full 180 degrees out. Sides only ever
+        # rolled 0 or 180 in the blocks checked before this one, and at a
+        # half turn a wrong sign is indistinguishable.
+        west, reads_north = [-1, 0, 0], [0, 0, 1]  # v runs south, texture reads north
+        self.assertEqual(_derive_roll(west, reads_north), 90)
+        # its mirror on the far side of the block turns the other way
+        east, reads_north = [1, 0, 0], [0, 0, 1]
+        self.assertEqual(_derive_roll(east, reads_north), -90)
+
 
 class MergeCoincidentFacesTest(unittest.TestCase):
     def _face(self, texture, roll=0, uv=None, center=None):
