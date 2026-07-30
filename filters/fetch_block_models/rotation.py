@@ -67,7 +67,13 @@ def rotate_vector(vec, axis, degrees):
     """Rotates a direction vector (no translation) by `degrees` about the
     given cardinal axis. Direction verified against real minecraft:furnace
     blockstate data: its facing=east variant (y:90) must move its front
-    face's normal to point east (+x), not west."""
+    face's normal to point east (+x), not west.
+
+    Careful: Y is the odd one out here. X and Z turn the standard
+    right-hand way, but Y turns the opposite way, because that is the way
+    Java's blockstate "y" turns and that is this function's busiest caller.
+    A blockstate "x" therefore does NOT match its axis here and has to be
+    negated by the caller - see blockstate_resolver._rotate_face."""
     rad = math.radians(float(degrees))
     cos_r, sin_r = math.cos(rad), math.sin(rad)
     x, y, z = (float(c) for c in vec)

@@ -180,6 +180,34 @@ class ResolveJavaStateTest(unittest.TestCase):
         self.assertEqual(face["tintindex"], -1)
         self.assertEqual(face["flip"], "")
 
+    def test_x_rotation_turns_the_way_javas_blockstates_mean_it(self):
+        # Mirrors real minecraft:piston, whose model puts its platform on the
+        # north face and whose facing=up variant is x:270. A piston facing up
+        # has its platform on top, so x:270 has to carry north onto the top -
+        # and x:90, being facing=down, onto the bottom.
+        #
+        # Only 90 and 270 can tell the two directions apart (180 is its own
+        # opposite), and getting it backwards swaps exactly those two, so
+        # every up- or down-facing block comes out a half turn round. The
+        # same x:270 rule is independently true of observers (face on the
+        # model's north side, facing=up puts it on top) and wall buttons.
+        def platform_normal(x_rot):
+            mcmeta = FakeMcmeta(
+                blockstates={"piston": {"variants": {
+                    "facing=vertical": {"model": "block/piston", "x": x_rot},
+                }}},
+                models={"block/piston": {"textures": {}, "elements": [
+                    {"from": [0, 0, 0], "to": [16, 16, 16], "faces": {
+                        "north": {"uv": [0, 0, 16, 16], "texture": "block/piston_top"},
+                    }},
+                ]}},
+            )
+            elements = resolve_java_state(mcmeta, "minecraft:piston", {"facing": "vertical"})
+            return [float(c) for c in elements[0]["faces"]["north"]["normal"]]
+
+        self.assertEqual(platform_normal(270), [0, 1, 0])
+        self.assertEqual(platform_normal(90), [0, -1, 0])
+
     def test_uvlock_variant_leaves_the_texture_world_aligned(self):
         # mirrors real minecraft:oak_stairs data: its non-default-facing
         # variants set uvlock:true, meaning the texture must NOT turn with

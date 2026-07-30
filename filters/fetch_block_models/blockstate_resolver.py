@@ -122,7 +122,19 @@ def _rotate_element(element, x_rot, y_rot, uvlock=False):
 def _rotate_face(face, x_rot, y_rot, uvlock=False):
     center, extent, normal = face["center"], face["extent"], face["normal"]
     uv_u, uv_v = face["uv_u"], face["uv_v"]
-    for axis, degrees in (("x", x_rot), ("y", y_rot)):
+    # A blockstate "x" turns the model the opposite way to rotate_vector's X
+    # axis, so it has to be negated; "y" already lines up (rotate_vector's Y
+    # is deliberately the odd one out - see the note there). Only x:90 and
+    # x:270 can tell the difference, x:180 being its own opposite, which is
+    # why this hid for so long: it swaps those two outright, turning every
+    # up-facing and down-facing block a full half turn.
+    #
+    # Which way round is settled by three vanilla blocks that all put their
+    # distinctive face on the model's north side and all agree x:270 must
+    # carry it onto the top: a piston facing up has its platform on top, an
+    # observer facing up has its face on top, and a wall button (x:90) faces
+    # out of the wall it is stuck to.
+    for axis, degrees in (("x", -x_rot), ("y", y_rot)):
         if not degrees:
             continue
         center = rotate_point(center, _ORIGIN, axis, degrees)
