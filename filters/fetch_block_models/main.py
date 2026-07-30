@@ -52,13 +52,19 @@ _STAIR_SHAPES = {"inner_left", "inner_right", "outer_left", "outer_right", "stra
 # Java's up face reads north, so it is a full 180 degrees out.
 _ENGINE_UP_HORIZONTAL_FACE = [0, 1, 0]
 _ENGINE_UP_VERTICAL_FACE = [0, 0, 1]
-# Which way a positive Molang rotation actually spins the quad. Only faces
-# needing a quarter turn (per-face uv rotation, or an x-axis blockstate
-# rotation) can tell the two apart - the 0 and 180 degree cases that cover
-# every plain full cube come out the same either way - so this is the one
-# value here that a half-turn-only test can't pin down. Flip the sign if
-# quarter-turned faces land mirrored.
-_ROLL_HANDEDNESS = 1
+# Which way a positive Molang rotation actually spins the quad: the opposite
+# way to the right-handed angle _derive_roll measures about the direction the
+# particle is given, hence the negation.
+#
+# Only faces needing a quarter turn can tell the two apart, because negating
+# a roll changes what's drawn by twice the angle - and twice a half turn is
+# a full turn, which is nothing. So every plain full cube looks identical
+# either way and pins nothing down. Settled instead on blocks turned a
+# quarter of the way round: a command block and a barrel facing east both
+# want their top and bottom textures reading east, and with a positive sign
+# both read west - out by exactly the 180 degrees that doubling a quarter
+# turn gives.
+_ROLL_HANDEDNESS = -1
 
 # 'roll' matches what the real pipeline derives for an unrotated full cube
 # (see _derive_roll): 180 on the up face, 0 everywhere else. The white
@@ -119,7 +125,26 @@ def _derive_roll(normal, uv_v):
     engine_up = (_ENGINE_UP_VERTICAL_FACE if _is_vertical(normal)
                  else _ENGINE_UP_HORIZONTAL_FACE)
     texture_up = [-Decimal(c) for c in uv_v]
-    return _ROLL_HANDEDNESS * signed_angle(engine_up, texture_up, facing)
+    return _normalize_roll(_ROLL_HANDEDNESS * signed_angle(engine_up, texture_up, facing))
+
+
+def _normalize_roll(degrees):
+    """Folds a roll into (-180, 180] so the two ways of writing a half turn
+    don't both occur. They spin the quad identically, but face descriptors
+    are deduplicated by value (see build_face_types_and_refs), so letting
+    both through would split otherwise identical faces across two entries
+    and churn the generated table on every unrelated change.
+
+    Folded by subtraction rather than with "%", because these are Decimals
+    and Decimal's remainder takes the sign of the dividend the way C's fmod
+    does, not Python's - so -180 % 360 stays -180 instead of coming back as
+    the 180 this is meant to produce."""
+    degrees = Decimal(degrees)
+    while degrees > 180:
+        degrees -= 360
+    while degrees <= -180:
+        degrees += 360
+    return degrees
 
 
 def _facing(normal):

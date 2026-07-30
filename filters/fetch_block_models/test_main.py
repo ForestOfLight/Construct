@@ -249,10 +249,22 @@ class DeriveRollTest(unittest.TestCase):
         self.assertEqual(_derive_roll([0, -1, 0], [0, 0, -1]), 0)
 
     def test_a_quarter_turned_up_face_rolls_a_quarter_turn(self):
-        # A per-face uv rotation of 90 (or an x-axis blockstate rotation)
-        # leaves v running along x instead of z; the roll has to make up the
-        # quarter turn, whichever way round the engine spins.
-        self.assertEqual(abs(_derive_roll([0, 1, 0], [1, 0, 0])), 90)
+        # A per-face uv rotation of 90 (or a blockstate rotation) leaves v
+        # running along x instead of z, so the roll has to make up a quarter
+        # turn. The sign matters and is asserted: negating a roll changes
+        # what's drawn by twice the angle, so a wrong sign here lands a
+        # quarter-turned face a full 180 degrees out - which is exactly how
+        # it was caught, on command blocks and barrels facing east whose top
+        # and bottom textures read west.
+        self.assertEqual(_derive_roll([0, 1, 0], [1, 0, 0]), -90)
+
+    def test_up_and_down_faces_of_a_turned_block_roll_opposite_ways(self):
+        # The two are seen from opposite sides, so the same turn in the world
+        # is opposite turns on screen. Mirrors a block turned y:90, which
+        # leaves both its top and bottom textures reading east.
+        east = [-1, 0, 0]  # v runs west, so the texture reads east
+        self.assertEqual(_derive_roll([0, 1, 0], east), 90)
+        self.assertEqual(_derive_roll([0, -1, 0], east), -90)
 
     def test_a_side_face_whose_texture_was_turned_upside_down_rolls_half_a_turn(self):
         # v running +y instead of -y means the texture reads downward.
