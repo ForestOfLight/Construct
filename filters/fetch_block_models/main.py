@@ -36,6 +36,30 @@ WHITE_CUBE_FACES = [
 ]
 
 
+def _derive_width_height(extent, normal):
+    """Derives world-space width/height from a face's fully-rotated extent
+    vector and normal. Must happen only after ALL rotation is done (element-
+    level + blockstate x/y), since a 90-degree blockstate rotation around X
+    or Z can turn a vertical-normal face (up/down) into a horizontal-normal
+    one (or vice versa) - e.g. a piston head rotated to face up/down - which
+    changes which axis is "vertical" for that face.
+
+    For a horizontal-normal face, the billboard's "up" is always world Y and
+    "right" is whichever horizontal axis is left over; combining the two
+    horizontal components via Pythagoras gives the right answer whether the
+    extent lies flat along one axis (the normal case after a 90-degree
+    rotation) or diagonally across both (cross-plant quads rotated 45
+    degrees around Y, where the single horizontal length gets split across
+    X and Z). Vertical-normal faces (up/down) can't go diagonal in practice
+    (only Y-axis element rotation ever introduces a non-90-degree angle, and
+    that's only ever applied to already-horizontal-normal cross quads), so
+    they just read X/Z directly."""
+    ex, ey, ez = (abs(c) for c in extent)
+    if abs(normal[1]) >= Decimal("0.5"):
+        return ex, ez
+    return (Decimal(ex) * ex + Decimal(ez) * ez).sqrt(), ey
+
+
 def root_dir():
     root = os.environ.get("ROOT_DIR")
     return Path(root) if root else Path(__file__).resolve().parents[2]
@@ -60,10 +84,11 @@ def build_block_models(mcmeta, b2j, atlas):
         for element in elements:
             for face in element["faces"].values():
                 atlas.add(mcmeta, face["texture"])
+                width, height = _derive_width_height(face["extent"], face["normal"])
                 faces.append({
                     "center": face["center"],
-                    "width": face["width"],
-                    "height": face["height"],
+                    "width": width,
+                    "height": height,
                     "normal": face["normal"],
                     "texture": face["texture"],
                     "uv": face["uv"],

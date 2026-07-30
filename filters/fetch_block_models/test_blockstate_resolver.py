@@ -159,14 +159,15 @@ class ResolveJavaStateTest(unittest.TestCase):
         )
         elements = resolve_java_state(mcmeta, "minecraft:oak_log", {"axis": "x"})
         # the 90-degree y-rotation moves the "north" face's center/normal onto
-        # the x=16 (east) plane (uv/texture/rotation/cullface/tintindex pass
-        # through unchanged, width/height are rotation-invariant); verified
-        # against real minecraft:furnace data, whose facing=east variant
-        # (y:90) must move its front face (modeled on "north") onto the east (+x) plane
+        # the x=16 (east) plane, and its extent rotates the same way
+        # (uv/texture/rotation/cullface/tintindex pass through unchanged);
+        # verified against real minecraft:furnace data, whose facing=east
+        # variant (y:90) must move its front face (modeled on "north") onto
+        # the east (+x) plane
         self.assertEqual(
             elements[0]["faces"]["north"],
             {
-                "center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0],
+                "center": [16, 8, 8], "extent": [0, 16, 16], "normal": [1, 0, 0],
                 "uv": [0, 0, 16, 16], "texture": "block/oak_log", "rotation": 0,
                 "cullface": "north", "tintindex": -1,
             },

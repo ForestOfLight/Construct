@@ -34,8 +34,7 @@ class ResolveModelTest(unittest.TestCase):
         self.assertEqual(len(elements), 1)
         face = elements[0]["faces"]["up"]
         self.assertEqual(face["center"], [8, 16, 8])
-        self.assertEqual(face["width"], 16)
-        self.assertEqual(face["height"], 16)
+        self.assertEqual(face["extent"], [16, 0, 16])
         self.assertEqual(face["normal"], [0, 1, 0])
         self.assertEqual(face["texture"], "block/stone")
 
@@ -58,8 +57,7 @@ class ResolveModelTest(unittest.TestCase):
         self.assertEqual(len(elements), 1)
         face = elements[0]["faces"]["up"]
         self.assertEqual(face["center"], [8, 8, 8])
-        self.assertEqual(face["width"], 8)
-        self.assertEqual(face["height"], 8)
+        self.assertEqual(face["extent"], [8, 0, 8])
         self.assertEqual(face["texture"], "block/child_tex")
 
     def test_face_defaults_for_missing_optional_fields(self):
@@ -183,12 +181,12 @@ class ResolveModelTest(unittest.TestCase):
         self.assertEqual(faces["east"]["center"], [16, 8, 8])
         self.assertEqual(faces["east"]["normal"], [1, 0, 0])
 
-    def test_side_face_width_is_horizontal_and_height_is_vertical(self):
-        # Mirrors a fence post: a thin (6-wide-on-x/z), full-height (16-on-y)
-        # column. Its east/west faces (normal along X) span Y (vertical) and
-        # Z (horizontal) - width must read the horizontal axis (Z) and height
-        # the vertical one (Y), or a narrow-but-tall face renders as a
-        # wide-but-short one (rotated 90 degrees).
+    def test_extent_reflects_the_faces_own_flat_rect_dimensions(self):
+        # Mirrors a fence post: a thin (4-wide-on-x/z), full-height (16-on-y)
+        # column. World-space width/height are derived later (main.py's
+        # _derive_width_height), from this raw per-axis extent - see
+        # test_main.py for that derivation, including the case where a
+        # blockstate rotation changes which axis ends up vertical.
         mcmeta = FakeMcmeta({
             "block/x": {
                 "textures": {"all": "block/oak_planks"},
@@ -199,10 +197,8 @@ class ResolveModelTest(unittest.TestCase):
             },
         })
         faces = resolve_model(mcmeta, "block/x")[0]["faces"]
-        self.assertEqual(faces["west"]["width"], 4)  # horizontal (Z) extent
-        self.assertEqual(faces["west"]["height"], 16)  # vertical (Y) extent
-        self.assertEqual(faces["north"]["width"], 4)  # horizontal (X) extent
-        self.assertEqual(faces["north"]["height"], 16)  # vertical (Y) extent
+        self.assertEqual(faces["west"]["extent"], [0, 16, 4])
+        self.assertEqual(faces["north"]["extent"], [4, 16, 0])
 
     def test_element_rotation_turns_a_diagonal_cross_quad_to_a_45_degree_normal(self):
         # Mirrors minecraft:block/cross (used by short_grass etc): a vertical
@@ -224,11 +220,15 @@ class ResolveModelTest(unittest.TestCase):
         face = resolve_model(mcmeta, "block/x")[0]["faces"]["north"]
         # center stays at the block's horizontal middle (rotation origin == face center)
         self.assertEqual(face["center"], [8, 8, 8])
-        # width/height are unaffected by rotation (it's a rigid transform)
-        self.assertEqual(face["width"], Decimal("14.4"))
-        self.assertEqual(face["height"], 16)
-        # the normal, originally due north (0,0,-1), is now rotated 45 degrees
+        # the extent's magnitude is preserved by rotation (a rigid transform),
+        # just redistributed across X/Z now that it points diagonally -
+        # see test_main.py for confirmation that _derive_width_height
+        # recovers the original 14.4/16 width/height from this
         import math
+        self.assertEqual(face["extent"][1], 16)  # height (Y) is untouched by a Y-axis rotation
+        self.assertAlmostEqual(float(face["extent"][0]), 14.4 * math.sqrt(2) / 2, places=5)
+        self.assertAlmostEqual(float(face["extent"][2]), 14.4 * math.sqrt(2) / 2, places=5)
+        # the normal, originally due north (0,0,-1), is now rotated 45 degrees
         self.assertAlmostEqual(float(face["normal"][0]), math.sqrt(2) / 2, places=5)
         self.assertEqual(face["normal"][1], 0)
         self.assertAlmostEqual(float(face["normal"][2]), -math.sqrt(2) / 2, places=5)

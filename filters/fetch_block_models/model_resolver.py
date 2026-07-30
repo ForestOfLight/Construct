@@ -22,19 +22,6 @@ _FACE_NORMAL = {
     "west": [-1, 0, 0], "east": [1, 0, 0],
 }
 
-# (width axis index, height axis index) into from/to for each face's own
-# flat rect, matching how the renderer maps a face's 2D size onto the world.
-# For a horizontal-normal face, the billboard's "up" is always world Y and
-# "right" is whichever horizontal axis is left over - so width must read
-# the horizontal (right) axis and height the vertical (Y) one. West/east
-# (normal along X) had these transposed: width read Y and height read Z,
-# rendering any non-square side face (e.g. a fence post) rotated 90 degrees.
-_FACE_DIMS = {
-    "up": (0, 2), "down": (0, 2),
-    "north": (0, 1), "south": (0, 1),
-    "west": (2, 1), "east": (2, 1),
-}
-
 
 def load_model(mcmeta, model_id):
     path = model_id.split(":")[-1]
@@ -42,12 +29,19 @@ def load_model(mcmeta, model_id):
 
 
 def _face_geometry(elem_from, elem_to, face_name):
-    """Derives a face's center point, world-space width/height, and outward
+    """Derives a face's center point, signed extent vector, and outward
     normal from the element's 3D bounding box (e.g. the 'up' face only spans
-    the top, not the whole element). Width/height are computed here, before
-    any rotation, since rotation is a rigid transform that never changes
-    them - only the element-level 'rotation' object (see
-    _apply_element_rotation) and blockstate x/y rotation change center/normal."""
+    the top, not the whole element).
+
+    The extent vector (to - from on the face's own collapsed rect) is kept
+    signed and un-abs'd so it can be rotated exactly like the normal is
+    (see _apply_element_rotation and blockstate_resolver._rotate_face) -
+    world-space width/height are only derived from it at the very end
+    (main.py), after ALL rotation is done. This matters because a 90-degree
+    blockstate rotation around X or Z mixes the Y axis with a horizontal
+    one, which can change which axis is "vertical" for a face (e.g. a
+    piston head rotated to face up/down): deriving width/height too early,
+    before that rotation, bakes in the wrong axis pairing."""
     axis_idx, which = _FACE_PLANE[face_name]
     value = elem_from[axis_idx] if which == "from" else elem_to[axis_idx]
     rect_from = list(elem_from)
@@ -58,29 +52,31 @@ def _face_geometry(elem_from, elem_to, face_name):
     # both inputs are plain ints - Python's "/" on two ints returns a native
     # float, which can't mix with Decimal during rotation math later on.
     center = [(Decimal(a) + Decimal(b)) / 2 for a, b in zip(rect_from, rect_to)]
-    width_idx, height_idx = _FACE_DIMS[face_name]
-    width = abs(rect_to[width_idx] - rect_from[width_idx])
-    height = abs(rect_to[height_idx] - rect_from[height_idx])
-    return center, width, height, list(_FACE_NORMAL[face_name])
+    extent = [Decimal(b) - Decimal(a) for a, b in zip(rect_from, rect_to)]
+    return center, extent, list(_FACE_NORMAL[face_name])
 
 
-def _apply_element_rotation(center, normal, rotation):
+def _apply_element_rotation(center, extent, normal, rotation):
     """Applies a Java model element's optional 'rotation' object (arbitrary
     angle around a single axis, e.g. the 45-degree y-axis rotation used by
-    cross-shaped plant models) to a face's center and normal."""
+    cross-shaped plant models) to a face's center, extent, and normal."""
     if not rotation:
-        return center, normal
+        return center, extent, normal
     angle = rotation.get("angle", 0)
     if not angle:
-        return center, normal
+        return center, extent, normal
     origin = rotation.get("origin", [8, 8, 8])
     axis = rotation["axis"]
-    return rotate_point(center, origin, axis, angle), rotate_vector(normal, axis, angle)
+    return (
+        rotate_point(center, origin, axis, angle),
+        rotate_vector(extent, axis, angle),
+        rotate_vector(normal, axis, angle),
+    )
 
 
 def resolve_model(mcmeta, model_id):
-    """Returns a list of elements: [{'faces': {face_name: {'center','width',
-    'height','normal','uv','texture','rotation','cullface','tintindex'}}}]"""
+    """Returns a list of elements: [{'faces': {face_name: {'center','extent',
+    'normal','uv','texture','rotation','cullface','tintindex'}}}]"""
     chain = []
     current_id = model_id
     seen = set()
@@ -102,12 +98,11 @@ def resolve_model(mcmeta, model_id):
     for element in elements or []:
         resolved_faces = {}
         for face_name, face in element.get("faces", {}).items():
-            center, width, height, normal = _face_geometry(element["from"], element["to"], face_name)
-            center, normal = _apply_element_rotation(center, normal, element.get("rotation"))
+            center, extent, normal = _face_geometry(element["from"], element["to"], face_name)
+            center, extent, normal = _apply_element_rotation(center, extent, normal, element.get("rotation"))
             resolved_faces[face_name] = {
                 "center": center,
-                "width": width,
-                "height": height,
+                "extent": extent,
                 "normal": normal,
                 "uv": face.get("uv", [0, 0, 16, 16]),
                 "texture": _resolve_texture_ref(face["texture"], textures),

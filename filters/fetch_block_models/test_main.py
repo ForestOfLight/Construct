@@ -1,6 +1,14 @@
+import math
 import unittest
+from decimal import Decimal
 
-from main import build_block_models, build_face_types_and_refs, project_uv, WHITE_CUBE_FACES
+from main import (
+    _derive_width_height,
+    build_block_models,
+    build_face_types_and_refs,
+    project_uv,
+    WHITE_CUBE_FACES,
+)
 
 
 class FakeMcmeta:
@@ -135,6 +143,42 @@ class BuildBlockModelsTest(unittest.TestCase):
         self.assertEqual(len(faces), 1)
         self.assertEqual(faces[0]["texture"], "block/oak_log")
         self.assertEqual(faces[0]["normal"], [0, 0, -1])
+
+
+class DeriveWidthHeightTest(unittest.TestCase):
+    def test_vertical_normal_reads_x_and_z_directly(self):
+        width, height = _derive_width_height([16, 0, 4], [0, 1, 0])
+        self.assertEqual(width, 16)
+        self.assertEqual(height, 4)
+
+    def test_horizontal_normal_reads_the_other_horizontal_axis_and_y(self):
+        width, height = _derive_width_height([0, 16, 4], [-1, 0, 0])  # west face
+        self.assertEqual(width, 4)
+        self.assertEqual(height, 16)
+
+    def test_permuted_extent_after_an_x_axis_blockstate_rotation(self):
+        # Mirrors minecraft:piston_head facing=down (x:90): a face that
+        # started as the arm's "up" face (vertical normal, width=4 on X,
+        # height=16 on Z) rotates to a horizontal normal, and x:90 swaps
+        # the Y/Z extents - Y ends up holding the old Z length (16) and Z
+        # ends up holding the old Y length (0, since "up" was degenerate on Y).
+        # The final face is horizontal-normal (south), so width should read
+        # the surviving horizontal (X) extent and height should read Y.
+        extent = [4, 16, 0]  # already rotated: x unaffected, y<-old z, z<-old y
+        normal = [0, 0, 1]  # rotated from (0,1,0) "up" to south-facing
+        width, height = _derive_width_height(extent, normal)
+        self.assertEqual(width, 4)
+        self.assertEqual(height, 16)
+
+    def test_diagonal_extent_recombines_via_pythagoras(self):
+        # Mirrors a cross-plant quad (e.g. short_grass) rotated 45 degrees
+        # around Y: the original single horizontal length (14.4) gets split
+        # across X and Z, but the true width is still 14.4 - not the raw X
+        # or Z component alone.
+        half = Decimal(14.4) * Decimal(math.sqrt(2) / 2)
+        width, height = _derive_width_height([half, 16, half], [Decimal("0.707107"), 0, Decimal("-0.707107")])
+        self.assertAlmostEqual(float(width), 14.4, places=3)
+        self.assertEqual(height, 16)
 
 
 class ProjectUvTest(unittest.TestCase):
