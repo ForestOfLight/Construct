@@ -29,8 +29,28 @@ function buildIndex() {
             }
         }
         if (!blockIdIndex.has(blockId))
-            blockIdIndex.set(blockId, []);
-        blockIdIndex.get(blockId).push({ key, properties });
+            blockIdIndex.set(blockId, { entries: [], valuesSeen: new Map() });
+        const block = blockIdIndex.get(blockId);
+        block.entries.push({ key, properties });
+        for (const [propKey, propValue] of properties) {
+            if (!block.valuesSeen.has(propKey))
+                block.valuesSeen.set(propKey, new Set());
+            block.valuesSeen.get(propKey).add(propValue);
+        }
+    }
+    // A property the generated data only ever gives one value for can't pick
+    // between entries, so it can't be worth matching on. That happens
+    // wherever Bedrock carries a state Java has no equivalent for: Java's
+    // plain pumpkin has no facing at all, so blocksB2J maps exactly one of
+    // Bedrock's four cardinal_direction values and the model is the same for
+    // all of them anyway. Requiring such a property to match by value would
+    // reject the only entry there is (see #findPartialMatch).
+    for (const block of blockIdIndex.values()) {
+        block.discriminating = new Set();
+        for (const [propKey, values] of block.valuesSeen) {
+            if (values.size > 1)
+                block.discriminating.add(propKey);
+        }
     }
 }
 
@@ -45,13 +65,15 @@ export class BlockModelLookup {
 
     // Falls back to the most-specific blockModels entry whose properties are a subset of the
     // live permutation's states, for blocks where the generated data omits properties Bedrock
-    // still reports (e.g. minecraft:stone's vestigial stone_type). Ties broken alphabetically
-    // by key for determinism.
+    // still reports (e.g. minecraft:stone's vestigial stone_type). Properties the data can't
+    // discriminate on are ignored rather than required to match, so a state Bedrock has and
+    // Java doesn't can't reject the only entry there is (see buildIndex). Ties broken
+    // alphabetically by key for determinism.
     static #findPartialMatch(permutation) {
         if (!blockIdIndex)
             buildIndex();
-        const candidates = blockIdIndex.get(permutation.type.id);
-        if (!candidates)
+        const block = blockIdIndex.get(permutation.type.id);
+        if (!block)
             return undefined;
         const states = permutation.getAllStates();
         const stateStrings = new Map();
@@ -59,10 +81,10 @@ export class BlockModelLookup {
             stateStrings.set(key, String(BlockModelLookup.#stateValue(states[key])));
 
         let best;
-        for (const candidate of candidates) {
+        for (const candidate of block.entries) {
             let allMatch = true;
             for (const [propKey, propValue] of candidate.properties) {
-                if (stateStrings.get(propKey) !== propValue) {
+                if (block.discriminating.has(propKey) && stateStrings.get(propKey) !== propValue) {
                     allMatch = false;
                     break;
                 }
