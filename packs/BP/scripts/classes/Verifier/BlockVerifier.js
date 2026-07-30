@@ -13,6 +13,8 @@ export class BlockVerifier {
     }
 
     evaluatePermutations(worldPermutation, structPermutation) {
+        if (!worldPermutation || !structPermutation)
+            return BlockVerificationLevel.NoMatch;
         if (this.isCorrectlyAir(worldPermutation, structPermutation))
             return BlockVerificationLevel.Air;
         if (this.isMissing(worldPermutation, structPermutation))
