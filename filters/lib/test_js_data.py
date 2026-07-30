@@ -1,4 +1,4 @@
-"""Golden tests for the fetch_block_data renderer.
+"""Golden tests for the shared js_data renderer.
 
 Each expected string is a verbatim slice of the current packs/BP/scripts/blocks.js,
 so passing proves the renderer reproduces Construct's exact formatting.
@@ -8,7 +8,7 @@ import json
 import unittest
 from decimal import Decimal
 
-from main import parse, render
+from js_data import parse, render
 
 
 class RenderTest(unittest.TestCase):
