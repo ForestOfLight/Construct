@@ -3,7 +3,13 @@ import unittest
 
 from PIL import Image
 
-from texture_atlas import ATLAS_HEIGHT, ATLAS_WIDTH, compose_textures, TextureAtlas
+from texture_atlas import (
+    ATLAS_HEIGHT,
+    ATLAS_WIDTH,
+    compose_textures,
+    tinted,
+    TextureAtlas,
+)
 
 
 class FakeMcmeta:
@@ -120,6 +126,45 @@ class TextureAtlasTest(unittest.TestCase):
         rect = manifest["block/grass_block_top"]
         pixel = packed.getpixel((rect["x"], rect["y"]))
         self.assertEqual(pixel[:3], (145, 189, 89))
+
+    def test_name_carrying_an_explicit_tint_bakes_that_tint(self):
+        # for tints the block's own state decides (redstone's power ramp),
+        # which DEFAULT_TINTS can't express - it keys off the texture alone
+        mcmeta = FakeMcmeta({"block/redstone_dust_dot": _solid((16, 16), (255, 255, 255, 255))})
+        atlas = TextureAtlas()
+        name = tinted("block/redstone_dust_dot", (255, 51, 0))
+        atlas.add(mcmeta, name)
+        packed, manifest = atlas.pack()
+        rect = manifest[name]
+        self.assertEqual(packed.getpixel((rect["x"], rect["y"]))[:3], (255, 51, 0))
+
+    def test_the_same_texture_at_two_tints_packs_as_two_entries(self):
+        mcmeta = FakeMcmeta({"block/redstone_dust_dot": _solid((16, 16), (255, 255, 255, 255))})
+        atlas = TextureAtlas()
+        unpowered = tinted("block/redstone_dust_dot", (77, 0, 0))
+        powered = tinted("block/redstone_dust_dot", (255, 51, 0))
+        atlas.add(mcmeta, unpowered)
+        atlas.add(mcmeta, powered)
+        packed, manifest = atlas.pack()
+        self.assertEqual(len(manifest), 2)
+        self.assertEqual(packed.getpixel((manifest[unpowered]["x"], manifest[unpowered]["y"]))[:3], (77, 0, 0))
+        self.assertEqual(packed.getpixel((manifest[powered]["x"], manifest[powered]["y"]))[:3], (255, 51, 0))
+
+    def test_an_explicit_tint_applies_to_its_own_layer_of_a_composite(self):
+        # the dot model lays an untinted overlay over the tinted line, so a
+        # composite's layers can't share one tint
+        mcmeta = FakeMcmeta({
+            "block/redstone_dust_dot": _solid((16, 16), (255, 255, 255, 255)),
+            "block/redstone_dust_overlay": _solid((16, 16), (0, 0, 0, 0)),
+        })
+        atlas = TextureAtlas()
+        name = compose_textures(
+            tinted("block/redstone_dust_dot", (255, 51, 0)), "block/redstone_dust_overlay"
+        )
+        atlas.add(mcmeta, name)
+        packed, manifest = atlas.pack()
+        rect = manifest[name]
+        self.assertEqual(packed.getpixel((rect["x"], rect["y"]))[:3], (255, 51, 0))
 
     def test_add_image_inserts_a_texture_not_from_mcmeta(self):
         atlas = TextureAtlas()

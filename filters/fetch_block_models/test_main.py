@@ -7,6 +7,7 @@ from PIL import Image
 from main import (
     _derive_roll,
     inset_by_half_texel,
+    REDSTONE_POWER_TINTS,
     white_swatch,
     _merge_coincident_faces,
     _derive_width_height,
@@ -15,6 +16,7 @@ from main import (
     project_uv,
     WHITE_CUBE_FACES,
 )
+from texture_atlas import tinted
 
 
 class FakeMcmeta:
@@ -385,6 +387,64 @@ class MergeCoincidentFacesTest(unittest.TestCase):
         for label, faces in (("uv", differing_uv), ("roll", differing_roll), ("position", elsewhere)):
             with self.subTest(differing=label):
                 self.assertEqual(len(_merge_coincident_faces(faces)), 2)
+
+
+class RedstonePowerTintTest(unittest.TestCase):
+    def _mcmeta(self):
+        return FakeMcmeta(
+            blockstates={"redstone_wire": {"variants": {"": {"model": "block/redstone_dust_dot"}}}},
+            models={"block/redstone_dust_dot": {"textures": {}, "elements": [{
+                "from": [0, 0, 0], "to": [16, 0, 16],
+                "faces": {
+                    "up": {"texture": "block/redstone_dust_dot", "tintindex": 0},
+                    # the dot model's overlay layer carries no tintindex, so
+                    # Java draws it untinted whatever the power is
+                    "down": {"texture": "block/redstone_dust_overlay"},
+                },
+            }]}},
+        )
+
+    def _added(self, power):
+        atlas = FakeAtlas()
+        b2j = {f"minecraft:redstone_wire[redstone_signal={power}]":
+               f"minecraft:redstone_wire[east=none,north=none,power={power},south=none,west=none]"}
+        build_block_models(self._mcmeta(), b2j, atlas)
+        return atlas.added
+
+    def test_ramp_matches_javas_colors_for_every_power_level(self):
+        # RedStoneWireBlock's ramp: r = f*0.6 + (0.4 if f else 0.3),
+        # g = clamp(f*f*0.7 - 0.5), b = clamp(f*f*0.6 - 0.7), f = power/15
+        self.assertEqual(len(REDSTONE_POWER_TINTS), 16)
+        self.assertEqual(REDSTONE_POWER_TINTS[0], (77, 0, 0))
+        self.assertEqual(REDSTONE_POWER_TINTS[15], (255, 51, 0))
+        reds = [tint[0] for tint in REDSTONE_POWER_TINTS]
+        self.assertEqual(reds, sorted(reds))
+        self.assertEqual(len(set(REDSTONE_POWER_TINTS)), 16)
+
+    def test_tinted_face_asks_the_atlas_for_its_own_power_level_color(self):
+        added = self._added(15)
+        self.assertIn(tinted("block/redstone_dust_dot", REDSTONE_POWER_TINTS[15]), added)
+
+    def test_two_power_levels_ask_for_different_textures(self):
+        self.assertNotEqual(
+            [n for n in self._added(0) if "redstone_dust_dot" in n],
+            [n for n in self._added(15) if "redstone_dust_dot" in n],
+        )
+
+    def test_a_face_without_a_tintindex_is_left_untinted(self):
+        self.assertIn("block/redstone_dust_overlay", self._added(15))
+
+    def test_blocks_that_arent_state_tinted_keep_their_plain_texture_name(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"stone": {"variants": {"": {"model": "block/stone"}}}},
+            models={"block/stone": {"textures": {}, "elements": [{
+                "from": [0, 0, 0], "to": [16, 16, 16],
+                "faces": {"up": {"texture": "block/stone", "tintindex": 0}},
+            }]}},
+        )
+        atlas = FakeAtlas()
+        build_block_models(mcmeta, {"minecraft:stone[]": "minecraft:stone"}, atlas)
+        self.assertEqual(atlas.added, ["block/stone"])
 
 
 class WhiteSwatchTest(unittest.TestCase):

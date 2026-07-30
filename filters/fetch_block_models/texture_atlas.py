@@ -46,10 +46,11 @@ DEFAULT_TINTS = {
     "block/flowering_azalea_leaves": (119, 171, 47),
     "block/vine": (119, 171, 47),
     "block/lily_pad": (32, 128, 46),
-    "block/redstone_dust_line0": (255, 0, 0),
-    "block/redstone_dust_line1": (255, 0, 0),
-    "block/redstone_dust_overlay": (255, 0, 0),
-    "block/redstone_dust_dot": (255, 0, 0),
+    # redstone dust is absent here on purpose: its color is Java's power
+    # ramp, which varies per block state rather than per texture, so it
+    # travels in the texture name instead (see `tinted` and main.py's
+    # REDSTONE_POWER_TINTS). Its overlay layer carries no tintindex at all
+    # and so is drawn untinted, which one entry here could not express.
     "block/attached_melon_stem": (225, 240, 93),
     "block/attached_pumpkin_stem": (225, 240, 93),
     "block/melon_stem": (225, 240, 93),
@@ -83,10 +84,25 @@ _FLIP_TRANSFORMS = {"fx": Image.FLIP_LEFT_RIGHT, "fy": Image.FLIP_TOP_BOTTOM}
 # mcmeta texture names never contain "^", so this stays unambiguous.
 _COMPOSITE_SEP = "^"
 
+# Separator introducing an explicit "RRGGBB" tint on a texture name (e.g.
+# "block/redstone_dust_dot@ff3300"). DEFAULT_TINTS can only say "this
+# texture is always this color", which is no use for a tint the block's own
+# state decides - redstone dust is one color per power level, drawn from the
+# same texture. Carrying the color in the name gives each level its own
+# atlas entry, and applies per layer of a composite, so the dot model's
+# untinted overlay isn't dragged along with the line underneath it. Real
+# mcmeta texture names never contain "@", so this stays unambiguous.
+_TINT_SEP = "@"
+
 
 def compose_textures(*names):
     """Builds the composited name for `names` drawn in order, lowest first."""
     return _COMPOSITE_SEP.join(names)
+
+
+def tinted(name, rgb):
+    """Builds the name for `name` drawn tinted `rgb` (an 0-255 triple)."""
+    return "{}{}{:02x}{:02x}{:02x}".format(name, _TINT_SEP, *rgb)
 
 
 class TextureAtlas:
@@ -108,13 +124,18 @@ class TextureAtlas:
 
     def _load(self, mcmeta, name):
         base_name, flip = name.split("|", 1) if "|" in name else (name, "")
+        base_name, tint = _split_tint(base_name)
         raw = mcmeta.read_bytes(TEXTURE_PATH_TMPL.format(name=base_name))
         image = Image.open(io.BytesIO(raw)).convert("RGBA")
         width, height = image.size
         if height > width:  # animated: frames stacked vertically, take frame 0
             image = image.crop((0, 0, width, width))
-        if base_name in DEFAULT_TINTS:
-            image = _apply_tint(image, DEFAULT_TINTS[base_name])
+        # an explicit tint is the caller's per-state decision, so it wins
+        # over whatever the always-this-color table says
+        if tint is None:
+            tint = DEFAULT_TINTS.get(base_name)
+        if tint is not None:
+            image = _apply_tint(image, tint)
         for i in range(0, len(flip), 2):
             image = image.transpose(_FLIP_TRANSFORMS[flip[i:i + 2]])
         return image
@@ -159,6 +180,15 @@ class TextureAtlas:
         for image, x, y in placements:
             atlas.paste(image, (x, y))
         return atlas, manifest
+
+
+def _split_tint(name):
+    """'block/x@ff3300' -> ('block/x', (255, 51, 0)); a plain name keeps a
+    tint of None so the caller can fall back to DEFAULT_TINTS."""
+    if _TINT_SEP not in name:
+        return name, None
+    base_name, hex_rgb = name.split(_TINT_SEP, 1)
+    return base_name, tuple(int(hex_rgb[i:i + 2], 16) for i in (0, 2, 4))
 
 
 def _apply_tint(image, rgb):

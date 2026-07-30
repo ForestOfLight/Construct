@@ -24,7 +24,7 @@ from block_entity_models import resolve_block_entity
 from blockstate_resolver import resolve_java_state
 from mcmeta_source import McmetaSource
 from rotation import signed_angle
-from texture_atlas import compose_textures, TextureAtlas
+from texture_atlas import compose_textures, tinted, TextureAtlas
 
 WHITE_TEXTURE = "white"
 _FULL_UV = [0, 0, 16, 16]
@@ -66,6 +66,40 @@ _STAIR_SHAPES = {"inner_left", "inner_right", "outer_left", "outer_right", "stra
 _JAVA_STATE_OVERRIDES = {
     "minecraft:flower_pot": ("minecraft:flower_pot", {}),
 }
+
+# Redstone dust's color per power level, 0-255. Java multiplies the wire's
+# greyscale texture by this, so without it every dust reads as fully
+# powered - signal 0 and signal 15 come out identical.
+#
+# Unlike every other tint here, these are per block state, not per texture,
+# so they can't live in texture_atlas's DEFAULT_TINTS; each level gets its
+# own atlas entry via texture_atlas.tinted(). Bedrock's redstone_signal maps
+# straight onto Java's power, so the level is always known.
+#
+# Hardcoded because the ramp is computed in RedStoneWireBlock's source and
+# appears in no asset we fetch - mcmeta's assets branch carries only the
+# grass/foliage/dry_foliage colormaps. Java's formula, for f = power / 15:
+#   r = f * 0.6 + (0.4 if f > 0 else 0.3)
+#   g = clamp(f * f * 0.7 - 0.5, 0, 1)
+#   b = clamp(f * f * 0.6 - 0.7, 0, 1)
+REDSTONE_POWER_TINTS = [
+    (77, 0, 0),     # power 0
+    (112, 0, 0),    # power 1
+    (122, 0, 0),    # power 2
+    (133, 0, 0),    # power 3
+    (143, 0, 0),    # power 4
+    (153, 0, 0),    # power 5
+    (163, 0, 0),    # power 6
+    (173, 0, 0),    # power 7
+    (184, 0, 0),    # power 8
+    (194, 0, 0),    # power 9
+    (204, 0, 0),    # power 10
+    (214, 0, 0),    # power 11
+    (224, 0, 0),    # power 12
+    (235, 7, 0),    # power 13
+    (245, 28, 0),   # power 14
+    (255, 51, 0),   # power 15
+]
 
 # Bedrock's "direction_z" billboard takes a facing direction and nothing
 # else - there's no way to hand it a full orientation - so the engine
@@ -243,6 +277,7 @@ def build_block_models(mcmeta, b2j, atlas):
         if not elements:
             block_models[bedrock_state] = [dict(face) for face in WHITE_CUBE_FACES]
             continue
+        state_tint = _state_tint(java_block_id, properties)
         faces = []
         for element in elements:
             for face in element["faces"].values():
@@ -251,6 +286,11 @@ def build_block_models(mcmeta, b2j, atlas):
                 # resolve_elements's 'flip') - "|" can't appear in a real
                 # mcmeta texture name, so this stays unambiguous
                 texture = f"{face['texture']}|{face['flip']}" if face["flip"] else face["texture"]
+                # a tintindex is Java's "this face takes the block's color";
+                # a face without one is drawn as authored, which is how the
+                # dot model's overlay stays out of the power ramp
+                if state_tint and face["tintindex"] >= 0:
+                    texture = tinted(texture, state_tint)
                 width, height = _derive_width_height(face["extent"], face["uv_u"], face["uv_v"])
                 faces.append({
                     "center": face["center"],
@@ -267,6 +307,15 @@ def build_block_models(mcmeta, b2j, atlas):
             atlas.add(mcmeta, face["texture"])
         block_models[bedrock_state] = faces
     return block_models
+
+
+def _state_tint(java_block_id, properties):
+    """The color this particular block state's tinted faces take, or None if
+    the block's color doesn't vary by state (the usual case - those tints are
+    baked per texture in texture_atlas.DEFAULT_TINTS)."""
+    if java_block_id == "minecraft:redstone_wire":
+        return REDSTONE_POWER_TINTS[int(properties.get("power", 0))]
+    return None
 
 
 def _merge_coincident_faces(faces):
