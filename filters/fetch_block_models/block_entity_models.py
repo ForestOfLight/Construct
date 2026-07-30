@@ -1,11 +1,10 @@
-"""Hardcoded geometry for Java block-entity-rendered blocks (chest, banner,
-...) whose mcmeta model has no static 'elements' at all - Java renders them
-natively in code, not from data, so there's nothing to fetch. The shapes in
-block_entity_models.json were derived from Blockbench .bbmodel exports of
-the CEM Template Loader plugin's official templates (docs/chest.bbmodel,
-docs/banner.bbmodel), converted by hand into this pipeline's elements/
-textures shape - the same shape resolve_model would have produced from a
-real mcmeta model chain."""
+"""Hardcoded geometry for Java block-entity-rendered blocks (chest, shulker
+box, ...) whose mcmeta model has no static 'elements' at all - Java renders
+them natively in code, not from data, so there's nothing to fetch. The shapes
+in block_entity_models.json were derived from Blockbench .bbmodel exports of
+the CEM Template Loader plugin's official templates (docs/chest.bbmodel),
+converted by hand into this pipeline's elements/textures shape - the same
+shape resolve_model would have produced from a real mcmeta model chain."""
 
 import json
 from pathlib import Path
@@ -27,15 +26,6 @@ _BLOCK_ENTITY_MAPPING = {
     "minecraft:chest": {"shape": "chest", "textures": {}},
     "minecraft:trapped_chest": {"shape": "chest", "textures": {"main": "entity/chest/trapped"}},
     "minecraft:ender_chest": {"shape": "chest", "textures": {"main": "entity/chest/ender"}},
-    # Banner color lives in block-entity NBT, not the blockstate - the
-    # bedrock<->java state mapping itself only ever produces a single
-    # generic "black_banner"/"black_wall_banner" id regardless of the
-    # banner's real color, so per-color texturing isn't possible from
-    # permutation data alone. Render every banner as the plain white cloth
-    # (its real, untinted base texture) rather than picking an arbitrary
-    # fixed color.
-    "minecraft:black_banner": {"shape": "banner", "textures": {}},
-    "minecraft:black_wall_banner": {"shape": "banner", "textures": {}},
     "minecraft:shulker_box": {"shape": "shulker_box", "textures": {}},
 }
 _DYE_COLORS = [
