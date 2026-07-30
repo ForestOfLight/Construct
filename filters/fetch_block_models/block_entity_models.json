@@ -422,5 +422,48 @@
         }
       }
     ]
+  },
+  "end_portal": {
+    "textures": {
+      "main": "block/black_concrete"
+    },
+    "elements": [
+      {
+        "from": [
+          0,
+          12,
+          0
+        ],
+        "to": [
+          16,
+          12,
+          16
+        ],
+        "faces": {
+          "up": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          },
+          "down": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          }
+        }
+      }
+    ]
   }
 }

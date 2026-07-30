@@ -4,7 +4,15 @@ them natively in code, not from data, so there's nothing to fetch. The shapes
 in block_entity_models.json were derived from Blockbench .bbmodel exports of
 the CEM Template Loader plugin's official templates (docs/chest.bbmodel),
 converted by hand into this pipeline's elements/textures shape - the same
-shape resolve_model would have produced from a real mcmeta model chain."""
+shape resolve_model would have produced from a real mcmeta model chain.
+
+end_portal is the one entry not traced from a real Java shape. Java draws it
+with a bespoke starfield renderer and ships no geometry and no texture for it
+(its model is nothing but a particle reference, and there is no end_portal
+image in the assets to borrow), so it can only ever be a stand-in: a flat
+black sheet at the height Java puts the portal surface. It is deliberately
+the plainest thing that reads correctly in a preview - right footprint,
+right height, unmistakably not a full block."""
 
 import json
 from pathlib import Path
@@ -27,6 +35,7 @@ _BLOCK_ENTITY_MAPPING = {
     "minecraft:trapped_chest": {"shape": "chest", "textures": {"main": "entity/chest/trapped"}},
     "minecraft:ender_chest": {"shape": "chest", "textures": {"main": "entity/chest/ender"}},
     "minecraft:shulker_box": {"shape": "shulker_box", "textures": {}},
+    "minecraft:end_portal": {"shape": "end_portal", "textures": {}},
 }
 _DYE_COLORS = [
     "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
