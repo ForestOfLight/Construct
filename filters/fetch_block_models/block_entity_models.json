@@ -465,5 +465,92 @@
         }
       }
     ]
+  },
+  "end_gateway": {
+    "textures": {
+      "main": "block/black_concrete"
+    },
+    "elements": [
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "down": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          },
+          "up": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          },
+          "north": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          },
+          "south": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          },
+          "west": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          },
+          "east": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#main",
+            "rotation": 0,
+            "tintindex": -1
+          }
+        }
+      }
+    ]
   }
 }

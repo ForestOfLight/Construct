@@ -6,13 +6,15 @@ the CEM Template Loader plugin's official templates (docs/chest.bbmodel),
 converted by hand into this pipeline's elements/textures shape - the same
 shape resolve_model would have produced from a real mcmeta model chain.
 
-end_portal is the one entry not traced from a real Java shape. Java draws it
-with a bespoke starfield renderer and ships no geometry and no texture for it
-(its model is nothing but a particle reference, and there is no end_portal
-image in the assets to borrow), so it can only ever be a stand-in: a flat
-black sheet at the height Java puts the portal surface. It is deliberately
-the plainest thing that reads correctly in a preview - right footprint,
-right height, unmistakably not a full block."""
+end_portal and end_gateway are the entries not traced from a real Java shape.
+Java draws both with a bespoke starfield renderer and ships no geometry and
+no texture for either (their models are nothing but a particle reference, and
+there is no portal image in the assets to borrow), so they can only ever be
+stand-ins: plain black, sized the way Java draws the effect. The portal is a
+flat sheet at the height its surface sits; the gateway is a full cube,
+because Java draws a gateway across the whole block rather than on one plane.
+They are deliberately the plainest thing that reads correctly in a preview -
+right footprint, right height, obviously a portal rather than a stray block."""
 
 import json
 from pathlib import Path
@@ -36,6 +38,7 @@ _BLOCK_ENTITY_MAPPING = {
     "minecraft:ender_chest": {"shape": "chest", "textures": {"main": "entity/chest/ender"}},
     "minecraft:shulker_box": {"shape": "shulker_box", "textures": {}},
     "minecraft:end_portal": {"shape": "end_portal", "textures": {}},
+    "minecraft:end_gateway": {"shape": "end_gateway", "textures": {}},
 }
 _DYE_COLORS = [
     "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
