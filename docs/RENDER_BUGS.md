@@ -42,10 +42,10 @@ Hardcoding overrides for specific blocks is not ideal, but if the mcmeta data is
 
 ~~#18: The missing block render is slightly too small so that the edges of the cube are not touching. Seems to be correct in debug mode, but not in normal mode.~~
 
-#19: Redstone dust always renders as a fully-powered dot. Are there no states in the mcmeta data? If not, render it as a full-unpowered cross instead.
+~~#19: Redstone dust always renders as a fully-powered dot. Are there no states in the mcmeta data? If not, render it as a full-unpowered cross instead.~~ No change. The dot matches JE: Java applies `redstone_dust_dot` alone when all four connection sides are `none`, which is what blocksB2J maps every `redstone_signal` to (Bedrock's permutation carries no connection data, as with the flower pot). `redstone_signal` does map to Java's `power=0..15`, but the colour ramp that goes with it lives in Java's `RedStoneWireBlock` source, not in mcmeta's assets (which only carry the grass/foliage/dry_foliage colormaps) or in minecraft-data - so there is nothing to drive a per-power tint from without hardcoding the ramp.
 
 #20: Barrier blocks are rendered as a missing block. For blocks like these (including end stone and end gateway), we could texture them using their item texture. Check to see if the mcmeta data has a reference to the item texture, and if so, use that instead of the missing block render (or the hardcoded overrides for endstone and end gateways).
 
 #21: Diagonal faces are modeled incorrectly in many cases. Example blocks: lecturn, tripwire hook, lever
 
-#22: The top face of observers is rotated 180 degrees from where it should be.
+#22: The top face texture on observers is rotated 180 degrees from where it should be. This is true for every rotation. In this case, the top face means the face that is normally on the top of the block if the front of the observer is pointing N/S/E/W. 
