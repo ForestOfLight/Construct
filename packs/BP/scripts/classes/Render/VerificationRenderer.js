@@ -1,5 +1,4 @@
 import { TicksPerSecond } from "@minecraft/server";
-import { BlockVerificationLevelParticleRender } from "./ParticleRender/BlockVerificationLevelParticleRender";
 import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
