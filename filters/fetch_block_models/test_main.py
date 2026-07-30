@@ -1,6 +1,6 @@
 import unittest
 
-from main import build_block_models, build_face_types_and_refs, project_uv, _face_axis, WHITE_CUBE_FACES
+from main import build_block_models, build_face_types_and_refs, project_uv, _axis_from_rect, WHITE_CUBE_FACES
 
 
 class FakeMcmeta:
@@ -43,7 +43,32 @@ class BuildBlockModelsTest(unittest.TestCase):
         faces = block_models["minecraft:stone[]"]
         self.assertEqual(len(faces), 1)
         self.assertEqual(faces[0]["axis"], "xz")
+        # the face's rect is collapsed onto its own plane (y=16), not the
+        # element's full 3D bounding box
+        self.assertEqual(faces[0]["from"], [0, 16, 0])
+        self.assertEqual(faces[0]["to"], [16, 16, 16])
         self.assertIn("block/stone", atlas.added)
+
+    def test_rotated_block_gets_axis_matching_its_rotated_geometry(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_log": {"variants": {
+                "axis=x": {"model": "block/oak_log_horizontal", "y": 90},
+            }}},
+            models={"block/oak_log_horizontal": {"textures": {}, "elements": [{
+                "from": [0, 0, 0], "to": [16, 16, 16],
+                "faces": {"north": {"texture": "block/oak_log"}},
+            }]}},
+        )
+        atlas = FakeAtlas()
+        b2j = {"minecraft:log[axis=x]": "minecraft:oak_log[axis=x]"}
+        block_models = build_block_models(mcmeta, b2j, atlas)
+        faces = block_models["minecraft:log[axis=x]"]
+        self.assertEqual(len(faces), 1)
+        # a 90-degree y-rotation moves the "north" face onto the x=16 plane,
+        # so its render axis must become "yz", not stay "xy"
+        self.assertEqual(faces[0]["axis"], "yz")
+        self.assertEqual(faces[0]["from"], [16, 0, 0])
+        self.assertEqual(faces[0]["to"], [16, 16, 16])
 
     def test_unresolvable_block_falls_back_to_white_cube(self):
         mcmeta = FakeMcmeta(blockstates={}, models={})
@@ -206,14 +231,11 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
         self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
 
 
-class FaceAxisTest(unittest.TestCase):
-    def test_maps_each_face_name_to_its_plane(self):
-        self.assertEqual(_face_axis("up"), "xz")
-        self.assertEqual(_face_axis("down"), "xz")
-        self.assertEqual(_face_axis("north"), "xy")
-        self.assertEqual(_face_axis("south"), "xy")
-        self.assertEqual(_face_axis("east"), "yz")
-        self.assertEqual(_face_axis("west"), "yz")
+class AxisFromRectTest(unittest.TestCase):
+    def test_derives_plane_from_which_coordinate_is_constant(self):
+        self.assertEqual(_axis_from_rect([0, 16, 0], [16, 16, 16]), "xz")  # up/down
+        self.assertEqual(_axis_from_rect([0, 0, 0], [16, 16, 0]), "xy")  # north/south
+        self.assertEqual(_axis_from_rect([16, 0, 0], [16, 16, 16]), "yz")  # east/west
 
 
 if __name__ == "__main__":

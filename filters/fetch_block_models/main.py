@@ -33,11 +33,15 @@ WHITE_CUBE_FACES = [
     {"from": [0, 0, 0], "to": [0, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
 ]
 
-_FACE_AXIS = {"up": "xz", "down": "xz", "north": "xy", "south": "xy", "east": "yz", "west": "yz"}
-
-
-def _face_axis(face_name):
-    return _FACE_AXIS[face_name]
+def _axis_from_rect(from_pt, to_pt):
+    """Derives which plane a face's flat rect lies on from its own geometry
+    (rather than trusting the original Java face name), since block rotation
+    can move a face onto a different axis than its name suggests."""
+    if from_pt[0] == to_pt[0]:
+        return "yz"
+    if from_pt[1] == to_pt[1]:
+        return "xz"
+    return "xy"
 
 
 def root_dir():
@@ -62,12 +66,12 @@ def build_block_models(mcmeta, b2j, atlas):
             continue
         faces = []
         for element in elements:
-            for face_name, face in element["faces"].items():
+            for face in element["faces"].values():
                 atlas.add(mcmeta, face["texture"])
                 faces.append({
-                    "from": element["from"],
-                    "to": element["to"],
-                    "axis": _face_axis(face_name),
+                    "from": face["from"],
+                    "to": face["to"],
+                    "axis": _axis_from_rect(face["from"], face["to"]),
                     "texture": face["texture"],
                     "rotation": face["rotation"],
                     "tintindex": face["tintindex"],

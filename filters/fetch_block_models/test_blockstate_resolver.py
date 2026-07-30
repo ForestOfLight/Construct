@@ -157,9 +157,17 @@ class ResolveJavaStateTest(unittest.TestCase):
             ]}},
         )
         elements = resolve_java_state(mcmeta, "minecraft:oak_log", {"axis": "x"})
+        # the 90-degree y-rotation moves the "north" face's rect onto the
+        # x=16 plane (uv/texture/rotation/cullface/tintindex pass through unchanged);
+        # verified against real minecraft:furnace data, whose facing=east variant
+        # (y:90) must move its front face (modeled on "north") onto the east (+x) plane
         self.assertEqual(
             elements[0]["faces"]["north"],
-            {"uv": [0, 0, 16, 16], "texture": "block/oak_log", "rotation": 0, "cullface": "north", "tintindex": -1},
+            {
+                "from": [16, 0, 0], "to": [16, 16, 16],
+                "uv": [0, 0, 16, 16], "texture": "block/oak_log", "rotation": 0,
+                "cullface": "north", "tintindex": -1,
+            },
         )
 
     def test_returns_none_when_blockstate_missing(self):
