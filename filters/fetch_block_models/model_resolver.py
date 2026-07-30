@@ -24,10 +24,15 @@ _FACE_NORMAL = {
 
 # (width axis index, height axis index) into from/to for each face's own
 # flat rect, matching how the renderer maps a face's 2D size onto the world.
+# For a horizontal-normal face, the billboard's "up" is always world Y and
+# "right" is whichever horizontal axis is left over - so width must read
+# the horizontal (right) axis and height the vertical (Y) one. West/east
+# (normal along X) had these transposed: width read Y and height read Z,
+# rendering any non-square side face (e.g. a fence post) rotated 90 degrees.
 _FACE_DIMS = {
     "up": (0, 2), "down": (0, 2),
     "north": (0, 1), "south": (0, 1),
-    "west": (1, 2), "east": (1, 2),
+    "west": (2, 1), "east": (2, 1),
 }
 
 

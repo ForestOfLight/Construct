@@ -183,6 +183,27 @@ class ResolveModelTest(unittest.TestCase):
         self.assertEqual(faces["east"]["center"], [16, 8, 8])
         self.assertEqual(faces["east"]["normal"], [1, 0, 0])
 
+    def test_side_face_width_is_horizontal_and_height_is_vertical(self):
+        # Mirrors a fence post: a thin (6-wide-on-x/z), full-height (16-on-y)
+        # column. Its east/west faces (normal along X) span Y (vertical) and
+        # Z (horizontal) - width must read the horizontal axis (Z) and height
+        # the vertical one (Y), or a narrow-but-tall face renders as a
+        # wide-but-short one (rotated 90 degrees).
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/oak_planks"},
+                "elements": [{
+                    "from": [6, 0, 6], "to": [10, 16, 10],
+                    "faces": {"west": {"texture": "#all"}, "north": {"texture": "#all"}},
+                }],
+            },
+        })
+        faces = resolve_model(mcmeta, "block/x")[0]["faces"]
+        self.assertEqual(faces["west"]["width"], 4)  # horizontal (Z) extent
+        self.assertEqual(faces["west"]["height"], 16)  # vertical (Y) extent
+        self.assertEqual(faces["north"]["width"], 4)  # horizontal (X) extent
+        self.assertEqual(faces["north"]["height"], 16)  # vertical (Y) extent
+
     def test_element_rotation_turns_a_diagonal_cross_quad_to_a_45_degree_normal(self):
         # Mirrors minecraft:block/cross (used by short_grass etc): a vertical
         # quad rotated 45 degrees around the block center so two of them form
