@@ -57,17 +57,29 @@ export class BlockPreviewVerificationLevelParticleRender {
         molang.setFloat("lifetime", this.lifetimeSeconds);
         molang.setFloat("width", (face.width / 16) * 0.5 * sizeScalar);
         molang.setFloat("height", (face.height / 16) * 0.5 * sizeScalar);
+        // Debug mode aims every face at one fixed spot in the atlas so shape
+        // problems can be read without texture variety in the way. Note it
+        // pins only the origin: each face keeps its own uv width/height, so
+        // faces still sample different-sized crops from that spot and
+        // nothing about which part of a texture a face uses can be judged
+        // while this is on.
+        //
+        // It must not assign back into `face`. Face descriptors are shared
+        // and deduplicated across every block that uses them (see
+        // blockFaceTypes), so writing through would corrupt the generated
+        // table for the rest of the session - including after debug mode is
+        // switched back off.
+        const uv = DEBUG_CONFIG.enable
+            ? { ...face.uv, x: DEBUG_CONFIG.render_all_textures_as.u, y: DEBUG_CONFIG.render_all_textures_as.v }
+            : face.uv;
+
         // direction_z billboards render up/down-normal faces backwards
-        // unless the y component is negated - confirmed against
-        // packs/RP/particles/cube_blend/vertical_face_blend.json, the
-        // established (and working) reference implementation, which sends
-        // -1 for the top face and +1 for the bottom face. Horizontal-normal
-        // faces don't need this (see lateral_face_blend.json, which sends
-        // the raw outward vector unchanged).
-        if (DEBUG_CONFIG.enable) {
-            face.uv.x = DEBUG_CONFIG.render_all_textures_as.u;
-            face.uv.y = DEBUG_CONFIG.render_all_textures_as.v;
-        }
+        // unless the y component is negated - confirmed against the old
+        // controller-based vertical_face_blend particle, the established
+        // (and working) reference implementation, which sent -1 for the top
+        // face and +1 for the bottom face. Horizontal-normal faces don't
+        // need this (its lateral_face_blend counterpart sent the raw
+        // outward vector unchanged).
         molang.setFloat("nx", face.normal[0]);
         molang.setFloat("ny", -face.normal[1]);
         molang.setFloat("nz", face.normal[2]);
@@ -79,10 +91,10 @@ export class BlockPreviewVerificationLevelParticleRender {
         // (see _derive_roll in filters/fetch_block_models/main.py); this spins
         // it the rest of the way.
         molang.setFloat("roll", face.roll);
-        molang.setFloat("u", face.uv.x);
-        molang.setFloat("v", face.uv.y);
-        molang.setFloat("uv_w", face.uv.w);
-        molang.setFloat("uv_h", face.uv.h);
+        molang.setFloat("u", uv.x);
+        molang.setFloat("v", uv.y);
+        molang.setFloat("uv_w", uv.w);
+        molang.setFloat("uv_h", uv.h);
         molang.setColorRGBA("face_color", rgb);
 
         const particleType = `construct:block_face_${material}`;
