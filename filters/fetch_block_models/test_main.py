@@ -1,6 +1,6 @@
 import unittest
 
-from main import build_block_models, build_shapes_and_refs, project_uv, _face_axis, WHITE_CUBE_FACES
+from main import build_block_models, build_face_types_and_refs, project_uv, _face_axis, WHITE_CUBE_FACES
 
 
 class FakeMcmeta:
@@ -146,49 +146,64 @@ class ProjectUvTest(unittest.TestCase):
                 self.assertNotIn("texture", face)
 
 
-class BuildShapesAndRefsTest(unittest.TestCase):
+class BuildFaceTypesAndRefsTest(unittest.TestCase):
     def _face(self, from_, to, axis="xz", rotation=0, tintindex=-1, uv=None):
         return {
             "from": from_, "to": to, "axis": axis, "rotation": rotation,
             "tintindex": tintindex, "uv": uv or {"x": 0, "y": 0, "w": 16, "h": 16},
         }
 
-    def test_identical_shape_across_different_blocks_gets_same_index(self):
+    def test_identical_full_descriptor_across_different_blocks_gets_same_index(self):
         block_models = {
             "a": [self._face([0, 0, 0], [16, 16, 16])],
             "b": [self._face([0, 0, 0], [16, 16, 16])],
         }
-        shapes, result = build_shapes_and_refs(block_models)
-        self.assertEqual(result["a"][0]["shape"], result["b"][0]["shape"])
-        self.assertEqual(len(shapes), 1)
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertEqual(result["a"][0], result["b"][0])
+        self.assertEqual(len(face_types), 1)
 
     def test_different_shapes_get_different_indices(self):
         block_models = {
             "a": [self._face([0, 0, 0], [16, 16, 16])],
             "b": [self._face([0, 0, 0], [8, 16, 16])],
         }
-        shapes, result = build_shapes_and_refs(block_models)
-        self.assertNotEqual(result["a"][0]["shape"], result["b"][0]["shape"])
-        self.assertEqual(len(shapes), 2)
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertNotEqual(result["a"][0], result["b"][0])
+        self.assertEqual(len(face_types), 2)
 
-    def test_output_face_has_only_shape_and_uv_keys(self):
-        block_models = {"a": [self._face([0, 0, 0], [16, 16, 16], uv={"x": 1, "y": 2, "w": 3, "h": 4})]}
-        _shapes, result = build_shapes_and_refs(block_models)
-        face = result["a"][0]
-        self.assertEqual(set(face.keys()), {"shape", "uv"})
-        self.assertEqual(face["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
-
-    def test_shapes_table_reproduces_original_geometry(self):
+    def test_different_uv_gets_different_indices_even_with_same_shape(self):
         block_models = {
-            "a": [self._face([1, 2, 3], [4, 5, 6], axis="xy", rotation=90, tintindex=0)],
+            "a": [self._face([0, 0, 0], [16, 16, 16], uv={"x": 0, "y": 0, "w": 16, "h": 16})],
+            "b": [self._face([0, 0, 0], [16, 16, 16], uv={"x": 16, "y": 0, "w": 16, "h": 16})],
         }
-        shapes, result = build_shapes_and_refs(block_models)
-        shape = shapes[result["a"][0]["shape"]]
-        self.assertEqual(shape["from"], [1, 2, 3])
-        self.assertEqual(shape["to"], [4, 5, 6])
-        self.assertEqual(shape["axis"], "xy")
-        self.assertEqual(shape["rotation"], 90)
-        self.assertEqual(shape["tintindex"], 0)
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertNotEqual(result["a"][0], result["b"][0])
+        self.assertEqual(len(face_types), 2)
+
+    def test_block_face_lists_become_flat_lists_of_plain_integers(self):
+        block_models = {
+            "a": [self._face([0, 0, 0], [16, 16, 16]), self._face([0, 0, 0], [8, 16, 16])],
+        }
+        _face_types, result = build_face_types_and_refs(block_models)
+        self.assertEqual(result["a"], [0, 1])
+        for ref in result["a"]:
+            self.assertIsInstance(ref, int)
+
+    def test_face_types_table_reproduces_original_face_descriptor(self):
+        block_models = {
+            "a": [self._face(
+                [1, 2, 3], [4, 5, 6], axis="xy", rotation=90, tintindex=0,
+                uv={"x": 1, "y": 2, "w": 3, "h": 4},
+            )],
+        }
+        face_types, result = build_face_types_and_refs(block_models)
+        face_type = face_types[result["a"][0]]
+        self.assertEqual(face_type["from"], [1, 2, 3])
+        self.assertEqual(face_type["to"], [4, 5, 6])
+        self.assertEqual(face_type["axis"], "xy")
+        self.assertEqual(face_type["rotation"], 90)
+        self.assertEqual(face_type["tintindex"], 0)
+        self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
 
 
 class FaceAxisTest(unittest.TestCase):

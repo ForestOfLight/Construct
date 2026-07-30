@@ -87,30 +87,36 @@ def project_uv(block_models, atlas_manifest):
     return block_models
 
 
-def build_shapes_and_refs(block_models):
-    """Deduplicates each face's shape (from/to/axis/rotation/tintindex) into
-    a shared table, replacing each face dict with {'shape': index, 'uv': {...}}.
-    Mutates and returns block_models; also returns the shared shapes list.
-    Call this AFTER project_uv (faces must already have 'uv' set, not 'texture')."""
-    shape_index = {}
-    shapes = []
-    for faces in block_models.values():
-        for i, face in enumerate(faces):
+def build_face_types_and_refs(block_models):
+    """Deduplicates each face's full descriptor (shape + uv together) into a
+    shared face-type table, replacing each block's face list with a flat list
+    of integer indices into that table. Mutates and returns block_models;
+    also returns the shared face_types list. Call this AFTER project_uv
+    (faces must already have 'uv' set, not 'texture')."""
+    face_type_index = {}
+    face_types = []
+    for bedrock_state, faces in block_models.items():
+        refs = []
+        for face in faces:
+            uv = face["uv"]
             key = (
                 tuple(face["from"]), tuple(face["to"]), face["axis"],
                 face["rotation"], face["tintindex"],
+                uv["x"], uv["y"], uv["w"], uv["h"],
             )
-            if key not in shape_index:
-                shape_index[key] = len(shapes)
-                shapes.append({
+            if key not in face_type_index:
+                face_type_index[key] = len(face_types)
+                face_types.append({
                     "from": face["from"],
                     "to": face["to"],
                     "axis": face["axis"],
                     "rotation": face["rotation"],
                     "tintindex": face["tintindex"],
+                    "uv": uv,
                 })
-            faces[i] = {"shape": shape_index[key], "uv": face["uv"]}
-    return shapes, block_models
+            refs.append(face_type_index[key])
+        block_models[bedrock_state] = refs
+    return face_types, block_models
 
 
 def build(root):
@@ -126,11 +132,11 @@ def build(root):
     block_models = build_block_models(mcmeta, b2j, atlas)
     atlas_image, atlas_manifest = atlas.pack()
     block_models = project_uv(block_models, atlas_manifest)
-    shapes, block_models = build_shapes_and_refs(block_models)
-    return atlas_image, shapes, block_models
+    face_types, block_models = build_face_types_and_refs(block_models)
+    return atlas_image, face_types, block_models
 
 
-def write_outputs(root, atlas_image, shapes, block_models):
+def write_outputs(root, atlas_image, face_types, block_models):
     atlas_path = root / "packs" / "RP" / "textures" / "particle" / "vanilla_block_atlas.png"
     atlas_image.save(atlas_path)
 
@@ -143,7 +149,7 @@ def write_outputs(root, atlas_image, shapes, block_models):
 
     models_js_path = root / "packs" / "BP" / "scripts" / "blockModels.js"
     models_js_contents = (
-        "export const blockShapes = " + render(shapes) + ";\n\n"
+        "export const blockFaceTypes = " + render(face_types) + ";\n\n"
         "export const blockModels = " + render(block_models) + ";"
     )
     models_js_path.write_text(models_js_contents, encoding="utf-8")
@@ -153,8 +159,8 @@ def write_outputs(root, atlas_image, shapes, block_models):
 
 def main():
     root = root_dir()
-    atlas_image, shapes, block_models = build(root)
-    write_outputs(root, atlas_image, shapes, block_models)
+    atlas_image, face_types, block_models = build(root)
+    write_outputs(root, atlas_image, face_types, block_models)
 
 
 if __name__ == "__main__":
