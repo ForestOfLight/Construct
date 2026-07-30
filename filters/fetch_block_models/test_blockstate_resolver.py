@@ -235,6 +235,51 @@ class ResolveJavaStateTest(unittest.TestCase):
         self.assertEqual([float(c) for c in face["uv_u"]], [-1, 0, 0])
         self.assertEqual([float(c) for c in face["uv_v"]], [0, -1, 0])
 
+    def test_uvlock_turns_the_uv_rect_with_the_frame_so_the_texture_isnt_stretched(self):
+        # Same real oak_stairs shape as above. Its top step's up face is
+        # authored 8 wide x 16 tall (uv [8,0,16,16], the texture's right
+        # half) for a step lying along x. A quarter turn leaves the step
+        # lying along z instead - 16 wide x 8 tall - so the rect has to turn
+        # with it. World-aligning only the frame and leaving the rect as
+        # authored gives a 16x8 quad sampling an 8x16 rect: the stretched
+        # stair top face.
+        #
+        # The rect must also land on the half of the texture the step now
+        # occupies. After y:90 the step sits at z 8..16, so the rect is
+        # v 8..16 - offset tracking world position is what "uvlocked" means.
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_stairs": {"variants": {
+                "facing=south": {"model": "block/oak_stairs_top", "y": 90, "uvlock": True},
+            }}},
+            models={"block/oak_stairs_top": {"textures": {}, "elements": [
+                {"from": [8, 8, 0], "to": [16, 16, 16], "faces": {
+                    "up": {"uv": [8, 0, 16, 16], "texture": "block/oak_planks"},
+                }},
+            ]}},
+        )
+        elements = resolve_java_state(mcmeta, "minecraft:oak_stairs", {"facing": "south"})
+        face = elements[0]["faces"]["up"]
+        self.assertEqual([float(c) for c in face["uv"]], [0, 8, 16, 16])
+
+    def test_uvlock_leaves_a_half_turn_rect_alone_apart_from_its_offset(self):
+        # A 180-degree uvlock can't transpose anything (width and height come
+        # back to themselves), but the rect still has to move to the half of
+        # the texture the element ended up over - here x 8..16 turns to
+        # x 0..8, so the right half of the texture becomes the left half.
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_stairs": {"variants": {
+                "facing=west": {"model": "block/oak_stairs_top", "y": 180, "uvlock": True},
+            }}},
+            models={"block/oak_stairs_top": {"textures": {}, "elements": [
+                {"from": [8, 8, 0], "to": [16, 16, 16], "faces": {
+                    "up": {"uv": [8, 0, 16, 16], "texture": "block/oak_planks"},
+                }},
+            ]}},
+        )
+        elements = resolve_java_state(mcmeta, "minecraft:oak_stairs", {"facing": "west"})
+        face = elements[0]["faces"]["up"]
+        self.assertEqual([float(c) for c in face["uv"]], [0, 0, 8, 16])
+
     def test_variant_matches_when_a_given_property_is_absent_from_every_key(self):
         # mirrors real minecraft:bell data: variant keys only ever mention
         # attachment/facing, never "powered" - the bedrock->java mapping

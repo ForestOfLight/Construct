@@ -1,8 +1,8 @@
 """Resolves a specific Java block+properties combination to model elements,
 using misode/mcmeta blockstate JSON (variants or multipart)."""
 
-from model_resolver import resolve_model, uv_axes_for_normal
-from rotation import rotate_point, rotate_vector
+from model_resolver import resolve_model, rotate_uv_rect, uv_axes_for_normal
+from rotation import rotate_point, rotate_vector, signed_angle
 
 BLOCKSTATE_PATH_TMPL = "assets/minecraft/blockstates/{name}.json"
 _ORIGIN = [8, 8, 8]
@@ -130,8 +130,31 @@ def _rotate_face(face, x_rot, y_rot, uvlock=False):
         normal = rotate_vector(normal, axis, degrees)
         uv_u = rotate_vector(uv_u, axis, degrees)
         uv_v = rotate_vector(uv_v, axis, degrees)
+    uv = face["uv"]
     if uvlock:
         relocked = uv_axes_for_normal(normal, face["uv_rotation"])
         if relocked:
+            # World-aligning the texture means turning its rect as well as
+            # its frame. The frame says which world axis u runs along; the
+            # rect says how far the texture reaches along u. Correct one
+            # without the other and a quarter turn leaves them transposed -
+            # a 16-wide, 8-tall quad sampling an 8-wide, 16-tall rect, which
+            # is the stretched top face on every stair Java uvlocks.
+            #
+            # The rect turns the opposite way to the frame. Pinning the frame
+            # back to world alignment undoes the block's rotation; for the
+            # texture's content to stay put in the world it has to be carried
+            # the same way, which is the inverse of that undoing. Get this
+            # backwards and the rect comes out the right shape but off the
+            # wrong half of the texture.
+            uv = rotate_uv_rect(uv, -_quarter_turns(uv_u, relocked[0], normal))
             uv_u, uv_v = relocked
-    return {**face, "center": center, "extent": extent, "normal": normal, "uv_u": uv_u, "uv_v": uv_v}
+    return {**face, "center": center, "extent": extent, "normal": normal,
+            "uv_u": uv_u, "uv_v": uv_v, "uv": uv}
+
+
+def _quarter_turns(from_axis, to_axis, normal):
+    """How many quarter turns about `normal` carry `from_axis` onto
+    `to_axis`. Blockstate rotations are always multiples of 90 degrees, so
+    this is always a whole number of turns."""
+    return int(round(float(signed_angle(from_axis, to_axis, normal)) / 90))

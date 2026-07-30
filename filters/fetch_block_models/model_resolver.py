@@ -82,6 +82,26 @@ def _face_geometry(elem_from, elem_to, face_name):
 
 
 _NORMAL_TO_FACE = {tuple(normal): name for name, normal in _FACE_NORMAL.items()}
+_UV_SPAN = Decimal(16)
+
+
+def rotate_uv_rect(uv, quarter_turns):
+    """Turns a uv rect a quarter turn at a time about the texture's centre,
+    the way Java's uvlock does. Rotating about the centre (rather than the
+    rect's own centre) is what keeps the result inside the texture's own
+    0-16 bounds - a rect rotated in place could otherwise run past the edge
+    and sample whatever is packed next to it in the atlas.
+
+    Returned as a plain [u0, v0, u1, v1] rect with the corners re-sorted, so
+    everything downstream can keep reading it as "offset plus span"."""
+    quarter_turns %= 4
+    if not quarter_turns:
+        return uv
+    corners = [(Decimal(uv[0]), Decimal(uv[1])), (Decimal(uv[2]), Decimal(uv[3]))]
+    for _ in range(quarter_turns):
+        corners = [(v, _UV_SPAN - u) for u, v in corners]
+    (u0, v0), (u1, v1) = corners
+    return [min(u0, u1), min(v0, v1), max(u0, u1), max(v0, v1)]
 
 
 def uv_axes_for_normal(normal, face_rotation):
