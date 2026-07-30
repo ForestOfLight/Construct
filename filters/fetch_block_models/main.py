@@ -127,19 +127,25 @@ def build(root):
 
     block_models = build_block_models(mcmeta, b2j, atlas)
     atlas_image, atlas_manifest = atlas.pack()
+    white_rect = atlas_manifest[WHITE_TEXTURE]
     block_models = project_uv(block_models, atlas_manifest)
     face_types, block_models = build_face_types_and_refs(block_models)
-    return atlas_image, face_types, block_models
+    return atlas_image, white_rect, face_types, block_models
 
 
-def write_outputs(root, atlas_image, face_types, block_models):
+def write_outputs(root, atlas_image, white_rect, face_types, block_models):
     atlas_path = root / "packs" / "RP" / "textures" / "particle" / "vanilla_block_atlas.png"
     atlas_image.save(atlas_path)
 
     atlas_js_path = root / "packs" / "BP" / "scripts" / "blockAtlas.js"
     atlas_js_contents = (
         f"export const atlasWidth = {atlas_image.width};\n"
-        f"export const atlasHeight = {atlas_image.height};"
+        f"export const atlasHeight = {atlas_image.height};\n\n"
+        # so runtime fallback geometry (e.g. BlockModelLookup's WHITE_CUBE_FACES)
+        # can point at the real white swatch instead of a hardcoded pixel guess
+        "export const whiteUvRect = " + render({
+            "x": white_rect["x"], "y": white_rect["y"], "w": white_rect["w"], "h": white_rect["h"],
+        }) + ";"
     )
     atlas_js_path.write_text(atlas_js_contents, encoding="utf-8")
 
@@ -155,8 +161,8 @@ def write_outputs(root, atlas_image, face_types, block_models):
 
 def main():
     root = root_dir()
-    atlas_image, face_types, block_models = build(root)
-    write_outputs(root, atlas_image, face_types, block_models)
+    atlas_image, white_rect, face_types, block_models = build(root)
+    write_outputs(root, atlas_image, white_rect, face_types, block_models)
 
 
 if __name__ == "__main__":

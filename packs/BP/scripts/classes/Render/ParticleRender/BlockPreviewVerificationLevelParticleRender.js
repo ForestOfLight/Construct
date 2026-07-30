@@ -1,7 +1,7 @@
 import { MolangVariableMap } from "@minecraft/server";
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { Vector } from "../../../lib/Vector";
-import { BlockModelLookup } from "../BlockModelLookup";
+import { BlockModelLookup, WHITE_CUBE_FACES } from "../BlockModelLookup";
 
 const BLOCK_CENTER = new Vector(0.5, 0.5, 0.5);
 
@@ -23,9 +23,18 @@ export class BlockPreviewVerificationLevelParticleRender {
             return;
         const material = this.#verificationLevelToMaterial();
         const sizeScalar = this.#verificationLevelToSizeScalar();
-        for (const face of BlockModelLookup.getFaces(this.targetPermutation)) {
+        for (const face of this.#getFaces()) {
             this.#renderFace(face, rgb, material, sizeScalar);
         }
+    }
+
+    // Only Missing needs the target block's actual shape (nothing else is
+    // rendering there); NoMatch/TypeMatch overlay onto a real, already-visible
+    // block, so a plain cube is enough and skips the model lookup entirely.
+    #getFaces() {
+        if (this.verificationLevel !== BlockVerificationLevel.Missing)
+            return WHITE_CUBE_FACES;
+        return BlockModelLookup.getFaces(this.targetPermutation);
     }
 
     #renderFace(face, rgb, material, sizeScalar) {

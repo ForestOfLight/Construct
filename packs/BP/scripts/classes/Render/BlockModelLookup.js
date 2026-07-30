@@ -1,4 +1,17 @@
 import { blockFaceTypes, blockModels } from "../../blockModels";
+import { whiteUvRect } from "../../blockAtlas";
+
+// Mirrors filters/fetch_block_models/main.py's WHITE_CUBE_FACES: used when a
+// permutation has no entry in blockModels at all (e.g. a block id absent
+// from the Bedrock<->Java mapping data the pipeline was built from).
+export const WHITE_CUBE_FACES = [
+    { center: [8, 16, 8], width: 16, height: 16, normal: [0, 1, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 0, 8], width: 16, height: 16, normal: [0, -1, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 8, 0], width: 16, height: 16, normal: [0, 0, -1], rotation: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 8, 16], width: 16, height: 16, normal: [0, 0, 1], rotation: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [16, 8, 8], width: 16, height: 16, normal: [1, 0, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [0, 8, 8], width: 16, height: 16, normal: [-1, 0, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
+];
 
 let blockIdIndex;
 
@@ -25,7 +38,9 @@ export class BlockModelLookup {
     static getFaces(permutation) {
         const exactKey = BlockModelLookup.#permutationKey(permutation);
         const refs = blockModels[exactKey] ?? BlockModelLookup.#findPartialMatch(permutation);
-        return (refs ?? []).map((index) => blockFaceTypes[index]);
+        if (!refs)
+            return WHITE_CUBE_FACES;
+        return refs.map((index) => blockFaceTypes[index]);
     }
 
     // Falls back to the most-specific blockModels entry whose properties are a subset of the
