@@ -60,6 +60,45 @@ class ResolveModelTest(unittest.TestCase):
         self.assertEqual(face["extent"], [8, 0, 8])
         self.assertEqual(face["texture"], "block/child_tex")
 
+    def test_face_without_uv_samples_only_the_slice_its_element_covers(self):
+        # Real minecraft:cake data: the model gives no uv at all, and Java
+        # then derives one from the element's own bounds rather than using
+        # the whole texture. Cake's box is 14 wide and 8 tall, so its side
+        # face reaches u 1..15 and v 8..16 - the bottom 8 rows, since the
+        # cake only occupies the bottom half of the block. Falling back to a
+        # full 0-16 rect instead squeezes an entire 16x16 texture into that
+        # face, which is the squashed cake side.
+        mcmeta = FakeMcmeta({
+            "block/cake": {
+                "textures": {"side": "block/cake_side"},
+                "elements": [{
+                    "from": [1, 0, 1], "to": [15, 8, 15],
+                    "faces": {"north": {"texture": "#side"}},
+                }],
+            },
+        })
+        face = resolve_model(mcmeta, "block/cake")[0]["faces"]["north"]
+        self.assertEqual([float(c) for c in face["uv"]], [1, 8, 15, 16])
+
+    def test_face_without_uv_on_a_full_cube_still_covers_the_whole_texture(self):
+        # The derived default only differs from the whole texture when the
+        # element isn't a full block - a full cube's bounds project onto the
+        # complete 0-16 rect, so nothing changes for ordinary blocks.
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/x"},
+                "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {face: {"texture": "#all"} for face in
+                              ("down", "up", "north", "south", "west", "east")},
+                }],
+            },
+        })
+        faces = resolve_model(mcmeta, "block/x")[0]["faces"]
+        for name, face in faces.items():
+            with self.subTest(face=name):
+                self.assertEqual([float(c) for c in face["uv"]], [0, 0, 16, 16])
+
     def test_face_defaults_for_missing_optional_fields(self):
         mcmeta = FakeMcmeta({
             "block/x": {

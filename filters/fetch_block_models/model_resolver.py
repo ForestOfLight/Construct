@@ -47,6 +47,42 @@ _FACE_UV_BASIS = {
     "east": ([0, 0, -1], [0, -1, 0]),
 }
 
+# The same table as _FACE_UV_BASIS seen from the other side: Java's rule for
+# what a face's uv is when the model doesn't give one (BlockElement.
+# uvsByFace). Each of the four u0/v0/u1/v1 slots reads (axis index, which
+# corner, invert?), where invert means the coordinate is taken as 16 minus
+# the value - the same axis directions _FACE_UV_BASIS records, written out
+# per slot. Spelled out rather than derived because which corner a slot
+# reads flips along with the invert, and that is far easier to check against
+# Java's source as a plain table than as a rule.
+#
+# The default is NOT the whole texture - it's the slice of it the element
+# actually covers, so a part-block element samples a correspondingly small
+# part of its texture. Defaulting to a full 0-16 rect instead squeezes a
+# whole texture into a part-block face: cake's box is 14 wide and 8 tall,
+# so its sides came out with an entire 16x16 crammed into them.
+_FROM, _TO = 0, 1
+_FACE_UV_DEFAULT = {
+    #          u0                    v0                   u1                   v1
+    "down": ((0, _FROM, False), (2, _TO, True), (0, _TO, False), (2, _FROM, True)),
+    "up": ((0, _FROM, False), (2, _FROM, False), (0, _TO, False), (2, _TO, False)),
+    "north": ((0, _TO, True), (1, _TO, True), (0, _FROM, True), (1, _FROM, True)),
+    "south": ((0, _FROM, False), (1, _TO, True), (0, _TO, False), (1, _FROM, True)),
+    "west": ((2, _FROM, False), (1, _TO, True), (2, _TO, False), (1, _FROM, True)),
+    "east": ((2, _TO, True), (1, _TO, True), (2, _FROM, True), (1, _FROM, True)),
+}
+
+
+def default_uv(elem_from, elem_to, face_name):
+    """Java's default uv for a face whose model omits one: the element's own
+    bounds projected onto the face's two texture axes."""
+    corners = (elem_from, elem_to)
+    uv = []
+    for axis, corner, invert in _FACE_UV_DEFAULT[face_name]:
+        value = Decimal(corners[corner][axis])
+        uv.append(Decimal(16) - value if invert else value)
+    return uv
+
 
 def load_model(mcmeta, model_id):
     path = model_id.split(":")[-1]
@@ -174,7 +210,7 @@ def resolve_elements(elements, textures):
     for element in elements or []:
         resolved_faces = {}
         for face_name, face in element.get("faces", {}).items():
-            uv = face.get("uv", [0, 0, 16, 16])
+            uv = face.get("uv") or default_uv(element["from"], element["to"], face_name)
             center, extent, normal = _face_geometry(element["from"], element["to"], face_name)
             uv_u, uv_v = _uv_axes(face_name, face.get("rotation", 0))
             center, extent, normal, uv_u, uv_v = _apply_element_rotation(
