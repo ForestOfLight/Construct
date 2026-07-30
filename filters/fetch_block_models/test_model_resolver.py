@@ -120,6 +120,22 @@ class ResolveModelTest(unittest.TestCase):
         face = resolve_model(mcmeta, "block/x")[0]["faces"]["up"]
         self.assertEqual(face["texture"], "block/glass")
 
+    def test_resolves_bare_texture_variable_without_hash_prefix(self):
+        # Real-world Mojang data quirk (e.g. minecraft:heavy_core): textures
+        # dict defines "all", but the face references it as "all" instead of
+        # the spec-correct "#all".
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/heavy_core"},
+                "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {"up": {"texture": "all"}},
+                }],
+            },
+        })
+        face = resolve_model(mcmeta, "block/x")[0]["faces"]["up"]
+        self.assertEqual(face["texture"], "block/heavy_core")
+
     def test_raises_on_unresolved_texture_variable(self):
         mcmeta = FakeMcmeta({
             "block/x": {

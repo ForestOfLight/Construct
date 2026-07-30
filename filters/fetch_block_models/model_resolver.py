@@ -49,16 +49,17 @@ def resolve_model(mcmeta, model_id):
 
 
 def _resolve_texture_ref(ref, textures, depth=0):
-    """Follows '#var' indirection to a literal 'block/xxx' texture name."""
+    """Follows '#var' (or bare 'var', a real-world Mojang data quirk seen in
+    some newer blocks) indirection to a literal 'block/xxx' texture name."""
     if depth > 10:
         raise ValueError(f"texture reference cycle at {ref!r}")
-    if isinstance(ref, str) and ref.startswith("#"):
-        var = ref[1:]
-        if var not in textures:
-            raise KeyError(f"unresolved texture variable '#{var}'")
-        return _resolve_texture_ref(textures[var], textures, depth + 1)
-    if isinstance(ref, str):
-        return ref.split(":")[-1]
     if isinstance(ref, dict):
         return _resolve_texture_ref(ref["sprite"], textures, depth + 1)
+    if isinstance(ref, str):
+        var = ref[1:] if ref.startswith("#") else ref
+        if var in textures:
+            return _resolve_texture_ref(textures[var], textures, depth + 1)
+        if ref.startswith("#"):
+            raise KeyError(f"unresolved texture variable '#{var}'")
+        return ref.split(":")[-1]
     return ref
