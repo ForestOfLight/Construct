@@ -76,6 +76,18 @@ ATLAS_HEIGHT = 1024
 # names never contain "|", so this is unambiguous.
 _FLIP_TRANSFORMS = {"fx": Image.FLIP_LEFT_RIGHT, "fy": Image.FLIP_TOP_BOTTOM}
 
+# Separator joining the layers of a composited texture, lowest first (e.g.
+# "block/grass_block_side^block/grass_block_side_overlay"). Used where a
+# model draws one element exactly over another and the renderer has no draw
+# order to reproduce that with - see main.py's _merge_coincident_faces. Real
+# mcmeta texture names never contain "^", so this stays unambiguous.
+_COMPOSITE_SEP = "^"
+
+
+def compose_textures(*names):
+    """Builds the composited name for `names` drawn in order, lowest first."""
+    return _COMPOSITE_SEP.join(names)
+
 
 class TextureAtlas:
     def __init__(self):
@@ -84,6 +96,17 @@ class TextureAtlas:
     def add(self, mcmeta, name):
         if name in self._images:
             return
+        layers = [self._load(mcmeta, layer) for layer in name.split(_COMPOSITE_SEP)]
+        image = layers[0]
+        for layer in layers[1:]:
+            if layer.size != image.size:
+                # a layer authored at a different resolution to the one it
+                # covers still has to line up pixel for pixel once composited
+                layer = layer.resize(image.size, Image.NEAREST)
+            image = Image.alpha_composite(image, layer)
+        self._images[name] = image
+
+    def _load(self, mcmeta, name):
         base_name, flip = name.split("|", 1) if "|" in name else (name, "")
         raw = mcmeta.read_bytes(TEXTURE_PATH_TMPL.format(name=base_name))
         image = Image.open(io.BytesIO(raw)).convert("RGBA")
@@ -94,7 +117,7 @@ class TextureAtlas:
             image = _apply_tint(image, DEFAULT_TINTS[base_name])
         for i in range(0, len(flip), 2):
             image = image.transpose(_FLIP_TRANSFORMS[flip[i:i + 2]])
-        self._images[name] = image
+        return image
 
     def add_image(self, name, image):
         """Inserts a texture that isn't sourced from mcmeta (e.g. the

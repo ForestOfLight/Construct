@@ -24,7 +24,7 @@ from block_entity_models import resolve_block_entity
 from blockstate_resolver import resolve_java_state
 from mcmeta_source import McmetaSource
 from rotation import signed_angle
-from texture_atlas import TextureAtlas
+from texture_atlas import compose_textures, TextureAtlas
 
 WHITE_TEXTURE = "white"
 _FULL_UV = [0, 0, 16, 16]
@@ -191,7 +191,6 @@ def build_block_models(mcmeta, b2j, atlas):
                 # resolve_elements's 'flip') - "|" can't appear in a real
                 # mcmeta texture name, so this stays unambiguous
                 texture = f"{face['texture']}|{face['flip']}" if face["flip"] else face["texture"]
-                atlas.add(mcmeta, texture)
                 width, height = _derive_width_height(face["extent"], face["uv_u"], face["uv_v"])
                 faces.append({
                     "center": face["center"],
@@ -203,8 +202,48 @@ def build_block_models(mcmeta, b2j, atlas):
                     "roll": _derive_roll(face["normal"], face["uv_v"]),
                     "tintindex": face["tintindex"],
                 })
+        faces = _merge_coincident_faces(faces)
+        for face in faces:
+            atlas.add(mcmeta, face["texture"])
         block_models[bedrock_state] = faces
     return block_models
+
+
+def _merge_coincident_faces(faces):
+    """Collapses faces that occupy exactly the same quad into one.
+
+    Java draws a block's elements in order, so an element laid exactly over
+    an earlier one is a deliberate overlay - a grass block is a full cube of
+    dirt-and-grass sides with a second, identical cube carrying just the
+    tinted grass fringe over them. Our renderer has no draw order to lean
+    on: it spawns a particle per face, and two quads sharing a plane z-fight
+    and flicker between the two textures instead of layering.
+
+    Merging them into a single face carrying a composited texture (see
+    TextureAtlas) reproduces the layering with one quad, so there is nothing
+    left to fight. Where the two faces are the same texture drawn twice
+    (several of the small plant models do this), the second simply
+    disappears.
+
+    Only faces agreeing on every other value are merged - same position,
+    size, roll and uv rect - because compositing happens in the atlas, at
+    texture level, and that is only equivalent to layering when both faces
+    sample the same rect of it."""
+    merged = []
+    by_quad = {}
+    for face in faces:
+        key = (
+            tuple(str(c) for c in face["center"]), tuple(str(c) for c in face["normal"]),
+            str(face["width"]), str(face["height"]), str(face["roll"]),
+            tuple(str(c) for c in face["uv"]),
+        )
+        first = by_quad.get(key)
+        if first is None:
+            by_quad[key] = face
+            merged.append(face)
+        elif first["texture"] != face["texture"]:
+            first["texture"] = compose_textures(first["texture"], face["texture"])
+    return merged
 
 
 def project_uv(block_models, atlas_manifest):

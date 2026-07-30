@@ -4,6 +4,7 @@ from decimal import Decimal
 
 from main import (
     _derive_roll,
+    _merge_coincident_faces,
     _derive_width_height,
     build_block_models,
     build_face_types_and_refs,
@@ -269,6 +270,48 @@ class DeriveRollTest(unittest.TestCase):
     def test_a_side_face_whose_texture_was_turned_upside_down_rolls_half_a_turn(self):
         # v running +y instead of -y means the texture reads downward.
         self.assertEqual(abs(_derive_roll([0, 0, 1], [0, 1, 0])), 180)
+
+
+class MergeCoincidentFacesTest(unittest.TestCase):
+    def _face(self, texture, roll=0, uv=None, center=None):
+        return {
+            "center": center or [8, 8, 0], "width": 16, "height": 16,
+            "normal": [0, 0, -1], "texture": texture, "uv": uv or [0, 0, 16, 16],
+            "roll": roll, "tintindex": -1,
+        }
+
+    def test_an_overlay_laid_over_a_face_becomes_one_composited_face(self):
+        # Mirrors a grass block: a full cube of dirt-and-grass sides with a
+        # second, identical cube carrying just the tinted fringe over them.
+        # Two quads sharing a plane have nothing to order them and flicker,
+        # so they become one face sampling both layers combined.
+        faces = [self._face("block/grass_block_side"),
+                 self._face("block/grass_block_side_overlay")]
+        merged = _merge_coincident_faces(faces)
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0]["texture"],
+                         "block/grass_block_side^block/grass_block_side_overlay")
+
+    def test_the_same_texture_drawn_twice_collapses_to_one_face(self):
+        faces = [self._face("block/pink_petals"), self._face("block/pink_petals")]
+        merged = _merge_coincident_faces(faces)
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0]["texture"], "block/pink_petals")
+
+    def test_layer_order_follows_the_order_the_faces_arrive_in(self):
+        merged = _merge_coincident_faces([self._face("a"), self._face("b"), self._face("c")])
+        self.assertEqual(merged[0]["texture"], "a^b^c")
+
+    def test_faces_that_only_share_a_position_are_left_alone(self):
+        # Compositing happens in the atlas, at texture level, so it is only
+        # equivalent to layering when both faces sample the same rect of it -
+        # and only when they'd be drawn at the same roll.
+        differing_uv = [self._face("a"), self._face("b", uv=[0, 0, 8, 16])]
+        differing_roll = [self._face("a"), self._face("b", roll=90)]
+        elsewhere = [self._face("a"), self._face("b", center=[8, 8, 16])]
+        for label, faces in (("uv", differing_uv), ("roll", differing_roll), ("position", elsewhere)):
+            with self.subTest(differing=label):
+                self.assertEqual(len(_merge_coincident_faces(faces)), 2)
 
 
 class ProjectUvTest(unittest.TestCase):

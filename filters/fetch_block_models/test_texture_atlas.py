@@ -3,7 +3,7 @@ import unittest
 
 from PIL import Image
 
-from texture_atlas import ATLAS_HEIGHT, ATLAS_WIDTH, TextureAtlas
+from texture_atlas import ATLAS_HEIGHT, ATLAS_WIDTH, compose_textures, TextureAtlas
 
 
 class FakeMcmeta:
@@ -22,6 +22,40 @@ def _solid(size, rgba):
 
 
 class TextureAtlasTest(unittest.TestCase):
+    def test_composite_name_layers_its_textures_lowest_first(self):
+        # Mirrors a grass block: an opaque base with a partly transparent
+        # overlay laid over it. Where the overlay is solid it wins; where
+        # it's transparent the base shows through.
+        overlay = Image.new("RGBA", (2, 1), (0, 255, 0, 255))
+        overlay.putpixel((1, 0), (0, 0, 0, 0))  # transparent right half
+        mcmeta = FakeMcmeta({
+            "block/base": _solid((2, 1), (120, 80, 40, 255)),
+            "block/overlay": overlay,
+        })
+        name = compose_textures("block/base", "block/overlay")
+
+        atlas = TextureAtlas()
+        atlas.add(mcmeta, name)
+        image, manifest = atlas.pack()
+
+        rect = manifest[name]
+        self.assertEqual(image.getpixel((rect["x"], rect["y"])), (0, 255, 0, 255))
+        self.assertEqual(image.getpixel((rect["x"] + 1, rect["y"])), (120, 80, 40, 255))
+
+    def test_composite_resizes_a_layer_authored_at_another_resolution(self):
+        # the layers still have to line up pixel for pixel once combined
+        mcmeta = FakeMcmeta({
+            "block/base": _solid((4, 4), (10, 10, 10, 255)),
+            "block/overlay": _solid((2, 2), (0, 0, 255, 255)),
+        })
+        name = compose_textures("block/base", "block/overlay")
+
+        atlas = TextureAtlas()
+        atlas.add(mcmeta, name)
+        _image, manifest = atlas.pack()
+
+        self.assertEqual((manifest[name]["w"], manifest[name]["h"]), (4, 4))
+
     def test_flip_suffix_stores_a_separate_mirrored_copy(self):
         # a 2x1 texture, distinct pixels so a horizontal flip is detectable
         mcmeta = FakeMcmeta({
