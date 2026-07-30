@@ -73,6 +73,58 @@ class ResolveJavaStateTest(unittest.TestCase):
         elements = resolve_java_state(mcmeta, "minecraft:redstone_wire", {"north": "none"})
         self.assertEqual(elements, [])
 
+    def test_multipart_or_condition_matches_when_one_sub_condition_matches(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"vine": {"multipart": [
+                {"when": {"OR": [{"north": "true"}, {"south": "true"}]},
+                 "apply": {"model": "block/vine"}},
+            ]}},
+            models={"block/vine": {"textures": {}, "elements": _FLAT_ELEMENT}},
+        )
+        elements = resolve_java_state(
+            mcmeta, "minecraft:vine", {"north": "false", "south": "true"}
+        )
+        self.assertEqual(elements, _FLAT_ELEMENT)
+
+    def test_multipart_or_condition_excluded_when_no_sub_condition_matches(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"vine": {"multipart": [
+                {"when": {"OR": [{"north": "true"}, {"south": "true"}]},
+                 "apply": {"model": "block/vine"}},
+            ]}},
+            models={"block/vine": {"textures": {}, "elements": _FLAT_ELEMENT}},
+        )
+        elements = resolve_java_state(
+            mcmeta, "minecraft:vine", {"north": "false", "south": "false"}
+        )
+        self.assertEqual(elements, [])
+
+    def test_multipart_explicit_and_condition_matches_when_all_sub_conditions_match(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"vine": {"multipart": [
+                {"when": {"AND": [{"north": "true"}, {"south": "true"}]},
+                 "apply": {"model": "block/vine"}},
+            ]}},
+            models={"block/vine": {"textures": {}, "elements": _FLAT_ELEMENT}},
+        )
+        elements = resolve_java_state(
+            mcmeta, "minecraft:vine", {"north": "true", "south": "true"}
+        )
+        self.assertEqual(elements, _FLAT_ELEMENT)
+
+    def test_multipart_explicit_and_condition_excluded_when_one_sub_condition_fails(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"vine": {"multipart": [
+                {"when": {"AND": [{"north": "true"}, {"south": "true"}]},
+                 "apply": {"model": "block/vine"}},
+            ]}},
+            models={"block/vine": {"textures": {}, "elements": _FLAT_ELEMENT}},
+        )
+        elements = resolve_java_state(
+            mcmeta, "minecraft:vine", {"north": "true", "south": "false"}
+        )
+        self.assertEqual(elements, [])
+
     def test_multipart_merges_multi_element_models_from_multiple_parts(self):
         mcmeta = FakeMcmeta(
             blockstates={"fence": {"multipart": [
