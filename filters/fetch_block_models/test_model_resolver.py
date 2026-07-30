@@ -72,6 +72,19 @@ class ResolveModelTest(unittest.TestCase):
         self.assertIsNone(face["cullface"])
         self.assertEqual(face["tintindex"], -1)
 
+    def test_resolves_multi_hop_texture_variable_chain(self):
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"particle": "#all", "all": "block/stone"},
+                "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {"up": {"texture": "#particle"}},
+                }],
+            },
+        })
+        face = resolve_model(mcmeta, "block/x")[0]["faces"]["up"]
+        self.assertEqual(face["texture"], "block/stone")
+
     def test_raises_on_unresolved_texture_variable(self):
         mcmeta = FakeMcmeta({
             "block/x": {
