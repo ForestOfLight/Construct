@@ -22,6 +22,25 @@ def _solid(size, rgba):
 
 
 class TextureAtlasTest(unittest.TestCase):
+    def test_flip_suffix_stores_a_separate_mirrored_copy(self):
+        # a 2x1 texture, distinct pixels so a horizontal flip is detectable
+        mcmeta = FakeMcmeta({
+            "entity/x": Image.new("RGBA", (2, 1)),
+        })
+        mcmeta._textures["entity/x"].putpixel((0, 0), (255, 0, 0, 255))
+        mcmeta._textures["entity/x"].putpixel((1, 0), (0, 255, 0, 255))
+
+        atlas = TextureAtlas()
+        atlas.add(mcmeta, "entity/x")
+        atlas.add(mcmeta, "entity/x|fx")
+        image, manifest = atlas.pack()
+
+        self.assertEqual(set(manifest.keys()), {"entity/x", "entity/x|fx"})
+        normal_rect = manifest["entity/x"]
+        flipped_rect = manifest["entity/x|fx"]
+        self.assertEqual(image.getpixel((normal_rect["x"], normal_rect["y"])), (255, 0, 0, 255))
+        self.assertEqual(image.getpixel((flipped_rect["x"], flipped_rect["y"])), (0, 255, 0, 255))
+
     def test_pack_places_every_added_texture_without_overlap(self):
         mcmeta = FakeMcmeta({
             "block/stone": _solid((16, 16), (128, 128, 128, 255)),

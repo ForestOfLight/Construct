@@ -36,7 +36,16 @@ _BLOCK_ENTITY_MAPPING = {
     # fixed color.
     "minecraft:black_banner": {"shape": "banner", "textures": {}},
     "minecraft:black_wall_banner": {"shape": "banner", "textures": {}},
+    "minecraft:shulker_box": {"shape": "shulker_box", "textures": {}},
 }
+_DYE_COLORS = [
+    "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+    "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",
+]
+for _color in _DYE_COLORS:
+    _BLOCK_ENTITY_MAPPING[f"minecraft:{_color}_shulker_box"] = {
+        "shape": "shulker_box", "textures": {"main": f"entity/shulker/shulker_{_color}"},
+    }
 
 
 def _load_shapes():

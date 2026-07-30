@@ -126,6 +126,14 @@ def resolve_elements(elements, textures):
                 "rotation": face.get("rotation", 0),
                 "cullface": face.get("cullface"),
                 "tintindex": face.get("tintindex", -1),
+                # only ever set by hardcoded block-entity shapes (see
+                # block_entity_models.json): real mcmeta face uv is always
+                # authored forward, but a box-uv auto-unwrap (used by those
+                # shapes' source data) mirrors its up/down faces relative to
+                # the sides, which our uv pipeline can't express as a signed
+                # rect - "flip" ("fx"/"fy"/"fxfy") instead asks main.py to
+                # sample a pre-mirrored copy of the texture for this face.
+                "flip": face.get("flip", ""),
             }
         resolved_elements.append({"faces": resolved_faces})
     return resolved_elements

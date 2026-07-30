@@ -47,6 +47,14 @@ ATLAS_WIDTH = 1024
 ATLAS_HEIGHT = 1024
 
 
+# Suffix appended to a texture name (e.g. "entity/chest/normal|fxfy") to
+# request a mirrored copy - used for hardcoded block-entity shapes whose
+# source data auto-unwraps a face's uv mirrored relative to the others
+# (see model_resolver.resolve_elements's 'flip' field). Real mcmeta texture
+# names never contain "|", so this is unambiguous.
+_FLIP_TRANSFORMS = {"fx": Image.FLIP_LEFT_RIGHT, "fy": Image.FLIP_TOP_BOTTOM}
+
+
 class TextureAtlas:
     def __init__(self):
         self._images = {}  # literal name -> PIL.Image (RGBA, cropped, tinted)
@@ -54,13 +62,16 @@ class TextureAtlas:
     def add(self, mcmeta, name):
         if name in self._images:
             return
-        raw = mcmeta.read_bytes(TEXTURE_PATH_TMPL.format(name=name))
+        base_name, flip = name.split("|", 1) if "|" in name else (name, "")
+        raw = mcmeta.read_bytes(TEXTURE_PATH_TMPL.format(name=base_name))
         image = Image.open(io.BytesIO(raw)).convert("RGBA")
         width, height = image.size
         if height > width:  # animated: frames stacked vertically, take frame 0
             image = image.crop((0, 0, width, width))
-        if name in DEFAULT_TINTS:
-            image = _apply_tint(image, DEFAULT_TINTS[name])
+        if base_name in DEFAULT_TINTS:
+            image = _apply_tint(image, DEFAULT_TINTS[base_name])
+        for i in range(0, len(flip), 2):
+            image = image.transpose(_FLIP_TRANSFORMS[flip[i:i + 2]])
         self._images[name] = image
 
     def add_image(self, name, image):
