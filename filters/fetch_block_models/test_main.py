@@ -138,8 +138,11 @@ class BuildBlockModelsTest(unittest.TestCase):
 
 
 class ProjectUvTest(unittest.TestCase):
-    def _face(self, texture):
-        return {"texture": texture, "center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0]}
+    def _face(self, texture, uv=None):
+        return {
+            "texture": texture, "uv": uv or [0, 0, 16, 16],
+            "center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
+        }
 
     def test_replaces_texture_name_with_atlas_pixel_rect(self):
         block_models = {"k": [self._face("block/stone")]}
@@ -170,6 +173,24 @@ class ProjectUvTest(unittest.TestCase):
         for faces in result.values():
             for face in faces:
                 self.assertNotIn("texture", face)
+
+    def test_partial_face_uv_maps_to_a_proportional_sub_rect_not_the_whole_texture(self):
+        # A fence post's narrow east/west faces only sample a thin strip of
+        # the texture (e.g. Java uv [7, 0, 9, 16], a 2-of-16-wide strip) -
+        # using the whole texture's rect would squish it into that strip.
+        block_models = {"k": [self._face("block/oak_planks", uv=[7, 0, 9, 16])]}
+        atlas_manifest = {"block/oak_planks": {"x": 100, "y": 200, "w": 16, "h": 16}}
+        result = project_uv(block_models, atlas_manifest)
+        self.assertEqual(result["k"][0]["uv"], {"x": 100 + 7, "y": 200, "w": 2, "h": 16})
+
+    def test_partial_face_uv_scales_with_a_non_16px_packed_texture(self):
+        # the atlas rect reflects the texture's real packed pixel size, which
+        # may not be 16x16 (e.g. a resource-pack override) - the 0-16 Java uv
+        # sub-rect is still proportional to that actual size.
+        block_models = {"k": [self._face("block/oak_planks", uv=[8, 0, 16, 16])]}
+        atlas_manifest = {"block/oak_planks": {"x": 0, "y": 0, "w": 32, "h": 32}}
+        result = project_uv(block_models, atlas_manifest)
+        self.assertEqual(result["k"][0]["uv"], {"x": 16, "y": 0, "w": 16, "h": 32})
 
 
 class BuildFaceTypesAndRefsTest(unittest.TestCase):

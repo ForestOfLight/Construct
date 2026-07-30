@@ -11,6 +11,7 @@ Run it directly to regenerate these files in place (no regolith export):
 import json
 import os
 import sys
+from decimal import Decimal
 from pathlib import Path
 
 from PIL import Image
@@ -24,13 +25,14 @@ from mcmeta_source import McmetaSource
 from texture_atlas import TextureAtlas
 
 WHITE_TEXTURE = "white"
+_FULL_UV = [0, 0, 16, 16]
 WHITE_CUBE_FACES = [
-    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
+    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
+    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
+    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
+    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
+    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
 ]
 
 
@@ -64,6 +66,7 @@ def build_block_models(mcmeta, b2j, atlas):
                     "height": face["height"],
                     "normal": face["normal"],
                     "texture": face["texture"],
+                    "uv": face["uv"],
                     "rotation": face["rotation"],
                     "tintindex": face["tintindex"],
                 })
@@ -72,13 +75,23 @@ def build_block_models(mcmeta, b2j, atlas):
 
 
 def project_uv(block_models, atlas_manifest):
-    """Replaces each face's 'texture' name with its final atlas-pixel 'uv' rect."""
+    """Replaces each face's 'texture' name and Java-space (0-16) 'uv'
+    sub-rect with its final atlas-pixel 'uv' rect. A face's own uv is often
+    smaller than the whole texture (e.g. a fence post's narrow faces only
+    sample a thin strip) - using the whole texture's rect regardless would
+    squish the entire texture into that smaller face."""
     white_rect = atlas_manifest.get(WHITE_TEXTURE)
     for faces in block_models.values():
         for face in faces:
             texture = face.pop("texture")
+            u0, v0, u1, v1 = (Decimal(c) for c in face.pop("uv"))
             rect = atlas_manifest.get(texture, white_rect)
-            face["uv"] = {"x": rect["x"], "y": rect["y"], "w": rect["w"], "h": rect["h"]}
+            face["uv"] = {
+                "x": rect["x"] + (u0 / 16) * rect["w"],
+                "y": rect["y"] + (v0 / 16) * rect["h"],
+                "w": ((u1 - u0) / 16) * rect["w"],
+                "h": ((v1 - v0) / 16) * rect["h"],
+            }
     return block_models
 
 
