@@ -104,18 +104,27 @@ def project_uv(block_models, atlas_manifest):
     sub-rect with its final atlas-pixel 'uv' rect. A face's own uv is often
     smaller than the whole texture (e.g. a fence post's narrow faces only
     sample a thin strip) - using the whole texture's rect regardless would
-    squish the entire texture into that smaller face."""
+    squish the entire texture into that smaller face.
+
+    Some Java models give a *reversed* uv (u1 < u0 and/or v1 < v0, e.g.
+    minecraft:block/template_piston_head's west face: [16, 4, 0, 0]) to
+    mirror the texture sample. The particle's uv component doesn't handle a
+    negative uv_size - it falls back to showing the whole atlas - so this
+    normalizes to the same non-negative rect regardless of ordering (losing
+    the mirror, which is an acceptable trade-off for this overlay)."""
     white_rect = atlas_manifest.get(WHITE_TEXTURE)
     for faces in block_models.values():
         for face in faces:
             texture = face.pop("texture")
             u0, v0, u1, v1 = (Decimal(c) for c in face.pop("uv"))
             rect = atlas_manifest.get(texture, white_rect)
+            u_min, u_max = min(u0, u1), max(u0, u1)
+            v_min, v_max = min(v0, v1), max(v0, v1)
             face["uv"] = {
-                "x": rect["x"] + (u0 / 16) * rect["w"],
-                "y": rect["y"] + (v0 / 16) * rect["h"],
-                "w": ((u1 - u0) / 16) * rect["w"],
-                "h": ((v1 - v0) / 16) * rect["h"],
+                "x": rect["x"] + (u_min / 16) * rect["w"],
+                "y": rect["y"] + (v_min / 16) * rect["h"],
+                "w": ((u_max - u_min) / 16) * rect["w"],
+                "h": ((v_max - v_min) / 16) * rect["h"],
             }
     return block_models
 
