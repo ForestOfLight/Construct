@@ -100,26 +100,12 @@ def _apply_element_rotation(center, extent, normal, uv_extent, rotation):
     )
 
 
-def resolve_model(mcmeta, model_id):
-    """Returns a list of elements: [{'faces': {face_name: {'center','extent',
-    'normal','uv','texture','rotation','cullface','tintindex'}}}]"""
-    chain = []
-    current_id = model_id
-    seen = set()
-    while current_id and current_id not in seen:
-        seen.add(current_id)
-        model = load_model(mcmeta, current_id)
-        chain.append(model)
-        current_id = model.get("parent")
-    chain.reverse()  # root first, most specific last
-
-    textures = {}
-    elements = None
-    for model in chain:
-        textures.update(model.get("textures", {}))
-        if "elements" in model:
-            elements = model["elements"]
-
+def resolve_elements(elements, textures):
+    """Shared core: turns a raw (already-flattened, parent-less) 'elements'
+    list plus its 'textures' variable dict into the same resolved-face shape
+    resolve_model produces. Used both for a real mcmeta model chain and for
+    the hardcoded block-entity shapes (block_entity_models.json), which are
+    already in this exact elements/textures shape - see block_entity_models.py."""
     resolved_elements = []
     for element in elements or []:
         resolved_faces = {}
@@ -143,6 +129,29 @@ def resolve_model(mcmeta, model_id):
             }
         resolved_elements.append({"faces": resolved_faces})
     return resolved_elements
+
+
+def resolve_model(mcmeta, model_id):
+    """Returns a list of elements: [{'faces': {face_name: {'center','extent',
+    'normal','uv','texture','rotation','cullface','tintindex'}}}]"""
+    chain = []
+    current_id = model_id
+    seen = set()
+    while current_id and current_id not in seen:
+        seen.add(current_id)
+        model = load_model(mcmeta, current_id)
+        chain.append(model)
+        current_id = model.get("parent")
+    chain.reverse()  # root first, most specific last
+
+    textures = {}
+    elements = None
+    for model in chain:
+        textures.update(model.get("textures", {}))
+        if "elements" in model:
+            elements = model["elements"]
+
+    return resolve_elements(elements, textures)
 
 
 def _resolve_texture_ref(ref, textures, depth=0):

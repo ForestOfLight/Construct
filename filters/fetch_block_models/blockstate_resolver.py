@@ -77,6 +77,17 @@ def _apply_model_entry(mcmeta, entry):
     return elements
 
 
+def rotate_elements(elements, x_rot, y_rot):
+    """Public entry point for rotating an already-resolved elements list
+    (see model_resolver.resolve_elements) around the block center by x_rot/
+    y_rot degrees. Used by block_entity_models.py to orient a hardcoded
+    block-entity shape (e.g. a chest) by its 'facing' property, the same
+    way a normal blockstate variant's 'x'/'y' would."""
+    if not x_rot and not y_rot:
+        return elements
+    return [_rotate_element(el, x_rot, y_rot) for el in elements]
+
+
 def _rotate_element(element, x_rot, y_rot):
     """Rotates every face's center/extent/normal/uv_extent around the block
     center (8,8,8) by x_rot then y_rot degrees (Java model rotations are

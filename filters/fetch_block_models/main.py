@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 from js_data import render  # noqa: E402
 
 from b2j_source import fetch_b2j, manifest_version, parse_java_state
+from block_entity_models import resolve_block_entity
 from blockstate_resolver import resolve_java_state
 from mcmeta_source import McmetaSource
 from texture_atlas import TextureAtlas
@@ -34,6 +35,22 @@ WHITE_CUBE_FACES = [
     {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [0, 16, 16], "rotation": 0, "tintindex": -1},
     {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [0, 16, 16], "rotation": 0, "tintindex": -1},
 ]
+
+# Shulker boxes are block entities (like chest/banner, no static mcmeta
+# 'elements'), but their real shape (a lid animating open/closed) isn't
+# worth hardcoding - a plain full cube with the shulker's own real texture
+# is a reasonable stand-in for a verification-overlay preview.
+_DYE_COLORS = [
+    "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+    "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",
+]
+SHULKER_BOX_TEXTURES = {"minecraft:shulker_box": "entity/shulker/shulker"}
+for _color in _DYE_COLORS:
+    SHULKER_BOX_TEXTURES[f"minecraft:{_color}_shulker_box"] = f"entity/shulker/shulker_{_color}"
+
+
+def _shulker_box_faces(texture):
+    return [{**face, "texture": texture} for face in WHITE_CUBE_FACES]
 
 
 def _derive_width_height(extent, normal):
@@ -76,7 +93,14 @@ def build_block_models(mcmeta, b2j, atlas):
     block_models = {}
     for bedrock_state, java_state in b2j.items():
         java_block_id, properties = parse_java_state(java_state)
+        if java_block_id in SHULKER_BOX_TEXTURES:
+            texture = SHULKER_BOX_TEXTURES[java_block_id]
+            atlas.add(mcmeta, texture)
+            block_models[bedrock_state] = _shulker_box_faces(texture)
+            continue
         elements = resolve_java_state(mcmeta, java_block_id, properties)
+        if not elements:
+            elements = resolve_block_entity(java_block_id, properties)
         if not elements:
             block_models[bedrock_state] = [dict(face) for face in WHITE_CUBE_FACES]
             continue
