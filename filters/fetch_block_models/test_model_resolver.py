@@ -102,6 +102,24 @@ class ResolveModelTest(unittest.TestCase):
         self.assertEqual(faces["up"]["texture"], "block/stone")
         self.assertEqual(faces["down"]["texture"], "block/stone")
 
+    def test_extracts_sprite_path_from_dict_shaped_texture_reference(self):
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {
+                    "all": {
+                        "force_translucent": True,
+                        "sprite": "minecraft:block/glass",
+                    },
+                },
+                "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {"up": {"texture": "#all"}},
+                }],
+            },
+        })
+        face = resolve_model(mcmeta, "block/x")[0]["faces"]["up"]
+        self.assertEqual(face["texture"], "block/glass")
+
     def test_raises_on_unresolved_texture_variable(self):
         mcmeta = FakeMcmeta({
             "block/x": {

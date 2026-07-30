@@ -59,4 +59,6 @@ def _resolve_texture_ref(ref, textures, depth=0):
         return _resolve_texture_ref(textures[var], textures, depth + 1)
     if isinstance(ref, str):
         return ref.split(":")[-1]
+    if isinstance(ref, dict):
+        return _resolve_texture_ref(ref["sprite"], textures, depth + 1)
     return ref
