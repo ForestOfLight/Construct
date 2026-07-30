@@ -87,6 +87,30 @@ class BuildBlockModelsTest(unittest.TestCase):
         block_models = build_block_models(mcmeta, b2j, atlas)
         self.assertEqual(block_models["minecraft:unknown_block[]"], WHITE_CUBE_FACES)
 
+    def test_white_cube_fallback_faces_are_flagged_as_missing(self):
+        # the flag is what tells the renderer to draw see-through blue rather
+        # than a solid white quad indistinguishable from a real blank block
+        mcmeta = FakeMcmeta(blockstates={}, models={})
+        atlas = FakeAtlas()
+        b2j = {"minecraft:unknown_block[]": "minecraft:unknown_block"}
+        block_models = build_block_models(mcmeta, b2j, atlas)
+        for face in block_models["minecraft:unknown_block[]"]:
+            self.assertTrue(face["missing"])
+
+    def test_resolvable_block_faces_are_not_flagged_as_missing(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"stone": {"variants": {"": {"model": "block/stone"}}}},
+            models={"block/stone": {"textures": {}, "elements": [{
+                "from": [0, 0, 0], "to": [16, 16, 16],
+                "faces": {"up": {"texture": "block/stone"}},
+            }]}},
+        )
+        atlas = FakeAtlas()
+        b2j = {"minecraft:stone[]": "minecraft:stone"}
+        block_models = build_block_models(mcmeta, b2j, atlas)
+        for face in block_models["minecraft:stone[]"]:
+            self.assertNotIn("missing", face)
+
     def test_multi_face_element_across_multiple_axes_all_get_added_to_atlas(self):
         mcmeta = FakeMcmeta(
             blockstates={"stone": {"variants": {"": {"model": "block/stone"}}}},
@@ -334,11 +358,23 @@ class ProjectUvTest(unittest.TestCase):
         for value in result["k"][0]["uv"].values():
             self.assertNotIsInstance(value, float)
 
-    def test_missing_texture_falls_back_to_white_rect(self):
+    def test_missing_texture_falls_back_to_white_rect_and_is_flagged(self):
         block_models = {"k": [self._face("block/nonexistent")]}
         atlas_manifest = {"white": {"x": 0, "y": 0, "w": 16, "h": 16}}
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 0, "y": 0, "w": 16, "h": 16})
+        # geometry resolved but the texture didn't, so this face alone is
+        # unresolved - the rest of the block still draws normally
+        self.assertTrue(result["k"][0]["missing"])
+
+    def test_a_face_whose_texture_packed_fine_is_not_flagged_missing(self):
+        block_models = {"k": [self._face("block/stone")]}
+        atlas_manifest = {
+            "block/stone": {"x": 10, "y": 20, "w": 16, "h": 16},
+            "white": {"x": 0, "y": 0, "w": 16, "h": 16},
+        }
+        result = project_uv(block_models, atlas_manifest)
+        self.assertNotIn("missing", result["k"][0])
 
     def test_multiple_faces_across_multiple_blocks_each_project_independently(self):
         block_models = {
@@ -431,6 +467,19 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
         self.assertEqual(result["a"], [0, 1])
         for ref in result["a"]:
             self.assertIsInstance(ref, int)
+
+    def test_a_missing_face_never_shares_a_face_type_with_an_identical_intact_one(self):
+        # both draw the same white quad, so every value they dedup on matches;
+        # only the flag separates them, and merging would make an unresolved
+        # face render as a normal one (or the reverse)
+        block_models = {
+            "a": [self._face([8, 16, 8])],
+            "b": [dict(self._face([8, 16, 8]), missing=True)],
+        }
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertNotEqual(result["a"][0], result["b"][0])
+        self.assertNotIn("missing", face_types[result["a"][0]])
+        self.assertTrue(face_types[result["b"][0]]["missing"])
 
     def test_face_types_table_reproduces_original_face_descriptor(self):
         block_models = {

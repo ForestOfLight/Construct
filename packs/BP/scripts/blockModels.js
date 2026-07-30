@@ -2,6 +2,7 @@ export const blockFaceTypes = [
    {
       "center" : [ 8, 16, 8 ],
       "height" : 16,
+      "missing" : true,
       "normal" : [ 0, 1, 0 ],
       "roll" : 180,
       "tintindex" : -1,
@@ -16,6 +17,7 @@ export const blockFaceTypes = [
    {
       "center" : [ 8, 0, 8 ],
       "height" : 16,
+      "missing" : true,
       "normal" : [ 0, -1, 0 ],
       "roll" : 0,
       "tintindex" : -1,
@@ -30,6 +32,7 @@ export const blockFaceTypes = [
    {
       "center" : [ 8, 8, 0 ],
       "height" : 16,
+      "missing" : true,
       "normal" : [ 0, 0, -1 ],
       "roll" : 0,
       "tintindex" : -1,
@@ -44,6 +47,7 @@ export const blockFaceTypes = [
    {
       "center" : [ 8, 8, 16 ],
       "height" : 16,
+      "missing" : true,
       "normal" : [ 0, 0, 1 ],
       "roll" : 0,
       "tintindex" : -1,
@@ -58,6 +62,7 @@ export const blockFaceTypes = [
    {
       "center" : [ 16, 8, 8 ],
       "height" : 16,
+      "missing" : true,
       "normal" : [ 1, 0, 0 ],
       "roll" : 0,
       "tintindex" : -1,
@@ -72,6 +77,7 @@ export const blockFaceTypes = [
    {
       "center" : [ 0, 8, 8 ],
       "height" : 16,
+      "missing" : true,
       "normal" : [ -1, 0, 0 ],
       "roll" : 0,
       "tintindex" : -1,

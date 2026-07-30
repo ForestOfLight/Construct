@@ -1,10 +1,18 @@
 import { MolangVariableMap } from "@minecraft/server";
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { Vector } from "../../../lib/Vector";
-import { BlockModelLookup, WHITE_CUBE_FACES } from "../BlockModelLookup";
+import { BlockModelLookup, PLAIN_CUBE_FACES } from "../BlockModelLookup";
 import { DEBUG_CONFIG } from "../../../consts";
 
 const BLOCK_CENTER = new Vector(0.5, 0.5, 0.5);
+
+// How a face the pipeline couldn't resolve is drawn: a see-through blue quad
+// rather than the block's own preview color. Solid white read as a real
+// block with a blank texture, which hid broken model/texture data instead of
+// advertising it; a translucent blue cube is unmistakable, and being
+// see-through also keeps it from hiding whatever is behind it.
+const MISSING_FACE_RGBA = { red: 0, green: 0, blue: 1, alpha: 0.2 };
+const MISSING_FACE_MATERIAL = "blend";
 
 export class BlockPreviewVerificationLevelParticleRender {
     lifetimeSeconds = 0;
@@ -38,13 +46,15 @@ export class BlockPreviewVerificationLevelParticleRender {
     // block, so a plain cube is enough and skips the model lookup entirely.
     #getFaces() {
         if (this.verificationLevel !== BlockVerificationLevel.Missing)
-            return WHITE_CUBE_FACES;
+            return PLAIN_CUBE_FACES;
         return BlockModelLookup.getFaces(this.targetPermutation);
     }
 
     #renderFace(face, rgb, material, sizeScalar) {
-        if (face.isMissing)
-            material = "blend";
+        if (face.missing) {
+            material = MISSING_FACE_MATERIAL;
+            rgb = MISSING_FACE_RGBA;
+        }
         if (face.width === 0 || face.height === 0)
             return;
         const faceCenter = new Vector(face.center[0] / 16, face.center[1] / 16, face.center[2] / 16);

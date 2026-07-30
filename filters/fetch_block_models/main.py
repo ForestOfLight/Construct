@@ -71,13 +71,18 @@ _ROLL_HANDEDNESS = -1
 # swatch is a solid color, so no roll would look any different today - these
 # are correct rather than convenient so that swapping in a non-uniform
 # fallback texture later doesn't quietly render it sideways.
+#
+# 'missing' marks a face the pipeline could not resolve, as opposed to one it
+# resolved to a genuinely white texture. The renderer draws these see-through
+# blue instead of solid, so a block the data failed on is obvious on sight
+# rather than looking like a legitimately blank block.
 WHITE_CUBE_FACES = [
-    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 180, "tintindex": -1},
-    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
-    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
-    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
-    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
-    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 180, "tintindex": -1, "missing": True},
+    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
+    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
+    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
+    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
+    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
 ]
 
 def _derive_width_height(extent, uv_u, uv_v):
@@ -267,7 +272,13 @@ def project_uv(block_models, atlas_manifest):
             texture = face.pop("texture")
             u0, v0, u1, v1 = (Decimal(c) for c in face.pop("uv"))
             u_min, v_min = min(u0, u1), min(v0, v1)
-            rect = atlas_manifest.get(texture, white_rect)
+            rect = atlas_manifest.get(texture)
+            if rect is None:
+                # a face whose texture never made it into the atlas has
+                # nothing to draw; flag it so the renderer shows it as
+                # unresolved rather than silently drawing a blank white quad
+                rect = white_rect
+                face["missing"] = True
             face["uv"] = {
                 "x": rect["x"] + (u_min / 16) * rect["w"],
                 "y": rect["y"] + (v_min / 16) * rect["h"],
@@ -289,14 +300,15 @@ def build_face_types_and_refs(block_models):
         refs = []
         for face in faces:
             uv = face["uv"]
+            missing = face.get("missing", False)
             key = (
                 tuple(face["center"]), face["width"], face["height"], tuple(face["normal"]),
                 face["roll"], face["tintindex"],
-                uv["x"], uv["y"], uv["w"], uv["h"],
+                uv["x"], uv["y"], uv["w"], uv["h"], missing,
             )
             if key not in face_type_index:
                 face_type_index[key] = len(face_types)
-                face_types.append({
+                descriptor = {
                     "center": face["center"],
                     "width": face["width"],
                     "height": face["height"],
@@ -304,7 +316,12 @@ def build_face_types_and_refs(block_models):
                     "roll": face["roll"],
                     "tintindex": face["tintindex"],
                     "uv": uv,
-                })
+                }
+                # only carried when true - it's rare, and every face-type
+                # descriptor is written out literally
+                if missing:
+                    descriptor["missing"] = True
+                face_types.append(descriptor)
             refs.append(face_type_index[key])
         block_models[bedrock_state] = refs
     return face_types, block_models

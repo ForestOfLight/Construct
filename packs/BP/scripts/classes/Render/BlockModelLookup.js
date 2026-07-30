@@ -1,17 +1,25 @@
 import { blockFaceTypes, blockModels } from "../../blockModels";
 import { whiteUvRect } from "../../blockAtlas";
 
+// A plain full cube, used to outline a block that is already visible in the
+// world. Nothing is wrong with these faces - they're a deliberate shape, so
+// they carry no `missing` flag and are drawn in the verification level's own
+// color.
+export const PLAIN_CUBE_FACES = [
+    { center: [8, 16, 8], width: 16, height: 16, normal: [0, 1, 0], roll: 180, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 0, 8], width: 16, height: 16, normal: [0, -1, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 8, 0], width: 16, height: 16, normal: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 8, 16], width: 16, height: 16, normal: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [16, 8, 8], width: 16, height: 16, normal: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [0, 8, 8], width: 16, height: 16, normal: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+];
+
 // Mirrors filters/fetch_block_models/main.py's WHITE_CUBE_FACES: used when a
 // permutation has no entry in blockModels at all (e.g. a block id absent
-// from the Bedrock<->Java mapping data the pipeline was built from).
-export const WHITE_CUBE_FACES = [
-    { isMissing: true, center: [8, 16, 8], width: 16, height: 16, normal: [0, 1, 0], roll: 180, tintindex: -1, uv: whiteUvRect },
-    { isMissing: true, center: [8, 0, 8], width: 16, height: 16, normal: [0, -1, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { isMissing: true, center: [8, 8, 0], width: 16, height: 16, normal: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { isMissing: true, center: [8, 8, 16], width: 16, height: 16, normal: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { isMissing: true, center: [16, 8, 8], width: 16, height: 16, normal: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { isMissing: true, center: [0, 8, 8], width: 16, height: 16, normal: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-];
+// from the Bedrock<->Java mapping data the pipeline was built from). The
+// pipeline's own fallback marks its faces the same way, so both routes to
+// "we have no model for this" render identically.
+export const UNKNOWN_CUBE_FACES = PLAIN_CUBE_FACES.map((face) => ({ ...face, missing: true }));
 
 let blockIdIndex;
 
@@ -59,7 +67,7 @@ export class BlockModelLookup {
         const exactKey = BlockModelLookup.#permutationKey(permutation);
         const refs = blockModels[exactKey] ?? BlockModelLookup.#findPartialMatch(permutation);
         if (!refs)
-            return WHITE_CUBE_FACES;
+            return UNKNOWN_CUBE_FACES;
         return refs.map((index) => blockFaceTypes[index]);
     }
 
