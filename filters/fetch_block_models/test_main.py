@@ -1,6 +1,6 @@
 import unittest
 
-from main import build_block_models, build_face_types_and_refs, project_uv, _axis_from_rect, WHITE_CUBE_FACES
+from main import build_block_models, build_face_types_and_refs, project_uv, WHITE_CUBE_FACES
 
 
 class FakeMcmeta:
@@ -29,7 +29,7 @@ class FakeAtlas:
 
 
 class BuildBlockModelsTest(unittest.TestCase):
-    def test_resolvable_block_produces_faces_with_axis(self):
+    def test_resolvable_block_produces_faces_with_geometry(self):
         mcmeta = FakeMcmeta(
             blockstates={"stone": {"variants": {"": {"model": "block/stone"}}}},
             models={"block/stone": {"textures": {}, "elements": [{
@@ -42,14 +42,15 @@ class BuildBlockModelsTest(unittest.TestCase):
         block_models = build_block_models(mcmeta, b2j, atlas)
         faces = block_models["minecraft:stone[]"]
         self.assertEqual(len(faces), 1)
-        self.assertEqual(faces[0]["axis"], "xz")
-        # the face's rect is collapsed onto its own plane (y=16), not the
+        # the face's geometry is collapsed onto its own plane (y=16), not the
         # element's full 3D bounding box
-        self.assertEqual(faces[0]["from"], [0, 16, 0])
-        self.assertEqual(faces[0]["to"], [16, 16, 16])
+        self.assertEqual(faces[0]["center"], [8, 16, 8])
+        self.assertEqual(faces[0]["width"], 16)
+        self.assertEqual(faces[0]["height"], 16)
+        self.assertEqual(faces[0]["normal"], [0, 1, 0])
         self.assertIn("block/stone", atlas.added)
 
-    def test_rotated_block_gets_axis_matching_its_rotated_geometry(self):
+    def test_rotated_block_gets_normal_matching_its_rotated_geometry(self):
         mcmeta = FakeMcmeta(
             blockstates={"oak_log": {"variants": {
                 "axis=x": {"model": "block/oak_log_horizontal", "y": 90},
@@ -64,11 +65,10 @@ class BuildBlockModelsTest(unittest.TestCase):
         block_models = build_block_models(mcmeta, b2j, atlas)
         faces = block_models["minecraft:log[axis=x]"]
         self.assertEqual(len(faces), 1)
-        # a 90-degree y-rotation moves the "north" face onto the x=16 plane,
-        # so its render axis must become "yz", not stay "xy"
-        self.assertEqual(faces[0]["axis"], "yz")
-        self.assertEqual(faces[0]["from"], [16, 0, 0])
-        self.assertEqual(faces[0]["to"], [16, 16, 16])
+        # a 90-degree y-rotation moves the "north" face onto the x=16 (east)
+        # plane, so its normal must become (1,0,0), not stay (0,0,-1)
+        self.assertEqual(faces[0]["normal"], [1, 0, 0])
+        self.assertEqual(faces[0]["center"], [16, 8, 8])
 
     def test_unresolvable_block_falls_back_to_white_cube(self):
         mcmeta = FakeMcmeta(blockstates={}, models={})
@@ -98,7 +98,10 @@ class BuildBlockModelsTest(unittest.TestCase):
         faces = block_models["minecraft:stone[]"]
         self.assertEqual(len(faces), 6)
         # faces preserve the source dict's insertion order: up, down, north, south, east, west
-        self.assertEqual([f["axis"] for f in faces], ["xz", "xz", "xy", "xy", "yz", "yz"])
+        self.assertEqual(
+            [f["normal"] for f in faces],
+            [[0, 1, 0], [0, -1, 0], [0, 0, -1], [0, 0, 1], [1, 0, 0], [-1, 0, 0]],
+        )
         self.assertEqual(faces[0]["texture"], "block/stone_top")
         self.assertEqual(faces[1]["texture"], "block/stone_bottom")
         self.assertCountEqual(
@@ -131,32 +134,30 @@ class BuildBlockModelsTest(unittest.TestCase):
         faces = block_models["minecraft:log[axis=x]"]
         self.assertEqual(len(faces), 1)
         self.assertEqual(faces[0]["texture"], "block/oak_log")
-        self.assertEqual(faces[0]["axis"], "xy")
+        self.assertEqual(faces[0]["normal"], [0, 0, -1])
 
 
 class ProjectUvTest(unittest.TestCase):
+    def _face(self, texture):
+        return {"texture": texture, "center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0]}
+
     def test_replaces_texture_name_with_atlas_pixel_rect(self):
-        block_models = {"k": [{"texture": "block/stone", "from": [0, 0, 0], "to": [16, 16, 16], "axis": "xz"}]}
+        block_models = {"k": [self._face("block/stone")]}
         atlas_manifest = {"block/stone": {"x": 10, "y": 20, "w": 16, "h": 16}}
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 10, "y": 20, "w": 16, "h": 16})
         self.assertNotIn("texture", result["k"][0])
 
     def test_missing_texture_falls_back_to_white_rect(self):
-        block_models = {"k": [{"texture": "block/nonexistent", "from": [0, 0, 0], "to": [16, 16, 16], "axis": "xz"}]}
+        block_models = {"k": [self._face("block/nonexistent")]}
         atlas_manifest = {"white": {"x": 0, "y": 0, "w": 16, "h": 16}}
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 0, "y": 0, "w": 16, "h": 16})
 
     def test_multiple_faces_across_multiple_blocks_each_project_independently(self):
         block_models = {
-            "a": [
-                {"texture": "block/stone", "from": [0, 0, 0], "to": [16, 16, 16], "axis": "xz"},
-                {"texture": "block/dirt", "from": [0, 0, 0], "to": [16, 16, 16], "axis": "xy"},
-            ],
-            "b": [
-                {"texture": "block/dirt", "from": [0, 0, 0], "to": [16, 16, 16], "axis": "yz"},
-            ],
+            "a": [self._face("block/stone"), self._face("block/dirt")],
+            "b": [self._face("block/dirt")],
         }
         atlas_manifest = {
             "block/stone": {"x": 0, "y": 0, "w": 16, "h": 16},
@@ -172,16 +173,16 @@ class ProjectUvTest(unittest.TestCase):
 
 
 class BuildFaceTypesAndRefsTest(unittest.TestCase):
-    def _face(self, from_, to, axis="xz", rotation=0, tintindex=-1, uv=None):
+    def _face(self, center, width=16, height=16, normal=None, rotation=0, tintindex=-1, uv=None):
         return {
-            "from": from_, "to": to, "axis": axis, "rotation": rotation,
-            "tintindex": tintindex, "uv": uv or {"x": 0, "y": 0, "w": 16, "h": 16},
+            "center": center, "width": width, "height": height, "normal": normal or [0, 1, 0],
+            "rotation": rotation, "tintindex": tintindex, "uv": uv or {"x": 0, "y": 0, "w": 16, "h": 16},
         }
 
     def test_identical_full_descriptor_across_different_blocks_gets_same_index(self):
         block_models = {
-            "a": [self._face([0, 0, 0], [16, 16, 16])],
-            "b": [self._face([0, 0, 0], [16, 16, 16])],
+            "a": [self._face([8, 16, 8])],
+            "b": [self._face([8, 16, 8])],
         }
         face_types, result = build_face_types_and_refs(block_models)
         self.assertEqual(result["a"][0], result["b"][0])
@@ -189,8 +190,8 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
 
     def test_different_shapes_get_different_indices(self):
         block_models = {
-            "a": [self._face([0, 0, 0], [16, 16, 16])],
-            "b": [self._face([0, 0, 0], [8, 16, 16])],
+            "a": [self._face([8, 16, 8])],
+            "b": [self._face([4, 16, 8], width=8)],
         }
         face_types, result = build_face_types_and_refs(block_models)
         self.assertNotEqual(result["a"][0], result["b"][0])
@@ -198,8 +199,8 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
 
     def test_different_uv_gets_different_indices_even_with_same_shape(self):
         block_models = {
-            "a": [self._face([0, 0, 0], [16, 16, 16], uv={"x": 0, "y": 0, "w": 16, "h": 16})],
-            "b": [self._face([0, 0, 0], [16, 16, 16], uv={"x": 16, "y": 0, "w": 16, "h": 16})],
+            "a": [self._face([8, 16, 8], uv={"x": 0, "y": 0, "w": 16, "h": 16})],
+            "b": [self._face([8, 16, 8], uv={"x": 16, "y": 0, "w": 16, "h": 16})],
         }
         face_types, result = build_face_types_and_refs(block_models)
         self.assertNotEqual(result["a"][0], result["b"][0])
@@ -207,7 +208,7 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
 
     def test_block_face_lists_become_flat_lists_of_plain_integers(self):
         block_models = {
-            "a": [self._face([0, 0, 0], [16, 16, 16]), self._face([0, 0, 0], [8, 16, 16])],
+            "a": [self._face([8, 16, 8]), self._face([4, 16, 8], width=8)],
         }
         _face_types, result = build_face_types_and_refs(block_models)
         self.assertEqual(result["a"], [0, 1])
@@ -217,25 +218,19 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
     def test_face_types_table_reproduces_original_face_descriptor(self):
         block_models = {
             "a": [self._face(
-                [1, 2, 3], [4, 5, 6], axis="xy", rotation=90, tintindex=0,
+                [1, 2, 3], width=3, height=4, normal=[1, 0, 0], rotation=90, tintindex=0,
                 uv={"x": 1, "y": 2, "w": 3, "h": 4},
             )],
         }
         face_types, result = build_face_types_and_refs(block_models)
         face_type = face_types[result["a"][0]]
-        self.assertEqual(face_type["from"], [1, 2, 3])
-        self.assertEqual(face_type["to"], [4, 5, 6])
-        self.assertEqual(face_type["axis"], "xy")
+        self.assertEqual(face_type["center"], [1, 2, 3])
+        self.assertEqual(face_type["width"], 3)
+        self.assertEqual(face_type["height"], 4)
+        self.assertEqual(face_type["normal"], [1, 0, 0])
         self.assertEqual(face_type["rotation"], 90)
         self.assertEqual(face_type["tintindex"], 0)
         self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
-
-
-class AxisFromRectTest(unittest.TestCase):
-    def test_derives_plane_from_which_coordinate_is_constant(self):
-        self.assertEqual(_axis_from_rect([0, 16, 0], [16, 16, 16]), "xz")  # up/down
-        self.assertEqual(_axis_from_rect([0, 0, 0], [16, 16, 0]), "xy")  # north/south
-        self.assertEqual(_axis_from_rect([16, 0, 0], [16, 16, 16]), "yz")  # east/west
 
 
 if __name__ == "__main__":

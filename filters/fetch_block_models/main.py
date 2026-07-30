@@ -25,23 +25,13 @@ from texture_atlas import TextureAtlas
 
 WHITE_TEXTURE = "white"
 WHITE_CUBE_FACES = [
-    {"from": [0, 16, 0], "to": [16, 16, 16], "axis": "xz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"from": [0, 0, 0], "to": [16, 0, 16], "axis": "xz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"from": [0, 0, 0], "to": [16, 16, 0], "axis": "xy", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"from": [0, 0, 16], "to": [16, 16, 16], "axis": "xy", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"from": [16, 0, 0], "to": [16, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
-    {"from": [0, 0, 0], "to": [0, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
 ]
-
-def _axis_from_rect(from_pt, to_pt):
-    """Derives which plane a face's flat rect lies on from its own geometry
-    (rather than trusting the original Java face name), since block rotation
-    can move a face onto a different axis than its name suggests."""
-    if from_pt[0] == to_pt[0]:
-        return "yz"
-    if from_pt[1] == to_pt[1]:
-        return "xz"
-    return "xy"
 
 
 def root_dir():
@@ -69,9 +59,10 @@ def build_block_models(mcmeta, b2j, atlas):
             for face in element["faces"].values():
                 atlas.add(mcmeta, face["texture"])
                 faces.append({
-                    "from": face["from"],
-                    "to": face["to"],
-                    "axis": _axis_from_rect(face["from"], face["to"]),
+                    "center": face["center"],
+                    "width": face["width"],
+                    "height": face["height"],
+                    "normal": face["normal"],
                     "texture": face["texture"],
                     "rotation": face["rotation"],
                     "tintindex": face["tintindex"],
@@ -104,16 +95,17 @@ def build_face_types_and_refs(block_models):
         for face in faces:
             uv = face["uv"]
             key = (
-                tuple(face["from"]), tuple(face["to"]), face["axis"],
+                tuple(face["center"]), face["width"], face["height"], tuple(face["normal"]),
                 face["rotation"], face["tintindex"],
                 uv["x"], uv["y"], uv["w"], uv["h"],
             )
             if key not in face_type_index:
                 face_type_index[key] = len(face_types)
                 face_types.append({
-                    "from": face["from"],
-                    "to": face["to"],
-                    "axis": face["axis"],
+                    "center": face["center"],
+                    "width": face["width"],
+                    "height": face["height"],
+                    "normal": face["normal"],
                     "rotation": face["rotation"],
                     "tintindex": face["tintindex"],
                     "uv": uv,

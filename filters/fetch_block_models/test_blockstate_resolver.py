@@ -20,7 +20,8 @@ class FakeMcmeta:
         return self._models[model_id]
 
 
-_FLAT_ELEMENT = [{"from": [0, 0, 0], "to": [16, 16, 16], "faces": {}}]
+_FLAT_ELEMENT = [{"from": [0, 0, 0], "to": [16, 16, 16], "faces": {}}]  # raw model fixture
+_FLAT_RESOLVED = [{"faces": {}}]  # what resolve_model turns a no-faces element into
 
 
 class ResolveJavaStateTest(unittest.TestCase):
@@ -30,7 +31,7 @@ class ResolveJavaStateTest(unittest.TestCase):
             models={"block/stone": {"textures": {}, "elements": _FLAT_ELEMENT}},
         )
         elements = resolve_java_state(mcmeta, "minecraft:stone", {})
-        self.assertEqual(elements, _FLAT_ELEMENT)
+        self.assertEqual(elements, _FLAT_RESOLVED)
 
     def test_variant_matches_exact_sorted_property_key(self):
         mcmeta = FakeMcmeta(
@@ -84,7 +85,7 @@ class ResolveJavaStateTest(unittest.TestCase):
         elements = resolve_java_state(
             mcmeta, "minecraft:vine", {"north": "false", "south": "true"}
         )
-        self.assertEqual(elements, _FLAT_ELEMENT)
+        self.assertEqual(elements, _FLAT_RESOLVED)
 
     def test_multipart_or_condition_excluded_when_no_sub_condition_matches(self):
         mcmeta = FakeMcmeta(
@@ -110,7 +111,7 @@ class ResolveJavaStateTest(unittest.TestCase):
         elements = resolve_java_state(
             mcmeta, "minecraft:vine", {"north": "true", "south": "true"}
         )
-        self.assertEqual(elements, _FLAT_ELEMENT)
+        self.assertEqual(elements, _FLAT_RESOLVED)
 
     def test_multipart_explicit_and_condition_excluded_when_one_sub_condition_fails(self):
         mcmeta = FakeMcmeta(
@@ -157,14 +158,15 @@ class ResolveJavaStateTest(unittest.TestCase):
             ]}},
         )
         elements = resolve_java_state(mcmeta, "minecraft:oak_log", {"axis": "x"})
-        # the 90-degree y-rotation moves the "north" face's rect onto the
-        # x=16 plane (uv/texture/rotation/cullface/tintindex pass through unchanged);
-        # verified against real minecraft:furnace data, whose facing=east variant
+        # the 90-degree y-rotation moves the "north" face's center/normal onto
+        # the x=16 (east) plane (uv/texture/rotation/cullface/tintindex pass
+        # through unchanged, width/height are rotation-invariant); verified
+        # against real minecraft:furnace data, whose facing=east variant
         # (y:90) must move its front face (modeled on "north") onto the east (+x) plane
         self.assertEqual(
             elements[0]["faces"]["north"],
             {
-                "from": [16, 0, 0], "to": [16, 16, 16],
+                "center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0],
                 "uv": [0, 0, 16, 16], "texture": "block/oak_log", "rotation": 0,
                 "cullface": "north", "tintindex": -1,
             },
@@ -174,20 +176,22 @@ class ResolveJavaStateTest(unittest.TestCase):
         mcmeta = FakeMcmeta(blockstates={}, models={})
         self.assertIsNone(resolve_java_state(mcmeta, "minecraft:unknown_block", {}))
 
-    def test_rotation_moves_element_corners(self):
+    def test_rotation_moves_face_center_and_normal(self):
         mcmeta = FakeMcmeta(
             blockstates={"oak_log": {"variants": {
                 "axis=x": {"model": "block/half_slab", "y": 90},
             }}},
             models={"block/half_slab": {"textures": {}, "elements": [
-                {"from": [0, 0, 0], "to": [16, 8, 16], "faces": {}},
+                {"from": [0, 0, 0], "to": [16, 8, 16], "faces": {"up": {"texture": "block/x"}}},
             ]}},
         )
         elements = resolve_java_state(mcmeta, "minecraft:oak_log", {"axis": "x"})
+        face = elements[0]["faces"]["up"]
         # a 90-degree y-rotation about the block center leaves a full-width,
-        # half-height element's from/to unchanged (it's symmetric on x/z)
-        self.assertEqual(elements[0]["from"], [0, 0, 0])
-        self.assertEqual(elements[0]["to"], [16, 8, 16])
+        # half-height element's "up" face center/normal unchanged (it's
+        # symmetric on x/z, and "up" doesn't move under a y-axis spin)
+        self.assertEqual(face["center"], [8, 8, 8])
+        self.assertEqual(face["normal"], [0, 1, 0])
 
 
 if __name__ == "__main__":

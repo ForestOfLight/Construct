@@ -2,9 +2,9 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "construct:block_face_xz_opaque",
+			"identifier": "construct:block_face_blend",
 			"basic_render_parameters": {
-				"material": "particles_opaque",
+				"material": "particles_blend",
 				"texture": "textures/particle/vanilla_block_atlas"
 			}
 		},
@@ -24,7 +24,15 @@
 					"variable.width",
 					"variable.height"
 				],
-				"facing_camera_mode": "emitter_transform_xz",
+				"facing_camera_mode": "direction_z",
+				"direction": {
+					"mode": "custom",
+					"custom_direction": [
+						"variable.nx",
+						"variable.ny",
+						"variable.nz"
+					]
+				},
 				"uv": {
 					"texture_width": 1024,
 					"texture_height": 1024,

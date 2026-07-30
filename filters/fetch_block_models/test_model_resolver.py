@@ -32,9 +32,12 @@ class ResolveModelTest(unittest.TestCase):
         })
         elements = resolve_model(mcmeta, "block/stone")
         self.assertEqual(len(elements), 1)
-        self.assertEqual(elements[0]["from"], [0, 0, 0])
-        self.assertEqual(elements[0]["to"], [16, 16, 16])
-        self.assertEqual(elements[0]["faces"]["up"]["texture"], "block/stone")
+        face = elements[0]["faces"]["up"]
+        self.assertEqual(face["center"], [8, 16, 8])
+        self.assertEqual(face["width"], 16)
+        self.assertEqual(face["height"], 16)
+        self.assertEqual(face["normal"], [0, 1, 0])
+        self.assertEqual(face["texture"], "block/stone")
 
     def test_child_elements_override_parent_elements(self):
         mcmeta = FakeMcmeta({
@@ -53,8 +56,11 @@ class ResolveModelTest(unittest.TestCase):
         })
         elements = resolve_model(mcmeta, "block/child")
         self.assertEqual(len(elements), 1)
-        self.assertEqual(elements[0]["from"], [4, 0, 4])
-        self.assertEqual(elements[0]["faces"]["up"]["texture"], "block/child_tex")
+        face = elements[0]["faces"]["up"]
+        self.assertEqual(face["center"], [8, 8, 8])
+        self.assertEqual(face["width"], 8)
+        self.assertEqual(face["height"], 8)
+        self.assertEqual(face["texture"], "block/child_tex")
 
     def test_face_defaults_for_missing_optional_fields(self):
         mcmeta = FakeMcmeta({
@@ -148,6 +154,63 @@ class ResolveModelTest(unittest.TestCase):
         })
         with self.assertRaises(KeyError):
             resolve_model(mcmeta, "block/x")
+
+    def test_each_face_gets_its_own_plane_not_the_whole_element_box(self):
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/stone"},
+                "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {
+                        "up": {"texture": "#all"}, "down": {"texture": "#all"},
+                        "north": {"texture": "#all"}, "south": {"texture": "#all"},
+                        "west": {"texture": "#all"}, "east": {"texture": "#all"},
+                    },
+                }],
+            },
+        })
+        faces = resolve_model(mcmeta, "block/x")[0]["faces"]
+        self.assertEqual(faces["up"]["center"], [8, 16, 8])
+        self.assertEqual(faces["up"]["normal"], [0, 1, 0])
+        self.assertEqual(faces["down"]["center"], [8, 0, 8])
+        self.assertEqual(faces["down"]["normal"], [0, -1, 0])
+        self.assertEqual(faces["north"]["center"], [8, 8, 0])
+        self.assertEqual(faces["north"]["normal"], [0, 0, -1])
+        self.assertEqual(faces["south"]["center"], [8, 8, 16])
+        self.assertEqual(faces["south"]["normal"], [0, 0, 1])
+        self.assertEqual(faces["west"]["center"], [0, 8, 8])
+        self.assertEqual(faces["west"]["normal"], [-1, 0, 0])
+        self.assertEqual(faces["east"]["center"], [16, 8, 8])
+        self.assertEqual(faces["east"]["normal"], [1, 0, 0])
+
+    def test_element_rotation_turns_a_diagonal_cross_quad_to_a_45_degree_normal(self):
+        # Mirrors minecraft:block/cross (used by short_grass etc): a vertical
+        # quad rotated 45 degrees around the block center so two of them form
+        # an "X" shape, instead of staying axis-aligned.
+        from decimal import Decimal
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/short_grass"},
+                "elements": [{
+                    # real pipeline data is parsed with parse_float=Decimal
+                    # (see mcmeta_source.py), so 15.2 - 0.8 is exact
+                    "from": [Decimal("0.8"), 0, 8], "to": [Decimal("15.2"), 16, 8],
+                    "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45, "rescale": True},
+                    "faces": {"north": {"texture": "#all"}},
+                }],
+            },
+        })
+        face = resolve_model(mcmeta, "block/x")[0]["faces"]["north"]
+        # center stays at the block's horizontal middle (rotation origin == face center)
+        self.assertEqual(face["center"], [8, 8, 8])
+        # width/height are unaffected by rotation (it's a rigid transform)
+        self.assertEqual(face["width"], Decimal("14.4"))
+        self.assertEqual(face["height"], 16)
+        # the normal, originally due north (0,0,-1), is now rotated 45 degrees
+        import math
+        self.assertAlmostEqual(float(face["normal"][0]), math.sqrt(2) / 2, places=5)
+        self.assertEqual(face["normal"][1], 0)
+        self.assertAlmostEqual(float(face["normal"][2]), -math.sqrt(2) / 2, places=5)
 
 
 if __name__ == "__main__":

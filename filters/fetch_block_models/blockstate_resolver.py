@@ -1,16 +1,16 @@
 """Resolves a specific Java block+properties combination to model elements,
 using misode/mcmeta blockstate JSON (variants or multipart)."""
 
-import math
-
 from model_resolver import resolve_model
+from rotation import rotate_point, rotate_vector
 
 BLOCKSTATE_PATH_TMPL = "assets/minecraft/blockstates/{name}.json"
+_ORIGIN = [8, 8, 8]
 
 
 def resolve_java_state(mcmeta, java_block_id, properties):
-    """Returns a flat list of resolved elements (each with from/to/faces),
-    or None if the block has no blockstate data at all."""
+    """Returns a flat list of resolved elements (each a {'faces': {...}}
+    dict), or None if the block has no blockstate data at all."""
     name = java_block_id.split(":")[-1]
     path = BLOCKSTATE_PATH_TMPL.format(name=name)
     if not mcmeta.exists(path):
@@ -72,47 +72,25 @@ def _apply_model_entry(mcmeta, entry):
 
 
 def _rotate_element(element, x_rot, y_rot):
-    """Rotates a cuboid element's from/to around the block center (8,8,8) by
-    x_rot then y_rot degrees (Java model rotations are always multiples of 90).
-    Also rotates each face's own flat rect - a 90-degree rotation moves a face
-    onto a different axis (e.g. what was 'north' can end up facing 'west'),
-    so the face's from/to (which determines its render axis) must rotate too."""
-    from_pt = _rotate_point(element["from"], x_rot, y_rot)
-    to_pt = _rotate_point(element["to"], x_rot, y_rot)
-    new_from = [min(a, b) for a, b in zip(from_pt, to_pt)]
-    new_to = [max(a, b) for a, b in zip(from_pt, to_pt)]
+    """Rotates every face's center/normal around the block center (8,8,8) by
+    x_rot then y_rot degrees (Java model rotations are always multiples of
+    90). A 90-degree rotation can move a face onto a different world axis
+    (e.g. what was 'north' can end up facing 'east'), so the face's normal -
+    which determines its render direction - must rotate too, not just its
+    position."""
     new_faces = {
-        face_name: _rotate_face_rect(face, x_rot, y_rot)
+        face_name: _rotate_face(face, x_rot, y_rot)
         for face_name, face in element["faces"].items()
     }
-    return {"from": new_from, "to": new_to, "faces": new_faces}
+    return {"faces": new_faces}
 
 
-def _rotate_face_rect(face, x_rot, y_rot):
-    face_from_pt = _rotate_point(face["from"], x_rot, y_rot)
-    face_to_pt = _rotate_point(face["to"], x_rot, y_rot)
-    return {
-        **face,
-        "from": [min(a, b) for a, b in zip(face_from_pt, face_to_pt)],
-        "to": [max(a, b) for a, b in zip(face_from_pt, face_to_pt)],
-    }
-
-
-def _rotate_point(point, x_rot, y_rot):
-    x, y, z = (p - 8 for p in point)
-    x, y, z = _rotate_axis(x, y, z, "x", x_rot)
-    x, y, z = _rotate_axis(x, y, z, "y", y_rot)
-    return [x + 8, y + 8, z + 8]
-
-
-def _rotate_axis(x, y, z, axis, degrees):
-    """Direction verified against real blockstate data: minecraft:furnace's
-    facing=east variant uses y:90, and its front face (modeled on the
-    unrotated "north" plane) must end up on the east (+x) plane."""
-    rad = math.radians(degrees)
-    cos_r, sin_r = round(math.cos(rad)), round(math.sin(rad))
-    if axis == "x":
-        return x, y * cos_r - z * sin_r, y * sin_r + z * cos_r
-    if axis == "y":
-        return x * cos_r - z * sin_r, y, x * sin_r + z * cos_r
-    return x, y, z
+def _rotate_face(face, x_rot, y_rot):
+    center, normal = face["center"], face["normal"]
+    if x_rot:
+        center = rotate_point(center, _ORIGIN, "x", x_rot)
+        normal = rotate_vector(normal, "x", x_rot)
+    if y_rot:
+        center = rotate_point(center, _ORIGIN, "y", y_rot)
+        normal = rotate_vector(normal, "y", y_rot)
+    return {**face, "center": center, "normal": normal}

@@ -26,38 +26,29 @@ export class BlockPreviewVerificationLevelParticleRender {
     }
 
     #renderFace(face, rgb, material) {
-        const from = new Vector(face.from[0] / 16, face.from[1] / 16, face.from[2] / 16);
-        const to = new Vector(face.to[0] / 16, face.to[1] / 16, face.to[2] / 16);
-        const center = from.add(to).multiply(0.5);
-        const size = { x: Math.abs(to.x - from.x), y: Math.abs(to.y - from.y), z: Math.abs(to.z - from.z) };
-        const [width, height] = this.#faceDimensions(face.axis, size);
-        if (width === 0 || height === 0)
+        if (face.width === 0 || face.height === 0)
             return;
+        const center = new Vector(face.center[0] / 16, face.center[1] / 16, face.center[2] / 16);
 
         const molang = new MolangVariableMap();
         molang.setFloat("lifetime", this.lifetimeSeconds);
-        molang.setFloat("width", width);
-        molang.setFloat("height", height);
+        molang.setFloat("width", (face.width / 16) * 0.5);
+        molang.setFloat("height", (face.height / 16) * 0.5);
+        molang.setFloat("nx", face.normal[0]);
+        molang.setFloat("ny", face.normal[1]);
+        molang.setFloat("nz", face.normal[2]);
         molang.setFloat("u", face.uv.x);
         molang.setFloat("v", face.uv.y);
         molang.setFloat("uv_w", face.uv.w);
         molang.setFloat("uv_h", face.uv.h);
         molang.setColorRGBA("face_color", rgb);
 
-        const particleType = `construct:block_face_${face.axis}_${material}`;
+        const particleType = `construct:block_face_${material}`;
         try {
             this.dimension.spawnParticle(particleType, this.location.add(center), molang);
         } catch {
             /* pass */
         }
-    }
-
-    #faceDimensions(axis, size) {
-        if (axis === "xz")
-            return [size.x, size.z];
-        if (axis === "xy")
-            return [size.x, size.y];
-        return [size.y, size.z]; // yz
     }
 
     #verificationLevelToMaterial() {
