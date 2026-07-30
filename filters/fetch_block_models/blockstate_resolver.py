@@ -73,7 +73,8 @@ def _apply_model_entry(mcmeta, entry):
     x_rot = entry.get("x", 0)
     y_rot = entry.get("y", 0)
     if x_rot or y_rot:
-        elements = [_rotate_element(el, x_rot, y_rot) for el in elements]
+        uvlock = entry.get("uvlock", False)
+        elements = [_rotate_element(el, x_rot, y_rot, uvlock) for el in elements]
     return elements
 
 
@@ -88,33 +89,45 @@ def rotate_elements(elements, x_rot, y_rot):
     return [_rotate_element(el, x_rot, y_rot) for el in elements]
 
 
-def _rotate_element(element, x_rot, y_rot):
-    """Rotates every face's center/extent/normal/uv_extent around the block
-    center (8,8,8) by x_rot then y_rot degrees (Java model rotations are
-    always multiples of 90). A 90-degree rotation can move a face onto a
-    different world axis (e.g. what was 'north' can end up facing 'east', or
-    an X rotation can turn a vertical-normal face into a horizontal one), so
-    the normal (render direction), extent (which axis is width vs height),
-    and uv_extent (which axis the texture's u/v span lands on) must all
-    rotate too, not just position - otherwise the texture ends up sampled
-    with its own width/height transposed relative to the quad's."""
+def _rotate_element(element, x_rot, y_rot, uvlock=False):
+    """Rotates every face's center/extent/normal (and, unless uvlock is set,
+    uv_extent) around the block center (8,8,8) by x_rot then y_rot degrees
+    (Java model rotations are always multiples of 90). A 90-degree rotation
+    can move a face onto a different world axis (e.g. what was 'north' can
+    end up facing 'east', or an X rotation can turn a vertical-normal face
+    into a horizontal one), so the normal (render direction), extent (which
+    axis is width vs height), and uv_extent (which axis the texture's u/v
+    span lands on) must all rotate too, not just position - otherwise the
+    texture ends up sampled with its own width/height transposed relative to
+    the quad's.
+
+    'uvlock: true' (e.g. every non-default-facing stairs variant) is Java's
+    way of saying the opposite: the texture must NOT rotate with the block,
+    staying exactly as authored regardless of orientation. Our code already
+    never rotates the raw uv position, so uv_extent must stay unrotated too
+    here - otherwise its rotated (swapped) width/height gets combined with
+    the still-unrotated raw uv offset in main.py's project_uv, producing a
+    rect that runs past the source texture's bounds and samples into
+    whatever's packed next to it in the atlas."""
     new_faces = {
-        face_name: _rotate_face(face, x_rot, y_rot)
+        face_name: _rotate_face(face, x_rot, y_rot, uvlock)
         for face_name, face in element["faces"].items()
     }
     return {"faces": new_faces}
 
 
-def _rotate_face(face, x_rot, y_rot):
+def _rotate_face(face, x_rot, y_rot, uvlock=False):
     center, extent, normal, uv_extent = face["center"], face["extent"], face["normal"], face["uv_extent"]
     if x_rot:
         center = rotate_point(center, _ORIGIN, "x", x_rot)
         extent = rotate_vector(extent, "x", x_rot)
         normal = rotate_vector(normal, "x", x_rot)
-        uv_extent = rotate_vector(uv_extent, "x", x_rot)
+        if not uvlock:
+            uv_extent = rotate_vector(uv_extent, "x", x_rot)
     if y_rot:
         center = rotate_point(center, _ORIGIN, "y", y_rot)
         extent = rotate_vector(extent, "y", y_rot)
         normal = rotate_vector(normal, "y", y_rot)
-        uv_extent = rotate_vector(uv_extent, "y", y_rot)
+        if not uvlock:
+            uv_extent = rotate_vector(uv_extent, "y", y_rot)
     return {**face, "center": center, "extent": extent, "normal": normal, "uv_extent": uv_extent}

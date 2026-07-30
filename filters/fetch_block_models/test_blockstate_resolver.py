@@ -174,6 +174,30 @@ class ResolveJavaStateTest(unittest.TestCase):
             },
         )
 
+    def test_uvlock_variant_does_not_rotate_uv_extent(self):
+        # mirrors real minecraft:oak_stairs data: its non-default-facing
+        # variants set uvlock:true, meaning the texture must NOT rotate with
+        # the block. The top step's "up" face has a non-square raw uv ([8,0,
+        # 16,16], 8 wide x 16 tall) - if uv_extent were rotated 90 degrees
+        # anyway, its swapped (16-wide) size would get combined in
+        # main.py's project_uv with the still-unrotated raw uv offset (u=8),
+        # producing a rect that runs from u=8 to u=24 - past the source
+        # texture's own 16-wide bounds and into whatever's packed next to it
+        # in the atlas.
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_stairs": {"variants": {
+                "facing=south": {"model": "block/oak_stairs_top", "y": 90, "uvlock": True},
+            }}},
+            models={"block/oak_stairs_top": {"textures": {}, "elements": [
+                {"from": [8, 8, 0], "to": [16, 16, 16], "faces": {
+                    "up": {"uv": [8, 0, 16, 16], "texture": "block/oak_planks"},
+                }},
+            ]}},
+        )
+        elements = resolve_java_state(mcmeta, "minecraft:oak_stairs", {"facing": "south"})
+        face = elements[0]["faces"]["up"]
+        self.assertEqual(face["uv_extent"], [8, 0, 16])
+
     def test_variant_matches_when_a_given_property_is_absent_from_every_key(self):
         # mirrors real minecraft:bell data: variant keys only ever mention
         # attachment/facing, never "powered" - the bedrock->java mapping

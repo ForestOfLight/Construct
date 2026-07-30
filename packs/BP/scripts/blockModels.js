@@ -18262,8 +18262,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 352
       },
@@ -33816,8 +33816,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -33831,7 +33831,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -33845,7 +33845,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -33859,7 +33859,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -33873,7 +33873,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -33886,8 +33886,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 288
       },
@@ -33929,7 +33929,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -33943,7 +33943,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -33956,8 +33956,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -33971,7 +33971,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -33985,7 +33985,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -33999,7 +33999,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -34013,7 +34013,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 296.0
       },
@@ -34026,8 +34026,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 288
       },
@@ -34069,7 +34069,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34083,7 +34083,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34096,8 +34096,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 288
       },
@@ -34139,7 +34139,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34153,7 +34153,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34166,8 +34166,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 288
       },
@@ -34209,7 +34209,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34223,7 +34223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34236,7 +34236,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 288
@@ -34279,7 +34279,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34293,7 +34293,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34306,7 +34306,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 288
@@ -34349,7 +34349,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34363,7 +34363,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34376,7 +34376,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 288
@@ -34419,7 +34419,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -34433,7 +34433,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 288
       },
@@ -58582,8 +58582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58597,7 +58597,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58611,7 +58611,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58625,7 +58625,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58639,7 +58639,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58652,8 +58652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 424.0,
          "y" : 288
       },
@@ -58695,7 +58695,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58709,7 +58709,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58722,8 +58722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58737,7 +58737,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58751,7 +58751,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58765,7 +58765,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58779,7 +58779,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 296.0
       },
@@ -58792,8 +58792,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 424.0,
          "y" : 288
       },
@@ -58835,7 +58835,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58849,7 +58849,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58862,8 +58862,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 424.0,
          "y" : 288
       },
@@ -58905,7 +58905,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58919,7 +58919,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58932,8 +58932,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 424.0,
          "y" : 288
       },
@@ -58975,7 +58975,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -58989,7 +58989,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -59002,7 +59002,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 424.0,
          "y" : 288
@@ -59045,7 +59045,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -59059,7 +59059,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -59072,7 +59072,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 424.0,
          "y" : 288
@@ -59115,7 +59115,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -59129,7 +59129,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -59142,7 +59142,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 424.0,
          "y" : 288
@@ -59185,7 +59185,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -59199,7 +59199,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -99910,8 +99910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -99924,8 +99924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -99938,7 +99938,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -99952,7 +99952,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -99966,8 +99966,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -99980,8 +99980,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -99994,8 +99994,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100008,7 +100008,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -100022,7 +100022,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -100036,8 +100036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100050,8 +100050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100064,8 +100064,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100078,8 +100078,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100092,7 +100092,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -100106,7 +100106,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -100120,8 +100120,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100134,8 +100134,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100148,8 +100148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100162,7 +100162,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -100176,7 +100176,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
@@ -100190,8 +100190,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100204,8 +100204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100218,8 +100218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100232,8 +100232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100246,8 +100246,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100260,8 +100260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100274,8 +100274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100288,8 +100288,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100302,8 +100302,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100316,8 +100316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100330,8 +100330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100344,8 +100344,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100358,8 +100358,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100372,8 +100372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100386,8 +100386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100400,8 +100400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100414,8 +100414,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100428,8 +100428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100442,8 +100442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100456,8 +100456,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 197.0000,
          "y" : 294.000
       },
@@ -100470,8 +100470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100484,8 +100484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 197.0000,
          "y" : 302.000
       },
@@ -100498,8 +100498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -100512,8 +100512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 198.000,
          "y" : 302.000
       },
@@ -114190,8 +114190,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 976,
          "y" : 368
       },
@@ -114204,8 +114204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 976,
          "y" : 368
       },
@@ -114218,8 +114218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 976,
          "y" : 368
       },
@@ -114232,8 +114232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 976,
          "y" : 368
       },
@@ -114344,8 +114344,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 1008,
          "y" : 368
       },
@@ -114358,8 +114358,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 1008,
          "y" : 368
       },
@@ -114372,8 +114372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 1008,
          "y" : 368
       },
@@ -114386,8 +114386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 1008,
          "y" : 368
       },
@@ -114400,8 +114400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 0,
          "y" : 384
       },
@@ -114414,8 +114414,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 0,
          "y" : 384
       },
@@ -117144,8 +117144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117158,8 +117158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117172,8 +117172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117186,8 +117186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117200,8 +117200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117214,8 +117214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117228,8 +117228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117242,8 +117242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : 0,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 288,
          "y" : 384
       },
@@ -117284,8 +117284,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117298,8 +117298,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117312,8 +117312,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117326,8 +117326,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117340,8 +117340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117354,8 +117354,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117368,8 +117368,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117382,8 +117382,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117396,8 +117396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117410,8 +117410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 304,
          "y" : 384
       },
@@ -117452,8 +117452,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117466,8 +117466,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117480,8 +117480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117494,8 +117494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117508,8 +117508,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117522,8 +117522,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117536,8 +117536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117550,8 +117550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117564,8 +117564,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -117578,8 +117578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -121512,8 +121512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -121526,8 +121526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -121568,8 +121568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -121582,8 +121582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -121624,8 +121624,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -121638,8 +121638,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -121680,8 +121680,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -121694,8 +121694,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -121904,8 +121904,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -121918,8 +121918,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -121960,8 +121960,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -121974,8 +121974,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -122016,8 +122016,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -122030,8 +122030,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -122072,8 +122072,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -122086,8 +122086,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -122464,8 +122464,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -122478,8 +122478,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -122520,8 +122520,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -122534,8 +122534,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -122576,8 +122576,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -122590,8 +122590,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -122632,8 +122632,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -122646,8 +122646,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -122856,8 +122856,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -122870,8 +122870,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -122912,8 +122912,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -122926,8 +122926,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -122968,8 +122968,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -122982,8 +122982,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -123024,8 +123024,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -123038,8 +123038,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -123360,8 +123360,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -123374,8 +123374,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -123416,8 +123416,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -123430,8 +123430,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -123472,8 +123472,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -123486,8 +123486,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -123528,8 +123528,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -123542,8 +123542,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -123696,8 +123696,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -123710,8 +123710,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -123752,8 +123752,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -123766,8 +123766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -123808,8 +123808,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -123822,8 +123822,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -123864,8 +123864,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -123878,8 +123878,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -124200,8 +124200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -124214,8 +124214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -124256,8 +124256,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -124270,8 +124270,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 432,
          "y" : 297.0000
       },
@@ -124312,8 +124312,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -124326,8 +124326,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -124368,8 +124368,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -124382,8 +124382,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 446.000,
          "y" : 297.0000
       },
@@ -124536,8 +124536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -124550,8 +124550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -124592,8 +124592,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -124606,8 +124606,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 434.000,
          "y" : 295.0000
       },
@@ -124648,8 +124648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -124662,8 +124662,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -124704,8 +124704,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -124718,8 +124718,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 442.000,
          "y" : 295.0000
       },
@@ -124760,8 +124760,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -124775,7 +124775,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124789,7 +124789,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124803,7 +124803,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124817,7 +124817,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124830,8 +124830,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 136.0,
          "y" : 352
       },
@@ -124873,7 +124873,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -124887,7 +124887,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -124900,8 +124900,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -124915,7 +124915,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124929,7 +124929,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124943,7 +124943,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124957,7 +124957,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 360.0
       },
@@ -124970,8 +124970,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 136.0,
          "y" : 352
       },
@@ -125013,7 +125013,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125027,7 +125027,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125040,8 +125040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 136.0,
          "y" : 352
       },
@@ -125083,7 +125083,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125097,7 +125097,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125110,8 +125110,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 136.0,
          "y" : 352
       },
@@ -125153,7 +125153,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125167,7 +125167,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125180,7 +125180,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 136.0,
          "y" : 352
@@ -125223,7 +125223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125237,7 +125237,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125250,7 +125250,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 136.0,
          "y" : 352
@@ -125293,7 +125293,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125307,7 +125307,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125320,7 +125320,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 136.0,
          "y" : 352
@@ -125363,7 +125363,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125377,7 +125377,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -125460,8 +125460,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125475,7 +125475,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125489,7 +125489,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125503,7 +125503,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125517,7 +125517,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125530,8 +125530,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 888.0,
          "y" : 368
       },
@@ -125573,7 +125573,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125587,7 +125587,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125600,8 +125600,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125615,7 +125615,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125629,7 +125629,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125643,7 +125643,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125657,7 +125657,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 376.0
       },
@@ -125670,8 +125670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 888.0,
          "y" : 368
       },
@@ -125713,7 +125713,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125727,7 +125727,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125740,8 +125740,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 888.0,
          "y" : 368
       },
@@ -125783,7 +125783,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125797,7 +125797,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125810,8 +125810,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 888.0,
          "y" : 368
       },
@@ -125853,7 +125853,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125867,7 +125867,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125880,7 +125880,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 888.0,
          "y" : 368
@@ -125923,7 +125923,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125937,7 +125937,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -125950,7 +125950,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 888.0,
          "y" : 368
@@ -125993,7 +125993,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -126007,7 +126007,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -126020,7 +126020,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 888.0,
          "y" : 368
@@ -126063,7 +126063,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -126077,7 +126077,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -126160,8 +126160,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126175,7 +126175,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126189,7 +126189,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126203,7 +126203,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126217,7 +126217,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126230,8 +126230,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 368
       },
@@ -126273,7 +126273,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126287,7 +126287,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126300,8 +126300,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126315,7 +126315,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126329,7 +126329,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126343,7 +126343,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126357,7 +126357,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 376.0
       },
@@ -126370,8 +126370,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 368
       },
@@ -126413,7 +126413,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126427,7 +126427,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126440,8 +126440,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 368
       },
@@ -126483,7 +126483,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126497,7 +126497,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126510,8 +126510,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 368
       },
@@ -126553,7 +126553,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126567,7 +126567,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126580,7 +126580,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 968.0,
          "y" : 368
@@ -126623,7 +126623,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126637,7 +126637,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126650,7 +126650,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 968.0,
          "y" : 368
@@ -126693,7 +126693,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126707,7 +126707,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126720,7 +126720,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 968.0,
          "y" : 368
@@ -126763,7 +126763,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -126777,7 +126777,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -127126,8 +127126,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127141,7 +127141,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127155,7 +127155,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127169,7 +127169,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127183,7 +127183,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127196,8 +127196,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 408.0,
          "y" : 384
       },
@@ -127239,7 +127239,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127253,7 +127253,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127266,8 +127266,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127281,7 +127281,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127295,7 +127295,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127309,7 +127309,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127323,7 +127323,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 392.0
       },
@@ -127336,8 +127336,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 408.0,
          "y" : 384
       },
@@ -127379,7 +127379,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127393,7 +127393,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127406,8 +127406,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 408.0,
          "y" : 384
       },
@@ -127449,7 +127449,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127463,7 +127463,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127476,8 +127476,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 408.0,
          "y" : 384
       },
@@ -127519,7 +127519,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127533,7 +127533,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127546,7 +127546,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 408.0,
          "y" : 384
@@ -127589,7 +127589,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127603,7 +127603,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127616,7 +127616,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 408.0,
          "y" : 384
@@ -127659,7 +127659,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127673,7 +127673,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127686,7 +127686,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 408.0,
          "y" : 384
@@ -127729,7 +127729,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127743,7 +127743,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127910,8 +127910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127924,8 +127924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127938,8 +127938,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127952,8 +127952,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127966,8 +127966,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127980,8 +127980,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -127994,8 +127994,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128008,8 +128008,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128022,8 +128022,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128036,8 +128036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128050,8 +128050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128064,8 +128064,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128078,8 +128078,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128092,8 +128092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128106,8 +128106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128120,8 +128120,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128134,8 +128134,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128148,8 +128148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128288,8 +128288,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128302,8 +128302,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128316,8 +128316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128330,8 +128330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128344,8 +128344,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128358,8 +128358,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128372,8 +128372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128386,8 +128386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128400,8 +128400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 400,
          "y" : 384
       },
@@ -128666,8 +128666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -128681,7 +128681,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128695,7 +128695,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128709,7 +128709,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128723,7 +128723,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128736,8 +128736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 384
       },
@@ -128779,7 +128779,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -128793,7 +128793,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -128806,8 +128806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -128821,7 +128821,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128835,7 +128835,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128849,7 +128849,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128863,7 +128863,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 392.0
       },
@@ -128876,8 +128876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 384
       },
@@ -128919,7 +128919,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -128933,7 +128933,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -128946,8 +128946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 384
       },
@@ -128989,7 +128989,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129003,7 +129003,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129016,8 +129016,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 384
       },
@@ -129059,7 +129059,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129073,7 +129073,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129086,7 +129086,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 384
@@ -129129,7 +129129,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129143,7 +129143,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129156,7 +129156,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 384
@@ -129199,7 +129199,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129213,7 +129213,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129226,7 +129226,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 384
@@ -129269,7 +129269,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -129283,7 +129283,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -133398,8 +133398,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 64,
          "y" : 336
       },
@@ -133412,8 +133412,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -133427,7 +133427,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133441,7 +133441,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133455,7 +133455,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133469,7 +133469,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133482,8 +133482,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 336
       },
@@ -133525,7 +133525,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133539,7 +133539,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133552,8 +133552,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -133567,7 +133567,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133581,7 +133581,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133595,7 +133595,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133609,7 +133609,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 344.0
       },
@@ -133622,8 +133622,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 336
       },
@@ -133665,7 +133665,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133679,7 +133679,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133692,8 +133692,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 336
       },
@@ -133735,7 +133735,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133749,7 +133749,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133762,8 +133762,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 336
       },
@@ -133805,7 +133805,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133819,7 +133819,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133832,7 +133832,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 88.0,
          "y" : 336
@@ -133875,7 +133875,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133889,7 +133889,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133902,7 +133902,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 88.0,
          "y" : 336
@@ -133945,7 +133945,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133959,7 +133959,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -133972,7 +133972,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 88.0,
          "y" : 336
@@ -134015,7 +134015,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -134029,7 +134029,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -139180,8 +139180,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139195,7 +139195,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139209,7 +139209,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139223,7 +139223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139237,7 +139237,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139250,8 +139250,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 288
       },
@@ -139293,7 +139293,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139307,7 +139307,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139320,8 +139320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139335,7 +139335,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139349,7 +139349,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139363,7 +139363,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139377,7 +139377,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 296.0
       },
@@ -139390,8 +139390,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 288
       },
@@ -139433,7 +139433,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139447,7 +139447,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139460,8 +139460,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 288
       },
@@ -139503,7 +139503,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139517,7 +139517,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139530,8 +139530,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 288
       },
@@ -139573,7 +139573,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139587,7 +139587,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139600,7 +139600,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 456.0,
          "y" : 288
@@ -139643,7 +139643,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139657,7 +139657,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139670,7 +139670,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 456.0,
          "y" : 288
@@ -139713,7 +139713,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139727,7 +139727,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139740,7 +139740,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 456.0,
          "y" : 288
@@ -139783,7 +139783,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139797,7 +139797,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 288
       },
@@ -139880,8 +139880,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -139895,7 +139895,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -139909,7 +139909,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -139923,7 +139923,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -139937,7 +139937,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -139950,8 +139950,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 472.0,
          "y" : 288
       },
@@ -139993,7 +139993,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140007,7 +140007,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140020,8 +140020,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140035,7 +140035,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -140049,7 +140049,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -140063,7 +140063,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -140077,7 +140077,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 296.0
       },
@@ -140090,8 +140090,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 472.0,
          "y" : 288
       },
@@ -140133,7 +140133,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140147,7 +140147,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140160,8 +140160,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 472.0,
          "y" : 288
       },
@@ -140203,7 +140203,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140217,7 +140217,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140230,8 +140230,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 472.0,
          "y" : 288
       },
@@ -140273,7 +140273,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140287,7 +140287,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140300,7 +140300,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 472.0,
          "y" : 288
@@ -140343,7 +140343,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140357,7 +140357,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140370,7 +140370,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 472.0,
          "y" : 288
@@ -140413,7 +140413,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140427,7 +140427,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140440,7 +140440,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 472.0,
          "y" : 288
@@ -140483,7 +140483,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140497,7 +140497,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 464,
          "y" : 288
       },
@@ -140580,8 +140580,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140595,7 +140595,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140609,7 +140609,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140623,7 +140623,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140637,7 +140637,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140650,8 +140650,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 488.0,
          "y" : 288
       },
@@ -140693,7 +140693,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140707,7 +140707,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140720,8 +140720,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140735,7 +140735,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140749,7 +140749,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140763,7 +140763,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140777,7 +140777,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 296.0
       },
@@ -140790,8 +140790,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 488.0,
          "y" : 288
       },
@@ -140833,7 +140833,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140847,7 +140847,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140860,8 +140860,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 488.0,
          "y" : 288
       },
@@ -140903,7 +140903,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140917,7 +140917,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140930,8 +140930,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 488.0,
          "y" : 288
       },
@@ -140973,7 +140973,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -140987,7 +140987,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -141000,7 +141000,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 488.0,
          "y" : 288
@@ -141043,7 +141043,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -141057,7 +141057,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -141070,7 +141070,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 488.0,
          "y" : 288
@@ -141113,7 +141113,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -141127,7 +141127,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -141140,7 +141140,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 488.0,
          "y" : 288
@@ -141183,7 +141183,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -141197,7 +141197,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 480,
          "y" : 288
       },
@@ -142092,8 +142092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142106,8 +142106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142120,8 +142120,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142134,8 +142134,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142148,8 +142148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142162,8 +142162,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142176,8 +142176,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142190,8 +142190,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142204,8 +142204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142218,8 +142218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142232,8 +142232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142246,8 +142246,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142260,8 +142260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142274,8 +142274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142288,8 +142288,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142302,8 +142302,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142316,8 +142316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142330,8 +142330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142470,8 +142470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142484,8 +142484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142498,8 +142498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142512,8 +142512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142526,8 +142526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142540,8 +142540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142554,8 +142554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142568,8 +142568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142582,8 +142582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 288
       },
@@ -142680,8 +142680,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142694,8 +142694,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142708,8 +142708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142722,8 +142722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142736,8 +142736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142750,8 +142750,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142764,8 +142764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142778,8 +142778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142792,8 +142792,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142806,8 +142806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142820,8 +142820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142834,8 +142834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142848,8 +142848,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142862,8 +142862,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142876,8 +142876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142890,8 +142890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142904,8 +142904,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -142918,8 +142918,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143058,8 +143058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143072,8 +143072,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143086,8 +143086,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143100,8 +143100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143114,8 +143114,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143128,8 +143128,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143142,8 +143142,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143156,8 +143156,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -143170,8 +143170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -144598,8 +144598,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144612,8 +144612,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144626,7 +144626,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144640,7 +144640,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144654,8 +144654,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144668,8 +144668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144682,8 +144682,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144696,7 +144696,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144710,7 +144710,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144724,8 +144724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144738,8 +144738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144752,8 +144752,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144766,8 +144766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144780,7 +144780,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144794,7 +144794,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144808,8 +144808,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144822,8 +144822,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144836,8 +144836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144850,7 +144850,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144864,7 +144864,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
@@ -144878,8 +144878,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144892,8 +144892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144906,8 +144906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144920,8 +144920,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -144934,8 +144934,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -144948,8 +144948,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -144962,8 +144962,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144976,8 +144976,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -144990,8 +144990,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -145004,8 +145004,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -145018,8 +145018,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -145032,8 +145032,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -145046,8 +145046,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -145060,8 +145060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -145074,8 +145074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -145088,8 +145088,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -145102,8 +145102,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -145116,8 +145116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -145130,8 +145130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -145144,8 +145144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 437.0000,
          "y" : 294.000
       },
@@ -145158,8 +145158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -145172,8 +145172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 437.0000,
          "y" : 302.000
       },
@@ -145186,8 +145186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -145200,8 +145200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 438.000,
          "y" : 302.000
       },
@@ -145522,8 +145522,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145536,8 +145536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145550,7 +145550,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145564,7 +145564,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145578,8 +145578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145592,8 +145592,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145606,8 +145606,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145620,7 +145620,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145634,7 +145634,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145648,8 +145648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145662,8 +145662,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145676,8 +145676,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145690,8 +145690,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145704,7 +145704,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145718,7 +145718,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145732,8 +145732,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145746,8 +145746,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145760,8 +145760,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145774,7 +145774,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145788,7 +145788,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
@@ -145802,8 +145802,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145816,8 +145816,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145830,8 +145830,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145844,8 +145844,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145858,8 +145858,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -145872,8 +145872,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -145886,8 +145886,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145900,8 +145900,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145914,8 +145914,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145928,8 +145928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -145942,8 +145942,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -145956,8 +145956,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145970,8 +145970,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -145984,8 +145984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -145998,8 +145998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -146012,8 +146012,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -146026,8 +146026,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -146040,8 +146040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -146054,8 +146054,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -146068,8 +146068,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 453.0000,
          "y" : 294.000
       },
@@ -146082,8 +146082,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -146096,8 +146096,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 453.0000,
          "y" : 302.000
       },
@@ -146110,8 +146110,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -146124,8 +146124,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 454.000,
          "y" : 302.000
       },
@@ -146446,8 +146446,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146460,8 +146460,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146474,7 +146474,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146488,7 +146488,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146502,8 +146502,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146516,8 +146516,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146530,8 +146530,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146544,7 +146544,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146558,7 +146558,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146572,8 +146572,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146586,8 +146586,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146600,8 +146600,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146614,8 +146614,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146628,7 +146628,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146642,7 +146642,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146656,8 +146656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146670,8 +146670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146684,8 +146684,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146698,7 +146698,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146712,7 +146712,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
@@ -146726,8 +146726,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146740,8 +146740,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146754,8 +146754,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146768,8 +146768,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146782,8 +146782,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -146796,8 +146796,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -146810,8 +146810,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146824,8 +146824,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146838,8 +146838,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146852,8 +146852,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -146866,8 +146866,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -146880,8 +146880,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146894,8 +146894,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146908,8 +146908,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146922,8 +146922,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -146936,8 +146936,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -146950,8 +146950,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -146964,8 +146964,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146978,8 +146978,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -146992,8 +146992,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 469.0000,
          "y" : 294.000
       },
@@ -147006,8 +147006,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -147020,8 +147020,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 469.0000,
          "y" : 302.000
       },
@@ -147034,8 +147034,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -147048,8 +147048,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 470.000,
          "y" : 302.000
       },
@@ -147370,8 +147370,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147384,8 +147384,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147398,7 +147398,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147412,7 +147412,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147426,8 +147426,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147440,8 +147440,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147454,8 +147454,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147468,7 +147468,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147482,7 +147482,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147496,8 +147496,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147510,8 +147510,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147524,8 +147524,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147538,8 +147538,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147552,7 +147552,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147566,7 +147566,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147580,8 +147580,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147594,8 +147594,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147608,8 +147608,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147622,7 +147622,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147636,7 +147636,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
@@ -147650,8 +147650,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147664,8 +147664,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147678,8 +147678,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147692,8 +147692,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147706,8 +147706,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147720,8 +147720,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147734,8 +147734,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147748,8 +147748,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147762,8 +147762,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147776,8 +147776,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147790,8 +147790,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147804,8 +147804,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147818,8 +147818,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147832,8 +147832,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147846,8 +147846,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147860,8 +147860,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147874,8 +147874,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147888,8 +147888,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147902,8 +147902,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147916,8 +147916,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 485.0000,
          "y" : 294.000
       },
@@ -147930,8 +147930,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147944,8 +147944,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 485.0000,
          "y" : 302.000
       },
@@ -147958,8 +147958,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -147972,8 +147972,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 486.000,
          "y" : 302.000
       },
@@ -148294,8 +148294,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148308,8 +148308,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148322,7 +148322,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148336,7 +148336,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148350,8 +148350,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148364,8 +148364,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148378,8 +148378,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148392,7 +148392,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148406,7 +148406,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148420,8 +148420,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148434,8 +148434,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148448,8 +148448,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148462,8 +148462,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148476,7 +148476,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148490,7 +148490,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148504,8 +148504,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148518,8 +148518,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148532,8 +148532,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148546,7 +148546,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148560,7 +148560,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
@@ -148574,8 +148574,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148588,8 +148588,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148602,8 +148602,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148616,8 +148616,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148630,8 +148630,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148644,8 +148644,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148658,8 +148658,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148672,8 +148672,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148686,8 +148686,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148700,8 +148700,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148714,8 +148714,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148728,8 +148728,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148742,8 +148742,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148756,8 +148756,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148770,8 +148770,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148784,8 +148784,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148798,8 +148798,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148812,8 +148812,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148826,8 +148826,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148840,8 +148840,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 501.0000,
          "y" : 294.000
       },
@@ -148854,8 +148854,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148868,8 +148868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 501.0000,
          "y" : 302.000
       },
@@ -148882,8 +148882,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -148896,8 +148896,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 502.000,
          "y" : 302.000
       },
@@ -149218,8 +149218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149232,8 +149232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149246,7 +149246,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149260,7 +149260,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149274,8 +149274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149288,8 +149288,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149302,8 +149302,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149316,7 +149316,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149330,7 +149330,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149344,8 +149344,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149358,8 +149358,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149372,8 +149372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149386,8 +149386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149400,7 +149400,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149414,7 +149414,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149428,8 +149428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149442,8 +149442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149456,8 +149456,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149470,7 +149470,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149484,7 +149484,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
@@ -149498,8 +149498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149512,8 +149512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149526,8 +149526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149540,8 +149540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149554,8 +149554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149568,8 +149568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149582,8 +149582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149596,8 +149596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149610,8 +149610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149624,8 +149624,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149638,8 +149638,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149652,8 +149652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149666,8 +149666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149680,8 +149680,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149694,8 +149694,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149708,8 +149708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149722,8 +149722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149736,8 +149736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149750,8 +149750,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149764,8 +149764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 517.0000,
          "y" : 294.000
       },
@@ -149778,8 +149778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149792,8 +149792,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 517.0000,
          "y" : 302.000
       },
@@ -149806,8 +149806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -149820,8 +149820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 518.000,
          "y" : 302.000
       },
@@ -150142,8 +150142,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150156,8 +150156,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150170,7 +150170,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150184,7 +150184,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150198,8 +150198,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150212,8 +150212,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150226,8 +150226,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150240,7 +150240,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150254,7 +150254,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150268,8 +150268,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150282,8 +150282,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150296,8 +150296,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150310,8 +150310,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150324,7 +150324,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150338,7 +150338,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150352,8 +150352,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150366,8 +150366,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150380,8 +150380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150394,7 +150394,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150408,7 +150408,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
@@ -150422,8 +150422,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150436,8 +150436,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150450,8 +150450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150464,8 +150464,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150478,8 +150478,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150492,8 +150492,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150506,8 +150506,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150520,8 +150520,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150534,8 +150534,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150548,8 +150548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150562,8 +150562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150576,8 +150576,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150590,8 +150590,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150604,8 +150604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150618,8 +150618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150632,8 +150632,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150646,8 +150646,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150660,8 +150660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150674,8 +150674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150688,8 +150688,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 533.0000,
          "y" : 294.000
       },
@@ -150702,8 +150702,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150716,8 +150716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 533.0000,
          "y" : 302.000
       },
@@ -150730,8 +150730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -150744,8 +150744,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 534.000,
          "y" : 302.000
       },
@@ -151066,8 +151066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151080,8 +151080,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151094,7 +151094,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151108,7 +151108,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151122,8 +151122,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151136,8 +151136,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151150,8 +151150,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151164,7 +151164,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151178,7 +151178,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151192,8 +151192,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151206,8 +151206,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151220,8 +151220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151234,8 +151234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151248,7 +151248,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151262,7 +151262,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151276,8 +151276,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151290,8 +151290,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151304,8 +151304,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151318,7 +151318,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151332,7 +151332,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
@@ -151346,8 +151346,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151360,8 +151360,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151374,8 +151374,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151388,8 +151388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151402,8 +151402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151416,8 +151416,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151430,8 +151430,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151444,8 +151444,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151458,8 +151458,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151472,8 +151472,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151486,8 +151486,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151500,8 +151500,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151514,8 +151514,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151528,8 +151528,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151542,8 +151542,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151556,8 +151556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151570,8 +151570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151584,8 +151584,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151598,8 +151598,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151612,8 +151612,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 565.0000,
          "y" : 294.000
       },
@@ -151626,8 +151626,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151640,8 +151640,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 565.0000,
          "y" : 302.000
       },
@@ -151654,8 +151654,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151668,8 +151668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 566.000,
          "y" : 302.000
       },
@@ -151990,8 +151990,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152004,8 +152004,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152018,7 +152018,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152032,7 +152032,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152046,8 +152046,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152060,8 +152060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152074,8 +152074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152088,7 +152088,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152102,7 +152102,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152116,8 +152116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152130,8 +152130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152144,8 +152144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152158,8 +152158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152172,7 +152172,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152186,7 +152186,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152200,8 +152200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152214,8 +152214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152228,8 +152228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152242,7 +152242,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152256,7 +152256,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
@@ -152270,8 +152270,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152284,8 +152284,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152298,8 +152298,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152312,8 +152312,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152326,8 +152326,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152340,8 +152340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152354,8 +152354,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152368,8 +152368,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152382,8 +152382,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152396,8 +152396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152410,8 +152410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152424,8 +152424,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152438,8 +152438,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152452,8 +152452,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152466,8 +152466,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152480,8 +152480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152494,8 +152494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152508,8 +152508,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152522,8 +152522,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152536,8 +152536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 581.0000,
          "y" : 294.000
       },
@@ -152550,8 +152550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152564,8 +152564,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 581.0000,
          "y" : 302.000
       },
@@ -152578,8 +152578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152592,8 +152592,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 582.000,
          "y" : 302.000
       },
@@ -152914,8 +152914,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -152928,8 +152928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -152942,7 +152942,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -152956,7 +152956,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -152970,8 +152970,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -152984,8 +152984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -152998,8 +152998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153012,7 +153012,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -153026,7 +153026,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -153040,8 +153040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153054,8 +153054,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153068,8 +153068,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153082,8 +153082,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153096,7 +153096,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -153110,7 +153110,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -153124,8 +153124,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153138,8 +153138,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153152,8 +153152,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153166,7 +153166,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -153180,7 +153180,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
@@ -153194,8 +153194,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153208,8 +153208,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153222,8 +153222,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153236,8 +153236,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153250,8 +153250,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153264,8 +153264,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153278,8 +153278,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153292,8 +153292,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153306,8 +153306,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153320,8 +153320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153334,8 +153334,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153348,8 +153348,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153362,8 +153362,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153376,8 +153376,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153390,8 +153390,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153404,8 +153404,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153418,8 +153418,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153432,8 +153432,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153446,8 +153446,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153460,8 +153460,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 597.0000,
          "y" : 294.000
       },
@@ -153474,8 +153474,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153488,8 +153488,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 597.0000,
          "y" : 302.000
       },
@@ -153502,8 +153502,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -153516,8 +153516,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 598.000,
          "y" : 302.000
       },
@@ -159942,8 +159942,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 368,
          "y" : 400
       },
@@ -159957,7 +159957,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -159971,7 +159971,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -159985,7 +159985,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -159999,7 +159999,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -160012,8 +160012,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 376.0,
          "y" : 400
       },
@@ -160055,7 +160055,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160069,7 +160069,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160082,8 +160082,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 368,
          "y" : 400
       },
@@ -160097,7 +160097,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -160111,7 +160111,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -160125,7 +160125,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -160139,7 +160139,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 408.0
       },
@@ -160152,8 +160152,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 376.0,
          "y" : 400
       },
@@ -160195,7 +160195,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160209,7 +160209,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160222,8 +160222,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 376.0,
          "y" : 400
       },
@@ -160265,7 +160265,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160279,7 +160279,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160292,8 +160292,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 376.0,
          "y" : 400
       },
@@ -160335,7 +160335,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160349,7 +160349,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160362,7 +160362,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 376.0,
          "y" : 400
@@ -160405,7 +160405,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160419,7 +160419,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160432,7 +160432,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 376.0,
          "y" : 400
@@ -160475,7 +160475,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160489,7 +160489,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160502,7 +160502,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 376.0,
          "y" : 400
@@ -160545,7 +160545,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -160559,7 +160559,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 384,
          "y" : 400
       },
@@ -163694,8 +163694,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -163709,7 +163709,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163723,7 +163723,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163737,7 +163737,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163751,7 +163751,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163764,8 +163764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 288
       },
@@ -163807,7 +163807,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -163821,7 +163821,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -163834,8 +163834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -163849,7 +163849,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163863,7 +163863,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163877,7 +163877,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163891,7 +163891,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 296.0
       },
@@ -163904,8 +163904,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 288
       },
@@ -163947,7 +163947,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -163961,7 +163961,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -163974,8 +163974,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 288
       },
@@ -164017,7 +164017,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164031,7 +164031,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164044,8 +164044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 288
       },
@@ -164087,7 +164087,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164101,7 +164101,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164114,7 +164114,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 504.0,
          "y" : 288
@@ -164157,7 +164157,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164171,7 +164171,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164184,7 +164184,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 504.0,
          "y" : 288
@@ -164227,7 +164227,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164241,7 +164241,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164254,7 +164254,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 504.0,
          "y" : 288
@@ -164297,7 +164297,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164311,7 +164311,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 288
       },
@@ -164394,8 +164394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164409,7 +164409,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164423,7 +164423,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164437,7 +164437,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164451,7 +164451,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164464,8 +164464,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 288
       },
@@ -164507,7 +164507,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164521,7 +164521,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164534,8 +164534,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164549,7 +164549,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164563,7 +164563,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164577,7 +164577,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164591,7 +164591,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 296.0
       },
@@ -164604,8 +164604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 288
       },
@@ -164647,7 +164647,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164661,7 +164661,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164674,8 +164674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 288
       },
@@ -164717,7 +164717,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164731,7 +164731,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164744,8 +164744,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 288
       },
@@ -164787,7 +164787,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164801,7 +164801,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164814,7 +164814,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 288
@@ -164857,7 +164857,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164871,7 +164871,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164884,7 +164884,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 288
@@ -164927,7 +164927,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164941,7 +164941,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -164954,7 +164954,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 288
@@ -164997,7 +164997,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -165011,7 +165011,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 288
       },
@@ -165094,8 +165094,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165109,7 +165109,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165123,7 +165123,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165137,7 +165137,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165151,7 +165151,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165164,8 +165164,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 288
       },
@@ -165207,7 +165207,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165221,7 +165221,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165234,8 +165234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165249,7 +165249,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165263,7 +165263,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165277,7 +165277,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165291,7 +165291,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 296.0
       },
@@ -165304,8 +165304,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 288
       },
@@ -165347,7 +165347,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165361,7 +165361,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165374,8 +165374,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 288
       },
@@ -165417,7 +165417,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165431,7 +165431,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165444,8 +165444,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 288
       },
@@ -165487,7 +165487,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165501,7 +165501,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165514,7 +165514,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 536.0,
          "y" : 288
@@ -165557,7 +165557,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165571,7 +165571,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165584,7 +165584,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 536.0,
          "y" : 288
@@ -165627,7 +165627,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165641,7 +165641,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165654,7 +165654,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 536.0,
          "y" : 288
@@ -165697,7 +165697,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165711,7 +165711,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 288
       },
@@ -165794,8 +165794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -165809,7 +165809,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165823,7 +165823,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165837,7 +165837,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165851,7 +165851,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165864,8 +165864,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 288
       },
@@ -165907,7 +165907,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -165921,7 +165921,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -165934,8 +165934,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -165949,7 +165949,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165963,7 +165963,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165977,7 +165977,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -165991,7 +165991,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 296.0
       },
@@ -166004,8 +166004,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 288
       },
@@ -166047,7 +166047,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166061,7 +166061,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166074,8 +166074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 288
       },
@@ -166117,7 +166117,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166131,7 +166131,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166144,8 +166144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 288
       },
@@ -166187,7 +166187,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166201,7 +166201,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166214,7 +166214,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 568.0,
          "y" : 288
@@ -166257,7 +166257,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166271,7 +166271,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166284,7 +166284,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 568.0,
          "y" : 288
@@ -166327,7 +166327,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166341,7 +166341,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166354,7 +166354,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 568.0,
          "y" : 288
@@ -166397,7 +166397,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166411,7 +166411,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 288
       },
@@ -166494,8 +166494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166509,7 +166509,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166523,7 +166523,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166537,7 +166537,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166551,7 +166551,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166564,8 +166564,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 584.0,
          "y" : 288
       },
@@ -166607,7 +166607,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166621,7 +166621,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166634,8 +166634,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166649,7 +166649,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166663,7 +166663,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166677,7 +166677,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166691,7 +166691,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 296.0
       },
@@ -166704,8 +166704,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 584.0,
          "y" : 288
       },
@@ -166747,7 +166747,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166761,7 +166761,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166774,8 +166774,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 584.0,
          "y" : 288
       },
@@ -166817,7 +166817,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166831,7 +166831,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166844,8 +166844,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 584.0,
          "y" : 288
       },
@@ -166887,7 +166887,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166901,7 +166901,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166914,7 +166914,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 584.0,
          "y" : 288
@@ -166957,7 +166957,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166971,7 +166971,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -166984,7 +166984,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 584.0,
          "y" : 288
@@ -167027,7 +167027,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -167041,7 +167041,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -167054,7 +167054,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 584.0,
          "y" : 288
@@ -167097,7 +167097,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -167111,7 +167111,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 576,
          "y" : 288
       },
@@ -167194,8 +167194,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167209,7 +167209,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167223,7 +167223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167237,7 +167237,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167251,7 +167251,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167264,8 +167264,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 600.0,
          "y" : 288
       },
@@ -167307,7 +167307,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167321,7 +167321,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167334,8 +167334,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167349,7 +167349,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167363,7 +167363,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167377,7 +167377,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167391,7 +167391,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 296.0
       },
@@ -167404,8 +167404,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 600.0,
          "y" : 288
       },
@@ -167447,7 +167447,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167461,7 +167461,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167474,8 +167474,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 600.0,
          "y" : 288
       },
@@ -167517,7 +167517,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167531,7 +167531,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167544,8 +167544,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 600.0,
          "y" : 288
       },
@@ -167587,7 +167587,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167601,7 +167601,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167614,7 +167614,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 600.0,
          "y" : 288
@@ -167657,7 +167657,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167671,7 +167671,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167684,7 +167684,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 600.0,
          "y" : 288
@@ -167727,7 +167727,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167741,7 +167741,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167754,7 +167754,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 600.0,
          "y" : 288
@@ -167797,7 +167797,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167811,7 +167811,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 592,
          "y" : 288
       },
@@ -167894,8 +167894,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -167909,7 +167909,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -167923,7 +167923,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -167937,7 +167937,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -167951,7 +167951,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -167964,8 +167964,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 288
       },
@@ -168007,7 +168007,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168021,7 +168021,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168034,8 +168034,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168049,7 +168049,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -168063,7 +168063,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -168077,7 +168077,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -168091,7 +168091,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 296.0
       },
@@ -168104,8 +168104,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 288
       },
@@ -168147,7 +168147,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168161,7 +168161,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168174,8 +168174,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 288
       },
@@ -168217,7 +168217,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168231,7 +168231,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168244,8 +168244,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 288
       },
@@ -168287,7 +168287,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168301,7 +168301,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168314,7 +168314,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 616.0,
          "y" : 288
@@ -168357,7 +168357,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168371,7 +168371,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168384,7 +168384,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 616.0,
          "y" : 288
@@ -168427,7 +168427,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168441,7 +168441,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168454,7 +168454,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 616.0,
          "y" : 288
@@ -168497,7 +168497,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -168511,7 +168511,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 288
       },
@@ -169518,8 +169518,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169533,7 +169533,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169547,7 +169547,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169561,7 +169561,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169575,7 +169575,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169588,8 +169588,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 56.0,
          "y" : 416
       },
@@ -169631,7 +169631,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169645,7 +169645,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169658,8 +169658,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169673,7 +169673,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169687,7 +169687,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169701,7 +169701,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169715,7 +169715,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 424.0
       },
@@ -169728,8 +169728,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 56.0,
          "y" : 416
       },
@@ -169771,7 +169771,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169785,7 +169785,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169798,8 +169798,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 56.0,
          "y" : 416
       },
@@ -169841,7 +169841,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169855,7 +169855,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169868,8 +169868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 56.0,
          "y" : 416
       },
@@ -169911,7 +169911,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169925,7 +169925,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169938,7 +169938,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 56.0,
          "y" : 416
@@ -169981,7 +169981,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -169995,7 +169995,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -170008,7 +170008,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 56.0,
          "y" : 416
@@ -170051,7 +170051,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -170065,7 +170065,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -170078,7 +170078,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 56.0,
          "y" : 416
@@ -170121,7 +170121,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -170135,7 +170135,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -170218,8 +170218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170233,7 +170233,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170247,7 +170247,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170261,7 +170261,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170275,7 +170275,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170288,8 +170288,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 72.0,
          "y" : 416
       },
@@ -170331,7 +170331,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170345,7 +170345,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170358,8 +170358,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170373,7 +170373,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170387,7 +170387,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170401,7 +170401,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170415,7 +170415,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 424.0
       },
@@ -170428,8 +170428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 72.0,
          "y" : 416
       },
@@ -170471,7 +170471,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170485,7 +170485,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170498,8 +170498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 72.0,
          "y" : 416
       },
@@ -170541,7 +170541,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170555,7 +170555,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170568,8 +170568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 72.0,
          "y" : 416
       },
@@ -170611,7 +170611,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170625,7 +170625,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170638,7 +170638,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 72.0,
          "y" : 416
@@ -170681,7 +170681,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170695,7 +170695,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170708,7 +170708,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 72.0,
          "y" : 416
@@ -170751,7 +170751,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170765,7 +170765,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170778,7 +170778,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 72.0,
          "y" : 416
@@ -170821,7 +170821,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170835,7 +170835,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 64,
          "y" : 416
       },
@@ -170918,8 +170918,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -170933,7 +170933,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -170947,7 +170947,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -170961,7 +170961,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -170975,7 +170975,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -170988,8 +170988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 416
       },
@@ -171031,7 +171031,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171045,7 +171045,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171058,8 +171058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171073,7 +171073,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -171087,7 +171087,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -171101,7 +171101,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -171115,7 +171115,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 424.0
       },
@@ -171128,8 +171128,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 416
       },
@@ -171171,7 +171171,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171185,7 +171185,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171198,8 +171198,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 416
       },
@@ -171241,7 +171241,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171255,7 +171255,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171268,8 +171268,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 88.0,
          "y" : 416
       },
@@ -171311,7 +171311,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171325,7 +171325,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171338,7 +171338,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 88.0,
          "y" : 416
@@ -171381,7 +171381,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171395,7 +171395,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171408,7 +171408,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 88.0,
          "y" : 416
@@ -171451,7 +171451,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171465,7 +171465,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171478,7 +171478,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 88.0,
          "y" : 416
@@ -171521,7 +171521,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -171535,7 +171535,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 416
       },
@@ -177652,8 +177652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 416,
          "y" : 416
       },
@@ -177666,8 +177666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -177681,7 +177681,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177695,7 +177695,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177709,7 +177709,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177723,7 +177723,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177736,8 +177736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 416
       },
@@ -177779,7 +177779,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -177793,7 +177793,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -177806,8 +177806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -177821,7 +177821,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177835,7 +177835,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177849,7 +177849,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177863,7 +177863,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 424.0
       },
@@ -177876,8 +177876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 416
       },
@@ -177919,7 +177919,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -177933,7 +177933,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -177946,8 +177946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 416
       },
@@ -177989,7 +177989,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178003,7 +178003,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178016,8 +178016,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 440.0,
          "y" : 416
       },
@@ -178059,7 +178059,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178073,7 +178073,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178086,7 +178086,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 416
@@ -178129,7 +178129,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178143,7 +178143,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178156,7 +178156,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 416
@@ -178199,7 +178199,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178213,7 +178213,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178226,7 +178226,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 440.0,
          "y" : 416
@@ -178269,7 +178269,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -178283,7 +178283,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -183364,8 +183364,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -183378,8 +183378,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -183420,8 +183420,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -183434,8 +183434,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -183476,8 +183476,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -183490,8 +183490,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -183532,8 +183532,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -183546,8 +183546,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -183756,8 +183756,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -183770,8 +183770,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -183812,8 +183812,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -183826,8 +183826,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -183868,8 +183868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -183882,8 +183882,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -183924,8 +183924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -183938,8 +183938,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -184316,8 +184316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -184330,8 +184330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -184372,8 +184372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -184386,8 +184386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -184428,8 +184428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -184442,8 +184442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -184484,8 +184484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -184498,8 +184498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -184708,8 +184708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -184722,8 +184722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -184764,8 +184764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -184778,8 +184778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -184820,8 +184820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -184834,8 +184834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -184876,8 +184876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -184890,8 +184890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -185212,8 +185212,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -185226,8 +185226,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -185268,8 +185268,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -185282,8 +185282,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -185324,8 +185324,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -185338,8 +185338,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -185380,8 +185380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -185394,8 +185394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -185548,8 +185548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -185562,8 +185562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -185604,8 +185604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -185618,8 +185618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -185660,8 +185660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -185674,8 +185674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -185716,8 +185716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -185730,8 +185730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -186052,8 +186052,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -186066,8 +186066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -186108,8 +186108,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -186122,8 +186122,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 448,
          "y" : 297.0000
       },
@@ -186164,8 +186164,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -186178,8 +186178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -186220,8 +186220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -186234,8 +186234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 462.000,
          "y" : 297.0000
       },
@@ -186388,8 +186388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -186402,8 +186402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -186444,8 +186444,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -186458,8 +186458,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 450.000,
          "y" : 295.0000
       },
@@ -186500,8 +186500,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -186514,8 +186514,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -186556,8 +186556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -186570,8 +186570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 458.000,
          "y" : 295.0000
       },
@@ -190532,8 +190532,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -190546,8 +190546,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -190588,8 +190588,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -190602,8 +190602,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -190644,8 +190644,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -190658,8 +190658,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -190700,8 +190700,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -190714,8 +190714,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -190924,8 +190924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -190938,8 +190938,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -190980,8 +190980,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -190994,8 +190994,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -191036,8 +191036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -191050,8 +191050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -191092,8 +191092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -191106,8 +191106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -191484,8 +191484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -191498,8 +191498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -191540,8 +191540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -191554,8 +191554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -191596,8 +191596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -191610,8 +191610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -191652,8 +191652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -191666,8 +191666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -191876,8 +191876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -191890,8 +191890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -191932,8 +191932,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -191946,8 +191946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -191988,8 +191988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192002,8 +192002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192044,8 +192044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192058,8 +192058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192380,8 +192380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -192394,8 +192394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -192436,8 +192436,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -192450,8 +192450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -192492,8 +192492,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -192506,8 +192506,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -192548,8 +192548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -192562,8 +192562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -192716,8 +192716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -192730,8 +192730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -192772,8 +192772,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -192786,8 +192786,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -192828,8 +192828,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192842,8 +192842,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192884,8 +192884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -192898,8 +192898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -193220,8 +193220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -193234,8 +193234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -193276,8 +193276,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -193290,8 +193290,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 464,
          "y" : 297.0000
       },
@@ -193332,8 +193332,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -193346,8 +193346,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -193388,8 +193388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -193402,8 +193402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 478.000,
          "y" : 297.0000
       },
@@ -193556,8 +193556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -193570,8 +193570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -193612,8 +193612,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -193626,8 +193626,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 466.000,
          "y" : 295.0000
       },
@@ -193668,8 +193668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -193682,8 +193682,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -193724,8 +193724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -193738,8 +193738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 474.000,
          "y" : 295.0000
       },
@@ -197700,8 +197700,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -197714,8 +197714,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -197756,8 +197756,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -197770,8 +197770,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -197812,8 +197812,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -197826,8 +197826,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -197868,8 +197868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -197882,8 +197882,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -198092,8 +198092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -198106,8 +198106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -198148,8 +198148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -198162,8 +198162,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -198204,8 +198204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -198218,8 +198218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -198260,8 +198260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -198274,8 +198274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -198652,8 +198652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -198666,8 +198666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -198708,8 +198708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -198722,8 +198722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -198764,8 +198764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -198778,8 +198778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -198820,8 +198820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -198834,8 +198834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -199044,8 +199044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199058,8 +199058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199100,8 +199100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199114,8 +199114,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199156,8 +199156,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -199170,8 +199170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -199212,8 +199212,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -199226,8 +199226,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -199548,8 +199548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -199562,8 +199562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -199604,8 +199604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -199618,8 +199618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -199660,8 +199660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -199674,8 +199674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -199716,8 +199716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -199730,8 +199730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -199884,8 +199884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199898,8 +199898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199940,8 +199940,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199954,8 +199954,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -199996,8 +199996,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200010,8 +200010,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200052,8 +200052,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200066,8 +200066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200388,8 +200388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -200402,8 +200402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -200444,8 +200444,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -200458,8 +200458,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 480,
          "y" : 297.0000
       },
@@ -200500,8 +200500,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -200514,8 +200514,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -200556,8 +200556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -200570,8 +200570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 494.000,
          "y" : 297.0000
       },
@@ -200724,8 +200724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -200738,8 +200738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -200780,8 +200780,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -200794,8 +200794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 482.000,
          "y" : 295.0000
       },
@@ -200836,8 +200836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200850,8 +200850,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200892,8 +200892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -200906,8 +200906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 490.000,
          "y" : 295.0000
       },
@@ -204868,8 +204868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -204882,8 +204882,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -204924,8 +204924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -204938,8 +204938,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -204980,8 +204980,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -204994,8 +204994,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -205036,8 +205036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -205050,8 +205050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -205260,8 +205260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -205274,8 +205274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -205316,8 +205316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -205330,8 +205330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -205372,8 +205372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -205386,8 +205386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -205428,8 +205428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -205442,8 +205442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -205820,8 +205820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -205834,8 +205834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -205876,8 +205876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -205890,8 +205890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -205932,8 +205932,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -205946,8 +205946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -205988,8 +205988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -206002,8 +206002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -206212,8 +206212,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -206226,8 +206226,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -206268,8 +206268,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -206282,8 +206282,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -206324,8 +206324,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -206338,8 +206338,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -206380,8 +206380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -206394,8 +206394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -206716,8 +206716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -206730,8 +206730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -206772,8 +206772,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -206786,8 +206786,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -206828,8 +206828,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -206842,8 +206842,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -206884,8 +206884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -206898,8 +206898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -207052,8 +207052,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207066,8 +207066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207108,8 +207108,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207122,8 +207122,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207164,8 +207164,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -207178,8 +207178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -207220,8 +207220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -207234,8 +207234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -207556,8 +207556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -207570,8 +207570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -207612,8 +207612,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -207626,8 +207626,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 496,
          "y" : 297.0000
       },
@@ -207668,8 +207668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -207682,8 +207682,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -207724,8 +207724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -207738,8 +207738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 510.000,
          "y" : 297.0000
       },
@@ -207892,8 +207892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207906,8 +207906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207948,8 +207948,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -207962,8 +207962,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 498.000,
          "y" : 295.0000
       },
@@ -208004,8 +208004,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -208018,8 +208018,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -208060,8 +208060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -208074,8 +208074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 506.000,
          "y" : 295.0000
       },
@@ -212036,8 +212036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -212050,8 +212050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -212092,8 +212092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -212106,8 +212106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -212148,8 +212148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -212162,8 +212162,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -212204,8 +212204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -212218,8 +212218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -212428,8 +212428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -212442,8 +212442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -212484,8 +212484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -212498,8 +212498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -212540,8 +212540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -212554,8 +212554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -212596,8 +212596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -212610,8 +212610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -212988,8 +212988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213002,8 +213002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213044,8 +213044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213058,8 +213058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213100,8 +213100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -213114,8 +213114,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -213156,8 +213156,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -213170,8 +213170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -213380,8 +213380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -213394,8 +213394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -213436,8 +213436,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -213450,8 +213450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -213492,8 +213492,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -213506,8 +213506,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -213548,8 +213548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -213562,8 +213562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -213884,8 +213884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213898,8 +213898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213940,8 +213940,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213954,8 +213954,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -213996,8 +213996,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214010,8 +214010,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214052,8 +214052,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214066,8 +214066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214220,8 +214220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -214234,8 +214234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -214276,8 +214276,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -214290,8 +214290,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -214332,8 +214332,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -214346,8 +214346,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -214388,8 +214388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -214402,8 +214402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -214724,8 +214724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -214738,8 +214738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -214780,8 +214780,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -214794,8 +214794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 512,
          "y" : 297.0000
       },
@@ -214836,8 +214836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214850,8 +214850,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214892,8 +214892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -214906,8 +214906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 526.000,
          "y" : 297.0000
       },
@@ -215060,8 +215060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -215074,8 +215074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -215116,8 +215116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -215130,8 +215130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 514.000,
          "y" : 295.0000
       },
@@ -215172,8 +215172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -215186,8 +215186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -215228,8 +215228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -215242,8 +215242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 522.000,
          "y" : 295.0000
       },
@@ -219204,8 +219204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -219218,8 +219218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -219260,8 +219260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -219274,8 +219274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -219316,8 +219316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -219330,8 +219330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -219372,8 +219372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -219386,8 +219386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -219596,8 +219596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -219610,8 +219610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -219652,8 +219652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -219666,8 +219666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -219708,8 +219708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -219722,8 +219722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -219764,8 +219764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -219778,8 +219778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -220156,8 +220156,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -220170,8 +220170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -220212,8 +220212,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -220226,8 +220226,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -220268,8 +220268,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -220282,8 +220282,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -220324,8 +220324,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -220338,8 +220338,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -220548,8 +220548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -220562,8 +220562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -220604,8 +220604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -220618,8 +220618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -220660,8 +220660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -220674,8 +220674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -220716,8 +220716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -220730,8 +220730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -221052,8 +221052,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221066,8 +221066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221108,8 +221108,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221122,8 +221122,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221164,8 +221164,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -221178,8 +221178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -221220,8 +221220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -221234,8 +221234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -221388,8 +221388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -221402,8 +221402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -221444,8 +221444,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -221458,8 +221458,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -221500,8 +221500,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -221514,8 +221514,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -221556,8 +221556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -221570,8 +221570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -221892,8 +221892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221906,8 +221906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221948,8 +221948,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -221962,8 +221962,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 528,
          "y" : 297.0000
       },
@@ -222004,8 +222004,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -222018,8 +222018,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -222060,8 +222060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -222074,8 +222074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 542.000,
          "y" : 297.0000
       },
@@ -222228,8 +222228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -222242,8 +222242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -222284,8 +222284,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -222298,8 +222298,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 530.000,
          "y" : 295.0000
       },
@@ -222340,8 +222340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -222354,8 +222354,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -222396,8 +222396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -222410,8 +222410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 538.000,
          "y" : 295.0000
       },
@@ -226372,8 +226372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -226386,8 +226386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -226428,8 +226428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -226442,8 +226442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -226484,8 +226484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -226498,8 +226498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -226540,8 +226540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -226554,8 +226554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -226764,8 +226764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -226778,8 +226778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -226820,8 +226820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -226834,8 +226834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -226876,8 +226876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -226890,8 +226890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -226932,8 +226932,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -226946,8 +226946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -227324,8 +227324,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -227338,8 +227338,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -227380,8 +227380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -227394,8 +227394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -227436,8 +227436,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -227450,8 +227450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -227492,8 +227492,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -227506,8 +227506,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -227716,8 +227716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -227730,8 +227730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -227772,8 +227772,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -227786,8 +227786,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -227828,8 +227828,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -227842,8 +227842,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -227884,8 +227884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -227898,8 +227898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -228220,8 +228220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -228234,8 +228234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -228276,8 +228276,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -228290,8 +228290,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -228332,8 +228332,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -228346,8 +228346,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -228388,8 +228388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -228402,8 +228402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -228556,8 +228556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -228570,8 +228570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -228612,8 +228612,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -228626,8 +228626,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -228668,8 +228668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -228682,8 +228682,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -228724,8 +228724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -228738,8 +228738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -229060,8 +229060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -229074,8 +229074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -229116,8 +229116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -229130,8 +229130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 560,
          "y" : 297.0000
       },
@@ -229172,8 +229172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -229186,8 +229186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -229228,8 +229228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -229242,8 +229242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 574.000,
          "y" : 297.0000
       },
@@ -229396,8 +229396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -229410,8 +229410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -229452,8 +229452,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -229466,8 +229466,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 562.000,
          "y" : 295.0000
       },
@@ -229508,8 +229508,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -229522,8 +229522,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -229564,8 +229564,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -229578,8 +229578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 570.000,
          "y" : 295.0000
       },
@@ -233540,8 +233540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -233554,8 +233554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -233596,8 +233596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -233610,8 +233610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -233652,8 +233652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -233666,8 +233666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -233708,8 +233708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -233722,8 +233722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -233932,8 +233932,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -233946,8 +233946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -233988,8 +233988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -234002,8 +234002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -234044,8 +234044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -234058,8 +234058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -234100,8 +234100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -234114,8 +234114,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -234492,8 +234492,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -234506,8 +234506,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -234548,8 +234548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -234562,8 +234562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -234604,8 +234604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -234618,8 +234618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -234660,8 +234660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -234674,8 +234674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -234884,8 +234884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -234898,8 +234898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -234940,8 +234940,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -234954,8 +234954,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -234996,8 +234996,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235010,8 +235010,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235052,8 +235052,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235066,8 +235066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235388,8 +235388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -235402,8 +235402,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -235444,8 +235444,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -235458,8 +235458,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -235500,8 +235500,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -235514,8 +235514,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -235556,8 +235556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -235570,8 +235570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -235724,8 +235724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -235738,8 +235738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -235780,8 +235780,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -235794,8 +235794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -235836,8 +235836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235850,8 +235850,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235892,8 +235892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -235906,8 +235906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -236228,8 +236228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -236242,8 +236242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -236284,8 +236284,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -236298,8 +236298,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 576,
          "y" : 297.0000
       },
@@ -236340,8 +236340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -236354,8 +236354,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -236396,8 +236396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -236410,8 +236410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 590.000,
          "y" : 297.0000
       },
@@ -236564,8 +236564,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -236578,8 +236578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -236620,8 +236620,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -236634,8 +236634,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 578.000,
          "y" : 295.0000
       },
@@ -236676,8 +236676,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -236690,8 +236690,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -236732,8 +236732,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -236746,8 +236746,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 586.000,
          "y" : 295.0000
       },
@@ -251194,8 +251194,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251208,8 +251208,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251222,8 +251222,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251236,8 +251236,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251250,8 +251250,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251264,8 +251264,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251278,8 +251278,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251292,8 +251292,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251306,8 +251306,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251320,8 +251320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251334,8 +251334,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251348,8 +251348,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251362,8 +251362,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251376,8 +251376,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251390,8 +251390,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251404,8 +251404,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251418,8 +251418,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251432,8 +251432,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251446,8 +251446,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251460,8 +251460,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251474,8 +251474,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 22.62741699796952078082701958,
          "x" : 880,
          "y" : 416
       },
@@ -251488,8 +251488,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 22.62741699796952078082701958,
          "x" : 880,
          "y" : 416
       },
@@ -251502,8 +251502,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251516,8 +251516,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -251530,8 +251530,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 416
       },
@@ -252217,7 +252217,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 424.0
       },
@@ -252231,7 +252231,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 424.0
       },
@@ -252245,7 +252245,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 424.0
       },
@@ -252259,7 +252259,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 424.0
       },
@@ -252272,8 +252272,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 416
       },
@@ -252315,7 +252315,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252329,7 +252329,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252342,8 +252342,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 416
       },
@@ -252385,7 +252385,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252398,8 +252398,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 416
       },
@@ -252441,7 +252441,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252455,7 +252455,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252468,8 +252468,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 416
       },
@@ -252511,7 +252511,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252524,7 +252524,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 416
@@ -252567,7 +252567,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252581,7 +252581,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252594,7 +252594,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 416
@@ -252637,7 +252637,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252650,7 +252650,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 416
@@ -252693,7 +252693,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -252707,7 +252707,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 416
       },
@@ -283380,8 +283380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283395,7 +283395,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283409,7 +283409,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283423,7 +283423,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283437,7 +283437,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283450,8 +283450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 288
       },
@@ -283493,7 +283493,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283507,7 +283507,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283520,8 +283520,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283535,7 +283535,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283549,7 +283549,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283563,7 +283563,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283577,7 +283577,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 296.0
       },
@@ -283590,8 +283590,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 288
       },
@@ -283633,7 +283633,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283647,7 +283647,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283660,8 +283660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 288
       },
@@ -283703,7 +283703,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283717,7 +283717,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283730,8 +283730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 288
       },
@@ -283773,7 +283773,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283787,7 +283787,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283800,7 +283800,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 232.0,
          "y" : 288
@@ -283843,7 +283843,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283857,7 +283857,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283870,7 +283870,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 232.0,
          "y" : 288
@@ -283913,7 +283913,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283927,7 +283927,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283940,7 +283940,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 232.0,
          "y" : 288
@@ -283983,7 +283983,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -283997,7 +283997,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 288
       },
@@ -284081,7 +284081,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284095,7 +284095,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284109,7 +284109,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284123,7 +284123,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284165,7 +284165,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284179,7 +284179,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284193,7 +284193,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284207,7 +284207,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284221,7 +284221,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284235,7 +284235,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 424.0
       },
@@ -284277,7 +284277,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284291,7 +284291,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284333,7 +284333,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284347,7 +284347,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284389,7 +284389,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284403,7 +284403,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284445,7 +284445,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284459,7 +284459,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284501,7 +284501,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284515,7 +284515,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284557,7 +284557,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284571,7 +284571,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 432,
          "y" : 416
       },
@@ -284640,8 +284640,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284655,7 +284655,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284669,7 +284669,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284683,7 +284683,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284697,7 +284697,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284710,8 +284710,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 904.0,
          "y" : 368
       },
@@ -284753,7 +284753,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284767,7 +284767,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284780,8 +284780,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284795,7 +284795,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284809,7 +284809,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284823,7 +284823,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284837,7 +284837,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 376.0
       },
@@ -284850,8 +284850,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 904.0,
          "y" : 368
       },
@@ -284893,7 +284893,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284907,7 +284907,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284920,8 +284920,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 904.0,
          "y" : 368
       },
@@ -284963,7 +284963,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284977,7 +284977,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -284990,8 +284990,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 904.0,
          "y" : 368
       },
@@ -285033,7 +285033,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285047,7 +285047,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285060,7 +285060,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 904.0,
          "y" : 368
@@ -285103,7 +285103,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285117,7 +285117,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285130,7 +285130,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 904.0,
          "y" : 368
@@ -285173,7 +285173,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285187,7 +285187,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285200,7 +285200,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 904.0,
          "y" : 368
@@ -285243,7 +285243,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285257,7 +285257,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -285340,8 +285340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285355,7 +285355,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285369,7 +285369,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285383,7 +285383,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285397,7 +285397,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285410,8 +285410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 264.0,
          "y" : 288
       },
@@ -285453,7 +285453,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285467,7 +285467,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285480,8 +285480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285495,7 +285495,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285509,7 +285509,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285523,7 +285523,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285537,7 +285537,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 296.0
       },
@@ -285550,8 +285550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 264.0,
          "y" : 288
       },
@@ -285593,7 +285593,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285607,7 +285607,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285620,8 +285620,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 264.0,
          "y" : 288
       },
@@ -285663,7 +285663,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285677,7 +285677,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285690,8 +285690,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 264.0,
          "y" : 288
       },
@@ -285733,7 +285733,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285747,7 +285747,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285760,7 +285760,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 264.0,
          "y" : 288
@@ -285803,7 +285803,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285817,7 +285817,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285830,7 +285830,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 264.0,
          "y" : 288
@@ -285873,7 +285873,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285887,7 +285887,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285900,7 +285900,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 264.0,
          "y" : 288
@@ -285943,7 +285943,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -285957,7 +285957,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 256,
          "y" : 288
       },
@@ -286040,8 +286040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286055,7 +286055,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286069,7 +286069,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286083,7 +286083,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286097,7 +286097,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286110,8 +286110,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 352
       },
@@ -286153,7 +286153,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286167,7 +286167,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286180,8 +286180,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286195,7 +286195,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286209,7 +286209,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286223,7 +286223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286237,7 +286237,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 360.0
       },
@@ -286250,8 +286250,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 352
       },
@@ -286293,7 +286293,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286307,7 +286307,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286320,8 +286320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 352
       },
@@ -286363,7 +286363,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286377,7 +286377,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286390,8 +286390,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 352
       },
@@ -286433,7 +286433,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286447,7 +286447,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286460,7 +286460,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 280.0,
          "y" : 352
@@ -286503,7 +286503,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286517,7 +286517,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286530,7 +286530,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 280.0,
          "y" : 352
@@ -286573,7 +286573,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286587,7 +286587,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286600,7 +286600,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 280.0,
          "y" : 352
@@ -286643,7 +286643,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286657,7 +286657,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 352
       },
@@ -286740,8 +286740,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -286755,7 +286755,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286769,7 +286769,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286783,7 +286783,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286797,7 +286797,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286810,8 +286810,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 416
       },
@@ -286853,7 +286853,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -286867,7 +286867,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -286880,8 +286880,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -286895,7 +286895,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286909,7 +286909,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286923,7 +286923,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286937,7 +286937,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 424.0
       },
@@ -286950,8 +286950,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 416
       },
@@ -286993,7 +286993,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287007,7 +287007,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287020,8 +287020,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 416
       },
@@ -287063,7 +287063,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287077,7 +287077,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287090,8 +287090,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 968.0,
          "y" : 416
       },
@@ -287133,7 +287133,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287147,7 +287147,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287160,7 +287160,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 968.0,
          "y" : 416
@@ -287203,7 +287203,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287217,7 +287217,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287230,7 +287230,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 968.0,
          "y" : 416
@@ -287273,7 +287273,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287287,7 +287287,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287300,7 +287300,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 968.0,
          "y" : 416
@@ -287343,7 +287343,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287357,7 +287357,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -287441,7 +287441,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 296.0
       },
@@ -287455,7 +287455,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 296.0
       },
@@ -287469,7 +287469,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 296.0
       },
@@ -287483,7 +287483,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 296.0
       },
@@ -287496,8 +287496,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 288
       },
@@ -287539,7 +287539,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287553,7 +287553,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287566,8 +287566,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 288
       },
@@ -287609,7 +287609,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287622,8 +287622,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 288
       },
@@ -287665,7 +287665,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287679,7 +287679,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287692,8 +287692,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 288
       },
@@ -287735,7 +287735,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287748,7 +287748,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 200.0,
          "y" : 288
@@ -287791,7 +287791,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287805,7 +287805,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287818,7 +287818,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 200.0,
          "y" : 288
@@ -287861,7 +287861,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287874,7 +287874,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 200.0,
          "y" : 288
@@ -287917,7 +287917,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -287931,7 +287931,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 288
       },
@@ -288001,7 +288001,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288015,7 +288015,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288029,7 +288029,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288043,7 +288043,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288085,7 +288085,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288099,7 +288099,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288113,7 +288113,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288127,7 +288127,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288141,7 +288141,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288155,7 +288155,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 344.0
       },
@@ -288197,7 +288197,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288211,7 +288211,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288253,7 +288253,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288267,7 +288267,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288309,7 +288309,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288323,7 +288323,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288365,7 +288365,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288379,7 +288379,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288421,7 +288421,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288435,7 +288435,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288477,7 +288477,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288491,7 +288491,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 80,
          "y" : 336
       },
@@ -288560,8 +288560,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288575,7 +288575,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288589,7 +288589,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288603,7 +288603,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288617,7 +288617,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288630,8 +288630,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 416
       },
@@ -288673,7 +288673,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288687,7 +288687,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288700,8 +288700,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288715,7 +288715,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288729,7 +288729,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288743,7 +288743,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288757,7 +288757,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 424.0
       },
@@ -288770,8 +288770,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 416
       },
@@ -288813,7 +288813,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288827,7 +288827,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288840,8 +288840,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 416
       },
@@ -288883,7 +288883,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288897,7 +288897,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288910,8 +288910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 536.0,
          "y" : 416
       },
@@ -288953,7 +288953,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288967,7 +288967,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -288980,7 +288980,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 536.0,
          "y" : 416
@@ -289023,7 +289023,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -289037,7 +289037,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -289050,7 +289050,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 536.0,
          "y" : 416
@@ -289093,7 +289093,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -289107,7 +289107,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -289120,7 +289120,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 536.0,
          "y" : 416
@@ -289163,7 +289163,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -289177,7 +289177,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 528,
          "y" : 416
       },
@@ -289260,8 +289260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289275,7 +289275,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289289,7 +289289,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289303,7 +289303,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289317,7 +289317,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289330,8 +289330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 288
       },
@@ -289373,7 +289373,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289387,7 +289387,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289400,8 +289400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289415,7 +289415,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289429,7 +289429,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289443,7 +289443,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289457,7 +289457,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 296.0
       },
@@ -289470,8 +289470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 288
       },
@@ -289513,7 +289513,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289527,7 +289527,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289540,8 +289540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 288
       },
@@ -289583,7 +289583,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289597,7 +289597,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289610,8 +289610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 288
       },
@@ -289653,7 +289653,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289667,7 +289667,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289680,7 +289680,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 216.0,
          "y" : 288
@@ -289723,7 +289723,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289737,7 +289737,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289750,7 +289750,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 216.0,
          "y" : 288
@@ -289793,7 +289793,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289807,7 +289807,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289820,7 +289820,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 216.0,
          "y" : 288
@@ -289863,7 +289863,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289877,7 +289877,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -289960,8 +289960,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -289975,7 +289975,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -289989,7 +289989,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290003,7 +290003,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290017,7 +290017,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290030,8 +290030,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 288
       },
@@ -290073,7 +290073,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290087,7 +290087,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290100,8 +290100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290115,7 +290115,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290129,7 +290129,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290143,7 +290143,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290157,7 +290157,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 296.0
       },
@@ -290170,8 +290170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 288
       },
@@ -290213,7 +290213,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290227,7 +290227,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290240,8 +290240,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 288
       },
@@ -290283,7 +290283,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290297,7 +290297,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290310,8 +290310,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 280.0,
          "y" : 288
       },
@@ -290353,7 +290353,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290367,7 +290367,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290380,7 +290380,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 280.0,
          "y" : 288
@@ -290423,7 +290423,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290437,7 +290437,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290450,7 +290450,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 280.0,
          "y" : 288
@@ -290493,7 +290493,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290507,7 +290507,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290520,7 +290520,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 280.0,
          "y" : 288
@@ -290563,7 +290563,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290577,7 +290577,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -290660,8 +290660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290675,7 +290675,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290689,7 +290689,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290703,7 +290703,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290717,7 +290717,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290730,8 +290730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 432
       },
@@ -290773,7 +290773,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290787,7 +290787,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290800,8 +290800,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290815,7 +290815,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290829,7 +290829,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290843,7 +290843,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290857,7 +290857,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 440.0
       },
@@ -290870,8 +290870,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 432
       },
@@ -290913,7 +290913,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290927,7 +290927,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290940,8 +290940,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 432
       },
@@ -290983,7 +290983,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -290997,7 +290997,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291010,8 +291010,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 456.0,
          "y" : 432
       },
@@ -291053,7 +291053,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291067,7 +291067,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291080,7 +291080,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 456.0,
          "y" : 432
@@ -291123,7 +291123,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291137,7 +291137,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291150,7 +291150,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 456.0,
          "y" : 432
@@ -291193,7 +291193,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291207,7 +291207,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291220,7 +291220,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 456.0,
          "y" : 432
@@ -291263,7 +291263,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291277,7 +291277,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -291360,8 +291360,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291375,7 +291375,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291389,7 +291389,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291403,7 +291403,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291417,7 +291417,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291430,8 +291430,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 296.0,
          "y" : 288
       },
@@ -291473,7 +291473,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291487,7 +291487,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291500,8 +291500,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291515,7 +291515,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291529,7 +291529,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291543,7 +291543,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291557,7 +291557,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 296.0
       },
@@ -291570,8 +291570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 296.0,
          "y" : 288
       },
@@ -291613,7 +291613,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291627,7 +291627,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291640,8 +291640,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 296.0,
          "y" : 288
       },
@@ -291683,7 +291683,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291697,7 +291697,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291710,8 +291710,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 296.0,
          "y" : 288
       },
@@ -291753,7 +291753,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291767,7 +291767,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291780,7 +291780,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 296.0,
          "y" : 288
@@ -291823,7 +291823,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291837,7 +291837,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291850,7 +291850,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 296.0,
          "y" : 288
@@ -291893,7 +291893,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291907,7 +291907,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291920,7 +291920,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 296.0,
          "y" : 288
@@ -291963,7 +291963,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -291977,7 +291977,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 288,
          "y" : 288
       },
@@ -292060,8 +292060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292075,7 +292075,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292089,7 +292089,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292103,7 +292103,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292117,7 +292117,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292130,8 +292130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 248.0,
          "y" : 288
       },
@@ -292173,7 +292173,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292187,7 +292187,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292200,8 +292200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292215,7 +292215,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292229,7 +292229,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292243,7 +292243,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292257,7 +292257,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 296.0
       },
@@ -292270,8 +292270,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 248.0,
          "y" : 288
       },
@@ -292313,7 +292313,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292327,7 +292327,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292340,8 +292340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 248.0,
          "y" : 288
       },
@@ -292383,7 +292383,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292397,7 +292397,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292410,8 +292410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 248.0,
          "y" : 288
       },
@@ -292453,7 +292453,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292467,7 +292467,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292480,7 +292480,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 248.0,
          "y" : 288
@@ -292523,7 +292523,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292537,7 +292537,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292550,7 +292550,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 248.0,
          "y" : 288
@@ -292593,7 +292593,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292607,7 +292607,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292620,7 +292620,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 248.0,
          "y" : 288
@@ -292663,7 +292663,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292677,7 +292677,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -292844,8 +292844,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292858,8 +292858,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292872,8 +292872,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292886,8 +292886,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292900,8 +292900,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292914,8 +292914,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292928,8 +292928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292942,8 +292942,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292956,8 +292956,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292970,8 +292970,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292984,8 +292984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -292998,8 +292998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293012,8 +293012,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293026,8 +293026,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293040,8 +293040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293054,8 +293054,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293068,8 +293068,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293082,8 +293082,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293222,8 +293222,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293236,8 +293236,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293250,8 +293250,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293264,8 +293264,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293278,8 +293278,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293292,8 +293292,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293306,8 +293306,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293320,8 +293320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293334,8 +293334,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 128,
          "y" : 352
       },
@@ -293432,8 +293432,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293446,8 +293446,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293460,8 +293460,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293474,8 +293474,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293488,8 +293488,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293502,8 +293502,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293516,8 +293516,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293530,8 +293530,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293544,8 +293544,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293558,8 +293558,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293572,8 +293572,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293586,8 +293586,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293600,8 +293600,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293614,8 +293614,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293628,8 +293628,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293642,8 +293642,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293656,8 +293656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293670,8 +293670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293810,8 +293810,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293824,8 +293824,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293838,8 +293838,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293852,8 +293852,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293866,8 +293866,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293880,8 +293880,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293894,8 +293894,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293908,8 +293908,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -293922,8 +293922,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 48,
          "y" : 416
       },
@@ -294020,8 +294020,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294034,8 +294034,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294048,8 +294048,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294062,8 +294062,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294076,8 +294076,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294090,8 +294090,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294104,8 +294104,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294118,8 +294118,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294132,8 +294132,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294146,8 +294146,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294160,8 +294160,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294174,8 +294174,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294188,8 +294188,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294202,8 +294202,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294216,8 +294216,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294230,8 +294230,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294244,8 +294244,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294258,8 +294258,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294398,8 +294398,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294412,8 +294412,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294426,8 +294426,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294440,8 +294440,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294454,8 +294454,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294468,8 +294468,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294482,8 +294482,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294496,8 +294496,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294510,8 +294510,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 416
       },
@@ -294608,8 +294608,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294622,8 +294622,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294636,8 +294636,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294650,8 +294650,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294664,8 +294664,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294678,8 +294678,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294692,8 +294692,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294706,8 +294706,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294720,8 +294720,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294734,8 +294734,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294748,8 +294748,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294762,8 +294762,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294776,8 +294776,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294790,8 +294790,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294804,8 +294804,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294818,8 +294818,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294832,8 +294832,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294846,8 +294846,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -294986,8 +294986,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295000,8 +295000,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295014,8 +295014,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295028,8 +295028,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295042,8 +295042,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295056,8 +295056,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295070,8 +295070,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295084,8 +295084,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295098,8 +295098,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 896,
          "y" : 368
       },
@@ -295196,8 +295196,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295210,8 +295210,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295224,8 +295224,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295238,8 +295238,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295252,8 +295252,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295266,8 +295266,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295280,8 +295280,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295294,8 +295294,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295308,8 +295308,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295322,8 +295322,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295336,8 +295336,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295350,8 +295350,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295364,8 +295364,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295378,8 +295378,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295392,8 +295392,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295406,8 +295406,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295420,8 +295420,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295434,8 +295434,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295574,8 +295574,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295588,8 +295588,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295602,8 +295602,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295616,8 +295616,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295630,8 +295630,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295644,8 +295644,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295658,8 +295658,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295672,8 +295672,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295686,8 +295686,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 288
       },
@@ -295784,8 +295784,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295798,8 +295798,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295812,8 +295812,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295826,8 +295826,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295840,8 +295840,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295854,8 +295854,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295868,8 +295868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295882,8 +295882,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295896,8 +295896,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295910,8 +295910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295924,8 +295924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295938,8 +295938,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295952,8 +295952,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295966,8 +295966,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295980,8 +295980,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -295994,8 +295994,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296008,8 +296008,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296022,8 +296022,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296162,8 +296162,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296176,8 +296176,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296190,8 +296190,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296204,8 +296204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296218,8 +296218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296232,8 +296232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296246,8 +296246,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296260,8 +296260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296274,8 +296274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 880,
          "y" : 368
       },
@@ -296372,8 +296372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296386,8 +296386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296400,8 +296400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296414,8 +296414,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296428,8 +296428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296442,8 +296442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296456,8 +296456,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296470,8 +296470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296484,8 +296484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296498,8 +296498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296512,8 +296512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296526,8 +296526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296540,8 +296540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296554,8 +296554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296568,8 +296568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296582,8 +296582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296596,8 +296596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296610,8 +296610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296750,8 +296750,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296764,8 +296764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296778,8 +296778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296792,8 +296792,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296806,8 +296806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296820,8 +296820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296834,8 +296834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296848,8 +296848,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296862,8 +296862,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 368
       },
@@ -296960,8 +296960,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -296974,8 +296974,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -296988,8 +296988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297002,8 +297002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297016,8 +297016,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297030,8 +297030,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297044,8 +297044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297058,8 +297058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297072,8 +297072,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297086,8 +297086,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297100,8 +297100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297114,8 +297114,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297128,8 +297128,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297142,8 +297142,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297156,8 +297156,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297170,8 +297170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297184,8 +297184,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297198,8 +297198,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297338,8 +297338,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297352,8 +297352,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297366,8 +297366,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297380,8 +297380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297394,8 +297394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297408,8 +297408,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297422,8 +297422,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297436,8 +297436,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297450,8 +297450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 432,
          "y" : 384
       },
@@ -297548,8 +297548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297562,8 +297562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297576,8 +297576,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297590,8 +297590,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297604,8 +297604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297618,8 +297618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297632,8 +297632,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297646,8 +297646,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297660,8 +297660,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297674,8 +297674,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297688,8 +297688,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297702,8 +297702,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297716,8 +297716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297730,8 +297730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297744,8 +297744,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297758,8 +297758,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297772,8 +297772,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297786,8 +297786,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297926,8 +297926,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297940,8 +297940,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297954,8 +297954,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297968,8 +297968,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297982,8 +297982,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -297996,8 +297996,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -298010,8 +298010,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -298024,8 +298024,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -298038,8 +298038,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 272,
          "y" : 288
       },
@@ -298136,8 +298136,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298150,8 +298150,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298164,8 +298164,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298178,8 +298178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298192,8 +298192,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298206,8 +298206,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298220,8 +298220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298234,8 +298234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298248,8 +298248,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298262,8 +298262,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298276,8 +298276,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298290,8 +298290,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298304,8 +298304,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298318,8 +298318,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298332,8 +298332,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298346,8 +298346,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298360,8 +298360,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298374,8 +298374,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298514,8 +298514,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298528,8 +298528,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298542,8 +298542,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298556,8 +298556,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298570,8 +298570,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298584,8 +298584,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298598,8 +298598,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298612,8 +298612,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298626,8 +298626,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 448,
          "y" : 432
       },
@@ -298724,8 +298724,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298738,8 +298738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298752,8 +298752,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298766,8 +298766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298780,8 +298780,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298794,8 +298794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298808,8 +298808,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298822,8 +298822,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298836,8 +298836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298850,8 +298850,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298864,8 +298864,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298878,8 +298878,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298892,8 +298892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298906,8 +298906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298920,8 +298920,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298934,8 +298934,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298948,8 +298948,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -298962,8 +298962,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299102,8 +299102,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299116,8 +299116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299130,8 +299130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299144,8 +299144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299158,8 +299158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299172,8 +299172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299186,8 +299186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299200,8 +299200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299214,8 +299214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 96,
          "y" : 336
       },
@@ -299312,8 +299312,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299326,8 +299326,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299340,8 +299340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299354,8 +299354,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299368,8 +299368,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299382,8 +299382,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299396,8 +299396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299410,8 +299410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299424,8 +299424,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299438,8 +299438,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299452,8 +299452,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299466,8 +299466,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299480,8 +299480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299494,8 +299494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299508,8 +299508,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299522,8 +299522,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299536,8 +299536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299550,8 +299550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299690,8 +299690,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299704,8 +299704,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299718,8 +299718,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299732,8 +299732,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299746,8 +299746,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299760,8 +299760,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299774,8 +299774,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299788,8 +299788,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299802,8 +299802,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 416
       },
@@ -299900,8 +299900,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299914,8 +299914,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299928,8 +299928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299942,8 +299942,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299956,8 +299956,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299970,8 +299970,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299984,8 +299984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -299998,8 +299998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300012,8 +300012,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300026,8 +300026,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300040,8 +300040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300054,8 +300054,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300068,8 +300068,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300082,8 +300082,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300096,8 +300096,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300110,8 +300110,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300124,8 +300124,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300138,8 +300138,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300278,8 +300278,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300292,8 +300292,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300306,8 +300306,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300320,8 +300320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300334,8 +300334,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300348,8 +300348,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300362,8 +300362,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300376,8 +300376,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -300390,8 +300390,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 240,
          "y" : 288
       },
@@ -318632,8 +318632,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -318646,8 +318646,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -318688,8 +318688,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -318702,8 +318702,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -318744,8 +318744,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -318758,8 +318758,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -318800,8 +318800,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -318814,8 +318814,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -319024,8 +319024,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -319038,8 +319038,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -319080,8 +319080,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -319094,8 +319094,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -319136,8 +319136,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -319150,8 +319150,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -319192,8 +319192,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -319206,8 +319206,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -319584,8 +319584,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -319598,8 +319598,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -319640,8 +319640,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -319654,8 +319654,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -319696,8 +319696,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -319710,8 +319710,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -319752,8 +319752,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -319766,8 +319766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -319976,8 +319976,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -319990,8 +319990,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320032,8 +320032,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320046,8 +320046,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320088,8 +320088,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320102,8 +320102,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320144,8 +320144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320158,8 +320158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320480,8 +320480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -320494,8 +320494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -320536,8 +320536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -320550,8 +320550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -320592,8 +320592,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -320606,8 +320606,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -320648,8 +320648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -320662,8 +320662,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -320816,8 +320816,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320830,8 +320830,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320872,8 +320872,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320886,8 +320886,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -320928,8 +320928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320942,8 +320942,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320984,8 +320984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -320998,8 +320998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -321320,8 +321320,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -321334,8 +321334,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -321376,8 +321376,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -321390,8 +321390,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 928,
          "y" : 489.0000
       },
@@ -321432,8 +321432,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -321446,8 +321446,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -321488,8 +321488,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -321502,8 +321502,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 942.000,
          "y" : 489.0000
       },
@@ -321656,8 +321656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -321670,8 +321670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -321712,8 +321712,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -321726,8 +321726,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 930.000,
          "y" : 487.0000
       },
@@ -321768,8 +321768,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -321782,8 +321782,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -321824,8 +321824,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -321838,8 +321838,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 938.000,
          "y" : 487.0000
       },
@@ -325800,8 +325800,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -325814,8 +325814,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -325856,8 +325856,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -325870,8 +325870,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -325912,8 +325912,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -325926,8 +325926,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -325968,8 +325968,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -325982,8 +325982,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -326192,8 +326192,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -326206,8 +326206,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -326248,8 +326248,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -326262,8 +326262,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -326304,8 +326304,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -326318,8 +326318,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -326360,8 +326360,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -326374,8 +326374,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -326752,8 +326752,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -326766,8 +326766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -326808,8 +326808,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -326822,8 +326822,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -326864,8 +326864,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -326878,8 +326878,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -326920,8 +326920,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -326934,8 +326934,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -327144,8 +327144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -327158,8 +327158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -327200,8 +327200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -327214,8 +327214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -327256,8 +327256,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -327270,8 +327270,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -327312,8 +327312,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -327326,8 +327326,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -327648,8 +327648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -327662,8 +327662,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -327704,8 +327704,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -327718,8 +327718,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -327760,8 +327760,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -327774,8 +327774,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -327816,8 +327816,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -327830,8 +327830,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -327984,8 +327984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -327998,8 +327998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328040,8 +328040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328054,8 +328054,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328096,8 +328096,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -328110,8 +328110,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -328152,8 +328152,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -328166,8 +328166,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -328488,8 +328488,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -328502,8 +328502,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -328544,8 +328544,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -328558,8 +328558,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 944,
          "y" : 489.0000
       },
@@ -328600,8 +328600,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -328614,8 +328614,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -328656,8 +328656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -328670,8 +328670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
-         "w" : 4.00,
+         "h" : 4.00,
+         "w" : 2.000,
          "x" : 958.000,
          "y" : 489.0000
       },
@@ -328824,8 +328824,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328838,8 +328838,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328880,8 +328880,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328894,8 +328894,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 946.000,
          "y" : 487.0000
       },
@@ -328936,8 +328936,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -328950,8 +328950,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -328992,8 +328992,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -329006,8 +329006,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 954.000,
          "y" : 487.0000
       },
@@ -329049,7 +329049,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 488.0
       },
@@ -329063,7 +329063,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 488.0
       },
@@ -329077,7 +329077,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 488.0
       },
@@ -329091,7 +329091,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 488.0
       },
@@ -329104,8 +329104,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 936.0,
          "y" : 480
       },
@@ -329147,7 +329147,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329161,7 +329161,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329174,8 +329174,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 936.0,
          "y" : 480
       },
@@ -329217,7 +329217,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329230,8 +329230,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 936.0,
          "y" : 480
       },
@@ -329273,7 +329273,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329287,7 +329287,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329300,8 +329300,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 936.0,
          "y" : 480
       },
@@ -329343,7 +329343,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329356,7 +329356,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 936.0,
          "y" : 480
@@ -329399,7 +329399,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329413,7 +329413,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329426,7 +329426,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 936.0,
          "y" : 480
@@ -329469,7 +329469,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329482,7 +329482,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 936.0,
          "y" : 480
@@ -329525,7 +329525,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329539,7 +329539,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 928,
          "y" : 480
       },
@@ -329609,7 +329609,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 488.0
       },
@@ -329623,7 +329623,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 488.0
       },
@@ -329637,7 +329637,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 488.0
       },
@@ -329651,7 +329651,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 488.0
       },
@@ -329664,8 +329664,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 952.0,
          "y" : 480
       },
@@ -329707,7 +329707,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329721,7 +329721,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329734,8 +329734,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 952.0,
          "y" : 480
       },
@@ -329777,7 +329777,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329790,8 +329790,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 952.0,
          "y" : 480
       },
@@ -329833,7 +329833,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329847,7 +329847,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329860,8 +329860,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 952.0,
          "y" : 480
       },
@@ -329903,7 +329903,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329916,7 +329916,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 952.0,
          "y" : 480
@@ -329959,7 +329959,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329973,7 +329973,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -329986,7 +329986,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 952.0,
          "y" : 480
@@ -330029,7 +330029,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -330042,7 +330042,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 952.0,
          "y" : 480
@@ -330085,7 +330085,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -330099,7 +330099,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 944,
          "y" : 480
       },
@@ -330322,8 +330322,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330336,8 +330336,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330350,7 +330350,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330364,7 +330364,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330378,8 +330378,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330392,8 +330392,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330406,8 +330406,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330420,7 +330420,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330434,7 +330434,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330448,8 +330448,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330462,8 +330462,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330476,8 +330476,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330490,8 +330490,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330504,7 +330504,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330518,7 +330518,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330532,8 +330532,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330546,8 +330546,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330560,8 +330560,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330574,7 +330574,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330588,7 +330588,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
@@ -330602,8 +330602,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330616,8 +330616,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330630,8 +330630,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330644,8 +330644,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330658,8 +330658,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330672,8 +330672,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330686,8 +330686,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330700,8 +330700,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330714,8 +330714,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330728,8 +330728,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330742,8 +330742,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330756,8 +330756,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330770,8 +330770,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330784,8 +330784,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330798,8 +330798,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330812,8 +330812,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330826,8 +330826,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330840,8 +330840,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330854,8 +330854,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330868,8 +330868,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 933.0000,
          "y" : 486.000
       },
@@ -330882,8 +330882,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330896,8 +330896,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 933.0000,
          "y" : 494.000
       },
@@ -330910,8 +330910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -330924,8 +330924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 934.000,
          "y" : 494.000
       },
@@ -331246,8 +331246,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331260,8 +331260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331274,7 +331274,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331288,7 +331288,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331302,8 +331302,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331316,8 +331316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331330,8 +331330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331344,7 +331344,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331358,7 +331358,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331372,8 +331372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331386,8 +331386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331400,8 +331400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331414,8 +331414,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331428,7 +331428,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331442,7 +331442,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331456,8 +331456,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331470,8 +331470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331484,8 +331484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331498,7 +331498,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331512,7 +331512,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
@@ -331526,8 +331526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331540,8 +331540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331554,8 +331554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331568,8 +331568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331582,8 +331582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331596,8 +331596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331610,8 +331610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331624,8 +331624,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331638,8 +331638,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331652,8 +331652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331666,8 +331666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331680,8 +331680,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331694,8 +331694,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331708,8 +331708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331722,8 +331722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331736,8 +331736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331750,8 +331750,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331764,8 +331764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331778,8 +331778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331792,8 +331792,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 949.0000,
          "y" : 486.000
       },
@@ -331806,8 +331806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331820,8 +331820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 949.0000,
          "y" : 494.000
       },
@@ -331834,8 +331834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -331848,8 +331848,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 950.000,
          "y" : 494.000
       },
@@ -340766,8 +340766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 496
       },
@@ -340781,7 +340781,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340795,7 +340795,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340809,7 +340809,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340823,7 +340823,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340836,8 +340836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 496
       },
@@ -340879,7 +340879,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -340893,7 +340893,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -340906,8 +340906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 496
       },
@@ -340921,7 +340921,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340935,7 +340935,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340949,7 +340949,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340963,7 +340963,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 504.0
       },
@@ -340976,8 +340976,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 496
       },
@@ -341019,7 +341019,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341033,7 +341033,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341046,8 +341046,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 496
       },
@@ -341089,7 +341089,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341103,7 +341103,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341116,8 +341116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 496
       },
@@ -341159,7 +341159,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341173,7 +341173,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341186,7 +341186,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 496
@@ -341229,7 +341229,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341243,7 +341243,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341256,7 +341256,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 496
@@ -341299,7 +341299,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341313,7 +341313,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341326,7 +341326,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 496
@@ -341369,7 +341369,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341383,7 +341383,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341550,8 +341550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341564,8 +341564,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341578,8 +341578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341592,8 +341592,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341606,8 +341606,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341620,8 +341620,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341634,8 +341634,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341648,8 +341648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341662,8 +341662,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341676,8 +341676,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341690,8 +341690,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341704,8 +341704,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341718,8 +341718,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341732,8 +341732,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341746,8 +341746,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341760,8 +341760,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341774,8 +341774,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341788,8 +341788,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341928,8 +341928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341942,8 +341942,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341956,8 +341956,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341970,8 +341970,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341984,8 +341984,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -341998,8 +341998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -342012,8 +342012,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -342026,8 +342026,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -342040,8 +342040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 496
       },
@@ -342531,7 +342531,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 504.0
       },
@@ -342545,7 +342545,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 504.0
       },
@@ -342559,7 +342559,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 504.0
       },
@@ -342573,7 +342573,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 504.0
       },
@@ -342586,8 +342586,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 776.0,
          "y" : 496
       },
@@ -342629,7 +342629,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342643,7 +342643,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342656,8 +342656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 776.0,
          "y" : 496
       },
@@ -342699,7 +342699,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342712,8 +342712,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 776.0,
          "y" : 496
       },
@@ -342755,7 +342755,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342769,7 +342769,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342782,8 +342782,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 776.0,
          "y" : 496
       },
@@ -342825,7 +342825,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342838,7 +342838,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 776.0,
          "y" : 496
@@ -342881,7 +342881,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342895,7 +342895,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342908,7 +342908,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 776.0,
          "y" : 496
@@ -342951,7 +342951,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -342964,7 +342964,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 776.0,
          "y" : 496
@@ -343007,7 +343007,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343021,7 +343021,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343174,8 +343174,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343188,8 +343188,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343202,8 +343202,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343216,8 +343216,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343230,8 +343230,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343244,8 +343244,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343258,8 +343258,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343272,8 +343272,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343286,8 +343286,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343300,8 +343300,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343314,8 +343314,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343328,8 +343328,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343342,8 +343342,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343356,8 +343356,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343370,8 +343370,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343384,8 +343384,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343398,8 +343398,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343412,8 +343412,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343552,8 +343552,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343566,8 +343566,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343580,8 +343580,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343594,8 +343594,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343608,8 +343608,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343622,8 +343622,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343636,8 +343636,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343650,8 +343650,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343664,8 +343664,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 768,
          "y" : 496
       },
@@ -343762,8 +343762,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -343777,7 +343777,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343791,7 +343791,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343805,7 +343805,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343819,7 +343819,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343832,8 +343832,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 760.0,
          "y" : 496
       },
@@ -343875,7 +343875,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -343889,7 +343889,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -343902,8 +343902,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -343917,7 +343917,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343931,7 +343931,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343945,7 +343945,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343959,7 +343959,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 504.0
       },
@@ -343972,8 +343972,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 760.0,
          "y" : 496
       },
@@ -344015,7 +344015,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344029,7 +344029,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344042,8 +344042,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 760.0,
          "y" : 496
       },
@@ -344085,7 +344085,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344099,7 +344099,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344112,8 +344112,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 760.0,
          "y" : 496
       },
@@ -344155,7 +344155,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344169,7 +344169,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344182,7 +344182,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 760.0,
          "y" : 496
@@ -344225,7 +344225,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344239,7 +344239,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344252,7 +344252,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 760.0,
          "y" : 496
@@ -344295,7 +344295,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344309,7 +344309,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344322,7 +344322,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 760.0,
          "y" : 496
@@ -344365,7 +344365,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344379,7 +344379,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -344770,8 +344770,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -344784,8 +344784,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -344798,7 +344798,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -344812,7 +344812,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -344826,8 +344826,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -344840,8 +344840,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -344854,8 +344854,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -344868,7 +344868,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -344882,7 +344882,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -344896,8 +344896,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -344910,8 +344910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -344924,8 +344924,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -344938,8 +344938,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -344952,7 +344952,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -344966,7 +344966,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 1.0000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -344980,8 +344980,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -344994,8 +344994,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345008,8 +345008,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345022,7 +345022,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -345036,7 +345036,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 2.000,
+         "h" : 0,
          "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
@@ -345050,8 +345050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345064,8 +345064,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345078,8 +345078,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345092,8 +345092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345106,8 +345106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345120,8 +345120,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345134,8 +345134,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345148,8 +345148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345162,8 +345162,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345176,8 +345176,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345190,8 +345190,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345204,8 +345204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345218,8 +345218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345232,8 +345232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345246,8 +345246,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345260,8 +345260,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345274,8 +345274,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 1.0000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345288,8 +345288,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345302,8 +345302,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 1.0000,
+         "h" : 1.0000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345316,8 +345316,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 6.000,
+         "h" : 0,
+         "w" : 7.211102550927978586238442534,
          "x" : 757.0000,
          "y" : 502.000
       },
@@ -345330,8 +345330,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345344,8 +345344,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 6.000,
-         "w" : 2.000,
+         "h" : 0,
+         "w" : 6.000,
          "x" : 757.0000,
          "y" : 510.000
       },
@@ -345358,8 +345358,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345372,8 +345372,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 4.00,
-         "w" : 2.000,
+         "h" : 2.000,
+         "w" : 4.00,
          "x" : 758.000,
          "y" : 510.000
       },
@@ -345624,8 +345624,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345638,8 +345638,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345652,8 +345652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345666,8 +345666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345680,8 +345680,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345694,8 +345694,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345708,8 +345708,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345722,8 +345722,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345736,8 +345736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345750,8 +345750,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345764,8 +345764,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345778,8 +345778,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345792,8 +345792,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345806,8 +345806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345820,8 +345820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345834,8 +345834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345848,8 +345848,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -345862,8 +345862,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346002,8 +346002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346016,8 +346016,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346030,8 +346030,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346044,8 +346044,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346058,8 +346058,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346072,8 +346072,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346086,8 +346086,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346100,8 +346100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -346114,8 +346114,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 752,
          "y" : 496
       },
@@ -395045,7 +395045,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 520.0
       },
@@ -395059,7 +395059,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 520.0
       },
@@ -395073,7 +395073,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 520.0
       },
@@ -395087,7 +395087,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 520.0
       },
@@ -395100,8 +395100,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 512
       },
@@ -395143,7 +395143,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395157,7 +395157,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395170,8 +395170,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 512
       },
@@ -395213,7 +395213,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395226,8 +395226,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 512
       },
@@ -395269,7 +395269,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395283,7 +395283,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395296,8 +395296,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 504.0,
          "y" : 512
       },
@@ -395339,7 +395339,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395352,7 +395352,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 504.0,
          "y" : 512
@@ -395395,7 +395395,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395409,7 +395409,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395422,7 +395422,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 504.0,
          "y" : 512
@@ -395465,7 +395465,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395478,7 +395478,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 504.0,
          "y" : 512
@@ -395521,7 +395521,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395535,7 +395535,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395688,8 +395688,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395702,8 +395702,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395716,8 +395716,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395730,8 +395730,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395744,8 +395744,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395758,8 +395758,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395772,8 +395772,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395786,8 +395786,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395800,8 +395800,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395814,8 +395814,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395828,8 +395828,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395842,8 +395842,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395856,8 +395856,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395870,8 +395870,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395884,8 +395884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395898,8 +395898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395912,8 +395912,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -395926,8 +395926,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396066,8 +396066,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396080,8 +396080,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396094,8 +396094,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396108,8 +396108,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396122,8 +396122,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396136,8 +396136,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396150,8 +396150,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396164,8 +396164,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396178,8 +396178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 496,
          "y" : 512
       },
@@ -396417,7 +396417,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 520.0
       },
@@ -396431,7 +396431,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 520.0
       },
@@ -396445,7 +396445,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 520.0
       },
@@ -396459,7 +396459,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 520.0
       },
@@ -396472,8 +396472,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 512
       },
@@ -396515,7 +396515,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396529,7 +396529,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396542,8 +396542,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 512
       },
@@ -396585,7 +396585,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396598,8 +396598,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 512
       },
@@ -396641,7 +396641,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396655,7 +396655,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396668,8 +396668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 520.0,
          "y" : 512
       },
@@ -396711,7 +396711,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396724,7 +396724,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 512
@@ -396767,7 +396767,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396781,7 +396781,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396794,7 +396794,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 512
@@ -396837,7 +396837,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396850,7 +396850,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 520.0,
          "y" : 512
@@ -396893,7 +396893,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -396907,7 +396907,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397060,8 +397060,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397074,8 +397074,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397088,8 +397088,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397102,8 +397102,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397116,8 +397116,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397130,8 +397130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397144,8 +397144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397158,8 +397158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397172,8 +397172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397186,8 +397186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397200,8 +397200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397214,8 +397214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397228,8 +397228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397242,8 +397242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397256,8 +397256,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397270,8 +397270,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397284,8 +397284,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397298,8 +397298,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397438,8 +397438,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397452,8 +397452,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397466,8 +397466,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397480,8 +397480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397494,8 +397494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397508,8 +397508,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397522,8 +397522,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397536,8 +397536,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397550,8 +397550,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 512,
          "y" : 512
       },
@@ -397873,7 +397873,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 520.0
       },
@@ -397887,7 +397887,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 520.0
       },
@@ -397901,7 +397901,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 520.0
       },
@@ -397915,7 +397915,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 520.0
       },
@@ -397928,8 +397928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 512
       },
@@ -397971,7 +397971,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -397985,7 +397985,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -397998,8 +397998,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 512
       },
@@ -398041,7 +398041,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398054,8 +398054,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 512
       },
@@ -398097,7 +398097,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398111,7 +398111,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398124,8 +398124,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 568.0,
          "y" : 512
       },
@@ -398167,7 +398167,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398180,7 +398180,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 568.0,
          "y" : 512
@@ -398223,7 +398223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398237,7 +398237,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398250,7 +398250,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 568.0,
          "y" : 512
@@ -398293,7 +398293,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398306,7 +398306,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 568.0,
          "y" : 512
@@ -398349,7 +398349,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398363,7 +398363,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398516,8 +398516,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398530,8 +398530,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398544,8 +398544,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398558,8 +398558,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398572,8 +398572,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398586,8 +398586,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398600,8 +398600,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398614,8 +398614,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398628,8 +398628,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398642,8 +398642,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398656,8 +398656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398670,8 +398670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398684,8 +398684,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398698,8 +398698,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398712,8 +398712,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398726,8 +398726,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398740,8 +398740,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398754,8 +398754,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398894,8 +398894,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398908,8 +398908,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398922,8 +398922,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398936,8 +398936,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398950,8 +398950,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398964,8 +398964,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398978,8 +398978,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -398992,8 +398992,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -399006,8 +399006,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 560,
          "y" : 512
       },
@@ -399413,7 +399413,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 520.0
       },
@@ -399427,7 +399427,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 520.0
       },
@@ -399441,7 +399441,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 520.0
       },
@@ -399455,7 +399455,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 520.0
       },
@@ -399468,8 +399468,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 512
       },
@@ -399511,7 +399511,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399525,7 +399525,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399538,8 +399538,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 512
       },
@@ -399581,7 +399581,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399594,8 +399594,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 512
       },
@@ -399637,7 +399637,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399651,7 +399651,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399664,8 +399664,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 616.0,
          "y" : 512
       },
@@ -399707,7 +399707,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399720,7 +399720,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 616.0,
          "y" : 512
@@ -399763,7 +399763,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399777,7 +399777,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399790,7 +399790,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 616.0,
          "y" : 512
@@ -399833,7 +399833,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399846,7 +399846,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 616.0,
          "y" : 512
@@ -399889,7 +399889,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -399903,7 +399903,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400056,8 +400056,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400070,8 +400070,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400084,8 +400084,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400098,8 +400098,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400112,8 +400112,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400126,8 +400126,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400140,8 +400140,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400154,8 +400154,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400168,8 +400168,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400182,8 +400182,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400196,8 +400196,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400210,8 +400210,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400224,8 +400224,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400238,8 +400238,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400252,8 +400252,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400266,8 +400266,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400280,8 +400280,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400294,8 +400294,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400434,8 +400434,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400448,8 +400448,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400462,8 +400462,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400476,8 +400476,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400490,8 +400490,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400504,8 +400504,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400518,8 +400518,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400532,8 +400532,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400546,8 +400546,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 608,
          "y" : 512
       },
@@ -400785,7 +400785,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 520.0
       },
@@ -400799,7 +400799,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 520.0
       },
@@ -400813,7 +400813,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 520.0
       },
@@ -400827,7 +400827,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 520.0
       },
@@ -400840,8 +400840,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 648.0,
          "y" : 512
       },
@@ -400883,7 +400883,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -400897,7 +400897,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -400910,8 +400910,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 648.0,
          "y" : 512
       },
@@ -400953,7 +400953,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -400966,8 +400966,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 648.0,
          "y" : 512
       },
@@ -401009,7 +401009,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401023,7 +401023,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401036,8 +401036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 648.0,
          "y" : 512
       },
@@ -401079,7 +401079,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401092,7 +401092,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 648.0,
          "y" : 512
@@ -401135,7 +401135,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401149,7 +401149,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401162,7 +401162,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 648.0,
          "y" : 512
@@ -401205,7 +401205,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401218,7 +401218,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 648.0,
          "y" : 512
@@ -401261,7 +401261,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401275,7 +401275,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401428,8 +401428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401442,8 +401442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401456,8 +401456,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401470,8 +401470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401484,8 +401484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401498,8 +401498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401512,8 +401512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401526,8 +401526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401540,8 +401540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401554,8 +401554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401568,8 +401568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401582,8 +401582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401596,8 +401596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401610,8 +401610,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401624,8 +401624,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401638,8 +401638,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401652,8 +401652,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401666,8 +401666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401806,8 +401806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401820,8 +401820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401834,8 +401834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401848,8 +401848,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401862,8 +401862,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401876,8 +401876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401890,8 +401890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401904,8 +401904,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -401918,8 +401918,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 640,
          "y" : 512
       },
@@ -402157,7 +402157,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 520.0
       },
@@ -402171,7 +402171,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 520.0
       },
@@ -402185,7 +402185,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 520.0
       },
@@ -402199,7 +402199,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 520.0
       },
@@ -402212,8 +402212,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 664.0,
          "y" : 512
       },
@@ -402255,7 +402255,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402269,7 +402269,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402282,8 +402282,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 664.0,
          "y" : 512
       },
@@ -402325,7 +402325,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402338,8 +402338,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 664.0,
          "y" : 512
       },
@@ -402381,7 +402381,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402395,7 +402395,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402408,8 +402408,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 664.0,
          "y" : 512
       },
@@ -402451,7 +402451,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402464,7 +402464,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 664.0,
          "y" : 512
@@ -402507,7 +402507,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402521,7 +402521,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402534,7 +402534,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 664.0,
          "y" : 512
@@ -402577,7 +402577,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402590,7 +402590,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 664.0,
          "y" : 512
@@ -402633,7 +402633,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402647,7 +402647,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402800,8 +402800,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402814,8 +402814,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402828,8 +402828,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402842,8 +402842,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402856,8 +402856,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402870,8 +402870,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402884,8 +402884,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402898,8 +402898,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402912,8 +402912,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402926,8 +402926,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402940,8 +402940,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402954,8 +402954,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402968,8 +402968,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402982,8 +402982,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -402996,8 +402996,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403010,8 +403010,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403024,8 +403024,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403038,8 +403038,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403178,8 +403178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403192,8 +403192,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403206,8 +403206,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403220,8 +403220,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403234,8 +403234,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403248,8 +403248,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403262,8 +403262,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403276,8 +403276,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403290,8 +403290,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 656,
          "y" : 512
       },
@@ -403613,7 +403613,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 520.0
       },
@@ -403627,7 +403627,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 520.0
       },
@@ -403641,7 +403641,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 520.0
       },
@@ -403655,7 +403655,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 520.0
       },
@@ -403668,8 +403668,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 512
       },
@@ -403711,7 +403711,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403725,7 +403725,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403738,8 +403738,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 512
       },
@@ -403781,7 +403781,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403794,8 +403794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 512
       },
@@ -403837,7 +403837,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403851,7 +403851,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403864,8 +403864,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 512
       },
@@ -403907,7 +403907,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403920,7 +403920,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 696.0,
          "y" : 512
@@ -403963,7 +403963,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403977,7 +403977,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -403990,7 +403990,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 696.0,
          "y" : 512
@@ -404033,7 +404033,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404046,7 +404046,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 696.0,
          "y" : 512
@@ -404089,7 +404089,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404103,7 +404103,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404256,8 +404256,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404270,8 +404270,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404284,8 +404284,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404298,8 +404298,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404312,8 +404312,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404326,8 +404326,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404340,8 +404340,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404354,8 +404354,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404368,8 +404368,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404382,8 +404382,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404396,8 +404396,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404410,8 +404410,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404424,8 +404424,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404438,8 +404438,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404452,8 +404452,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404466,8 +404466,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404480,8 +404480,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404494,8 +404494,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404634,8 +404634,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404648,8 +404648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404662,8 +404662,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404676,8 +404676,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404690,8 +404690,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404704,8 +404704,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404718,8 +404718,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404732,8 +404732,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404746,8 +404746,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 512
       },
@@ -404985,7 +404985,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 520.0
       },
@@ -404999,7 +404999,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 520.0
       },
@@ -405013,7 +405013,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 520.0
       },
@@ -405027,7 +405027,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 520.0
       },
@@ -405040,8 +405040,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 512
       },
@@ -405083,7 +405083,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405097,7 +405097,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405110,8 +405110,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 512
       },
@@ -405153,7 +405153,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405166,8 +405166,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 512
       },
@@ -405209,7 +405209,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405223,7 +405223,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405236,8 +405236,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 512
       },
@@ -405279,7 +405279,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405292,7 +405292,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 712.0,
          "y" : 512
@@ -405335,7 +405335,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405349,7 +405349,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405362,7 +405362,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 712.0,
          "y" : 512
@@ -405405,7 +405405,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405418,7 +405418,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 712.0,
          "y" : 512
@@ -405461,7 +405461,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405475,7 +405475,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405628,8 +405628,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405642,8 +405642,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405656,8 +405656,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405670,8 +405670,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405684,8 +405684,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405698,8 +405698,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405712,8 +405712,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405726,8 +405726,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405740,8 +405740,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405754,8 +405754,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405768,8 +405768,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405782,8 +405782,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405796,8 +405796,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405810,8 +405810,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405824,8 +405824,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405838,8 +405838,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405852,8 +405852,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -405866,8 +405866,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406006,8 +406006,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406020,8 +406020,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406034,8 +406034,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406048,8 +406048,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406062,8 +406062,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406076,8 +406076,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406090,8 +406090,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406104,8 +406104,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406118,8 +406118,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 512
       },
@@ -406357,7 +406357,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 520.0
       },
@@ -406371,7 +406371,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 520.0
       },
@@ -406385,7 +406385,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 520.0
       },
@@ -406399,7 +406399,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 520.0
       },
@@ -406412,8 +406412,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 512
       },
@@ -406455,7 +406455,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406469,7 +406469,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406482,8 +406482,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 512
       },
@@ -406525,7 +406525,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406538,8 +406538,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 512
       },
@@ -406581,7 +406581,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406595,7 +406595,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406608,8 +406608,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 512
       },
@@ -406651,7 +406651,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406664,7 +406664,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 512
@@ -406707,7 +406707,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406721,7 +406721,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406734,7 +406734,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 512
@@ -406777,7 +406777,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406790,7 +406790,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 512
@@ -406833,7 +406833,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -406847,7 +406847,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407000,8 +407000,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407014,8 +407014,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407028,8 +407028,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407042,8 +407042,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407056,8 +407056,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407070,8 +407070,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407084,8 +407084,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407098,8 +407098,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407112,8 +407112,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407126,8 +407126,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407140,8 +407140,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407154,8 +407154,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407168,8 +407168,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407182,8 +407182,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407196,8 +407196,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407210,8 +407210,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407224,8 +407224,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407238,8 +407238,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407378,8 +407378,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407392,8 +407392,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407406,8 +407406,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407420,8 +407420,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407434,8 +407434,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407448,8 +407448,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407462,8 +407462,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407476,8 +407476,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -407490,8 +407490,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 512
       },
@@ -408470,8 +408470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408484,8 +408484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408498,8 +408498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408512,8 +408512,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408526,8 +408526,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408540,8 +408540,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408554,8 +408554,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408568,8 +408568,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408582,8 +408582,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -408596,8 +408596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 0,
+         "w" : 16,
          "x" : 928,
          "y" : 512
       },
@@ -410178,8 +410178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410193,7 +410193,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410207,7 +410207,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410221,7 +410221,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410235,7 +410235,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410248,8 +410248,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 184.0,
          "y" : 528
       },
@@ -410291,7 +410291,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410305,7 +410305,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410318,8 +410318,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410333,7 +410333,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410347,7 +410347,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410361,7 +410361,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410375,7 +410375,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 536.0
       },
@@ -410388,8 +410388,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 184.0,
          "y" : 528
       },
@@ -410431,7 +410431,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410445,7 +410445,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410458,8 +410458,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 184.0,
          "y" : 528
       },
@@ -410501,7 +410501,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410515,7 +410515,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410528,8 +410528,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 184.0,
          "y" : 528
       },
@@ -410571,7 +410571,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410585,7 +410585,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410598,7 +410598,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 184.0,
          "y" : 528
@@ -410641,7 +410641,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410655,7 +410655,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410668,7 +410668,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 184.0,
          "y" : 528
@@ -410711,7 +410711,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410725,7 +410725,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410738,7 +410738,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 184.0,
          "y" : 528
@@ -410781,7 +410781,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410795,7 +410795,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 176,
          "y" : 528
       },
@@ -410878,8 +410878,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -410893,7 +410893,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -410907,7 +410907,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -410921,7 +410921,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -410935,7 +410935,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -410948,8 +410948,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 528
       },
@@ -410991,7 +410991,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411005,7 +411005,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411018,8 +411018,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411033,7 +411033,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -411047,7 +411047,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -411061,7 +411061,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -411075,7 +411075,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 536.0
       },
@@ -411088,8 +411088,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 528
       },
@@ -411131,7 +411131,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411145,7 +411145,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411158,8 +411158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 528
       },
@@ -411201,7 +411201,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411215,7 +411215,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411228,8 +411228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 200.0,
          "y" : 528
       },
@@ -411271,7 +411271,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411285,7 +411285,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411298,7 +411298,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 200.0,
          "y" : 528
@@ -411341,7 +411341,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411355,7 +411355,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411368,7 +411368,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 200.0,
          "y" : 528
@@ -411411,7 +411411,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411425,7 +411425,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411438,7 +411438,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 200.0,
          "y" : 528
@@ -411481,7 +411481,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411495,7 +411495,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 192,
          "y" : 528
       },
@@ -411578,8 +411578,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411593,7 +411593,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411607,7 +411607,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411621,7 +411621,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411635,7 +411635,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411648,8 +411648,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 528
       },
@@ -411691,7 +411691,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411705,7 +411705,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411718,8 +411718,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411733,7 +411733,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411747,7 +411747,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411761,7 +411761,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411775,7 +411775,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 536.0
       },
@@ -411788,8 +411788,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 528
       },
@@ -411831,7 +411831,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411845,7 +411845,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411858,8 +411858,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 528
       },
@@ -411901,7 +411901,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411915,7 +411915,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411928,8 +411928,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 216.0,
          "y" : 528
       },
@@ -411971,7 +411971,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411985,7 +411985,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -411998,7 +411998,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 216.0,
          "y" : 528
@@ -412041,7 +412041,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -412055,7 +412055,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -412068,7 +412068,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 216.0,
          "y" : 528
@@ -412111,7 +412111,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -412125,7 +412125,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -412138,7 +412138,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 216.0,
          "y" : 528
@@ -412181,7 +412181,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -412195,7 +412195,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 208,
          "y" : 528
       },
@@ -412278,8 +412278,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412293,7 +412293,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412307,7 +412307,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412321,7 +412321,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412335,7 +412335,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412348,8 +412348,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 528
       },
@@ -412391,7 +412391,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412405,7 +412405,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412418,8 +412418,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412433,7 +412433,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412447,7 +412447,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412461,7 +412461,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412475,7 +412475,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 536.0
       },
@@ -412488,8 +412488,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 528
       },
@@ -412531,7 +412531,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412545,7 +412545,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412558,8 +412558,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 528
       },
@@ -412601,7 +412601,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412615,7 +412615,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412628,8 +412628,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 232.0,
          "y" : 528
       },
@@ -412671,7 +412671,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412685,7 +412685,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412698,7 +412698,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 232.0,
          "y" : 528
@@ -412741,7 +412741,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412755,7 +412755,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412768,7 +412768,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 232.0,
          "y" : 528
@@ -412811,7 +412811,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412825,7 +412825,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412838,7 +412838,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 232.0,
          "y" : 528
@@ -412881,7 +412881,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -412895,7 +412895,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 224,
          "y" : 528
       },
@@ -433852,8 +433852,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -433867,7 +433867,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -433881,7 +433881,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -433895,7 +433895,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -433909,7 +433909,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -433922,8 +433922,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 544
       },
@@ -433965,7 +433965,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -433979,7 +433979,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -433992,8 +433992,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434007,7 +434007,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -434021,7 +434021,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -434035,7 +434035,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -434049,7 +434049,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 552.0
       },
@@ -434062,8 +434062,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 544
       },
@@ -434105,7 +434105,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434119,7 +434119,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434132,8 +434132,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 544
       },
@@ -434175,7 +434175,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434189,7 +434189,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434202,8 +434202,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 696.0,
          "y" : 544
       },
@@ -434245,7 +434245,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434259,7 +434259,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434272,7 +434272,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 696.0,
          "y" : 544
@@ -434315,7 +434315,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434329,7 +434329,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434342,7 +434342,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 696.0,
          "y" : 544
@@ -434385,7 +434385,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434399,7 +434399,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434412,7 +434412,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 696.0,
          "y" : 544
@@ -434455,7 +434455,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434469,7 +434469,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434636,8 +434636,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434650,8 +434650,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434664,8 +434664,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434678,8 +434678,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434692,8 +434692,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434706,8 +434706,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434720,8 +434720,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434734,8 +434734,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434748,8 +434748,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434762,8 +434762,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434776,8 +434776,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434790,8 +434790,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434804,8 +434804,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434818,8 +434818,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434832,8 +434832,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434846,8 +434846,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434860,8 +434860,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -434874,8 +434874,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435014,8 +435014,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435028,8 +435028,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435042,8 +435042,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435056,8 +435056,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435070,8 +435070,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435084,8 +435084,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435098,8 +435098,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435112,8 +435112,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435126,8 +435126,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 688,
          "y" : 544
       },
@@ -435224,8 +435224,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435239,7 +435239,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435253,7 +435253,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435267,7 +435267,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435281,7 +435281,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435294,8 +435294,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 544
       },
@@ -435337,7 +435337,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435351,7 +435351,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435364,8 +435364,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435379,7 +435379,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435393,7 +435393,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435407,7 +435407,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435421,7 +435421,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 552.0
       },
@@ -435434,8 +435434,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 544
       },
@@ -435477,7 +435477,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435491,7 +435491,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435504,8 +435504,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 544
       },
@@ -435547,7 +435547,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435561,7 +435561,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435574,8 +435574,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 712.0,
          "y" : 544
       },
@@ -435617,7 +435617,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435631,7 +435631,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435644,7 +435644,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 712.0,
          "y" : 544
@@ -435687,7 +435687,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435701,7 +435701,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435714,7 +435714,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 712.0,
          "y" : 544
@@ -435757,7 +435757,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435771,7 +435771,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435784,7 +435784,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 712.0,
          "y" : 544
@@ -435827,7 +435827,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -435841,7 +435841,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436008,8 +436008,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436022,8 +436022,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436036,8 +436036,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436050,8 +436050,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436064,8 +436064,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436078,8 +436078,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436092,8 +436092,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436106,8 +436106,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436120,8 +436120,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436134,8 +436134,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436148,8 +436148,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436162,8 +436162,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436176,8 +436176,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436190,8 +436190,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436204,8 +436204,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436218,8 +436218,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436232,8 +436232,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436246,8 +436246,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436386,8 +436386,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436400,8 +436400,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436414,8 +436414,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436428,8 +436428,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436442,8 +436442,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436456,8 +436456,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436470,8 +436470,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436484,8 +436484,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436498,8 +436498,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 544
       },
@@ -436596,8 +436596,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436611,7 +436611,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436625,7 +436625,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436639,7 +436639,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436653,7 +436653,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436666,8 +436666,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 544
       },
@@ -436709,7 +436709,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436723,7 +436723,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436736,8 +436736,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436751,7 +436751,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436765,7 +436765,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436779,7 +436779,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436793,7 +436793,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 552.0
       },
@@ -436806,8 +436806,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 544
       },
@@ -436849,7 +436849,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436863,7 +436863,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436876,8 +436876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 544
       },
@@ -436919,7 +436919,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436933,7 +436933,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -436946,8 +436946,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 728.0,
          "y" : 544
       },
@@ -436989,7 +436989,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437003,7 +437003,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437016,7 +437016,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 544
@@ -437059,7 +437059,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437073,7 +437073,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437086,7 +437086,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 544
@@ -437129,7 +437129,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437143,7 +437143,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437156,7 +437156,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 728.0,
          "y" : 544
@@ -437199,7 +437199,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437213,7 +437213,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437380,8 +437380,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437394,8 +437394,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437408,8 +437408,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437422,8 +437422,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437436,8 +437436,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437450,8 +437450,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437464,8 +437464,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437478,8 +437478,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437492,8 +437492,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437506,8 +437506,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437520,8 +437520,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437534,8 +437534,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437548,8 +437548,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437562,8 +437562,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437576,8 +437576,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437590,8 +437590,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437604,8 +437604,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437618,8 +437618,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437758,8 +437758,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437772,8 +437772,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437786,8 +437786,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437800,8 +437800,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437814,8 +437814,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437828,8 +437828,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437842,8 +437842,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437856,8 +437856,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437870,8 +437870,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 544
       },
@@ -437968,8 +437968,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -437983,7 +437983,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -437997,7 +437997,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438011,7 +438011,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438025,7 +438025,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438038,8 +438038,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 744.0,
          "y" : 544
       },
@@ -438081,7 +438081,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438095,7 +438095,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438108,8 +438108,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438123,7 +438123,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438137,7 +438137,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438151,7 +438151,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438165,7 +438165,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 552.0
       },
@@ -438178,8 +438178,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 744.0,
          "y" : 544
       },
@@ -438221,7 +438221,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438235,7 +438235,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438248,8 +438248,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 744.0,
          "y" : 544
       },
@@ -438291,7 +438291,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438305,7 +438305,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438318,8 +438318,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 8.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 8.0,
          "x" : 744.0,
          "y" : 544
       },
@@ -438361,7 +438361,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438375,7 +438375,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438388,7 +438388,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 744.0,
          "y" : 544
@@ -438431,7 +438431,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438445,7 +438445,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438458,7 +438458,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 744.0,
          "y" : 544
@@ -438501,7 +438501,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438515,7 +438515,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438528,7 +438528,7 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
+         "h" : 16,
          "w" : 8.0,
          "x" : 744.0,
          "y" : 544
@@ -438571,7 +438571,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438585,7 +438585,7 @@ export const blockFaceTypes = [
       "tintindex" : -1,
       "uv" : {
          "h" : 8.0,
-         "w" : 16.0,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438752,8 +438752,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438766,8 +438766,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438780,8 +438780,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438794,8 +438794,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438808,8 +438808,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438822,8 +438822,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438836,8 +438836,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438850,8 +438850,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438864,8 +438864,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438878,8 +438878,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438892,8 +438892,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438906,8 +438906,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438920,8 +438920,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438934,8 +438934,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438948,8 +438948,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438962,8 +438962,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438976,8 +438976,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -438990,8 +438990,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439130,8 +439130,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439144,8 +439144,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439158,8 +439158,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439172,8 +439172,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439186,8 +439186,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439200,8 +439200,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439214,8 +439214,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439228,8 +439228,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -439242,8 +439242,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 736,
          "y" : 544
       },
@@ -443820,8 +443820,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 560
       },
@@ -443834,8 +443834,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 560
       },
@@ -443848,8 +443848,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 560
       },
@@ -443862,8 +443862,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 560
       },
@@ -443876,8 +443876,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 560
       },
@@ -443890,8 +443890,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 560
       },
@@ -443904,8 +443904,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 560
       },
@@ -443918,8 +443918,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 560
       },
@@ -443988,8 +443988,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 560
       },
@@ -444002,8 +444002,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 704,
          "y" : 560
       },
@@ -444016,8 +444016,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 560
       },
@@ -444030,8 +444030,8 @@ export const blockFaceTypes = [
       "rotation" : 0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16.0,
-         "w" : 16.0,
+         "h" : 16,
+         "w" : 16,
          "x" : 720,
          "y" : 560
       },
