@@ -106,6 +106,13 @@ class TextureAtlasTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             atlas.pack()
 
+    def test_pack_raises_value_error_when_a_single_texture_is_wider_than_the_atlas(self):
+        atlas = TextureAtlas()
+        atlas.add_image("too_wide", _solid((ATLAS_WIDTH + 176, 16), (255, 0, 0, 255)))
+
+        with self.assertRaises(ValueError):
+            atlas.pack()
+
 
 if __name__ == "__main__":
     unittest.main()

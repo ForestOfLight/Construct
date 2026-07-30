@@ -81,6 +81,10 @@ class TextureAtlas:
         placements = []
         for name, image in entries:
             w, h = image.size
+            if w > ATLAS_WIDTH or h > ATLAS_HEIGHT:
+                raise ValueError(
+                    f"texture '{name}' ({w}x{h}) is larger than the atlas canvas"
+                )
             if shelf_x + w > ATLAS_WIDTH:
                 shelf_x = 0
                 shelf_y += shelf_height
