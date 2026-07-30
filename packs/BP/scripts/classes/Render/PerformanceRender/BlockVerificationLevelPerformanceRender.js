@@ -9,7 +9,7 @@ export class BlockVerificationLevelPerformanceRender {
     verificationLevel;
     lifetimeSeconds = 0;
 
-    constructor(dimensionLocation, verificationLevel, lifetimeSeconds = 5) {
+    constructor(dimensionLocation, _targetPermutation, verificationLevel, lifetimeSeconds = 5) {
         this.dimension = dimensionLocation.dimension;
         this.location = dimensionLocation.location;
         this.verificationLevel = verificationLevel;

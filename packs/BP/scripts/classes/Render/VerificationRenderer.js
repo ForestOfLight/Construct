@@ -117,7 +117,8 @@ export class VerificationRenderer {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)
         };
+        const targetPermutation = this.instance.getBlockPermutation(location);
         const blockVerificationLevelType = this.#usePerformanceRendering ? BlockVerificationLevelPerformanceRender : BlockPreviewVerificationLevelParticleRender;
-        new blockVerificationLevelType(dimensionLocation, verificationLevel, lifetime);
+        new blockVerificationLevelType(dimensionLocation, targetPermutation, verificationLevel, lifetime);
     }
 }
