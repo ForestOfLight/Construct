@@ -57,4 +57,6 @@ def _resolve_texture_ref(ref, textures, depth=0):
         if var not in textures:
             raise KeyError(f"unresolved texture variable '#{var}'")
         return _resolve_texture_ref(textures[var], textures, depth + 1)
+    if isinstance(ref, str):
+        return ref.split(":")[-1]
     return ref

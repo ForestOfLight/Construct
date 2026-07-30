@@ -85,6 +85,23 @@ class ResolveModelTest(unittest.TestCase):
         face = resolve_model(mcmeta, "block/x")[0]["faces"]["up"]
         self.assertEqual(face["texture"], "block/stone")
 
+    def test_strips_namespace_prefix_from_resolved_literal_texture(self):
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "minecraft:block/stone"},
+                "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {
+                        "up": {"texture": "#all"},
+                        "down": {"texture": "minecraft:block/stone"},
+                    },
+                }],
+            },
+        })
+        faces = resolve_model(mcmeta, "block/x")[0]["faces"]
+        self.assertEqual(faces["up"]["texture"], "block/stone")
+        self.assertEqual(faces["down"]["texture"], "block/stone")
+
     def test_raises_on_unresolved_texture_variable(self):
         mcmeta = FakeMcmeta({
             "block/x": {
