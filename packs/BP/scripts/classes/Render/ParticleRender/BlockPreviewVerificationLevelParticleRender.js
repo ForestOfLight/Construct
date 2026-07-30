@@ -3,6 +3,8 @@ import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { Vector } from "../../../lib/Vector";
 import { BlockModelLookup } from "../BlockModelLookup";
 
+const BLOCK_CENTER = new Vector(0.5, 0.5, 0.5);
+
 export class BlockPreviewVerificationLevelParticleRender {
     lifetimeSeconds = 0;
 
@@ -20,20 +22,25 @@ export class BlockPreviewVerificationLevelParticleRender {
         if (!rgb || !this.targetPermutation)
             return;
         const material = this.#verificationLevelToMaterial();
+        const sizeScalar = this.#verificationLevelToSizeScalar();
         for (const face of BlockModelLookup.getFaces(this.targetPermutation)) {
-            this.#renderFace(face, rgb, material);
+            this.#renderFace(face, rgb, material, sizeScalar);
         }
     }
 
-    #renderFace(face, rgb, material) {
+    #renderFace(face, rgb, material, sizeScalar) {
         if (face.width === 0 || face.height === 0)
             return;
-        const center = new Vector(face.center[0] / 16, face.center[1] / 16, face.center[2] / 16);
+        const faceCenter = new Vector(face.center[0] / 16, face.center[1] / 16, face.center[2] / 16);
+        // Scale each face's offset from the block's center outward/inward by
+        // sizeScalar so the whole model grows or shrinks uniformly, e.g. to
+        // outline a mismatched block or inset a missing one.
+        const center = BLOCK_CENTER.add(faceCenter.subtract(BLOCK_CENTER).multiply(sizeScalar));
 
         const molang = new MolangVariableMap();
         molang.setFloat("lifetime", this.lifetimeSeconds);
-        molang.setFloat("width", (face.width / 16) * 0.5);
-        molang.setFloat("height", (face.height / 16) * 0.5);
+        molang.setFloat("width", (face.width / 16) * 0.5 * sizeScalar);
+        molang.setFloat("height", (face.height / 16) * 0.5 * sizeScalar);
         // Bedrock's direction_z billboard mode inverts orientation for
         // near-vertical custom_direction vectors (a degenerate-basis quirk
         // when the direction is close to world up/down); negating y
@@ -69,6 +76,19 @@ export class BlockPreviewVerificationLevelParticleRender {
                 return { red: 0.5, green: 0.5, blue: 1, alpha: 1 };
             default:
                 return void 0;
+        }
+    }
+
+    #verificationLevelToSizeScalar() {
+        switch (this.verificationLevel) {
+            case BlockVerificationLevel.NoMatch:
+                return 1.01;
+            case BlockVerificationLevel.TypeMatch:
+                return 1.01;
+            case BlockVerificationLevel.Missing:
+                return 0.90;
+            default:
+                return 1.00;
         }
     }
 }
