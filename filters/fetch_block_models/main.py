@@ -28,6 +28,20 @@ from texture_atlas import compose_textures, TextureAtlas
 
 WHITE_TEXTURE = "white"
 _FULL_UV = [0, 0, 16, 16]
+# The white swatch is the one texture stretched across a whole block face at
+# full size (the missing-block cube and the plain outline cube both sample
+# nothing else), so the renderer magnifies it far harder than any real block
+# texture. A single white texel could not survive that: filtering and
+# mipmapping average a magnified quad against the texels around it, and a
+# lone texel's neighbors are the transparent gaps of the atlas, so the cube's
+# face edges faded away and its edges visibly stopped meeting (#18). Give the
+# swatch the same 16x16 footprint as a block texture - a power of two, so
+# halving it for each mip level keeps averaging white with white.
+_WHITE_SWATCH_SIZE = 16
+# Sampled half a texel in from each edge: the outermost points the renderer
+# reads are then swatch texel centers rather than the boundary it shares with
+# whatever the packer happened to put beside it.
+_HALF_TEXEL = Decimal("0.5")
 # Stair "shape" (straight/inner_*/outer_*) is a Java render-time value
 # computed from neighboring blocks, not real placed state - Bedrock's own
 # stair states carry no such property, so blocksB2J.json fills it in with an
@@ -292,6 +306,25 @@ def _merge_coincident_faces(faces):
     return merged
 
 
+def white_swatch(image):
+    """Blows the plain white source texture up to the swatch footprint the
+    atlas needs (see _WHITE_SWATCH_SIZE). NEAREST so the color stays exactly
+    what the asset says."""
+    return image.convert("RGBA").resize(
+        (_WHITE_SWATCH_SIZE, _WHITE_SWATCH_SIZE), Image.NEAREST
+    )
+
+
+def inset_by_half_texel(rect):
+    """Shrinks an atlas rect half a texel in on every side (see _HALF_TEXEL)."""
+    return {
+        "x": rect["x"] + _HALF_TEXEL,
+        "y": rect["y"] + _HALF_TEXEL,
+        "w": rect["w"] - 2 * _HALF_TEXEL,
+        "h": rect["h"] - 2 * _HALF_TEXEL,
+    }
+
+
 def project_uv(block_models, atlas_manifest):
     """Replaces each face's 'texture' name and Java-space (0-16) 'uv' rect
     with its final atlas-pixel 'uv' rect.
@@ -376,11 +409,16 @@ def build(root):
 
     atlas = TextureAtlas()
     white_path = root / "packs" / "RP" / "textures" / "particle" / "white.png"
-    atlas.add_image(WHITE_TEXTURE, Image.open(white_path))
+    atlas.add_image(WHITE_TEXTURE, white_swatch(Image.open(white_path)))
 
     block_models = build_block_models(mcmeta, b2j, atlas)
     atlas_image, atlas_manifest = atlas.pack()
-    white_rect = atlas_manifest[WHITE_TEXTURE]
+    # Everything that samples the swatch - the exported whiteUvRect and
+    # project_uv's fallback for a texture that never made it into the atlas -
+    # must stay inside it, so inset the rect once, here, where it's packed.
+    white_rect = atlas_manifest[WHITE_TEXTURE] = inset_by_half_texel(
+        atlas_manifest[WHITE_TEXTURE]
+    )
     block_models = project_uv(block_models, atlas_manifest)
     face_types, block_models = build_face_types_and_refs(block_models)
     return atlas_image, white_rect, face_types, block_models

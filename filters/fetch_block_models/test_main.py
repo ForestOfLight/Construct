@@ -2,8 +2,12 @@ import math
 import unittest
 from decimal import Decimal
 
+from PIL import Image
+
 from main import (
     _derive_roll,
+    inset_by_half_texel,
+    white_swatch,
     _merge_coincident_faces,
     _derive_width_height,
     build_block_models,
@@ -381,6 +385,36 @@ class MergeCoincidentFacesTest(unittest.TestCase):
         for label, faces in (("uv", differing_uv), ("roll", differing_roll), ("position", elsewhere)):
             with self.subTest(differing=label):
                 self.assertEqual(len(_merge_coincident_faces(faces)), 2)
+
+
+class WhiteSwatchTest(unittest.TestCase):
+    def test_swatch_is_a_solid_block_of_texels_not_a_lone_one(self):
+        # a lone texel has nothing but the atlas's transparent gaps around it,
+        # and the renderer's filtering averages a magnified quad's edges with
+        # whatever neighbors it finds - which faded the missing-block cube's
+        # face edges out until they no longer met (#18)
+        swatch = white_swatch(Image.new("RGBA", (1, 1), (255, 255, 255, 255)))
+        self.assertGreaterEqual(min(swatch.size), 16)
+        colors = swatch.convert("RGBA").getcolors()
+        self.assertEqual(colors, [(swatch.width * swatch.height, (255, 255, 255, 255))])
+
+    def test_swatch_size_is_a_power_of_two_so_its_mips_stay_solid(self):
+        # every mip level halves the swatch; an odd size would start averaging
+        # in the neighboring texture instead of only white
+        size = white_swatch(Image.new("RGBA", (1, 1), (255, 255, 255, 255))).width
+        self.assertEqual(size & (size - 1), 0)
+
+    def test_inset_rect_samples_strictly_inside_the_swatch(self):
+        # half a texel in on every side, so the outermost points sampled are
+        # swatch texel centers rather than the boundary it shares with
+        # whatever got packed next to it
+        rect = inset_by_half_texel({"x": 576, "y": 544, "w": 16, "h": 16})
+        self.assertEqual(rect, {
+            "x": Decimal("576.5"), "y": Decimal("544.5"),
+            "w": Decimal("15"), "h": Decimal("15"),
+        })
+        for value in rect.values():
+            self.assertNotIsInstance(value, float)
 
 
 class ProjectUvTest(unittest.TestCase):
