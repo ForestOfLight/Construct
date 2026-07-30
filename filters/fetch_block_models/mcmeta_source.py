@@ -6,6 +6,7 @@ import io
 import json
 import urllib.request
 import zipfile
+from decimal import Decimal
 
 MCMETA_ZIP_URL = "https://github.com/misode/mcmeta/archive/refs/heads/assets.zip"
 ZIP_ROOT = "mcmeta-assets/"  # GitHub zips nest everything under "<repo>-<branch>/"
@@ -23,7 +24,7 @@ class McmetaSource:
 
     def read_json(self, path):
         with self._zip.open(ZIP_ROOT + path) as f:
-            return json.load(f)
+            return json.load(f, parse_float=Decimal)
 
     def read_bytes(self, path):
         with self._zip.open(ZIP_ROOT + path) as f:

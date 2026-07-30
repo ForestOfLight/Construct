@@ -1,6 +1,7 @@
 import io
 import unittest
 import zipfile
+from decimal import Decimal
 
 from mcmeta_source import McmetaSource
 
@@ -20,11 +21,17 @@ class McmetaSourceTest(unittest.TestCase):
             "assets/minecraft/blockstates/stone.json": b'{"variants":{"":{"model":"block/stone"}}}',
             "assets/minecraft/models/block/stone.json": b'{"textures":{"all":"block/stone"}}',
             "assets/minecraft/textures/block/stone.png": b"\x89PNG-fake-bytes",
+            "assets/minecraft/models/block/fractional.json": b'{"value": 7.5}',
         }))
 
     def test_read_json_parses_content(self):
         data = self.source.read_json("assets/minecraft/blockstates/stone.json")
         self.assertEqual(data["variants"][""]["model"], "block/stone")
+
+    def test_read_json_parses_floats_as_decimal(self):
+        result = self.source.read_json("assets/minecraft/models/block/fractional.json")
+        self.assertIsInstance(result["value"], Decimal)
+        self.assertEqual(str(result["value"]), "7.5")
 
     def test_read_bytes_returns_raw_content(self):
         self.assertEqual(
