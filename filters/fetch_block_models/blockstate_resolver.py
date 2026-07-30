@@ -24,16 +24,22 @@ def resolve_java_state(mcmeta, java_block_id, properties):
     return None
 
 
-def _variant_key(properties):
-    return ",".join(f"{k}={v}" for k, v in sorted(properties.items()))
-
-
 def _resolve_variant(mcmeta, variants, properties):
-    key = _variant_key(properties)
-    entry = variants.get(key, variants.get(""))
-    if entry is None:
-        return []
-    return _apply_model_entry(mcmeta, entry)
+    """Some vanilla blockstates (e.g. bell) omit properties that don't affect
+    the model from their variant keys entirely (e.g. bell's keys only ever
+    mention attachment/facing, never powered) - so an exact full-property-set
+    match can miss a variant that Java would still pick. Match on whichever
+    subset of properties each key names instead of requiring every given
+    property to appear in the key."""
+    for key, entry in variants.items():
+        if not key:
+            continue
+        conditions = dict(pair.split("=", 1) for pair in key.split(","))
+        if all(properties.get(k) == v for k, v in conditions.items()):
+            return _apply_model_entry(mcmeta, entry)
+    if "" in variants:
+        return _apply_model_entry(mcmeta, variants[""])
+    return []
 
 
 def _resolve_multipart(mcmeta, parts, properties):

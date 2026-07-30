@@ -174,6 +174,23 @@ class ResolveJavaStateTest(unittest.TestCase):
             },
         )
 
+    def test_variant_matches_when_a_given_property_is_absent_from_every_key(self):
+        # mirrors real minecraft:bell data: variant keys only ever mention
+        # attachment/facing, never "powered" - the bedrock->java mapping
+        # still supplies "powered" (from toggle_bit), which must not prevent
+        # the match
+        mcmeta = FakeMcmeta(
+            blockstates={"bell": {"variants": {
+                "attachment=floor,facing=north": {"model": "block/bell_floor"},
+                "attachment=floor,facing=south": {"model": "block/bell_floor", "y": 180},
+            }}},
+            models={"block/bell_floor": {"textures": {}, "elements": _FLAT_ELEMENT}},
+        )
+        elements = resolve_java_state(
+            mcmeta, "minecraft:bell", {"attachment": "floor", "facing": "north", "powered": "false"},
+        )
+        self.assertEqual(elements, _FLAT_RESOLVED)
+
     def test_returns_none_when_blockstate_missing(self):
         mcmeta = FakeMcmeta(blockstates={}, models={})
         self.assertIsNone(resolve_java_state(mcmeta, "minecraft:unknown_block", {}))
