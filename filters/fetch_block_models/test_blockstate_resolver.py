@@ -168,7 +168,8 @@ class ResolveJavaStateTest(unittest.TestCase):
             elements[0]["faces"]["north"],
             {
                 "center": [16, 8, 8], "extent": [0, 16, 16], "normal": [1, 0, 0],
-                "uv": [0, 0, 16, 16], "texture": "block/oak_log", "rotation": 0,
+                "uv": [0, 0, 16, 16], "uv_extent": [0, 16, 16],
+                "texture": "block/oak_log", "rotation": 0,
                 "cullface": "north", "tintindex": -1,
             },
         )

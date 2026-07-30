@@ -22,6 +22,20 @@ _FACE_NORMAL = {
     "west": [-1, 0, 0], "east": [1, 0, 0],
 }
 
+# (u axis index, v axis index) - which local axis Java's uv u/v span for each
+# face, before any rotation. Matches real vanilla data (e.g. button's up
+# face: uv u spans its X extent, v spans its Z extent). This must stay in
+# sync with the geometry's own axis pairing (see _derive_width_height in
+# main.py): a 90-degree blockstate rotation that swaps which axis is
+# "width" vs "height" for the geometry must swap the uv's u/v the same way,
+# or the texture sample ends up transposed relative to the quad (e.g. a
+# button rotated to face a wall stretches its top-face texture 90 degrees).
+_FACE_UV_AXES = {
+    "up": (0, 2), "down": (0, 2),
+    "north": (0, 1), "south": (0, 1),
+    "west": (2, 1), "east": (2, 1),
+}
+
 
 def load_model(mcmeta, model_id):
     path = model_id.split(":")[-1]
@@ -56,21 +70,33 @@ def _face_geometry(elem_from, elem_to, face_name):
     return center, extent, list(_FACE_NORMAL[face_name])
 
 
-def _apply_element_rotation(center, extent, normal, rotation):
+def _uv_extent(face_name, uv):
+    """Places the Java uv's u/v span onto the same local axes _face_geometry
+    uses for extent, so it can be rotated identically (see _FACE_UV_AXES)."""
+    u_idx, v_idx = _FACE_UV_AXES[face_name]
+    vec = [Decimal(0), Decimal(0), Decimal(0)]
+    vec[u_idx] = Decimal(uv[2]) - Decimal(uv[0])
+    vec[v_idx] = Decimal(uv[3]) - Decimal(uv[1])
+    return vec
+
+
+def _apply_element_rotation(center, extent, normal, uv_extent, rotation):
     """Applies a Java model element's optional 'rotation' object (arbitrary
     angle around a single axis, e.g. the 45-degree y-axis rotation used by
-    cross-shaped plant models) to a face's center, extent, and normal."""
+    cross-shaped plant models) to a face's center, extent, normal, and uv
+    extent."""
     if not rotation:
-        return center, extent, normal
+        return center, extent, normal, uv_extent
     angle = rotation.get("angle", 0)
     if not angle:
-        return center, extent, normal
+        return center, extent, normal, uv_extent
     origin = rotation.get("origin", [8, 8, 8])
     axis = rotation["axis"]
     return (
         rotate_point(center, origin, axis, angle),
         rotate_vector(extent, axis, angle),
         rotate_vector(normal, axis, angle),
+        rotate_vector(uv_extent, axis, angle),
     )
 
 
@@ -98,13 +124,18 @@ def resolve_model(mcmeta, model_id):
     for element in elements or []:
         resolved_faces = {}
         for face_name, face in element.get("faces", {}).items():
+            uv = face.get("uv", [0, 0, 16, 16])
             center, extent, normal = _face_geometry(element["from"], element["to"], face_name)
-            center, extent, normal = _apply_element_rotation(center, extent, normal, element.get("rotation"))
+            uv_extent = _uv_extent(face_name, uv)
+            center, extent, normal, uv_extent = _apply_element_rotation(
+                center, extent, normal, uv_extent, element.get("rotation"),
+            )
             resolved_faces[face_name] = {
                 "center": center,
                 "extent": extent,
                 "normal": normal,
-                "uv": face.get("uv", [0, 0, 16, 16]),
+                "uv": uv,
+                "uv_extent": uv_extent,
                 "texture": _resolve_texture_ref(face["texture"], textures),
                 "rotation": face.get("rotation", 0),
                 "cullface": face.get("cullface"),

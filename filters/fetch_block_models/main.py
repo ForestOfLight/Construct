@@ -27,12 +27,12 @@ from texture_atlas import TextureAtlas
 WHITE_TEXTURE = "white"
 _FULL_UV = [0, 0, 16, 16]
 WHITE_CUBE_FACES = [
-    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
-    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
-    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
-    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
-    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
-    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "rotation": 0, "tintindex": -1},
+    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 0, 16], "rotation": 0, "tintindex": -1},
+    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 0, 16], "rotation": 0, "tintindex": -1},
+    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 16, 0], "rotation": 0, "tintindex": -1},
+    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 16, 0], "rotation": 0, "tintindex": -1},
+    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [0, 16, 16], "rotation": 0, "tintindex": -1},
+    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [0, 16, 16], "rotation": 0, "tintindex": -1},
 ]
 
 
@@ -92,6 +92,7 @@ def build_block_models(mcmeta, b2j, atlas):
                     "normal": face["normal"],
                     "texture": face["texture"],
                     "uv": face["uv"],
+                    "uv_extent": face["uv_extent"],
                     "rotation": face["rotation"],
                     "tintindex": face["tintindex"],
                 })
@@ -100,22 +101,36 @@ def build_block_models(mcmeta, b2j, atlas):
 
 
 def project_uv(block_models, atlas_manifest):
-    """Replaces each face's 'texture' name and Java-space (0-16) 'uv'
-    sub-rect with its final atlas-pixel 'uv' rect. A face's own uv is often
-    smaller than the whole texture (e.g. a fence post's narrow faces only
-    sample a thin strip) - using the whole texture's rect regardless would
-    squish the entire texture into that smaller face."""
+    """Replaces each face's 'texture' name, Java-space (0-16) 'uv' rect, and
+    'uv_extent' with its final atlas-pixel 'uv' rect.
+
+    A face's own uv is often smaller than the whole texture (e.g. a fence
+    post's narrow faces only sample a thin strip) - using the whole
+    texture's rect regardless would squish the entire texture into that
+    smaller face. The rect's width/height come from 'uv_extent' (rotated
+    through blockstate rotation exactly like the geometry's own extent) and
+    NOT from the raw uv numbers directly, since a 90-degree rotation that
+    swaps the geometry's width/height axis must swap the uv's the same way,
+    or the sample ends up transposed relative to the quad (e.g. a button
+    rotated to mount on a wall stretching its top-face texture 90 degrees).
+    The raw uv is still used for the rect's x/y offset, which isn't
+    axis-sensitive the same way."""
     white_rect = atlas_manifest.get(WHITE_TEXTURE)
     for faces in block_models.values():
         for face in faces:
             texture = face.pop("texture")
-            u0, v0, u1, v1 = (Decimal(c) for c in face.pop("uv"))
+            u0, v0, u1, v1 = face.pop("uv")
+            uv_width, uv_height = _derive_width_height(face.pop("uv_extent"), face["normal"])
+            u_min, v_min = min(Decimal(u0), Decimal(u1)), min(Decimal(v0), Decimal(v1))
             rect = atlas_manifest.get(texture, white_rect)
             face["uv"] = {
-                "x": rect["x"] + (u0 / 16) * rect["w"],
-                "y": rect["y"] + (v0 / 16) * rect["h"],
-                "w": ((u1 - u0) / 16) * rect["w"],
-                "h": ((v1 - v0) / 16) * rect["h"],
+                "x": rect["x"] + (u_min / 16) * rect["w"],
+                "y": rect["y"] + (v_min / 16) * rect["h"],
+                # uv_width/uv_height may be plain ints (e.g. WHITE_CUBE_FACES's
+                # literal uv_extent) - int/16 is a native float in Python 3,
+                # which js_data.render() can't serialize.
+                "w": (Decimal(uv_width) / 16) * rect["w"],
+                "h": (Decimal(uv_height) / 16) * rect["h"],
             }
     return block_models
 

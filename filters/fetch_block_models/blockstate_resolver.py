@@ -72,13 +72,15 @@ def _apply_model_entry(mcmeta, entry):
 
 
 def _rotate_element(element, x_rot, y_rot):
-    """Rotates every face's center/extent/normal around the block center
-    (8,8,8) by x_rot then y_rot degrees (Java model rotations are always
-    multiples of 90). A 90-degree rotation can move a face onto a different
-    world axis (e.g. what was 'north' can end up facing 'east', or an X
-    rotation can turn a vertical-normal face into a horizontal one), so both
-    the normal (render direction) and extent (which axis is width vs height)
-    must rotate too, not just position."""
+    """Rotates every face's center/extent/normal/uv_extent around the block
+    center (8,8,8) by x_rot then y_rot degrees (Java model rotations are
+    always multiples of 90). A 90-degree rotation can move a face onto a
+    different world axis (e.g. what was 'north' can end up facing 'east', or
+    an X rotation can turn a vertical-normal face into a horizontal one), so
+    the normal (render direction), extent (which axis is width vs height),
+    and uv_extent (which axis the texture's u/v span lands on) must all
+    rotate too, not just position - otherwise the texture ends up sampled
+    with its own width/height transposed relative to the quad's."""
     new_faces = {
         face_name: _rotate_face(face, x_rot, y_rot)
         for face_name, face in element["faces"].items()
@@ -87,13 +89,15 @@ def _rotate_element(element, x_rot, y_rot):
 
 
 def _rotate_face(face, x_rot, y_rot):
-    center, extent, normal = face["center"], face["extent"], face["normal"]
+    center, extent, normal, uv_extent = face["center"], face["extent"], face["normal"], face["uv_extent"]
     if x_rot:
         center = rotate_point(center, _ORIGIN, "x", x_rot)
         extent = rotate_vector(extent, "x", x_rot)
         normal = rotate_vector(normal, "x", x_rot)
+        uv_extent = rotate_vector(uv_extent, "x", x_rot)
     if y_rot:
         center = rotate_point(center, _ORIGIN, "y", y_rot)
         extent = rotate_vector(extent, "y", y_rot)
         normal = rotate_vector(normal, "y", y_rot)
-    return {**face, "center": center, "extent": extent, "normal": normal}
+        uv_extent = rotate_vector(uv_extent, "y", y_rot)
+    return {**face, "center": center, "extent": extent, "normal": normal, "uv_extent": uv_extent}

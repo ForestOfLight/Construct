@@ -183,8 +183,13 @@ class DeriveWidthHeightTest(unittest.TestCase):
 
 class ProjectUvTest(unittest.TestCase):
     def _face(self, texture, uv=None):
+        uv = uv or [0, 0, 16, 16]
+        u0, v0, u1, v1 = uv
         return {
-            "texture": texture, "uv": uv or [0, 0, 16, 16],
+            "texture": texture, "uv": uv,
+            # matches _FACE_UV_AXES's "up"/"down" mapping (u->x, v->z), since
+            # every face here uses the fixed vertical normal below
+            "uv_extent": [u1 - u0, 0, v1 - v0],
             "center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
         }
 
@@ -194,6 +199,11 @@ class ProjectUvTest(unittest.TestCase):
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 10, "y": 20, "w": 16, "h": 16})
         self.assertNotIn("texture", result["k"][0])
+        # a plain-int uv_extent (e.g. WHITE_CUBE_FACES's literal [16, 0, 16])
+        # must not produce a native float - js_data.render() can't serialize
+        # one, and int/16 in Python 3 is a float even when evenly divisible
+        for value in result["k"][0]["uv"].values():
+            self.assertNotIsInstance(value, float)
 
     def test_missing_texture_falls_back_to_white_rect(self):
         block_models = {"k": [self._face("block/nonexistent")]}
@@ -235,6 +245,22 @@ class ProjectUvTest(unittest.TestCase):
         atlas_manifest = {"block/oak_planks": {"x": 0, "y": 0, "w": 32, "h": 32}}
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 16, "y": 0, "w": 16, "h": 32})
+
+    def test_uv_rect_dimensions_follow_the_rotated_uv_extent_not_the_raw_uv(self):
+        # Mirrors an oak_button rotated to mount on a wall (x:90): the raw
+        # java uv is [5, 6, 11, 10] (6 wide, 4 tall), but after the same
+        # rotation that swapped the geometry's width/height, uv_extent
+        # reflects the new pairing (4 wide, 6 tall) - the projected rect's
+        # w/h must follow uv_extent, not be recomputed from the untouched
+        # raw uv numbers (which would give the transposed, wrong aspect).
+        face = self._face("block/oak_button", uv=[5, 6, 11, 10])
+        face["uv_extent"] = [4, 6, 0]  # already rotated: swapped vs. the raw uv's (6, 4)
+        face["normal"] = [0, 0, 1]  # no longer vertical after rotation
+        block_models = {"k": [face]}
+        atlas_manifest = {"block/oak_button": {"x": 0, "y": 0, "w": 16, "h": 16}}
+        result = project_uv(block_models, atlas_manifest)
+        self.assertEqual(result["k"][0]["uv"]["w"], 4)
+        self.assertEqual(result["k"][0]["uv"]["h"], 6)
 
 
 class BuildFaceTypesAndRefsTest(unittest.TestCase):
