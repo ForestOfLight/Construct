@@ -2,9 +2,9 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "construct:block_face_yz",
+			"identifier": "construct:block_face_yz_blend",
 			"basic_render_parameters": {
-				"material": "particles_opaque",
+				"material": "particles_blend",
 				"texture": "textures/particle/vanilla_block_atlas"
 			}
 		},
@@ -20,20 +20,22 @@
 				"max_lifetime": "variable.lifetime"
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": ["variable.width", "variable.height"],
+				"size": [
+					"variable.width",
+					"variable.height"
+				],
 				"facing_camera_mode": "emitter_transform_yz",
 				"uv": {
-					"texture_width": 1,
-					"texture_height": 32,
-					"flipbook": {
-						"base_UV": [ 0, 0 ],
-						"size_UV": [ 1, 1 ],
-						"step_UV": [ 0, 1 ],
-						"frames_per_second": 32,
-						"max_frame": 32,
-						"stretch_to_lifetime": true,
-						"loop": false
-					}
+					"texture_width": 1024,
+					"texture_height": 1024,
+					"uv": [
+						"variable.u",
+						"variable.v"
+					],
+					"uv_size": [
+						"variable.uv_w",
+						"variable.uv_h"
+					]
 				}
 			},
 			"minecraft:particle_appearance_tinting": {
