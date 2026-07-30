@@ -8,11 +8,33 @@ from PIL import Image
 TEXTURE_PATH_TMPL = "assets/minecraft/textures/{name}.png"
 
 # Default biome tint colors baked directly into the atlas pixels (RGB 0-255).
+#
+# This table has to be maintained by hand, because a face's "tintindex" only
+# says a block *may* be tinted - Java then looks the block up in its
+# BlockColors registry, and blocks with no entry there are drawn untinted.
+# The two really do come apart: the stonecutter's saw faces carry
+# tintindex 0 and are pure greyscale, but Java registers no color for
+# stonecutter and draws them grey, so tinting everything with a tintindex
+# would turn its blade green.
+#
+# The textures that need an entry are the ones authored greyscale, since
+# those are unusable without one - that's what left grass block sides,
+# short grass and large ferns rendering grey.
 DEFAULT_TINTS = {
     "block/grass_block_top": (145, 189, 89),
+    # the grass fringe drawn over the dirt on a grass block's four sides -
+    # the dirt underneath is a separate, already-colored texture, which is
+    # why only the fringe came out grey
+    "block/grass_block_side_overlay": (145, 189, 89),
     "block/tall_grass_top": (145, 189, 89),
     "block/tall_grass_bottom": (145, 189, 89),
+    "block/short_grass": (145, 189, 89),
     "block/fern": (145, 189, 89),
+    "block/large_fern_top": (145, 189, 89),
+    "block/large_fern_bottom": (145, 189, 89),
+    "block/bush": (145, 189, 89),
+    "block/pink_petals_stem": (145, 189, 89),
+    "block/wildflowers_stem": (145, 189, 89),
     "block/oak_leaves": (119, 171, 47),
     "block/spruce_leaves": (97, 153, 97),
     "block/birch_leaves": (128, 167, 85),
