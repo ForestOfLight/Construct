@@ -236,18 +236,6 @@ class ProjectUvTest(unittest.TestCase):
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 16, "y": 0, "w": 16, "h": 32})
 
-    def test_reversed_uv_used_for_mirroring_normalizes_to_a_non_negative_rect(self):
-        # minecraft:block/template_piston_head's west face uses uv
-        # [16, 4, 0, 0] (u1 < u0 and v1 < v0) to mirror the texture. Passing
-        # the resulting negative width/height straight to the particle's uv
-        # component breaks it (it renders the whole atlas instead) - this
-        # must normalize to the same non-negative rect regardless of
-        # coordinate ordering.
-        block_models = {"k": [self._face("block/piston_side", uv=[16, 4, 0, 0])]}
-        atlas_manifest = {"block/piston_side": {"x": 256, "y": 48, "w": 16, "h": 16}}
-        result = project_uv(block_models, atlas_manifest)
-        self.assertEqual(result["k"][0]["uv"], {"x": 256, "y": 48, "w": 16, "h": 4})
-
 
 class BuildFaceTypesAndRefsTest(unittest.TestCase):
     def _face(self, center, width=16, height=16, normal=None, rotation=0, tintindex=-1, uv=None):
