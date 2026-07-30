@@ -25,7 +25,11 @@ export class BlockPreviewVerificationLevelParticleRender {
         const material = this.#verificationLevelToMaterial();
         const sizeScalar = this.#verificationLevelToSizeScalar();
         for (const face of this.#getFaces()) {
-            this.#renderFace(face, rgb, material, sizeScalar);
+            try {
+                this.#renderFace(face, rgb, material, sizeScalar);
+            } catch (error) {
+                console.warn(`Failed to render face for block ${this.targetPermutation.type.id} at location ${JSON.stringify(this.location)} with verification level ${this.verificationLevel}:`, error, error.stack);
+            }
         }
     }
 
@@ -39,6 +43,8 @@ export class BlockPreviewVerificationLevelParticleRender {
     }
 
     #renderFace(face, rgb, material, sizeScalar) {
+        if (face.isMissing)
+            material = "blend";
         if (face.width === 0 || face.height === 0)
             return;
         const faceCenter = new Vector(face.center[0] / 16, face.center[1] / 16, face.center[2] / 16);
@@ -65,6 +71,14 @@ export class BlockPreviewVerificationLevelParticleRender {
         molang.setFloat("nx", face.normal[0]);
         molang.setFloat("ny", -face.normal[1]);
         molang.setFloat("nz", face.normal[2]);
+        // A direction billboard only takes a facing direction, so the engine
+        // picks the quad's up vector itself and the texture lands at whatever
+        // roll that produces - world-up for a side face (already right), but a
+        // fixed south-reading orientation for every top and bottom face. The
+        // pipeline works out how far each face is from where Java draws it
+        // (see _derive_roll in filters/fetch_block_models/main.py); this spins
+        // it the rest of the way.
+        molang.setFloat("roll", face.roll);
         molang.setFloat("u", face.uv.x);
         molang.setFloat("v", face.uv.y);
         molang.setFloat("uv_w", face.uv.w);

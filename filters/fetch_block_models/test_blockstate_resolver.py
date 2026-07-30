@@ -159,31 +159,35 @@ class ResolveJavaStateTest(unittest.TestCase):
         )
         elements = resolve_java_state(mcmeta, "minecraft:oak_log", {"axis": "x"})
         # the 90-degree y-rotation moves the "north" face's center/normal onto
-        # the x=16 (east) plane, and its extent rotates the same way
-        # (uv/texture/rotation/cullface/tintindex pass through unchanged);
-        # verified against real minecraft:furnace data, whose facing=east
-        # variant (y:90) must move its front face (modeled on "north") onto
-        # the east (+x) plane
-        self.assertEqual(
-            elements[0]["faces"]["north"],
-            {
-                "center": [16, 8, 8], "extent": [0, 16, 16], "normal": [1, 0, 0],
-                "uv": [0, 0, 16, 16], "uv_extent": [0, 16, 16],
-                "texture": "block/oak_log", "rotation": 0,
-                "cullface": "north", "tintindex": -1, "flip": "",
-            },
-        )
+        # the x=16 (east) plane, and its extent and texture axes rotate the
+        # same way (uv/texture/cullface/tintindex pass through unchanged).
+        # The rotated axes land exactly on the canonical basis of the face it
+        # became: u = -z, v = -y is what an unrotated "east" face already
+        # uses, which is the answer a block turned to face east should give.
+        # Verified
+        # against real minecraft:furnace data, whose facing=east variant
+        # (y:90) must move its front face (modeled on "north") onto the east
+        # (+x) plane
+        face = elements[0]["faces"]["north"]
+        self.assertEqual([float(c) for c in face["center"]], [16, 8, 8])
+        self.assertEqual([float(c) for c in face["extent"]], [0, 16, 16])
+        self.assertEqual([float(c) for c in face["normal"]], [1, 0, 0])
+        self.assertEqual([float(c) for c in face["uv_u"]], [0, 0, -1])
+        self.assertEqual([float(c) for c in face["uv_v"]], [0, -1, 0])
+        self.assertEqual(face["uv"], [0, 0, 16, 16])
+        self.assertEqual(face["texture"], "block/oak_log")
+        self.assertEqual(face["cullface"], "north")
+        self.assertEqual(face["tintindex"], -1)
+        self.assertEqual(face["flip"], "")
 
-    def test_uvlock_variant_does_not_rotate_uv_extent(self):
+    def test_uvlock_variant_leaves_the_texture_world_aligned(self):
         # mirrors real minecraft:oak_stairs data: its non-default-facing
-        # variants set uvlock:true, meaning the texture must NOT rotate with
-        # the block. The top step's "up" face has a non-square raw uv ([8,0,
-        # 16,16], 8 wide x 16 tall) - if uv_extent were rotated 90 degrees
-        # anyway, its swapped (16-wide) size would get combined in
-        # main.py's project_uv with the still-unrotated raw uv offset (u=8),
-        # producing a rect that runs from u=8 to u=24 - past the source
-        # texture's own 16-wide bounds and into whatever's packed next to it
-        # in the atlas.
+        # variants set uvlock:true, meaning the texture must NOT turn with
+        # the block, staying put relative to the world however the block is
+        # oriented. The up face's u therefore still points +x afterwards
+        # rather than following the y:90 round to +z, so the face measures
+        # its width along the same world axis the raw uv's 8-wide span was
+        # authored against.
         mcmeta = FakeMcmeta(
             blockstates={"oak_stairs": {"variants": {
                 "facing=south": {"model": "block/oak_stairs_top", "y": 90, "uvlock": True},
@@ -196,7 +200,40 @@ class ResolveJavaStateTest(unittest.TestCase):
         )
         elements = resolve_java_state(mcmeta, "minecraft:oak_stairs", {"facing": "south"})
         face = elements[0]["faces"]["up"]
-        self.assertEqual(face["uv_extent"], [8, 0, 16])
+        self.assertEqual(face["uv_u"], [1, 0, 0])
+        self.assertEqual(face["uv_v"], [0, 0, 1])
+
+    def test_uvlock_keeps_a_reoriented_faces_texture_axes_in_its_own_plane(self):
+        # World-aligning a uvlocked texture must not be done by simply
+        # leaving the old axes where they were: a face that gets turned onto
+        # a new plane takes its texture with it, and axes left behind end up
+        # pointing straight out of the face instead of across it. A west
+        # face turned by y:90 ends up facing north, and its u ran +z - the
+        # very axis the face now faces along. Measuring the face's width
+        # along that (see main.py's _derive_width_height) would give zero and
+        # drop the face from the render entirely, which is what happened to
+        # every side face of every rotated stair.
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_stairs": {"variants": {
+                "facing=north": {"model": "block/oak_stairs_side", "y": 90, "uvlock": True},
+            }}},
+            models={"block/oak_stairs_side": {"textures": {}, "elements": [
+                {"from": [0, 0, 0], "to": [16, 8, 16], "faces": {
+                    "west": {"uv": [0, 8, 16, 16], "texture": "block/oak_planks"},
+                }},
+            ]}},
+        )
+        elements = resolve_java_state(mcmeta, "minecraft:oak_stairs", {"facing": "north"})
+        face = elements[0]["faces"]["west"]
+        normal = [float(c) for c in face["normal"]]
+        self.assertEqual(normal, [0, 0, -1])  # west turned north
+        for axis in ("uv_u", "uv_v"):
+            with self.subTest(axis=axis):
+                across_the_face = sum(float(a) * b for a, b in zip(face[axis], normal))
+                self.assertEqual(across_the_face, 0)
+        # and world-aligned: exactly the frame a north face is authored with
+        self.assertEqual([float(c) for c in face["uv_u"]], [-1, 0, 0])
+        self.assertEqual([float(c) for c in face["uv_v"]], [0, -1, 0])
 
     def test_variant_matches_when_a_given_property_is_absent_from_every_key(self):
         # mirrors real minecraft:bell data: variant keys only ever mention

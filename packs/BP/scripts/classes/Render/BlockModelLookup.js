@@ -5,12 +5,12 @@ import { whiteUvRect } from "../../blockAtlas";
 // permutation has no entry in blockModels at all (e.g. a block id absent
 // from the Bedrock<->Java mapping data the pipeline was built from).
 export const WHITE_CUBE_FACES = [
-    { center: [8, 16, 8], width: 16, height: 16, normal: [0, 1, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 0, 8], width: 16, height: 16, normal: [0, -1, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 8, 0], width: 16, height: 16, normal: [0, 0, -1], rotation: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 8, 16], width: 16, height: 16, normal: [0, 0, 1], rotation: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [16, 8, 8], width: 16, height: 16, normal: [1, 0, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [0, 8, 8], width: 16, height: 16, normal: [-1, 0, 0], rotation: 0, tintindex: -1, uv: whiteUvRect },
+    { isMissing: true, center: [8, 16, 8], width: 16, height: 16, normal: [0, 1, 0], roll: 180, tintindex: -1, uv: whiteUvRect },
+    { isMissing: true, center: [8, 0, 8], width: 16, height: 16, normal: [0, -1, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { isMissing: true, center: [8, 8, 0], width: 16, height: 16, normal: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { isMissing: true, center: [8, 8, 16], width: 16, height: 16, normal: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { isMissing: true, center: [16, 8, 8], width: 16, height: 16, normal: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { isMissing: true, center: [0, 8, 8], width: 16, height: 16, normal: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
 ];
 
 let blockIdIndex;

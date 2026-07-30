@@ -72,7 +72,10 @@ class ResolveModelTest(unittest.TestCase):
         })
         face = resolve_model(mcmeta, "block/x")[0]["faces"]["north"]
         self.assertEqual(face["uv"], [0, 0, 16, 16])
-        self.assertEqual(face["rotation"], 0)
+        # no per-face uv rotation to bake in, so the texture axes stay at the
+        # north face's plain defaults: u runs -x, v runs -y
+        self.assertEqual(face["uv_u"], [-1, 0, 0])
+        self.assertEqual(face["uv_v"], [0, -1, 0])
         self.assertIsNone(face["cullface"])
         self.assertEqual(face["tintindex"], -1)
 

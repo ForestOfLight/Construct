@@ -1,7 +1,7 @@
 """Resolves a specific Java block+properties combination to model elements,
 using misode/mcmeta blockstate JSON (variants or multipart)."""
 
-from model_resolver import resolve_model
+from model_resolver import resolve_model, uv_axes_for_normal
 from rotation import rotate_point, rotate_vector
 
 BLOCKSTATE_PATH_TMPL = "assets/minecraft/blockstates/{name}.json"
@@ -90,25 +90,28 @@ def rotate_elements(elements, x_rot, y_rot):
 
 
 def _rotate_element(element, x_rot, y_rot, uvlock=False):
-    """Rotates every face's center/extent/normal (and, unless uvlock is set,
-    uv_extent) around the block center (8,8,8) by x_rot then y_rot degrees
-    (Java model rotations are always multiples of 90). A 90-degree rotation
-    can move a face onto a different world axis (e.g. what was 'north' can
-    end up facing 'east', or an X rotation can turn a vertical-normal face
-    into a horizontal one), so the normal (render direction), extent (which
-    axis is width vs height), and uv_extent (which axis the texture's u/v
-    span lands on) must all rotate too, not just position - otherwise the
-    texture ends up sampled with its own width/height transposed relative to
-    the quad's.
+    """Rotates every face's center/extent/normal/texture axes around the
+    block center (8,8,8) by x_rot then y_rot degrees (Java model rotations
+    are always multiples of 90). A 90-degree rotation can move a face onto a
+    different world axis (e.g. what was 'north' can end up facing 'east', or
+    an X rotation can turn a vertical-normal face into a horizontal one), so
+    the normal (render direction), extent (which axis is width vs height),
+    and the texture axes (which way the texture reads, and which world axis
+    carries u vs. v) must all rotate too, not just position - otherwise the
+    texture ends up rolled or transposed relative to the quad.
 
     'uvlock: true' (e.g. every non-default-facing stairs variant) is Java's
-    way of saying the opposite: the texture must NOT rotate with the block,
-    staying exactly as authored regardless of orientation. Our code already
-    never rotates the raw uv position, so uv_extent must stay unrotated too
-    here - otherwise its rotated (swapped) width/height gets combined with
-    the still-unrotated raw uv offset in main.py's project_uv, producing a
-    rect that runs past the source texture's bounds and samples into
-    whatever's packed next to it in the atlas."""
+    way of saying the texture must NOT turn with the block: it stays put
+    relative to the world however the block is oriented. That's expressed by
+    rebuilding the face's texture frame from the direction it ended up
+    facing - the frame it would have been authored with had it started out
+    there - rather than by carrying the old one round with it.
+
+    Note the texture axes still have to be rotated first even when uvlock is
+    set. They describe directions within the face's own plane, and the plane
+    itself moves; left behind, they'd point out of it, and the face's width
+    (measured along its u axis - see main.py's _derive_width_height) would
+    collapse to zero and stop rendering entirely."""
     new_faces = {
         face_name: _rotate_face(face, x_rot, y_rot, uvlock)
         for face_name, face in element["faces"].items()
@@ -117,17 +120,18 @@ def _rotate_element(element, x_rot, y_rot, uvlock=False):
 
 
 def _rotate_face(face, x_rot, y_rot, uvlock=False):
-    center, extent, normal, uv_extent = face["center"], face["extent"], face["normal"], face["uv_extent"]
-    if x_rot:
-        center = rotate_point(center, _ORIGIN, "x", x_rot)
-        extent = rotate_vector(extent, "x", x_rot)
-        normal = rotate_vector(normal, "x", x_rot)
-        if not uvlock:
-            uv_extent = rotate_vector(uv_extent, "x", x_rot)
-    if y_rot:
-        center = rotate_point(center, _ORIGIN, "y", y_rot)
-        extent = rotate_vector(extent, "y", y_rot)
-        normal = rotate_vector(normal, "y", y_rot)
-        if not uvlock:
-            uv_extent = rotate_vector(uv_extent, "y", y_rot)
-    return {**face, "center": center, "extent": extent, "normal": normal, "uv_extent": uv_extent}
+    center, extent, normal = face["center"], face["extent"], face["normal"]
+    uv_u, uv_v = face["uv_u"], face["uv_v"]
+    for axis, degrees in (("x", x_rot), ("y", y_rot)):
+        if not degrees:
+            continue
+        center = rotate_point(center, _ORIGIN, axis, degrees)
+        extent = rotate_vector(extent, axis, degrees)
+        normal = rotate_vector(normal, axis, degrees)
+        uv_u = rotate_vector(uv_u, axis, degrees)
+        uv_v = rotate_vector(uv_v, axis, degrees)
+    if uvlock:
+        relocked = uv_axes_for_normal(normal, face["uv_rotation"])
+        if relocked:
+            uv_u, uv_v = relocked
+    return {**face, "center": center, "extent": extent, "normal": normal, "uv_u": uv_u, "uv_v": uv_v}

@@ -3,6 +3,7 @@ import unittest
 from decimal import Decimal
 
 from main import (
+    _derive_roll,
     _derive_width_height,
     build_block_models,
     build_face_types_and_refs,
@@ -177,50 +178,92 @@ class BuildBlockModelsTest(unittest.TestCase):
 
 
 class DeriveWidthHeightTest(unittest.TestCase):
-    def test_vertical_normal_reads_x_and_z_directly(self):
-        width, height = _derive_width_height([16, 0, 4], [0, 1, 0])
+    def test_unrotated_up_face_reads_x_as_width_and_z_as_height(self):
+        # up face texture axes: u runs +x, v runs +z
+        width, height = _derive_width_height([16, 0, 4], [1, 0, 0], [0, 0, 1])
         self.assertEqual(width, 16)
         self.assertEqual(height, 4)
 
-    def test_horizontal_normal_reads_the_other_horizontal_axis_and_y(self):
-        width, height = _derive_width_height([0, 16, 4], [-1, 0, 0])  # west face
+    def test_unrotated_west_face_reads_z_as_width_and_y_as_height(self):
+        # west face texture axes: u runs +z, v runs -y
+        width, height = _derive_width_height([0, 16, 4], [0, 0, 1], [0, -1, 0])
         self.assertEqual(width, 4)
         self.assertEqual(height, 16)
 
     def test_permuted_extent_after_an_x_axis_blockstate_rotation(self):
         # Mirrors minecraft:piston_head facing=down (x:90): a face that
-        # started as the arm's "up" face (vertical normal, width=4 on X,
-        # height=16 on Z) rotates to a horizontal normal, and x:90 swaps
-        # the Y/Z extents - Y ends up holding the old Z length (16) and Z
-        # ends up holding the old Y length (0, since "up" was degenerate on Y).
-        # The final face is horizontal-normal (south), so width should read
-        # the surviving horizontal (X) extent and height should read Y.
+        # started as the arm's "up" face (width=4 on X, height=16 on Z)
+        # rotates to a horizontal, south-facing normal. x:90 swaps the Y/Z
+        # extents - Y ends up holding the old Z length (16) - and rotates
+        # the texture axes to match, carrying v from +z onto -y. Width still
+        # reads the u axis (X, 4) and height still reads v (Y, 16), with no
+        # normal-based special case involved.
         extent = [4, 16, 0]  # already rotated: x unaffected, y<-old z, z<-old y
-        normal = [0, 0, 1]  # rotated from (0,1,0) "up" to south-facing
-        width, height = _derive_width_height(extent, normal)
+        width, height = _derive_width_height(extent, [1, 0, 0], [0, -1, 0])
         self.assertEqual(width, 4)
         self.assertEqual(height, 16)
 
-    def test_diagonal_extent_recombines_via_pythagoras(self):
+    def test_diagonal_extent_projects_onto_an_equally_diagonal_texture_axis(self):
         # Mirrors a cross-plant quad (e.g. short_grass) rotated 45 degrees
         # around Y: the original single horizontal length (14.4) gets split
-        # across X and Z, but the true width is still 14.4 - not the raw X
-        # or Z component alone.
+        # across X and Z, and so does the texture's u axis. Projecting the
+        # extent onto that same diagonal axis recovers the full 14.4 - the
+        # raw X or Z component alone would be short by root 2.
         half = Decimal(14.4) * Decimal(math.sqrt(2) / 2)
-        width, height = _derive_width_height([half, 16, half], [Decimal("0.707107"), 0, Decimal("-0.707107")])
+        diagonal_u = [Decimal("0.707107"), 0, Decimal("0.707107")]
+        width, height = _derive_width_height([half, 16, half], diagonal_u, [0, -1, 0])
         self.assertAlmostEqual(float(width), 14.4, places=3)
         self.assertEqual(height, 16)
+
+
+class DeriveRollTest(unittest.TestCase):
+    """A face's roll is how far the billboard has to spin for its texture to
+    read the way Java draws it, given where the engine's own default
+    orientation leaves it (see the constants at the top of main.py)."""
+
+    def test_side_faces_need_no_roll(self):
+        # An unrotated Java side face reads world-up, which is exactly where
+        # the engine already puts a horizontal-normal billboard - which is
+        # why side textures look right today without any roll at all.
+        for normal, uv_v in (
+            ([0, 0, -1], [0, -1, 0]),  # north
+            ([0, 0, 1], [0, -1, 0]),   # south
+            ([-1, 0, 0], [0, -1, 0]),  # west
+            ([1, 0, 0], [0, -1, 0]),   # east
+        ):
+            with self.subTest(normal=normal):
+                self.assertEqual(_derive_roll(normal, uv_v), 0)
+
+    def test_up_face_is_half_a_turn_out_from_where_the_engine_leaves_it(self):
+        # This is the reported bug. Java's up face runs v along +z, so its
+        # texture reads north (-z) - but a vertical-normal billboard has no
+        # world-up to orient against and the engine settles on reading south
+        # instead, which is why every top texture faces the same way no
+        # matter which block it belongs to. Half a turn closes the gap.
+        self.assertEqual(abs(_derive_roll([0, 1, 0], [0, 0, 1])), 180)
+
+    def test_down_face_already_lands_where_java_wants_it(self):
+        # Java's down face runs v along -z (the opposite of the up face, so
+        # the two read in opposite directions), which happens to match the
+        # engine's own fixed choice - so unlike the up face it needs no roll.
+        self.assertEqual(_derive_roll([0, -1, 0], [0, 0, -1]), 0)
+
+    def test_a_quarter_turned_up_face_rolls_a_quarter_turn(self):
+        # A per-face uv rotation of 90 (or an x-axis blockstate rotation)
+        # leaves v running along x instead of z; the roll has to make up the
+        # quarter turn, whichever way round the engine spins.
+        self.assertEqual(abs(_derive_roll([0, 1, 0], [1, 0, 0])), 90)
+
+    def test_a_side_face_whose_texture_was_turned_upside_down_rolls_half_a_turn(self):
+        # v running +y instead of -y means the texture reads downward.
+        self.assertEqual(abs(_derive_roll([0, 0, 1], [0, 1, 0])), 180)
 
 
 class ProjectUvTest(unittest.TestCase):
     def _face(self, texture, uv=None):
         uv = uv or [0, 0, 16, 16]
-        u0, v0, u1, v1 = uv
         return {
             "texture": texture, "uv": uv,
-            # matches _FACE_UV_AXES's "up"/"down" mapping (u->x, v->z), since
-            # every face here uses the fixed vertical normal below
-            "uv_extent": [u1 - u0, 0, v1 - v0],
             "center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
         }
 
@@ -230,7 +273,7 @@ class ProjectUvTest(unittest.TestCase):
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 10, "y": 20, "w": 16, "h": 16})
         self.assertNotIn("texture", result["k"][0])
-        # a plain-int uv_extent (e.g. WHITE_CUBE_FACES's literal [16, 0, 16])
+        # a plain-int uv rect (e.g. WHITE_CUBE_FACES's literal [0, 0, 16, 16])
         # must not produce a native float - js_data.render() can't serialize
         # one, and int/16 in Python 3 is a float even when evenly divisible
         for value in result["k"][0]["uv"].values():
@@ -277,28 +320,25 @@ class ProjectUvTest(unittest.TestCase):
         result = project_uv(block_models, atlas_manifest)
         self.assertEqual(result["k"][0]["uv"], {"x": 16, "y": 0, "w": 16, "h": 32})
 
-    def test_uv_rect_dimensions_follow_the_rotated_uv_extent_not_the_raw_uv(self):
+    def test_uv_rect_dimensions_come_straight_off_the_raw_uv_in_u_v_order(self):
         # Mirrors an oak_button rotated to mount on a wall (x:90): the raw
-        # java uv is [5, 6, 11, 10] (6 wide, 4 tall), but after the same
-        # rotation that swapped the geometry's width/height, uv_extent
-        # reflects the new pairing (4 wide, 6 tall) - the projected rect's
-        # w/h must follow uv_extent, not be recomputed from the untouched
-        # raw uv numbers (which would give the transposed, wrong aspect).
-        face = self._face("block/oak_button", uv=[5, 6, 11, 10])
-        face["uv_extent"] = [4, 6, 0]  # already rotated: swapped vs. the raw uv's (6, 4)
-        face["normal"] = [0, 0, 1]  # no longer vertical after rotation
-        block_models = {"k": [face]}
+        # java uv is [5, 6, 11, 10], 6 along u and 4 along v. Those stay
+        # attached to u and v no matter how the face is rotated, because the
+        # quad's own width/height were measured along those same two axes
+        # (see DeriveWidthHeightTest) - so the rect never needs transposing
+        # here, and reordering it would be what breaks the pairing.
+        block_models = {"k": [self._face("block/oak_button", uv=[5, 6, 11, 10])]}
         atlas_manifest = {"block/oak_button": {"x": 0, "y": 0, "w": 16, "h": 16}}
         result = project_uv(block_models, atlas_manifest)
-        self.assertEqual(result["k"][0]["uv"]["w"], 4)
-        self.assertEqual(result["k"][0]["uv"]["h"], 6)
+        self.assertEqual(result["k"][0]["uv"]["w"], 6)
+        self.assertEqual(result["k"][0]["uv"]["h"], 4)
 
 
 class BuildFaceTypesAndRefsTest(unittest.TestCase):
-    def _face(self, center, width=16, height=16, normal=None, rotation=0, tintindex=-1, uv=None):
+    def _face(self, center, width=16, height=16, normal=None, roll=0, tintindex=-1, uv=None):
         return {
             "center": center, "width": width, "height": height, "normal": normal or [0, 1, 0],
-            "rotation": rotation, "tintindex": tintindex, "uv": uv or {"x": 0, "y": 0, "w": 16, "h": 16},
+            "roll": roll, "tintindex": tintindex, "uv": uv or {"x": 0, "y": 0, "w": 16, "h": 16},
         }
 
     def test_identical_full_descriptor_across_different_blocks_gets_same_index(self):
@@ -340,7 +380,7 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
     def test_face_types_table_reproduces_original_face_descriptor(self):
         block_models = {
             "a": [self._face(
-                [1, 2, 3], width=3, height=4, normal=[1, 0, 0], rotation=90, tintindex=0,
+                [1, 2, 3], width=3, height=4, normal=[1, 0, 0], roll=90, tintindex=0,
                 uv={"x": 1, "y": 2, "w": 3, "h": 4},
             )],
         }
@@ -350,7 +390,7 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
         self.assertEqual(face_type["width"], 3)
         self.assertEqual(face_type["height"], 4)
         self.assertEqual(face_type["normal"], [1, 0, 0])
-        self.assertEqual(face_type["rotation"], 90)
+        self.assertEqual(face_type["roll"], 90)
         self.assertEqual(face_type["tintindex"], 0)
         self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
 

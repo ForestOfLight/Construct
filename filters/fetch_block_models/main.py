@@ -23,6 +23,7 @@ from b2j_source import fetch_b2j, manifest_version, parse_java_state
 from block_entity_models import resolve_block_entity
 from blockstate_resolver import resolve_java_state
 from mcmeta_source import McmetaSource
+from rotation import signed_angle
 from texture_atlas import TextureAtlas
 
 WHITE_TEXTURE = "white"
@@ -36,37 +37,101 @@ _FULL_UV = [0, 0, 16, 16]
 # isolated preview block with no neighbor context.
 _STAIR_SHAPES = {"inner_left", "inner_right", "outer_left", "outer_right", "straight"}
 
+# Bedrock's "direction_z" billboard takes a facing direction and nothing
+# else - there's no way to hand it a full orientation - so the engine
+# derives the quad's up vector itself and every texture lands at whatever
+# roll that produces. These three constants describe that engine behavior;
+# everything else about a face's orientation is derived from Java's data.
+#
+# A face with a horizontal normal comes out reading world-up, which is
+# already what an unrotated Java side face wants - hence those faces
+# needing no roll and looking correct today. A face with a vertical normal
+# has no world-up to lean on, and the engine settles on a fixed orientation
+# reading south (+z) instead. That is exactly why every top and bottom
+# texture currently faces south regardless of which block it belongs to:
+# Java's up face reads north, so it is a full 180 degrees out.
+_ENGINE_UP_HORIZONTAL_FACE = [0, 1, 0]
+_ENGINE_UP_VERTICAL_FACE = [0, 0, 1]
+# Which way a positive Molang rotation actually spins the quad. Only faces
+# needing a quarter turn (per-face uv rotation, or an x-axis blockstate
+# rotation) can tell the two apart - the 0 and 180 degree cases that cover
+# every plain full cube come out the same either way - so this is the one
+# value here that a half-turn-only test can't pin down. Flip the sign if
+# quarter-turned faces land mirrored.
+_ROLL_HANDEDNESS = 1
+
+# 'roll' matches what the real pipeline derives for an unrotated full cube
+# (see _derive_roll): 180 on the up face, 0 everywhere else. The white
+# swatch is a solid color, so no roll would look any different today - these
+# are correct rather than convenient so that swapping in a non-uniform
+# fallback texture later doesn't quietly render it sideways.
 WHITE_CUBE_FACES = [
-    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 0, 16], "rotation": 0, "tintindex": -1},
-    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 0, 16], "rotation": 0, "tintindex": -1},
-    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 16, 0], "rotation": 0, "tintindex": -1},
-    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 16, 0], "rotation": 0, "tintindex": -1},
-    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [0, 16, 16], "rotation": 0, "tintindex": -1},
-    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [0, 16, 16], "rotation": 0, "tintindex": -1},
+    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 180, "tintindex": -1},
+    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1},
 ]
 
-def _derive_width_height(extent, normal):
-    """Derives world-space width/height from a face's fully-rotated extent
-    vector and normal. Must happen only after ALL rotation is done (element-
-    level + blockstate x/y), since a 90-degree blockstate rotation around X
-    or Z can turn a vertical-normal face (up/down) into a horizontal-normal
-    one (or vice versa) - e.g. a piston head rotated to face up/down - which
-    changes which axis is "vertical" for that face.
+def _derive_width_height(extent, uv_u, uv_v):
+    """Derives the quad's size from its fully-rotated extent vector, measured
+    along its own texture axes rather than along world axes: width is how far
+    the face reaches in the direction the texture's u runs, height the same
+    for v. Must happen only after ALL rotation is done (per-face uv rotation,
+    element-level, and blockstate x/y).
 
-    For a horizontal-normal face, the billboard's "up" is always world Y and
-    "right" is whichever horizontal axis is left over; combining the two
-    horizontal components via Pythagoras gives the right answer whether the
-    extent lies flat along one axis (the normal case after a 90-degree
-    rotation) or diagonally across both (cross-plant quads rotated 45
-    degrees around Y, where the single horizontal length gets split across
-    X and Z). Vertical-normal faces (up/down) can't go diagonal in practice
-    (only Y-axis element rotation ever introduces a non-90-degree angle, and
-    that's only ever applied to already-horizontal-normal cross quads), so
-    they just read X/Z directly."""
-    ex, ey, ez = (abs(c) for c in extent)
-    if abs(normal[1]) >= Decimal("0.5"):
-        return ex, ez
-    return (Decimal(ex) * ex + Decimal(ez) * ez).sqrt(), ey
+    Measuring along the texture axes is what keeps the quad and its texture
+    sample from ever disagreeing. Whatever reorients the face - a 90-degree
+    blockstate rotation that turns a vertical-normal face horizontal, or a
+    per-face uv rotation that swaps which world axis carries u - moves the
+    texture axes with it, so width/height and the uv rect's width/height
+    always come out paired the same way instead of transposed.
+
+    Projection also handles diagonal faces for free (cross-plant quads
+    rotated 45 degrees around Y, whose single horizontal length is split
+    across X and Z): the extent's component along the equally-diagonal u
+    axis is the full length, with no special case needed."""
+    return _project(extent, uv_u), _project(extent, uv_v)
+
+
+def _project(vec, axis):
+    """Absolute length of `vec`'s component along the unit vector `axis`."""
+    return abs(sum(Decimal(a) * Decimal(b) for a, b in zip(vec, axis)))
+
+
+def _derive_roll(normal, uv_v):
+    """Degrees the billboard has to be spun around its own facing direction
+    for the texture to read the way Java draws it.
+
+    A Bedrock "direction_z" billboard only takes a facing direction, never a
+    full orientation, so the engine picks the quad's up vector itself and
+    the texture lands wherever that puts it. The two constants above say
+    where that is; this measures the gap between there and where the face's
+    own texture axes say up should be (the direction v runs is the texture
+    reading *downward*, so texture-up is its opposite).
+
+    Measured about the facing direction actually handed to the particle -
+    which is the outward normal with y negated, see _facing - rather than
+    about the normal itself, so the sign follows the same axis the engine
+    spins around."""
+    facing = _facing(normal)
+    engine_up = (_ENGINE_UP_VERTICAL_FACE if _is_vertical(normal)
+                 else _ENGINE_UP_HORIZONTAL_FACE)
+    texture_up = [-Decimal(c) for c in uv_v]
+    return _ROLL_HANDEDNESS * signed_angle(engine_up, texture_up, facing)
+
+
+def _facing(normal):
+    """The direction the renderer actually hands the particle, which is the
+    outward normal with its y component negated - see the note in
+    BlockPreviewVerificationLevelParticleRender#renderFace on why up/down
+    faces render backwards without it."""
+    return [Decimal(normal[0]), -Decimal(normal[1]), Decimal(normal[2])]
+
+
+def _is_vertical(normal):
+    return abs(Decimal(normal[1])) >= Decimal("0.5")
 
 
 def root_dir():
@@ -102,7 +167,7 @@ def build_block_models(mcmeta, b2j, atlas):
                 # mcmeta texture name, so this stays unambiguous
                 texture = f"{face['texture']}|{face['flip']}" if face["flip"] else face["texture"]
                 atlas.add(mcmeta, texture)
-                width, height = _derive_width_height(face["extent"], face["normal"])
+                width, height = _derive_width_height(face["extent"], face["uv_u"], face["uv_v"])
                 faces.append({
                     "center": face["center"],
                     "width": width,
@@ -110,8 +175,7 @@ def build_block_models(mcmeta, b2j, atlas):
                     "normal": face["normal"],
                     "texture": texture,
                     "uv": face["uv"],
-                    "uv_extent": face["uv_extent"],
-                    "rotation": face["rotation"],
+                    "roll": _derive_roll(face["normal"], face["uv_v"]),
                     "tintindex": face["tintindex"],
                 })
         block_models[bedrock_state] = faces
@@ -119,36 +183,32 @@ def build_block_models(mcmeta, b2j, atlas):
 
 
 def project_uv(block_models, atlas_manifest):
-    """Replaces each face's 'texture' name, Java-space (0-16) 'uv' rect, and
-    'uv_extent' with its final atlas-pixel 'uv' rect.
+    """Replaces each face's 'texture' name and Java-space (0-16) 'uv' rect
+    with its final atlas-pixel 'uv' rect.
 
     A face's own uv is often smaller than the whole texture (e.g. a fence
     post's narrow faces only sample a thin strip) - using the whole
     texture's rect regardless would squish the entire texture into that
-    smaller face. The rect's width/height come from 'uv_extent' (rotated
-    through blockstate rotation exactly like the geometry's own extent) and
-    NOT from the raw uv numbers directly, since a 90-degree rotation that
-    swaps the geometry's width/height axis must swap the uv's the same way,
-    or the sample ends up transposed relative to the quad (e.g. a button
-    rotated to mount on a wall stretching its top-face texture 90 degrees).
-    The raw uv is still used for the rect's x/y offset, which isn't
-    axis-sensitive the same way."""
+    smaller face.
+
+    The rect's width and height come straight off the raw uv numbers, with
+    no reordering: the quad's own width was measured along the texture's u
+    axis and its height along v (see _derive_width_height), so the u span
+    always belongs to the width and the v span to the height no matter how
+    the face has been rotated. Rotation shows up as the face's roll
+    instead."""
     white_rect = atlas_manifest.get(WHITE_TEXTURE)
     for faces in block_models.values():
         for face in faces:
             texture = face.pop("texture")
-            u0, v0, u1, v1 = face.pop("uv")
-            uv_width, uv_height = _derive_width_height(face.pop("uv_extent"), face["normal"])
-            u_min, v_min = min(Decimal(u0), Decimal(u1)), min(Decimal(v0), Decimal(v1))
+            u0, v0, u1, v1 = (Decimal(c) for c in face.pop("uv"))
+            u_min, v_min = min(u0, u1), min(v0, v1)
             rect = atlas_manifest.get(texture, white_rect)
             face["uv"] = {
                 "x": rect["x"] + (u_min / 16) * rect["w"],
                 "y": rect["y"] + (v_min / 16) * rect["h"],
-                # uv_width/uv_height may be plain ints (e.g. WHITE_CUBE_FACES's
-                # literal uv_extent) - int/16 is a native float in Python 3,
-                # which js_data.render() can't serialize.
-                "w": (Decimal(uv_width) / 16) * rect["w"],
-                "h": (Decimal(uv_height) / 16) * rect["h"],
+                "w": (abs(u1 - u0) / 16) * rect["w"],
+                "h": (abs(v1 - v0) / 16) * rect["h"],
             }
     return block_models
 
@@ -167,7 +227,7 @@ def build_face_types_and_refs(block_models):
             uv = face["uv"]
             key = (
                 tuple(face["center"]), face["width"], face["height"], tuple(face["normal"]),
-                face["rotation"], face["tintindex"],
+                face["roll"], face["tintindex"],
                 uv["x"], uv["y"], uv["w"], uv["h"],
             )
             if key not in face_type_index:
@@ -177,7 +237,7 @@ def build_face_types_and_refs(block_models):
                     "width": face["width"],
                     "height": face["height"],
                     "normal": face["normal"],
-                    "rotation": face["rotation"],
+                    "roll": face["roll"],
                     "tintindex": face["tintindex"],
                     "uv": uv,
                 })

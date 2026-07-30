@@ -19,6 +19,10 @@
 			"minecraft:particle_lifetime_expression": {
 				"max_lifetime": "variable.lifetime"
 			},
+			"minecraft:particle_motion_parametric": {
+				"relative_position": [ 0, 0, 0 ],
+				"rotation": "variable.roll"
+			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [
 					"variable.width",

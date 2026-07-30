@@ -24,6 +24,45 @@ def rotate_point(point, origin, axis, degrees):
     return [_to_decimal(r + o) for r, o in zip(rotated, origin)]
 
 
+def rotate_about_normal(vec, normal, degrees):
+    """Rotates `vec` by `degrees` right-handed about `normal`, which must be a
+    signed cardinal unit vector (e.g. [0, -1, 0]). Rotating about -y by d is
+    the same as rotating about +y by -d, so this just picks the axis the
+    normal lies on and flips the sign when it points the negative way."""
+    for axis, index in (("x", 0), ("y", 1), ("z", 2)):
+        component = normal[index]
+        if component:
+            return rotate_vector(vec, axis, degrees if component > 0 else -degrees)
+    raise ValueError(f"normal {normal!r} is not a cardinal direction")
+
+
+def signed_angle(from_vec, to_vec, axis_vec):
+    """Returns the angle in degrees from `from_vec` to `to_vec`, measured
+    right-handed about `axis_vec` (so the result is signed, unlike a plain
+    dot-product angle). All three are treated as directions; magnitudes are
+    normalized away. Used to work out how far a face's texture has to be
+    rolled around its own normal to land where Java puts it."""
+    a = _normalize(from_vec)
+    b = _normalize(to_vec)
+    n = _normalize(axis_vec)
+    cos_r = sum(x * y for x, y in zip(a, b))
+    cross = (
+        a[1] * b[2] - a[2] * b[1],
+        a[2] * b[0] - a[0] * b[2],
+        a[0] * b[1] - a[1] * b[0],
+    )
+    sin_r = sum(x * y for x, y in zip(cross, n))
+    return _to_decimal(math.degrees(math.atan2(sin_r, cos_r)))
+
+
+def _normalize(vec):
+    values = [float(c) for c in vec]
+    length = math.sqrt(sum(c * c for c in values))
+    if not length:
+        raise ValueError("cannot normalize a zero-length vector")
+    return [c / length for c in values]
+
+
 def rotate_vector(vec, axis, degrees):
     """Rotates a direction vector (no translation) by `degrees` about the
     given cardinal axis. Direction verified against real minecraft:furnace
