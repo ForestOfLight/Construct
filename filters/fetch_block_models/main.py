@@ -25,12 +25,12 @@ from texture_atlas import TextureAtlas
 
 WHITE_TEXTURE = "white"
 WHITE_CUBE_FACES = [
-    {"from": [0, 16, 0], "to": [16, 16, 16], "axis": "xz", "texture": WHITE_TEXTURE, "rotation": 0, "cullface": "up", "tintindex": -1},
-    {"from": [0, 0, 0], "to": [16, 0, 16], "axis": "xz", "texture": WHITE_TEXTURE, "rotation": 0, "cullface": "down", "tintindex": -1},
-    {"from": [0, 0, 0], "to": [16, 16, 0], "axis": "xy", "texture": WHITE_TEXTURE, "rotation": 0, "cullface": "north", "tintindex": -1},
-    {"from": [0, 0, 16], "to": [16, 16, 16], "axis": "xy", "texture": WHITE_TEXTURE, "rotation": 0, "cullface": "south", "tintindex": -1},
-    {"from": [16, 0, 0], "to": [16, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "cullface": "east", "tintindex": -1},
-    {"from": [0, 0, 0], "to": [0, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "cullface": "west", "tintindex": -1},
+    {"from": [0, 16, 0], "to": [16, 16, 16], "axis": "xz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"from": [0, 0, 0], "to": [16, 0, 16], "axis": "xz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"from": [0, 0, 0], "to": [16, 16, 0], "axis": "xy", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"from": [0, 0, 16], "to": [16, 16, 16], "axis": "xy", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"from": [16, 0, 0], "to": [16, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
+    {"from": [0, 0, 0], "to": [0, 16, 16], "axis": "yz", "texture": WHITE_TEXTURE, "rotation": 0, "tintindex": -1},
 ]
 
 _FACE_AXIS = {"up": "xz", "down": "xz", "north": "xy", "south": "xy", "east": "yz", "west": "yz"}
@@ -70,7 +70,6 @@ def build_block_models(mcmeta, b2j, atlas):
                     "axis": _face_axis(face_name),
                     "texture": face["texture"],
                     "rotation": face["rotation"],
-                    "cullface": face["cullface"],
                     "tintindex": face["tintindex"],
                 })
         block_models[bedrock_state] = faces
@@ -88,6 +87,32 @@ def project_uv(block_models, atlas_manifest):
     return block_models
 
 
+def build_shapes_and_refs(block_models):
+    """Deduplicates each face's shape (from/to/axis/rotation/tintindex) into
+    a shared table, replacing each face dict with {'shape': index, 'uv': {...}}.
+    Mutates and returns block_models; also returns the shared shapes list.
+    Call this AFTER project_uv (faces must already have 'uv' set, not 'texture')."""
+    shape_index = {}
+    shapes = []
+    for faces in block_models.values():
+        for i, face in enumerate(faces):
+            key = (
+                tuple(face["from"]), tuple(face["to"]), face["axis"],
+                face["rotation"], face["tintindex"],
+            )
+            if key not in shape_index:
+                shape_index[key] = len(shapes)
+                shapes.append({
+                    "from": face["from"],
+                    "to": face["to"],
+                    "axis": face["axis"],
+                    "rotation": face["rotation"],
+                    "tintindex": face["tintindex"],
+                })
+            faces[i] = {"shape": shape_index[key], "uv": face["uv"]}
+    return shapes, block_models
+
+
 def build(root):
     manifest = load_manifest(root)
     version = manifest_version(manifest)
@@ -101,10 +126,11 @@ def build(root):
     block_models = build_block_models(mcmeta, b2j, atlas)
     atlas_image, atlas_manifest = atlas.pack()
     block_models = project_uv(block_models, atlas_manifest)
-    return atlas_image, atlas_manifest, block_models
+    shapes, block_models = build_shapes_and_refs(block_models)
+    return atlas_image, shapes, block_models
 
 
-def write_outputs(root, atlas_image, block_models):
+def write_outputs(root, atlas_image, shapes, block_models):
     atlas_path = root / "packs" / "RP" / "textures" / "particle" / "vanilla_block_atlas.png"
     atlas_image.save(atlas_path)
 
@@ -116,15 +142,19 @@ def write_outputs(root, atlas_image, block_models):
     atlas_js_path.write_text(atlas_js_contents, encoding="utf-8")
 
     models_js_path = root / "packs" / "BP" / "scripts" / "blockModels.js"
-    models_js_path.write_text("export const blockModels = " + render(block_models) + ";", encoding="utf-8")
+    models_js_contents = (
+        "export const blockShapes = " + render(shapes) + ";\n\n"
+        "export const blockModels = " + render(block_models) + ";"
+    )
+    models_js_path.write_text(models_js_contents, encoding="utf-8")
 
     print(f"[fetch_block_models] wrote {atlas_path}, {atlas_js_path}, {models_js_path}")
 
 
 def main():
     root = root_dir()
-    atlas_image, _atlas_manifest, block_models = build(root)
-    write_outputs(root, atlas_image, block_models)
+    atlas_image, shapes, block_models = build(root)
+    write_outputs(root, atlas_image, shapes, block_models)
 
 
 if __name__ == "__main__":
