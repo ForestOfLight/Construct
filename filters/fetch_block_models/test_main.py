@@ -87,6 +87,32 @@ class BuildBlockModelsTest(unittest.TestCase):
         block_models = build_block_models(mcmeta, b2j, atlas)
         self.assertEqual(block_models["minecraft:unknown_block[]"], WHITE_CUBE_FACES)
 
+    def test_java_state_override_replaces_the_mapped_java_block(self):
+        # blocksB2J maps Bedrock's single flower_pot state onto an arbitrary
+        # one of Java's per-plant potted_* ids, which draws that plant into
+        # every pot; the override sends it to Java's empty pot instead
+        mcmeta = FakeMcmeta(
+            blockstates={
+                "flower_pot": {"variants": {"": {"model": "block/flower_pot"}}},
+                "potted_dandelion": {"variants": {"": {"model": "block/potted_dandelion"}}},
+            },
+            models={
+                "block/flower_pot": {"textures": {}, "elements": [{
+                    "from": [5, 0, 5], "to": [11, 6, 11],
+                    "faces": {"up": {"texture": "block/flower_pot"}},
+                }]},
+                "block/potted_dandelion": {"textures": {}, "elements": [{
+                    "from": [5, 0, 5], "to": [11, 16, 11],
+                    "faces": {"up": {"texture": "block/dandelion"}},
+                }]},
+            },
+        )
+        atlas = FakeAtlas()
+        b2j = {"minecraft:flower_pot[update_bit=0]": "minecraft:potted_dandelion[]"}
+        build_block_models(mcmeta, b2j, atlas)
+        self.assertIn("block/flower_pot", atlas.added)
+        self.assertNotIn("block/dandelion", atlas.added)
+
     def test_white_cube_fallback_faces_are_flagged_as_missing(self):
         # the flag is what tells the renderer to draw see-through blue rather
         # than a solid white quad indistinguishable from a real blank block

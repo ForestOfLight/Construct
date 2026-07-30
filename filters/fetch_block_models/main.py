@@ -37,6 +37,22 @@ _FULL_UV = [0, 0, 16, 16]
 # isolated preview block with no neighbor context.
 _STAIR_SHAPES = {"inner_left", "inner_right", "outer_left", "outer_right", "straight"}
 
+# Java state overrides applied per Bedrock block id, replacing whatever
+# blocksB2J.json maps that block to.
+#
+# Java splits a potted plant into a separate block id per plant
+# (potted_dandelion, potted_cactus, ...) while Bedrock keeps every pot as one
+# flower_pot block with the plant in the block entity. There is exactly one
+# Bedrock flower_pot state to map, so blocksB2J has to pick one of Java's ~40
+# potted ids for it and picks an arbitrary one - currently
+# potted_closed_eyeblossom - which draws that flower into every pot in a
+# preview. Bedrock's permutation carries no plant for us to read back, so an
+# empty pot is the only honest shape: it is right for an empty pot and, for a
+# planted one, understates rather than showing the wrong flower.
+_JAVA_STATE_OVERRIDES = {
+    "minecraft:flower_pot": ("minecraft:flower_pot", {}),
+}
+
 # Bedrock's "direction_z" billboard takes a facing direction and nothing
 # else - there's no way to hand it a full orientation - so the engine
 # derives the quad's up vector itself and every texture lands at whatever
@@ -180,6 +196,9 @@ def build_block_models(mcmeta, b2j, atlas):
     block_models = {}
     for bedrock_state, java_state in b2j.items():
         java_block_id, properties = parse_java_state(java_state)
+        override = _JAVA_STATE_OVERRIDES.get(bedrock_state.split("[", 1)[0])
+        if override:
+            java_block_id, properties = override[0], dict(override[1])
         if properties.get("shape") in _STAIR_SHAPES:
             properties["shape"] = "straight"
         elements = resolve_java_state(mcmeta, java_block_id, properties)
