@@ -27,6 +27,15 @@ from texture_atlas import TextureAtlas
 
 WHITE_TEXTURE = "white"
 _FULL_UV = [0, 0, 16, 16]
+# Stair "shape" (straight/inner_*/outer_*) is a Java render-time value
+# computed from neighboring blocks, not real placed state - Bedrock's own
+# stair states carry no such property, so blocksB2J.json fills it in with an
+# arbitrary placeholder ("outer_right") for every plain stair state. Left
+# alone, that resolves to the corner model (a quarter-width top step) for
+# every stair block. Force it back to "straight" - the correct model for an
+# isolated preview block with no neighbor context.
+_STAIR_SHAPES = {"inner_left", "inner_right", "outer_left", "outer_right", "straight"}
+
 WHITE_CUBE_FACES = [
     {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 0, 16], "rotation": 0, "tintindex": -1},
     {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "uv_extent": [16, 0, 16], "rotation": 0, "tintindex": -1},
@@ -76,6 +85,8 @@ def build_block_models(mcmeta, b2j, atlas):
     block_models = {}
     for bedrock_state, java_state in b2j.items():
         java_block_id, properties = parse_java_state(java_state)
+        if properties.get("shape") in _STAIR_SHAPES:
+            properties["shape"] = "straight"
         elements = resolve_java_state(mcmeta, java_block_id, properties)
         if not elements:
             elements = resolve_block_entity(java_block_id, properties)

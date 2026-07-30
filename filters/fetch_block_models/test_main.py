@@ -144,6 +144,37 @@ class BuildBlockModelsTest(unittest.TestCase):
         self.assertEqual(faces[0]["texture"], "block/oak_log")
         self.assertEqual(faces[0]["normal"], [0, 0, -1])
 
+    def test_stair_shape_is_forced_to_straight_regardless_of_b2j_value(self):
+        # blocksB2J.json fills stairs' "shape" property with an arbitrary
+        # placeholder ("outer_right") for every plain Bedrock stair state,
+        # since Bedrock has no real neighbor-dependent shape concept - left
+        # alone this picks the corner model (quarter-width top step) instead
+        # of the normal straight-stair model.
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_stairs": {"variants": {
+                "facing=north,half=bottom,shape=straight": {"model": "block/oak_stairs"},
+                "facing=north,half=bottom,shape=outer_right": {"model": "block/oak_stairs_outer"},
+            }}},
+            models={
+                "block/oak_stairs": {"textures": {}, "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {"up": {"texture": "block/oak_planks"}},
+                }]},
+                "block/oak_stairs_outer": {"textures": {}, "elements": [{
+                    "from": [0, 0, 0], "to": [8, 16, 8],
+                    "faces": {"up": {"texture": "block/oak_planks"}},
+                }]},
+            },
+        )
+        atlas = FakeAtlas()
+        b2j = {
+            "minecraft:oak_stairs[weirdo_direction=3]":
+                "minecraft:oak_stairs[facing=north,half=bottom,shape=outer_right]",
+        }
+        block_models = build_block_models(mcmeta, b2j, atlas)
+        faces = block_models["minecraft:oak_stairs[weirdo_direction=3]"]
+        self.assertEqual(faces[0]["width"], 16)
+
 
 class DeriveWidthHeightTest(unittest.TestCase):
     def test_vertical_normal_reads_x_and_z_directly(self):
