@@ -34,8 +34,12 @@ export class BlockPreviewVerificationLevelParticleRender {
         molang.setFloat("lifetime", this.lifetimeSeconds);
         molang.setFloat("width", (face.width / 16) * 0.5);
         molang.setFloat("height", (face.height / 16) * 0.5);
+        // Bedrock's direction_z billboard mode inverts orientation for
+        // near-vertical custom_direction vectors (a degenerate-basis quirk
+        // when the direction is close to world up/down); negating y
+        // compensates so up/down faces render facing the right way.
         molang.setFloat("nx", face.normal[0]);
-        molang.setFloat("ny", face.normal[1]);
+        molang.setFloat("ny", -face.normal[1]);
         molang.setFloat("nz", face.normal[2]);
         molang.setFloat("u", face.uv.x);
         molang.setFloat("v", face.uv.y);
