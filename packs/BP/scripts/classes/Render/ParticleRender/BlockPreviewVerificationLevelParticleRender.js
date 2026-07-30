@@ -2,6 +2,7 @@ import { MolangVariableMap } from "@minecraft/server";
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { Vector } from "../../../lib/Vector";
 import { BlockModelLookup, WHITE_CUBE_FACES } from "../BlockModelLookup";
+import { DEBUG_CONFIG } from "../../../consts";
 
 const BLOCK_CENTER = new Vector(0.5, 0.5, 0.5);
 
@@ -57,6 +58,10 @@ export class BlockPreviewVerificationLevelParticleRender {
         // -1 for the top face and +1 for the bottom face. Horizontal-normal
         // faces don't need this (see lateral_face_blend.json, which sends
         // the raw outward vector unchanged).
+        if (DEBUG_CONFIG.enable) {
+            face.uv.x = DEBUG_CONFIG.render_all_textures_as.u;
+            face.uv.y = DEBUG_CONFIG.render_all_textures_as.v;
+        }
         molang.setFloat("nx", face.normal[0]);
         molang.setFloat("ny", -face.normal[1]);
         molang.setFloat("nz", face.normal[2]);
