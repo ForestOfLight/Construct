@@ -27,6 +27,15 @@ _BLOCK_ENTITY_MAPPING = {
     "minecraft:chest": {"shape": "chest", "textures": {}},
     "minecraft:trapped_chest": {"shape": "chest", "textures": {"main": "entity/chest/trapped"}},
     "minecraft:ender_chest": {"shape": "chest", "textures": {"main": "entity/chest/ender"}},
+    # Banner color lives in block-entity NBT, not the blockstate - the
+    # bedrock<->java state mapping itself only ever produces a single
+    # generic "black_banner"/"black_wall_banner" id regardless of the
+    # banner's real color, so per-color texturing isn't possible from
+    # permutation data alone. Render every banner as the plain white cloth
+    # (its real, untinted base texture) rather than picking an arbitrary
+    # fixed color.
+    "minecraft:black_banner": {"shape": "banner", "textures": {}},
+    "minecraft:black_wall_banner": {"shape": "banner", "textures": {}},
 }
 
 
@@ -51,5 +60,13 @@ def resolve_block_entity(java_block_id, properties):
     textures = {**shape["textures"], **config["textures"]}
     elements = resolve_elements(shape["elements"], textures)
 
-    y_rot = _FACING_TO_Y.get(properties.get("facing"), 0)
+    if "facing" in properties:
+        y_rot = _FACING_TO_Y.get(properties["facing"], 0)
+    elif "rotation" in properties:
+        # standing banner: 16 steps of 22.5 degrees around y, rather than
+        # the 4-way "facing" every other directional block in this
+        # pipeline uses
+        y_rot = int(properties["rotation"]) * 22.5
+    else:
+        y_rot = 0
     return rotate_elements(elements, 0, y_rot)

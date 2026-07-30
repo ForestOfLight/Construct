@@ -26,6 +26,29 @@ class ResolveBlockEntityTest(unittest.TestCase):
         textures = {face["texture"] for el in elements for face in el["faces"].values()}
         self.assertEqual(textures, {"entity/chest/ender"})
 
+    def test_standing_banner_resolves_to_the_hardcoded_shape(self):
+        elements = resolve_block_entity("minecraft:black_banner", {"rotation": "0"})
+        self.assertEqual(len(elements), 3)  # top, slate, stand
+
+    def test_standing_banner_uses_the_white_banner_texture(self):
+        elements = resolve_block_entity("minecraft:black_banner", {"rotation": "0"})
+        textures = {face["texture"] for el in elements for face in el["faces"].values()}
+        self.assertEqual(textures, {"entity/banner/banner_base"})
+
+    def test_wall_banner_resolves_to_the_hardcoded_shape(self):
+        elements = resolve_block_entity("minecraft:black_wall_banner", {"facing": "north"})
+        self.assertEqual(len(elements), 3)
+
+    def test_standing_banner_rotation_property_rotates_in_22_5_degree_steps(self):
+        # rotation=4 is a quarter turn (4 * 22.5 = 90 degrees) - same effect
+        # as any other block's 90-degree y rotation
+        unrotated = resolve_block_entity("minecraft:black_banner", {"rotation": "0"})
+        rotated = resolve_block_entity("minecraft:black_banner", {"rotation": "4"})
+        stand_unrotated = unrotated[2]["faces"]["north"]["normal"]
+        stand_rotated = rotated[2]["faces"]["north"]["normal"]
+        self.assertEqual(stand_unrotated, [0, 0, -1])
+        self.assertEqual(stand_rotated, [1, 0, 0])
+
     def test_facing_east_rotates_the_knob_off_the_unrotated_north_face(self):
         # unrotated (facing=north), the knob protrudes on the "north" face
         # slot (normal [0,0,-1], matching every other directional block's

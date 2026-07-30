@@ -248,7 +248,7 @@
   },
   "banner": {
     "textures": {
-      "main": "entity/banner/base"
+      "main": "entity/banner/banner_base"
     },
     "elements": [
       {
