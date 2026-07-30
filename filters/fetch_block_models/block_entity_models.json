@@ -425,7 +425,7 @@
   },
   "end_portal": {
     "textures": {
-      "main": "block/black_concrete"
+      "main": "block/end_stone"
     },
     "elements": [
       {
@@ -468,7 +468,7 @@
   },
   "end_gateway": {
     "textures": {
-      "main": "block/black_concrete"
+      "main": "block/end_stone"
     },
     "elements": [
       {

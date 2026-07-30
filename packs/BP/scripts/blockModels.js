@@ -144844,7 +144844,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16.00
@@ -144858,7 +144858,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 368
       },
       "width" : 16.00
@@ -144872,7 +144872,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 371.0000
       },
       "width" : 16.00
@@ -144886,7 +144886,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 371.0000
       },
       "width" : 16.00
@@ -144900,7 +144900,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 371.0000
       },
       "width" : 16.00
@@ -144914,7 +144914,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 371.0000
       },
       "width" : 16.00
@@ -144928,7 +144928,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 372.00
       },
       "width" : 8.00
@@ -144942,7 +144942,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 368
       },
       "width" : 8.00
@@ -144956,7 +144956,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 368
       },
       "width" : 8.00
@@ -144970,7 +144970,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 368
       },
       "width" : 8.00
@@ -144984,7 +144984,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 368
       },
       "width" : 8.00
@@ -144998,7 +144998,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16
@@ -145012,7 +145012,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 368
       },
       "width" : 16
@@ -145026,7 +145026,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 372.00
       },
       "width" : 8
@@ -145040,7 +145040,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16.00
@@ -145054,7 +145054,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 368
       },
       "width" : 16.00
@@ -145068,7 +145068,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 372.00
       },
       "width" : 8.00
@@ -145082,7 +145082,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16.00
@@ -145096,7 +145096,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 368
       },
       "width" : 16.00
@@ -145110,7 +145110,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 532.00,
+         "x" : 516.00,
          "y" : 372.00
       },
       "width" : 8.00
@@ -145124,7 +145124,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16
@@ -145138,7 +145138,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16
@@ -145152,7 +145152,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16
@@ -145166,7 +145166,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16
@@ -145180,7 +145180,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 368
       },
       "width" : 16
@@ -145194,7 +145194,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 550.000,
+         "x" : 534.000,
          "y" : 368
       },
       "width" : 4
@@ -145208,7 +145208,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 550.000,
+         "x" : 534.000,
          "y" : 368
       },
       "width" : 4
@@ -145222,7 +145222,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 550.000,
+         "x" : 534.000,
          "y" : 368
       },
       "width" : 4
@@ -145236,7 +145236,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 550.000,
+         "x" : 534.000,
          "y" : 368
       },
       "width" : 4
@@ -145250,7 +145250,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 550.000,
+         "x" : 534.000,
          "y" : 374.000
       },
       "width" : 4
@@ -145264,7 +145264,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 549.0000,
+         "x" : 533.0000,
          "y" : 369.0000
       },
       "width" : 6
@@ -145278,7 +145278,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 549.0000,
+         "x" : 533.0000,
          "y" : 369.0000
       },
       "width" : 6
@@ -145292,7 +145292,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 549.0000,
+         "x" : 533.0000,
          "y" : 369.0000
       },
       "width" : 6
@@ -145306,7 +145306,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 549.0000,
+         "x" : 533.0000,
          "y" : 369.0000
       },
       "width" : 6
@@ -145320,7 +145320,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 549.0000,
+         "x" : 533.0000,
          "y" : 373.0000
       },
       "width" : 6
@@ -145334,7 +145334,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 548.00,
+         "x" : 532.00,
          "y" : 370.000
       },
       "width" : 8
@@ -145348,7 +145348,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 548.00,
+         "x" : 532.00,
          "y" : 370.000
       },
       "width" : 8
@@ -145362,7 +145362,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 548.00,
+         "x" : 532.00,
          "y" : 370.000
       },
       "width" : 8
@@ -145376,7 +145376,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 548.00,
+         "x" : 532.00,
          "y" : 370.000
       },
       "width" : 8
@@ -145390,7 +145390,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 548.00,
+         "x" : 532.00,
          "y" : 372.00
       },
       "width" : 8
@@ -145404,7 +145404,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 10.000,
-         "x" : 547.0000,
+         "x" : 531.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -145418,7 +145418,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 10.000,
-         "x" : 547.0000,
+         "x" : 531.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -145432,7 +145432,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 10.000,
-         "x" : 547.0000,
+         "x" : 531.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -145446,7 +145446,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 13.0000,
          "w" : 10.000,
-         "x" : 547.0000,
+         "x" : 531.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -145460,7 +145460,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 547.0000,
+         "x" : 531.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -145474,7 +145474,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 547.0000,
+         "x" : 531.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -145488,7 +145488,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 12.00,
-         "x" : 546.000,
+         "x" : 530.000,
          "y" : 373.0000
       },
       "width" : 12
@@ -145502,7 +145502,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 12.00,
-         "x" : 546.000,
+         "x" : 530.000,
          "y" : 373.0000
       },
       "width" : 12
@@ -145516,7 +145516,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 12.00,
-         "x" : 546.000,
+         "x" : 530.000,
          "y" : 373.0000
       },
       "width" : 12
@@ -145530,7 +145530,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 12.00,
-         "x" : 546.000,
+         "x" : 530.000,
          "y" : 373.0000
       },
       "width" : 12
@@ -145544,7 +145544,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 546.000,
+         "x" : 530.000,
          "y" : 370.000
       },
       "width" : 12
@@ -145558,7 +145558,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 546.000,
+         "x" : 530.000,
          "y" : 370.000
       },
       "width" : 12
@@ -145572,7 +145572,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 14.000,
-         "x" : 545.0000,
+         "x" : 529.0000,
          "y" : 376.0
       },
       "width" : 14
@@ -145586,7 +145586,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 14.000,
-         "x" : 545.0000,
+         "x" : 529.0000,
          "y" : 376.0
       },
       "width" : 14
@@ -145600,7 +145600,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 14.000,
-         "x" : 545.0000,
+         "x" : 529.0000,
          "y" : 376.0
       },
       "width" : 14
@@ -145614,7 +145614,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 14.000,
-         "x" : 545.0000,
+         "x" : 529.0000,
          "y" : 376.0
       },
       "width" : 14
@@ -145628,7 +145628,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 14.000,
-         "x" : 545.0000,
+         "x" : 529.0000,
          "y" : 369.0000
       },
       "width" : 14
@@ -145642,7 +145642,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 14.000,
-         "x" : 545.0000,
+         "x" : 529.0000,
          "y" : 369.0000
       },
       "width" : 14
@@ -145656,7 +145656,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 368
       },
       "width" : 16
@@ -145670,7 +145670,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 368
       },
       "width" : 16
@@ -145684,7 +145684,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 368
       },
       "width" : 16
@@ -145698,7 +145698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 368
       },
       "width" : 16
@@ -145712,7 +145712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 368
       },
       "width" : 16
@@ -145726,7 +145726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 368
       },
       "width" : 16
@@ -145740,7 +145740,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 368
       },
       "width" : 16
@@ -145754,7 +145754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 368
       },
       "width" : 16
@@ -145768,7 +145768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 368
       },
       "width" : 16
@@ -145782,7 +145782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 368
       },
       "width" : 16
@@ -145796,7 +145796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 368
       },
       "width" : 16
@@ -145810,7 +145810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 368
       },
       "width" : 16
@@ -145824,7 +145824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4.00
@@ -145838,7 +145838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4.00
@@ -145852,7 +145852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -145866,7 +145866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -145880,7 +145880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -145894,7 +145894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -145908,7 +145908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4.00
@@ -145922,7 +145922,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4.00
@@ -145936,7 +145936,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4
@@ -145950,7 +145950,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4
@@ -145964,7 +145964,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4
@@ -145978,7 +145978,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4
@@ -145992,7 +145992,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4
@@ -146006,7 +146006,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4
@@ -146020,7 +146020,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4
@@ -146034,7 +146034,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4
@@ -146048,7 +146048,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4.00
@@ -146062,7 +146062,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4.00
@@ -146076,7 +146076,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146090,7 +146090,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146104,7 +146104,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146118,7 +146118,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146132,7 +146132,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146146,7 +146146,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146160,7 +146160,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4.00
@@ -146174,7 +146174,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 592,
+         "x" : 576,
          "y" : 368
       },
       "width" : 4.00
@@ -146188,7 +146188,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146202,7 +146202,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146216,7 +146216,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146230,7 +146230,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 603.0000,
+         "x" : 587.0000,
          "y" : 372.00
       },
       "width" : 4.00
@@ -146244,7 +146244,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146258,7 +146258,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 604.00,
+         "x" : 588.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146272,7 +146272,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6.00
@@ -146286,7 +146286,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6.00
@@ -146300,7 +146300,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146314,7 +146314,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146328,7 +146328,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146342,7 +146342,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146356,7 +146356,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146370,7 +146370,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146384,7 +146384,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6
@@ -146398,7 +146398,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6
@@ -146412,7 +146412,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6
@@ -146426,7 +146426,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6
@@ -146440,7 +146440,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6
@@ -146454,7 +146454,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6
@@ -146468,7 +146468,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4
@@ -146482,7 +146482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4
@@ -146496,7 +146496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6.00
@@ -146510,7 +146510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6.00
@@ -146524,7 +146524,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146538,7 +146538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146552,7 +146552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146566,7 +146566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146580,7 +146580,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146594,7 +146594,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146608,7 +146608,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6.00
@@ -146622,7 +146622,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 608,
+         "x" : 592,
          "y" : 368
       },
       "width" : 6.00
@@ -146636,7 +146636,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146650,7 +146650,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146664,7 +146664,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146678,7 +146678,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 7.0000,
          "w" : 6.000,
-         "x" : 617.0000,
+         "x" : 601.0000,
          "y" : 372.00
       },
       "width" : 6.00
@@ -146692,7 +146692,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146706,7 +146706,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 620.00,
+         "x" : 604.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146720,7 +146720,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8.00
@@ -146734,7 +146734,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8.00
@@ -146748,7 +146748,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -146762,7 +146762,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -146776,7 +146776,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -146790,7 +146790,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -146804,7 +146804,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146818,7 +146818,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4.00
@@ -146832,7 +146832,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8
@@ -146846,7 +146846,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8
@@ -146860,7 +146860,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8
@@ -146874,7 +146874,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8
@@ -146888,7 +146888,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8
@@ -146902,7 +146902,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8
@@ -146916,7 +146916,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4
@@ -146930,7 +146930,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4
@@ -146944,7 +146944,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8.00
@@ -146958,7 +146958,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8.00
@@ -146972,7 +146972,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -146986,7 +146986,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147000,7 +147000,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147014,7 +147014,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147028,7 +147028,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4.00
@@ -147042,7 +147042,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4.00
@@ -147056,7 +147056,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8.00
@@ -147070,7 +147070,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 624,
+         "x" : 608,
          "y" : 368
       },
       "width" : 8.00
@@ -147084,7 +147084,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147098,7 +147098,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147112,7 +147112,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147126,7 +147126,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 8.0,
-         "x" : 632.0,
+         "x" : 616.0,
          "y" : 372.00
       },
       "width" : 8.00
@@ -147140,7 +147140,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4.00
@@ -147154,7 +147154,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 636.00,
+         "x" : 620.00,
          "y" : 368
       },
       "width" : 4.00
@@ -147770,7 +147770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 368
       },
       "width" : 16
@@ -147784,7 +147784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 368
       },
       "width" : 16
@@ -147798,7 +147798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 368
       },
       "width" : 16
@@ -147812,7 +147812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 368
       },
       "width" : 16
@@ -147826,7 +147826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 368
       },
       "width" : 16
@@ -147840,7 +147840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 368
       },
       "width" : 16
@@ -147854,7 +147854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 656,
+         "x" : 640,
          "y" : 368
       },
       "width" : 16
@@ -147868,7 +147868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 656,
+         "x" : 640,
          "y" : 368
       },
       "width" : 16
@@ -147882,7 +147882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 656,
+         "x" : 640,
          "y" : 368
       },
       "width" : 16
@@ -147896,7 +147896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 656,
+         "x" : 640,
          "y" : 368
       },
       "width" : 16
@@ -147910,7 +147910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 656,
+         "x" : 640,
          "y" : 368
       },
       "width" : 16
@@ -147924,7 +147924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 656,
+         "x" : 640,
          "y" : 368
       },
       "width" : 16
@@ -148946,7 +148946,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -148960,7 +148960,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -148974,7 +148974,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -148988,7 +148988,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -149002,7 +149002,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -149016,7 +149016,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6
@@ -149030,7 +149030,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6
@@ -149044,7 +149044,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -149058,7 +149058,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2
@@ -149072,7 +149072,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2
@@ -149086,7 +149086,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2
@@ -149100,7 +149100,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2
@@ -149282,7 +149282,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -149296,7 +149296,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -149310,7 +149310,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -149324,7 +149324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -149338,7 +149338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -149352,7 +149352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -149366,7 +149366,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600000899412
@@ -149380,7 +149380,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600000899412
@@ -149394,7 +149394,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -149408,7 +149408,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -149422,7 +149422,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000238212
@@ -149436,7 +149436,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000238212
@@ -149520,7 +149520,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -149534,7 +149534,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -149548,7 +149548,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -149562,7 +149562,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -149576,7 +149576,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -149590,7 +149590,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -149604,7 +149604,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -149618,7 +149618,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -149632,7 +149632,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -149646,7 +149646,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -149660,7 +149660,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -149674,7 +149674,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -149856,7 +149856,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -149870,7 +149870,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -149884,7 +149884,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -149898,7 +149898,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -149912,7 +149912,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -149926,7 +149926,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -149940,7 +149940,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600000899412
@@ -149954,7 +149954,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600000899412
@@ -149968,7 +149968,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -149982,7 +149982,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -149996,7 +149996,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000238212
@@ -150010,7 +150010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000238212
@@ -150094,7 +150094,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -150108,7 +150108,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -150122,7 +150122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150136,7 +150136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150150,7 +150150,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150164,7 +150164,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -150178,7 +150178,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -150192,7 +150192,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150206,7 +150206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -150220,7 +150220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -150234,7 +150234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -150248,7 +150248,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -150430,7 +150430,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -150444,7 +150444,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -150458,7 +150458,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -150472,7 +150472,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -150486,7 +150486,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -150500,7 +150500,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -150514,7 +150514,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600000899412
@@ -150528,7 +150528,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600000899412
@@ -150542,7 +150542,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -150556,7 +150556,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -150570,7 +150570,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000238212
@@ -150584,7 +150584,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000238212
@@ -150668,7 +150668,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -150682,7 +150682,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -150696,7 +150696,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150710,7 +150710,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150724,7 +150724,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150738,7 +150738,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -150752,7 +150752,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -150766,7 +150766,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -150780,7 +150780,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -150794,7 +150794,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -150808,7 +150808,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -150822,7 +150822,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -151004,7 +151004,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -151018,7 +151018,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 6.700001908497
@@ -151032,7 +151032,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151046,7 +151046,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151060,7 +151060,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151074,7 +151074,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -151088,7 +151088,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600000899412
@@ -151102,7 +151102,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600000899412
@@ -151116,7 +151116,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -151130,7 +151130,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -151144,7 +151144,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000238212
@@ -151158,7 +151158,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000238212
@@ -151242,7 +151242,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -151256,7 +151256,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -151270,7 +151270,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -151284,7 +151284,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6
@@ -151298,7 +151298,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6
@@ -151312,7 +151312,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6
@@ -151326,7 +151326,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2
@@ -151340,7 +151340,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2
@@ -151354,7 +151354,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2
@@ -151368,7 +151368,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2
@@ -151382,7 +151382,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151396,7 +151396,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151410,7 +151410,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151424,7 +151424,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -151438,7 +151438,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600001238083
@@ -151452,7 +151452,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600001238083
@@ -151466,7 +151466,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -151480,7 +151480,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -151494,7 +151494,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000884099
@@ -151508,7 +151508,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000884099
@@ -151606,7 +151606,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -151620,7 +151620,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -151634,7 +151634,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -151648,7 +151648,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -151662,7 +151662,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -151676,7 +151676,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -151690,7 +151690,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -151704,7 +151704,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -151718,7 +151718,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -151732,7 +151732,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -151746,7 +151746,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151760,7 +151760,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151774,7 +151774,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -151788,7 +151788,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -151802,7 +151802,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600001238083
@@ -151816,7 +151816,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600001238083
@@ -151830,7 +151830,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -151844,7 +151844,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -151858,7 +151858,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000884099
@@ -151872,7 +151872,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000884099
@@ -151970,7 +151970,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -151984,7 +151984,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -151998,7 +151998,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -152012,7 +152012,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -152026,7 +152026,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -152040,7 +152040,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -152054,7 +152054,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -152068,7 +152068,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -152082,7 +152082,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -152096,7 +152096,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -152110,7 +152110,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -152124,7 +152124,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -152138,7 +152138,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -152152,7 +152152,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -152166,7 +152166,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600001238083
@@ -152180,7 +152180,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600001238083
@@ -152194,7 +152194,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -152208,7 +152208,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -152222,7 +152222,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000884099
@@ -152236,7 +152236,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000884099
@@ -152334,7 +152334,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -152348,7 +152348,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -152362,7 +152362,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -152376,7 +152376,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -152390,7 +152390,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.60
@@ -152404,7 +152404,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.60
@@ -152418,7 +152418,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -152432,7 +152432,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -152446,7 +152446,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.20
@@ -152460,7 +152460,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.20
@@ -152474,7 +152474,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -152488,7 +152488,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -152502,7 +152502,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.6000000
@@ -152516,7 +152516,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.6000000
@@ -152530,7 +152530,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 376.0
       },
       "width" : 3.600001238083
@@ -152544,7 +152544,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 6.000,
-         "x" : 693.0000,
+         "x" : 677.0000,
          "y" : 371.0000
       },
       "width" : 3.600001238083
@@ -152558,7 +152558,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.2000000
@@ -152572,7 +152572,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.2000000
@@ -152586,7 +152586,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 376.0
       },
       "width" : 1.200000884099
@@ -152600,7 +152600,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 2.000,
-         "x" : 695.0000,
+         "x" : 679.0000,
          "y" : 371.0000
       },
       "width" : 1.200000884099
@@ -152698,7 +152698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152712,7 +152712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152726,7 +152726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152740,7 +152740,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152754,7 +152754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152768,7 +152768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152782,7 +152782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152796,7 +152796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 374.000
       },
       "width" : 4.000
@@ -152810,7 +152810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152824,7 +152824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152838,7 +152838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152852,7 +152852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152866,7 +152866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152880,7 +152880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152894,7 +152894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152908,7 +152908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 16,
-         "x" : 672,
+         "x" : 656,
          "y" : 372.00
       },
       "width" : 4.000
@@ -152922,10 +152922,1858 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 704,
+         "x" : 688,
          "y" : 368
       },
       "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 688,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 688,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 688,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 688,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 688,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 16.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 12, 12, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 12, 12, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 248.0,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 8, 12, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 240,
+         "y" : 288
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 16.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 12, 12, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 12, 12, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 264.0,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 8, 12, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 288
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 16.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 288
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 296.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 12, 12, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 12, 12, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 280.0,
+         "y" : 288
+      },
+      "width" : 8
+   },
+   {
+      "center" : [ 8, 12, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 272,
+         "y" : 288
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 704,
+         "y" : 368
+      },
+      "width" : 16.0
    },
    {
       "center" : [ 8, 16, 8 ],
@@ -152950,7 +154798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 704,
+         "x" : 720,
          "y" : 368
       },
       "width" : 16
@@ -152964,1855 +154812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 704,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 704,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 704,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 16.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 248.0,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 8, 12, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 240,
-         "y" : 288
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 16.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 264.0,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 8, 12, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 256,
-         "y" : 288
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 16.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 288
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 296.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 280.0,
-         "y" : 288
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 8, 12, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 288
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16.0,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 720,
-         "y" : 368
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 720,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
          "x" : 736,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 752,
          "y" : 368
       },
       "width" : 16
@@ -154826,7 +154826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.0
@@ -154840,7 +154840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.0
@@ -154854,7 +154854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -154868,7 +154868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -154882,7 +154882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 368
       },
       "width" : 16.00
@@ -154896,7 +154896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 368
       },
       "width" : 16.00
@@ -154910,7 +154910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -154924,7 +154924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -154938,7 +154938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -154952,7 +154952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -154966,7 +154966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 368
       },
       "width" : 16.00
@@ -154980,7 +154980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 368
       },
       "width" : 16.00
@@ -154994,7 +154994,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155008,7 +155008,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155022,7 +155022,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155036,7 +155036,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155050,7 +155050,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 368
       },
       "width" : 16.00
@@ -155064,7 +155064,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 368
       },
       "width" : 16.00
@@ -155078,7 +155078,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155092,7 +155092,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155106,7 +155106,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155120,7 +155120,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155134,7 +155134,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 368
       },
       "width" : 16.00
@@ -155148,7 +155148,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 368
       },
       "width" : 16.00
@@ -155162,7 +155162,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155176,7 +155176,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155190,7 +155190,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155204,7 +155204,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 368
       },
       "width" : 16.00
@@ -155218,7 +155218,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 368
       },
       "width" : 16.00
@@ -155227,6 +155227,342 @@ export const blockFaceTypes = [
       "center" : [ 8.000000, 16.000000, 8.000000 ],
       "height" : 16.00,
       "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 736,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 704,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 704,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16.0,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16.0,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 752,
+         "y" : 368
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, -1.0 ],
       "roll" : 180.0,
       "tintindex" : -1,
       "uv" : {
@@ -155246,7 +155582,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 752,
          "y" : 368
       },
       "width" : 16.00
@@ -155260,343 +155596,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16.0,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16.0,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16.0,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
-         "y" : 368
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 768,
+         "x" : 752,
          "y" : 368
       },
       "width" : 16.00
@@ -155694,7 +155694,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 787.0000,
+         "x" : 771.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -155708,7 +155708,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 787.0000,
+         "x" : 771.0000,
          "y" : 371.0000
       },
       "width" : 10
@@ -155722,7 +155722,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 10.000,
-         "x" : 787.0000,
+         "x" : 771.0000,
          "y" : 370.000
       },
       "width" : 10
@@ -155736,7 +155736,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 10.000,
-         "x" : 787.0000,
+         "x" : 771.0000,
          "y" : 370.000
       },
       "width" : 10
@@ -155750,7 +155750,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 10.000,
-         "x" : 787.0000,
+         "x" : 771.0000,
          "y" : 370.000
       },
       "width" : 10
@@ -155764,7 +155764,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 10.000,
-         "x" : 787.0000,
+         "x" : 771.0000,
          "y" : 370.000
       },
       "width" : 10
@@ -156954,7 +156954,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 373.0000
       },
       "width" : 1
@@ -156968,7 +156968,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 373.0000
       },
       "width" : 1
@@ -156982,7 +156982,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 810.000,
+         "x" : 794.000,
          "y" : 378.000
       },
       "width" : 1
@@ -156996,7 +156996,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 378.000
       },
       "width" : 1
@@ -157010,7 +157010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 378.000
       },
       "width" : 6
@@ -157024,7 +157024,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 378.000
       },
       "width" : 6
@@ -157038,7 +157038,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 810.000,
+         "x" : 794.000,
          "y" : 373.0000
       },
       "width" : 1
@@ -157052,7 +157052,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 810.000,
+         "x" : 794.000,
          "y" : 373.0000
       },
       "width" : 1
@@ -157066,7 +157066,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 378.000
       },
       "width" : 1
@@ -157080,7 +157080,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 1.0000,
-         "x" : 810.000,
+         "x" : 794.000,
          "y" : 378.000
       },
       "width" : 1
@@ -157094,7 +157094,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 378.000
       },
       "width" : 6
@@ -157108,7 +157108,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 805.0000,
+         "x" : 789.0000,
          "y" : 378.000
       },
       "width" : 6
@@ -157122,7 +157122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 378.000
       },
       "width" : 4
@@ -157136,7 +157136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 373.0000
       },
       "width" : 4
@@ -157150,7 +157150,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 378.000
       },
       "width" : 4
@@ -157164,7 +157164,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 378.000
       },
       "width" : 4
@@ -157178,7 +157178,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 373.0000
       },
       "width" : 4
@@ -157192,7 +157192,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 378.000
       },
       "width" : 4
@@ -157206,7 +157206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 378.000
       },
       "width" : 4
@@ -157220,7 +157220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 378.000
       },
       "width" : 4
@@ -157234,7 +157234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 806.000,
+         "x" : 790.000,
          "y" : 380.00
       },
       "width" : 4
@@ -157262,7 +157262,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 10.800003007142
@@ -157276,7 +157276,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 10.800003007142
@@ -157290,7 +157290,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 10.800003007142
@@ -157304,7 +157304,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 10.800003007142
@@ -157318,6 +157318,118 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 4, 7, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 12, 7, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 12, 7, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 7, 4 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 7, 4 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 7, 12 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 7, 12 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 816,
+         "y" : 368
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 4, 7, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 832,
          "y" : 368
       },
@@ -158089,118 +158201,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 928,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 4, 7, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 4, 7, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 12, 7, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 12, 7, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 4 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 4 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 12 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 12 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 944,
          "y" : 368
       },
       "width" : 16
@@ -167454,7 +167454,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.00
@@ -167468,7 +167468,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.00
@@ -167482,7 +167482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 380.00
       },
       "width" : 12.00
@@ -167496,7 +167496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 380.00
       },
       "width" : 12.00
@@ -167510,7 +167510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.00
@@ -167524,7 +167524,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.00
@@ -167538,7 +167538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 8.00
@@ -167552,7 +167552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 379.0000
       },
       "width" : 8.00
@@ -167566,7 +167566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 379.0000
       },
       "width" : 8.00
@@ -167580,7 +167580,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.00
@@ -167594,7 +167594,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.00
@@ -167608,7 +167608,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 966.000,
+         "x" : 950.000,
          "y" : 374.000
       },
       "width" : 4.00
@@ -167622,7 +167622,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 966.000,
+         "x" : 950.000,
          "y" : 374.000
       },
       "width" : 4.00
@@ -167636,7 +167636,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.00
@@ -167650,7 +167650,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.00
@@ -167664,7 +167664,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -167678,7 +167678,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
-         "x" : 979.0000,
+         "x" : 963.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -167692,7 +167692,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -167706,7 +167706,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -167720,7 +167720,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 970.000,
+         "x" : 954.000,
          "y" : 368
       },
       "width" : 6.00
@@ -167734,7 +167734,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 970.000,
+         "x" : 954.000,
          "y" : 368
       },
       "width" : 6.00
@@ -167748,7 +167748,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.0
@@ -167762,7 +167762,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.0
@@ -167776,7 +167776,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.0
@@ -167790,7 +167790,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.0
@@ -167804,7 +167804,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 8.0
@@ -167818,7 +167818,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.0
@@ -167832,7 +167832,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.0
@@ -167846,7 +167846,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.0
@@ -167860,7 +167860,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.0
@@ -167874,7 +167874,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.0
@@ -167888,7 +167888,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
-         "x" : 979.0000,
+         "x" : 963.0000,
          "y" : 368
       },
       "width" : 10.0
@@ -167902,7 +167902,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 970.000,
+         "x" : 954.000,
          "y" : 368
       },
       "width" : 6.0
@@ -167916,7 +167916,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 970.000,
+         "x" : 954.000,
          "y" : 368
       },
       "width" : 6.0
@@ -167930,7 +167930,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.00
@@ -167944,7 +167944,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.00
@@ -167958,7 +167958,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 380.00
       },
       "width" : 12.00
@@ -167972,7 +167972,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 380.00
       },
       "width" : 12.00
@@ -167986,7 +167986,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.00
@@ -168000,7 +168000,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.00
@@ -168014,7 +168014,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 8.00
@@ -168028,7 +168028,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 379.0000
       },
       "width" : 8.00
@@ -168042,7 +168042,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 379.0000
       },
       "width" : 8.00
@@ -168056,7 +168056,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.00
@@ -168070,7 +168070,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.00
@@ -168084,7 +168084,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 966.000,
+         "x" : 950.000,
          "y" : 374.000
       },
       "width" : 4.00
@@ -168098,7 +168098,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 4.00,
-         "x" : 966.000,
+         "x" : 950.000,
          "y" : 374.000
       },
       "width" : 4.00
@@ -168112,7 +168112,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.00
@@ -168126,7 +168126,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.00
@@ -168140,7 +168140,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -168154,7 +168154,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
-         "x" : 979.0000,
+         "x" : 963.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -168168,7 +168168,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -168182,7 +168182,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 963.0000,
+         "x" : 947.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -168196,7 +168196,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 970.000,
+         "x" : 954.000,
          "y" : 368
       },
       "width" : 6.00
@@ -168210,7 +168210,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 970.000,
+         "x" : 954.000,
          "y" : 368
       },
       "width" : 6.00
@@ -168224,7 +168224,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.00
@@ -168238,7 +168238,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 962.000,
+         "x" : 946.000,
          "y" : 370.000
       },
       "width" : 12.00
@@ -168252,7 +168252,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.00
@@ -168266,7 +168266,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 4.00,
-         "x" : 960,
+         "x" : 944,
          "y" : 370.000
       },
       "width" : 4.00
@@ -168280,7 +168280,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 8.0,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 8.00
@@ -168294,7 +168294,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.00
@@ -168308,7 +168308,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 1.0000,
-         "x" : 964.00,
+         "x" : 948.00,
          "y" : 371.0000
       },
       "width" : 1.00
@@ -168322,7 +168322,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.00
@@ -168336,7 +168336,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 5.0000,
-         "x" : 965.0000,
+         "x" : 949.0000,
          "y" : 372.00
       },
       "width" : 5.00
@@ -168350,7 +168350,91 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 10.000,
+         "x" : 947.0000,
+         "y" : 368
+      },
+      "width" : 10.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 10.000,
          "x" : 963.0000,
+         "y" : 368
+      },
+      "width" : 10.00
+   },
+   {
+      "center" : [ 8.000000, 13.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 6.000,
+         "x" : 954.000,
+         "y" : 368
+      },
+      "width" : 6.00
+   },
+   {
+      "center" : [ 8.000000, 13.000000, 3.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 6.000,
+         "x" : 954.000,
+         "y" : 368
+      },
+      "width" : 6.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 10.000,
+         "x" : 979.0000,
+         "y" : 368
+      },
+      "width" : 10.00
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16.0,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 10.000,
+         "x" : 979.0000,
+         "y" : 368
+      },
+      "width" : 10.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 10.000,
+         "x" : 979.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -168370,34 +168454,6 @@ export const blockFaceTypes = [
       "width" : 10.00
    },
    {
-      "center" : [ 8.000000, 13.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 6.000,
-         "x" : 970.000,
-         "y" : 368
-      },
-      "width" : 6.00
-   },
-   {
-      "center" : [ 8.000000, 13.000000, 3.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 6.000,
-         "x" : 970.000,
-         "y" : 368
-      },
-      "width" : 6.00
-   },
-   {
       "center" : [ 8.000000, 16.000000, 8.000000 ],
       "height" : 16.00,
       "normal" : [ -0.0, 1.0, 0.0 ],
@@ -168449,62 +168505,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 10.000,
          "x" : 995.0000,
-         "y" : 368
-      },
-      "width" : 10.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 10.000,
-         "x" : 1011.0000,
-         "y" : 368
-      },
-      "width" : 10.00
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16.0,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 10.000,
-         "x" : 1011.0000,
-         "y" : 368
-      },
-      "width" : 10.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 10.000,
-         "x" : 1011.0000,
-         "y" : 368
-      },
-      "width" : 10.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 10.000,
-         "x" : 1011.0000,
          "y" : 368
       },
       "width" : 10.00
@@ -169834,8 +169834,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 0,
-         "y" : 384
+         "x" : 1008,
+         "y" : 368
       },
       "width" : 16.00
    },
@@ -170226,7 +170226,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 384
       },
       "width" : 16.00
@@ -170534,8 +170534,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 0,
-         "y" : 384
+         "x" : 1008,
+         "y" : 368
       },
       "width" : 16
    },
@@ -170926,7 +170926,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 384
       },
       "width" : 16
@@ -171234,8 +171234,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 0,
-         "y" : 384
+         "x" : 1008,
+         "y" : 368
       },
       "width" : 16.00
    },
@@ -171626,7 +171626,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 384
       },
       "width" : 16.00
@@ -171934,8 +171934,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 0,
-         "y" : 384
+         "x" : 1008,
+         "y" : 368
       },
       "width" : 16.00
    },
@@ -172326,7 +172326,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 384
       },
       "width" : 16.00
@@ -172634,7 +172634,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 384
       },
       "width" : 16
@@ -172648,7 +172648,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 48,
+         "x" : 32,
          "y" : 384
       },
       "width" : 16
@@ -172662,7 +172662,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 394.000
       },
       "width" : 16
@@ -172676,7 +172676,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 394.000
       },
       "width" : 16
@@ -172690,7 +172690,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 394.000
       },
       "width" : 16
@@ -172704,7 +172704,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 394.000
       },
       "width" : 16
@@ -172718,6 +172718,90 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 48,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 64,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 64,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 64,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 64,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 64,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 64,
          "y" : 384
       },
@@ -172803,90 +172887,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 80,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
          "y" : 384
       },
       "width" : 16
@@ -172900,7 +172900,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16
@@ -172914,7 +172914,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16
@@ -172928,7 +172928,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 389.0000
       },
       "width" : 16
@@ -172942,7 +172942,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 389.0000
       },
       "width" : 16
@@ -172956,7 +172956,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 389.0000
       },
       "width" : 16
@@ -172970,7 +172970,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 389.0000
       },
       "width" : 16
@@ -172984,7 +172984,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 144,
+         "x" : 128,
          "y" : 384
       },
       "width" : 2
@@ -172998,7 +172998,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 142.000,
+         "x" : 126.000,
          "y" : 384
       },
       "width" : 2
@@ -173012,7 +173012,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 2
@@ -173026,7 +173026,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16
@@ -173040,7 +173040,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16
@@ -173054,7 +173054,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 158.000,
+         "x" : 142.000,
          "y" : 384
       },
       "width" : 2
@@ -173068,7 +173068,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 2
@@ -173082,7 +173082,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 142.000,
+         "x" : 126.000,
          "y" : 384
       },
       "width" : 2
@@ -173096,7 +173096,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16
@@ -173110,7 +173110,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16
@@ -173124,7 +173124,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 384
       },
       "width" : 12
@@ -173138,7 +173138,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12
@@ -173152,7 +173152,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12
@@ -173166,7 +173166,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 398.000
       },
       "width" : 12
@@ -173180,7 +173180,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12
@@ -173194,7 +173194,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12
@@ -173208,7 +173208,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 116.00,
+         "x" : 100.00,
          "y" : 388.00
       },
       "width" : 8
@@ -173222,7 +173222,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 132.00,
+         "x" : 116.00,
          "y" : 390.000
       },
       "width" : 8
@@ -173236,7 +173236,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 132.00,
+         "x" : 116.00,
          "y" : 390.000
       },
       "width" : 8
@@ -173250,7 +173250,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 132.00,
+         "x" : 116.00,
          "y" : 390.000
       },
       "width" : 8
@@ -173264,7 +173264,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 132.00,
+         "x" : 116.00,
          "y" : 390.000
       },
       "width" : 8
@@ -173278,7 +173278,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 118.000,
+         "x" : 102.000,
          "y" : 390.000
       },
       "width" : 4
@@ -173292,7 +173292,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 396.00
       },
       "width" : 4
@@ -173306,7 +173306,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 396.00
       },
       "width" : 4
@@ -173320,7 +173320,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 396.00
       },
       "width" : 4
@@ -173334,7 +173334,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 396.00
       },
       "width" : 4
@@ -173348,7 +173348,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 118.000,
+         "x" : 102.000,
          "y" : 396.00
       },
       "width" : 4
@@ -173362,7 +173362,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 384
       },
       "width" : 4
@@ -173376,7 +173376,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 392.0
       },
       "width" : 4
@@ -173390,7 +173390,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 128,
+         "x" : 112,
          "y" : 392.0
       },
       "width" : 4
@@ -173404,7 +173404,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 140.00,
+         "x" : 124.00,
          "y" : 392.0
       },
       "width" : 4
@@ -173418,7 +173418,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16.00
@@ -173432,7 +173432,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16.00
@@ -173446,7 +173446,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 144,
+         "x" : 128,
          "y" : 384
       },
       "width" : 2.00
@@ -173460,7 +173460,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 158.000,
+         "x" : 142.000,
          "y" : 384
       },
       "width" : 2.00
@@ -173474,7 +173474,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173488,7 +173488,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 398.000
       },
       "width" : 12.00
@@ -173502,7 +173502,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 116.00,
+         "x" : 100.00,
          "y" : 388.00
       },
       "width" : 8.00
@@ -173516,7 +173516,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 118.000,
+         "x" : 102.000,
          "y" : 396.00
       },
       "width" : 4.00
@@ -173530,7 +173530,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 384
       },
       "width" : 4.00
@@ -173544,7 +173544,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 392.0
       },
       "width" : 4.00
@@ -173558,7 +173558,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 128,
+         "x" : 112,
          "y" : 392.0
       },
       "width" : 4.00
@@ -173572,7 +173572,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 140.00,
+         "x" : 124.00,
          "y" : 392.0
       },
       "width" : 4.00
@@ -173586,7 +173586,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16.00
@@ -173600,7 +173600,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16.00
@@ -173614,7 +173614,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 144,
+         "x" : 128,
          "y" : 384
       },
       "width" : 2.00
@@ -173628,7 +173628,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 142.000,
+         "x" : 126.000,
          "y" : 384
       },
       "width" : 2.00
@@ -173642,7 +173642,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 2.00
@@ -173656,7 +173656,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16.00
@@ -173670,7 +173670,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16.00
@@ -173684,7 +173684,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 158.000,
+         "x" : 142.000,
          "y" : 384
       },
       "width" : 2.00
@@ -173698,7 +173698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 2.00
@@ -173712,7 +173712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 2.000,
-         "x" : 142.000,
+         "x" : 126.000,
          "y" : 384
       },
       "width" : 2.00
@@ -173726,7 +173726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16.00
@@ -173740,7 +173740,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 16,
-         "x" : 128,
+         "x" : 112,
          "y" : 384
       },
       "width" : 16.00
@@ -173754,7 +173754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173768,7 +173768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173782,7 +173782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173796,7 +173796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 398.000
       },
       "width" : 12.00
@@ -173810,7 +173810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173824,7 +173824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 5.0000,
          "w" : 12.00,
-         "x" : 130.000,
+         "x" : 114.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173838,7 +173838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 116.00,
+         "x" : 100.00,
          "y" : 388.00
       },
       "width" : 8.00
@@ -173852,7 +173852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 118.000,
+         "x" : 102.000,
          "y" : 396.00
       },
       "width" : 4.00
@@ -173866,7 +173866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 384
       },
       "width" : 4.00
@@ -173880,7 +173880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 392.0
       },
       "width" : 4.00
@@ -173894,7 +173894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 128,
+         "x" : 112,
          "y" : 392.0
       },
       "width" : 4.00
@@ -173908,7 +173908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 140.00,
+         "x" : 124.00,
          "y" : 392.0
       },
       "width" : 4.00
@@ -173922,7 +173922,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16.00
@@ -173936,7 +173936,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 112,
+         "x" : 96,
          "y" : 384
       },
       "width" : 16.00
@@ -173950,7 +173950,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 144,
+         "x" : 128,
          "y" : 384
       },
       "width" : 2.00
@@ -173964,7 +173964,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 158.000,
+         "x" : 142.000,
          "y" : 384
       },
       "width" : 2.00
@@ -173978,7 +173978,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 384
       },
       "width" : 12.00
@@ -173992,7 +173992,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 146.000,
+         "x" : 130.000,
          "y" : 398.000
       },
       "width" : 12.00
@@ -174006,7 +174006,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 116.00,
+         "x" : 100.00,
          "y" : 388.00
       },
       "width" : 8.00
@@ -174020,7 +174020,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 118.000,
+         "x" : 102.000,
          "y" : 396.00
       },
       "width" : 4.00
@@ -174034,7 +174034,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 384
       },
       "width" : 4.00
@@ -174048,7 +174048,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 134.000,
+         "x" : 118.000,
          "y" : 392.0
       },
       "width" : 4.00
@@ -174062,7 +174062,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 128,
+         "x" : 112,
          "y" : 392.0
       },
       "width" : 4.00
@@ -174076,7 +174076,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 140.00,
+         "x" : 124.00,
          "y" : 392.0
       },
       "width" : 4.00
@@ -174090,7 +174090,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 16
@@ -174104,7 +174104,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 16
@@ -174118,7 +174118,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16
@@ -174132,7 +174132,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16
@@ -174146,7 +174146,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16
@@ -174160,7 +174160,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16
@@ -174174,7 +174174,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 192,
+         "x" : 176,
          "y" : 384
       },
       "width" : 16
@@ -174188,7 +174188,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 192,
+         "x" : 176,
          "y" : 384
       },
       "width" : 16
@@ -174202,7 +174202,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 208,
+         "x" : 192,
          "y" : 384
       },
       "width" : 16
@@ -174216,7 +174216,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 208,
+         "x" : 192,
          "y" : 384
       },
       "width" : 16
@@ -174230,7 +174230,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 208,
+         "x" : 192,
          "y" : 384
       },
       "width" : 16
@@ -174244,7 +174244,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 208,
+         "x" : 192,
          "y" : 384
       },
       "width" : 16
@@ -174258,7 +174258,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 384
       },
       "width" : 16.00
@@ -174272,7 +174272,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 384
       },
       "width" : 16.00
@@ -174286,7 +174286,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174300,7 +174300,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174314,7 +174314,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174328,7 +174328,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174342,7 +174342,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 384
       },
       "width" : 16
@@ -174356,7 +174356,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 384
       },
       "width" : 16
@@ -174370,7 +174370,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16
@@ -174384,7 +174384,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16
@@ -174398,7 +174398,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16
@@ -174412,7 +174412,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16
@@ -174426,7 +174426,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 384
       },
       "width" : 16.00
@@ -174440,7 +174440,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 384
       },
       "width" : 16.00
@@ -174454,7 +174454,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174468,7 +174468,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174482,7 +174482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174496,7 +174496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 384
       },
       "width" : 16.00
@@ -174510,7 +174510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 16.0
@@ -174524,7 +174524,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174538,7 +174538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174552,7 +174552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174566,7 +174566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174580,7 +174580,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174594,7 +174594,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 392.0
       },
       "width" : 8.0
@@ -174608,7 +174608,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 8.0
@@ -174622,7 +174622,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174636,7 +174636,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174650,7 +174650,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 16.0
@@ -174664,7 +174664,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174678,7 +174678,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174692,7 +174692,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174706,7 +174706,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 16.0
@@ -174720,7 +174720,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 8.0
@@ -174734,7 +174734,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 384
       },
       "width" : 8.0
@@ -174748,7 +174748,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174762,7 +174762,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 16.0
@@ -174776,7 +174776,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 392.0
       },
       "width" : 8.0
@@ -174790,7 +174790,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 8.0
@@ -174804,7 +174804,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174818,7 +174818,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 160,
+         "x" : 144,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174832,7 +174832,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 8.0
@@ -174846,7 +174846,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 384
       },
       "width" : 8.0
@@ -174860,7 +174860,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174874,7 +174874,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 8.0
@@ -174888,7 +174888,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 392.0
       },
       "width" : 8.0
@@ -174902,7 +174902,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 8.0
@@ -174916,7 +174916,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -174930,7 +174930,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 160,
+         "x" : 144,
          "y" : 384
       },
       "width" : 8.0
@@ -174944,7 +174944,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 8.0
@@ -174958,7 +174958,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 384
       },
       "width" : 8.0
@@ -174972,7 +174972,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16.0
@@ -174986,7 +174986,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 168.0,
+         "x" : 152.0,
          "y" : 384
       },
       "width" : 8.0
@@ -175000,7 +175000,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 392.0
       },
       "width" : 8.0
@@ -175014,7 +175014,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 8.0
@@ -175028,7 +175028,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 392.0
       },
       "width" : 16.0
@@ -175042,7 +175042,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 168.0,
+         "x" : 152.0,
          "y" : 384
       },
       "width" : 8
@@ -175056,7 +175056,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 8
@@ -175070,7 +175070,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 184.0,
+         "x" : 168.0,
          "y" : 384
       },
       "width" : 8
@@ -175084,10 +175084,178 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 176,
+         "x" : 160,
          "y" : 384
       },
       "width" : 16
+   },
+   {
+      "center" : [ 8, 1, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 1, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 1.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 1.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ 0.707107, -0.707107, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ -0.707107, 0.707107, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ -0.707107, -0.707107, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ 0.707107, 0.707107, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ 0.0, -0.707107, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ 0.0, 0.707107, 0.707107 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ 0.0, -0.707107, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
+   },
+   {
+      "center" : [ 8.000000, 9.000000, 8.000000 ],
+      "height" : 16.000004245512,
+      "normal" : [ 0.0, 0.707107, -0.707107 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 384
+      },
+      "width" : 16.0000000
    },
    {
       "center" : [ 8, 1, 8 ],
@@ -175253,174 +175421,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 256,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8, 1, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 1, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 1.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 1.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ 0.707107, -0.707107, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ -0.707107, 0.707107, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ -0.707107, -0.707107, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ 0.707107, 0.707107, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ 0.0, -0.707107, -0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ 0.0, 0.707107, 0.707107 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ 0.0, -0.707107, 0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 384
-      },
-      "width" : 16.0000000
-   },
-   {
-      "center" : [ 8.000000, 9.000000, 8.000000 ],
-      "height" : 16.000004245512,
-      "normal" : [ 0.0, 0.707107, -0.707107 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
          "y" : 384
       },
       "width" : 16.0000000
@@ -175434,7 +175434,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 384
       },
       "width" : 16
@@ -175448,7 +175448,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 384
       },
       "width" : 16.00
@@ -175462,7 +175462,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 384
       },
       "width" : 16.00
@@ -175476,7 +175476,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 384
       },
       "width" : 16.00
@@ -175490,7 +175490,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 384
       },
       "width" : 16
@@ -175504,7 +175504,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 384
       },
       "width" : 16.00
@@ -175518,6 +175518,90 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 304,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 320,
          "y" : 384
       },
@@ -176765,90 +176849,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 544,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 560,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 560,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 560,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 560,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 560,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 560,
          "y" : 384
       },
       "width" : 16
@@ -176862,7 +176862,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 583.0000,
+         "x" : 567.0000,
          "y" : 391.0000
       },
       "width" : 2
@@ -176876,7 +176876,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 583.0000,
+         "x" : 567.0000,
          "y" : 391.0000
       },
       "width" : 2
@@ -176933,6 +176933,90 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 2.000,
          "x" : 247.0000,
+         "y" : 352
+      },
+      "width" : 2.00
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 2,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 2.000,
+         "w" : 2.000,
+         "x" : 583.0000,
+         "y" : 391.0000
+      },
+      "width" : 2
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 2,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 2.000,
+         "w" : 2.000,
+         "x" : 583.0000,
+         "y" : 391.0000
+      },
+      "width" : 2
+   },
+   {
+      "center" : [ 8, 8, 7 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 2.000,
+         "x" : 263.0000,
+         "y" : 352
+      },
+      "width" : 2
+   },
+   {
+      "center" : [ 9, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 2.000,
+         "x" : 263.0000,
+         "y" : 352
+      },
+      "width" : 2
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 9.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 2.000,
+         "x" : 263.0000,
+         "y" : 352
+      },
+      "width" : 2.00
+   },
+   {
+      "center" : [ 7.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 2.000,
+         "x" : 263.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -176974,7 +177058,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 263.0000,
+         "x" : 279.0000,
          "y" : 352
       },
       "width" : 2
@@ -176988,7 +177072,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 263.0000,
+         "x" : 279.0000,
          "y" : 352
       },
       "width" : 2
@@ -177002,7 +177086,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 263.0000,
+         "x" : 279.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177016,7 +177100,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 263.0000,
+         "x" : 279.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177058,7 +177142,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 279.0000,
+         "x" : 295.0000,
          "y" : 352
       },
       "width" : 2
@@ -177072,7 +177156,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 279.0000,
+         "x" : 295.0000,
          "y" : 352
       },
       "width" : 2
@@ -177086,7 +177170,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 279.0000,
+         "x" : 295.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177100,7 +177184,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 279.0000,
+         "x" : 295.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177142,7 +177226,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 295.0000,
+         "x" : 311.0000,
          "y" : 352
       },
       "width" : 2
@@ -177156,7 +177240,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 295.0000,
+         "x" : 311.0000,
          "y" : 352
       },
       "width" : 2
@@ -177170,7 +177254,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 295.0000,
+         "x" : 311.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177184,7 +177268,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 295.0000,
+         "x" : 311.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177226,7 +177310,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 311.0000,
+         "x" : 327.0000,
          "y" : 352
       },
       "width" : 2
@@ -177240,7 +177324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 311.0000,
+         "x" : 327.0000,
          "y" : 352
       },
       "width" : 2
@@ -177254,7 +177338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 311.0000,
+         "x" : 327.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177268,7 +177352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 311.0000,
+         "x" : 327.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177310,7 +177394,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 327.0000,
+         "x" : 343.0000,
          "y" : 352
       },
       "width" : 2
@@ -177324,7 +177408,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 327.0000,
+         "x" : 343.0000,
          "y" : 352
       },
       "width" : 2
@@ -177338,7 +177422,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 327.0000,
+         "x" : 343.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177352,7 +177436,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 327.0000,
+         "x" : 343.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177394,7 +177478,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 343.0000,
+         "x" : 359.0000,
          "y" : 352
       },
       "width" : 2
@@ -177408,7 +177492,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 343.0000,
+         "x" : 359.0000,
          "y" : 352
       },
       "width" : 2
@@ -177422,7 +177506,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 343.0000,
+         "x" : 359.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177436,7 +177520,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 343.0000,
+         "x" : 359.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177478,7 +177562,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 359.0000,
+         "x" : 375.0000,
          "y" : 352
       },
       "width" : 2
@@ -177492,7 +177576,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 359.0000,
+         "x" : 375.0000,
          "y" : 352
       },
       "width" : 2
@@ -177506,7 +177590,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 359.0000,
+         "x" : 375.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177520,7 +177604,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 359.0000,
+         "x" : 375.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177562,7 +177646,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 375.0000,
+         "x" : 391.0000,
          "y" : 352
       },
       "width" : 2
@@ -177576,7 +177660,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 375.0000,
+         "x" : 391.0000,
          "y" : 352
       },
       "width" : 2
@@ -177590,7 +177674,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 375.0000,
+         "x" : 391.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177604,7 +177688,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 375.0000,
+         "x" : 391.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177646,7 +177730,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 391.0000,
+         "x" : 407.0000,
          "y" : 352
       },
       "width" : 2
@@ -177660,7 +177744,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 391.0000,
+         "x" : 407.0000,
          "y" : 352
       },
       "width" : 2
@@ -177674,7 +177758,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 391.0000,
+         "x" : 407.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177688,7 +177772,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 391.0000,
+         "x" : 407.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177730,7 +177814,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 407.0000,
+         "x" : 423.0000,
          "y" : 352
       },
       "width" : 2
@@ -177744,7 +177828,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 407.0000,
+         "x" : 423.0000,
          "y" : 352
       },
       "width" : 2
@@ -177758,7 +177842,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 407.0000,
+         "x" : 423.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177772,7 +177856,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 407.0000,
+         "x" : 423.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177814,7 +177898,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 423.0000,
+         "x" : 439.0000,
          "y" : 352
       },
       "width" : 2
@@ -177828,7 +177912,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 423.0000,
+         "x" : 439.0000,
          "y" : 352
       },
       "width" : 2
@@ -177842,7 +177926,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 423.0000,
+         "x" : 439.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177856,7 +177940,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 423.0000,
+         "x" : 439.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177898,7 +177982,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 439.0000,
+         "x" : 455.0000,
          "y" : 352
       },
       "width" : 2
@@ -177912,7 +177996,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 439.0000,
+         "x" : 455.0000,
          "y" : 352
       },
       "width" : 2
@@ -177926,7 +178010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 439.0000,
+         "x" : 455.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177940,7 +178024,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 439.0000,
+         "x" : 455.0000,
          "y" : 352
       },
       "width" : 2.00
@@ -177982,90 +178066,6 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 2.000,
-         "x" : 455.0000,
-         "y" : 352
-      },
-      "width" : 2
-   },
-   {
-      "center" : [ 9, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 2.000,
-         "x" : 455.0000,
-         "y" : 352
-      },
-      "width" : 2
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 9.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 2.000,
-         "x" : 455.0000,
-         "y" : 352
-      },
-      "width" : 2.00
-   },
-   {
-      "center" : [ 7.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 2.000,
-         "x" : 455.0000,
-         "y" : 352
-      },
-      "width" : 2.00
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 2,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 2.000,
-         "w" : 2.000,
-         "x" : 807.0000,
-         "y" : 391.0000
-      },
-      "width" : 2
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 2,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 2.000,
-         "w" : 2.000,
-         "x" : 807.0000,
-         "y" : 391.0000
-      },
-      "width" : 2
-   },
-   {
-      "center" : [ 8, 8, 7 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 2.000,
          "x" : 471.0000,
          "y" : 352
       },
@@ -178122,7 +178122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 823.0000,
+         "x" : 807.0000,
          "y" : 391.0000
       },
       "width" : 2
@@ -178136,7 +178136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 823.0000,
+         "x" : 807.0000,
          "y" : 391.0000
       },
       "width" : 2
@@ -182322,7 +182322,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 387.0000
       },
       "width" : 10
@@ -182336,7 +182336,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 387.0000
       },
       "width" : 10
@@ -182350,7 +182350,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 387.0000
       },
       "width" : 10
@@ -182364,7 +182364,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 387.0000
       },
       "width" : 10
@@ -182378,7 +182378,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 387.0000
       },
       "width" : 10
@@ -182392,7 +182392,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 387.0000
       },
       "width" : 10
@@ -182406,7 +182406,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 832,
+         "x" : 816,
          "y" : 384
       },
       "width" : 16
@@ -182420,7 +182420,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 832,
+         "x" : 816,
          "y" : 384
       },
       "width" : 16
@@ -182434,7 +182434,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 832,
+         "x" : 816,
          "y" : 384
       },
       "width" : 16
@@ -182448,7 +182448,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 832,
+         "x" : 816,
          "y" : 384
       },
       "width" : 16
@@ -182462,7 +182462,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 832,
+         "x" : 816,
          "y" : 384
       },
       "width" : 16
@@ -182476,7 +182476,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 832,
+         "x" : 816,
          "y" : 384
       },
       "width" : 16
@@ -182490,7 +182490,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182504,7 +182504,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182518,7 +182518,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16
@@ -182532,7 +182532,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16
@@ -182546,7 +182546,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3
@@ -182560,7 +182560,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3
@@ -182574,7 +182574,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16
@@ -182588,7 +182588,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16
@@ -182602,7 +182602,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182616,7 +182616,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182630,7 +182630,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182644,7 +182644,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182658,7 +182658,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16
@@ -182672,7 +182672,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16
@@ -182686,7 +182686,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182700,7 +182700,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182714,7 +182714,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182728,7 +182728,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16
@@ -182742,7 +182742,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16.00
@@ -182756,7 +182756,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16.00
@@ -182770,7 +182770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16.00
@@ -182784,7 +182784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16.00
@@ -182798,7 +182798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3.00
@@ -182812,7 +182812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3.00
@@ -182826,7 +182826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16.00
@@ -182840,7 +182840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16.00
@@ -182854,7 +182854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16.00
@@ -182868,7 +182868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16.00
@@ -182882,7 +182882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3.00
@@ -182896,7 +182896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3.00
@@ -182910,7 +182910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16.00
@@ -182924,7 +182924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 397.0000
       },
       "width" : 16.00
@@ -182938,7 +182938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16.00
@@ -182952,7 +182952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 384
       },
       "width" : 16.00
@@ -182966,7 +182966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3.00
@@ -182980,7 +182980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 861.0000,
+         "x" : 845.0000,
          "y" : 384
       },
       "width" : 3.00
@@ -182994,6 +182994,90 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 864,
          "y" : 384
       },
@@ -183154,85 +183238,589 @@ export const blockFaceTypes = [
       "width" : 16
    },
    {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 896,
+         "x" : 848,
          "y" : 384
       },
-      "width" : 16
+      "width" : 16.0
    },
    {
-      "center" : [ 8, 16, 8 ],
+      "center" : [ 16.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, -0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 4.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 16.000000, 4.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 0.000000, 12.000000, 12.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, -0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 4.000000, 16.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 4.000000, 12.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 12.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 384
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12.000000, 0.000000, 8.000000 ],
+      "height" : 16.0,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 384
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 16.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 12.000000, 4.000000, 0.000000 ],
+      "height" : 8.0,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 8.0
+   },
+   {
+      "center" : [ 8.000000, 4.000000, 8.000000 ],
+      "height" : 8.0,
+      "normal" : [ -1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 848,
+         "y" : 392.0
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 12, 16, 8 ],
       "height" : 16,
       "normal" : [ 0, 1, 0 ],
       "roll" : 180.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
-         "w" : 16,
-         "x" : 896,
+         "w" : 8.0,
+         "x" : 856.0,
          "y" : 384
       },
-      "width" : 16
+      "width" : 8
    },
    {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
+      "center" : [ 12, 12, 0 ],
+      "height" : 8,
       "normal" : [ 0, 0, -1 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 848,
          "y" : 384
       },
-      "width" : 16
+      "width" : 8
    },
    {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
+      "center" : [ 12, 12, 16 ],
+      "height" : 8,
       "normal" : [ 0, 0, 1 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
+         "h" : 8.0,
+         "w" : 8.0,
+         "x" : 856.0,
          "y" : 384
       },
-      "width" : 16
+      "width" : 8
    },
    {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
+      "center" : [ 8, 12, 8 ],
+      "height" : 8,
       "normal" : [ -1, 0, 0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 16,
+         "h" : 8.0,
          "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
+         "x" : 848,
          "y" : 384
       },
       "width" : 16
@@ -184414,594 +185002,6 @@ export const blockFaceTypes = [
       "width" : 16
    },
    {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, -0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 4.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 0.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 16.000000, 4.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 16.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 0.000000, 12.000000, 12.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, -0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 4.000000, 16.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 4.000000, 12.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 12.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12.000000, 0.000000, 8.000000 ],
-      "height" : 16.0,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 384
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 16.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 12.000000, 4.000000, 0.000000 ],
-      "height" : 8.0,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 8.0
-   },
-   {
-      "center" : [ 8.000000, 4.000000, 8.000000 ],
-      "height" : 8.0,
-      "normal" : [ -1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 392.0
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 12, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 384
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 12, 12, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 8.0,
-         "x" : 904.0,
-         "y" : 384
-      },
-      "width" : 8
-   },
-   {
-      "center" : [ 8, 12, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 896,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
       "center" : [ 8, 0, 8 ],
       "height" : 16,
       "normal" : [ 0, -1, 0 ],
@@ -185010,7 +185010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 912,
+         "x" : 896,
          "y" : 384
       },
       "width" : 16
@@ -185024,7 +185024,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 912,
+         "x" : 896,
          "y" : 384
       },
       "width" : 16
@@ -185038,7 +185038,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 912,
+         "x" : 896,
          "y" : 384
       },
       "width" : 16
@@ -185052,7 +185052,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 912,
+         "x" : 896,
          "y" : 384
       },
       "width" : 16
@@ -185066,7 +185066,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 912,
+         "x" : 896,
          "y" : 384
       },
       "width" : 16
@@ -185080,7 +185080,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 912,
+         "x" : 896,
          "y" : 384
       },
       "width" : 16
@@ -185094,7 +185094,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 912,
          "y" : 384
       },
       "width" : 16.00
@@ -185108,7 +185108,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 912,
          "y" : 384
       },
       "width" : 16.00
@@ -185122,7 +185122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185136,7 +185136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185150,7 +185150,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185164,7 +185164,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185178,7 +185178,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 912,
          "y" : 384
       },
       "width" : 16
@@ -185192,7 +185192,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 912,
          "y" : 384
       },
       "width" : 16
@@ -185206,7 +185206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16
@@ -185220,7 +185220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16
@@ -185234,7 +185234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16
@@ -185248,7 +185248,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16
@@ -185262,7 +185262,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 912,
          "y" : 384
       },
       "width" : 16.00
@@ -185276,7 +185276,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 912,
          "y" : 384
       },
       "width" : 16.00
@@ -185290,7 +185290,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185304,7 +185304,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185318,7 +185318,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -185332,7 +185332,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 944,
+         "x" : 928,
          "y" : 384
       },
       "width" : 16.00
@@ -186466,6 +186466,90 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 944,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 944,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 944,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 944,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 944,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 944,
+         "y" : 384
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 960,
          "y" : 384
       },
@@ -186621,90 +186705,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 976,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 384
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
          "y" : 384
       },
       "width" : 16
@@ -186718,7 +186718,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 1008,
+         "x" : 992,
          "y" : 392.0
       },
       "width" : 14.400004952332
@@ -186732,7 +186732,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 1008,
+         "x" : 992,
          "y" : 392.0
       },
       "width" : 14.400004952332
@@ -186746,7 +186746,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 1008,
+         "x" : 992,
          "y" : 392.0
       },
       "width" : 14.400004952332
@@ -186760,7 +186760,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 1008,
+         "x" : 992,
          "y" : 392.0
       },
       "width" : 14.400004952332
@@ -186774,8 +186774,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 0,
-         "y" : 400
+         "x" : 1008,
+         "y" : 384
       },
       "width" : 14.0000000
    },
@@ -186788,7 +186788,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 400
       },
       "width" : 14.0000000
@@ -186802,6 +186802,62 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 16,
+         "y" : 400
+      },
+      "width" : 14.400004952332
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ -0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 16,
+         "y" : 400
+      },
+      "width" : 14.400004952332
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ -0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 16,
+         "y" : 400
+      },
+      "width" : 14.400004952332
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ 0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 16,
+         "y" : 400
+      },
+      "width" : 14.400004952332
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ 0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 32,
          "y" : 400
       },
@@ -187134,7 +187190,7 @@ export const blockFaceTypes = [
       "height" : 16.0000000,
       "normal" : [ 0.707107, 0.0, -0.707107 ],
       "roll" : -0.0,
-      "tintindex" : -1,
+      "tintindex" : 0,
       "uv" : {
          "h" : 16,
          "w" : 16,
@@ -187148,7 +187204,7 @@ export const blockFaceTypes = [
       "height" : 16.0000000,
       "normal" : [ -0.707107, 0.0, 0.707107 ],
       "roll" : -0.0,
-      "tintindex" : -1,
+      "tintindex" : 0,
       "uv" : {
          "h" : 16,
          "w" : 16,
@@ -187162,7 +187218,7 @@ export const blockFaceTypes = [
       "height" : 16.0000000,
       "normal" : [ -0.707107, 0.0, -0.707107 ],
       "roll" : -0.0,
-      "tintindex" : -1,
+      "tintindex" : 0,
       "uv" : {
          "h" : 16,
          "w" : 16,
@@ -187176,7 +187232,7 @@ export const blockFaceTypes = [
       "height" : 16.0000000,
       "normal" : [ 0.707107, 0.0, 0.707107 ],
       "roll" : -0.0,
-      "tintindex" : -1,
+      "tintindex" : 0,
       "uv" : {
          "h" : 16,
          "w" : 16,
@@ -187349,62 +187405,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 176,
-         "y" : 400
-      },
-      "width" : 14.400004952332
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ 0.707107, 0.0, -0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : 0,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 400
-      },
-      "width" : 14.400004952332
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ -0.707107, 0.0, 0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : 0,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 400
-      },
-      "width" : 14.400004952332
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ -0.707107, 0.0, -0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : 0,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 400
-      },
-      "width" : 14.400004952332
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ 0.707107, 0.0, 0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : 0,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -187418,7 +187418,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 208,
+         "x" : 192,
          "y" : 400
       },
       "width" : 16
@@ -187432,7 +187432,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16
@@ -187446,7 +187446,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16
@@ -187460,7 +187460,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16
@@ -187474,7 +187474,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16
@@ -187488,7 +187488,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16
@@ -187502,7 +187502,63 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 240,
          "y" : 400
       },
       "width" : 16
@@ -187559,62 +187615,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 256,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -187628,7 +187628,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 208,
+         "x" : 192,
          "y" : 400
       },
       "width" : 16.0
@@ -187642,7 +187642,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -187656,7 +187656,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -187670,7 +187670,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -187684,7 +187684,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -187698,7 +187698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -187712,7 +187712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187726,7 +187726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -187740,7 +187740,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 8.0
@@ -187754,7 +187754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187768,7 +187768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187782,7 +187782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -187796,7 +187796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187810,7 +187810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187824,7 +187824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187838,7 +187838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -187852,7 +187852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8.0
@@ -187866,7 +187866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8.0
@@ -187880,7 +187880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -187894,7 +187894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -187908,7 +187908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -187922,7 +187922,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 8.0
@@ -187936,7 +187936,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187950,7 +187950,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -187964,7 +187964,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8.0
@@ -187978,7 +187978,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8.0
@@ -187992,7 +187992,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -188006,7 +188006,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 8.0
@@ -188020,7 +188020,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -188034,7 +188034,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 8.0
@@ -188048,7 +188048,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -188062,7 +188062,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 8.0
@@ -188076,7 +188076,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8.0
@@ -188090,7 +188090,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8.0
@@ -188104,7 +188104,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16.0
@@ -188118,7 +188118,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 400
       },
       "width" : 8.0
@@ -188132,7 +188132,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -188146,7 +188146,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 8.0
@@ -188160,7 +188160,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 408.0
       },
       "width" : 16.0
@@ -188174,7 +188174,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 400
       },
       "width" : 8
@@ -188188,7 +188188,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8
@@ -188202,7 +188202,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8
@@ -188216,7 +188216,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 16
@@ -188398,7 +188398,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188412,7 +188412,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188426,7 +188426,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188440,7 +188440,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188468,7 +188468,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 408.0
       },
       "width" : 16
@@ -188482,7 +188482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 408.0
       },
       "width" : 16
@@ -188496,7 +188496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 408.0
       },
       "width" : 16
@@ -188510,7 +188510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 408.0
       },
       "width" : 16
@@ -188524,7 +188524,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188538,7 +188538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188552,7 +188552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188566,7 +188566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 400
       },
       "width" : 16
@@ -188706,306 +188706,558 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 192,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 12, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 12, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 12, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 12, 8 ],
+      "height" : 8,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 4, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 4, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 4, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 4, 8 ],
+      "height" : 8,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 256,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 12, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 12, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 12, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 12, 8 ],
+      "height" : 8,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 4, 0 ],
+      "height" : 8,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 4, 16 ],
+      "height" : 8,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 4, 8 ],
+      "height" : 8,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 4, 8 ],
+      "height" : 8,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 8.0,
+         "w" : 16,
+         "x" : 288,
+         "y" : 408.0
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 192,
+         "y" : 352
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 192,
+         "y" : 352
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 192,
+         "y" : 352
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 192,
+         "y" : 352
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 896,
+         "y" : 304
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 896,
+         "y" : 304
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 896,
+         "y" : 304
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 896,
+         "y" : 304
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 304,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 208,
          "y" : 400
       },
       "width" : 16
    },
    {
-      "center" : [ 8, 12, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 12, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 12, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 12, 8 ],
-      "height" : 8,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 4, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 4, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 4, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 4, 8 ],
-      "height" : 8,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 272,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 12, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 12, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 12, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 12, 8 ],
-      "height" : 8,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 4, 0 ],
-      "height" : 8,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 4, 16 ],
-      "height" : 8,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 4, 8 ],
-      "height" : 8,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 4, 8 ],
-      "height" : 8,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 8.0,
-         "w" : 16,
-         "x" : 304,
-         "y" : 408.0
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
       "center" : [ 8, 8, 16 ],
       "height" : 16,
       "normal" : [ 0, 0, 1 ],
@@ -189014,7 +189266,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16
@@ -189028,7 +189280,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16
@@ -189042,259 +189294,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 352
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 352
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 352
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 192,
-         "y" : 352
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 304
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 304
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 304
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 304
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 320,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 320,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 320,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 320,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 320,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 320,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 224,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 224,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 224,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16
@@ -239484,7 +239484,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239498,7 +239498,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239512,7 +239512,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239526,7 +239526,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239540,7 +239540,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2.00
@@ -239554,7 +239554,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -239568,7 +239568,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239582,7 +239582,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239596,7 +239596,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239610,7 +239610,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -239624,7 +239624,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2.00
@@ -239638,7 +239638,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -239652,7 +239652,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239666,7 +239666,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239680,7 +239680,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239694,7 +239694,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239708,7 +239708,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -239722,7 +239722,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -239736,7 +239736,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239750,7 +239750,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239764,7 +239764,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239778,7 +239778,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -239792,7 +239792,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -239806,7 +239806,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -239820,7 +239820,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -239834,7 +239834,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -239848,7 +239848,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -239862,7 +239862,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -239876,7 +239876,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -239890,7 +239890,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -239904,7 +239904,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -239918,7 +239918,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -239932,7 +239932,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -239946,7 +239946,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -239960,7 +239960,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -239974,7 +239974,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -239988,7 +239988,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240002,7 +240002,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240016,7 +240016,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240030,7 +240030,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240044,7 +240044,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240058,7 +240058,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240072,7 +240072,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240086,7 +240086,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -240100,7 +240100,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -240114,7 +240114,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240128,7 +240128,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240142,7 +240142,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240156,7 +240156,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -240170,7 +240170,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -240184,7 +240184,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240198,7 +240198,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240212,7 +240212,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240226,7 +240226,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240240,7 +240240,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240254,7 +240254,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240268,7 +240268,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240282,7 +240282,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240296,7 +240296,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240310,7 +240310,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240324,7 +240324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240338,7 +240338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240352,7 +240352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240366,7 +240366,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240380,7 +240380,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240394,7 +240394,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240408,7 +240408,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240422,7 +240422,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240436,7 +240436,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240450,7 +240450,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240464,7 +240464,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2.00
@@ -240478,7 +240478,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -240492,7 +240492,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240506,7 +240506,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240520,7 +240520,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240534,7 +240534,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -240548,7 +240548,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2.00
@@ -240562,7 +240562,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -240576,7 +240576,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240590,7 +240590,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240604,7 +240604,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240618,7 +240618,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240632,7 +240632,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -240646,7 +240646,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -240660,7 +240660,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240674,7 +240674,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240688,7 +240688,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240702,7 +240702,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240716,7 +240716,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -240730,7 +240730,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -240744,7 +240744,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240758,7 +240758,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240772,7 +240772,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240786,7 +240786,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240800,7 +240800,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240814,7 +240814,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240828,7 +240828,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240842,7 +240842,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240856,7 +240856,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240870,7 +240870,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240884,7 +240884,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240898,7 +240898,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240912,7 +240912,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -240926,7 +240926,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -240940,7 +240940,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -240954,7 +240954,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -240968,7 +240968,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240982,7 +240982,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -240996,7 +240996,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -241010,7 +241010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -241024,7 +241024,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -241038,7 +241038,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -241052,7 +241052,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -241066,7 +241066,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -241080,7 +241080,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -241094,7 +241094,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -241108,7 +241108,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -241122,7 +241122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -241136,7 +241136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -241150,7 +241150,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -241164,7 +241164,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -241178,7 +241178,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -241192,7 +241192,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -241206,7 +241206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -241220,7 +241220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -241234,7 +241234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -241248,7 +241248,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -241262,7 +241262,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -241276,7 +241276,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -241290,7 +241290,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -241304,7 +241304,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -241318,7 +241318,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -241332,7 +241332,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -241346,7 +241346,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -241360,7 +241360,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -241374,7 +241374,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -241388,7 +241388,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2
@@ -241402,7 +241402,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2
@@ -241416,7 +241416,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -241430,7 +241430,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -241444,7 +241444,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -241458,7 +241458,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -241472,7 +241472,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2
@@ -241486,7 +241486,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2
@@ -241500,7 +241500,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -241514,7 +241514,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -241528,7 +241528,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -241542,7 +241542,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -241556,7 +241556,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2
@@ -241570,7 +241570,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2
@@ -241584,7 +241584,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -241598,7 +241598,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -241612,7 +241612,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -241626,7 +241626,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -241640,7 +241640,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2
@@ -241654,7 +241654,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2
@@ -241668,7 +241668,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -241682,7 +241682,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -241696,7 +241696,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -241710,7 +241710,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -241724,7 +241724,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -241738,7 +241738,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -241752,7 +241752,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -241766,7 +241766,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -241780,7 +241780,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -241794,7 +241794,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -241808,7 +241808,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -241822,7 +241822,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -241836,7 +241836,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -241850,7 +241850,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -241864,7 +241864,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -241878,7 +241878,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -241892,7 +241892,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -241906,7 +241906,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2
@@ -241920,7 +241920,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2
@@ -241934,7 +241934,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -241948,7 +241948,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2
@@ -241962,7 +241962,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2
@@ -241976,7 +241976,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -241990,7 +241990,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242004,7 +242004,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242018,7 +242018,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4
@@ -242032,7 +242032,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242046,7 +242046,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242060,7 +242060,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242074,7 +242074,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4
@@ -242088,7 +242088,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242102,7 +242102,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242116,7 +242116,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242130,7 +242130,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4
@@ -242144,7 +242144,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242158,7 +242158,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242172,7 +242172,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242186,7 +242186,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4
@@ -242200,7 +242200,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -242214,7 +242214,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -242228,7 +242228,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -242242,7 +242242,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2
@@ -242256,7 +242256,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2
@@ -242270,7 +242270,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2
@@ -242284,7 +242284,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -242298,7 +242298,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -242312,7 +242312,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -242326,7 +242326,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2
@@ -242340,7 +242340,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2
@@ -242354,7 +242354,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2
@@ -242368,7 +242368,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -242382,7 +242382,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -242396,7 +242396,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -242410,7 +242410,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -242424,7 +242424,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2
@@ -242438,7 +242438,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2
@@ -242452,7 +242452,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -242466,7 +242466,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -242480,7 +242480,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -242494,7 +242494,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -242508,7 +242508,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2
@@ -242522,7 +242522,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2
@@ -242536,7 +242536,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242550,7 +242550,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242564,7 +242564,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -242578,7 +242578,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -242592,7 +242592,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242606,7 +242606,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242620,7 +242620,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -242634,7 +242634,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -242648,7 +242648,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242662,7 +242662,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242676,7 +242676,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -242690,7 +242690,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -242704,7 +242704,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242718,7 +242718,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242732,7 +242732,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.0
@@ -242746,7 +242746,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.0
@@ -242760,7 +242760,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2
@@ -242774,7 +242774,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2
@@ -242788,7 +242788,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2
@@ -242802,7 +242802,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2
@@ -242816,7 +242816,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2
@@ -242830,7 +242830,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2
@@ -242844,7 +242844,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242858,7 +242858,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242872,7 +242872,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242886,7 +242886,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4
@@ -242900,7 +242900,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242914,7 +242914,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242928,7 +242928,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242942,7 +242942,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4
@@ -242956,7 +242956,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -242970,7 +242970,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -242984,7 +242984,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -242998,7 +242998,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4
@@ -243012,7 +243012,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4
@@ -243026,7 +243026,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4
@@ -243040,7 +243040,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4
@@ -243054,7 +243054,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4
@@ -243068,7 +243068,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243082,7 +243082,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243096,7 +243096,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243110,7 +243110,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243124,7 +243124,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2.00
@@ -243138,7 +243138,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -243152,7 +243152,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243166,7 +243166,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243180,7 +243180,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243194,7 +243194,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -243208,7 +243208,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2.00
@@ -243222,7 +243222,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -243236,7 +243236,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243250,7 +243250,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243264,7 +243264,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243278,7 +243278,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243292,7 +243292,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -243306,7 +243306,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -243320,7 +243320,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243334,7 +243334,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243348,7 +243348,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243362,7 +243362,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243376,7 +243376,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -243390,7 +243390,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -243404,7 +243404,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243418,7 +243418,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243432,7 +243432,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243446,7 +243446,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243460,7 +243460,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243474,7 +243474,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243488,7 +243488,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243502,7 +243502,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243516,7 +243516,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243530,7 +243530,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243544,7 +243544,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243558,7 +243558,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243572,7 +243572,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243586,7 +243586,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243600,7 +243600,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243614,7 +243614,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243628,7 +243628,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243642,7 +243642,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243656,7 +243656,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243670,7 +243670,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -243684,7 +243684,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -243698,7 +243698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243712,7 +243712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243726,7 +243726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -243740,7 +243740,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -243754,7 +243754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -243768,7 +243768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243782,7 +243782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243796,7 +243796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243810,7 +243810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243824,7 +243824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243838,7 +243838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243852,7 +243852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243866,7 +243866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243880,7 +243880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243894,7 +243894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243908,7 +243908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243922,7 +243922,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243936,7 +243936,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -243950,7 +243950,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -243964,7 +243964,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -243978,7 +243978,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -243992,7 +243992,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244006,7 +244006,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244020,7 +244020,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244034,7 +244034,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244048,7 +244048,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2.00
@@ -244062,7 +244062,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -244076,7 +244076,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244090,7 +244090,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244104,7 +244104,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244118,7 +244118,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244132,7 +244132,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2.00
@@ -244146,7 +244146,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -244160,7 +244160,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244174,7 +244174,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244188,7 +244188,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244202,7 +244202,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244216,7 +244216,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -244230,7 +244230,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -244244,7 +244244,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244258,7 +244258,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244272,7 +244272,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244286,7 +244286,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244300,7 +244300,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -244314,7 +244314,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -244328,7 +244328,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244342,7 +244342,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244356,7 +244356,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244370,7 +244370,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244384,7 +244384,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244398,7 +244398,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244412,7 +244412,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244426,7 +244426,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244440,7 +244440,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244454,7 +244454,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244468,7 +244468,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244482,7 +244482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244496,7 +244496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244510,7 +244510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244524,7 +244524,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244538,7 +244538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244552,7 +244552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244566,7 +244566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244580,7 +244580,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244594,7 +244594,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -244608,7 +244608,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -244622,7 +244622,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244636,7 +244636,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244650,7 +244650,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -244664,7 +244664,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -244678,7 +244678,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -244692,7 +244692,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244706,7 +244706,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244720,7 +244720,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244734,7 +244734,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244748,7 +244748,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244762,7 +244762,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244776,7 +244776,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244790,7 +244790,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244804,7 +244804,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244818,7 +244818,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244832,7 +244832,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244846,7 +244846,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244860,7 +244860,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -244874,7 +244874,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -244888,7 +244888,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -244902,7 +244902,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -244916,7 +244916,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244930,7 +244930,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244944,7 +244944,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244958,7 +244958,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -244972,7 +244972,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2.00
@@ -244986,7 +244986,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -245000,7 +245000,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245014,7 +245014,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245028,7 +245028,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245042,7 +245042,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245056,7 +245056,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2.00
@@ -245070,7 +245070,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -245084,7 +245084,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245098,7 +245098,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245112,7 +245112,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245126,7 +245126,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245140,7 +245140,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -245154,7 +245154,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -245168,7 +245168,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245182,7 +245182,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245196,7 +245196,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245210,7 +245210,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245224,7 +245224,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -245238,7 +245238,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -245252,7 +245252,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245266,7 +245266,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245280,7 +245280,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245294,7 +245294,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245308,7 +245308,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245322,7 +245322,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245336,7 +245336,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245350,7 +245350,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245364,7 +245364,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245378,7 +245378,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245392,7 +245392,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245406,7 +245406,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245420,7 +245420,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245434,7 +245434,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245448,7 +245448,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245462,7 +245462,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245476,7 +245476,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245490,7 +245490,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -245504,7 +245504,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -245518,7 +245518,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245532,7 +245532,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -245546,7 +245546,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -245560,7 +245560,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245574,7 +245574,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245588,7 +245588,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245602,7 +245602,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245616,7 +245616,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245630,7 +245630,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245644,7 +245644,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245658,7 +245658,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245672,7 +245672,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245686,7 +245686,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245700,7 +245700,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245714,7 +245714,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245728,7 +245728,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -245742,7 +245742,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -245756,7 +245756,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -245770,7 +245770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -245784,7 +245784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245798,7 +245798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245812,7 +245812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245826,7 +245826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245840,7 +245840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 400
       },
       "width" : 2.00
@@ -245854,7 +245854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 350.000,
+         "x" : 334.000,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -245868,7 +245868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245882,7 +245882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245896,7 +245896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245910,7 +245910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 11.0000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 402.000
       },
       "width" : 2.00
@@ -245924,7 +245924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 400
       },
       "width" : 2.00
@@ -245938,7 +245938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 336,
+         "x" : 320,
          "y" : 413.0000
       },
       "width" : 2.00
@@ -245952,7 +245952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245966,7 +245966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245980,7 +245980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -245994,7 +245994,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246008,7 +246008,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -246022,7 +246022,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -246036,7 +246036,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246050,7 +246050,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246064,7 +246064,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246078,7 +246078,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246092,7 +246092,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -246106,7 +246106,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -246120,7 +246120,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246134,7 +246134,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246148,7 +246148,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246162,7 +246162,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246176,7 +246176,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246190,7 +246190,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246204,7 +246204,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246218,7 +246218,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246232,7 +246232,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246246,7 +246246,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246260,7 +246260,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246274,7 +246274,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246288,7 +246288,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246302,7 +246302,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246316,7 +246316,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246330,7 +246330,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246344,7 +246344,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246358,7 +246358,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -246372,7 +246372,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 344.0,
+         "x" : 328.0,
          "y" : 412.00
       },
       "width" : 2.00
@@ -246386,7 +246386,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 9.0000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 403.0000
       },
       "width" : 2.00
@@ -246400,7 +246400,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 401.0000
       },
       "width" : 2.00
@@ -246414,7 +246414,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 342.000,
+         "x" : 326.000,
          "y" : 412.00
       },
       "width" : 2.00
@@ -246428,7 +246428,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246442,7 +246442,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246456,7 +246456,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246470,7 +246470,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246484,7 +246484,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246498,7 +246498,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246512,7 +246512,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246526,7 +246526,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 346.000,
+         "x" : 330.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246540,7 +246540,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246554,7 +246554,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246568,7 +246568,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246582,7 +246582,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -246596,7 +246596,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 403.0000
       },
       "width" : 4.00
@@ -246610,7 +246610,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 409.0000
       },
       "width" : 4.00
@@ -246624,7 +246624,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 401.0000
       },
       "width" : 4.00
@@ -246638,7 +246638,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 4.00,
-         "x" : 338.000,
+         "x" : 322.000,
          "y" : 412.00
       },
       "width" : 4.00
@@ -247324,7 +247324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 356.00,
+         "x" : 340.00,
          "y" : 400
       },
       "width" : 4
@@ -247338,7 +247338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 356.00,
+         "x" : 340.00,
          "y" : 400
       },
       "width" : 4
@@ -247352,7 +247352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 4.00,
-         "x" : 352,
+         "x" : 336,
          "y" : 400
       },
       "width" : 4
@@ -247366,7 +247366,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 4.00,
-         "x" : 352,
+         "x" : 336,
          "y" : 400
       },
       "width" : 4
@@ -247380,7 +247380,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 4.00,
-         "x" : 352,
+         "x" : 336,
          "y" : 400
       },
       "width" : 4
@@ -247394,7 +247394,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 4.00,
-         "x" : 352,
+         "x" : 336,
          "y" : 400
       },
       "width" : 4
@@ -247408,7 +247408,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.0
@@ -247422,7 +247422,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 3
@@ -247436,7 +247436,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 3
@@ -247450,7 +247450,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16
@@ -247464,7 +247464,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16
@@ -247478,7 +247478,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247492,7 +247492,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 3.00
@@ -247506,7 +247506,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 3.00
@@ -247520,7 +247520,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247534,7 +247534,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247548,7 +247548,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247562,7 +247562,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 3.00
@@ -247576,7 +247576,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 3.00
@@ -247590,7 +247590,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247604,7 +247604,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247618,7 +247618,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 368,
+         "x" : 352,
          "y" : 400
       },
       "width" : 16.00
@@ -247632,7 +247632,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 384,
+         "x" : 368,
          "y" : 413.0000
       },
       "width" : 16.0
@@ -247646,7 +247646,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 384,
+         "x" : 368,
          "y" : 400
       },
       "width" : 3
@@ -247660,7 +247660,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 384,
+         "x" : 368,
          "y" : 400
       },
       "width" : 3
@@ -247674,7 +247674,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 384,
+         "x" : 368,
          "y" : 400
       },
       "width" : 16
@@ -247688,7 +247688,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 384,
+         "x" : 368,
          "y" : 400
       },
       "width" : 16
@@ -247702,181 +247702,13 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 384,
+         "x" : 368,
          "y" : 413.0000
       },
       "width" : 16.00
    },
    {
       "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 0.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 384,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 384,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 368,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 1.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 368,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 368,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 1.500000 ],
       "height" : 16.00,
       "normal" : [ -1.0, 0.0, 0.0 ],
       "roll" : -0.0,
@@ -247890,6 +247722,272 @@ export const blockFaceTypes = [
       "width" : 3.00
    },
    {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 0.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 368,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 1.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 3.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 1.5, 16, 8 ],
+      "height" : 3.0,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 1.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 352,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 1.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 368,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 368,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
       "center" : [ 8.000000, 8.000000, 0.000000 ],
       "height" : 16.00,
       "normal" : [ -0.0, 0.0, -1.0 ],
@@ -247921,48 +248019,20 @@ export const blockFaceTypes = [
       "center" : [ 1.5, 16, 8 ],
       "height" : 3.0,
       "normal" : [ 0, 1, 0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 368,
-         "y" : 400
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 1.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 368,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 1.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : 180.0,
+      "roll" : 90.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
          "x" : 384,
-         "y" : 413.0000
+         "y" : 400
       },
-      "width" : 16.00
+      "width" : 16.0
    },
    {
-      "center" : [ 16.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
+      "center" : [ 1.5, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -247971,6 +248041,454 @@ export const blockFaceTypes = [
          "x" : 384,
          "y" : 400
       },
+      "width" : 3
+   },
+   {
+      "center" : [ 1.5, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 3, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 1.5, 0, 8 ],
+      "height" : 3.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 400,
+         "y" : 413.0000
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 1.5, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 1.5, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 3, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 400,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 0.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 400,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 1.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 384,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 384,
+         "y" : 400
+      },
       "width" : 3.00
    },
    {
@@ -248019,530 +248537,12 @@ export const blockFaceTypes = [
       "center" : [ 1.5, 16, 8 ],
       "height" : 3.0,
       "normal" : [ 0, 1, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 1.5, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 1.5, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 3, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 1.5, 0, 8 ],
-      "height" : 3.0,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 416,
-         "y" : 413.0000
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 1.5, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 1.5, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 3, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 416,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 0.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
       "roll" : -90.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 416,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 416,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 1.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 3.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 400,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 1.5, 16, 8 ],
-      "height" : 3.0,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 400,
+         "x" : 384,
          "y" : 400
       },
       "width" : 16.0
@@ -248556,7 +248556,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 400,
+         "x" : 384,
          "y" : 400
       },
       "width" : 16.00
@@ -248570,8 +248570,526 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
+         "x" : 400,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 3.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 400,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 1.5, 16, 8 ],
+      "height" : 3.0,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
          "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 1.5, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 1.5, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 3, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 1.5, 0, 8 ],
+      "height" : 3.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 432,
          "y" : 413.0000
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 1.5, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 1.5, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 3, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 432,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 0.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 432,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 1.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 416,
+         "y" : 400
       },
       "width" : 16.00
    },
@@ -248635,530 +249153,12 @@ export const blockFaceTypes = [
       "center" : [ 1.5, 16, 8 ],
       "height" : 3.0,
       "normal" : [ 0, 1, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 1.5, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 1.5, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 3, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 1.5, 0, 8 ],
-      "height" : 3.0,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 448,
-         "y" : 413.0000
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 1.5, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 1.5, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 3, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 448,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 0.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
       "roll" : -90.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 448,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 448,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 1.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 3.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 432,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 1.5, 16, 8 ],
-      "height" : 3.0,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 432,
+         "x" : 416,
          "y" : 400
       },
       "width" : 16.0
@@ -249172,7 +249172,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 432,
+         "x" : 416,
          "y" : 400
       },
       "width" : 16.00
@@ -249186,8 +249186,526 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
+         "x" : 432,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 1.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 3.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 432,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 1.5, 16, 8 ],
+      "height" : 3.0,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
          "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 1.5, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 1.5, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 3, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 1.5, 0, 8 ],
+      "height" : 3.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 464,
          "y" : 413.0000
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 1.5, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 1.5, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 3
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 3, 8, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 14.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 464,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 14.500000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 13.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 0.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 464,
+         "y" : 413.0000
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 14.500000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 3.0000,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 3.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 13.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 464,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 14.500000, 16.000000, 8.000000 ],
+      "height" : 3.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 1.500000 ],
+      "height" : 3.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 3.0000,
+         "w" : 16,
+         "x" : 448,
+         "y" : 400
       },
       "width" : 16.00
    },
@@ -249251,530 +249769,12 @@ export const blockFaceTypes = [
       "center" : [ 1.5, 16, 8 ],
       "height" : 3.0,
       "normal" : [ 0, 1, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 1.5, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 1.5, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 3, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 1.5, 0, 8 ],
-      "height" : 3.0,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 480,
-         "y" : 413.0000
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 1.5, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 1.5, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 3
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 3, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 14.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 480,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 14.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 13.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 0.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
       "roll" : -90.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 480,
-         "y" : 413.0000
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 14.500000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 13.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 480,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 14.500000, 16.000000, 8.000000 ],
-      "height" : 3.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 1.500000 ],
-      "height" : 3.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 1.500000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 3.0000,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 3.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 3.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 400
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 1.5, 16, 8 ],
-      "height" : 3.0,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 3.0000,
-         "w" : 16,
-         "x" : 464,
+         "x" : 448,
          "y" : 400
       },
       "width" : 16.0
@@ -249788,7 +249788,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 464,
+         "x" : 448,
          "y" : 400
       },
       "width" : 16.00
@@ -249802,7 +249802,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -249816,7 +249816,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 480,
+         "x" : 464,
          "y" : 400
       },
       "width" : 3.00
@@ -249830,7 +249830,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 480,
+         "x" : 464,
          "y" : 400
       },
       "width" : 3.00
@@ -249844,7 +249844,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 400
       },
       "width" : 16.00
@@ -249858,7 +249858,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 480,
+         "x" : 464,
          "y" : 400
       },
       "width" : 16.00
@@ -249872,7 +249872,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.0
@@ -249886,7 +249886,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3
@@ -249900,7 +249900,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3
@@ -249914,7 +249914,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16
@@ -249928,7 +249928,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16
@@ -249942,7 +249942,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -249956,7 +249956,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3.00
@@ -249970,7 +249970,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3.00
@@ -249984,7 +249984,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -249998,7 +249998,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250012,7 +250012,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250026,7 +250026,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3.00
@@ -250040,7 +250040,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3.00
@@ -250054,7 +250054,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250068,7 +250068,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250082,7 +250082,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250096,7 +250096,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 413.0000
       },
       "width" : 16.0
@@ -250110,7 +250110,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3
@@ -250124,7 +250124,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3
@@ -250138,7 +250138,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16
@@ -250152,7 +250152,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16
@@ -250166,7 +250166,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -250180,7 +250180,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3.00
@@ -250194,7 +250194,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3.00
@@ -250208,7 +250208,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16.00
@@ -250222,7 +250222,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16.00
@@ -250236,7 +250236,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -250250,7 +250250,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3.00
@@ -250264,7 +250264,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3.00
@@ -250278,7 +250278,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16.00
@@ -250292,7 +250292,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16.00
@@ -250306,7 +250306,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250320,7 +250320,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250334,7 +250334,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3.00
@@ -250348,7 +250348,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 3.00
@@ -250362,7 +250362,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250376,7 +250376,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250390,7 +250390,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.0
@@ -250404,7 +250404,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 496,
+         "x" : 480,
          "y" : 400
       },
       "width" : 16.00
@@ -250418,7 +250418,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -250432,7 +250432,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3.00
@@ -250446,7 +250446,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 3.00
@@ -250460,7 +250460,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16.00
@@ -250474,7 +250474,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 512,
+         "x" : 496,
          "y" : 400
       },
       "width" : 16.00
@@ -250488,7 +250488,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.0
@@ -250502,7 +250502,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3
@@ -250516,7 +250516,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3
@@ -250530,7 +250530,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16
@@ -250544,7 +250544,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16
@@ -250558,7 +250558,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250572,7 +250572,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3.00
@@ -250586,7 +250586,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3.00
@@ -250600,7 +250600,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250614,7 +250614,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250628,7 +250628,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250642,7 +250642,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3.00
@@ -250656,7 +250656,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3.00
@@ -250670,7 +250670,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250684,7 +250684,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250698,7 +250698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250712,7 +250712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 413.0000
       },
       "width" : 16.0
@@ -250726,7 +250726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3
@@ -250740,7 +250740,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3
@@ -250754,7 +250754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16
@@ -250768,7 +250768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16
@@ -250782,7 +250782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -250796,7 +250796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3.00
@@ -250810,7 +250810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3.00
@@ -250824,7 +250824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16.00
@@ -250838,7 +250838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16.00
@@ -250852,7 +250852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -250866,7 +250866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3.00
@@ -250880,7 +250880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3.00
@@ -250894,7 +250894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16.00
@@ -250908,7 +250908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16.00
@@ -250922,7 +250922,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250936,7 +250936,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250950,7 +250950,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3.00
@@ -250964,7 +250964,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 3.00
@@ -250978,7 +250978,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -250992,7 +250992,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -251006,7 +251006,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.0
@@ -251020,7 +251020,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 528,
+         "x" : 512,
          "y" : 400
       },
       "width" : 16.00
@@ -251034,7 +251034,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -251048,7 +251048,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3.00
@@ -251062,7 +251062,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 3.00
@@ -251076,7 +251076,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16.00
@@ -251090,7 +251090,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 544,
+         "x" : 528,
          "y" : 400
       },
       "width" : 16.00
@@ -251104,7 +251104,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.0
@@ -251118,7 +251118,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3
@@ -251132,7 +251132,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3
@@ -251146,7 +251146,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16
@@ -251160,7 +251160,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16
@@ -251174,7 +251174,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251188,7 +251188,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3.00
@@ -251202,7 +251202,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3.00
@@ -251216,7 +251216,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251230,7 +251230,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251244,7 +251244,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251258,7 +251258,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3.00
@@ -251272,7 +251272,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3.00
@@ -251286,7 +251286,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251300,7 +251300,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251314,7 +251314,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251328,7 +251328,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 413.0000
       },
       "width" : 16.0
@@ -251342,7 +251342,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3
@@ -251356,7 +251356,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3
@@ -251370,7 +251370,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16
@@ -251384,7 +251384,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16
@@ -251398,7 +251398,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -251412,7 +251412,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3.00
@@ -251426,7 +251426,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3.00
@@ -251440,7 +251440,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16.00
@@ -251454,7 +251454,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16.00
@@ -251468,7 +251468,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -251482,7 +251482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3.00
@@ -251496,7 +251496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3.00
@@ -251510,7 +251510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16.00
@@ -251524,7 +251524,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16.00
@@ -251538,7 +251538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251552,7 +251552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251566,7 +251566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3.00
@@ -251580,7 +251580,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 3.00
@@ -251594,7 +251594,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251608,7 +251608,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251622,7 +251622,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.0
@@ -251636,7 +251636,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 560,
+         "x" : 544,
          "y" : 400
       },
       "width" : 16.00
@@ -251650,7 +251650,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -251664,7 +251664,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3.00
@@ -251678,7 +251678,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 3.00
@@ -251692,7 +251692,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16.00
@@ -251706,7 +251706,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 576,
+         "x" : 560,
          "y" : 400
       },
       "width" : 16.00
@@ -251720,7 +251720,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.0
@@ -251734,7 +251734,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3
@@ -251748,7 +251748,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3
@@ -251762,7 +251762,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16
@@ -251776,7 +251776,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16
@@ -251790,7 +251790,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251804,7 +251804,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3.00
@@ -251818,7 +251818,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3.00
@@ -251832,7 +251832,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251846,7 +251846,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251860,7 +251860,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251874,7 +251874,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3.00
@@ -251888,7 +251888,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3.00
@@ -251902,7 +251902,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251916,7 +251916,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251930,7 +251930,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -251944,7 +251944,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 413.0000
       },
       "width" : 16.0
@@ -251958,7 +251958,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3
@@ -251972,7 +251972,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3
@@ -251986,7 +251986,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16
@@ -252000,7 +252000,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16
@@ -252014,7 +252014,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -252028,7 +252028,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3.00
@@ -252042,7 +252042,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3.00
@@ -252056,7 +252056,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16.00
@@ -252070,7 +252070,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16.00
@@ -252084,7 +252084,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -252098,7 +252098,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3.00
@@ -252112,7 +252112,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3.00
@@ -252126,7 +252126,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16.00
@@ -252140,7 +252140,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16.00
@@ -252154,7 +252154,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -252168,7 +252168,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -252182,7 +252182,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3.00
@@ -252196,7 +252196,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 3.00
@@ -252210,7 +252210,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -252224,7 +252224,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -252238,7 +252238,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.0
@@ -252252,7 +252252,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 592,
+         "x" : 576,
          "y" : 400
       },
       "width" : 16.00
@@ -252266,7 +252266,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -252280,7 +252280,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3.00
@@ -252294,7 +252294,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 3.00
@@ -252308,7 +252308,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16.00
@@ -252322,7 +252322,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 608,
+         "x" : 592,
          "y" : 400
       },
       "width" : 16.00
@@ -252336,7 +252336,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.0
@@ -252350,7 +252350,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3
@@ -252364,7 +252364,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3
@@ -252378,7 +252378,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16
@@ -252392,7 +252392,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16
@@ -252406,7 +252406,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252420,7 +252420,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3.00
@@ -252434,7 +252434,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3.00
@@ -252448,7 +252448,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252462,7 +252462,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252476,7 +252476,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252490,7 +252490,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3.00
@@ -252504,7 +252504,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3.00
@@ -252518,7 +252518,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252532,7 +252532,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252546,7 +252546,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252560,7 +252560,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 413.0000
       },
       "width" : 16.0
@@ -252574,7 +252574,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3
@@ -252588,7 +252588,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3
@@ -252602,7 +252602,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16
@@ -252616,7 +252616,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16
@@ -252630,7 +252630,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -252644,7 +252644,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3.00
@@ -252658,7 +252658,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3.00
@@ -252672,7 +252672,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16.00
@@ -252686,7 +252686,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16.00
@@ -252700,7 +252700,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -252714,7 +252714,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3.00
@@ -252728,7 +252728,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3.00
@@ -252742,7 +252742,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16.00
@@ -252756,7 +252756,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16.00
@@ -252770,7 +252770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252784,7 +252784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252798,7 +252798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3.00
@@ -252812,7 +252812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 3.00
@@ -252826,7 +252826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252840,7 +252840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252854,7 +252854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.0
@@ -252868,7 +252868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 624,
+         "x" : 608,
          "y" : 400
       },
       "width" : 16.00
@@ -252882,7 +252882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 3.0000,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 413.0000
       },
       "width" : 16.00
@@ -252896,7 +252896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3.00
@@ -252910,7 +252910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 3.0000,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 3.00
@@ -252924,7 +252924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16.00
@@ -252938,7 +252938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 640,
+         "x" : 624,
          "y" : 400
       },
       "width" : 16.00
@@ -252952,7 +252952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -252966,7 +252966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -252980,7 +252980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -252994,7 +252994,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253008,7 +253008,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253022,7 +253022,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253036,7 +253036,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 400
       },
       "width" : 2.00
@@ -253050,7 +253050,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253064,7 +253064,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253078,7 +253078,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253092,7 +253092,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253106,7 +253106,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253120,7 +253120,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253134,7 +253134,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253148,7 +253148,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253162,7 +253162,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253176,7 +253176,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253190,7 +253190,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 400
       },
       "width" : 2.00
@@ -253204,7 +253204,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253218,7 +253218,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253232,7 +253232,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253246,7 +253246,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253260,7 +253260,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253274,7 +253274,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253288,7 +253288,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253302,7 +253302,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253316,7 +253316,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253330,7 +253330,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253344,7 +253344,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 400
       },
       "width" : 2.00
@@ -253358,7 +253358,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253372,7 +253372,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253386,7 +253386,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253400,7 +253400,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253414,7 +253414,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253428,7 +253428,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253442,7 +253442,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253456,7 +253456,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253470,7 +253470,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253484,7 +253484,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253498,7 +253498,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 400
       },
       "width" : 2.00
@@ -253512,7 +253512,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253526,7 +253526,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253540,7 +253540,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253554,7 +253554,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253568,7 +253568,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4
@@ -253582,7 +253582,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4
@@ -253596,7 +253596,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4
@@ -253610,7 +253610,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4
@@ -253624,7 +253624,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4
@@ -253638,7 +253638,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4
@@ -253652,7 +253652,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 400
       },
       "width" : 2
@@ -253666,7 +253666,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2
@@ -253680,7 +253680,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2
@@ -253694,7 +253694,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2
@@ -253708,7 +253708,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2
@@ -253722,7 +253722,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253736,7 +253736,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 402.000
       },
       "width" : 4.00
@@ -253750,7 +253750,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253764,7 +253764,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253778,7 +253778,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253792,7 +253792,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 4.00,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 406.000
       },
       "width" : 4.00
@@ -253806,7 +253806,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 2.000,
-         "x" : 658.000,
+         "x" : 642.000,
          "y" : 400
       },
       "width" : 2.00
@@ -253820,7 +253820,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253834,7 +253834,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253848,7 +253848,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253862,7 +253862,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 2.000,
-         "x" : 656,
+         "x" : 640,
          "y" : 400
       },
       "width" : 2.00
@@ -253876,7 +253876,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8
@@ -253890,7 +253890,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -253904,7 +253904,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 684.00,
+         "x" : 668.00,
          "y" : 404.00
       },
       "width" : 1.0
@@ -253918,7 +253918,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 684.00,
+         "x" : 668.00,
          "y" : 404.00
       },
       "width" : 1.0
@@ -253932,7 +253932,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -253946,7 +253946,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 675.0000,
+         "x" : 659.0000,
          "y" : 404.00
       },
       "width" : 1.0
@@ -253960,7 +253960,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 684.00,
+         "x" : 668.00,
          "y" : 404.00
       },
       "width" : 1.0
@@ -253974,7 +253974,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -253988,7 +253988,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 6.000,
-         "x" : 677.0000,
+         "x" : 661.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -254002,7 +254002,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 6.000,
-         "x" : 677.0000,
+         "x" : 661.0000,
          "y" : 412.00
       },
       "width" : 6.0
@@ -254016,7 +254016,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 677.0000,
+         "x" : 661.0000,
          "y" : 405.0000
       },
       "width" : 6.0
@@ -254030,7 +254030,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 2.000,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 405.0000
       },
       "width" : 2.0
@@ -254044,7 +254044,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 2.000,
-         "x" : 684.00,
+         "x" : 668.00,
          "y" : 405.0000
       },
       "width" : 2.0
@@ -254058,7 +254058,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -254072,7 +254072,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 675.0000,
+         "x" : 659.0000,
          "y" : 404.00
       },
       "width" : 1.0
@@ -254086,7 +254086,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 675.0000,
+         "x" : 659.0000,
          "y" : 404.00
       },
       "width" : 1.0
@@ -254100,7 +254100,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -254114,7 +254114,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 675.0000,
+         "x" : 659.0000,
          "y" : 404.00
       },
       "width" : 1.0
@@ -254128,7 +254128,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 1.0000,
-         "x" : 684.00,
+         "x" : 668.00,
          "y" : 404.00
       },
       "width" : 1.0
@@ -254142,7 +254142,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -254156,7 +254156,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -254170,7 +254170,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 412.00
       },
       "width" : 8.0
@@ -254184,7 +254184,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 412.00
       },
       "width" : 8.0
@@ -254198,7 +254198,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 404.00
       },
       "width" : 8.0
@@ -254212,7 +254212,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 412.00
       },
       "width" : 8.0
@@ -254226,7 +254226,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 1.0000,
          "w" : 8.0,
-         "x" : 676.00,
+         "x" : 660.00,
          "y" : 412.00
       },
       "width" : 8.0
@@ -254240,7 +254240,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 690.000,
+         "x" : 674.000,
          "y" : 402.000
       },
       "width" : 12
@@ -254254,7 +254254,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 400
       },
       "width" : 12
@@ -254268,7 +254268,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 400
       },
       "width" : 12
@@ -254282,7 +254282,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 400
       },
       "width" : 12
@@ -254296,7 +254296,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 400
       },
       "width" : 12
@@ -254310,7 +254310,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 686.000,
+         "x" : 670.000,
          "y" : 402.000
       },
       "width" : 2
@@ -254324,7 +254324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 672,
+         "x" : 656,
          "y" : 402.000
       },
       "width" : 2
@@ -254338,7 +254338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 686.000,
+         "x" : 670.000,
          "y" : 402.000
       },
       "width" : 2
@@ -254352,7 +254352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 672,
+         "x" : 656,
          "y" : 402.000
       },
       "width" : 2
@@ -254366,7 +254366,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 690.000,
+         "x" : 674.000,
          "y" : 402.000
       },
       "width" : 12
@@ -254380,7 +254380,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 400
       },
       "width" : 12
@@ -254394,7 +254394,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 400
       },
       "width" : 12
@@ -254408,7 +254408,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 690.000,
+         "x" : 674.000,
          "y" : 402.000
       },
       "width" : 12
@@ -254422,7 +254422,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 672,
+         "x" : 656,
          "y" : 402.000
       },
       "width" : 2
@@ -254436,7 +254436,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 686.000,
+         "x" : 670.000,
          "y" : 402.000
       },
       "width" : 2
@@ -254450,7 +254450,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 414.000
       },
       "width" : 12
@@ -254464,7 +254464,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 2.000,
          "w" : 12.00,
-         "x" : 674.000,
+         "x" : 658.000,
          "y" : 414.000
       },
       "width" : 12
@@ -254478,7 +254478,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 12.00,
-         "x" : 690.000,
+         "x" : 674.000,
          "y" : 402.000
       },
       "width" : 12
@@ -254492,7 +254492,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 686.000,
+         "x" : 670.000,
          "y" : 402.000
       },
       "width" : 2
@@ -254506,7 +254506,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 672,
+         "x" : 656,
          "y" : 402.000
       },
       "width" : 2
@@ -254520,7 +254520,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 672,
+         "x" : 656,
          "y" : 402.000
       },
       "width" : 2
@@ -254534,7 +254534,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 686.000,
+         "x" : 670.000,
          "y" : 402.000
       },
       "width" : 2
@@ -254548,7 +254548,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 672,
+         "x" : 656,
          "y" : 402.000
       },
       "width" : 2
@@ -254562,10 +254562,164 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 12.00,
          "w" : 2.000,
-         "x" : 686.000,
+         "x" : 670.000,
          "y" : 402.000
       },
       "width" : 2
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 12,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 674.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 14, 8 ],
+      "height" : 12,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 658.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 12,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 658.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 7, 2 ],
+      "height" : 14,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 14.000,
+         "w" : 12.00,
+         "x" : 658.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 7, 14 ],
+      "height" : 14,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 14.000,
+         "w" : 12.00,
+         "x" : 658.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 2, 7, 8 ],
+      "height" : 14,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 14.000,
+         "w" : 12.00,
+         "x" : 658.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 14, 7, 8 ],
+      "height" : 14,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 14.000,
+         "w" : 12.00,
+         "x" : 658.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 12,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 690.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 12,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 690.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 12,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 690.000,
+         "y" : 402.000
+      },
+      "width" : 12
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 12,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 12.00,
+         "w" : 12.00,
+         "x" : 690.000,
+         "y" : 402.000
+      },
+      "width" : 12
    },
    {
       "center" : [ 16, 8, 8 ],
@@ -254582,160 +254736,6 @@ export const blockFaceTypes = [
       "width" : 12
    },
    {
-      "center" : [ 8, 14, 8 ],
-      "height" : 12,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 674.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 12,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 674.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 8, 7, 2 ],
-      "height" : 14,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 14.000,
-         "w" : 12.00,
-         "x" : 674.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 8, 7, 14 ],
-      "height" : 14,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 14.000,
-         "w" : 12.00,
-         "x" : 674.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 2, 7, 8 ],
-      "height" : 14,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 14.000,
-         "w" : 12.00,
-         "x" : 674.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 14, 7, 8 ],
-      "height" : 14,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 14.000,
-         "w" : 12.00,
-         "x" : 674.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 12,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 706.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 12,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 706.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 12,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 706.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 12,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 706.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 12,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 12.00,
-         "w" : 12.00,
-         "x" : 706.000,
-         "y" : 402.000
-      },
-      "width" : 12
-   },
-   {
       "center" : [ 0.000000, 8.000000, 8.000000 ],
       "height" : 16.00,
       "normal" : [ -1.0, -0.0, 0.0 ],
@@ -254744,7 +254744,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 400
       },
       "width" : 16.00
@@ -254758,7 +254758,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 400
       },
       "width" : 16.00
@@ -254772,7 +254772,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254786,7 +254786,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254800,7 +254800,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254814,7 +254814,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254828,7 +254828,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 400
       },
       "width" : 16
@@ -254842,7 +254842,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 400
       },
       "width" : 16
@@ -254856,7 +254856,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16
@@ -254870,7 +254870,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16
@@ -254884,7 +254884,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16
@@ -254898,7 +254898,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16
@@ -254912,7 +254912,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 400
       },
       "width" : 16.00
@@ -254926,7 +254926,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 720,
+         "x" : 704,
          "y" : 400
       },
       "width" : 16.00
@@ -254940,7 +254940,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254954,7 +254954,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254968,7 +254968,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254982,7 +254982,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 736,
+         "x" : 720,
          "y" : 400
       },
       "width" : 16.00
@@ -254996,7 +254996,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 16.0
@@ -255010,7 +255010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255024,7 +255024,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255038,7 +255038,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 16.0
@@ -255052,7 +255052,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 16.0
@@ -255066,7 +255066,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 8.0
@@ -255080,7 +255080,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 400
       },
       "width" : 8.0
@@ -255094,7 +255094,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 16.0
@@ -255108,7 +255108,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 16.0
@@ -255122,7 +255122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255136,7 +255136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255150,7 +255150,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 16.0
@@ -255164,7 +255164,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 16.0
@@ -255178,7 +255178,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 8.0
@@ -255192,7 +255192,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 400
       },
       "width" : 8.0
@@ -255206,7 +255206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 16.0
@@ -255220,7 +255220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 8.0
@@ -255234,7 +255234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255248,7 +255248,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255262,7 +255262,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 16.0
@@ -255276,7 +255276,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 8.0
@@ -255290,7 +255290,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 8.0
@@ -255304,7 +255304,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 400
       },
       "width" : 8.0
@@ -255318,7 +255318,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 16.0
@@ -255332,7 +255332,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 400
       },
       "width" : 8.0
@@ -255346,7 +255346,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255360,7 +255360,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 8.0
@@ -255374,7 +255374,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 408.0
       },
       "width" : 16.0
@@ -255388,7 +255388,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 400
       },
       "width" : 8
@@ -255402,7 +255402,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 8
@@ -255416,7 +255416,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 312.0,
+         "x" : 296.0,
          "y" : 400
       },
       "width" : 8
@@ -255430,7 +255430,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 400
       },
       "width" : 16
@@ -255444,7 +255444,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -255458,7 +255458,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -255472,7 +255472,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -255486,7 +255486,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -255500,7 +255500,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -255514,7 +255514,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -255528,7 +255528,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 768,
+         "x" : 752,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255542,7 +255542,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 768,
+         "x" : 752,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255556,7 +255556,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 768,
+         "x" : 752,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255570,7 +255570,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 768,
+         "x" : 752,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255584,7 +255584,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 784,
+         "x" : 768,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255598,7 +255598,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 784,
+         "x" : 768,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255612,7 +255612,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 784,
+         "x" : 768,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255626,7 +255626,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 784,
+         "x" : 768,
          "y" : 400
       },
       "width" : 14.400004952332
@@ -255640,7 +255640,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 6.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 6
@@ -255654,7 +255654,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 6.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 6
@@ -255668,7 +255668,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 6.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 6
@@ -255682,7 +255682,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 4.00,
          "w" : 6.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 6
@@ -255696,7 +255696,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 821.0000,
+         "x" : 805.0000,
          "y" : 405.0000
       },
       "width" : 6
@@ -255710,7 +255710,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 6.000,
-         "x" : 837.0000,
+         "x" : 821.0000,
          "y" : 405.0000
       },
       "width" : 6
@@ -255724,7 +255724,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255738,7 +255738,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255752,7 +255752,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255766,7 +255766,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 848,
+         "x" : 832,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255780,7 +255780,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 10
@@ -255794,7 +255794,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 10
@@ -255808,7 +255808,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 10
@@ -255822,7 +255822,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 10.000,
-         "x" : 803.0000,
+         "x" : 787.0000,
          "y" : 410.000
       },
       "width" : 10
@@ -255836,7 +255836,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 819.0000,
+         "x" : 803.0000,
          "y" : 403.0000
       },
       "width" : 10
@@ -255850,7 +255850,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 10.000,
          "w" : 10.000,
-         "x" : 835.0000,
+         "x" : 819.0000,
          "y" : 403.0000
       },
       "width" : 10
@@ -255864,7 +255864,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 864,
+         "x" : 848,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255878,7 +255878,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 864,
+         "x" : 848,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255892,7 +255892,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 864,
+         "x" : 848,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -255906,6 +255906,62 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 848,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ 0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 864,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ -0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 864,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ -0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 864,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ 0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 864,
          "y" : 400
       },
@@ -255970,6 +256026,34 @@ export const blockFaceTypes = [
    {
       "center" : [ 8.000000, 8.000000, 8.000000 ],
       "height" : 16.0000000,
+      "normal" : [ 0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
+      "normal" : [ -0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "height" : 16.0000000,
       "normal" : [ 0.707107, 0.0, -0.707107 ],
       "roll" : -0.0,
       "tintindex" : -1,
@@ -255998,34 +256082,6 @@ export const blockFaceTypes = [
    {
       "center" : [ 8.000000, 8.000000, 8.000000 ],
       "height" : 16.0000000,
-      "normal" : [ -0.707107, 0.0, -0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 400
-      },
-      "width" : 16.000004245512
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ 0.707107, 0.0, 0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 896,
-         "y" : 400
-      },
-      "width" : 16.000004245512
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
-      "height" : 16.0000000,
       "normal" : [ 0.707107, 0.0, 0.707107 ],
       "roll" : -0.0,
       "tintindex" : -1,
@@ -256080,7 +256136,21 @@ export const blockFaceTypes = [
       "width" : 16.000004245512
    },
    {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "center" : [ 13.656854, 3.000000, 2.343146 ],
+      "height" : 16.00,
+      "normal" : [ 0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 0,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 0E-7
+   },
+   {
+      "center" : [ 8.000000, 3.000000, 8.000000 ],
       "height" : 16.0000000,
       "normal" : [ 0.707107, 0.0, 0.707107 ],
       "roll" : -0.0,
@@ -256088,13 +256158,27 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 896,
          "y" : 400
       },
       "width" : 16.000004245512
    },
    {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "center" : [ 2.343146, 3.000000, 13.656854 ],
+      "height" : 16.00,
+      "normal" : [ -0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 0,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 0E-7
+   },
+   {
+      "center" : [ 8.000000, 3.000000, 8.000000 ],
       "height" : 16.0000000,
       "normal" : [ -0.707107, 0.0, -0.707107 ],
       "roll" : -0.0,
@@ -256102,13 +256186,41 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 896,
          "y" : 400
       },
       "width" : 16.000004245512
    },
    {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "center" : [ 8.000000, 11.000000, 8.000000 ],
+      "height" : 0E-12,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : -135.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 0,
+         "w" : 16,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, -5.000000, 8.000000 ],
+      "height" : 0E-12,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -45.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 0,
+         "w" : 16,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, 3.000000, 8.000000 ],
       "height" : 16.0000000,
       "normal" : [ 0.707107, 0.0, -0.707107 ],
       "roll" : -0.0,
@@ -256116,13 +256228,27 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 896,
          "y" : 400
       },
       "width" : 16.000004245512
    },
    {
-      "center" : [ 8.000000, 8.000000, 8.000000 ],
+      "center" : [ 13.656854, 3.000000, 13.656854 ],
+      "height" : 16.00,
+      "normal" : [ 0.707107, 0.0, 0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 0,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 0E-7
+   },
+   {
+      "center" : [ 8.000000, 3.000000, 8.000000 ],
       "height" : 16.0000000,
       "normal" : [ -0.707107, 0.0, 0.707107 ],
       "roll" : -0.0,
@@ -256130,7 +256256,49 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 928,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 2.343146, 3.000000, 2.343146 ],
+      "height" : 16.00,
+      "normal" : [ -0.707107, 0.0, -0.707107 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 0,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 0E-7
+   },
+   {
+      "center" : [ 8.000000, 11.000000, 8.000000 ],
+      "height" : 0E-12,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 135.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 0,
+         "w" : 16,
+         "x" : 896,
+         "y" : 400
+      },
+      "width" : 16.000004245512
+   },
+   {
+      "center" : [ 8.000000, -5.000000, 8.000000 ],
+      "height" : 0E-12,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : 45.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 0,
+         "w" : 16,
+         "x" : 896,
          "y" : 400
       },
       "width" : 16.000004245512
@@ -256304,23 +256472,9 @@ export const blockFaceTypes = [
       "width" : 16.000004245512
    },
    {
-      "center" : [ 13.656854, 3.000000, 2.343146 ],
-      "height" : 16.00,
-      "normal" : [ 0.707107, 0.0, -0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 0,
-         "x" : 928,
-         "y" : 400
-      },
-      "width" : 0E-7
-   },
-   {
-      "center" : [ 8.000000, 3.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ 0.707107, 0.0, 0.707107 ],
+      "center" : [ 4, 7, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -256329,26 +256483,12 @@ export const blockFaceTypes = [
          "x" : 928,
          "y" : 400
       },
-      "width" : 16.000004245512
+      "width" : 16
    },
    {
-      "center" : [ 2.343146, 3.000000, 13.656854 ],
-      "height" : 16.00,
-      "normal" : [ -0.707107, 0.0, 0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 0,
-         "x" : 928,
-         "y" : 400
-      },
-      "width" : 0E-7
-   },
-   {
-      "center" : [ 8.000000, 3.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ -0.707107, 0.0, -0.707107 ],
+      "center" : [ 4, 7, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -256357,40 +256497,12 @@ export const blockFaceTypes = [
          "x" : 928,
          "y" : 400
       },
-      "width" : 16.000004245512
+      "width" : 16
    },
    {
-      "center" : [ 8.000000, 11.000000, 8.000000 ],
-      "height" : 0E-12,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : -135.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 0,
-         "w" : 16,
-         "x" : 928,
-         "y" : 400
-      },
-      "width" : 16.000004245512
-   },
-   {
-      "center" : [ 8.000000, -5.000000, 8.000000 ],
-      "height" : 0E-12,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -45.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 0,
-         "w" : 16,
-         "x" : 928,
-         "y" : 400
-      },
-      "width" : 16.000004245512
-   },
-   {
-      "center" : [ 8.000000, 3.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ 0.707107, 0.0, -0.707107 ],
+      "center" : [ 12, 7, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -256399,26 +256511,12 @@ export const blockFaceTypes = [
          "x" : 928,
          "y" : 400
       },
-      "width" : 16.000004245512
+      "width" : 16
    },
    {
-      "center" : [ 13.656854, 3.000000, 13.656854 ],
-      "height" : 16.00,
-      "normal" : [ 0.707107, 0.0, 0.707107 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 0,
-         "x" : 928,
-         "y" : 400
-      },
-      "width" : 0E-7
-   },
-   {
-      "center" : [ 8.000000, 3.000000, 8.000000 ],
-      "height" : 16.0000000,
-      "normal" : [ -0.707107, 0.0, 0.707107 ],
+      "center" : [ 12, 7, 8 ],
+      "height" : 16,
+      "normal" : [ 1, 0, 0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -256427,49 +256525,63 @@ export const blockFaceTypes = [
          "x" : 928,
          "y" : 400
       },
-      "width" : 16.000004245512
+      "width" : 16
    },
    {
-      "center" : [ 2.343146, 3.000000, 2.343146 ],
-      "height" : 16.00,
-      "normal" : [ -0.707107, 0.0, -0.707107 ],
+      "center" : [ 8, 7, 4 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
-         "w" : 0,
-         "x" : 928,
-         "y" : 400
-      },
-      "width" : 0E-7
-   },
-   {
-      "center" : [ 8.000000, 11.000000, 8.000000 ],
-      "height" : 0E-12,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 135.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 0,
          "w" : 16,
          "x" : 928,
          "y" : 400
       },
-      "width" : 16.000004245512
+      "width" : 16
    },
    {
-      "center" : [ 8.000000, -5.000000, 8.000000 ],
-      "height" : 0E-12,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : 45.0,
+      "center" : [ 8, 7, 4 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
-         "h" : 0,
+         "h" : 16,
          "w" : 16,
          "x" : 928,
          "y" : 400
       },
-      "width" : 16.000004245512
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 7, 12 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 928,
+         "y" : 400
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 7, 12 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 928,
+         "y" : 400
+      },
+      "width" : 16
    },
    {
       "center" : [ 4, 7, 8 ],
@@ -256803,118 +256915,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 976,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 4, 7, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 4, 7, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 12, 7, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 12, 7, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 4 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 4 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 12 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
-         "y" : 400
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 7, 12 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 992,
          "y" : 400
       },
       "width" : 16
@@ -256928,7 +256928,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 1008,
+         "x" : 992,
          "y" : 400
       },
       "width" : 16
@@ -256942,8 +256942,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 16,
-         "x" : 0,
-         "y" : 417.0000
+         "x" : 1008,
+         "y" : 401.0000
       },
       "width" : 16
    },
@@ -256956,8 +256956,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 16,
-         "x" : 0,
-         "y" : 417.0000
+         "x" : 1008,
+         "y" : 401.0000
       },
       "width" : 16
    },
@@ -256970,8 +256970,8 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 16,
-         "x" : 0,
-         "y" : 417.0000
+         "x" : 1008,
+         "y" : 401.0000
       },
       "width" : 16
    },
@@ -256984,105 +256984,21 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 15.0000,
          "w" : 16,
+         "x" : 1008,
+         "y" : 401.0000
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 0,
-         "y" : 417.0000
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 464,
-         "y" : 368
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16.0,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 16,
          "y" : 416
       },
       "width" : 16.0
@@ -257096,7 +257012,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16
@@ -257110,7 +257026,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 416
       },
       "width" : 16
@@ -257124,7 +257040,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 48,
+         "x" : 32,
          "y" : 416
       },
       "width" : 16
@@ -257138,7 +257054,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.0
@@ -257152,7 +257068,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.0
@@ -257166,7 +257082,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257180,7 +257096,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257194,7 +257110,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 416
       },
       "width" : 16.00
@@ -257208,7 +257124,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 48,
+         "x" : 32,
          "y" : 416
       },
       "width" : 16.00
@@ -257222,7 +257138,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257236,7 +257152,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257250,7 +257166,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257264,7 +257180,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257278,7 +257194,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 416
       },
       "width" : 16.00
@@ -257292,7 +257208,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 48,
+         "x" : 32,
          "y" : 416
       },
       "width" : 16.00
@@ -257306,7 +257222,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257320,7 +257236,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257334,7 +257250,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257348,7 +257264,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 0,
          "y" : 416
       },
       "width" : 16.00
@@ -257362,7 +257278,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 32,
+         "x" : 16,
          "y" : 416
       },
       "width" : 16.00
@@ -257372,6 +257288,398 @@ export const blockFaceTypes = [
       "height" : 16.00,
       "normal" : [ 1.0, 0.0, -0.0 ],
       "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 32,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 16,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 32,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, -0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -0.0, 1.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, -1.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 16,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 32,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 0,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16.0,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16.0,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16.0,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 48,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : -90.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -257390,7 +257698,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257404,7 +257712,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257418,7 +257726,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257427,34 +257735,6 @@ export const blockFaceTypes = [
       "center" : [ 8.000000, 8.000000, 16.000000 ],
       "height" : 16.00,
       "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 16,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 32,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -257474,7 +257754,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257488,7 +257768,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257502,7 +257782,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257511,34 +257791,6 @@ export const blockFaceTypes = [
       "center" : [ 8.000000, 8.000000, 0.000000 ],
       "height" : 16.00,
       "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 16,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 32,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
       "roll" : 180.0,
       "tintindex" : -1,
       "uv" : {
@@ -257558,7 +257810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257572,7 +257824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 16,
+         "x" : 48,
          "y" : 416
       },
       "width" : 16.00
@@ -257601,6 +257853,34 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 64,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 80,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 96,
          "y" : 416
       },
       "width" : 16
@@ -257657,6 +257937,34 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 64,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 80,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 96,
          "y" : 416
       },
       "width" : 16.00
@@ -257718,6 +258026,34 @@ export const blockFaceTypes = [
       "width" : 16.00
    },
    {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 80,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 96,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
       "center" : [ 16.000000, 8.000000, 8.000000 ],
       "height" : 16.00,
       "normal" : [ 1.0, 0.0, -0.0 ],
@@ -257774,6 +258110,34 @@ export const blockFaceTypes = [
       "width" : 16.00
    },
    {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 80,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 96,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
       "center" : [ 8.000000, 8.000000, 16.000000 ],
       "height" : 16.00,
       "normal" : [ 0.0, 0.0, 1.0 ],
@@ -257825,6 +258189,34 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 64,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 80,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 96,
          "y" : 416
       },
       "width" : 16.00
@@ -257886,6 +258278,34 @@ export const blockFaceTypes = [
       "width" : 16.00
    },
    {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 80,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 96,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
       "center" : [ 0.000000, 8.000000, 8.000000 ],
       "height" : 16.00,
       "normal" : [ -1.0, 0.0, 0.0 ],
@@ -257922,7 +258342,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.0
@@ -257932,34 +258352,6 @@ export const blockFaceTypes = [
       "height" : 16,
       "normal" : [ 0, 1, 0 ],
       "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 80,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -257978,7 +258370,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.0
@@ -257992,7 +258384,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.0
@@ -258006,7 +258398,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258016,34 +258408,6 @@ export const blockFaceTypes = [
       "height" : 16.00,
       "normal" : [ 0.0, 1.0, 0.0 ],
       "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 80,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -258062,7 +258426,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258076,7 +258440,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258090,7 +258454,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258104,34 +258468,6 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
          "x" : 112,
          "y" : 416
       },
@@ -258146,7 +258482,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258160,7 +258496,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258174,7 +258510,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258188,34 +258524,6 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
          "x" : 112,
          "y" : 416
       },
@@ -258230,7 +258538,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258244,7 +258552,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258258,7 +258566,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258267,34 +258575,6 @@ export const blockFaceTypes = [
       "center" : [ 8.000000, 8.000000, 16.000000 ],
       "height" : 16.00,
       "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 80,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -258314,7 +258594,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258328,7 +258608,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258342,7 +258622,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258351,34 +258631,6 @@ export const blockFaceTypes = [
       "center" : [ 8.000000, 8.000000, 0.000000 ],
       "height" : 16.00,
       "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 80,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 96,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
       "roll" : 180.0,
       "tintindex" : -1,
       "uv" : {
@@ -258398,7 +258650,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
@@ -258412,16 +258664,16 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 80,
+         "x" : 112,
          "y" : 416
       },
       "width" : 16.00
    },
    {
       "center" : [ 8, 0, 8 ],
-      "height" : 16.0,
+      "height" : 16,
       "normal" : [ 0, -1, 0 ],
-      "roll" : 180.0,
+      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -258429,7 +258681,7 @@ export const blockFaceTypes = [
          "x" : 128,
          "y" : 416
       },
-      "width" : 16.0
+      "width" : 16
    },
    {
       "center" : [ 8, 16, 8 ],
@@ -258446,10 +258698,10 @@ export const blockFaceTypes = [
       "width" : 16
    },
    {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16.0,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -90.0,
+      "center" : [ 8, 8, 0 ],
+      "height" : 16,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -258457,82 +258709,40 @@ export const blockFaceTypes = [
          "x" : 128,
          "y" : 416
       },
-      "width" : 16.0
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 128,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 128,
+         "y" : 416
+      },
+      "width" : 16
    },
    {
       "center" : [ 16, 8, 8 ],
-      "height" : 16.0,
+      "height" : 16,
       "normal" : [ 1, 0, 0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -258541,217 +258751,7 @@ export const blockFaceTypes = [
          "x" : 128,
          "y" : 416
       },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, -0.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -0.0, 1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, -1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 128,
-         "y" : 416
-      },
-      "width" : 16.00
+      "width" : 16
    },
    {
       "center" : [ 8, 0, 8 ],
@@ -259253,90 +259253,6 @@ export const blockFaceTypes = [
          "h" : 16,
          "w" : 16,
          "x" : 224,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 0, 8 ],
-      "height" : 16,
-      "normal" : [ 0, -1, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 16, 8 ],
-      "height" : 16,
-      "normal" : [ 0, 1, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 0 ],
-      "height" : 16,
-      "normal" : [ 0, 0, -1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 8, 8, 16 ],
-      "height" : 16,
-      "normal" : [ 0, 0, 1 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 0, 8, 8 ],
-      "height" : 16,
-      "normal" : [ -1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
-         "y" : 416
-      },
-      "width" : 16
-   },
-   {
-      "center" : [ 16, 8, 8 ],
-      "height" : 16,
-      "normal" : [ 1, 0, 0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 240,
          "y" : 416
       },
       "width" : 16
@@ -259350,7 +259266,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 256,
+         "x" : 240,
          "y" : 416
       },
       "width" : 16.00
@@ -259364,7 +259280,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 256,
+         "x" : 240,
          "y" : 416
       },
       "width" : 16.00
@@ -259378,7 +259294,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259392,7 +259308,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259406,7 +259322,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259420,7 +259336,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259434,7 +259350,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 256,
+         "x" : 240,
          "y" : 416
       },
       "width" : 16
@@ -259448,7 +259364,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 256,
+         "x" : 240,
          "y" : 416
       },
       "width" : 16
@@ -259462,7 +259378,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16
@@ -259476,7 +259392,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16
@@ -259490,7 +259406,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16
@@ -259504,7 +259420,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16
@@ -259518,7 +259434,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 256,
+         "x" : 240,
          "y" : 416
       },
       "width" : 16.00
@@ -259532,7 +259448,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 256,
+         "x" : 240,
          "y" : 416
       },
       "width" : 16.00
@@ -259546,7 +259462,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259560,7 +259476,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259574,7 +259490,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259588,7 +259504,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 272,
+         "x" : 256,
          "y" : 416
       },
       "width" : 16.00
@@ -259602,7 +259518,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16
@@ -259616,7 +259532,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16
@@ -259630,7 +259546,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 416
       },
       "width" : 16
@@ -259644,7 +259560,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 416
       },
       "width" : 16
@@ -259658,7 +259574,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16
@@ -259672,7 +259588,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16
@@ -259686,7 +259602,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 352,
+         "x" : 336,
          "y" : 416
       },
       "width" : 16
@@ -259700,7 +259616,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259714,7 +259630,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259728,7 +259644,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 416
       },
       "width" : 16.00
@@ -259742,7 +259658,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 416
       },
       "width" : 16.00
@@ -259756,7 +259672,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16.00
@@ -259770,7 +259686,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16.00
@@ -259784,7 +259700,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 352,
+         "x" : 336,
          "y" : 416
       },
       "width" : 16.00
@@ -259798,7 +259714,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259812,7 +259728,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259826,6 +259742,20 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 288,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 304,
          "y" : 416
       },
@@ -259840,21 +259770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 352,
+         "x" : 336,
          "y" : 416
       },
       "width" : 16.00
@@ -259868,7 +259784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259882,7 +259798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259891,6 +259807,20 @@ export const blockFaceTypes = [
       "center" : [ 0.000000, 8.000000, 8.000000 ],
       "height" : 16.00,
       "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 288,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -259910,21 +259840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 352,
+         "x" : 336,
          "y" : 416
       },
       "width" : 16.00
@@ -259938,7 +259854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259952,7 +259868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 288,
+         "x" : 272,
          "y" : 416
       },
       "width" : 16.00
@@ -259966,7 +259882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 416
       },
       "width" : 16.00
@@ -259980,7 +259896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 416
       },
       "width" : 16.00
@@ -259994,7 +259910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16.00
@@ -260008,7 +259924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16.00
@@ -260022,7 +259938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 352,
+         "x" : 336,
          "y" : 416
       },
       "width" : 16.00
@@ -260036,7 +259952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 304,
+         "x" : 288,
          "y" : 416
       },
       "width" : 16.00
@@ -260050,7 +259966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 416
       },
       "width" : 16.00
@@ -260064,7 +259980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16.00
@@ -260078,7 +259994,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 336,
+         "x" : 320,
          "y" : 416
       },
       "width" : 16.00
@@ -260092,7 +260008,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 352,
+         "x" : 336,
          "y" : 416
       },
       "width" : 16.00
@@ -262962,6 +262878,342 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 1.0, 0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8, 0, 8 ],
+      "height" : 16,
+      "normal" : [ 0, -1, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 16, 8 ],
+      "height" : 16,
+      "normal" : [ 0, 1, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 8, 8, 0 ],
+      "height" : 16.0,
+      "normal" : [ 0, 0, -1 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8, 8, 16 ],
+      "height" : 16.0,
+      "normal" : [ 0, 0, 1 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 0, 8, 8 ],
+      "height" : 16,
+      "normal" : [ -1, 0, 0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16
+   },
+   {
+      "center" : [ 16, 8, 8 ],
+      "height" : 16.0,
+      "normal" : [ 1, 0, 0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.0
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, -1.0, -0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 16.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 1.0, -0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 0.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -1.0, 0.0, 0.0 ],
+      "roll" : 90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 16.000000, 8.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ 1.0, 0.0, -0.0 ],
+      "roll" : -90.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 16.000000 ],
+      "height" : 16.00,
+      "normal" : [ 0.0, 0.0, 1.0 ],
+      "roll" : -0.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 8.000000, 0.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, 0.0, -1.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
+         "x" : 352,
+         "y" : 416
+      },
+      "width" : 16.00
+   },
+   {
+      "center" : [ 8.000000, 0.000000, 8.000000 ],
+      "height" : 16.00,
+      "normal" : [ -0.0, -1.0, 0.0 ],
+      "roll" : 180.0,
+      "tintindex" : -1,
+      "uv" : {
+         "h" : 16,
+         "w" : 16,
          "x" : 368,
          "y" : 416
       },
@@ -267994,90 +268246,6 @@ export const blockFaceTypes = [
       "width" : 16.00
    },
    {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, -1.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 1.0, 0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
       "center" : [ 8, 0, 8 ],
       "height" : 16,
       "normal" : [ 0, -1, 0 ],
@@ -268107,9 +268275,9 @@ export const blockFaceTypes = [
    },
    {
       "center" : [ 8, 8, 0 ],
-      "height" : 16.0,
+      "height" : 16,
       "normal" : [ 0, 0, -1 ],
-      "roll" : 90.0,
+      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -268117,13 +268285,13 @@ export const blockFaceTypes = [
          "x" : 608,
          "y" : 416
       },
-      "width" : 16.0
+      "width" : 16
    },
    {
       "center" : [ 8, 8, 16 ],
-      "height" : 16.0,
+      "height" : 16,
       "normal" : [ 0, 0, 1 ],
-      "roll" : -90.0,
+      "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
          "h" : 16,
@@ -268131,7 +268299,7 @@ export const blockFaceTypes = [
          "x" : 608,
          "y" : 416
       },
-      "width" : 16.0
+      "width" : 16
    },
    {
       "center" : [ 0, 8, 8 ],
@@ -268149,78 +268317,8 @@ export const blockFaceTypes = [
    },
    {
       "center" : [ 16, 8, 8 ],
-      "height" : 16.0,
+      "height" : 16,
       "normal" : [ 1, 0, 0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.0
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
       "roll" : -0.0,
       "tintindex" : -1,
       "uv" : {
@@ -268229,105 +268327,7 @@ export const blockFaceTypes = [
          "x" : 608,
          "y" : 416
       },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 0.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, -1.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 16.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 1.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 0.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ -1.0, 0.0, 0.0 ],
-      "roll" : 90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 16.000000, 8.000000, 8.000000 ],
-      "height" : 16.00,
-      "normal" : [ 1.0, 0.0, -0.0 ],
-      "roll" : -90.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 16.000000 ],
-      "height" : 16.00,
-      "normal" : [ 0.0, 0.0, 1.0 ],
-      "roll" : -0.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
-   },
-   {
-      "center" : [ 8.000000, 8.000000, 0.000000 ],
-      "height" : 16.00,
-      "normal" : [ -0.0, 0.0, -1.0 ],
-      "roll" : 180.0,
-      "tintindex" : -1,
-      "uv" : {
-         "h" : 16,
-         "w" : 16,
-         "x" : 608,
-         "y" : 416
-      },
-      "width" : 16.00
+      "width" : 16
    },
    {
       "center" : [ 8, 0, 8 ],
@@ -289100,7 +289100,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289114,7 +289114,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289128,7 +289128,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289142,7 +289142,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289156,7 +289156,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289170,7 +289170,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289184,7 +289184,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289198,7 +289198,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289212,7 +289212,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289226,7 +289226,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289240,7 +289240,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289254,7 +289254,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 8.0
@@ -289268,7 +289268,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 400
       },
       "width" : 8.0
@@ -289282,7 +289282,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289296,7 +289296,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289310,7 +289310,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289324,7 +289324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289338,7 +289338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 8.0
@@ -289352,7 +289352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 400
       },
       "width" : 8.0
@@ -289366,7 +289366,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289380,7 +289380,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289394,7 +289394,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289408,7 +289408,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289422,7 +289422,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 8.0
@@ -289436,7 +289436,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 400
       },
       "width" : 8.0
@@ -289450,7 +289450,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16.0
@@ -289464,7 +289464,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289478,7 +289478,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 8.0
@@ -289492,7 +289492,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 408.0
       },
       "width" : 16.0
@@ -289506,7 +289506,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 8
@@ -289520,7 +289520,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 232.0,
+         "x" : 216.0,
          "y" : 400
       },
       "width" : 8
@@ -289534,7 +289534,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 224,
+         "x" : 208,
          "y" : 400
       },
       "width" : 16
@@ -291312,7 +291312,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291326,7 +291326,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291340,7 +291340,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291354,7 +291354,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291368,7 +291368,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291382,7 +291382,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291396,7 +291396,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291410,7 +291410,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291424,7 +291424,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291438,7 +291438,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291452,7 +291452,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291466,7 +291466,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291480,7 +291480,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291494,7 +291494,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291508,7 +291508,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291522,7 +291522,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -291536,7 +291536,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -291550,7 +291550,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291564,7 +291564,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291578,7 +291578,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291592,7 +291592,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291606,7 +291606,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291620,7 +291620,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291634,7 +291634,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -291648,7 +291648,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -291662,7 +291662,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291676,7 +291676,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -291690,7 +291690,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291704,7 +291704,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291718,7 +291718,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291732,7 +291732,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -291746,7 +291746,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -291760,7 +291760,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -291774,7 +291774,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16.0
@@ -291788,7 +291788,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -291802,7 +291802,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291816,7 +291816,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 8.0
@@ -291830,7 +291830,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 408.0
       },
       "width" : 16.0
@@ -291844,7 +291844,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8
@@ -291858,7 +291858,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8
@@ -291872,7 +291872,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8
@@ -291886,7 +291886,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 16
@@ -292796,7 +292796,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -292810,7 +292810,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -292824,7 +292824,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -292838,7 +292838,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -292852,7 +292852,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -292866,7 +292866,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -292880,7 +292880,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -292894,7 +292894,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 8.0
@@ -292908,7 +292908,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -292922,7 +292922,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -292936,7 +292936,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -292950,7 +292950,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -292964,7 +292964,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -292978,7 +292978,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -292992,7 +292992,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -293006,7 +293006,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 8.0
@@ -293020,7 +293020,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 400
       },
       "width" : 8.0
@@ -293034,7 +293034,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -293048,7 +293048,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -293062,7 +293062,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -293076,7 +293076,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 8.0
@@ -293090,7 +293090,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -293104,7 +293104,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -293118,7 +293118,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 8.0
@@ -293132,7 +293132,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 400
       },
       "width" : 8.0
@@ -293146,7 +293146,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -293160,7 +293160,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 8.0
@@ -293174,7 +293174,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -293188,7 +293188,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 8.0
@@ -293202,7 +293202,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -293216,7 +293216,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 8.0
@@ -293230,7 +293230,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 8.0
@@ -293244,7 +293244,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 400
       },
       "width" : 8.0
@@ -293258,7 +293258,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16.0
@@ -293272,7 +293272,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 400
       },
       "width" : 8.0
@@ -293286,7 +293286,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 408.0
       },
       "width" : 8.0
@@ -293300,7 +293300,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 8.0
@@ -293314,7 +293314,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 408.0
       },
       "width" : 16.0
@@ -293328,7 +293328,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 400
       },
       "width" : 8
@@ -293342,7 +293342,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 8
@@ -293356,7 +293356,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 328.0,
+         "x" : 312.0,
          "y" : 400
       },
       "width" : 8
@@ -293370,7 +293370,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 320,
+         "x" : 304,
          "y" : 400
       },
       "width" : 16
@@ -294560,7 +294560,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294574,7 +294574,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294588,7 +294588,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294602,7 +294602,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294616,7 +294616,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294630,7 +294630,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294644,7 +294644,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 424.0
       },
       "width" : 8.0
@@ -294658,7 +294658,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 8.0
@@ -294672,7 +294672,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294686,7 +294686,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294700,7 +294700,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294714,7 +294714,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294728,7 +294728,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294742,7 +294742,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294756,7 +294756,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294770,7 +294770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -294784,7 +294784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -294798,7 +294798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294812,7 +294812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294826,7 +294826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 424.0
       },
       "width" : 8.0
@@ -294840,7 +294840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 8.0
@@ -294854,7 +294854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294868,7 +294868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294882,7 +294882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -294896,7 +294896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -294910,7 +294910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -294924,7 +294924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -294938,7 +294938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 424.0
       },
       "width" : 8.0
@@ -294952,7 +294952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 8.0
@@ -294966,7 +294966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -294980,7 +294980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -294994,7 +294994,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -295008,7 +295008,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -295022,7 +295022,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16.0
@@ -295036,7 +295036,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -295050,7 +295050,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 424.0
       },
       "width" : 8.0
@@ -295064,7 +295064,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 8.0
@@ -295078,7 +295078,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 424.0
       },
       "width" : 16.0
@@ -295092,7 +295092,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8
@@ -295106,7 +295106,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8
@@ -295120,7 +295120,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8
@@ -295134,7 +295134,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 16,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 16
@@ -296912,7 +296912,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 868.00,
+         "x" : 852.00,
          "y" : 388.00
       },
       "width" : 8
@@ -296926,7 +296926,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 868.00,
+         "x" : 852.00,
          "y" : 388.00
       },
       "width" : 8
@@ -296940,7 +296940,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 868.00,
+         "x" : 852.00,
          "y" : 384
       },
       "width" : 8
@@ -296954,7 +296954,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 868.00,
+         "x" : 852.00,
          "y" : 384
       },
       "width" : 8
@@ -296968,7 +296968,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 868.00,
+         "x" : 852.00,
          "y" : 384
       },
       "width" : 8
@@ -296982,7 +296982,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 868.00,
+         "x" : 852.00,
          "y" : 384
       },
       "width" : 8
@@ -296996,7 +296996,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 389.0000
       },
       "width" : 8.0
@@ -297010,7 +297010,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 389.0000
       },
       "width" : 8.0
@@ -297024,7 +297024,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 386.000
       },
       "width" : 6.0
@@ -297038,7 +297038,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 386.000
       },
       "width" : 8.0
@@ -297052,7 +297052,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 386.000
       },
       "width" : 8.0
@@ -297066,7 +297066,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 389.0000
       },
       "width" : 8.0
@@ -297080,7 +297080,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6.0
@@ -297094,7 +297094,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 384
       },
       "width" : 8.0
@@ -297108,7 +297108,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 384
       },
       "width" : 8.0
@@ -297122,7 +297122,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6.0
@@ -297136,7 +297136,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 392.0
       },
       "width" : 6.0
@@ -297150,7 +297150,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 386.000
       },
       "width" : 6.0
@@ -297164,7 +297164,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 386.000
       },
       "width" : 8.0
@@ -297178,7 +297178,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 386.000
       },
       "width" : 8.0
@@ -297192,7 +297192,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 392.0
       },
       "width" : 6.0
@@ -297206,7 +297206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6.0
@@ -297220,7 +297220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 384
       },
       "width" : 8.0
@@ -297234,7 +297234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 384
       },
       "width" : 8.0
@@ -297248,7 +297248,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 392.0
       },
       "width" : 6
@@ -297262,7 +297262,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6
@@ -297276,7 +297276,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 386.000
       },
       "width" : 6
@@ -297290,7 +297290,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 386.000
       },
       "width" : 8
@@ -297304,7 +297304,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 386.000
       },
       "width" : 8
@@ -297318,7 +297318,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6
@@ -297332,7 +297332,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6
@@ -297346,7 +297346,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 384
       },
       "width" : 8
@@ -297360,7 +297360,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 384
       },
       "width" : 8
@@ -297374,7 +297374,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 389.0000
       },
       "width" : 8.0
@@ -297388,7 +297388,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 389.0000
       },
       "width" : 8.0
@@ -297402,7 +297402,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 386.000
       },
       "width" : 6.0
@@ -297416,7 +297416,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 386.000
       },
       "width" : 8.0
@@ -297430,7 +297430,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 386.000
       },
       "width" : 8.0
@@ -297444,7 +297444,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 389.0000
       },
       "width" : 8.0
@@ -297458,7 +297458,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 869.0000,
+         "x" : 853.0000,
          "y" : 384
       },
       "width" : 6.0
@@ -297472,7 +297472,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 864,
+         "x" : 848,
          "y" : 384
       },
       "width" : 8.0
@@ -297486,7 +297486,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 872.0,
+         "x" : 856.0,
          "y" : 384
       },
       "width" : 8.0
@@ -297500,7 +297500,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 404.00
       },
       "width" : 8
@@ -297514,7 +297514,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 404.00
       },
       "width" : 8
@@ -297528,7 +297528,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 400
       },
       "width" : 8
@@ -297542,7 +297542,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 400
       },
       "width" : 8
@@ -297556,7 +297556,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 400
       },
       "width" : 8
@@ -297570,7 +297570,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 400
       },
       "width" : 8
@@ -297584,7 +297584,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -297598,7 +297598,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -297612,7 +297612,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -297626,7 +297626,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 402.000
       },
       "width" : 8.0
@@ -297640,7 +297640,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 402.000
       },
       "width" : 8.0
@@ -297654,7 +297654,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -297668,7 +297668,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -297682,7 +297682,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8.0
@@ -297696,7 +297696,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8.0
@@ -297710,7 +297710,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -297724,7 +297724,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 408.0
       },
       "width" : 6.0
@@ -297738,7 +297738,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -297752,7 +297752,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 402.000
       },
       "width" : 8.0
@@ -297766,7 +297766,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 402.000
       },
       "width" : 8.0
@@ -297780,7 +297780,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 408.0
       },
       "width" : 6.0
@@ -297794,7 +297794,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -297808,7 +297808,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8.0
@@ -297822,7 +297822,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8.0
@@ -297836,7 +297836,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 408.0
       },
       "width" : 6
@@ -297850,7 +297850,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6
@@ -297864,7 +297864,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 402.000
       },
       "width" : 6
@@ -297878,7 +297878,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 402.000
       },
       "width" : 8
@@ -297892,7 +297892,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 402.000
       },
       "width" : 8
@@ -297906,7 +297906,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6
@@ -297920,7 +297920,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6
@@ -297934,7 +297934,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8
@@ -297948,7 +297948,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8
@@ -297962,7 +297962,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -297976,7 +297976,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -297990,7 +297990,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -298004,7 +298004,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 402.000
       },
       "width" : 8.0
@@ -298018,7 +298018,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 402.000
       },
       "width" : 8.0
@@ -298032,7 +298032,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -298046,7 +298046,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -298060,7 +298060,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 400
       },
       "width" : 8.0
@@ -298074,7 +298074,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 400
       },
       "width" : 8.0
@@ -301616,7 +301616,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 420.00
       },
       "width" : 8
@@ -301630,7 +301630,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 420.00
       },
       "width" : 8
@@ -301644,7 +301644,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 416
       },
       "width" : 8
@@ -301658,7 +301658,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 416
       },
       "width" : 8
@@ -301672,7 +301672,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 416
       },
       "width" : 8
@@ -301686,7 +301686,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 244.00,
+         "x" : 228.00,
          "y" : 416
       },
       "width" : 8
@@ -301700,7 +301700,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 421.0000
       },
       "width" : 8.0
@@ -301714,7 +301714,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 421.0000
       },
       "width" : 8.0
@@ -301728,7 +301728,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 418.000
       },
       "width" : 6.0
@@ -301742,7 +301742,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 418.000
       },
       "width" : 8.0
@@ -301756,7 +301756,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 418.000
       },
       "width" : 8.0
@@ -301770,7 +301770,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 421.0000
       },
       "width" : 8.0
@@ -301784,7 +301784,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6.0
@@ -301798,7 +301798,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -301812,7 +301812,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -301826,7 +301826,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6.0
@@ -301840,7 +301840,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 424.0
       },
       "width" : 6.0
@@ -301854,7 +301854,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 418.000
       },
       "width" : 6.0
@@ -301868,7 +301868,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 418.000
       },
       "width" : 8.0
@@ -301882,7 +301882,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 418.000
       },
       "width" : 8.0
@@ -301896,7 +301896,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 424.0
       },
       "width" : 6.0
@@ -301910,7 +301910,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6.0
@@ -301924,7 +301924,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -301938,7 +301938,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -301952,7 +301952,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 424.0
       },
       "width" : 6
@@ -301966,7 +301966,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6
@@ -301980,7 +301980,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 418.000
       },
       "width" : 6
@@ -301994,7 +301994,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 418.000
       },
       "width" : 8
@@ -302008,7 +302008,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 418.000
       },
       "width" : 8
@@ -302022,7 +302022,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6
@@ -302036,7 +302036,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6
@@ -302050,7 +302050,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8
@@ -302064,7 +302064,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8
@@ -302078,7 +302078,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 421.0000
       },
       "width" : 8.0
@@ -302092,7 +302092,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 421.0000
       },
       "width" : 8.0
@@ -302106,7 +302106,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 418.000
       },
       "width" : 6.0
@@ -302120,7 +302120,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 418.000
       },
       "width" : 8.0
@@ -302134,7 +302134,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 418.000
       },
       "width" : 8.0
@@ -302148,7 +302148,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 421.0000
       },
       "width" : 8.0
@@ -302162,7 +302162,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 245.0000,
+         "x" : 229.0000,
          "y" : 416
       },
       "width" : 6.0
@@ -302176,7 +302176,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 240,
+         "x" : 224,
          "y" : 416
       },
       "width" : 8.0
@@ -302190,7 +302190,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 248.0,
+         "x" : 232.0,
          "y" : 416
       },
       "width" : 8.0
@@ -302792,7 +302792,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 756.00,
+         "x" : 740.00,
          "y" : 404.00
       },
       "width" : 8
@@ -302806,7 +302806,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 8.0,
-         "x" : 756.00,
+         "x" : 740.00,
          "y" : 404.00
       },
       "width" : 8
@@ -302820,7 +302820,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 756.00,
+         "x" : 740.00,
          "y" : 400
       },
       "width" : 8
@@ -302834,7 +302834,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 756.00,
+         "x" : 740.00,
          "y" : 400
       },
       "width" : 8
@@ -302848,7 +302848,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 756.00,
+         "x" : 740.00,
          "y" : 400
       },
       "width" : 8
@@ -302862,7 +302862,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 756.00,
+         "x" : 740.00,
          "y" : 400
       },
       "width" : 8
@@ -302876,7 +302876,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -302890,7 +302890,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -302904,7 +302904,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -302918,7 +302918,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 402.000
       },
       "width" : 8.0
@@ -302932,7 +302932,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 402.000
       },
       "width" : 8.0
@@ -302946,7 +302946,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -302960,7 +302960,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -302974,7 +302974,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -302988,7 +302988,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -303002,7 +303002,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -303016,7 +303016,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 408.0
       },
       "width" : 6.0
@@ -303030,7 +303030,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -303044,7 +303044,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 402.000
       },
       "width" : 8.0
@@ -303058,7 +303058,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 402.000
       },
       "width" : 8.0
@@ -303072,7 +303072,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 408.0
       },
       "width" : 6.0
@@ -303086,7 +303086,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -303100,7 +303100,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -303114,7 +303114,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -303128,7 +303128,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 408.0
       },
       "width" : 6
@@ -303142,7 +303142,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6
@@ -303156,7 +303156,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 402.000
       },
       "width" : 6
@@ -303170,7 +303170,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 402.000
       },
       "width" : 8
@@ -303184,7 +303184,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 402.000
       },
       "width" : 8
@@ -303198,7 +303198,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 8.0,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6
@@ -303212,7 +303212,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6
@@ -303226,7 +303226,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8
@@ -303240,7 +303240,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8
@@ -303254,7 +303254,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -303268,7 +303268,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -303282,7 +303282,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 402.000
       },
       "width" : 6.0
@@ -303296,7 +303296,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 402.000
       },
       "width" : 8.0
@@ -303310,7 +303310,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 14.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 402.000
       },
       "width" : 8.0
@@ -303324,7 +303324,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 6.000,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 405.0000
       },
       "width" : 8.0
@@ -303338,7 +303338,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 6.000,
-         "x" : 757.0000,
+         "x" : 741.0000,
          "y" : 400
       },
       "width" : 6.0
@@ -303352,7 +303352,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 752,
+         "x" : 736,
          "y" : 400
       },
       "width" : 8.0
@@ -303366,7 +303366,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 8.0,
-         "x" : 760.0,
+         "x" : 744.0,
          "y" : 400
       },
       "width" : 8.0
@@ -451206,7 +451206,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 14.400004952332
@@ -451220,7 +451220,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 14.400004952332
@@ -451234,7 +451234,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 14.400004952332
@@ -451248,7 +451248,7 @@ export const blockFaceTypes = [
       "uv" : {
          "h" : 16,
          "w" : 16,
-         "x" : 816,
+         "x" : 800,
          "y" : 368
       },
       "width" : 14.400004952332
@@ -452246,13 +452246,13 @@ export const blockModels = {
    "minecraft:black_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28540, 28541, 28542, 28543, 28544, 28545, 28546, 28547, 28548, 28549 ],
    "minecraft:black_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28530, 28531, 28532, 28533, 28534, 28535, 28536, 28537, 28538, 28539 ],
    "minecraft:black_carpet[]" : [ 1384, 13313, 13314, 13315, 13316, 13317 ],
-   "minecraft:black_concrete[]" : [ 18356, 18357, 18358, 18359, 18360, 18361 ],
+   "minecraft:black_concrete[]" : [ 19250, 19251, 19252, 19253, 19254, 19255 ],
    "minecraft:black_concrete_powder[]" : [ 19346, 19347, 19348, 19349, 19350, 19351 ],
-   "minecraft:black_glazed_terracotta[facing_direction=2]" : [ 19142, 19143, 19144, 19145, 19146, 19147 ],
-   "minecraft:black_glazed_terracotta[facing_direction=3]" : [ 19148, 19149, 19150, 19151, 19152, 19153 ],
-   "minecraft:black_glazed_terracotta[facing_direction=4]" : [ 19154, 19155, 19156, 19157, 19158, 19159 ],
-   "minecraft:black_glazed_terracotta[facing_direction=5]" : [ 19160, 19161, 19162, 19163, 19164, 19165 ],
-   "minecraft:black_shulker_box[]" : [ 18770, 18771, 18772, 18773, 18774, 18775, 18776, 18777, 18778, 18779, 18780, 18781 ],
+   "minecraft:black_glazed_terracotta[facing_direction=2]" : [ 19136, 19137, 19138, 19139, 19140, 19141 ],
+   "minecraft:black_glazed_terracotta[facing_direction=3]" : [ 19142, 19143, 19144, 19145, 19146, 19147 ],
+   "minecraft:black_glazed_terracotta[facing_direction=4]" : [ 19148, 19149, 19150, 19151, 19152, 19153 ],
+   "minecraft:black_glazed_terracotta[facing_direction=5]" : [ 19154, 19155, 19156, 19157, 19158, 19159 ],
+   "minecraft:black_shulker_box[]" : [ 18764, 18765, 18766, 18767, 18768, 18769, 18770, 18771, 18772, 18773, 18774, 18775 ],
    "minecraft:black_stained_glass[]" : [ 8541, 8542, 8543, 8544, 8545, 8546 ],
    "minecraft:black_stained_glass_pane[]" : [ 12722, 12723, 12724, 12725, 12726, 12727 ],
    "minecraft:black_terracotta[]" : [ 12626, 12627, 12628, 12629, 12630, 12631 ],
@@ -452446,22 +452446,22 @@ export const blockModels = {
    "minecraft:blue_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28460, 28461, 28462, 28463, 28464, 28465, 28466, 28467, 28468, 28469 ],
    "minecraft:blue_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28450, 28451, 28452, 28453, 28454, 28455, 28456, 28457, 28458, 28459 ],
    "minecraft:blue_carpet[]" : [ 1360, 13293, 13294, 13295, 13296, 13297 ],
-   "minecraft:blue_concrete[]" : [ 19232, 19233, 19234, 19235, 19236, 19237 ],
+   "minecraft:blue_concrete[]" : [ 19226, 19227, 19228, 19229, 19230, 19231 ],
    "minecraft:blue_concrete_powder[]" : [ 19322, 19323, 19324, 19325, 19326, 19327 ],
-   "minecraft:blue_glazed_terracotta[facing_direction=2]" : [ 19046, 19047, 19048, 19049, 19050, 19051 ],
-   "minecraft:blue_glazed_terracotta[facing_direction=3]" : [ 19052, 19053, 19054, 19055, 19056, 19057 ],
-   "minecraft:blue_glazed_terracotta[facing_direction=4]" : [ 19058, 19059, 19060, 19061, 19062, 19063 ],
-   "minecraft:blue_glazed_terracotta[facing_direction=5]" : [ 19064, 19065, 19066, 19067, 19068, 19069 ],
+   "minecraft:blue_glazed_terracotta[facing_direction=2]" : [ 19040, 19041, 19042, 19043, 19044, 19045 ],
+   "minecraft:blue_glazed_terracotta[facing_direction=3]" : [ 19046, 19047, 19048, 19049, 19050, 19051 ],
+   "minecraft:blue_glazed_terracotta[facing_direction=4]" : [ 19052, 19053, 19054, 19055, 19056, 19057 ],
+   "minecraft:blue_glazed_terracotta[facing_direction=5]" : [ 19058, 19059, 19060, 19061, 19062, 19063 ],
    "minecraft:blue_ice[]" : [ 20577, 20578, 20579, 20580, 20581, 20582 ],
    "minecraft:blue_orchid[]" : [ 1406, 1407, 1408, 1409 ],
-   "minecraft:blue_shulker_box[]" : [ 18722, 18723, 18724, 18725, 18726, 18727, 18728, 18729, 18730, 18731, 18732, 18733 ],
+   "minecraft:blue_shulker_box[]" : [ 18716, 18717, 18718, 18719, 18720, 18721, 18722, 18723, 18724, 18725, 18726, 18727 ],
    "minecraft:blue_stained_glass[]" : [ 8517, 8518, 8519, 8520, 8521, 8522 ],
    "minecraft:blue_stained_glass_pane[]" : [ 12698, 12699, 12700, 12701, 12702, 12703 ],
    "minecraft:blue_terracotta[]" : [ 12602, 12603, 12604, 12605, 12606, 12607 ],
    "minecraft:blue_wool[]" : [ 1360, 1361, 1362, 1363, 1364, 1365 ],
-   "minecraft:bone_block[deprecated=0,pillar_axis=x]" : [ 18524, 18525, 18526, 18527, 18528, 18529 ],
-   "minecraft:bone_block[deprecated=0,pillar_axis=y]" : [ 18530, 18531, 18532, 18533, 18534, 18535 ],
-   "minecraft:bone_block[deprecated=0,pillar_axis=z]" : [ 18536, 18537, 18538, 18539, 18540, 18541 ],
+   "minecraft:bone_block[deprecated=0,pillar_axis=x]" : [ 18518, 18519, 18520, 18521, 18522, 18523 ],
+   "minecraft:bone_block[deprecated=0,pillar_axis=y]" : [ 18524, 18525, 18526, 18527, 18528, 18529 ],
+   "minecraft:bone_block[deprecated=0,pillar_axis=z]" : [ 18530, 18531, 18532, 18533, 18534, 18535 ],
    "minecraft:bookshelf[]" : [ 76, 77, 1482, 1483, 1484, 1485 ],
    "minecraft:brain_coral[]" : [ 20212, 20213, 20214, 20215 ],
    "minecraft:brain_coral_block[]" : [ 20164, 20165, 20166, 20167, 20168, 20169 ],
@@ -452663,12 +452663,12 @@ export const blockModels = {
    "minecraft:brown_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28480, 28481, 28482, 28483, 28484, 28485, 28486, 28487, 28488, 28489 ],
    "minecraft:brown_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28470, 28471, 28472, 28473, 28474, 28475, 28476, 28477, 28478, 28479 ],
    "minecraft:brown_carpet[]" : [ 1366, 13298, 13299, 13300, 13301, 13302 ],
-   "minecraft:brown_concrete[]" : [ 19238, 19239, 19240, 19241, 19242, 19243 ],
+   "minecraft:brown_concrete[]" : [ 19232, 19233, 19234, 19235, 19236, 19237 ],
    "minecraft:brown_concrete_powder[]" : [ 19328, 19329, 19330, 19331, 19332, 19333 ],
-   "minecraft:brown_glazed_terracotta[facing_direction=2]" : [ 19070, 19071, 19072, 19073, 19074, 19075 ],
-   "minecraft:brown_glazed_terracotta[facing_direction=3]" : [ 19076, 19077, 19078, 19079, 19080, 19081 ],
-   "minecraft:brown_glazed_terracotta[facing_direction=4]" : [ 19082, 19083, 19084, 19085, 19086, 19087 ],
-   "minecraft:brown_glazed_terracotta[facing_direction=5]" : [ 19088, 19089, 19090, 19091, 19092, 19093 ],
+   "minecraft:brown_glazed_terracotta[facing_direction=2]" : [ 19064, 19065, 19066, 19067, 19068, 19069 ],
+   "minecraft:brown_glazed_terracotta[facing_direction=3]" : [ 19070, 19071, 19072, 19073, 19074, 19075 ],
+   "minecraft:brown_glazed_terracotta[facing_direction=4]" : [ 19076, 19077, 19078, 19079, 19080, 19081 ],
+   "minecraft:brown_glazed_terracotta[facing_direction=5]" : [ 19082, 19083, 19084, 19085, 19086, 19087 ],
    "minecraft:brown_mushroom[]" : [ 1450, 1451, 1452, 1453 ],
    "minecraft:brown_mushroom_block[huge_mushroom_bits=0]" : [ 9241, 9240, 9237, 9238, 9239, 9236 ],
    "minecraft:brown_mushroom_block[huge_mushroom_bits=14]" : [ 9231, 9232, 9233, 9234, 9235, 9236 ],
@@ -452681,7 +452681,7 @@ export const blockModels = {
    "minecraft:brown_mushroom_block[huge_mushroom_bits=7]" : [ 9233, 9234, 9241, 9240, 9239, 9236 ],
    "minecraft:brown_mushroom_block[huge_mushroom_bits=8]" : [ 9233, 9241, 9240, 9238, 9239, 9236 ],
    "minecraft:brown_mushroom_block[huge_mushroom_bits=9]" : [ 9232, 9233, 9241, 9238, 9239, 9236 ],
-   "minecraft:brown_shulker_box[]" : [ 18734, 18735, 18736, 18737, 18738, 18739, 18740, 18741, 18742, 18743, 18744, 18745 ],
+   "minecraft:brown_shulker_box[]" : [ 18728, 18729, 18730, 18731, 18732, 18733, 18734, 18735, 18736, 18737, 18738, 18739 ],
    "minecraft:brown_stained_glass[]" : [ 8523, 8524, 8525, 8526, 8527, 8528 ],
    "minecraft:brown_stained_glass_pane[]" : [ 12704, 12705, 12706, 12707, 12708, 12709 ],
    "minecraft:brown_terracotta[]" : [ 12608, 12609, 12610, 12611, 12612, 12613 ],
@@ -452826,18 +452826,18 @@ export const blockModels = {
    "minecraft:cave_vines_head_with_berries[growing_plant_age=7]" : [ 30713, 30714, 30715, 30716 ],
    "minecraft:cave_vines_head_with_berries[growing_plant_age=8]" : [ 30713, 30714, 30715, 30716 ],
    "minecraft:cave_vines_head_with_berries[growing_plant_age=9]" : [ 30713, 30714, 30715, 30716 ],
-   "minecraft:chain_command_block[conditional_bit=0,facing_direction=0]" : [ 18478, 18479, 18454, 18455, 18480, 18481 ],
-   "minecraft:chain_command_block[conditional_bit=0,facing_direction=1]" : [ 18474, 18475, 18448, 18449, 18476, 18477 ],
-   "minecraft:chain_command_block[conditional_bit=0,facing_direction=2]" : [ 18458, 18459, 18424, 18425, 18460, 18461 ],
-   "minecraft:chain_command_block[conditional_bit=0,facing_direction=3]" : [ 18466, 18467, 18436, 18437, 18468, 18469 ],
-   "minecraft:chain_command_block[conditional_bit=0,facing_direction=4]" : [ 18470, 18471, 18442, 18443, 18472, 18473 ],
-   "minecraft:chain_command_block[conditional_bit=0,facing_direction=5]" : [ 18462, 18463, 18430, 18431, 18464, 18465 ],
-   "minecraft:chain_command_block[conditional_bit=1,facing_direction=0]" : [ 18452, 18453, 18454, 18455, 18456, 18457 ],
-   "minecraft:chain_command_block[conditional_bit=1,facing_direction=1]" : [ 18446, 18447, 18448, 18449, 18450, 18451 ],
-   "minecraft:chain_command_block[conditional_bit=1,facing_direction=2]" : [ 18422, 18423, 18424, 18425, 18426, 18427 ],
-   "minecraft:chain_command_block[conditional_bit=1,facing_direction=3]" : [ 18434, 18435, 18436, 18437, 18438, 18439 ],
-   "minecraft:chain_command_block[conditional_bit=1,facing_direction=4]" : [ 18440, 18441, 18442, 18443, 18444, 18445 ],
-   "minecraft:chain_command_block[conditional_bit=1,facing_direction=5]" : [ 18428, 18429, 18430, 18431, 18432, 18433 ],
+   "minecraft:chain_command_block[conditional_bit=0,facing_direction=0]" : [ 18472, 18473, 18448, 18449, 18474, 18475 ],
+   "minecraft:chain_command_block[conditional_bit=0,facing_direction=1]" : [ 18468, 18469, 18442, 18443, 18470, 18471 ],
+   "minecraft:chain_command_block[conditional_bit=0,facing_direction=2]" : [ 18452, 18453, 18418, 18419, 18454, 18455 ],
+   "minecraft:chain_command_block[conditional_bit=0,facing_direction=3]" : [ 18460, 18461, 18430, 18431, 18462, 18463 ],
+   "minecraft:chain_command_block[conditional_bit=0,facing_direction=4]" : [ 18464, 18465, 18436, 18437, 18466, 18467 ],
+   "minecraft:chain_command_block[conditional_bit=0,facing_direction=5]" : [ 18456, 18457, 18424, 18425, 18458, 18459 ],
+   "minecraft:chain_command_block[conditional_bit=1,facing_direction=0]" : [ 18446, 18447, 18448, 18449, 18450, 18451 ],
+   "minecraft:chain_command_block[conditional_bit=1,facing_direction=1]" : [ 18440, 18441, 18442, 18443, 18444, 18445 ],
+   "minecraft:chain_command_block[conditional_bit=1,facing_direction=2]" : [ 18416, 18417, 18418, 18419, 18420, 18421 ],
+   "minecraft:chain_command_block[conditional_bit=1,facing_direction=3]" : [ 18428, 18429, 18430, 18431, 18432, 18433 ],
+   "minecraft:chain_command_block[conditional_bit=1,facing_direction=4]" : [ 18434, 18435, 18436, 18437, 18438, 18439 ],
+   "minecraft:chain_command_block[conditional_bit=1,facing_direction=5]" : [ 18422, 18423, 18424, 18425, 18426, 18427 ],
    "minecraft:cherry_button[button_pressed_bit=0,facing_direction=0]" : [ 11685, 11691, 11692, 11693, 11694, 11695 ],
    "minecraft:cherry_button[button_pressed_bit=0,facing_direction=1]" : [ 11630, 11636, 11637, 11638, 11639, 11640 ],
    "minecraft:cherry_button[button_pressed_bit=0,facing_direction=2]" : [ 11641, 11647, 11648, 11649, 11650, 11651 ],
@@ -454409,13 +454409,13 @@ export const blockModels = {
    "minecraft:cyan_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28420, 28421, 28422, 28423, 28424, 28425, 28426, 28427, 28428, 28429 ],
    "minecraft:cyan_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28410, 28411, 28412, 28413, 28414, 28415, 28416, 28417, 28418, 28419 ],
    "minecraft:cyan_carpet[]" : [ 1348, 13283, 13284, 13285, 13286, 13287 ],
-   "minecraft:cyan_concrete[]" : [ 19220, 19221, 19222, 19223, 19224, 19225 ],
+   "minecraft:cyan_concrete[]" : [ 19214, 19215, 19216, 19217, 19218, 19219 ],
    "minecraft:cyan_concrete_powder[]" : [ 19310, 19311, 19312, 19313, 19314, 19315 ],
-   "minecraft:cyan_glazed_terracotta[facing_direction=2]" : [ 18998, 18999, 19000, 19001, 19002, 19003 ],
-   "minecraft:cyan_glazed_terracotta[facing_direction=3]" : [ 19004, 19005, 19006, 19007, 19008, 19009 ],
-   "minecraft:cyan_glazed_terracotta[facing_direction=4]" : [ 19010, 19011, 19012, 19013, 19014, 19015 ],
-   "minecraft:cyan_glazed_terracotta[facing_direction=5]" : [ 19016, 19017, 19018, 19019, 19020, 19021 ],
-   "minecraft:cyan_shulker_box[]" : [ 18698, 18699, 18700, 18701, 18702, 18703, 18704, 18705, 18706, 18707, 18708, 18709 ],
+   "minecraft:cyan_glazed_terracotta[facing_direction=2]" : [ 18992, 18993, 18994, 18995, 18996, 18997 ],
+   "minecraft:cyan_glazed_terracotta[facing_direction=3]" : [ 18998, 18999, 19000, 19001, 19002, 19003 ],
+   "minecraft:cyan_glazed_terracotta[facing_direction=4]" : [ 19004, 19005, 19006, 19007, 19008, 19009 ],
+   "minecraft:cyan_glazed_terracotta[facing_direction=5]" : [ 19010, 19011, 19012, 19013, 19014, 19015 ],
+   "minecraft:cyan_shulker_box[]" : [ 18692, 18693, 18694, 18695, 18696, 18697, 18698, 18699, 18700, 18701, 18702, 18703 ],
    "minecraft:cyan_stained_glass[]" : [ 8505, 8506, 8507, 8508, 8509, 8510 ],
    "minecraft:cyan_stained_glass_pane[]" : [ 12686, 12687, 12688, 12689, 12690, 12691 ],
    "minecraft:cyan_terracotta[]" : [ 12590, 12591, 12592, 12593, 12594, 12595 ],
@@ -455308,7 +455308,7 @@ export const blockModels = {
    "minecraft:end_brick_stairs[upside_down_bit=1,weirdo_direction=2]" : [ 18246, 20807, 20809, 20808, 20811, 20810, 20825, 20826, 20827, 20828, 20820 ],
    "minecraft:end_brick_stairs[upside_down_bit=1,weirdo_direction=3]" : [ 18246, 20807, 20808, 20809, 20810, 20811, 20812, 20813, 20814, 20815, 20816 ],
    "minecraft:end_bricks[]" : [ 18245, 18246, 18247, 18248, 18249, 18250 ],
-   "minecraft:end_gateway[]" : [ 18356, 18357, 18358, 18359, 18360, 18361 ],
+   "minecraft:end_gateway[]" : [ 10356, 10365, 10366, 10367, 10368, 10369 ],
    "minecraft:end_portal[]" : [ 10343, 10344 ],
    "minecraft:end_portal_frame[end_portal_eye_bit=0,minecraft:cardinal_direction=east]" : [ 10362, 10363, 10350, 10349, 10347, 10348 ],
    "minecraft:end_portal_frame[end_portal_eye_bit=0,minecraft:cardinal_direction=north]" : [ 10345, 10346, 10347, 10348, 10349, 10350 ],
@@ -455672,10 +455672,10 @@ export const blockModels = {
    "minecraft:flowing_water[liquid_depth=8]" : [ 0, 1, 2, 3, 4, 5 ],
    "minecraft:flowing_water[liquid_depth=9]" : [ 0, 1, 2, 3, 4, 5 ],
    "minecraft:frog_spawn[]" : [ 31816, 31817 ],
-   "minecraft:frosted_ice[age=0]" : [ 18482, 18483, 18484, 18485, 18486, 18487 ],
-   "minecraft:frosted_ice[age=1]" : [ 18488, 18489, 18490, 18491, 18492, 18493 ],
-   "minecraft:frosted_ice[age=2]" : [ 18494, 18495, 18496, 18497, 18498, 18499 ],
-   "minecraft:frosted_ice[age=3]" : [ 18500, 18501, 18502, 18503, 18504, 18505 ],
+   "minecraft:frosted_ice[age=0]" : [ 18476, 18477, 18478, 18479, 18480, 18481 ],
+   "minecraft:frosted_ice[age=1]" : [ 18482, 18483, 18484, 18485, 18486, 18487 ],
+   "minecraft:frosted_ice[age=2]" : [ 18488, 18489, 18490, 18491, 18492, 18493 ],
+   "minecraft:frosted_ice[age=3]" : [ 18494, 18495, 18496, 18497, 18498, 18499 ],
    "minecraft:furnace[minecraft:cardinal_direction=east]" : [ 941, 942, 2848, 939, 944, 938 ],
    "minecraft:furnace[minecraft:cardinal_direction=north]" : [ 935, 936, 2842, 938, 939, 940 ],
    "minecraft:furnace[minecraft:cardinal_direction=south]" : [ 945, 946, 2844, 944, 940, 939 ],
@@ -455951,13 +455951,13 @@ export const blockModels = {
    "minecraft:gray_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28380, 28381, 28382, 28383, 28384, 28385, 28386, 28387, 28388, 28389 ],
    "minecraft:gray_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28370, 28371, 28372, 28373, 28374, 28375, 28376, 28377, 28378, 28379 ],
    "minecraft:gray_carpet[]" : [ 1336, 13273, 13274, 13275, 13276, 13277 ],
-   "minecraft:gray_concrete[]" : [ 19208, 19209, 19210, 19211, 19212, 19213 ],
+   "minecraft:gray_concrete[]" : [ 19202, 19203, 19204, 19205, 19206, 19207 ],
    "minecraft:gray_concrete_powder[]" : [ 19298, 19299, 19300, 19301, 19302, 19303 ],
-   "minecraft:gray_glazed_terracotta[facing_direction=2]" : [ 18950, 18951, 18952, 18953, 18954, 18955 ],
-   "minecraft:gray_glazed_terracotta[facing_direction=3]" : [ 18956, 18957, 18958, 18959, 18960, 18961 ],
-   "minecraft:gray_glazed_terracotta[facing_direction=4]" : [ 18962, 18963, 18964, 18965, 18966, 18967 ],
-   "minecraft:gray_glazed_terracotta[facing_direction=5]" : [ 18968, 18969, 18970, 18971, 18972, 18973 ],
-   "minecraft:gray_shulker_box[]" : [ 18674, 18675, 18676, 18677, 18678, 18679, 18680, 18681, 18682, 18683, 18684, 18685 ],
+   "minecraft:gray_glazed_terracotta[facing_direction=2]" : [ 18944, 18945, 18946, 18947, 18948, 18949 ],
+   "minecraft:gray_glazed_terracotta[facing_direction=3]" : [ 18950, 18951, 18952, 18953, 18954, 18955 ],
+   "minecraft:gray_glazed_terracotta[facing_direction=4]" : [ 18956, 18957, 18958, 18959, 18960, 18961 ],
+   "minecraft:gray_glazed_terracotta[facing_direction=5]" : [ 18962, 18963, 18964, 18965, 18966, 18967 ],
+   "minecraft:gray_shulker_box[]" : [ 18668, 18669, 18670, 18671, 18672, 18673, 18674, 18675, 18676, 18677, 18678, 18679 ],
    "minecraft:gray_stained_glass[]" : [ 8493, 8494, 8495, 8496, 8497, 8498 ],
    "minecraft:gray_stained_glass_pane[]" : [ 12674, 12675, 12676, 12677, 12678, 12679 ],
    "minecraft:gray_terracotta[]" : [ 12578, 12579, 12580, 12581, 12582, 12583 ],
@@ -455973,13 +455973,13 @@ export const blockModels = {
    "minecraft:green_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28500, 28501, 28502, 28503, 28504, 28505, 28506, 28507, 28508, 28509 ],
    "minecraft:green_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28490, 28491, 28492, 28493, 28494, 28495, 28496, 28497, 28498, 28499 ],
    "minecraft:green_carpet[]" : [ 1372, 13303, 13304, 13305, 13306, 13307 ],
-   "minecraft:green_concrete[]" : [ 19244, 19245, 19246, 19247, 19248, 19249 ],
+   "minecraft:green_concrete[]" : [ 19238, 19239, 19240, 19241, 19242, 19243 ],
    "minecraft:green_concrete_powder[]" : [ 19334, 19335, 19336, 19337, 19338, 19339 ],
-   "minecraft:green_glazed_terracotta[facing_direction=2]" : [ 19094, 19095, 19096, 19097, 19098, 19099 ],
-   "minecraft:green_glazed_terracotta[facing_direction=3]" : [ 19100, 19101, 19102, 19103, 19104, 19105 ],
-   "minecraft:green_glazed_terracotta[facing_direction=4]" : [ 19106, 19107, 19108, 19109, 19110, 19111 ],
-   "minecraft:green_glazed_terracotta[facing_direction=5]" : [ 19112, 19113, 19114, 19115, 19116, 19117 ],
-   "minecraft:green_shulker_box[]" : [ 18746, 18747, 18748, 18749, 18750, 18751, 18752, 18753, 18754, 18755, 18756, 18757 ],
+   "minecraft:green_glazed_terracotta[facing_direction=2]" : [ 19088, 19089, 19090, 19091, 19092, 19093 ],
+   "minecraft:green_glazed_terracotta[facing_direction=3]" : [ 19094, 19095, 19096, 19097, 19098, 19099 ],
+   "minecraft:green_glazed_terracotta[facing_direction=4]" : [ 19100, 19101, 19102, 19103, 19104, 19105 ],
+   "minecraft:green_glazed_terracotta[facing_direction=5]" : [ 19106, 19107, 19108, 19109, 19110, 19111 ],
+   "minecraft:green_shulker_box[]" : [ 18740, 18741, 18742, 18743, 18744, 18745, 18746, 18747, 18748, 18749, 18750, 18751 ],
    "minecraft:green_stained_glass[]" : [ 8529, 8530, 8531, 8532, 8533, 8534 ],
    "minecraft:green_stained_glass_pane[]" : [ 12710, 12711, 12712, 12713, 12714, 12715 ],
    "minecraft:green_terracotta[]" : [ 12614, 12615, 12616, 12617, 12618, 12619 ],
@@ -456428,13 +456428,13 @@ export const blockModels = {
    "minecraft:light_blue_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28300, 28301, 28302, 28303, 28304, 28305, 28306, 28307, 28308, 28309 ],
    "minecraft:light_blue_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28290, 28291, 28292, 28293, 28294, 28295, 28296, 28297, 28298, 28299 ],
    "minecraft:light_blue_carpet[]" : [ 1312, 13253, 13254, 13255, 13256, 13257 ],
-   "minecraft:light_blue_concrete[]" : [ 19184, 19185, 19186, 19187, 19188, 19189 ],
+   "minecraft:light_blue_concrete[]" : [ 19178, 19179, 19180, 19181, 19182, 19183 ],
    "minecraft:light_blue_concrete_powder[]" : [ 19274, 19275, 19276, 19277, 19278, 19279 ],
-   "minecraft:light_blue_glazed_terracotta[facing_direction=2]" : [ 18854, 18855, 18856, 18857, 18858, 18859 ],
-   "minecraft:light_blue_glazed_terracotta[facing_direction=3]" : [ 18860, 18861, 18862, 18863, 18864, 18865 ],
-   "minecraft:light_blue_glazed_terracotta[facing_direction=4]" : [ 18866, 18867, 18868, 18869, 18870, 18871 ],
-   "minecraft:light_blue_glazed_terracotta[facing_direction=5]" : [ 18872, 18873, 18874, 18875, 18876, 18877 ],
-   "minecraft:light_blue_shulker_box[]" : [ 18626, 18627, 18628, 18629, 18630, 18631, 18632, 18633, 18634, 18635, 18636, 18637 ],
+   "minecraft:light_blue_glazed_terracotta[facing_direction=2]" : [ 18848, 18849, 18850, 18851, 18852, 18853 ],
+   "minecraft:light_blue_glazed_terracotta[facing_direction=3]" : [ 18854, 18855, 18856, 18857, 18858, 18859 ],
+   "minecraft:light_blue_glazed_terracotta[facing_direction=4]" : [ 18860, 18861, 18862, 18863, 18864, 18865 ],
+   "minecraft:light_blue_glazed_terracotta[facing_direction=5]" : [ 18866, 18867, 18868, 18869, 18870, 18871 ],
+   "minecraft:light_blue_shulker_box[]" : [ 18620, 18621, 18622, 18623, 18624, 18625, 18626, 18627, 18628, 18629, 18630, 18631 ],
    "minecraft:light_blue_stained_glass[]" : [ 8469, 8470, 8471, 8472, 8473, 8474 ],
    "minecraft:light_blue_stained_glass_pane[]" : [ 12650, 12651, 12652, 12653, 12654, 12655 ],
    "minecraft:light_blue_terracotta[]" : [ 12554, 12555, 12556, 12557, 12558, 12559 ],
@@ -456450,9 +456450,9 @@ export const blockModels = {
    "minecraft:light_gray_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28400, 28401, 28402, 28403, 28404, 28405, 28406, 28407, 28408, 28409 ],
    "minecraft:light_gray_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28390, 28391, 28392, 28393, 28394, 28395, 28396, 28397, 28398, 28399 ],
    "minecraft:light_gray_carpet[]" : [ 1342, 13278, 13279, 13280, 13281, 13282 ],
-   "minecraft:light_gray_concrete[]" : [ 19214, 19215, 19216, 19217, 19218, 19219 ],
+   "minecraft:light_gray_concrete[]" : [ 19208, 19209, 19210, 19211, 19212, 19213 ],
    "minecraft:light_gray_concrete_powder[]" : [ 19304, 19305, 19306, 19307, 19308, 19309 ],
-   "minecraft:light_gray_shulker_box[]" : [ 18686, 18687, 18688, 18689, 18690, 18691, 18692, 18693, 18694, 18695, 18696, 18697 ],
+   "minecraft:light_gray_shulker_box[]" : [ 18680, 18681, 18682, 18683, 18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691 ],
    "minecraft:light_gray_stained_glass[]" : [ 8499, 8500, 8501, 8502, 8503, 8504 ],
    "minecraft:light_gray_stained_glass_pane[]" : [ 12680, 12681, 12682, 12683, 12684, 12685 ],
    "minecraft:light_gray_terracotta[]" : [ 12584, 12585, 12586, 12587, 12588, 12589 ],
@@ -456499,13 +456499,13 @@ export const blockModels = {
    "minecraft:lime_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28340, 28341, 28342, 28343, 28344, 28345, 28346, 28347, 28348, 28349 ],
    "minecraft:lime_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28330, 28331, 28332, 28333, 28334, 28335, 28336, 28337, 28338, 28339 ],
    "minecraft:lime_carpet[]" : [ 1324, 13263, 13264, 13265, 13266, 13267 ],
-   "minecraft:lime_concrete[]" : [ 19196, 19197, 19198, 19199, 19200, 19201 ],
+   "minecraft:lime_concrete[]" : [ 19190, 19191, 19192, 19193, 19194, 19195 ],
    "minecraft:lime_concrete_powder[]" : [ 19286, 19287, 19288, 19289, 19290, 19291 ],
-   "minecraft:lime_glazed_terracotta[facing_direction=2]" : [ 18902, 18903, 18904, 18905, 18906, 18907 ],
-   "minecraft:lime_glazed_terracotta[facing_direction=3]" : [ 18908, 18909, 18910, 18911, 18912, 18913 ],
-   "minecraft:lime_glazed_terracotta[facing_direction=4]" : [ 18914, 18915, 18916, 18917, 18918, 18919 ],
-   "minecraft:lime_glazed_terracotta[facing_direction=5]" : [ 18920, 18921, 18922, 18923, 18924, 18925 ],
-   "minecraft:lime_shulker_box[]" : [ 18650, 18651, 18652, 18653, 18654, 18655, 18656, 18657, 18658, 18659, 18660, 18661 ],
+   "minecraft:lime_glazed_terracotta[facing_direction=2]" : [ 18896, 18897, 18898, 18899, 18900, 18901 ],
+   "minecraft:lime_glazed_terracotta[facing_direction=3]" : [ 18902, 18903, 18904, 18905, 18906, 18907 ],
+   "minecraft:lime_glazed_terracotta[facing_direction=4]" : [ 18908, 18909, 18910, 18911, 18912, 18913 ],
+   "minecraft:lime_glazed_terracotta[facing_direction=5]" : [ 18914, 18915, 18916, 18917, 18918, 18919 ],
+   "minecraft:lime_shulker_box[]" : [ 18644, 18645, 18646, 18647, 18648, 18649, 18650, 18651, 18652, 18653, 18654, 18655 ],
    "minecraft:lime_stained_glass[]" : [ 8481, 8482, 8483, 8484, 8485, 8486 ],
    "minecraft:lime_stained_glass_pane[]" : [ 12662, 12663, 12664, 12665, 12666, 12667 ],
    "minecraft:lime_terracotta[]" : [ 12566, 12567, 12568, 12569, 12570, 12571 ],
@@ -456545,18 +456545,18 @@ export const blockModels = {
    "minecraft:magenta_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28280, 28281, 28282, 28283, 28284, 28285, 28286, 28287, 28288, 28289 ],
    "minecraft:magenta_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28270, 28271, 28272, 28273, 28274, 28275, 28276, 28277, 28278, 28279 ],
    "minecraft:magenta_carpet[]" : [ 1306, 13248, 13249, 13250, 13251, 13252 ],
-   "minecraft:magenta_concrete[]" : [ 19178, 19179, 19180, 19181, 19182, 19183 ],
+   "minecraft:magenta_concrete[]" : [ 19172, 19173, 19174, 19175, 19176, 19177 ],
    "minecraft:magenta_concrete_powder[]" : [ 19268, 19269, 19270, 19271, 19272, 19273 ],
-   "minecraft:magenta_glazed_terracotta[facing_direction=2]" : [ 18830, 18831, 18832, 18833, 18834, 18835 ],
-   "minecraft:magenta_glazed_terracotta[facing_direction=3]" : [ 18836, 18837, 18838, 18839, 18840, 18841 ],
-   "minecraft:magenta_glazed_terracotta[facing_direction=4]" : [ 18842, 18843, 18844, 18845, 18846, 18847 ],
-   "minecraft:magenta_glazed_terracotta[facing_direction=5]" : [ 18848, 18849, 18850, 18851, 18852, 18853 ],
-   "minecraft:magenta_shulker_box[]" : [ 18614, 18615, 18616, 18617, 18618, 18619, 18620, 18621, 18622, 18623, 18624, 18625 ],
+   "minecraft:magenta_glazed_terracotta[facing_direction=2]" : [ 18824, 18825, 18826, 18827, 18828, 18829 ],
+   "minecraft:magenta_glazed_terracotta[facing_direction=3]" : [ 18830, 18831, 18832, 18833, 18834, 18835 ],
+   "minecraft:magenta_glazed_terracotta[facing_direction=4]" : [ 18836, 18837, 18838, 18839, 18840, 18841 ],
+   "minecraft:magenta_glazed_terracotta[facing_direction=5]" : [ 18842, 18843, 18844, 18845, 18846, 18847 ],
+   "minecraft:magenta_shulker_box[]" : [ 18608, 18609, 18610, 18611, 18612, 18613, 18614, 18615, 18616, 18617, 18618, 18619 ],
    "minecraft:magenta_stained_glass[]" : [ 8463, 8464, 8465, 8466, 8467, 8468 ],
    "minecraft:magenta_stained_glass_pane[]" : [ 12644, 12645, 12646, 12647, 12648, 12649 ],
    "minecraft:magenta_terracotta[]" : [ 12548, 12549, 12550, 12551, 12552, 12553 ],
    "minecraft:magenta_wool[]" : [ 1306, 1307, 1308, 1309, 1310, 1311 ],
-   "minecraft:magma[]" : [ 18506, 18507, 18508, 18509, 18510, 18511 ],
+   "minecraft:magma[]" : [ 18500, 18501, 18502, 18503, 18504, 18505 ],
    "minecraft:mangrove_button[button_pressed_bit=0,facing_direction=0]" : [ 11883, 11889, 11890, 11891, 11892, 11893 ],
    "minecraft:mangrove_button[button_pressed_bit=0,facing_direction=1]" : [ 11828, 11834, 11835, 11836, 11837, 11838 ],
    "minecraft:mangrove_button[button_pressed_bit=0,facing_direction=2]" : [ 11839, 11845, 11846, 11847, 11848, 11849 ],
@@ -457489,7 +457489,7 @@ export const blockModels = {
    "minecraft:nether_wart[age=1]" : [ 10220, 10221, 10222, 10223, 10224, 10225, 10226, 10227 ],
    "minecraft:nether_wart[age=2]" : [ 10220, 10221, 10222, 10223, 10224, 10225, 10226, 10227 ],
    "minecraft:nether_wart[age=3]" : [ 10228, 10229, 10230, 10231, 10232, 10233, 10234, 10235 ],
-   "minecraft:nether_wart_block[]" : [ 18512, 18513, 18514, 18515, 18516, 18517 ],
+   "minecraft:nether_wart_block[]" : [ 18506, 18507, 18508, 18509, 18510, 18511 ],
    "minecraft:netherite_block[]" : [ 24720, 24721, 24722, 24723, 24724, 24725 ],
    "minecraft:netherrack[]" : [ 7999, 8000, 8001, 8002, 8003, 8004 ],
    "minecraft:normal_stone_double_slab[minecraft:vertical_half=bottom]" : [ 6, 7, 8, 9, 10, 11 ],
@@ -457595,18 +457595,18 @@ export const blockModels = {
    "minecraft:oak_wood[pillar_axis=x]" : [ 402, 774, 394, 395, 396, 397 ],
    "minecraft:oak_wood[pillar_axis=y]" : [ 775, 407, 400, 401, 402, 403 ],
    "minecraft:oak_wood[pillar_axis=z]" : [ 401, 776, 406, 407, 408, 409 ],
-   "minecraft:observer[minecraft:facing_direction=down,powered_bit=0]" : [ 18567, 18566, 18573, 18577, 18575, 18576 ],
-   "minecraft:observer[minecraft:facing_direction=down,powered_bit=1]" : [ 18567, 18566, 18573, 18574, 18575, 18576 ],
-   "minecraft:observer[minecraft:facing_direction=east,powered_bit=0]" : [ 18549, 18550, 18551, 18555, 18553, 18554 ],
-   "minecraft:observer[minecraft:facing_direction=east,powered_bit=1]" : [ 18549, 18550, 18551, 18552, 18553, 18554 ],
-   "minecraft:observer[minecraft:facing_direction=north,powered_bit=0]" : [ 18542, 18543, 18544, 18548, 18546, 18547 ],
-   "minecraft:observer[minecraft:facing_direction=north,powered_bit=1]" : [ 18542, 18543, 18544, 18545, 18546, 18547 ],
-   "minecraft:observer[minecraft:facing_direction=south,powered_bit=0]" : [ 18556, 18557, 18558, 18560, 18547, 18546 ],
-   "minecraft:observer[minecraft:facing_direction=south,powered_bit=1]" : [ 18556, 18557, 18558, 18559, 18547, 18546 ],
-   "minecraft:observer[minecraft:facing_direction=up,powered_bit=0]" : [ 18566, 18567, 18568, 18572, 18570, 18571 ],
-   "minecraft:observer[minecraft:facing_direction=up,powered_bit=1]" : [ 18566, 18567, 18568, 18569, 18570, 18571 ],
-   "minecraft:observer[minecraft:facing_direction=west,powered_bit=0]" : [ 18561, 18562, 18563, 18565, 18554, 18553 ],
-   "minecraft:observer[minecraft:facing_direction=west,powered_bit=1]" : [ 18561, 18562, 18563, 18564, 18554, 18553 ],
+   "minecraft:observer[minecraft:facing_direction=down,powered_bit=0]" : [ 18561, 18560, 18567, 18571, 18569, 18570 ],
+   "minecraft:observer[minecraft:facing_direction=down,powered_bit=1]" : [ 18561, 18560, 18567, 18568, 18569, 18570 ],
+   "minecraft:observer[minecraft:facing_direction=east,powered_bit=0]" : [ 18543, 18544, 18545, 18549, 18547, 18548 ],
+   "minecraft:observer[minecraft:facing_direction=east,powered_bit=1]" : [ 18543, 18544, 18545, 18546, 18547, 18548 ],
+   "minecraft:observer[minecraft:facing_direction=north,powered_bit=0]" : [ 18536, 18537, 18538, 18542, 18540, 18541 ],
+   "minecraft:observer[minecraft:facing_direction=north,powered_bit=1]" : [ 18536, 18537, 18538, 18539, 18540, 18541 ],
+   "minecraft:observer[minecraft:facing_direction=south,powered_bit=0]" : [ 18550, 18551, 18552, 18554, 18541, 18540 ],
+   "minecraft:observer[minecraft:facing_direction=south,powered_bit=1]" : [ 18550, 18551, 18552, 18553, 18541, 18540 ],
+   "minecraft:observer[minecraft:facing_direction=up,powered_bit=0]" : [ 18560, 18561, 18562, 18566, 18564, 18565 ],
+   "minecraft:observer[minecraft:facing_direction=up,powered_bit=1]" : [ 18560, 18561, 18562, 18563, 18564, 18565 ],
+   "minecraft:observer[minecraft:facing_direction=west,powered_bit=0]" : [ 18555, 18556, 18557, 18559, 18548, 18547 ],
+   "minecraft:observer[minecraft:facing_direction=west,powered_bit=1]" : [ 18555, 18556, 18557, 18558, 18548, 18547 ],
    "minecraft:obsidian[]" : [ 2506, 2507, 2508, 2509, 2510, 2511 ],
    "minecraft:ochre_froglight[pillar_axis=x]" : [ 31762, 31763, 31764, 31765, 31766, 31767 ],
    "minecraft:ochre_froglight[pillar_axis=y]" : [ 31768, 31769, 31770, 31771, 31772, 31773 ],
@@ -457623,13 +457623,13 @@ export const blockModels = {
    "minecraft:orange_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28260, 28261, 28262, 28263, 28264, 28265, 28266, 28267, 28268, 28269 ],
    "minecraft:orange_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28250, 28251, 28252, 28253, 28254, 28255, 28256, 28257, 28258, 28259 ],
    "minecraft:orange_carpet[]" : [ 1300, 13243, 13244, 13245, 13246, 13247 ],
-   "minecraft:orange_concrete[]" : [ 19172, 19173, 19174, 19175, 19176, 19177 ],
+   "minecraft:orange_concrete[]" : [ 19166, 19167, 19168, 19169, 19170, 19171 ],
    "minecraft:orange_concrete_powder[]" : [ 19262, 19263, 19264, 19265, 19266, 19267 ],
-   "minecraft:orange_glazed_terracotta[facing_direction=2]" : [ 18806, 18807, 18808, 18809, 18810, 18811 ],
-   "minecraft:orange_glazed_terracotta[facing_direction=3]" : [ 18812, 18813, 18814, 18815, 18816, 18817 ],
-   "minecraft:orange_glazed_terracotta[facing_direction=4]" : [ 18818, 18819, 18820, 18821, 18822, 18823 ],
-   "minecraft:orange_glazed_terracotta[facing_direction=5]" : [ 18824, 18825, 18826, 18827, 18828, 18829 ],
-   "minecraft:orange_shulker_box[]" : [ 18602, 18603, 18604, 18605, 18606, 18607, 18608, 18609, 18610, 18611, 18612, 18613 ],
+   "minecraft:orange_glazed_terracotta[facing_direction=2]" : [ 18800, 18801, 18802, 18803, 18804, 18805 ],
+   "minecraft:orange_glazed_terracotta[facing_direction=3]" : [ 18806, 18807, 18808, 18809, 18810, 18811 ],
+   "minecraft:orange_glazed_terracotta[facing_direction=4]" : [ 18812, 18813, 18814, 18815, 18816, 18817 ],
+   "minecraft:orange_glazed_terracotta[facing_direction=5]" : [ 18818, 18819, 18820, 18821, 18822, 18823 ],
+   "minecraft:orange_shulker_box[]" : [ 18596, 18597, 18598, 18599, 18600, 18601, 18602, 18603, 18604, 18605, 18606, 18607 ],
    "minecraft:orange_stained_glass[]" : [ 8457, 8458, 8459, 8460, 8461, 8462 ],
    "minecraft:orange_stained_glass_pane[]" : [ 12638, 12639, 12640, 12641, 12642, 12643 ],
    "minecraft:orange_terracotta[]" : [ 12542, 12543, 12544, 12545, 12546, 12547 ],
@@ -458109,12 +458109,12 @@ export const blockModels = {
    "minecraft:pink_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28360, 28361, 28362, 28363, 28364, 28365, 28366, 28367, 28368, 28369 ],
    "minecraft:pink_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28350, 28351, 28352, 28353, 28354, 28355, 28356, 28357, 28358, 28359 ],
    "minecraft:pink_carpet[]" : [ 1330, 13268, 13269, 13270, 13271, 13272 ],
-   "minecraft:pink_concrete[]" : [ 19202, 19203, 19204, 19205, 19206, 19207 ],
+   "minecraft:pink_concrete[]" : [ 19196, 19197, 19198, 19199, 19200, 19201 ],
    "minecraft:pink_concrete_powder[]" : [ 19292, 19293, 19294, 19295, 19296, 19297 ],
-   "minecraft:pink_glazed_terracotta[facing_direction=2]" : [ 18926, 18927, 18928, 18929, 18930, 18931 ],
-   "minecraft:pink_glazed_terracotta[facing_direction=3]" : [ 18932, 18933, 18934, 18935, 18936, 18937 ],
-   "minecraft:pink_glazed_terracotta[facing_direction=4]" : [ 18938, 18939, 18940, 18941, 18942, 18943 ],
-   "minecraft:pink_glazed_terracotta[facing_direction=5]" : [ 18944, 18945, 18946, 18947, 18948, 18949 ],
+   "minecraft:pink_glazed_terracotta[facing_direction=2]" : [ 18920, 18921, 18922, 18923, 18924, 18925 ],
+   "minecraft:pink_glazed_terracotta[facing_direction=3]" : [ 18926, 18927, 18928, 18929, 18930, 18931 ],
+   "minecraft:pink_glazed_terracotta[facing_direction=4]" : [ 18932, 18933, 18934, 18935, 18936, 18937 ],
+   "minecraft:pink_glazed_terracotta[facing_direction=5]" : [ 18938, 18939, 18940, 18941, 18942, 18943 ],
    "minecraft:pink_petals[growth=0,minecraft:cardinal_direction=east]" : [ 30889, 30890, 30891, 30892, 30893, 30894, 30895, 30896, 30897, 30898, 30899, 30900, 30901, 30902 ],
    "minecraft:pink_petals[growth=0,minecraft:cardinal_direction=north]" : [ 30769, 30770, 30771, 30772, 30773, 30774, 30775, 30776, 30777, 30778, 30779, 30780, 30781, 30782 ],
    "minecraft:pink_petals[growth=0,minecraft:cardinal_direction=south]" : [ 30809, 30810, 30811, 30812, 30813, 30814, 30815, 30816, 30817, 30818, 30819, 30820, 30821, 30822 ],
@@ -458131,7 +458131,7 @@ export const blockModels = {
    "minecraft:pink_petals[growth=3,minecraft:cardinal_direction=north]" : [ 30769, 30770, 30771, 30772, 30773, 30774, 30775, 30776, 30777, 30778, 30779, 30780, 30781, 30782, 30783, 30784, 30785, 30786, 30787, 30788, 30789, 30790, 30791, 30792, 30793, 30794, 30795, 30796, 30797, 30798, 30799, 30800, 30801, 30802, 30803, 30804, 30805, 30806, 30807, 30808 ],
    "minecraft:pink_petals[growth=3,minecraft:cardinal_direction=south]" : [ 30809, 30810, 30811, 30812, 30813, 30814, 30815, 30816, 30817, 30818, 30819, 30820, 30821, 30822, 30823, 30824, 30825, 30826, 30827, 30828, 30829, 30830, 30831, 30832, 30833, 30834, 30835, 30836, 30837, 30838, 30839, 30840, 30841, 30842, 30843, 30844, 30845, 30846, 30847, 30848 ],
    "minecraft:pink_petals[growth=3,minecraft:cardinal_direction=west]" : [ 30849, 30850, 30851, 30852, 30853, 30854, 30855, 30856, 30857, 30858, 30859, 30860, 30861, 30862, 30863, 30864, 30865, 30866, 30867, 30868, 30869, 30870, 30871, 30872, 30873, 30874, 30875, 30876, 30877, 30878, 30879, 30880, 30881, 30882, 30883, 30884, 30885, 30886, 30887, 30888 ],
-   "minecraft:pink_shulker_box[]" : [ 18662, 18663, 18664, 18665, 18666, 18667, 18668, 18669, 18670, 18671, 18672, 18673 ],
+   "minecraft:pink_shulker_box[]" : [ 18656, 18657, 18658, 18659, 18660, 18661, 18662, 18663, 18664, 18665, 18666, 18667 ],
    "minecraft:pink_stained_glass[]" : [ 8487, 8488, 8489, 8490, 8491, 8492 ],
    "minecraft:pink_stained_glass_pane[]" : [ 12668, 12669, 12670, 12671, 12672, 12673 ],
    "minecraft:pink_terracotta[]" : [ 12572, 12573, 12574, 12575, 12576, 12577 ],
@@ -459525,13 +459525,13 @@ export const blockModels = {
    "minecraft:purple_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28440, 28441, 28442, 28443, 28444, 28445, 28446, 28447, 28448, 28449 ],
    "minecraft:purple_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28430, 28431, 28432, 28433, 28434, 28435, 28436, 28437, 28438, 28439 ],
    "minecraft:purple_carpet[]" : [ 1354, 13288, 13289, 13290, 13291, 13292 ],
-   "minecraft:purple_concrete[]" : [ 19226, 19227, 19228, 19229, 19230, 19231 ],
+   "minecraft:purple_concrete[]" : [ 19220, 19221, 19222, 19223, 19224, 19225 ],
    "minecraft:purple_concrete_powder[]" : [ 19316, 19317, 19318, 19319, 19320, 19321 ],
-   "minecraft:purple_glazed_terracotta[facing_direction=2]" : [ 19022, 19023, 19024, 19025, 19026, 19027 ],
-   "minecraft:purple_glazed_terracotta[facing_direction=3]" : [ 19028, 19029, 19030, 19031, 19032, 19033 ],
-   "minecraft:purple_glazed_terracotta[facing_direction=4]" : [ 19034, 19035, 19036, 19037, 19038, 19039 ],
-   "minecraft:purple_glazed_terracotta[facing_direction=5]" : [ 19040, 19041, 19042, 19043, 19044, 19045 ],
-   "minecraft:purple_shulker_box[]" : [ 18710, 18711, 18712, 18713, 18714, 18715, 18716, 18717, 18718, 18719, 18720, 18721 ],
+   "minecraft:purple_glazed_terracotta[facing_direction=2]" : [ 19016, 19017, 19018, 19019, 19020, 19021 ],
+   "minecraft:purple_glazed_terracotta[facing_direction=3]" : [ 19022, 19023, 19024, 19025, 19026, 19027 ],
+   "minecraft:purple_glazed_terracotta[facing_direction=4]" : [ 19028, 19029, 19030, 19031, 19032, 19033 ],
+   "minecraft:purple_glazed_terracotta[facing_direction=5]" : [ 19034, 19035, 19036, 19037, 19038, 19039 ],
+   "minecraft:purple_shulker_box[]" : [ 18704, 18705, 18706, 18707, 18708, 18709, 18710, 18711, 18712, 18713, 18714, 18715 ],
    "minecraft:purple_stained_glass[]" : [ 8511, 8512, 8513, 8514, 8515, 8516 ],
    "minecraft:purple_stained_glass_pane[]" : [ 12692, 12693, 12694, 12695, 12696, 12697 ],
    "minecraft:purple_terracotta[]" : [ 12596, 12597, 12598, 12599, 12600, 12601 ],
@@ -459592,12 +459592,12 @@ export const blockModels = {
    "minecraft:red_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28520, 28521, 28522, 28523, 28524, 28525, 28526, 28527, 28528, 28529 ],
    "minecraft:red_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28510, 28511, 28512, 28513, 28514, 28515, 28516, 28517, 28518, 28519 ],
    "minecraft:red_carpet[]" : [ 1378, 13308, 13309, 13310, 13311, 13312 ],
-   "minecraft:red_concrete[]" : [ 19250, 19251, 19252, 19253, 19254, 19255 ],
+   "minecraft:red_concrete[]" : [ 19244, 19245, 19246, 19247, 19248, 19249 ],
    "minecraft:red_concrete_powder[]" : [ 19340, 19341, 19342, 19343, 19344, 19345 ],
-   "minecraft:red_glazed_terracotta[facing_direction=2]" : [ 19118, 19119, 19120, 19121, 19122, 19123 ],
-   "minecraft:red_glazed_terracotta[facing_direction=3]" : [ 19124, 19125, 19126, 19127, 19128, 19129 ],
-   "minecraft:red_glazed_terracotta[facing_direction=4]" : [ 19130, 19131, 19132, 19133, 19134, 19135 ],
-   "minecraft:red_glazed_terracotta[facing_direction=5]" : [ 19136, 19137, 19138, 19139, 19140, 19141 ],
+   "minecraft:red_glazed_terracotta[facing_direction=2]" : [ 19112, 19113, 19114, 19115, 19116, 19117 ],
+   "minecraft:red_glazed_terracotta[facing_direction=3]" : [ 19118, 19119, 19120, 19121, 19122, 19123 ],
+   "minecraft:red_glazed_terracotta[facing_direction=4]" : [ 19124, 19125, 19126, 19127, 19128, 19129 ],
+   "minecraft:red_glazed_terracotta[facing_direction=5]" : [ 19130, 19131, 19132, 19133, 19134, 19135 ],
    "minecraft:red_mushroom[]" : [ 1454, 1455, 1456, 1457 ],
    "minecraft:red_mushroom_block[huge_mushroom_bits=0]" : [ 9241, 9240, 9237, 9238, 9239, 9236 ],
    "minecraft:red_mushroom_block[huge_mushroom_bits=14]" : [ 9242, 9243, 9244, 9245, 9246, 9236 ],
@@ -459610,18 +459610,18 @@ export const blockModels = {
    "minecraft:red_mushroom_block[huge_mushroom_bits=7]" : [ 9244, 9245, 9241, 9240, 9239, 9236 ],
    "minecraft:red_mushroom_block[huge_mushroom_bits=8]" : [ 9244, 9241, 9240, 9238, 9239, 9236 ],
    "minecraft:red_mushroom_block[huge_mushroom_bits=9]" : [ 9243, 9244, 9241, 9238, 9239, 9236 ],
-   "minecraft:red_nether_brick[]" : [ 18518, 18519, 18520, 18521, 18522, 18523 ],
-   "minecraft:red_nether_brick_double_slab[minecraft:vertical_half=bottom]" : [ 18518, 18519, 18520, 18521, 18522, 18523 ],
-   "minecraft:red_nether_brick_slab[minecraft:vertical_half=bottom]" : [ 18518, 21049, 21048, 21052, 21050, 21051 ],
-   "minecraft:red_nether_brick_slab[minecraft:vertical_half=top]" : [ 21039, 18519, 21043, 21042, 21041, 21040 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=0]" : [ 18518, 21049, 21048, 21052, 21050, 21051, 21077, 21078, 21079, 21080, 21040 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=1]" : [ 18518, 21049, 21052, 21048, 21051, 21050, 21069, 21070, 21071, 21072, 21041 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=2]" : [ 18518, 21049, 21051, 21050, 21048, 21052, 21061, 21062, 21063, 21064, 21042 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=3]" : [ 18518, 21049, 21050, 21051, 21052, 21048, 21053, 21054, 21055, 21056, 21043 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=0]" : [ 18519, 21039, 21042, 21043, 21041, 21040, 21073, 21074, 21075, 21076, 21051 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=1]" : [ 18519, 21039, 21043, 21042, 21040, 21041, 21065, 21066, 21067, 21068, 21050 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=2]" : [ 18519, 21039, 21041, 21040, 21043, 21042, 21057, 21058, 21059, 21060, 21052 ],
-   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=3]" : [ 18519, 21039, 21040, 21041, 21042, 21043, 21044, 21045, 21046, 21047, 21048 ],
+   "minecraft:red_nether_brick[]" : [ 18512, 18513, 18514, 18515, 18516, 18517 ],
+   "minecraft:red_nether_brick_double_slab[minecraft:vertical_half=bottom]" : [ 18512, 18513, 18514, 18515, 18516, 18517 ],
+   "minecraft:red_nether_brick_slab[minecraft:vertical_half=bottom]" : [ 18512, 21049, 21048, 21052, 21050, 21051 ],
+   "minecraft:red_nether_brick_slab[minecraft:vertical_half=top]" : [ 21039, 18513, 21043, 21042, 21041, 21040 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=0]" : [ 18512, 21049, 21048, 21052, 21050, 21051, 21077, 21078, 21079, 21080, 21040 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=1]" : [ 18512, 21049, 21052, 21048, 21051, 21050, 21069, 21070, 21071, 21072, 21041 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=2]" : [ 18512, 21049, 21051, 21050, 21048, 21052, 21061, 21062, 21063, 21064, 21042 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=0,weirdo_direction=3]" : [ 18512, 21049, 21050, 21051, 21052, 21048, 21053, 21054, 21055, 21056, 21043 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=0]" : [ 18513, 21039, 21042, 21043, 21041, 21040, 21073, 21074, 21075, 21076, 21051 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=1]" : [ 18513, 21039, 21043, 21042, 21040, 21041, 21065, 21066, 21067, 21068, 21050 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=2]" : [ 18513, 21039, 21041, 21040, 21043, 21042, 21057, 21058, 21059, 21060, 21052 ],
+   "minecraft:red_nether_brick_stairs[upside_down_bit=1,weirdo_direction=3]" : [ 18513, 21039, 21040, 21041, 21042, 21043, 21044, 21045, 21046, 21047, 21048 ],
    "minecraft:red_nether_brick_wall[wall_connection_type_east=none,wall_connection_type_north=none,wall_connection_type_south=none,wall_connection_type_west=none,wall_post_bit=0]" : [ 0, 1, 2, 3, 4, 5 ],
    "minecraft:red_nether_brick_wall[wall_connection_type_east=none,wall_connection_type_north=none,wall_connection_type_south=none,wall_connection_type_west=none,wall_post_bit=1]" : [ 21543, 21544, 21545, 21546, 21547, 21548 ],
    "minecraft:red_nether_brick_wall[wall_connection_type_east=none,wall_connection_type_north=none,wall_connection_type_south=none,wall_connection_type_west=short,wall_post_bit=0]" : [ 21549, 21550, 21551, 21552, 21553 ],
@@ -459959,7 +459959,7 @@ export const blockModels = {
    "minecraft:red_sandstone_wall[wall_connection_type_east=tall,wall_connection_type_north=tall,wall_connection_type_south=tall,wall_connection_type_west=short,wall_post_bit=1]" : [ 21249, 21250, 21251, 21252, 21253, 21254, 21255, 21256, 21257, 21258, 21259, 21273, 21278, 21279, 21280, 21281, 21282, 21287, 21288, 21289, 21290, 21264, 21269, 21270, 21271, 21272 ],
    "minecraft:red_sandstone_wall[wall_connection_type_east=tall,wall_connection_type_north=tall,wall_connection_type_south=tall,wall_connection_type_west=tall,wall_post_bit=0]" : [ 21273, 21278, 21279, 21280, 21281, 21282, 21287, 21288, 21289, 21290, 21264, 21269, 21270, 21271, 21272, 21255, 21260, 21261, 21262, 21263 ],
    "minecraft:red_sandstone_wall[wall_connection_type_east=tall,wall_connection_type_north=tall,wall_connection_type_south=tall,wall_connection_type_west=tall,wall_post_bit=1]" : [ 21249, 21250, 21251, 21252, 21253, 21254, 21273, 21278, 21279, 21280, 21281, 21282, 21287, 21288, 21289, 21290, 21264, 21269, 21270, 21271, 21272, 21255, 21260, 21261, 21262, 21263 ],
-   "minecraft:red_shulker_box[]" : [ 18758, 18759, 18760, 18761, 18762, 18763, 18764, 18765, 18766, 18767, 18768, 18769 ],
+   "minecraft:red_shulker_box[]" : [ 18752, 18753, 18754, 18755, 18756, 18757, 18758, 18759, 18760, 18761, 18762, 18763 ],
    "minecraft:red_stained_glass[]" : [ 8535, 8536, 8537, 8538, 8539, 8540 ],
    "minecraft:red_stained_glass_pane[]" : [ 12716, 12717, 12718, 12719, 12720, 12721 ],
    "minecraft:red_terracotta[]" : [ 12620, 12621, 12622, 12623, 12624, 12625 ],
@@ -460006,18 +460006,18 @@ export const blockModels = {
    "minecraft:reeds[age=8]" : [ 7983, 7984, 7985, 7986 ],
    "minecraft:reeds[age=9]" : [ 7983, 7984, 7985, 7986 ],
    "minecraft:reinforced_deepslate[]" : [ 31818, 31819, 31820, 31821, 31822, 31823 ],
-   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=0]" : [ 18418, 18419, 18394, 18395, 18420, 18421 ],
-   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=1]" : [ 18414, 18415, 18388, 18389, 18416, 18417 ],
-   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=2]" : [ 18398, 18399, 18364, 18365, 18400, 18401 ],
-   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=3]" : [ 18406, 18407, 18376, 18377, 18408, 18409 ],
-   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=4]" : [ 18410, 18411, 18382, 18383, 18412, 18413 ],
-   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=5]" : [ 18402, 18403, 18370, 18371, 18404, 18405 ],
-   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=0]" : [ 18392, 18393, 18394, 18395, 18396, 18397 ],
-   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=1]" : [ 18386, 18387, 18388, 18389, 18390, 18391 ],
-   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=2]" : [ 18362, 18363, 18364, 18365, 18366, 18367 ],
-   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=3]" : [ 18374, 18375, 18376, 18377, 18378, 18379 ],
-   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=4]" : [ 18380, 18381, 18382, 18383, 18384, 18385 ],
-   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=5]" : [ 18368, 18369, 18370, 18371, 18372, 18373 ],
+   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=0]" : [ 18412, 18413, 18388, 18389, 18414, 18415 ],
+   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=1]" : [ 18408, 18409, 18382, 18383, 18410, 18411 ],
+   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=2]" : [ 18392, 18393, 18358, 18359, 18394, 18395 ],
+   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=3]" : [ 18400, 18401, 18370, 18371, 18402, 18403 ],
+   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=4]" : [ 18404, 18405, 18376, 18377, 18406, 18407 ],
+   "minecraft:repeating_command_block[conditional_bit=0,facing_direction=5]" : [ 18396, 18397, 18364, 18365, 18398, 18399 ],
+   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=0]" : [ 18386, 18387, 18388, 18389, 18390, 18391 ],
+   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=1]" : [ 18380, 18381, 18382, 18383, 18384, 18385 ],
+   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=2]" : [ 18356, 18357, 18358, 18359, 18360, 18361 ],
+   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=3]" : [ 18368, 18369, 18370, 18371, 18372, 18373 ],
+   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=4]" : [ 18374, 18375, 18376, 18377, 18378, 18379 ],
+   "minecraft:repeating_command_block[conditional_bit=1,facing_direction=5]" : [ 18362, 18363, 18364, 18365, 18366, 18367 ],
    "minecraft:resin_block[]" : [ 10056, 10057, 10058, 10059, 10060, 10061 ],
    "minecraft:resin_brick_double_slab[minecraft:vertical_half=bottom]" : [ 10062, 10063, 10064, 10065, 10066, 10067 ],
    "minecraft:resin_brick_slab[minecraft:vertical_half=bottom]" : [ 10062, 10078, 10077, 10081, 10079, 10080 ],
@@ -460536,10 +460536,10 @@ export const blockModels = {
    "minecraft:short_dry_grass[]" : [ 1202, 1203, 1204, 1205 ],
    "minecraft:short_grass[]" : [ 1186, 1187, 1188, 1189 ],
    "minecraft:shroomlight[]" : [ 22728, 22729, 22730, 22731, 22732, 22733 ],
-   "minecraft:silver_glazed_terracotta[facing_direction=2]" : [ 18974, 18975, 18976, 18977, 18978, 18979 ],
-   "minecraft:silver_glazed_terracotta[facing_direction=3]" : [ 18980, 18981, 18982, 18983, 18984, 18985 ],
-   "minecraft:silver_glazed_terracotta[facing_direction=4]" : [ 18986, 18987, 18988, 18989, 18990, 18991 ],
-   "minecraft:silver_glazed_terracotta[facing_direction=5]" : [ 18992, 18993, 18994, 18995, 18996, 18997 ],
+   "minecraft:silver_glazed_terracotta[facing_direction=2]" : [ 18968, 18969, 18970, 18971, 18972, 18973 ],
+   "minecraft:silver_glazed_terracotta[facing_direction=3]" : [ 18974, 18975, 18976, 18977, 18978, 18979 ],
+   "minecraft:silver_glazed_terracotta[facing_direction=4]" : [ 18980, 18981, 18982, 18983, 18984, 18985 ],
+   "minecraft:silver_glazed_terracotta[facing_direction=5]" : [ 18986, 18987, 18988, 18989, 18990, 18991 ],
    "minecraft:skeleton_skull[facing_direction=1]" : [ 0, 1, 2, 3, 4, 5 ],
    "minecraft:skeleton_skull[facing_direction=2]" : [ 0, 1, 2, 3, 4, 5 ],
    "minecraft:skeleton_skull[facing_direction=3]" : [ 0, 1, 2, 3, 4, 5 ],
@@ -461982,7 +461982,7 @@ export const blockModels = {
    "minecraft:twisting_vines[twisting_vines_age=7]" : [ 22746, 22747, 22748, 22749 ],
    "minecraft:twisting_vines[twisting_vines_age=8]" : [ 22746, 22747, 22748, 22749 ],
    "minecraft:twisting_vines[twisting_vines_age=9]" : [ 22746, 22747, 22748, 22749 ],
-   "minecraft:undyed_shulker_box[]" : [ 18578, 18579, 18580, 18581, 18582, 18583, 18584, 18585, 18586, 18587, 18588, 18589 ],
+   "minecraft:undyed_shulker_box[]" : [ 18572, 18573, 18574, 18575, 18576, 18577, 18578, 18579, 18580, 18581, 18582, 18583 ],
    "minecraft:unknown[]" : [ 24624, 24625, 24626, 24627, 24628, 24629 ],
    "minecraft:unlit_redstone_torch[torch_facing_direction=east]" : [ 7830, 7831, 7832, 7833, 7834, 7835 ],
    "minecraft:unlit_redstone_torch[torch_facing_direction=north]" : [ 7812, 7813, 7814, 7815, 7816, 7817 ],
@@ -462790,13 +462790,13 @@ export const blockModels = {
    "minecraft:white_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28240, 28241, 28242, 28243, 28244, 28245, 28246, 28247, 28248, 28249 ],
    "minecraft:white_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28230, 28231, 28232, 28233, 28234, 28235, 28236, 28237, 28238, 28239 ],
    "minecraft:white_carpet[]" : [ 1294, 13238, 13239, 13240, 13241, 13242 ],
-   "minecraft:white_concrete[]" : [ 19166, 19167, 19168, 19169, 19170, 19171 ],
+   "minecraft:white_concrete[]" : [ 19160, 19161, 19162, 19163, 19164, 19165 ],
    "minecraft:white_concrete_powder[]" : [ 19256, 19257, 19258, 19259, 19260, 19261 ],
-   "minecraft:white_glazed_terracotta[facing_direction=2]" : [ 18782, 18783, 18784, 18785, 18786, 18787 ],
-   "minecraft:white_glazed_terracotta[facing_direction=3]" : [ 18788, 18789, 18790, 18791, 18792, 18793 ],
-   "minecraft:white_glazed_terracotta[facing_direction=4]" : [ 18794, 18795, 18796, 18797, 18798, 18799 ],
-   "minecraft:white_glazed_terracotta[facing_direction=5]" : [ 18800, 18801, 18802, 18803, 18804, 18805 ],
-   "minecraft:white_shulker_box[]" : [ 18590, 18591, 18592, 18593, 18594, 18595, 18596, 18597, 18598, 18599, 18600, 18601 ],
+   "minecraft:white_glazed_terracotta[facing_direction=2]" : [ 18776, 18777, 18778, 18779, 18780, 18781 ],
+   "minecraft:white_glazed_terracotta[facing_direction=3]" : [ 18782, 18783, 18784, 18785, 18786, 18787 ],
+   "minecraft:white_glazed_terracotta[facing_direction=4]" : [ 18788, 18789, 18790, 18791, 18792, 18793 ],
+   "minecraft:white_glazed_terracotta[facing_direction=5]" : [ 18794, 18795, 18796, 18797, 18798, 18799 ],
+   "minecraft:white_shulker_box[]" : [ 18584, 18585, 18586, 18587, 18588, 18589, 18590, 18591, 18592, 18593, 18594, 18595 ],
    "minecraft:white_stained_glass[]" : [ 8451, 8452, 8453, 8454, 8455, 8456 ],
    "minecraft:white_stained_glass_pane[]" : [ 12632, 12633, 12634, 12635, 12636, 12637 ],
    "minecraft:white_terracotta[]" : [ 12536, 12537, 12538, 12539, 12540, 12541 ],
@@ -462881,13 +462881,13 @@ export const blockModels = {
    "minecraft:yellow_candle_cake[lit=0]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28320, 28321, 28322, 28323, 28324, 28325, 28326, 28327, 28328, 28329 ],
    "minecraft:yellow_candle_cake[lit=1]" : [ 8143, 8144, 8145, 8146, 8147, 8148, 28310, 28311, 28312, 28313, 28314, 28315, 28316, 28317, 28318, 28319 ],
    "minecraft:yellow_carpet[]" : [ 1318, 13258, 13259, 13260, 13261, 13262 ],
-   "minecraft:yellow_concrete[]" : [ 19190, 19191, 19192, 19193, 19194, 19195 ],
+   "minecraft:yellow_concrete[]" : [ 19184, 19185, 19186, 19187, 19188, 19189 ],
    "minecraft:yellow_concrete_powder[]" : [ 19280, 19281, 19282, 19283, 19284, 19285 ],
-   "minecraft:yellow_glazed_terracotta[facing_direction=2]" : [ 18878, 18879, 18880, 18881, 18882, 18883 ],
-   "minecraft:yellow_glazed_terracotta[facing_direction=3]" : [ 18884, 18885, 18886, 18887, 18888, 18889 ],
-   "minecraft:yellow_glazed_terracotta[facing_direction=4]" : [ 18890, 18891, 18892, 18893, 18894, 18895 ],
-   "minecraft:yellow_glazed_terracotta[facing_direction=5]" : [ 18896, 18897, 18898, 18899, 18900, 18901 ],
-   "minecraft:yellow_shulker_box[]" : [ 18638, 18639, 18640, 18641, 18642, 18643, 18644, 18645, 18646, 18647, 18648, 18649 ],
+   "minecraft:yellow_glazed_terracotta[facing_direction=2]" : [ 18872, 18873, 18874, 18875, 18876, 18877 ],
+   "minecraft:yellow_glazed_terracotta[facing_direction=3]" : [ 18878, 18879, 18880, 18881, 18882, 18883 ],
+   "minecraft:yellow_glazed_terracotta[facing_direction=4]" : [ 18884, 18885, 18886, 18887, 18888, 18889 ],
+   "minecraft:yellow_glazed_terracotta[facing_direction=5]" : [ 18890, 18891, 18892, 18893, 18894, 18895 ],
+   "minecraft:yellow_shulker_box[]" : [ 18632, 18633, 18634, 18635, 18636, 18637, 18638, 18639, 18640, 18641, 18642, 18643 ],
    "minecraft:yellow_stained_glass[]" : [ 8475, 8476, 8477, 8478, 8479, 8480 ],
    "minecraft:yellow_stained_glass_pane[]" : [ 12656, 12657, 12658, 12659, 12660, 12661 ],
    "minecraft:yellow_terracotta[]" : [ 12560, 12561, 12562, 12563, 12564, 12565 ],
