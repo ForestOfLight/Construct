@@ -28,6 +28,10 @@ export class BlockModelLookup {
         return (refs ?? []).map((index) => blockFaceTypes[index]);
     }
 
+    // Falls back to the most-specific blockModels entry whose properties are a subset of the
+    // live permutation's states, for blocks where the generated data omits properties Bedrock
+    // still reports (e.g. minecraft:stone's vestigial stone_type). Ties broken alphabetically
+    // by key for determinism.
     static #findPartialMatch(permutation) {
         if (!blockIdIndex)
             buildIndex();
@@ -48,7 +52,8 @@ export class BlockModelLookup {
                     break;
                 }
             }
-            if (allMatch && (!best || candidate.properties.size > best.properties.size))
+            if (allMatch && (!best || candidate.properties.size > best.properties.size ||
+                (candidate.properties.size === best.properties.size && candidate.key < best.key)))
                 best = candidate;
         }
         return best ? blockModels[best.key] : undefined;
