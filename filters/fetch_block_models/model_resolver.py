@@ -248,6 +248,27 @@ def resolve_elements(elements, textures):
 def resolve_model(mcmeta, model_id):
     """Returns a list of elements: [{'faces': {face_name: {'center','extent',
     'normal','uv','texture','rotation','cullface','tintindex'}}}]"""
+    elements, textures = _merge_chain(mcmeta, model_id)
+    return resolve_elements(elements, textures)
+
+
+def resolve_model_particle(mcmeta, model_id):
+    """The literal texture name the model's 'particle' slot resolves to, or
+    None if it declares no particle.
+
+    A model that draws nothing still names a particle - it's what Java shows
+    for the block when it has no geometry to show (barrier points at its own
+    item texture this way), which makes it the one honest stand-in available
+    for a block whose elements resolve to nothing."""
+    _, textures = _merge_chain(mcmeta, model_id)
+    if "particle" not in textures:
+        return None
+    return _resolve_texture_ref(textures["particle"], textures)
+
+
+def _merge_chain(mcmeta, model_id):
+    """Walks a model's parent chain and returns (elements, textures) with
+    parents applied first, so the most specific model wins."""
     chain = []
     current_id = model_id
     seen = set()
@@ -264,8 +285,7 @@ def resolve_model(mcmeta, model_id):
         textures.update(model.get("textures", {}))
         if "elements" in model:
             elements = model["elements"]
-
-    return resolve_elements(elements, textures)
+    return elements, textures
 
 
 def _resolve_texture_ref(ref, textures, depth=0):

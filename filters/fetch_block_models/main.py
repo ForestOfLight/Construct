@@ -21,7 +21,7 @@ from js_data import render  # noqa: E402
 
 from b2j_source import fetch_b2j, manifest_version, parse_java_state
 from block_entity_models import resolve_block_entity
-from blockstate_resolver import resolve_java_state
+from blockstate_resolver import resolve_java_state, resolve_particle_texture
 from mcmeta_source import McmetaSource
 from rotation import signed_angle
 from texture_atlas import compose_textures, tinted, TextureAtlas
@@ -159,14 +159,39 @@ _ROLL_HANDEDNESS_HORIZONTAL_FACE = 1
 # resolved to a genuinely white texture. The renderer draws these see-through
 # blue instead of solid, so a block the data failed on is obvious on sight
 # rather than looking like a legitimately blank block.
-WHITE_CUBE_FACES = [
-    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 180, "tintindex": -1, "missing": True},
-    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
-    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
-    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
-    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
-    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "texture": WHITE_TEXTURE, "uv": _FULL_UV, "roll": 0, "tintindex": -1, "missing": True},
+_CUBE_FACES = [
+    {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0], "uv": _FULL_UV, "roll": 180, "tintindex": -1},
+    {"center": [8, 0, 8], "width": 16, "height": 16, "normal": [0, -1, 0], "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [8, 8, 0], "width": 16, "height": 16, "normal": [0, 0, -1], "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [8, 8, 16], "width": 16, "height": 16, "normal": [0, 0, 1], "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [16, 8, 8], "width": 16, "height": 16, "normal": [1, 0, 0], "uv": _FULL_UV, "roll": 0, "tintindex": -1},
+    {"center": [0, 8, 8], "width": 16, "height": 16, "normal": [-1, 0, 0], "uv": _FULL_UV, "roll": 0, "tintindex": -1},
 ]
+
+WHITE_CUBE_FACES = [
+    {**face, "texture": WHITE_TEXTURE, "missing": True} for face in _CUBE_FACES
+]
+
+# Blocks Java draws with no model elements at all, but which are not broken
+# data - it renders them some other way (the fluid renderer) or not at all
+# (barrier and light are invisible in survival). Their model still names a
+# particle texture, and where that texture honestly represents the block, a
+# cube of it beats the see-through blue "no idea" cube.
+#
+# Two things qualify, and nothing else does. An "item/" particle means the
+# model is pointing at the block's own item icon, which is precisely the
+# stand-in Java itself shows for it - barrier, structure_void and the light
+# blocks (one icon per level). And the fluids below, whose still texture is
+# simply what the block looks like.
+#
+# Everything else that resolves to nothing is a block entity - skulls,
+# banners, chests, golem statues, decorated pots - drawn by entity code we
+# have no data for. Their particle is an unrelated block texture (a skull's
+# is soul sand), so standing in with it would draw a confidently wrong block
+# and hide that the shape is unimplemented. Those stay missing; a hardcoded
+# shape in block_entity_models.py is the way to fix one.
+_FLUID_BLOCKS = {"minecraft:water", "minecraft:lava", "minecraft:bubble_column"}
+_ITEM_TEXTURE_PREFIX = "item/"
 
 def _derive_width_height(extent, uv_u, uv_v):
     """Derives the quad's size from its fully-rotated extent vector, measured
@@ -275,7 +300,11 @@ def build_block_models(mcmeta, b2j, atlas):
         if not elements:
             elements = resolve_block_entity(java_block_id, properties)
         if not elements:
-            block_models[bedrock_state] = [dict(face) for face in WHITE_CUBE_FACES]
+            stand_in = _stand_in_cube(mcmeta, java_block_id, properties)
+            if stand_in:
+                for face in stand_in:
+                    atlas.add(mcmeta, face["texture"])
+            block_models[bedrock_state] = stand_in or [dict(face) for face in WHITE_CUBE_FACES]
             continue
         state_tint = _state_tint(java_block_id, properties)
         faces = []
@@ -307,6 +336,19 @@ def build_block_models(mcmeta, b2j, atlas):
             atlas.add(mcmeta, face["texture"])
         block_models[bedrock_state] = faces
     return block_models
+
+
+def _stand_in_cube(mcmeta, java_block_id, properties):
+    """A full cube of the block's particle texture, for a block whose model
+    draws nothing but that we can still represent honestly (see
+    _FLUID_BLOCKS). None if there's nothing fit to stand in with, leaving the
+    block to render as missing."""
+    texture = resolve_particle_texture(mcmeta, java_block_id, properties)
+    if texture is None:
+        return None
+    if not texture.startswith(_ITEM_TEXTURE_PREFIX) and java_block_id not in _FLUID_BLOCKS:
+        return None
+    return [{**face, "texture": texture} for face in _CUBE_FACES]
 
 
 def _state_tint(java_block_id, properties):

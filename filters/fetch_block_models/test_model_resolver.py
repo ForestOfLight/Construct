@@ -1,6 +1,6 @@
 import unittest
 
-from model_resolver import resolve_model
+from model_resolver import resolve_model, resolve_model_particle
 
 
 class FakeMcmeta:
@@ -274,6 +274,27 @@ class ResolveModelTest(unittest.TestCase):
         self.assertAlmostEqual(float(face["normal"][0]), math.sqrt(2) / 2, places=5)
         self.assertEqual(face["normal"][1], 0)
         self.assertAlmostEqual(float(face["normal"][2]), -math.sqrt(2) / 2, places=5)
+
+
+class ResolveModelParticleTest(unittest.TestCase):
+    def test_reads_the_particle_slot_of_an_elementless_model(self):
+        # barrier's whole block model: no elements, just a pointer at the
+        # texture Java shows for it
+        mcmeta = FakeMcmeta({
+            "block/barrier": {"textures": {"particle": "minecraft:item/barrier"}},
+        })
+        self.assertEqual(resolve_model_particle(mcmeta, "block/barrier"), "item/barrier")
+
+    def test_follows_a_variable_reference_and_the_parent_chain(self):
+        mcmeta = FakeMcmeta({
+            "block/cube_all": {"textures": {"particle": "#all"}},
+            "block/stone": {"parent": "block/cube_all", "textures": {"all": "block/stone"}},
+        })
+        self.assertEqual(resolve_model_particle(mcmeta, "block/stone"), "block/stone")
+
+    def test_model_without_a_particle_slot_has_none(self):
+        mcmeta = FakeMcmeta({"block/stone": {"textures": {"all": "block/stone"}}})
+        self.assertIsNone(resolve_model_particle(mcmeta, "block/stone"))
 
 
 if __name__ == "__main__":

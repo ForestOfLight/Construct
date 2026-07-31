@@ -389,6 +389,57 @@ class MergeCoincidentFacesTest(unittest.TestCase):
                 self.assertEqual(len(_merge_coincident_faces(faces)), 2)
 
 
+class ParticleTextureFallbackTest(unittest.TestCase):
+    """A block whose model draws nothing at all (barrier, light, the fluids)
+    is not broken data - Java just renders it some other way. Where the model
+    names a texture we can honestly stand in with, draw a cube of it rather
+    than the see-through blue 'we have no idea' cube."""
+
+    def _mcmeta(self, particle, block="barrier"):
+        return FakeMcmeta(
+            blockstates={block: {"variants": {"": {"model": f"block/{block}"}}}},
+            models={f"block/{block}": {"textures": {"particle": particle}}},
+        )
+
+    def _faces(self, particle, block="barrier"):
+        atlas = FakeAtlas()
+        b2j = {f"minecraft:{block}[]": f"minecraft:{block}"}
+        faces = build_block_models(self._mcmeta(particle, block), b2j, atlas)[f"minecraft:{block}[]"]
+        return faces, atlas
+
+    def test_item_texture_becomes_a_full_cube_of_that_texture(self):
+        faces, atlas = self._faces("item/barrier")
+        self.assertEqual(len(faces), 6)
+        self.assertEqual({face["texture"] for face in faces}, {"item/barrier"})
+        self.assertIn("item/barrier", atlas.added)
+        # it stood in for a block Java draws deliberately, so it isn't the
+        # unresolved-data cube and must not be flagged as one
+        for face in faces:
+            self.assertFalse(face.get("missing", False))
+        self.assertEqual({tuple(face["normal"]) for face in faces}, {
+            (0, 1, 0), (0, -1, 0), (0, 0, -1), (0, 0, 1), (1, 0, 0), (-1, 0, 0),
+        })
+
+    def test_fluids_stand_in_with_their_still_texture(self):
+        faces, _ = self._faces("block/water_still", block="water")
+        self.assertEqual({face["texture"] for face in faces}, {"block/water_still"})
+
+    def test_a_block_texture_on_anything_else_stays_a_missing_cube(self):
+        # a skull's particle is block/soul_sand: standing in with it would
+        # draw a soul sand cube and hide that the block entity is unmodelled
+        faces, _ = self._faces("block/soul_sand", block="skeleton_skull")
+        self.assertEqual(faces, WHITE_CUBE_FACES)
+
+    def test_a_model_with_no_particle_at_all_stays_a_missing_cube(self):
+        atlas = FakeAtlas()
+        mcmeta = FakeMcmeta(
+            blockstates={"barrier": {"variants": {"": {"model": "block/barrier"}}}},
+            models={"block/barrier": {"textures": {}}},
+        )
+        block_models = build_block_models(mcmeta, {"minecraft:barrier[]": "minecraft:barrier"}, atlas)
+        self.assertEqual(block_models["minecraft:barrier[]"], WHITE_CUBE_FACES)
+
+
 class RedstonePowerTintTest(unittest.TestCase):
     def _mcmeta(self):
         return FakeMcmeta(

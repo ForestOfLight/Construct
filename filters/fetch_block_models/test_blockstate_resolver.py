@@ -1,6 +1,6 @@
 import unittest
 
-from blockstate_resolver import resolve_java_state
+from blockstate_resolver import resolve_java_state, resolve_particle_texture
 
 
 class FakeMcmeta:
@@ -345,6 +345,37 @@ class ResolveJavaStateTest(unittest.TestCase):
         # symmetric on x/z, and "up" doesn't move under a y-axis spin)
         self.assertEqual(face["center"], [8, 8, 8])
         self.assertEqual(face["normal"], [0, 1, 0])
+
+
+class ResolveParticleTextureTest(unittest.TestCase):
+    def test_reads_the_particle_of_the_model_the_state_picks(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"light": {"variants": {
+                "level=0": {"model": "block/light_00"},
+                "level=15": {"model": "block/light_15"},
+            }}},
+            models={
+                "block/light_00": {"textures": {"particle": "item/light_00"}},
+                "block/light_15": {"textures": {"particle": "item/light_15"}},
+            },
+        )
+        self.assertEqual(
+            resolve_particle_texture(mcmeta, "minecraft:light", {"level": "15"}),
+            "item/light_15",
+        )
+
+    def test_multipart_takes_the_first_applicable_part(self):
+        mcmeta = FakeMcmeta(
+            blockstates={"water": {"multipart": [{"apply": {"model": "block/water"}}]}},
+            models={"block/water": {"textures": {"particle": "block/water_still"}}},
+        )
+        self.assertEqual(
+            resolve_particle_texture(mcmeta, "minecraft:water", {}), "block/water_still"
+        )
+
+    def test_block_with_no_blockstate_data_has_no_particle(self):
+        mcmeta = FakeMcmeta(blockstates={}, models={})
+        self.assertIsNone(resolve_particle_texture(mcmeta, "minecraft:nonexistent", {}))
 
 
 if __name__ == "__main__":

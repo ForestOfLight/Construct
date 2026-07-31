@@ -1,7 +1,12 @@
 """Resolves a specific Java block+properties combination to model elements,
 using misode/mcmeta blockstate JSON (variants or multipart)."""
 
-from model_resolver import resolve_model, rotate_uv_rect, uv_axes_for_normal
+from model_resolver import (
+    resolve_model,
+    resolve_model_particle,
+    rotate_uv_rect,
+    uv_axes_for_normal,
+)
 from rotation import rotate_point, rotate_vector, signed_angle
 
 BLOCKSTATE_PATH_TMPL = "assets/minecraft/blockstates/{name}.json"
@@ -15,16 +20,44 @@ def resolve_java_state(mcmeta, java_block_id, properties):
     path = BLOCKSTATE_PATH_TMPL.format(name=name)
     if not mcmeta.exists(path):
         return None
-    blockstate = mcmeta.read_json(path)
+    entries = _applicable_entries(mcmeta.read_json(path), properties)
+    if entries is None:
+        return None
+    elements = []
+    for entry in entries:
+        elements.extend(_apply_model_entry(mcmeta, entry))
+    return elements
 
+
+def resolve_particle_texture(mcmeta, java_block_id, properties):
+    """The particle texture of the model this state picks, or None if the
+    block has no blockstate data or its model declares no particle. Used to
+    stand in for a block whose model resolves to no elements at all - see
+    model_resolver.resolve_model_particle."""
+    name = java_block_id.split(":")[-1]
+    path = BLOCKSTATE_PATH_TMPL.format(name=name)
+    if not mcmeta.exists(path):
+        return None
+    entries = _applicable_entries(mcmeta.read_json(path), properties)
+    if not entries:
+        return None
+    entry = entries[0]
+    if isinstance(entry, list):
+        entry = entry[0]
+    return resolve_model_particle(mcmeta, entry["model"])
+
+
+def _applicable_entries(blockstate, properties):
+    """The blockstate's model entries Java would apply for `properties`, in
+    order, or None if the blockstate is neither variants nor multipart."""
     if "variants" in blockstate:
-        return _resolve_variant(mcmeta, blockstate["variants"], properties)
+        return _variant_entries(blockstate["variants"], properties)
     if "multipart" in blockstate:
-        return _resolve_multipart(mcmeta, blockstate["multipart"], properties)
+        return _multipart_entries(blockstate["multipart"], properties)
     return None
 
 
-def _resolve_variant(mcmeta, variants, properties):
+def _variant_entries(variants, properties):
     """Some vanilla blockstates (e.g. bell) omit properties that don't affect
     the model from their variant keys entirely (e.g. bell's keys only ever
     mention attachment/facing, never powered) - so an exact full-property-set
@@ -36,19 +69,17 @@ def _resolve_variant(mcmeta, variants, properties):
             continue
         conditions = dict(pair.split("=", 1) for pair in key.split(","))
         if all(properties.get(k) == v for k, v in conditions.items()):
-            return _apply_model_entry(mcmeta, entry)
+            return [entry]
     if "" in variants:
-        return _apply_model_entry(mcmeta, variants[""])
+        return [variants[""]]
     return []
 
 
-def _resolve_multipart(mcmeta, parts, properties):
-    elements = []
-    for part in parts:
-        condition = part.get("when")
-        if condition is None or _matches(condition, properties):
-            elements.extend(_apply_model_entry(mcmeta, part["apply"]))
-    return elements
+def _multipart_entries(parts, properties):
+    return [
+        part["apply"] for part in parts
+        if part.get("when") is None or _matches(part["when"], properties)
+    ]
 
 
 def _matches(condition, properties):
