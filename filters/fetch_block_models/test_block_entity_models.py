@@ -109,31 +109,38 @@ class ChestFaceUvTest(unittest.TestCase):
         # the two width-w side slots are the front and back, and Z is the
         # other axis the entity space flips
         faces = self._faces(0)
-        self.assertEqual(faces["north"], ([10.5, 5.25, 14.0, 7.75], "fy"))
-        self.assertEqual(faces["south"], ([3.5, 5.25, 7.0, 7.75], "fy"))
+        self.assertEqual(faces["north"], ([2.0, 5.25, 5.5, 7.75], "fxfy"))
+        self.assertEqual(faces["south"], ([9.0, 5.25, 12.5, 7.75], "fxfy"))
 
     def test_the_lid_takes_its_front_from_the_back_of_the_unwrap(self):
         faces = self._faces(1)
-        self.assertEqual(faces["north"], ([10.5, 11.25, 14.0, 12.5], "fy"))
-        self.assertEqual(faces["south"], ([3.5, 11.25, 7.0, 12.5], "fy"))
+        self.assertEqual(faces["north"], ([2.0, 11.25, 5.5, 12.5], "fxfy"))
+        self.assertEqual(faces["south"], ([9.0, 11.25, 12.5, 12.5], "fxfy"))
 
-    def test_every_side_face_is_mirrored_back_the_right_way_up(self):
-        # flipping Y turns every upright face upside down, whichever slot it
-        # ends up sampling - the sides keep their slot and mirror in v
-        base, lid = self._faces(0), self._faces(1)
-        self.assertEqual(base["east"], ([0.0, 5.25, 3.5, 7.75], "fy"))
-        self.assertEqual(base["west"], ([7.0, 5.25, 10.5, 7.75], "fy"))
-        self.assertEqual(lid["east"], ([0.0, 11.25, 3.5, 12.5], "fy"))
-        self.assertEqual(lid["west"], ([7.0, 11.25, 10.5, 12.5], "fy"))
+    def test_every_upright_face_is_mirrored_both_ways(self):
+        # entity space is this pipeline's block space turned about, so an
+        # upright face keeps its slot but reads it upside down and back to
+        # front - the top and bottom faces just swap slots instead
+        base, lid, lock = self._faces(0), self._faces(1), self._faces(2)
+        self.assertEqual(base["east"], ([12.5, 5.25, 16.0, 7.75], "fxfy"))
+        self.assertEqual(base["west"], ([5.5, 5.25, 9.0, 7.75], "fxfy"))
+        self.assertEqual(lid["east"], ([12.5, 11.25, 16.0, 12.5], "fxfy"))
+        self.assertEqual(lid["west"], ([5.5, 11.25, 9.0, 12.5], "fxfy"))
+        for name in ("north", "east", "south", "west"):
+            self.assertEqual(lock[name][1], "fxfy", name)
 
-    def test_every_lock_face_is_flipped_the_right_way_up(self):
-        # the lock is small enough that only its own box came out upside
-        # down; each face samples the same slot, mirrored in v
+    def test_no_face_asks_for_the_same_mirror_twice(self):
+        # a mirror pair is spelled one way only, so the atlas keeps one copy
+        # of it rather than one per spelling
+        for element in range(3):
+            for name, (_uv, flip) in self._faces(element).items():
+                with self.subTest(element=element, face=name):
+                    self.assertIn(flip, ("", "fx", "fy", "fxfy"))
+
+    def test_the_lock_reads_the_same_way_as_the_boxes_it_sits_on(self):
+        # the lock is its own box in the same unwrap, so it takes the flip
+        # the other two do rather than anything of its own
         faces = self._faces(2)
-        self.assertEqual(faces["north"], ([0.25, 14.75, 0.75, 15.75], "fy"))
-        self.assertEqual(faces["east"], ([0.0, 14.75, 0.25, 15.75], "fy"))
-        self.assertEqual(faces["south"], ([1.0, 14.75, 1.5, 15.75], "fy"))
-        self.assertEqual(faces["west"], ([0.75, 14.75, 1.0, 15.75], "fy"))
         self.assertEqual(faces["up"], ([15.25, 0.0, 15.75, 0.25], "fx"))
         self.assertEqual(faces["down"], ([14.75, 15.75, 15.25, 16.0], "fxfy"))
 
