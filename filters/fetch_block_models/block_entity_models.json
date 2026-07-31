@@ -19,46 +19,50 @@
           "north": {
             "uv": [
               10.5,
-              8.25,
+              5.25,
               14.0,
-              10.75
+              7.75
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "east": {
             "uv": [
               0.0,
-              8.25,
+              5.25,
               3.5,
-              10.75
+              7.75
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "south": {
             "uv": [
               3.5,
-              8.25,
+              5.25,
               7.0,
-              10.75
+              7.75
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "west": {
             "uv": [
               7.0,
-              8.25,
+              5.25,
               10.5,
-              10.75
+              7.75
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "up": {
             "uv": [
@@ -100,47 +104,51 @@
         "faces": {
           "north": {
             "uv": [
-              3.5,
-              3.5,
-              7.0,
-              4.75
+              10.5,
+              11.25,
+              14.0,
+              12.5
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "east": {
             "uv": [
               0.0,
+              11.25,
               3.5,
-              3.5,
-              4.75
+              12.5
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "south": {
             "uv": [
-              10.5,
               3.5,
-              14.0,
-              4.75
+              11.25,
+              7.0,
+              12.5
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "west": {
             "uv": [
               7.0,
-              3.5,
+              11.25,
               10.5,
-              4.75
+              12.5
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1
+            "tintindex": -1,
+            "flip": "fy"
           },
           "up": {
             "uv": [

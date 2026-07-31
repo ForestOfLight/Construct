@@ -105,12 +105,26 @@ class ChestFaceUvTest(unittest.TestCase):
         self.assertEqual(faces["up"], ([5.5, 0.0, 9.0, 3.5], "fx"))
         self.assertEqual(faces["down"], ([9.0, 12.5, 12.5, 16.0], "fxfy"))
 
-    def test_the_base_takes_its_front_from_the_front_of_the_unwrap(self):
+    def test_the_base_takes_its_front_from_the_back_of_the_unwrap(self):
         # the two width-w side slots are the front and back, and Z is the
         # other axis the entity space flips
         faces = self._faces(0)
-        self.assertEqual(faces["north"][0], [10.5, 8.25, 14.0, 10.75])
-        self.assertEqual(faces["south"][0], [3.5, 8.25, 7.0, 10.75])
+        self.assertEqual(faces["north"], ([10.5, 5.25, 14.0, 7.75], "fy"))
+        self.assertEqual(faces["south"], ([3.5, 5.25, 7.0, 7.75], "fy"))
+
+    def test_the_lid_takes_its_front_from_the_back_of_the_unwrap(self):
+        faces = self._faces(1)
+        self.assertEqual(faces["north"], ([10.5, 11.25, 14.0, 12.5], "fy"))
+        self.assertEqual(faces["south"], ([3.5, 11.25, 7.0, 12.5], "fy"))
+
+    def test_every_side_face_is_mirrored_back_the_right_way_up(self):
+        # flipping Y turns every upright face upside down, whichever slot it
+        # ends up sampling - the sides keep their slot and mirror in v
+        base, lid = self._faces(0), self._faces(1)
+        self.assertEqual(base["east"], ([0.0, 5.25, 3.5, 7.75], "fy"))
+        self.assertEqual(base["west"], ([7.0, 5.25, 10.5, 7.75], "fy"))
+        self.assertEqual(lid["east"], ([0.0, 11.25, 3.5, 12.5], "fy"))
+        self.assertEqual(lid["west"], ([7.0, 11.25, 10.5, 12.5], "fy"))
 
     def test_every_lock_face_is_flipped_the_right_way_up(self):
         # the lock is small enough that only its own box came out upside
