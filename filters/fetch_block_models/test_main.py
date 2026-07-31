@@ -6,6 +6,7 @@ from PIL import Image
 
 from main import (
     _derive_roll,
+    _facing,
     inset_by_half_texel,
     REDSTONE_POWER_TINTS,
     white_swatch,
@@ -16,6 +17,7 @@ from main import (
     project_uv,
     WHITE_CUBE_FACES,
 )
+from rotation import rotate_vector
 from texture_atlas import tinted
 
 
@@ -345,6 +347,82 @@ class DeriveRollTest(unittest.TestCase):
         # its mirror on the far side of the block turns the other way
         east, reads_north = [1, 0, 0], [0, 0, 1]
         self.assertEqual(_derive_roll(east, reads_north), -90)
+
+
+class FacingInTheFaceTypeTableTest(unittest.TestCase):
+    def test_an_up_face_is_published_pointing_the_other_way(self):
+        block_models = {"a": [{
+            "center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
+            "roll": 180, "tintindex": -1, "uv": {"x": 0, "y": 0, "w": 16, "h": 16},
+        }]}
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertEqual(face_types[result["a"][0]]["facing"], [0, -1, 0])
+
+    def test_a_diagonal_face_is_published_pointing_where_it_looks(self):
+        normal = [0, Decimal("-0.707107"), Decimal("-0.707107")]
+        block_models = {"a": [{
+            "center": [8, 8, 8], "width": 2, "height": 10, "normal": normal,
+            "roll": 0, "tintindex": -1, "uv": {"x": 0, "y": 0, "w": 16, "h": 16},
+        }]}
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertEqual(face_types[result["a"][0]]["facing"], normal)
+
+
+class DiagonalFaceTest(unittest.TestCase):
+    """A face left pointing diagonally by an element rotation (a lever's
+    handle, a lectern's rest, a tripwire hook) is the case the y-negation
+    that produces a facing direction cannot survive: negating y is a
+    reflection, and a reflection only lands back on the face's own axis when
+    the normal is axis-aligned."""
+
+    def _tilt(self, vec, degrees):
+        return [float(c) for c in rotate_vector(vec, "x", degrees)]
+
+    def test_a_diagonal_face_is_sent_the_way_it_actually_points(self):
+        # y-negating this gives a direction perpendicular to the real one,
+        # so the quad was drawn 90 degrees out of its own plane
+        diagonal = [0, -0.707107, -0.707107]
+        self.assertEqual([float(c) for c in _facing(diagonal)], diagonal)
+
+    def test_a_straight_up_or_down_face_is_still_sent_reversed(self):
+        # unchanged: this is the one case the negation was ever exercised on,
+        # and direction_z draws these backwards without it
+        self.assertEqual([float(c) for c in _facing([0, 1, 0])], [0, -1, 0])
+        self.assertEqual([float(c) for c in _facing([0, -1, 0])], [0, 1, 0])
+
+    def test_a_horizontal_face_is_sent_unchanged(self):
+        self.assertEqual([float(c) for c in _facing([0, 0, -1])], [0, 0, -1])
+
+    def test_a_tilted_side_face_reads_up_its_own_slope(self):
+        # Tilting a north face about x carries its texture's v axis with it,
+        # and world-up projected into the tilted plane tilts by exactly as
+        # much - so the texture is already where the engine leaves it, at
+        # every angle. Held for a lever (-45), a lectern's rest (-22.5) and
+        # anything between.
+        for degrees in (-22.5, -45, -67.5, 30):
+            with self.subTest(degrees=degrees):
+                normal = self._tilt([0, 0, -1], degrees)
+                uv_v = self._tilt([0, -1, 0], degrees)
+                self.assertEqual(_derive_roll(normal, uv_v), 0)
+
+    def test_a_tilted_top_face_stays_half_a_turn_out_like_a_flat_one(self):
+        # the same reasoning as the flat up face: Java's up-face v runs the
+        # opposite way to the engine's own choice, and tilting turns both
+        for degrees in (-22.5, -45, -67.5):
+            with self.subTest(degrees=degrees):
+                normal = self._tilt([0, 1, 0], degrees)
+                uv_v = self._tilt([0, 0, 1], degrees)
+                self.assertEqual(abs(_derive_roll(normal, uv_v)), 180)
+
+    def test_a_skew_face_takes_a_real_angle_rather_than_collapsing(self):
+        # A chain laid horizontal: its planes are turned 45 about y by the
+        # model, then a quarter turn about x by the blockstate, which leaves
+        # a normal skew to every axis. Measured about the y-negated normal
+        # this could only ever come out 0 or 180, because that axis is not
+        # perpendicular to the face's texture-up.
+        normal = [0.707107, 0.707107, 0]
+        uv_v = [0, 0, -1]
+        self.assertEqual(_derive_roll(normal, uv_v), 90)
 
 
 class MergeCoincidentFacesTest(unittest.TestCase):
@@ -683,7 +761,11 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
         self.assertEqual(face_type["center"], [1, 2, 3])
         self.assertEqual(face_type["width"], 3)
         self.assertEqual(face_type["height"], 4)
-        self.assertEqual(face_type["normal"], [1, 0, 0])
+        # the table carries the direction to point the billboard, resolved
+        # from the face's normal (identical to it for anything but a face
+        # pointing straight up or down - see _facing)
+        self.assertEqual(face_type["facing"], [1, 0, 0])
+        self.assertNotIn("normal", face_type)
         self.assertEqual(face_type["roll"], 90)
         self.assertEqual(face_type["tintindex"], 0)
         self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})

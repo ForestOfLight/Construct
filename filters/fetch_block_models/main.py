@@ -114,6 +114,13 @@ REDSTONE_POWER_TINTS = [
 # reading south (+z) instead. That is exactly why every top and bottom
 # texture currently faces south regardless of which block it belongs to:
 # Java's up face reads north, so it is a full 180 degrees out.
+#
+# A tilted face falls under the first of those, not the second: it still has
+# a world-up to lean on, just not one lying in its own plane, so the engine's
+# choice is world-up flattened into that plane (see _derive_roll). Reading it
+# as the second case instead - which a "more vertical than not" test does -
+# measures the roll against a direction the face doesn't contain, and is what
+# collapsed every 45-degree face's roll to a meaningless 0 or 180.
 _ENGINE_UP_HORIZONTAL_FACE = [0, 1, 0]
 _ENGINE_UP_VERTICAL_FACE = [0, 0, 1]
 # Which way a positive Molang rotation actually spins the quad, relative to
@@ -235,13 +242,26 @@ def _derive_roll(normal, uv_v):
     about the normal itself, so the sign follows the same axis the engine
     spins around."""
     facing = _facing(normal)
-    vertical = _is_vertical(normal)
-    engine_up = (_ENGINE_UP_VERTICAL_FACE if vertical
-                 else _ENGINE_UP_HORIZONTAL_FACE)
-    handedness = (_ROLL_HANDEDNESS_VERTICAL_FACE if vertical
-                  else _ROLL_HANDEDNESS_HORIZONTAL_FACE)
+    if _is_vertical(normal):
+        engine_up = _ENGINE_UP_VERTICAL_FACE
+        handedness = _ROLL_HANDEDNESS_VERTICAL_FACE
+    else:
+        # World-up flattened into the quad's own plane. For an upright face
+        # that is world-up itself, which is why this was written as the bare
+        # constant and went unnoticed; for a tilted face it leans with the
+        # face, and using the unflattened constant measured the angle in a
+        # plane the face doesn't lie in.
+        engine_up = _flatten_into_plane(_ENGINE_UP_HORIZONTAL_FACE, facing)
+        handedness = _ROLL_HANDEDNESS_HORIZONTAL_FACE
     texture_up = [-Decimal(c) for c in uv_v]
     return _normalize_roll(handedness * signed_angle(engine_up, texture_up, facing))
+
+
+def _flatten_into_plane(vec, normal):
+    """`vec` with its component along `normal` (a unit vector) removed, so
+    it lies in the plane `normal` is perpendicular to."""
+    along = sum(Decimal(a) * Decimal(b) for a, b in zip(vec, normal))
+    return [Decimal(a) - along * Decimal(b) for a, b in zip(vec, normal)]
 
 
 def _normalize_roll(degrees):
@@ -264,15 +284,31 @@ def _normalize_roll(degrees):
 
 
 def _facing(normal):
-    """The direction the renderer actually hands the particle, which is the
-    outward normal with its y component negated - see the note in
-    BlockPreviewVerificationLevelParticleRender#renderFace on why up/down
-    faces render backwards without it."""
-    return [Decimal(normal[0]), -Decimal(normal[1]), Decimal(normal[2])]
+    """The direction the renderer hands the particle: the face's own outward
+    normal, reversed for a face pointing straight up or down.
+
+    This used to be "the normal with its y component negated", which is the
+    same thing for every face that ever exercised it - a horizontal normal
+    has no y to negate, and a vertical one is exactly reversed by it - but
+    only for those. Negating y is a reflection, not a rotation, and for any
+    other normal it lands on a direction the face never pointed: a 45-degree
+    face's negated normal is perpendicular to the real one, so the quad was
+    drawn a quarter turn out of its own plane. That is what left every
+    diagonal face - levers, lecterns, tripwire hooks, horizontal chains,
+    fire - visibly mismodelled while cross-shaped plants, whose planes are
+    turned about y and so keep a horizontal normal, came out fine."""
+    if _is_vertical(normal):
+        return [-Decimal(c) for c in normal]
+    return [Decimal(c) for c in normal]
+
+
+# A direction billboard has no world-up to orient against only when it points
+# exactly along it. Anything else, however steeply tilted, still has one.
+_VERTICAL_TOLERANCE = Decimal("0.999999")
 
 
 def _is_vertical(normal):
-    return abs(Decimal(normal[1])) >= Decimal("0.5")
+    return abs(Decimal(normal[1])) >= _VERTICAL_TOLERANCE
 
 
 def root_dir():
@@ -466,8 +502,13 @@ def build_face_types_and_refs(block_models):
         for face in faces:
             uv = face["uv"]
             missing = face.get("missing", False)
+            # The renderer is handed a direction to point the billboard, not
+            # the face's outward normal - they differ for a face pointing
+            # straight up or down (see _facing). Resolving it here keeps the
+            # rule in one place, next to the roll that is measured about it.
+            facing = _facing(face["normal"])
             key = (
-                tuple(face["center"]), face["width"], face["height"], tuple(face["normal"]),
+                tuple(face["center"]), face["width"], face["height"], tuple(facing),
                 face["roll"], face["tintindex"],
                 uv["x"], uv["y"], uv["w"], uv["h"], missing,
             )
@@ -477,7 +518,7 @@ def build_face_types_and_refs(block_models):
                     "center": face["center"],
                     "width": face["width"],
                     "height": face["height"],
-                    "normal": face["normal"],
+                    "facing": facing,
                     "roll": face["roll"],
                     "tintindex": face["tintindex"],
                     "uv": uv,

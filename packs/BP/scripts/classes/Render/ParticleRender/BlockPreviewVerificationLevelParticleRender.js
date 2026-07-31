@@ -83,16 +83,21 @@ export class BlockPreviewVerificationLevelParticleRender {
             ? { ...face.uv, x: DEBUG_CONFIG.render_all_textures_as.u, y: DEBUG_CONFIG.render_all_textures_as.v }
             : face.uv;
 
-        // direction_z billboards render up/down-normal faces backwards
-        // unless the y component is negated - confirmed against the old
-        // controller-based vertical_face_blend particle, the established
-        // (and working) reference implementation, which sent -1 for the top
-        // face and +1 for the bottom face. Horizontal-normal faces don't
-        // need this (its lateral_face_blend counterpart sent the raw
-        // outward vector unchanged).
-        molang.setFloat("nx", face.normal[0]);
-        molang.setFloat("ny", -face.normal[1]);
-        molang.setFloat("nz", face.normal[2]);
+        // Already the direction to point the billboard, not the face's
+        // outward normal: the pipeline reverses a face pointing straight up
+        // or down, because direction_z renders those backwards otherwise
+        // (confirmed against the old controller-based vertical_face_blend
+        // particle, the established reference implementation, which sent -1
+        // for the top face and +1 for the bottom face).
+        //
+        // This used to be done here, as "negate the normal's y". That is the
+        // same thing only for faces pointing along an axis, and it drew every
+        // diagonal face - levers, lecterns, tripwire hooks - a quarter turn
+        // out of its own plane. It belongs with the roll, which has to be
+        // measured about this very direction, so both now come ready to use.
+        molang.setFloat("nx", face.facing[0]);
+        molang.setFloat("ny", face.facing[1]);
+        molang.setFloat("nz", face.facing[2]);
         // A direction billboard only takes a facing direction, so the engine
         // picks the quad's up vector itself and the texture lands at whatever
         // roll that produces - world-up for a side face (already right), but a

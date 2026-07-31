@@ -5,13 +5,17 @@ import { whiteUvRect } from "../../blockAtlas";
 // world. Nothing is wrong with these faces - they're a deliberate shape, so
 // they carry no `missing` flag and are drawn in the verification level's own
 // color.
+// `facing` is the direction the billboard is pointed, which for the top and
+// bottom faces is the reverse of the way the face actually looks - see
+// _facing in filters/fetch_block_models/main.py, which is what generates the
+// same field for every real block's faces.
 export const PLAIN_CUBE_FACES = [
-    { center: [8, 16, 8], width: 16, height: 16, normal: [0, 1, 0], roll: 180, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 0, 8], width: 16, height: 16, normal: [0, -1, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 8, 0], width: 16, height: 16, normal: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 8, 16], width: 16, height: 16, normal: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [16, 8, 8], width: 16, height: 16, normal: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [0, 8, 8], width: 16, height: 16, normal: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 16, 8], width: 16, height: 16, facing: [0, -1, 0], roll: 180, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 0, 8], width: 16, height: 16, facing: [0, 1, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 8, 0], width: 16, height: 16, facing: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 8, 16], width: 16, height: 16, facing: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [16, 8, 8], width: 16, height: 16, facing: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [0, 8, 8], width: 16, height: 16, facing: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
 ];
 
 // Mirrors filters/fetch_block_models/main.py's WHITE_CUBE_FACES: used when a
