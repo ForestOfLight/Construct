@@ -276,6 +276,47 @@ class ResolveModelTest(unittest.TestCase):
         self.assertAlmostEqual(float(face["normal"][2]), -math.sqrt(2) / 2, places=5)
 
 
+class ReversedUvTest(unittest.TestCase):
+    """Java writes a mirrored face by reversing its uv rect: its vertices
+    take (u0,v0) (u0,v1) (u1,v1) (u1,v0) in a fixed geometric order, so
+    swapping a pair reflects the texture across that axis. The observer's
+    top face is written [0,16,16,0] for exactly that reason."""
+
+    def _face(self, uv):
+        mcmeta = FakeMcmeta({"block/x": {"textures": {}, "elements": [{
+            "from": [0, 0, 0], "to": [16, 16, 16],
+            "faces": {"up": {"uv": uv, "texture": "block/t"}},
+        }]}})
+        return resolve_model(mcmeta, "block/x")[0]["faces"]["up"]
+
+    def test_a_forward_rect_is_left_alone(self):
+        face = self._face([0, 0, 16, 16])
+        self.assertEqual(face["flip"], "")
+        self.assertEqual([float(c) for c in face["uv"]], [0, 0, 16, 16])
+
+    def test_a_v_reversed_rect_asks_for_a_vertically_mirrored_texture(self):
+        face = self._face([0, 16, 16, 0])
+        self.assertEqual(face["flip"], "fy")
+        # the same region, addressed in the mirrored copy's coordinates
+        self.assertEqual([float(c) for c in face["uv"]], [0, 0, 16, 16])
+
+    def test_a_u_reversed_rect_asks_for_a_horizontally_mirrored_texture(self):
+        face = self._face([16, 0, 0, 16])
+        self.assertEqual(face["flip"], "fx")
+        self.assertEqual([float(c) for c in face["uv"]], [0, 0, 16, 16])
+
+    def test_a_rect_reversed_both_ways_asks_for_both_mirrors(self):
+        face = self._face([16, 16, 0, 0])
+        self.assertEqual(face["flip"], "fxfy")
+
+    def test_a_partial_rect_keeps_pointing_at_its_own_region(self):
+        # mirroring the whole texture moves the region too: rows 4-12 of a
+        # 16-tall texture mirror to rows 4-12, but rows 2-6 mirror to 10-14
+        face = self._face([0, 6, 16, 2])
+        self.assertEqual(face["flip"], "fy")
+        self.assertEqual([float(c) for c in face["uv"]], [0, 10, 16, 14])
+
+
 class ResolveModelParticleTest(unittest.TestCase):
     def test_reads_the_particle_slot_of_an_elementless_model(self):
         # barrier's whole block model: no elements, just a pointer at the

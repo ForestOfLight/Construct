@@ -123,8 +123,11 @@ class TextureAtlas:
         self._images[name] = image
 
     def _load(self, mcmeta, name):
+        # Built as base|flip@tint (see main.py), so the tint comes off first.
+        # The redstone dot's down face is both: its uv is written back-to-
+        # front, and it takes the power tint.
+        name, tint = _split_tint(name)
         base_name, flip = name.split("|", 1) if "|" in name else (name, "")
-        base_name, tint = _split_tint(base_name)
         raw = mcmeta.read_bytes(TEXTURE_PATH_TMPL.format(name=base_name))
         image = Image.open(io.BytesIO(raw)).convert("RGBA")
         width, height = image.size

@@ -48,10 +48,10 @@ Hardcoding overrides for specific blocks is not ideal, but if the mcmeta data is
 
 ~~#21: Diagonal faces are modeled incorrectly in many cases. Example blocks: lecturn, tripwire hook, lever, horizontal chain, fire. Crosses like for flowers, grass, and lanterns are working correctly. The textures look to be correct in all cases.~~
 
-#22: The top face texture on observers is rotated 180 degrees from where it should be. This is true for every rotation. In this case, the top face means the face that is normally on the top of the block if the front of the observer is pointing N/S/E/W. 
+~~#22: The top face texture on observers is rotated 180 degrees from where it should be. This is true for every rotation. In this case, the top face means the face that is normally on the top of the block if the front of the observer is pointing N/S/E/W.~~ Java writes a mirrored face by reversing its uv rect - its vertices take (u0,v0) (u0,v1) (u1,v1) (u1,v0) in a fixed order, so swapping a pair reflects the texture across that axis - and the observer's top face is written `[0,16,16,0]` for exactly that reason. The pipeline sorted a rect's corners when projecting it into the atlas, dropping the mirror. Reversed rects are now resolved into the same `flip` the hardcoded block-entity shapes already use, which samples a pre-mirrored copy from the atlas. 456 faces in mcmeta are written this way, so this also moves doors, trapdoors, coral fans, cocoa, dripleaf, hanging signs and ~170 other ids.
 
 #23: Hanging signs are rendered as a missing block in every permutation.
 
-~~#24: Copper chests currently do not have a model (show up as missing), but can use the same model as a normal chest.~~ They now map to the same hardcoded chest shape as normal/trapped/ender chests, with one texture per oxidation stage - mcmeta ships `entity/chest/copper`, `copper_exposed`, `copper_weathered` and `copper_oxidized`. Waxing only stops a chest oxidizing further, so each waxed id draws as the stage it was waxed at. 8 block ids, 32 states.
+~~#24: Copper chests currently do not have a model (show up as missing), but can use the same model as a normal chest.~~
 
 #25: Is there a bubble texture in the mcmeta data? If so, use that for the bubble column block instead of the water texture. Otherwise, keep the water texture.

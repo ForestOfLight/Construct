@@ -84,6 +84,35 @@ def default_uv(elem_from, elem_to, face_name):
     return uv
 
 
+_UV_MAX = Decimal(16)
+
+
+def _unmirror_uv(uv):
+    """Splits a uv rect into a forward-running rect plus the mirroring it
+    asked for, as a 'flip' the atlas can satisfy with a pre-mirrored copy of
+    the texture (see texture_atlas and main.py's _FLIP_TRANSFORMS).
+
+    A Java face's four vertices take (u0,v0) (u0,v1) (u1,v1) (u1,v0) in a
+    fixed geometric order, so a rect written back-to-front on an axis - the
+    observer's top face is [0,16,16,0] - reflects the texture across that
+    axis. Nothing downstream can express that: the rect's corners get sorted
+    the moment it is projected into the atlas, which silently dropped the
+    mirror and drew those faces the right way round.
+
+    The rect has to move with the mirror, because the whole texture is
+    mirrored, not just the part this face samples: rows 2-6 of a 16-tall
+    texture end up at rows 10-14 of the flipped copy."""
+    u0, v0, u1, v1 = (Decimal(c) for c in uv)
+    flip = ""
+    if u0 > u1:
+        flip += "fx"
+        u0, u1 = _UV_MAX - u0, _UV_MAX - u1
+    if v0 > v1:
+        flip += "fy"
+        v0, v1 = _UV_MAX - v0, _UV_MAX - v1
+    return [u0, v0, u1, v1], flip
+
+
 def load_model(mcmeta, model_id):
     path = model_id.split(":")[-1]
     return mcmeta.read_json(MODEL_PATH_TMPL.format(path=path))
@@ -211,6 +240,7 @@ def resolve_elements(elements, textures):
         resolved_faces = {}
         for face_name, face in element.get("faces", {}).items():
             uv = face.get("uv") or default_uv(element["from"], element["to"], face_name)
+            uv, uv_flip = _unmirror_uv(uv)
             center, extent, normal = _face_geometry(element["from"], element["to"], face_name)
             uv_u, uv_v = _uv_axes(face_name, face.get("rotation", 0))
             center, extent, normal, uv_u, uv_v = _apply_element_rotation(
@@ -239,7 +269,7 @@ def resolve_elements(elements, textures):
                 # the sides, which our uv pipeline can't express as a signed
                 # rect - "flip" ("fx"/"fy"/"fxfy") instead asks main.py to
                 # sample a pre-mirrored copy of the texture for this face.
-                "flip": face.get("flip", ""),
+                "flip": face.get("flip", "") + uv_flip,
             }
         resolved_elements.append({"faces": resolved_faces})
     return resolved_elements

@@ -166,6 +166,21 @@ class TextureAtlasTest(unittest.TestCase):
         rect = manifest[name]
         self.assertEqual(packed.getpixel((rect["x"], rect["y"]))[:3], (255, 51, 0))
 
+    def test_a_name_can_carry_both_a_mirror_and_a_tint(self):
+        # the redstone dot's down face is exactly this: a uv rect written
+        # back-to-front, on a face that also takes the power tint
+        left = Image.new("RGBA", (2, 1), (255, 255, 255, 255))
+        left.putpixel((0, 0), (128, 128, 128, 255))
+        mcmeta = FakeMcmeta({"block/redstone_dust_dot": left})
+        atlas = TextureAtlas()
+        name = tinted("block/redstone_dust_dot|fx", (255, 51, 0))
+        atlas.add(mcmeta, name)
+        packed, manifest = atlas.pack()
+        rect = manifest[name]
+        # mirrored, so the white texel is now on the left, and tinted
+        self.assertEqual(packed.getpixel((rect["x"], rect["y"]))[:3], (255, 51, 0))
+        self.assertEqual(packed.getpixel((rect["x"] + 1, rect["y"]))[:3], (128, 25, 0))
+
     def test_add_image_inserts_a_texture_not_from_mcmeta(self):
         atlas = TextureAtlas()
         atlas.add_image("white", _solid((16, 16), (255, 255, 255, 255)))
