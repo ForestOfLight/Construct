@@ -46,6 +46,21 @@ _BLOCK_ENTITY_MAPPING = {
     "minecraft:end_portal": {"shape": "end_portal", "textures": {}},
     "minecraft:end_gateway": {"shape": "end_gateway", "textures": {}},
 }
+# Copper chests are the same chest renderer with one texture per oxidation
+# stage. Waxing only stops a chest oxidizing further, so a waxed chest is
+# drawn exactly like the stage it was waxed at - hence both ids per texture.
+_COPPER_CHEST_TEXTURES = {
+    "copper_chest": "entity/chest/copper",
+    "exposed_copper_chest": "entity/chest/copper_exposed",
+    "weathered_copper_chest": "entity/chest/copper_weathered",
+    "oxidized_copper_chest": "entity/chest/copper_oxidized",
+}
+for _chest, _texture in _COPPER_CHEST_TEXTURES.items():
+    for _id in (_chest, f"waxed_{_chest}"):
+        _BLOCK_ENTITY_MAPPING[f"minecraft:{_id}"] = {
+            "shape": "chest", "textures": {"main": _texture},
+        }
+
 _DYE_COLORS = [
     "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
     "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",

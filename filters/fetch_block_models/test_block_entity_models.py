@@ -26,6 +26,39 @@ class ResolveBlockEntityTest(unittest.TestCase):
         textures = {face["texture"] for el in elements for face in el["faces"].values()}
         self.assertEqual(textures, {"entity/chest/ender"})
 
+    def test_copper_chests_use_the_chest_shape_at_each_oxidation_stage(self):
+        # Java draws these with the same chest renderer and ships one chest
+        # texture per stage, so the only thing that varies is which
+        for block, texture in (
+            ("copper_chest", "entity/chest/copper"),
+            ("exposed_copper_chest", "entity/chest/copper_exposed"),
+            ("weathered_copper_chest", "entity/chest/copper_weathered"),
+            ("oxidized_copper_chest", "entity/chest/copper_oxidized"),
+        ):
+            with self.subTest(block=block):
+                elements = resolve_block_entity(f"minecraft:{block}", {"facing": "north"})
+                self.assertEqual(len(elements), 3)
+                textures = {face["texture"] for el in elements for face in el["faces"].values()}
+                self.assertEqual(textures, {texture})
+
+    def test_waxing_a_copper_chest_does_not_change_how_it_looks(self):
+        # wax only stops it oxidizing further; Java draws a waxed chest with
+        # the texture for the stage it is waxed at
+        for block, texture in (
+            ("waxed_copper_chest", "entity/chest/copper"),
+            ("waxed_exposed_copper_chest", "entity/chest/copper_exposed"),
+            ("waxed_weathered_copper_chest", "entity/chest/copper_weathered"),
+            ("waxed_oxidized_copper_chest", "entity/chest/copper_oxidized"),
+        ):
+            with self.subTest(block=block):
+                elements = resolve_block_entity(f"minecraft:{block}", {"facing": "north"})
+                textures = {face["texture"] for el in elements for face in el["faces"].values()}
+                self.assertEqual(textures, {texture})
+
+    def test_a_copper_chest_turns_with_its_facing_like_any_other(self):
+        east = resolve_block_entity("minecraft:copper_chest", {"facing": "east"})
+        self.assertEqual(east[2]["faces"]["north"]["normal"], [1, 0, 0])
+
     def test_banner_is_not_a_hardcoded_shape(self):
         # banner color lives in block-entity NBT, not the blockstate, so
         # the bedrock<->java mapping can't pick a real per-color texture -
