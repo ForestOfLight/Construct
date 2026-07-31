@@ -63,6 +63,23 @@ def _normalize(vec):
     return [c / length for c in values]
 
 
+def element_angle(axis, degrees):
+    """Converts a Java model element's "rotation" angle into the convention
+    rotate_vector turns in. An element's rotation is right-handed about its
+    axis, but rotate_vector's Y turns the other way round, because it encodes
+    the blockstate-level "y" instead (see its note), so a Y angle has to be
+    flipped on the way in. X and Z already agree.
+
+    Both directions are pinned by the hanging sign templates.
+    block/template_hanging_sign_rot_0 turns its chain quads +-45 degrees about
+    Y to bring them to the two ends of the board, into the board's own plane;
+    turned the other way they land on the block's centre line instead. And
+    Java draws rotation=2 - 45 degrees clockwise from south - with
+    block/template_attached_hanging_sign_rot_2, which turns a south-facing
+    board -45 degrees to face southwest."""
+    return -degrees if axis == "y" else degrees
+
+
 def rotate_vector(vec, axis, degrees):
     """Rotates a direction vector (no translation) by `degrees` about the
     given cardinal axis. Direction verified against real minecraft:furnace

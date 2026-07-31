@@ -3,7 +3,7 @@ textures fully resolved to literal names (no #variable indirection left)."""
 
 from decimal import Decimal
 
-from rotation import rotate_about_normal, rotate_point, rotate_vector
+from rotation import element_angle, rotate_about_normal, rotate_point, rotate_vector
 
 MODEL_PATH_TMPL = "assets/minecraft/models/{path}.json"
 
@@ -215,11 +215,11 @@ def _apply_element_rotation(center, extent, normal, uv_u, uv_v, rotation):
     texture axes."""
     if not rotation:
         return center, extent, normal, uv_u, uv_v
-    angle = rotation.get("angle", 0)
+    axis = rotation["axis"]
+    angle = element_angle(axis, rotation.get("angle", 0))
     if not angle:
         return center, extent, normal, uv_u, uv_v
     origin = rotation.get("origin", [8, 8, 8])
-    axis = rotation["axis"]
     return (
         rotate_point(center, origin, axis, angle),
         rotate_vector(extent, axis, angle),

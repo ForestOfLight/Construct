@@ -269,9 +269,13 @@ class ResolveModelTest(unittest.TestCase):
         import math
         self.assertEqual(face["extent"][1], 16)  # height (Y) is untouched by a Y-axis rotation
         self.assertAlmostEqual(float(face["extent"][0]), 14.4 * math.sqrt(2) / 2, places=5)
-        self.assertAlmostEqual(float(face["extent"][2]), 14.4 * math.sqrt(2) / 2, places=5)
+        self.assertAlmostEqual(float(face["extent"][2]), -14.4 * math.sqrt(2) / 2, places=5)
         # the normal, originally due north (0,0,-1), is now rotated 45 degrees
-        self.assertAlmostEqual(float(face["normal"][0]), math.sqrt(2) / 2, places=5)
+        # anticlockwise seen from above, the way an element's rotation turns
+        # (see rotation.element_angle) - to the northwest, not the northeast.
+        # The cross model itself can't tell: its two quads are perpendicular,
+        # so turning the pair either way leaves the same X shape.
+        self.assertAlmostEqual(float(face["normal"][0]), -math.sqrt(2) / 2, places=5)
         self.assertEqual(face["normal"][1], 0)
         self.assertAlmostEqual(float(face["normal"][2]), -math.sqrt(2) / 2, places=5)
 
@@ -340,3 +344,52 @@ class ResolveModelParticleTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ElementRotationDirectionTest(unittest.TestCase):
+    """A Java element's "rotation" turns right-handed about its axis, which
+    for y is the opposite way round from the blockstate-level "y" that
+    rotate_vector encodes. Both cases below come from the hanging sign
+    templates, the models where getting it backwards is visible."""
+
+    def test_a_chain_rotated_45_degrees_lands_at_the_end_of_the_sign_board(self):
+        # block/template_hanging_sign_rot_0's first chain quad: it sits
+        # diagonally off the block's centre line and the +45 turn has to bring
+        # it to the left end of the board (x=3), into the board's own plane
+        # (z=8) - turned the other way it lands at the middle of the block's
+        # north edge instead, which is what put the chains 90 degrees out.
+        from decimal import Decimal
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/oak_hanging_sign"},
+                "elements": [{
+                    "from": [Decimal("2.96447"), 10, Decimal("4.46447")],
+                    "to": [Decimal("5.96447"), 16, Decimal("4.46447")],
+                    "rotation": {"origin": [8, 0, 8], "axis": "y", "angle": 45},
+                    "faces": {"north": {"texture": "#all"}},
+                }],
+            },
+        })
+        face = resolve_model(mcmeta, "block/x")[0]["faces"]["north"]
+        self.assertAlmostEqual(float(face["center"][0]), 3, places=4)
+        self.assertAlmostEqual(float(face["center"][2]), 8, places=4)
+
+    def test_a_south_face_rotated_minus_45_degrees_ends_up_facing_southwest(self):
+        # block/template_attached_hanging_sign_rot_2 is what Java draws for
+        # rotation=2, which is 45 degrees clockwise from south, and it gets
+        # there by turning the board -45 degrees about y
+        import math
+        mcmeta = FakeMcmeta({
+            "block/x": {
+                "textures": {"all": "block/oak_hanging_sign"},
+                "elements": [{
+                    "from": [1, 0, 7], "to": [15, 10, 9],
+                    "rotation": {"origin": [8, 0, 8], "axis": "y", "angle": -45},
+                    "faces": {"south": {"texture": "#all"}},
+                }],
+            },
+        })
+        normal = resolve_model(mcmeta, "block/x")[0]["faces"]["south"]["normal"]
+        self.assertAlmostEqual(float(normal[0]), -math.sqrt(2) / 2, places=5)
+        self.assertEqual(normal[1], 0)
+        self.assertAlmostEqual(float(normal[2]), math.sqrt(2) / 2, places=5)
