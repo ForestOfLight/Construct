@@ -238,27 +238,26 @@
           },
           "up": {
             "uv": [
-              14.75,
+              0.75,
               0.0,
-              15.25,
+              1.25,
               0.25
             ],
             "texture": "#main",
             "rotation": 0,
-            "tintindex": -1,
-            "flip": "fx"
+            "tintindex": -1
           },
           "down": {
             "uv": [
-              15.25,
+              0.25,
               15.75,
-              15.75,
+              0.75,
               16.0
             ],
             "texture": "#main",
             "rotation": 0,
             "tintindex": -1,
-            "flip": "fxfy"
+            "flip": "fy"
           }
         }
       }

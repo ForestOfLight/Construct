@@ -137,21 +137,21 @@ class ChestFaceUvTest(unittest.TestCase):
                 with self.subTest(element=element, face=name):
                     self.assertIn(flip, ("", "fx", "fy", "fxfy"))
 
-    def test_the_lock_reads_the_same_way_as_the_boxes_it_sits_on(self):
-        # the lock is its own box in the same unwrap, so its top and bottom
-        # trade slots like the other two boxes rather than mirroring in place
+    def test_the_lock_trades_top_and_bottom_slots_without_mirroring_them(self):
+        # the lock takes the same slots the other boxes do, but its box is
+        # unwrapped mirrored in x against theirs, so its horizontal faces
+        # come out the other way round - confirmed against the render, which
+        # is the only evidence there can be: every region of this box's
+        # unwrap is symmetric, in all seven chest textures
         faces = self._faces(2)
-        self.assertEqual(faces["up"], ([14.75, 0.0, 15.25, 0.25], "fx"))
-        self.assertEqual(faces["down"], ([15.25, 15.75, 15.75, 16.0], "fxfy"))
+        self.assertEqual(faces["up"], ([0.75, 0.0, 1.25, 0.25], ""))
+        self.assertEqual(faces["down"], ([0.25, 15.75, 0.75, 16.0], "fy"))
 
-    def test_all_three_boxes_flip_the_same_way(self):
-        # one coordinate flip covers the whole shape, so no box gets
-        # treatment of its own
+    def test_all_three_boxes_flip_their_upright_faces_the_same_way(self):
+        # one coordinate flip covers the whole shape
         for element in range(3):
             faces = self._faces(element)
             with self.subTest(element=element):
-                self.assertEqual(faces["up"][1], "fx")
-                self.assertEqual(faces["down"][1], "fxfy")
                 for name in ("north", "east", "south", "west"):
                     self.assertEqual(faces[name][1], "fxfy", name)
 
