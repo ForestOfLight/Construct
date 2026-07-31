@@ -58,10 +58,11 @@ Hardcoding overrides for specific blocks is not ideal, but if the mcmeta data is
 
 ~~#26: Hanging signs with states attached_bit = false and hanging = true have their chains rotated 90 degrees from where they should be. Hanging signs with states attached_bit = true and hanging = true and ground_sign_direction = 2,6,10,14 have their whole model rotated 90 degrees from where it should be.~~ A model element's own "rotation" turns right-handed about its axis, the opposite way round from the blockstate-level "y", and both were going through the same function - so every y-rotated element turned the wrong way. Only ever visible where the rotated elements aren't symmetric, which is why crosses looked fine.
 
-#27: Chests are using the wrong textures for certain faces. Here's what needs to change:
+~~#27: Chests are using the wrong textures for certain faces. Here's what needs to change:
 - bottom texture is using the texture that should be the top texture of the chest base
 - top texture is using the texture should be the bottom texture of the chest lid
 - top texture of the chest base should be on the bottom of the chest base
 - bottom texture of the chest lid should be on the top of the chest lid
 - The front and back texture of the base are swapped. The front texture should be on the back, and the back texture should be on the front.
-- on the lock part, the whole 
+- On the lock, every texture is upside down.
+This set of changes points to a problem with the model data.~~ It was: the shape was converted by hand from a CEM template's box-uv unwrap, whose slots are named in Java's entity model space, and that space is flipped in Y and Z against the block space this pipeline works in. Every rect in block_entity_models.json is the canonical unwrap - it was which face each one was handed to that was off.

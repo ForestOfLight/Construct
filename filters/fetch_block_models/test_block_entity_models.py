@@ -83,5 +83,47 @@ class ResolveBlockEntityTest(unittest.TestCase):
         self.assertEqual(knob_east["faces"]["north"]["normal"], [1, 0, 0])
 
 
+class ChestFaceUvTest(unittest.TestCase):
+    """The chest shape was converted by hand from a CEM template's box-uv
+    unwrap, and the unwrap's slots are named in Java's entity model space,
+    which is flipped in Y and Z against the block space this pipeline works
+    in. Three boxes came across with those slots taken at face value."""
+
+    def _faces(self, element):
+        chest = resolve_block_entity("minecraft:chest", {"facing": "north"})
+        return {name: (
+            [float(c) for c in face["uv"]], face["flip"],
+        ) for name, face in chest[element]["faces"].items()}
+
+    def test_the_base_takes_its_top_and_bottom_the_right_way_up(self):
+        faces = self._faces(0)
+        self.assertEqual(faces["up"], ([5.5, 4.75, 9.0, 8.25], "fx"))
+        self.assertEqual(faces["down"], ([9.0, 7.75, 12.5, 11.25], "fxfy"))
+
+    def test_the_lid_takes_its_top_and_bottom_the_right_way_up(self):
+        faces = self._faces(1)
+        self.assertEqual(faces["up"], ([5.5, 0.0, 9.0, 3.5], "fx"))
+        self.assertEqual(faces["down"], ([9.0, 12.5, 12.5, 16.0], "fxfy"))
+
+    def test_the_base_takes_its_front_from_the_front_of_the_unwrap(self):
+        # the two width-w side slots are the front and back, and Z is the
+        # other axis the entity space flips
+        faces = self._faces(0)
+        self.assertEqual(faces["north"][0], [10.5, 8.25, 14.0, 10.75])
+        self.assertEqual(faces["south"][0], [3.5, 8.25, 7.0, 10.75])
+
+    def test_every_lock_face_is_flipped_the_right_way_up(self):
+        # the lock is small enough that only its own box came out upside
+        # down; each face samples the same slot, mirrored in v
+        faces = self._faces(2)
+        self.assertEqual(faces["north"], ([0.25, 14.75, 0.75, 15.75], "fy"))
+        self.assertEqual(faces["east"], ([0.0, 14.75, 0.25, 15.75], "fy"))
+        self.assertEqual(faces["south"], ([1.0, 14.75, 1.5, 15.75], "fy"))
+        self.assertEqual(faces["west"], ([0.75, 14.75, 1.0, 15.75], "fy"))
+        self.assertEqual(faces["up"], ([15.25, 0.0, 15.75, 0.25], "fx"))
+        self.assertEqual(faces["down"], ([14.75, 15.75, 15.25, 16.0], "fxfy"))
+
+
+
 if __name__ == "__main__":
     unittest.main()
