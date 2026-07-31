@@ -7,17 +7,20 @@ converted by hand into this pipeline's elements/textures shape - the same
 shape resolve_model would have produced from a real mcmeta model chain.
 
 end_portal and end_gateway are the entries not traced from a real Java shape.
-Java draws both with a bespoke starfield renderer and ships no geometry and
-no texture for either (their models are nothing but a particle reference, and
-there is no portal image in the assets to borrow), so they can only ever be
-stand-ins, sized the way Java draws the effect. The portal is a flat sheet at
-the height its surface sits; the gateway is a full cube, because Java draws a
-gateway across the whole block rather than on one plane.
+Java draws both with a bespoke starfield renderer and ships no geometry for
+either (their models are nothing but a particle reference), so they can only
+ever be stand-ins, sized the way Java draws the effect. The portal is a flat
+sheet at the height its surface sits; the gateway is a full cube, because
+Java draws a gateway across the whole block rather than on one plane.
 
-Both borrow end stone for their texture. A flat black stand-in was the more
-literal reading of how the effect looks, but a preview block is meant to be
-identified at a glance and solid black reads as a hole in the build; end
-stone at least places them in the End."""
+Both borrow end stone for their texture. Neither block has an item form in
+Java, so there is no item texture to fall back on the way barrier and the
+light blocks do. Two more faithful sources do exist and were both weighed
+and turned down: their models name block/obsidian as their particle, and
+textures/entity/end_portal/end_portal.png is the starfield Java's shader
+really samples - but that image is ~88% pure black, and a preview block is
+meant to be identified at a glance, where near-solid black reads as a hole
+in the build. End stone at least places them in the End."""
 
 import json
 from pathlib import Path

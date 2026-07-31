@@ -52,6 +52,6 @@ Hardcoding overrides for specific blocks is not ideal, but if the mcmeta data is
 
 #23: Hanging signs are rendered as a missing block in every permutation.
 
-#24: Every wall block (all 32 of them: cobblestone_wall, stone_brick_wall, blackstone_wall, ...) renders as a missing block. None of the multipart conditions in Java's wall blockstate match the state blocksB2J maps them to, so nothing at all resolves - same flavour as the stair `shape` placeholder (see `_STAIR_SHAPES` in the filter). Found while working #20.
+~~#24: Every wall block renders as a missing block.~~ Not a bug - walls render fine, and I had misread the data. Exactly 1 of each wall's 162 states resolves to nothing: `wall_post_bit=0` with all four `wall_connection_type_*=none`, i.e. no post and no connections. Java draws nothing for that state either (no multipart condition applies), and a placed wall always has a post or a connection, so it never shows up.
 
-#34:
+#25: The top and bottom blocks of the door blocks don't line up. The bottom block is completely correct, but the top half is totally wrong.
