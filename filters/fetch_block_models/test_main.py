@@ -502,6 +502,13 @@ class ParticleTextureFallbackTest(unittest.TestCase):
         faces, _ = self._faces("block/water_still", block="water")
         self.assertEqual({face["texture"] for face in faces}, {"block/water_still"})
 
+    def test_a_bubble_column_stands_in_with_the_bubble_particle(self):
+        # its model is block/water, so the particle it names is water_still -
+        # the bubbles are particles, not part of any model
+        faces, atlas = self._faces("block/water_still", block="bubble_column")
+        self.assertEqual({face["texture"] for face in faces}, {"particle/bubble"})
+        self.assertIn("particle/bubble", atlas.added)
+
     def test_a_block_texture_on_anything_else_stays_a_missing_cube(self):
         # a skull's particle is block/soul_sand: standing in with it would
         # draw a soul sand cube and hide that the block entity is unmodelled

@@ -200,6 +200,15 @@ WHITE_CUBE_FACES = [
 _FLUID_BLOCKS = {"minecraft:water", "minecraft:lava", "minecraft:bubble_column"}
 _ITEM_TEXTURE_PREFIX = "item/"
 
+# A stand-in texture that beats the one the block's model names. Only the
+# bubble column needs one: its model is block/water, so the particle it names
+# is block/water_still and it stands in as a plain water cube, which is
+# exactly what a water block already looks like. The bubbles are particles
+# rather than model geometry, and the particle definitions say which sprite:
+# bubble_column_up and current_down - the two a bubble column emits, one per
+# drag_down value - both name particle/bubble.
+_STAND_IN_TEXTURES = {"minecraft:bubble_column": "particle/bubble"}
+
 def _derive_width_height(extent, uv_u, uv_v):
     """Derives the quad's size from its fully-rotated extent vector, measured
     along its own texture axes rather than along world axes: width is how far
@@ -384,6 +393,7 @@ def _stand_in_cube(mcmeta, java_block_id, properties):
         return None
     if not texture.startswith(_ITEM_TEXTURE_PREFIX) and java_block_id not in _FLUID_BLOCKS:
         return None
+    texture = _STAND_IN_TEXTURES.get(java_block_id, texture)
     return [{**face, "texture": texture} for face in _CUBE_FACES]
 
 
