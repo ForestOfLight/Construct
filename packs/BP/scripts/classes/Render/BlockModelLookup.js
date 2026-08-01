@@ -73,11 +73,45 @@ function buildIndex() {
     // reject the only entry there is (see #findPartialMatch).
     for (const block of blockIdIndex.values()) {
         block.discriminating = new Set();
+        block.numericValues = new Map();
         for (const [propKey, values] of block.valuesSeen) {
             if (values.size > 1)
                 block.discriminating.add(propKey);
+            const numbers = [...values].map(Number);
+            if (numbers.every((n) => Number.isInteger(n)))
+                block.numericValues.set(propKey, numbers.sort((a, b) => a - b));
         }
     }
+}
+
+// Where Bedrock counts in finer steps than Java does, blocksB2J maps only
+// the Bedrock values Java has a state for and leaves the ones in between
+// with no entry at all - a pitcher crop has eight growth values mapped onto
+// Java's five ages, a pressure plate sixteen redstone_signal values mapped
+// onto powered and unpowered. 24 block/property pairs have gaps like this.
+// Left alone every in-between value matches no entry and renders as the
+// missing-block cube, which is how a beetroot halfway grown, a cauldron at
+// most fill levels and any pressure plate carrying a signal of 1 to 14 came
+// out blue.
+//
+// Round the live value UP to the nearest mapped one, because the value
+// blocksB2J records is the TOP of the Bedrock range each Java state covers.
+// Three independently checkable blocks agree: a pitcher crop maps 0,1,3,5,7
+// out of 0-7, so age 2 spans growth 2-3 and age 3 spans 4-5; a beetroot maps
+// 0,3,4,7; a pressure plate maps 0 and 15, so every signal above zero is the
+// pressed model. Rounding down would show a pressed plate unpressed.
+//
+// Above the largest mapped value there is nothing to round up to, so that
+// value stands in - the state is off the end of the range Java describes.
+function effectiveValue(block, propKey, value) {
+    const numbers = block.numericValues.get(propKey);
+    if (!numbers)
+        return value;
+    const live = Number(value);
+    if (!Number.isInteger(live) || numbers.includes(live))
+        return value;
+    const rounded = numbers.find((n) => n > live);
+    return String(rounded ?? numbers[numbers.length - 1]);
 }
 
 export class BlockModelLookup {
@@ -120,8 +154,10 @@ export class BlockModelLookup {
             return undefined;
         const states = permutation.getAllStates();
         const stateStrings = new Map();
-        for (const key of Object.keys(states))
-            stateStrings.set(key, String(BlockModelLookup.#stateValue(states[key])));
+        for (const key of Object.keys(states)) {
+            const value = String(BlockModelLookup.#stateValue(states[key]));
+            stateStrings.set(key, effectiveValue(block, key, value));
+        }
 
         let best;
         for (const candidate of block.entries) {
