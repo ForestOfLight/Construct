@@ -25,7 +25,21 @@ export const PLAIN_CUBE_FACES = [
 // "we have no model for this" render identically.
 export const UNKNOWN_CUBE_FACES = PLAIN_CUBE_FACES.map((face) => ({ ...face, missing: true }));
 
+// Bedrock's water isn't one block id but two: a source block and the
+// `flowing_water` it spreads as. Both are the same translucent liquid, and
+// both are drawn from the same still-water texture here.
+const WATER_BLOCK_IDS = new Set(["minecraft:water", "minecraft:flowing_water"]);
+
+// The state a waterlogged block's water is drawn as. Bedrock doesn't keep
+// waterlogging in the block's permutation the way Java keeps a `waterlogged`
+// property - the water is a second liquid layer the structure reports
+// separately (see Structure.getBlockPermutation) - so no blockModels entry
+// for a stair or a fence can carry it, and there is nothing for the pipeline
+// to bake. It is always a full source block, hence depth 0.
+const WATERLOGGED_WATER_STATE = "minecraft:water[liquid_depth=0]";
+
 let blockIdIndex;
+let waterFaces;
 
 function buildIndex() {
     blockIdIndex = new Map();
@@ -73,6 +87,23 @@ export class BlockModelLookup {
         if (!refs)
             return UNKNOWN_CUBE_FACES;
         return refs.map((index) => blockFaceTypes[index]);
+    }
+
+    // The water filling a waterlogged block, as its own set of faces to draw
+    // inside the block's own. Empty if the generated data has no water model
+    // at all: nothing drawn understates the block, where the missing-block
+    // cube every other lookup falls back to would wrap it in a blue box and
+    // hide the shape that did resolve.
+    static getWaterloggedFaces() {
+        if (!waterFaces) {
+            const refs = blockModels[WATERLOGGED_WATER_STATE] ?? [];
+            waterFaces = refs.map((index) => blockFaceTypes[index]);
+        }
+        return waterFaces;
+    }
+
+    static isWater(permutation) {
+        return WATER_BLOCK_IDS.has(permutation.type.id);
     }
 
     // Falls back to the most-specific blockModels entry whose properties are a subset of the

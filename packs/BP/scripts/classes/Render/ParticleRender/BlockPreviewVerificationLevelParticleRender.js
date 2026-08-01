@@ -14,6 +14,16 @@ const BLOCK_CENTER = new Vector(0.5, 0.5, 0.5);
 const MISSING_FACE_RGBA = { red: 0, green: 0, blue: 1, alpha: 0.2 };
 const MISSING_FACE_MATERIAL = "blend";
 
+// Water is the one block whose texture is authored see-through: Java draws it
+// on the translucent layer and block/water_still carries an alpha of 180/255,
+// which the atlas keeps. The preview's usual material discards that - it
+// alpha-tests rather than blending, so every partly-transparent texel came
+// out fully solid and water read as a flat blue cube. Blending is what lets
+// the texture's own alpha through, so the quad ends up as see-through as Java
+// draws it without us naming a second opacity here that could disagree with
+// the texture.
+const WATER_MATERIAL = "blend";
+
 export class BlockPreviewVerificationLevelParticleRender {
     lifetimeSeconds = 0;
 
@@ -30,24 +40,41 @@ export class BlockPreviewVerificationLevelParticleRender {
         const rgb = this.#verificationLevelToRGB();
         if (!rgb || !this.targetPermutation)
             return;
-        const material = this.#verificationLevelToMaterial();
         const sizeScalar = this.#verificationLevelToSizeScalar();
-        for (const face of this.#getFaces()) {
-            try {
-                this.#renderFace(face, rgb, material, sizeScalar);
-            } catch (error) {
-                console.warn(`Failed to render face for block ${this.targetPermutation.type.id} at location ${JSON.stringify(this.location)} with verification level ${this.verificationLevel}:`, error, error.stack);
+        for (const { faces, material } of this.#getFaceLayers()) {
+            for (const face of faces) {
+                try {
+                    this.#renderFace(face, rgb, material, sizeScalar);
+                } catch (error) {
+                    console.warn(`Failed to render face for block ${this.targetPermutation.type.id} at location ${JSON.stringify(this.location)} with verification level ${this.verificationLevel}:`, error, error.stack);
+                }
             }
         }
     }
 
+    // The sets of faces making up this block, each with the material its own
+    // textures need. Usually just one - the block's shape - but a waterlogged
+    // block is two: the block, and the water standing in it.
+    //
     // Only Missing needs the target block's actual shape (nothing else is
     // rendering there); NoMatch/TypeMatch overlay onto a real, already-visible
     // block, so a plain cube is enough and skips the model lookup entirely.
-    #getFaces() {
+    // That also means those levels never show the water: the real block is
+    // there in the world with its own water already drawn around it.
+    #getFaceLayers() {
+        const material = this.#verificationLevelToMaterial();
         if (this.verificationLevel !== BlockVerificationLevel.Missing)
-            return PLAIN_CUBE_FACES;
-        return BlockModelLookup.getFaces(this.targetPermutation);
+            return [{ faces: PLAIN_CUBE_FACES, material }];
+        const layers = [{
+            faces: BlockModelLookup.getFaces(this.targetPermutation),
+            material: BlockModelLookup.isWater(this.targetPermutation) ? WATER_MATERIAL : material,
+        }];
+        // Bedrock keeps a waterlogged block's water outside the permutation,
+        // so no model the pipeline bakes can include it; the block's own
+        // faces are only ever the stair/fence/whatever standing in it.
+        if (this.targetPermutation.isWaterlogged)
+            layers.push({ faces: BlockModelLookup.getWaterloggedFaces(), material: WATER_MATERIAL });
+        return layers;
     }
 
     #renderFace(face, rgb, material, sizeScalar) {
@@ -121,7 +148,7 @@ export class BlockPreviewVerificationLevelParticleRender {
     }
 
     #verificationLevelToMaterial() {
-        return this.verificationLevel === BlockVerificationLevel.Missing ? "opaque" : "blend";
+        return this.verificationLevel === BlockVerificationLevel.Missing ? "blend" : "blend";
     }
 
     #verificationLevelToRGB() {
