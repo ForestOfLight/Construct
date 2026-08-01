@@ -148,7 +148,7 @@ export class BlockPreviewVerificationLevelParticleRender {
     }
 
     #verificationLevelToMaterial() {
-        return this.verificationLevel === BlockVerificationLevel.Missing ? "blend" : "blend";
+        return this.verificationLevel === BlockVerificationLevel.Missing ? "opaque" : "blend";
     }
 
     #verificationLevelToRGB() {
