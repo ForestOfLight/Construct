@@ -1,4 +1,5 @@
 import { TicksPerSecond } from "@minecraft/server";
+import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
@@ -49,6 +50,8 @@ export class VerificationRenderer {
             ? this.#getLargeStructureLifetime(bounds, volume, chunkSize)
             : this.#getSmallStructureLifetime(bounds);
         const verificationLevels = this.instance.verifier.getLastVerificationLevels();
+        if (!verificationLevels)
+            return;
         const dimension = this.instance.getDimension();
 
         if (this.#cursor >= volume)
@@ -56,8 +59,7 @@ export class VerificationRenderer {
         const end = Math.min(this.#cursor + chunkSize, volume);
         for (let index = this.#cursor; index < end; index++) {
             const location = this.#locationAt(bounds, index);
-            const verificationLevel = verificationLevels[JSON.stringify(location)];
-            this.#renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime);
+            this.#renderBlockVerificationLevel(dimension, location, verificationLevels.get(location), lifetime);
         }
         this.#cursor = end === volume ? 0 : end;
     }
@@ -96,7 +98,7 @@ export class VerificationRenderer {
     }
 
     #renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime) {
-        if (!verificationLevel)
+        if (verificationLevel === BlockVerificationLevel.Unknown || verificationLevel === BlockVerificationLevel.Air)
             return;
         const dimensionLocation = {
             dimension: dimension,

@@ -1,4 +1,5 @@
 import { BlockVerifier } from "./BlockVerifier";
+import { VerificationLevels } from "./VerificationLevels";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "../Render/PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { system, TicksPerSecond } from "@minecraft/server";
@@ -85,9 +86,11 @@ export class StructureVerifier {
             const checker = system.runInterval(() => {
                 if (this.isVerificationComplete) {
                     system.clearRun(checker);
-                    this.lastCompleteVerificationLevels = JSON.parse(JSON.stringify(this.blockVerificationLevels));
+                    const completedVerificationLevels = this.blockVerificationLevels;
+                    this.blockVerificationLevels = this.lastCompleteVerificationLevels;
+                    this.lastCompleteVerificationLevels = completedVerificationLevels;
                     this.shouldStartNextVerification = true;
-                    resolve(this.blockVerificationLevels);
+                    resolve(completedVerificationLevels);
                 }
             }, 1);
         });
@@ -96,9 +99,17 @@ export class StructureVerifier {
     initVerification() {
         this.shouldStartNextVerification = false;
         this.locationsToVerify.clear();
-        this.blockVerificationLevels = { correctlyAir: 0 };
+        this.blockVerificationLevels = this.#recycleVerificationLevels();
         this.isLocationPopulationComplete = false;
         this.isVerificationComplete = false;
+    }
+
+    #recycleVerificationLevels() {
+        const bounds = this.instance.getActiveBounds();
+        if (!this.blockVerificationLevels?.matchesBounds(bounds))
+            return new VerificationLevels(bounds);
+        this.blockVerificationLevels.clear();
+        return this.blockVerificationLevels;
     }
     
     *verifyBlocks(shouldRender) {
@@ -117,14 +128,10 @@ export class StructureVerifier {
 
     verifyBlock(location, shouldRender) {
         const verificationLevel = this.getVerificationLevel(location);
-        if (verificationLevel === BlockVerificationLevel.Air) {
-            this.blockVerificationLevels.correctlyAir++;
-        } else {
-            this.blockVerificationLevels[JSON.stringify(location)] = verificationLevel;
-            if (shouldRender) {
-                const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(location) };
-                new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
-            }
+        this.blockVerificationLevels.set(location, verificationLevel);
+        if (shouldRender && verificationLevel !== BlockVerificationLevel.Air) {
+            const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(location) };
+            new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
         }
     }
 
@@ -137,8 +144,6 @@ export class StructureVerifier {
     }
 
     getLastVerificationLevels() {
-        if (!this.lastCompleteVerificationLevels)
-            return {};
         return this.lastCompleteVerificationLevels;
     }
 }

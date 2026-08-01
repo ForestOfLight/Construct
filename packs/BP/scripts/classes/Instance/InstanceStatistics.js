@@ -3,35 +3,12 @@ import { BlockVerificationLevel } from '../Enums/BlockVerificationLevel.js';
 export class InstanceStatistics {
     constructor(instance, verification) {
         this.instance = instance;
-        this.verification = verification;
-        this.parse();
-    }
-
-    init() {
-        this.statistics = {};
-        for (const verificationLevel of Object.values(BlockVerificationLevel))
-            this.statistics[verificationLevel] = 0;
-        this.statistics.correctlyAir = 0;
-    }
-
-    parse() {
-        this.init();
-        for (const blockVerificationLevel of Object.values(BlockVerificationLevel))
-            this.parseStatistic(blockVerificationLevel);
-    }
-
-    parseStatistic(blockVerificationLevel) {
-        for (const [location, verificationLevel] of Object.entries(this.verification)) {
-            if (location === 'correctlyAir')
-                continue;
-            if (blockVerificationLevel === verificationLevel)
-                this.statistics[verificationLevel]++;
-        }
+        this.statistics = verification.countByLevel();
     }
 
     getNonAirBlocks() {
         const activeBounds = this.instance.getActiveBounds();
-        return activeBounds.min.volume(activeBounds.max) - this.verification.correctlyAir;
+        return activeBounds.min.volume(activeBounds.max) - this.statistics[BlockVerificationLevel.Air];
     }
 
     getStat(blockVerificationLevel) {
