@@ -15,21 +15,7 @@ _ORIGIN = [8, 8, 8]
 
 def resolve_java_state(mcmeta, java_block_id, properties):
     """Returns a flat list of resolved elements (each a {'faces': {...}}
-    dict), or None if the state couldn't be resolved at all.
-
-    An empty list and None mean different things and callers must not treat
-    them alike. None is "we failed" - no blockstate file, or a variants
-    blockstate none of whose keys the properties match. An empty list is
-    Java's own answer: the state resolved, and what it resolved to draws no
-    geometry. That happens for a multipart blockstate no part of which
-    applies (a wall with no post and no arms) and for a variant pointing at
-    a model Mojang ships deliberately empty (pitcher_crop's upper half is a
-    real block for the whole of the crop's life, but the plant only grows
-    tall enough to reach it at age 3, so block/pitcher_crop_top_stage_0
-    through _2 carry textures and no elements).
-
-    Drawing the missing-block cube for those would advertise a data problem
-    where there is none - Java draws nothing there, and so should we."""
+    dict), or None if the block has no blockstate data at all."""
     name = java_block_id.split(":")[-1]
     path = BLOCKSTATE_PATH_TMPL.format(name=name)
     if not mcmeta.exists(path):
@@ -86,11 +72,7 @@ def _variant_entries(variants, properties):
             return [entry]
     if "" in variants:
         return [variants[""]]
-    # None, not [] - a variants blockstate always draws something for a
-    # state it knows, so matching nothing means we failed to match, never
-    # that Java draws nothing (see resolve_java_state). Multipart is the
-    # opposite: no applicable part is a real, empty answer.
-    return None
+    return []
 
 
 def _multipart_entries(parts, properties):

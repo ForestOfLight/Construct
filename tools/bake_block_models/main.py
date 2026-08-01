@@ -473,25 +473,6 @@ def build_block_models(mcmeta, b2j, atlas):
     """Returns {bedrock_state_str: [face, ...]}, faces still carrying a
     'texture' name (not yet projected into atlas-pixel UV)."""
     block_models = {}
-    # Java block ids that produced real geometry in at least one of their
-    # states, and the states that resolved to Java's own "draws nothing".
-    #
-    # An element-less model can mean either of two opposite things and the
-    # file itself gives nothing to tell them apart: block/skull,
-    # block/banner, block/conduit and block/pitcher_crop_top_stage_0 are all
-    # just a "textures" dict with no elements. The first three are block
-    # entities Java draws in code, which we genuinely have no model for; the
-    # last is a state Java deliberately draws nothing for, because the crop's
-    # upper half exists as a block long before the plant grows tall enough to
-    # reach it.
-    #
-    # What separates them is the rest of the block. A pitcher crop has real
-    # geometry at ages 3 and 4, so the block is modelled and this one state
-    # is meant to be empty. A skull has geometry in no state at all, so the
-    # block is unmodelled and every state of it should say so. Decided after
-    # the loop, because a block's later states can be what proves it.
-    modelled_java_blocks = set()
-    empty_states = []
     for bedrock_state, java_state in b2j.items():
         java_block_id, properties = parse_java_state(java_state)
         override = _JAVA_STATE_OVERRIDES.get(bedrock_state.split("[", 1)[0])
@@ -500,26 +481,15 @@ def build_block_models(mcmeta, b2j, atlas):
         if properties.get("shape") in _STAIR_SHAPES:
             properties["shape"] = "straight"
         elements = resolve_java_state(mcmeta, java_block_id, properties)
-        # None means we failed to resolve the state; an empty list means Java
-        # resolved it and draws nothing there (see resolve_java_state). Only
-        # the first deserves the missing-block cube.
-        unresolved = elements is None
         if not elements:
-            entity_elements = resolve_block_entity(java_block_id, properties)
-            if entity_elements:
-                elements, unresolved = entity_elements, False
+            elements = resolve_block_entity(java_block_id, properties)
         if not elements:
             stand_in = _stand_in_cube(mcmeta, java_block_id, properties)
             if stand_in:
                 for face in stand_in:
                     atlas.add(mcmeta, face["texture"])
-                block_models[bedrock_state] = stand_in
-                continue
-            if not unresolved:
-                empty_states.append((bedrock_state, java_block_id))
-            block_models[bedrock_state] = [dict(face) for face in WHITE_CUBE_FACES]
+            block_models[bedrock_state] = stand_in or [dict(face) for face in WHITE_CUBE_FACES]
             continue
-        modelled_java_blocks.add(java_block_id)
         state_tint = _state_tint(java_block_id, properties)
         faces = []
         for element in elements:
@@ -549,9 +519,6 @@ def build_block_models(mcmeta, b2j, atlas):
         for face in faces:
             atlas.add(mcmeta, face["texture"])
         block_models[bedrock_state] = faces
-    for bedrock_state, java_block_id in empty_states:
-        if java_block_id in modelled_java_blocks:
-            block_models[bedrock_state] = []
     return block_models
 
 

@@ -346,51 +346,6 @@ class ResolveJavaStateTest(unittest.TestCase):
         self.assertEqual(face["center"], [8, 8, 8])
         self.assertEqual(face["normal"], [0, 1, 0])
 
-    def test_a_variant_pointing_at_an_element_less_model_resolves_to_nothing(self):
-        # Mirrors block/pitcher_crop_top_stage_0: a real model Mojang ships
-        # with textures and no elements, because the crop's upper half is a
-        # block from the moment it's planted but the plant doesn't reach it
-        # until age 3. Java draws nothing; an empty list says so, and is not
-        # the None that means we failed to resolve the state.
-        mcmeta = FakeMcmeta(
-            blockstates={"pitcher_crop": {"variants": {
-                "age=0,half=upper": {"model": "block/pitcher_crop_top_stage_0"},
-            }}},
-            models={"block/pitcher_crop_top_stage_0": {"textures": {"particle": "block/x"}}},
-        )
-        elements = resolve_java_state(
-            mcmeta, "minecraft:pitcher_crop", {"age": "0", "half": "upper"},
-        )
-        self.assertEqual(elements, [])
-        self.assertIsNotNone(elements)
-
-    def test_a_multipart_no_part_applies_to_resolves_to_nothing(self):
-        # A wall with no post and no arms - Java matches no part and draws
-        # nothing. Same empty answer, same reason it isn't a failure.
-        mcmeta = FakeMcmeta(
-            blockstates={"cobblestone_wall": {"multipart": [
-                {"when": {"up": "true"}, "apply": {"model": "block/wall_post"}},
-            ]}},
-            models={"block/wall_post": {"textures": {}, "elements": _FLAT_ELEMENT}},
-        )
-        elements = resolve_java_state(mcmeta, "minecraft:cobblestone_wall", {"up": "false"})
-        self.assertEqual(elements, [])
-
-    def test_a_variant_key_nothing_matches_is_a_failure_not_an_empty_answer(self):
-        # A variants blockstate always draws something for a state it knows,
-        # so matching no key means we failed - which has to stay
-        # distinguishable from the two cases above or a real data gap would
-        # silently render as thin air.
-        mcmeta = FakeMcmeta(
-            blockstates={"oak_log": {"variants": {"axis=y": {"model": "block/oak_log"}}}},
-            models={"block/oak_log": {"textures": {}, "elements": _FLAT_ELEMENT}},
-        )
-        self.assertIsNone(resolve_java_state(mcmeta, "minecraft:oak_log", {"axis": "x"}))
-
-    def test_a_block_with_no_blockstate_file_at_all_is_a_failure(self):
-        mcmeta = FakeMcmeta(blockstates={}, models={})
-        self.assertIsNone(resolve_java_state(mcmeta, "minecraft:nonexistent", {}))
-
 
 class ResolveParticleTextureTest(unittest.TestCase):
     def test_reads_the_particle_of_the_model_the_state_picks(self):
