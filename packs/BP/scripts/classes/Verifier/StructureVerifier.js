@@ -22,6 +22,7 @@ export class StructureVerifier {
 
     #runner;
     #verifyJob;
+    #resolveVerification;
     #populateJob = {};
 
     constructor(instance, { isEnabled = false, trackPlayerDistance = 0, particleLifetime = 10, isStandalone = false } = {}) {
@@ -78,22 +79,34 @@ export class StructureVerifier {
     async verifyStructure(shouldRender = false) {
         if (!this.isEnabled())
             return;
+        this.#cancelVerification();
         this.initVerification();
-        return new Promise(async (resolve) => {
-            if (this.#verifyJob)
-                system.clearJob(this.#verifyJob);
+        return new Promise((resolve) => {
+            this.#resolveVerification = resolve;
             this.#verifyJob = system.runJob(this.verifyBlocks(shouldRender));
-            const checker = system.runInterval(() => {
-                if (this.isVerificationComplete) {
-                    system.clearRun(checker);
-                    const completedVerificationLevels = this.blockVerificationLevels;
-                    this.blockVerificationLevels = this.lastCompleteVerificationLevels;
-                    this.lastCompleteVerificationLevels = completedVerificationLevels;
-                    this.shouldStartNextVerification = true;
-                    resolve(completedVerificationLevels);
-                }
-            }, 1);
         });
+    }
+
+    #cancelVerification() {
+        if (!this.#verifyJob)
+            return;
+        system.clearJob(this.#verifyJob);
+        this.#settleVerification(this.lastCompleteVerificationLevels);
+    }
+
+    #completeVerification() {
+        const completedVerificationLevels = this.blockVerificationLevels;
+        this.blockVerificationLevels = this.lastCompleteVerificationLevels;
+        this.lastCompleteVerificationLevels = completedVerificationLevels;
+        this.shouldStartNextVerification = true;
+        this.#settleVerification(completedVerificationLevels);
+    }
+
+    #settleVerification(verificationLevels) {
+        const resolve = this.#resolveVerification;
+        this.#verifyJob = void 0;
+        this.#resolveVerification = void 0;
+        resolve?.(verificationLevels);
     }
 
     initVerification() {
@@ -124,6 +137,7 @@ export class StructureVerifier {
             }
         }
         this.isVerificationComplete = true;
+        this.#completeVerification();
     }
 
     verifyBlock(location, shouldRender) {
