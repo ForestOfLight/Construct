@@ -701,6 +701,91 @@ def build_face_types_and_refs(block_models):
     return face_types, block_models
 
 
+def _parse_state_key(bedrock_state):
+    """Splits "minecraft:x[a=1,b=2]" into ("minecraft:x", {"a": "1", "b": "2"}).
+    Values stay strings - they are compared against, never arithmetic on, and
+    the renderer builds the same strings back out of a live permutation."""
+    bracket = bedrock_state.index("[")
+    properties = {}
+    inner = bedrock_state[bracket + 1:-1]
+    if inner:
+        for pair in inner.split(","):
+            name, value = pair.split("=", 1)
+            properties[name] = value
+    return bedrock_state[:bracket], properties
+
+
+def _format_state_key(block_id, properties, names):
+    return f"{block_id}[{','.join(f'{name}={properties[name]}' for name in names)}]"
+
+
+def build_key_specs(block_models):
+    """Rekeys `block_models` on only the properties that actually choose
+    between its entries, and emits the recipe the renderer needs to rebuild
+    those keys from a live Bedrock permutation.
+
+    This replaces what BlockModelLookup used to work out at runtime. It built
+    an index over every key here on first use - reparsing all of them into
+    Maps and Sets mid-gameplay - and then scanned a block's entries looking
+    for the most specific one whose properties were a subset of the live
+    states, ignoring any property the entries don't disagree on. Every input
+    to that decision is known here, so none of it needs to happen in the game.
+
+    A property all of a block's entries give the same value for can't choose
+    between them, so it was already ignored when matching; dropping it from
+    the key can't merge two entries either, since two entries that differ in
+    a property make that property disagree and so keep it. That leaves the
+    reduced key carrying exactly what the old match tested, and a lookup that
+    was a scan becomes a single hash hit. The collision check below is what
+    holds that argument up if a future Bedrock version reshapes the data.
+
+    Returns ({block_id: spec}, {reduced_key: refs}), where a spec carries one
+    field, `props`: the property-name shapes to try, most specific first. That
+    ordering is the old "most properties wins, ties broken alphabetically"
+    rule. Nearly every block has exactly one shape; hanging signs are the
+    exception, reading a different pair of states depending on whether they
+    are attached, so a spec holds a list of shapes rather than one.
+
+    Note this deliberately carries nothing about the value GAPS blocksB2J
+    leaves where Bedrock counts in finer steps than Java does (a pressure
+    plate's 0 and 15, a beetroot's 0,3,4,7). Snapping a live value onto the
+    nearest mapped one was reverted in 0fac4f9, so a value in between matches
+    no key and renders as the missing cube, exactly as it does today. If that
+    fix comes back, it belongs here as a per-property table of mapped values
+    rather than as a runtime scan.
+    """
+    entries_by_id = {}
+    for bedrock_state, refs in block_models.items():
+        block_id, properties = _parse_state_key(bedrock_state)
+        entries_by_id.setdefault(block_id, []).append((bedrock_state, properties, refs))
+
+    specs = {}
+    rekeyed = {}
+    for block_id, entries in entries_by_id.items():
+        values_seen = {}
+        for _bedrock_state, properties, _refs in entries:
+            for name, value in properties.items():
+                values_seen.setdefault(name, set()).add(value)
+        discriminating = {name for name, values in values_seen.items() if len(values) > 1}
+
+        shapes = []
+        for bedrock_state, properties, refs in entries:
+            shape = sorted(name for name in properties if name in discriminating)
+            reduced = _format_state_key(block_id, properties, shape)
+            if rekeyed.get(reduced, refs) != refs:
+                raise ValueError(
+                    f"{bedrock_state} and another entry both reduce to {reduced} "
+                    f"but resolve to different models - dropping the properties "
+                    f"they agree on is only safe while it keeps keys unique"
+                )
+            rekeyed[reduced] = refs
+            if shape not in shapes:
+                shapes.append(shape)
+        shapes.sort(key=lambda shape: (-len(shape), shape))
+        specs[block_id] = {"props": shapes}
+    return specs, rekeyed
+
+
 def build(root):
     manifest = load_manifest(root)
     version = manifest_version(manifest)
@@ -721,10 +806,11 @@ def build(root):
     )
     block_models = project_uv(block_models, atlas_manifest)
     face_types, block_models = build_face_types_and_refs(block_models)
-    return atlas_image, white_rect, face_types, block_models
+    key_specs, block_models = build_key_specs(block_models)
+    return atlas_image, white_rect, face_types, block_models, key_specs
 
 
-def write_outputs(root, atlas_image, white_rect, face_types, block_models):
+def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs):
     atlas_path = root / "packs" / "RP" / "textures" / "particle" / "vanilla_block_atlas.png"
     atlas_image.save(atlas_path)
 
@@ -743,7 +829,10 @@ def write_outputs(root, atlas_image, white_rect, face_types, block_models):
     models_js_path = root / "packs" / "BP" / "scripts" / "blockModels.js"
     models_js_contents = (
         "export const blockFaceTypes = " + render(face_types) + ";\n\n"
-        "export const blockModels = " + render(block_models) + ";"
+        # keyed on only the properties that choose between a block's models,
+        # so the renderer needs blockKeySpecs to build a key that hits
+        "export const blockModels = " + render(block_models) + ";\n\n"
+        "export const blockKeySpecs = " + render(key_specs) + ";"
     )
     models_js_path.write_text(models_js_contents, encoding="utf-8")
 
@@ -752,8 +841,8 @@ def write_outputs(root, atlas_image, white_rect, face_types, block_models):
 
 def main():
     root = root_dir()
-    atlas_image, white_rect, face_types, block_models = build(root)
-    write_outputs(root, atlas_image, white_rect, face_types, block_models)
+    atlas_image, white_rect, face_types, block_models, key_specs = build(root)
+    write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-import { blockFaceTypes, blockModels } from "../../blockModels";
+import { blockFaceTypes, blockKeySpecs, blockModels } from "../../blockModels";
 import { whiteUvRect } from "../../blockAtlas";
 
 // A plain full cube, used to outline a block that is already visible in the
@@ -36,54 +36,23 @@ const WATER_BLOCK_IDS = new Set(["minecraft:water", "minecraft:flowing_water"]);
 // separately (see Structure.getBlockPermutation) - so no blockModels entry
 // for a stair or a fence can carry it, and there is nothing for the pipeline
 // to bake. It is always a full source block, hence depth 0.
+//
+// Written the way blockModels is keyed - liquid_depth is the one property
+// that picks between water's models, so it survives the key reduction
+// build_key_specs does and this is still a real key.
 const WATERLOGGED_WATER_STATE = "minecraft:water[liquid_depth=0]";
 
-let blockIdIndex;
 let waterFaces;
-
-function buildIndex() {
-    blockIdIndex = new Map();
-    for (const key of Object.keys(blockModels)) {
-        const bracketStart = key.indexOf("[");
-        const blockId = key.slice(0, bracketStart);
-        const propsStr = key.slice(bracketStart + 1, -1);
-        const properties = new Map();
-        if (propsStr) {
-            for (const pair of propsStr.split(",")) {
-                const [propKey, propValue] = pair.split("=");
-                properties.set(propKey, propValue);
-            }
-        }
-        if (!blockIdIndex.has(blockId))
-            blockIdIndex.set(blockId, { entries: [], valuesSeen: new Map() });
-        const block = blockIdIndex.get(blockId);
-        block.entries.push({ key, properties });
-        for (const [propKey, propValue] of properties) {
-            if (!block.valuesSeen.has(propKey))
-                block.valuesSeen.set(propKey, new Set());
-            block.valuesSeen.get(propKey).add(propValue);
-        }
-    }
-    // A property the generated data only ever gives one value for can't pick
-    // between entries, so it can't be worth matching on. That happens
-    // wherever Bedrock carries a state Java has no equivalent for: Java's
-    // plain pumpkin has no facing at all, so blocksB2J maps exactly one of
-    // Bedrock's four cardinal_direction values and the model is the same for
-    // all of them anyway. Requiring such a property to match by value would
-    // reject the only entry there is (see #findPartialMatch).
-    for (const block of blockIdIndex.values()) {
-        block.discriminating = new Set();
-        for (const [propKey, values] of block.valuesSeen) {
-            if (values.size > 1)
-                block.discriminating.add(propKey);
-        }
-    }
-}
 
 export class BlockModelLookup {
     static getFaces(permutation) {
-        const exactKey = BlockModelLookup.#permutationKey(permutation);
-        const refs = blockModels[exactKey] ?? BlockModelLookup.#findPartialMatch(permutation);
+        const blockId = permutation.type.id;
+        const spec = blockKeySpecs[blockId];
+        // No spec at all means the block id is absent from the Bedrock<->Java
+        // mapping the pipeline was built from, so there is no model to find.
+        if (spec === void 0)
+            return UNKNOWN_CUBE_FACES;
+        const refs = BlockModelLookup.#lookup(blockId, spec, permutation.getAllStates());
         if (!refs)
             return UNKNOWN_CUBE_FACES;
         return refs.map((index) => blockFaceTypes[index]);
@@ -106,46 +75,50 @@ export class BlockModelLookup {
         return WATER_BLOCK_IDS.has(permutation.type.id);
     }
 
-    // Falls back to the most-specific blockModels entry whose properties are a subset of the
-    // live permutation's states, for blocks where the generated data omits properties Bedrock
-    // still reports (e.g. minecraft:stone's vestigial stone_type). Properties the data can't
-    // discriminate on are ignored rather than required to match, so a state Bedrock has and
-    // Java doesn't can't reject the only entry there is (see buildIndex). Ties broken
-    // alphabetically by key for determinism.
-    static #findPartialMatch(permutation) {
-        if (!blockIdIndex)
-            buildIndex();
-        const block = blockIdIndex.get(permutation.type.id);
-        if (!block)
-            return undefined;
-        const states = permutation.getAllStates();
-        const stateStrings = new Map();
-        for (const key of Object.keys(states))
-            stateStrings.set(key, String(BlockModelLookup.#stateValue(states[key])));
-
-        let best;
-        for (const candidate of block.entries) {
-            let allMatch = true;
-            for (const [propKey, propValue] of candidate.properties) {
-                if (block.discriminating.has(propKey) && stateStrings.get(propKey) !== propValue) {
-                    allMatch = false;
-                    break;
-                }
-            }
-            if (allMatch && (!best || candidate.properties.size > best.properties.size ||
-                (candidate.properties.size === best.properties.size && candidate.key < best.key)))
-                best = candidate;
+    // blockModels is keyed on only the properties that actually choose between
+    // a block's models, and the block's spec names those properties in the
+    // order the key writes them (see build_key_specs in
+    // tools/bake_block_models/main.py). So the states Bedrock reports that the
+    // generated data has no opinion on - minecraft:stone's vestigial
+    // stone_type, a leaf block's update_bit - are never read, and the lookup
+    // is one hash hit rather than a scan for the most specific entry whose
+    // properties happen to be a subset of the live ones.
+    //
+    // A spec holds a LIST of shapes, tried most specific first, because a
+    // block can read different states depending on what it is doing: a
+    // hanging sign attached to a block underneath is oriented by
+    // ground_sign_direction, and one hanging off the side of one by
+    // facing_direction. Every other block has exactly one shape, so this
+    // loop runs once and stops.
+    static #lookup(blockId, spec, states) {
+        const shapes = spec.props;
+        for (let i = 0; i < shapes.length; i++) {
+            const key = BlockModelLookup.#stateKey(blockId, shapes[i], states);
+            if (key === void 0)
+                continue;
+            const refs = blockModels[key];
+            if (refs !== void 0)
+                return refs;
         }
-        return best ? blockModels[best.key] : undefined;
+        return void 0;
     }
 
-    static #permutationKey(permutation) {
-        const states = permutation.getAllStates();
-        const stateStr = Object.keys(states)
-            .sort()
-            .map((key) => `${key}=${BlockModelLookup.#stateValue(states[key])}`)
-            .join(",");
-        return `${permutation.type.id}[${stateStr}]`;
+    // Undefined when the permutation doesn't carry every property the shape
+    // names - that shape describes a block in some other configuration, so
+    // the caller moves on to the next one rather than building a key that
+    // reads "ground_sign_direction=undefined" and can never hit.
+    static #stateKey(blockId, shape, states) {
+        let key = `${blockId}[`;
+        for (let i = 0; i < shape.length; i++) {
+            const name = shape[i];
+            const value = states[name];
+            if (value === void 0)
+                return void 0;
+            if (i > 0)
+                key += ",";
+            key += `${name}=${BlockModelLookup.#stateValue(value)}`;
+        }
+        return `${key}]`;
     }
 
     static #stateValue(value) {
