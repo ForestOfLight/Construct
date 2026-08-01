@@ -29,7 +29,7 @@ export class BlockPreviewVerificationLevelParticleRender {
 
     constructor(dimensionLocation, targetPermutation, verificationLevel, lifetimeSeconds = 5) {
         this.dimension = dimensionLocation.dimension;
-        this.location = Vector.from(dimensionLocation.location);
+        this.location = dimensionLocation.location;
         this.targetPermutation = targetPermutation;
         this.verificationLevel = verificationLevel;
         this.lifetimeSeconds = lifetimeSeconds;
@@ -140,8 +140,9 @@ export class BlockPreviewVerificationLevelParticleRender {
         molang.setColorRGBA("face_color", rgb);
 
         const particleType = `construct:block_face_${material}`;
+        const finalLocation = { x: this.location.x + center.x, y: this.location.y + center.y, z: this.location.z + center.z };
         try {
-            this.dimension.spawnParticle(particleType, this.location.add(center), molang);
+            this.dimension.spawnParticle(particleType, finalLocation, molang);
         } catch {
             /* pass */
         }
