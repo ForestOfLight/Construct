@@ -15,7 +15,7 @@
 			},
 			"fetch_block_models": {
 				"runWith": "python",
-				"script": "./filters/fetch_block_models/main.py"
+				"script": "./tools/bake_block_models/main.py"
 			}
 		},
 		"formatVersion": "1.4.0",

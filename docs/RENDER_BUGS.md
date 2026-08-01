@@ -1,6 +1,6 @@
 # RENDER BUGS
 
-This is a list of known rendering bugs for the Block Preview Render system. Much of this data is auto-generated from mcmeta and minecraft-data, so many of these bugs will be on the data processing side. Check out the regolith filter `fetch_block_models` for the code that processes the mcmeta data and generates the model data used by the Block Preview Render system.
+This is a list of known rendering bugs for the Block Preview Render system. Much of this data is auto-generated from mcmeta and minecraft-data, so many of these bugs will be on the data processing side. Check out `tools/bake_block_models/` for the code that processes the mcmeta data and generates the model data used by the Block Preview Render system.
 
 Keep in mind that, although we're rendering this in Bedrock edition, the render should be consistent with Java Edition, since that's where the source of the data is coming from.
 
@@ -10,7 +10,7 @@ Hardcoding overrides for specific blocks is not ideal, but if the mcmeta data is
 
 ~~#2: The sides of the bottom half of stairs are currently using the wrong uv. They are using the top half of the texture when they should be using the bottom half. Since the model is imported from mcmeta, is the data incorrect from there?~~
 
-~~#3: The top and bottom faces of pumpkins, jack-o-lanterns, and carved pumpking spin when the block is rotated. These faces should always point north. Is this a bug in the mcmeta data, or is it a bug in the Block Preview Render system? Keep in mind that end portal frames, which use the same "cardinal_direction" & "direction" states, are currently rotate the top face correctly, but the bottom face is rotated when it shouldn't be.~~ By design, matches JE.
+~~#3: The top and bottom faces of pumpkins, jack-o-lanterns, and carved pumpking spin when the block is rotated. These faces should always point north. Is this a bug in the mcmeta data, or is it a bug in the Block Preview Render system? Keep in mind that end portal frames, which use the same "cardinal_direction" & "direction" states, are currently rotate the top face correctly, but the bottom face is rotated when it shouldn't be.~~
 
 ~~#4: Pumpkins are rendered as a white cube instead of the their texture.~~
 
@@ -56,13 +56,10 @@ Hardcoding overrides for specific blocks is not ideal, but if the mcmeta data is
 
 ~~#25: Is there a bubble texture in the mcmeta data? If so, use that for the bubble column block instead of the water texture. Otherwise, keep the water texture.~~
 
-~~#26: Hanging signs with states attached_bit = false and hanging = true have their chains rotated 90 degrees from where they should be. Hanging signs with states attached_bit = true and hanging = true and ground_sign_direction = 2,6,10,14 have their whole model rotated 90 degrees from where it should be.~~ A model element's own "rotation" turns right-handed about its axis, the opposite way round from the blockstate-level "y", and both were going through the same function - so every y-rotated element turned the wrong way. Only ever visible where the rotated elements aren't symmetric, which is why crosses looked fine.
+~~#26: Hanging signs with states attached_bit = false and hanging = true have their chains rotated 90 degrees from where they should be. Hanging signs with states attached_bit = true and hanging = true and ground_sign_direction = 2,6,10,14 have their whole model rotated 90 degrees from where it should be.~~
 
-~~#27: Chests are using the wrong textures for certain faces. Here's what needs to change:
-- bottom texture is using the texture that should be the top texture of the chest base
-- top texture is using the texture should be the bottom texture of the chest lid
-- top texture of the chest base should be on the bottom of the chest base
-- bottom texture of the chest lid should be on the top of the chest lid
-- The front and back texture of the base are swapped. The front texture should be on the back, and the back texture should be on the front.
-- On the lock, every texture is upside down.
-This set of changes points to a problem with the model data.~~ It was: the shape was converted by hand from a CEM template's box-uv unwrap, whose slots are named in Java's entity model space, and that space is flipped in Y and Z against the block space this pipeline works in. Every rect in block_entity_models.json is the canonical unwrap - it was which face each one was handed to that was off.
+~~#27: Chests are using the wrong textures for certain faces. Here's what needs to change: bottom texture is using the texture that should be the top texture of the chest base, top texture is using the texture should be the bottom texture of the chest lid, top texture of the chest base should be on the bottom of the chest base, bottom texture of the chest lid should be on the top of the chest lid, The front and back texture of the base are swapped. The front texture should be on the back, and the back texture should be on the front., On the lock, every texture is upside down. This set of changes points to a problem with the model data.~~
+
+~~#28: Liquids should decrease in height as their liquid_depth increases. The top of the block at the highest level should be the same as vanilla - 4 pixels below the top of the block. The top of the block at the lowest level should be 1 pixel above the bottom of the block.~~
+
+~~#29: Water should be rendered as transparent, and a liquid_depth of 0 should be within every block with the isWaterlogged property set to true. After you implement this, check in with me to make sure it is transparent. There may be a bug where the particle is not properly made transparent.~~

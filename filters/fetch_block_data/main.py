@@ -4,13 +4,16 @@ bedrock-samples blocks.json + sounds.json, in Construct's exact format.
 Run it directly to replace blocks.js in place (no regolith export):
 
     python filters/fetch_block_data/main.py
+
+The JS-module renderer it shares with tools/bake_block_models lives in
+tools/lib, hence the sys.path line below.
 """
 
 import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools" / "lib"))
 from js_data import fetch, parse, render  # noqa: E402
 
 BLOCKS_URL = "https://raw.githubusercontent.com/Mojang/bedrock-samples/main/resource_pack/blocks.json"
