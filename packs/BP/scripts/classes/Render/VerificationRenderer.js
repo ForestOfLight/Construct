@@ -7,17 +7,14 @@ const RENDER_LIFETIME_FACTOR_TICKS = 1;
 
 export class VerificationRenderer {
     instance;
-    lastRenderedChunk;
     bounds;
-    shortestDimension;
     #usePerformanceRendering;
 
     #runner;
-    #renderQueue = [];
+    #cursor = 0;
 
     constructor(instance, { usePerformanceRendering }) {
         this.instance = instance;
-        this.lastRenderedChunk = 0;
         this.#usePerformanceRendering = usePerformanceRendering;
     }
 
@@ -30,11 +27,7 @@ export class VerificationRenderer {
     }
 
     #startContinuousRendering() {
-        this.#runner = system.runInterval(() => {
-            if (this.#renderQueue.length === 0)
-                this.#prepareRenderQueue();
-            this.#renderNextChunk();
-        }, RENDER_LIFETIME_FACTOR_TICKS);
+        this.#runner = system.runInterval(() => this.#renderNextChunk(), RENDER_LIFETIME_FACTOR_TICKS);
     }
 
     #stopContinuousRendering() {
@@ -42,71 +35,64 @@ export class VerificationRenderer {
             return;
         system.clearRun(this.#runner);
         this.#runner = void 0;
-        this.#renderQueue = [];
-    }
-
-    #prepareRenderQueue() {
-        this.#renderQueue = [];
-        const bounds = this.instance.getActiveBounds();
-            for (let y = bounds.min.y; y < bounds.max.y; y++) {
-                this.#prepareRenderQueueLayer(bounds, y);
-            }
-        this.lastRenderedChunk = 0;
-    }
-
-    #prepareRenderQueueLayer(bounds, y) {
-        if (bounds.max.x < bounds.max.z) {
-            for (let z = bounds.min.z; z < bounds.max.z; z++) {
-                for (let x = bounds.min.x; x < bounds.max.x; x++) {
-                    this.#renderQueue.push({ x, y, z });
-                }
-            }
-        } else {
-            for (let x = bounds.min.x; x < bounds.max.x; x++) {
-                for (let z = bounds.min.z; z < bounds.max.z; z++) {
-                    this.#renderQueue.push({ x, y, z });
-                }
-            }
-        }
+        this.#cursor = 0;
     }
 
     #renderNextChunk() {
-        if (this.#shouldUseLargeStructureRendering())
-            this.#renderNextChunkForLargeStructure();
-        else
-            this.#renderNextChunkForSmallStructure();
-    }
-
-    #renderNextChunkForLargeStructure() {
         const bounds = this.instance.getActiveBounds();
-        const shortestSideLength = Math.min(bounds.max.x, bounds.max.z);
-        const maxChunk = (bounds.min.volume(bounds.max) / shortestSideLength) / (bounds.max.y - bounds.min.y);
-        const lifetime = (maxChunk * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
+        const volume = bounds.min.volume(bounds.max);
+        if (volume <= 0)
+            return;
+        const isLargeStructure = this.#shouldUseLargeStructureRendering(volume);
+        const chunkSize = isLargeStructure ? Math.min(bounds.max.x, bounds.max.z) : 1;
+        const lifetime = isLargeStructure
+            ? this.#getLargeStructureLifetime(bounds, volume, chunkSize)
+            : this.#getSmallStructureLifetime(bounds);
         const verificationLevels = this.instance.verifier.getLastVerificationLevels();
         const dimension = this.instance.getDimension();
-        const chunk = this.#renderQueue.splice(0, shortestSideLength);
-        for (const location of chunk) {
+
+        if (this.#cursor >= volume)
+            this.#cursor = 0;
+        const end = Math.min(this.#cursor + chunkSize, volume);
+        for (let index = this.#cursor; index < end; index++) {
+            const location = this.#locationAt(bounds, index);
             const verificationLevel = verificationLevels[JSON.stringify(location)];
             this.#renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime);
         }
+        this.#cursor = end === volume ? 0 : end;
     }
 
-    #renderNextChunkForSmallStructure() {
-        const bounds = this.instance.getActiveBounds();
-        const lifetime = (bounds.max.x * (bounds.max.y - bounds.min.y) * bounds.max.z * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
-        const verificationLevels = this.instance.verifier.getLastVerificationLevels();
-        const dimension = this.instance.getDimension();
-        const nextBlock = this.#renderQueue.splice(0, 1);
-        for (const location of nextBlock) {
-            const verificationLevel = verificationLevels[JSON.stringify(location)];
-            this.#renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime);
+    #locationAt(bounds, index) {
+        const width = bounds.max.x - bounds.min.x;
+        const depth = bounds.max.z - bounds.min.z;
+        const layerIndex = index % (width * depth);
+        const y = bounds.min.y + Math.floor(index / (width * depth));
+        if (bounds.max.x < bounds.max.z) {
+            return {
+                x: bounds.min.x + (layerIndex % width),
+                y,
+                z: bounds.min.z + Math.floor(layerIndex / width)
+            };
         }
+        return {
+            x: bounds.min.x + Math.floor(layerIndex / depth),
+            y,
+            z: bounds.min.z + (layerIndex % depth)
+        };
     }
 
-    #shouldUseLargeStructureRendering() {
-        const bounds = this.instance.getActiveBounds();
+    #getLargeStructureLifetime(bounds, volume, shortestSideLength) {
+        const maxChunk = (volume / shortestSideLength) / (bounds.max.y - bounds.min.y);
+        return (maxChunk * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
+    }
+
+    #getSmallStructureLifetime(bounds) {
+        return (bounds.max.x * (bounds.max.y - bounds.min.y) * bounds.max.z * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
+    }
+
+    #shouldUseLargeStructureRendering(volume) {
         const maxVolume = 343;
-        return this.instance.hasLayerSelected() || bounds.min.volume(bounds.max) > maxVolume;
+        return this.instance.hasLayerSelected() || volume > maxVolume;
     }
 
     #renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime) {
