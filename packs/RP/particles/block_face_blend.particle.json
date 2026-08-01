@@ -21,32 +21,32 @@
 			},
 			"minecraft:particle_motion_parametric": {
 				"relative_position": [ 0, 0, 0 ],
-				"rotation": "variable.roll"
+				"rotation": "variable.size.z"
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [
-					"variable.width",
-					"variable.height"
+					"variable.size.x",
+					"variable.size.y"
 				],
 				"facing_camera_mode": "direction_z",
 				"direction": {
 					"mode": "custom",
 					"custom_direction": [
-						"variable.nx",
-						"variable.ny",
-						"variable.nz"
+						"variable.normal.x",
+						"variable.normal.y",
+						"variable.normal.z"
 					]
 				},
 				"uv": {
 					"texture_width": 1024,
 					"texture_height": 1024,
 					"uv": [
-						"variable.u",
-						"variable.v"
+						"variable.uv.x",
+						"variable.uv.y"
 					],
 					"uv_size": [
-						"variable.uv_w",
-						"variable.uv_h"
+						"variable.uv_size.x",
+						"variable.uv_size.y"
 					]
 				}
 			},
