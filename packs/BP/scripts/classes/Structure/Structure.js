@@ -5,6 +5,7 @@ import { StructureNotFoundError } from "../Errors/StructureNotFoundError";
 export class Structure {
     structureId;
     #structure;
+    #size;
 
     constructor(structureId) {
         this.structureId = structureId;
@@ -12,10 +13,11 @@ export class Structure {
         if (!this.#structure)
             throw new StructureNotFoundError(structureId);
         this.#structure.saveToWorld();
+        this.#size = this.#structure.size;
     }
 
     getHeight() {
-        return this.#structure.size.y;
+        return this.#size.y;
     }
 
     getMin() {
@@ -23,7 +25,7 @@ export class Structure {
     }
 
     getMax() {
-        return Vector.from(this.#structure.size);
+        return Vector.from(this.#size);
     }
 
     getBlockPermutation(structureLocation) {
@@ -42,23 +44,23 @@ export class Structure {
     }
 
     *getLayerBlockPermutations(layer) {
-        for (let x = 0; x < this.#structure.size.x; x++) {
-            for (let z = 0; z < this.#structure.size.z; z++) {
+        for (let x = 0; x < this.#size.x; x++) {
+            for (let z = 0; z < this.#size.z; z++) {
                 yield this.getBlockPermutation({ x, y: layer, z });
             }
         }
     }
 
     *getAllBlockPermutations() {
-        for (let y = 0; y < this.#structure.size.y; y++) {
+        for (let y = 0; y < this.#size.y; y++) {
             yield * this.getLayerBlockPermutations(y);
         }
     }
 
     getLayerLocations(layer) {
         const locations = new Set();
-        for (let x = 0; x < this.#structure.size.x; x++) {
-            for (let z = 0; z < this.#structure.size.z; z++) {
+        for (let x = 0; x < this.#size.x; x++) {
+            for (let z = 0; z < this.#size.z; z++) {
                 locations.add(new Vector(x, layer, z));
             }
         }
@@ -67,7 +69,7 @@ export class Structure {
 
     getAllLocations() {
         const locations = new Set();
-        for (let y = 0; y < this.#structure.size.y; y++) {
+        for (let y = 0; y < this.#size.y; y++) {
             const layerLocations = this.getLayerLocations(y);
             for (const location of layerLocations) {
                 locations.add(location);

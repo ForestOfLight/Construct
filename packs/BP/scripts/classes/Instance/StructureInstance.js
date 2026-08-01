@@ -19,6 +19,8 @@ export class StructureInstance {
     materials = void 0;
     flexMovingPlayerId = void 0;
 
+    #cachedDimension = void 0;
+
     constructor(instanceName, structureId) {
         this.structure = new Structure(structureId);
         this.options = new InstanceOptions(instanceName, structureId);
@@ -71,7 +73,9 @@ export class StructureInstance {
     }
 
     getDimension() {
-        return this.options?.getDimension();
+        if (!this.#cachedDimension)
+            this.#cachedDimension = this.options?.getDimension();
+        return this.#cachedDimension;
     }
     
     getLayer() {
