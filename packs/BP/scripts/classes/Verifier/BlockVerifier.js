@@ -1,5 +1,7 @@
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 
+const AIR = "minecraft:air";
+
 export class BlockVerifier {
     constructor(block, instance) {
         this.block = block;
@@ -9,35 +11,24 @@ export class BlockVerifier {
 
     verify() {
         const structPermutation = this.instance.getBlockPermutation(this.blockLocationInStructure);
-        return this.evaluatePermutations(this.block.permutation, structPermutation);
+        return this.evaluate(this.block, structPermutation);
     }
 
-    evaluatePermutations(worldPermutation, structPermutation) {
-        if (!structPermutation || this.isCorrectlyAir(worldPermutation, structPermutation))
+    evaluate(worldBlock, structPermutation) {
+        if (!structPermutation)
             return BlockVerificationLevel.Air;
-        if (this.isMissing(worldPermutation, structPermutation))
+        if (structPermutation.typeId === AIR)
+            return worldBlock.isAir ? BlockVerificationLevel.Air : BlockVerificationLevel.NoMatch;
+        if (worldBlock.isAir)
             return BlockVerificationLevel.Missing;
-        if (this.isExactMatch(worldPermutation, structPermutation))
-            return BlockVerificationLevel.Match;
-        if (this.isTypeMatch(worldPermutation, structPermutation))
+        if (worldBlock.typeId !== structPermutation.typeId)
+            return BlockVerificationLevel.NoMatch;
+        if (worldBlock.isWaterlogged !== structPermutation.isWaterlogged)
             return BlockVerificationLevel.TypeMatch;
-        return BlockVerificationLevel.NoMatch;
-    }
-
-    isCorrectlyAir(worldPermutation, structPermutation) {
-        return worldPermutation.type.id === "minecraft:air" && structPermutation.type.id === "minecraft:air";
-    }
-
-    isMissing(worldPermutation, structPermutation) {
-        return worldPermutation.type.id === "minecraft:air" && structPermutation.type.id !== "minecraft:air";
-    }
-
-    isTypeMatch(worldPermuation, structurePermuation) {
-        return worldPermuation.type.id === structurePermuation.type.id;
-    }
-
-    isExactMatch(worldPermutation, structurePermutation) {
-        return worldPermutation.matches(structurePermutation.type.id, structurePermutation.getAllStates())
-            && this.block.isWaterlogged === structurePermutation.isWaterlogged;
+        if (!structPermutation.hasStates)
+            return BlockVerificationLevel.Match;
+        return worldBlock.permutation.matches(structPermutation.typeId, structPermutation.states)
+            ? BlockVerificationLevel.Match
+            : BlockVerificationLevel.TypeMatch;
     }
 }
