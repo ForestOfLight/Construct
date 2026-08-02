@@ -66,9 +66,10 @@ export class VerificationRenderer {
         const volume = Vector.volume(bounds.min, bounds.max);
         if (volume <= 0)
             return;
-        const verificationLevels = this.instance.verifier.getLastVerificationLevels();
+        const verificationLevels = this.#gridFor(bounds);
         if (!verificationLevels)
             return;
+        this.#boxStore.retarget(bounds);
 
         const refreshSeconds = this.instance.options.verifier.refreshSeconds;
         // A particle lives exactly one full cursor cycle, so it is still alive
@@ -108,17 +109,39 @@ export class VerificationRenderer {
     renderBlockAt(location) {
         if (!this.#runner)
             return;
-        const verificationLevels = this.instance.verifier.getLastVerificationLevels();
+        const bounds = this.instance.getActiveBounds();
+        const verificationLevels = this.#gridFor(bounds);
         if (!verificationLevels)
             return;
-        const bounds = this.instance.getActiveBounds();
         const volume = Vector.volume(bounds.min, bounds.max);
         if (volume <= 0)
             return;
+        this.#boxStore.retarget(bounds);
         const lifetime = effectiveCycleSeconds(volume, this.instance.options.verifier.refreshSeconds);
         this.#renderBlockVerificationLevel(
             this.instance.getDimension(), location, verificationLevels.get(location), lifetime, verificationLevels,
         );
+    }
+
+    // The completed grid, but only if it actually describes the bounds we are
+    // about to iterate.
+    //
+    // verifier.refresh() restarts the sweep without touching the completed
+    // grid, and only the in-progress buffer is rebuilt when the bounds change.
+    // So after a layer change, a move, or a resize, the completed grid still
+    // describes the OLD bounds until a whole new verification finishes - up to
+    // a full refresh cycle later.
+    //
+    // Drawing through it in the meantime maps a location built from the new
+    // bounds onto the old grid's indices, which puts cells at the wrong
+    // offset. Persistent boxes make that stick: a box is positioned once, when
+    // its index is first seen, and later visits only recolour it - so a box
+    // created against the wrong grid never moves again.
+    #gridFor(bounds) {
+        const verificationLevels = this.instance.verifier.getLastVerificationLevels();
+        if (!verificationLevels?.matchesBounds(bounds))
+            return void 0;
+        return verificationLevels;
     }
 
     #locationAt(bounds, index) {

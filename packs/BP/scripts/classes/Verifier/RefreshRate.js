@@ -8,7 +8,7 @@ const TICKS_PER_SECOND = 20;
 // a performance regression: past this point the refresh setting stops
 // biting and the cycle stretches instead. Raising it needs frame-time
 // measurement on a real build.
-export const MAX_BLOCKS_PER_TICK = 10;
+export const MAX_BLOCKS_PER_TICK = 20;
 
 export const MIN_REFRESH_SECONDS = 3;
 export const MAX_REFRESH_SECONDS = 60;

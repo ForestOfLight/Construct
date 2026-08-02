@@ -14,6 +14,31 @@ import { getVerificationLevelColor, getVerificationLevelScale } from "./Verifica
 // the world with no handle left to reach them.
 export class DebugBoxStore {
     #boxes = new Map();
+    #bounds;
+
+    // An index only means a cell relative to one set of bounds. Change the
+    // bounds and every key in here silently refers to somewhere else, while
+    // the boxes stay where they were first placed - so they have to go.
+    //
+    // Keyed on bounds rather than on the grid object because the verifier
+    // swaps between two buffers of identical bounds every cycle, and clearing
+    // on identity would throw the boxes away each time.
+    retarget(bounds) {
+        if (this.#matchesBounds(bounds))
+            return;
+        this.clear();
+        this.#bounds = {
+            min: { x: bounds.min.x, y: bounds.min.y, z: bounds.min.z },
+            max: { x: bounds.max.x, y: bounds.max.y, z: bounds.max.z }
+        };
+    }
+
+    #matchesBounds(bounds) {
+        return this.#bounds !== void 0
+            && this.#bounds.min.x === bounds.min.x && this.#bounds.max.x === bounds.max.x
+            && this.#bounds.min.y === bounds.min.y && this.#bounds.max.y === bounds.max.y
+            && this.#bounds.min.z === bounds.min.z && this.#bounds.max.z === bounds.max.z;
+    }
 
     show(index, dimension, globalLocation, verificationLevel) {
         if (index === -1)
@@ -66,5 +91,6 @@ export class DebugBoxStore {
         for (const entry of this.#boxes.values())
             this.#hide(entry);
         this.#boxes.clear();
+        this.#bounds = void 0;
     }
 }
