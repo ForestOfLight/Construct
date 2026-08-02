@@ -16,13 +16,43 @@ const CULL_OFFSETS = [
     [1, 0, 0],   // 5 east
 ];
 
+// The table is laid out in opposite pairs, so the side a neighbor turns back
+// towards this block is its direction with the low bit flipped. Looking up
+// the block above means asking what IT covers below.
+const OPPOSITE = 1;
+
+// What one cell of the grid records: the six sides its block covers
+// completely, plus whether that block is opaque as well as solid.
+const COVER_MASK = 0b111111;
+const OPAQUE_BIT = 1 << 6;
+
+// Where occlusionMaskAt puts the second of the two masks it returns. Both are
+// six bits, so they ride home in one number rather than an object allocated
+// per block drawn.
+const COVER_CULL_SHIFT = 6;
+
+export function packCellFlags(coverMask, isOpaque) {
+    return (coverMask & COVER_MASK) | (isOpaque ? OPAQUE_BIT : 0);
+}
+
+// The two halves of what occlusionMaskAt returns: sides hidden by an opaque
+// neighbor, which hides anything, and sides hidden by a merely solid one,
+// which only hides a see-through placeholder face.
+export function opaqueCullMask(masks) {
+    return masks & COVER_MASK;
+}
+
+export function coverCullMask(masks) {
+    return (masks >> COVER_CULL_SHIFT) & COVER_MASK;
+}
+
 export class VerificationLevels {
     #min;
     #sizeX;
     #sizeY;
     #sizeZ;
     #levels;
-    #occluders;
+    #cellFlags;
 
     constructor(bounds) {
         this.#min = { x: bounds.min.x, y: bounds.min.y, z: bounds.min.z };
@@ -30,13 +60,13 @@ export class VerificationLevels {
         this.#sizeY = Math.max(bounds.max.y - bounds.min.y, 0);
         this.#sizeZ = Math.max(bounds.max.z - bounds.min.z, 0);
         this.#levels = new Uint8Array(this.#sizeX * this.#sizeY * this.#sizeZ);
-        // Which cells hold something that fills its whole cube opaquely, so a
-        // face pressed flat against one has nothing of it left to see. Kept
-        // beside the levels rather than folded into them because it isn't a
-        // level: a cell is opaque or not independently of whether the block
-        // there matches, and the verifier already knows both by the time it
-        // has looked the cell up once.
-        this.#occluders = new Uint8Array(this.#levels.length);
+        // What each cell offers its neighbors to hide behind: the sides it
+        // covers completely, plus whether that cover is opaque (see
+        // packCellFlags). Kept beside the levels rather than folded into them
+        // because it isn't a level - a cell's shape is what it is regardless
+        // of whether the block there matches - and the verifier already knows
+        // both by the time it has looked the cell up once.
+        this.#cellFlags = new Uint8Array(this.#levels.length);
     }
 
     matchesBounds(bounds) {
@@ -48,7 +78,7 @@ export class VerificationLevels {
 
     clear() {
         this.#levels.fill(BlockVerificationLevel.Unknown);
-        this.#occluders.fill(0);
+        this.#cellFlags.fill(0);
     }
 
     set(location, verificationLevel) {
@@ -65,18 +95,26 @@ export class VerificationLevels {
         return this.#levels[index];
     }
 
-    setOccluder(location, isOccluder) {
+    setCellFlags(location, flags) {
         const index = this.#indexOf(location);
         if (index === -1)
             return;
-        this.#occluders[index] = isOccluder ? 1 : 0;
+        this.#cellFlags[index] = flags;
     }
 
-    // A bit per entry of CULL_OFFSETS, set where that neighbor of `location`
-    // hides whatever is drawn against it. Built once per block rather than
-    // asked one face at a time: a block has six neighbors however many faces
-    // it has, and every face of a full cube would otherwise re-derive the
-    // same six answers.
+    // Both cull masks for the block at `location`, packed into one number -
+    // read them back with opaqueCullMask and coverCullMask.
+    //
+    // A side goes into the cover mask when the neighbor beyond it turns a
+    // complete face back this way, and into the opaque mask when that
+    // neighbor is opaque as well. The opaque mask is therefore always a
+    // subset of the cover mask, which is what makes the two rules compose:
+    // an opaque neighbor hides any face, a merely solid one hides only a
+    // see-through placeholder face that has nothing to show anyway.
+    //
+    // Built once per block rather than asked one face at a time: a block has
+    // six neighbors however many faces it has, and every face of a full cube
+    // would otherwise re-derive the same six answers.
     //
     // A neighbor outside the bounds reads as 0 - nothing there is known to be
     // solid, so nothing is culled against it. That leaves the outer shell of
@@ -84,16 +122,23 @@ export class VerificationLevels {
     // the conservative direction: a missed cull costs a particle, a wrong one
     // punches a hole in the model.
     occlusionMaskAt(location) {
-        let mask = 0;
+        let opaqueMask = 0;
+        let coverMask = 0;
         for (let direction = 0; direction < CULL_OFFSETS.length; direction++) {
             const offset = CULL_OFFSETS[direction];
             const index = this.#indexOfCoords(
                 location.x + offset[0], location.y + offset[1], location.z + offset[2],
             );
-            if (index !== -1 && this.#occluders[index] === 1)
-                mask |= 1 << direction;
+            if (index === -1)
+                continue;
+            const flags = this.#cellFlags[index];
+            if (!((flags >> (direction ^ OPPOSITE)) & 1))
+                continue;
+            coverMask |= 1 << direction;
+            if (flags & OPAQUE_BIT)
+                opaqueMask |= 1 << direction;
         }
-        return mask;
+        return opaqueMask | (coverMask << COVER_CULL_SHIFT);
     }
 
     countByLevel() {

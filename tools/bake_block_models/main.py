@@ -23,7 +23,7 @@ from pathlib import Path
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
-from js_data import render  # noqa: E402
+from js_data import render, render_rows  # noqa: E402
 
 from b2j_source import fetch_b2j, manifest_version, parse_java_state
 from block_entity_models import resolve_block_entity
@@ -526,9 +526,12 @@ def _rekey_one_hanging_sign(bedrock_id, entries):
     return rekeyed
 
 
-def build_block_models(mcmeta, b2j, atlas):
+def build_block_models(mcmeta, b2j, atlas, stats=None):
     """Returns {bedrock_state_str: [face, ...]}, faces still carrying a
-    'texture' name (not yet projected into atlas-pixel UV)."""
+    'texture' name (not yet projected into atlas-pixel UV).
+
+    `stats`, if given a dict, accumulates the face counts the two reduction
+    passes below moved, for the bake to report."""
     block_models = {}
     for bedrock_state, java_state in b2j.items():
         java_block_id, properties = parse_java_state(java_state)
@@ -549,7 +552,7 @@ def build_block_models(mcmeta, b2j, atlas):
             continue
         state_tint = _state_tint(java_block_id, properties)
         faces = []
-        for element in elements:
+        for element_index, element in enumerate(elements):
             for face in element["faces"].values():
                 width, height = _derive_width_height(face["extent"], face["uv_u"], face["uv_v"])
                 # a quad with no area covers no pixels whatever it is textured
@@ -580,10 +583,33 @@ def build_block_models(mcmeta, b2j, atlas):
                     "uv": face["uv"],
                     "roll": _derive_roll(face["normal"], face["uv_v"]),
                     "tintindex": face["tintindex"],
+                    # the face's texture axes as world directions, carried
+                    # only so the two passes below can measure a quad's own
+                    # extent within its plane; _drop_uv_axes takes them off
+                    # again before anything downstream sees a face
+                    "uv_u": face["uv_u"],
+                    "uv_v": face["uv_v"],
+                    # which element this came off, so _is_buried can ask
+                    # whether that element is a box with a far wall or a
+                    # zero-thickness plane
+                    "element": element_index,
                 })
         faces = _merge_coincident_faces(faces)
+        # opacity is what says whether one face can hide another, and only
+        # the atlas knows it - so the textures go in before the culling pass
+        # rather than after it. A face culled below may leave its texture in
+        # the atlas unused, which costs a little packed area and nothing else.
         for face in faces:
             atlas.add(mcmeta, face["texture"])
+        before = len(faces)
+        faces, culled = _cull_interior_faces(faces, atlas)
+        faces, joined = _join_coplanar_faces(faces)
+        _drop_uv_axes(faces)
+        if stats is not None:
+            stats["faces_before"] = stats.get("faces_before", 0) + before
+            stats["faces_after"] = stats.get("faces_after", 0) + len(faces)
+            stats["culled"] = stats.get("culled", 0) + culled
+            stats["joined"] = stats.get("joined", 0) + joined
         block_models[bedrock_state] = faces
     return block_models
 
@@ -665,6 +691,261 @@ def _merge_coincident_faces(faces):
         elif first["texture"] != face["texture"]:
             first["texture"] = compose_textures(first["texture"], face["texture"])
     return merged
+
+
+def _dot(a, b):
+    return sum(Decimal(x) * Decimal(y) for x, y in zip(a, b))
+
+
+def _drop_uv_axes(faces):
+    """Takes the texture axes back off, once the passes that need them are
+    done. Nothing downstream reads them, and a face dict is compared field by
+    field in build_face_types_and_refs - so leaving them on would be dead
+    weight carried through the whole pipeline."""
+    for face in faces:
+        face.pop("uv_u", None)
+        face.pop("uv_v", None)
+        face.pop("element", None)
+
+
+def _is_axis_aligned_with(face, other):
+    """Whether `other`'s texture axes lie along `face`'s - parallel or
+    perpendicular, either way round, in any direction.
+
+    This is the precondition for measuring one quad's extent in the other's
+    frame as a plain interval (see _covers). Two coplanar quads whose frames
+    sit at some other angle - a cross-plant's 45-degree elements - would need
+    their overlap computed as real polygon intersection, and taking the
+    bounding box instead would claim coverage that isn't there. So they are
+    simply left alone."""
+    for axis in (other["uv_u"], other["uv_v"]):
+        for own in (face["uv_u"], face["uv_v"]):
+            if abs(_dot(axis, own)) not in (0, 1):
+                return False
+    return True
+
+
+def _extent_in_frame(face, u_axis, v_axis):
+    """(u position, u half-width, v position, v half-height) of `face`'s quad
+    measured along the given in-plane axes. Only meaningful when those axes
+    are aligned with the face's own (see _is_axis_aligned_with), which makes
+    exactly one term of each sum non-zero."""
+    half_w, half_h = Decimal(face["width"]) / 2, Decimal(face["height"]) / 2
+    return (
+        _dot(face["center"], u_axis),
+        abs(half_w * _dot(face["uv_u"], u_axis)) + abs(half_h * _dot(face["uv_v"], u_axis)),
+        _dot(face["center"], v_axis),
+        abs(half_w * _dot(face["uv_u"], v_axis)) + abs(half_h * _dot(face["uv_v"], v_axis)),
+    )
+
+
+def _covers(other, face):
+    """Whether `other` lies flat against the back of `face`, spanning at
+    least every point `face` does: same plane, facing the opposite way, and
+    at least as big.
+
+    This alone does NOT mean `face` is hidden - see _is_buried, which is what
+    decides that. A coplanar opposite-facing quad can just as easily be the
+    other side of a zero-thickness plane, where dropping either side makes
+    the block disappear when looked at from that side."""
+    if tuple(other["normal"]) != tuple(-Decimal(c) for c in face["normal"]):
+        return False
+    if _dot(other["center"], face["normal"]) != _dot(face["center"], face["normal"]):
+        return False
+    if not _is_axis_aligned_with(face, other):
+        return False
+    u_axis, v_axis = face["uv_u"], face["uv_v"]
+    fu, fhw, fv, fhh = _extent_in_frame(face, u_axis, v_axis)
+    ou, ohw, ov, ohh = _extent_in_frame(other, u_axis, v_axis)
+    return (ou - ohw <= fu - fhw and ou + ohw >= fu + fhw
+            and ov - ohh <= fv - fhh and ov + ohh >= fv + fhh)
+
+
+def _is_buried(face, coverer, faces, atlas):
+    """Whether `face` looks out into the solid inside of `coverer`'s element
+    rather than into open space.
+
+    `face` points some direction n, and is only ever seen from the n side.
+    `coverer` is flat against its back, so `coverer`'s element is the thing
+    between `face` and any viewer on that side - but only if that element has
+    real thickness along n. What proves it does is the element having another
+    face pointing the same way as `face` and further along n: that is the far
+    wall of a box `face` is sealed inside, and if it is opaque then a viewer
+    on the n side meets it and never sees through to `face`.
+
+    Without this test, "covered by an opposite-facing opaque quad" also
+    describes the two sides of a zero-thickness plane - an azalea's top leaf
+    layer is one quad up and one quad down at the same height - and dropping
+    the down side of that makes the block vanish when looked at from below.
+    A plane has no second face pointing the way `face` does, so it fails
+    here, while a box (a beacon's obsidian base, a dried ghast's body) passes."""
+    normal = face["normal"]
+    depth = _dot(face["center"], normal)
+    for other in faces:
+        if other is face or other.get("element") != coverer.get("element"):
+            continue
+        if tuple(other["normal"]) != tuple(normal):
+            continue
+        if _dot(other["center"], normal) <= depth:
+            continue
+        if atlas.is_opaque(other["texture"]):
+            return True
+    return False
+
+
+def _cull_interior_faces(faces, atlas):
+    """Drops faces sealed inside opaque geometry of the same block - the
+    surfaces where one of a model's elements is buried in another. Returns
+    (kept, dropped_count).
+
+    Java gets these for free by drawing solid elements into a depth buffer;
+    we spawn a particle per face, so a buried surface costs exactly as much
+    as a visible one and additionally z-fights with the face it is pressed
+    against. A beacon's core sits in its obsidian base and a dried ghast's
+    tentacles hang off its body, and every one of those seams is drawn twice.
+
+    Two conditions together, and both are load-bearing: something opaque lies
+    flat against the face's back (_covers) and that something is a box the
+    face is sealed inside rather than a bare plane (_is_buried).
+
+    Only a *surviving* face can bury another, so a pair of quads that cover
+    each other loses at most one. Removing both would need the shell around
+    them to be opaque everywhere the pair can be seen through, which is a
+    question about the whole model rather than about two faces.
+
+    Opacity is judged over the whole texture rather than the rect a face
+    samples, which is the conservative direction: a fully opaque texture is
+    opaque in every rect of it, so this can miss a cull but never make a
+    wrong one."""
+    kept = list(faces)
+    dropped = 0
+    for face in faces:
+        for other in kept:
+            if other is face or not _covers(other, face):
+                continue
+            if not atlas.is_opaque(other["texture"]):
+                continue
+            if not _is_buried(face, other, kept, atlas):
+                continue
+            kept.remove(face)
+            dropped += 1
+            break
+    return kept, dropped
+
+
+def _join_coplanar_faces(faces):
+    """Merges neighboring coplanar quads that sample neighboring parts of the
+    same texture into single larger quads. Returns (kept, joined_count).
+
+    Models are authored as boxes, so one flat surface routinely arrives as
+    several abutting quads - and each costs a particle. Where two of them
+    are edge to edge in the world AND edge to edge in the texture, one quad
+    covering both samples exactly the union of what the two sampled, at the
+    same texels-per-pixel. The merge is then invisible by construction: the
+    same texels land on the same points on screen.
+
+    Every condition in _join_pair is load-bearing for that. In particular two
+    quads sampling the *identical* uv rect are the case this must not touch,
+    however neatly they abut: they are the texture drawn twice, and one quad
+    over both would stretch a single copy across the pair at half the texel
+    density. That is why contiguity is checked rather than equality, and why
+    the densities are compared explicitly - matching density is also what
+    keeps the merged quad selecting the same mip level as the two it
+    replaces, so nothing gets blurrier at range."""
+    kept = list(faces)
+    joined = 0
+    merging = True
+    while merging:
+        merging = False
+        for i in range(len(kept)):
+            for j in range(i + 1, len(kept)):
+                merged = _join_pair(kept[i], kept[j])
+                if merged is None:
+                    continue
+                kept[i] = merged
+                del kept[j]
+                joined += 1
+                merging = True
+                break
+            if merging:
+                break
+    return kept, joined
+
+
+def _join_pair(a, b):
+    """The single quad covering both `a` and `b`, or None if they can't be
+    joined without changing what gets drawn."""
+    # A joined quad carries one texture, one tint and one orientation, so
+    # anything the pair disagrees on here rules the join out outright.
+    if a["texture"] != b["texture"] or a["tintindex"] != b["tintindex"]:
+        return None
+    if a["roll"] != b["roll"] or tuple(a["normal"]) != tuple(b["normal"]):
+        return None
+    # Same texture frame, not merely aligned: the merged uv rect is written
+    # in these axes, so a pair reading u along opposite world directions
+    # could not share one rect even though their quads line up.
+    if tuple(a["uv_u"]) != tuple(b["uv_u"]) or tuple(a["uv_v"]) != tuple(b["uv_v"]):
+        return None
+    normal = a["normal"]
+    if _dot(a["center"], normal) != _dot(b["center"], normal):
+        return None
+    return _join_along_u(a, b) or _join_along_v(a, b)
+
+
+def _join_along_u(a, b):
+    """The pair joined side by side along the texture's u axis, or None."""
+    if a["height"] != b["height"] or a["uv"][1] != b["uv"][1] or a["uv"][3] != b["uv"][3]:
+        return None
+    if _dot(a["center"], a["uv_v"]) != _dot(b["center"], b["uv_v"]):
+        return None
+    lo, hi = sorted((a, b), key=lambda face: _dot(face["center"], face["uv_u"]))
+    gap = _dot(hi["center"], hi["uv_u"]) - _dot(lo["center"], lo["uv_u"])
+    if gap != (Decimal(lo["width"]) + Decimal(hi["width"])) / 2:
+        return None
+    if lo["uv"][2] != hi["uv"][0]:  # contiguous in the texture, not just in the world
+        return None
+    lo_span = Decimal(lo["uv"][2]) - Decimal(lo["uv"][0])
+    hi_span = Decimal(hi["uv"][2]) - Decimal(hi["uv"][0])
+    if Decimal(lo["width"]) * hi_span != Decimal(hi["width"]) * lo_span:
+        return None
+    width = Decimal(lo["width"]) + Decimal(hi["width"])
+    return {
+        **lo,
+        "center": _offset(lo["center"], lo["uv_u"], Decimal(hi["width"]) / 2),
+        "width": width,
+        "uv": [lo["uv"][0], lo["uv"][1], hi["uv"][2], lo["uv"][3]],
+    }
+
+
+def _join_along_v(a, b):
+    """The pair joined one above the other along the texture's v axis, or
+    None. v runs the way the texture reads downward, so the quad further
+    along it is the one sampling further down the texture."""
+    if a["width"] != b["width"] or a["uv"][0] != b["uv"][0] or a["uv"][2] != b["uv"][2]:
+        return None
+    if _dot(a["center"], a["uv_u"]) != _dot(b["center"], b["uv_u"]):
+        return None
+    lo, hi = sorted((a, b), key=lambda face: _dot(face["center"], face["uv_v"]))
+    gap = _dot(hi["center"], hi["uv_v"]) - _dot(lo["center"], lo["uv_v"])
+    if gap != (Decimal(lo["height"]) + Decimal(hi["height"])) / 2:
+        return None
+    if lo["uv"][3] != hi["uv"][1]:
+        return None
+    lo_span = Decimal(lo["uv"][3]) - Decimal(lo["uv"][1])
+    hi_span = Decimal(hi["uv"][3]) - Decimal(hi["uv"][1])
+    if Decimal(lo["height"]) * hi_span != Decimal(hi["height"]) * lo_span:
+        return None
+    height = Decimal(lo["height"]) + Decimal(hi["height"])
+    return {
+        **lo,
+        "center": _offset(lo["center"], lo["uv_v"], Decimal(hi["height"]) / 2),
+        "height": height,
+        "uv": [lo["uv"][0], lo["uv"][1], lo["uv"][2], hi["uv"][3]],
+    }
+
+
+def _offset(point, axis, distance):
+    return [Decimal(c) + distance * Decimal(a) for c, a in zip(point, axis)]
 
 
 def white_swatch(image):
@@ -777,6 +1058,55 @@ def build_face_types_and_refs(block_models):
     return face_types, block_models
 
 
+# A face-type descriptor's fields, in the order flatten_face_types writes
+# them into a row. The renderer's FaceTable reads them back by the same
+# offsets, so the two orders are one definition in two languages - change
+# this and FACE_* in packs/BP/scripts/classes/Render/FaceTable.js together.
+FACE_ROW_FIELDS = (
+    "cull", "facing", "center", "width", "height", "roll", "tintindex", "uv",
+)
+FACE_ROW_WIDTH = 15
+# Stands in for a face no neighbor can hide, on the ~64% of faces that carry
+# no cull direction at all. Not a valid cull index (they are 0-5), so the
+# renderer can test for it rather than needing a column of its own.
+NO_CULL = -1
+
+
+def flatten_face_types(face_types):
+    """Flattens the face-type descriptors into one array of numbers,
+    FACE_ROW_WIDTH per face, laid out as FACE_ROW_FIELDS describes. Returns
+    (rows, missing_indices).
+
+    Written out, a descriptor costs ~300 bytes: nine field names repeated on
+    every one of ~34,000 faces (the names alone were 2MB of the generated
+    module), and an object plus a nested uv object plus two arrays for the
+    engine to allocate at load and hold for the session. A row of bare
+    numbers costs neither, and the renderer builds a descriptor back out of
+    one only for the faces a build actually draws.
+
+    `missing` stays out of the rows: it is true on a handful of faces, so a
+    column for it would be ~34,000 zeroes. The indices of those few come back
+    as their own list instead.
+    """
+    rows = []
+    missing_indices = []
+    for index, descriptor in enumerate(face_types):
+        uv = descriptor["uv"]
+        rows.extend([
+            descriptor.get("cull", NO_CULL),
+            *descriptor["facing"],
+            *descriptor["center"],
+            descriptor["width"],
+            descriptor["height"],
+            descriptor["roll"],
+            descriptor["tintindex"],
+            uv["x"], uv["y"], uv["w"], uv["h"],
+        ])
+        if descriptor.get("missing"):
+            missing_indices.append(index)
+    return rows, missing_indices
+
+
 def build_opaque_cube_ids(block_models, atlas):
     """The Bedrock block ids that fill their whole cube with nothing
     see-through, sorted. These are the blocks allowed to hide a neighbor's
@@ -834,8 +1164,25 @@ def _parse_state_key(bedrock_state):
     return bedrock_state[:bracket], properties
 
 
-def _format_state_key(block_id, properties, names):
-    return f"{block_id}[{','.join(f'{name}={properties[name]}' for name in names)}]"
+def _format_state_key(block_id, properties, names, shape_index):
+    """The reduced key a rekeyed entry is stored under: the block id, which
+    of the block's property shapes this is, and that shape's values in its
+    own order - "minecraft:acacia_door[0|0,east,0,0]".
+
+    The names are left out because blockKeySpecs already carries them, in
+    this order, and repeating them on every key cost ~840KB of the generated
+    module and a string concatenation per property on every lookup.
+
+    The shape index is what keeps the names droppable. Two of a hanging
+    sign's shapes are [attached_bit, facing_direction, hanging] and
+    [attached_bit, ground_sign_direction, hanging]: same length, different
+    meaning, and with the names gone both write "[0,3,1]". The index tells
+    them apart, and the renderer has it to hand - it is the shape it is
+    already looping over. build_key_specs still checks for collisions, so a
+    future Bedrock version that breaks this argument fails the bake.
+    """
+    values = ",".join(properties[name] for name in names)
+    return f"{block_id}[{shape_index}|{values}]"
 
 
 def build_key_specs(block_models):
@@ -887,10 +1234,25 @@ def build_key_specs(block_models):
                 values_seen.setdefault(name, set()).add(value)
         discriminating = {name for name, values in values_seen.items() if len(values) > 1}
 
+        # The shapes have to be settled before any key is written: a key
+        # names its shape by position, so the sort below has to have already
+        # happened for that position to be the one the renderer will look up.
+        shaped_entries = [
+            (bedrock_state, properties, refs,
+             sorted(name for name in properties if name in discriminating))
+            for bedrock_state, properties, refs in entries
+        ]
         shapes = []
-        for bedrock_state, properties, refs in entries:
-            shape = sorted(name for name in properties if name in discriminating)
-            reduced = _format_state_key(block_id, properties, shape)
+        for _bedrock_state, _properties, _refs, shape in shaped_entries:
+            if shape not in shapes:
+                shapes.append(shape)
+        shapes.sort(key=lambda shape: (-len(shape), shape))
+        shape_indices = {tuple(shape): index for index, shape in enumerate(shapes)}
+
+        for bedrock_state, properties, refs, shape in shaped_entries:
+            reduced = _format_state_key(
+                block_id, properties, shape, shape_indices[tuple(shape)]
+            )
             if rekeyed.get(reduced, refs) != refs:
                 raise ValueError(
                     f"{bedrock_state} and another entry both reduce to {reduced} "
@@ -898,11 +1260,22 @@ def build_key_specs(block_models):
                     f"they agree on is only safe while it keeps keys unique"
                 )
             rekeyed[reduced] = refs
-            if shape not in shapes:
-                shapes.append(shape)
-        shapes.sort(key=lambda shape: (-len(shape), shape))
         specs[block_id] = {"props": shapes}
     return specs, rekeyed
+
+
+def _report_face_reduction(stats):
+    """Prints what the two reduction passes took off. Every face here is a
+    particle the renderer would otherwise spawn per block placed, so this is
+    the number worth watching when a Minecraft update reshapes the models."""
+    before, after = stats.get("faces_before", 0), stats.get("faces_after", 0)
+    if not before:
+        return
+    print(
+        f"[fetch_block_models] faces {before} -> {after} "
+        f"({100 * (before - after) / before:.1f}% fewer): "
+        f"{stats.get('culled', 0)} interior culled, {stats.get('joined', 0)} joined"
+    )
 
 
 def build(root):
@@ -915,7 +1288,9 @@ def build(root):
     white_path = root / "packs" / "RP" / "textures" / "particle" / "white.png"
     atlas.add_image(WHITE_TEXTURE, white_swatch(Image.open(white_path)))
 
-    block_models = build_block_models(mcmeta, b2j, atlas)
+    stats = {}
+    block_models = build_block_models(mcmeta, b2j, atlas, stats)
+    _report_face_reduction(stats)
     # while the faces still name their textures, which is what says whether a
     # block is see-through - project_uv drops the names a few lines down
     opaque_cube_ids = build_opaque_cube_ids(block_models, atlas)
@@ -950,8 +1325,15 @@ def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_s
     atlas_js_path.write_text(atlas_js_contents, encoding="utf-8")
 
     models_js_path = root / "packs" / "BP" / "scripts" / "blockModels.js"
+    face_rows, missing_faces = flatten_face_types(face_types)
     models_js_contents = (
-        "export const blockFaceTypes = " + render(face_types) + ";\n\n"
+        # one face per line, FACE_ROW_WIDTH bare numbers laid out as
+        # FACE_ROW_FIELDS says; FaceTable builds a descriptor out of a row
+        # only for the faces a build actually draws
+        "export const blockFaceData = " + render_rows(face_rows, FACE_ROW_WIDTH) + ";\n\n"
+        # the faces that stand for something the pipeline could not resolve,
+        # drawn in the unresolved color - too few to be worth a column
+        "export const blockMissingFaces = " + render(missing_faces) + ";\n\n"
         # keyed on only the properties that choose between a block's models,
         # so the renderer needs blockKeySpecs to build a key that hits
         "export const blockModels = " + render(block_models) + ";\n\n"

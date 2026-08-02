@@ -3,6 +3,7 @@ import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { InstanceStatistics } from './InstanceStatistics';
 import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
+import { RENDER_MODE_LABELS, RENDER_MODE_ORDER } from '../Enums/RenderMode';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -57,7 +58,14 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
             .toggle({ translate: 'construct.instance.option.validation' }, { defaultValue: instance.options.verifier.isEnabled, tooltip: { translate: 'construct.instance.option.validation.description' }})
             .slider({ translate: 'construct.instance.option.layer'}, 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: { translate: 'construct.instance.option.layer.description' }})
-            .toggle({ translate: 'construct.instance.option.performancemode' }, { defaultValue: instance.options.performanceRendering, tooltip: { translate: 'construct.instance.option.performanceMode.description' }})
+            .dropdown(
+                { translate: 'construct.instance.option.rendermode' },
+                RENDER_MODE_ORDER.map(mode => ({ translate: RENDER_MODE_LABELS[mode] })),
+                {
+                    defaultValueIndex: Math.max(RENDER_MODE_ORDER.indexOf(instance.options.renderMode), 0),
+                    tooltip: { translate: 'construct.instance.option.rendermode.description' }
+                }
+            )
             .submitButton({ translate: 'construct.menu.submit' });
     }
 

@@ -4,28 +4,40 @@ import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/Blo
 import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
+import { showsBlockPreview, usesDebugMarkers, usesParticleOverlays } from "../Enums/RenderMode";
 
 const RENDER_LIFETIME_FACTOR_TICKS = 1;
 
 export class VerificationRenderer {
     instance;
     bounds;
-    #usePerformanceRendering;
+    // Resolved from the render mode once per refresh rather than per block -
+    // #renderBlockVerificationLevel runs for every block of every chunk.
+    #useDebugMarkers;
+    #useParticleOverlays;
+    #showBlockPreview;
 
     #runner;
     #cursor = 0;
 
-    constructor(instance, { usePerformanceRendering }) {
+    constructor(instance) {
         this.instance = instance;
-        this.#usePerformanceRendering = usePerformanceRendering;
+        this.#pullRenderMode();
     }
 
     refresh() {
         this.#stopContinuousRendering();
-        this.#usePerformanceRendering = this.instance.options.performanceRendering;
+        this.#pullRenderMode();
         if (!this.instance.isEnabled() || !this.instance.options.verifier.isEnabled)
             return;
         this.#startContinuousRendering();
+    }
+
+    #pullRenderMode() {
+        const mode = this.instance.options.renderMode;
+        this.#useDebugMarkers = usesDebugMarkers(mode);
+        this.#useParticleOverlays = usesParticleOverlays(mode);
+        this.#showBlockPreview = showsBlockPreview(mode);
     }
 
     #startContinuousRendering() {
@@ -105,14 +117,22 @@ export class VerificationRenderer {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)
         };
-        if (this.#usePerformanceRendering) {
+        // The two layers stack rather than choosing between each other: the box
+        // marks the block, the particle shades it. Every level gets both in a
+        // mode that asks for both - Performance is the only one that skips the
+        // particle layer entirely.
+        if (this.#useDebugMarkers)
             new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, lifetime);
+        if (!this.#useParticleOverlays)
             return;
-        }
-        const occlusionMask = verificationLevels.occlusionMaskAt(location);
+        // Only a missing block has a model worth drawing - nothing else is
+        // rendering in that cell - so the preview flag reaches no other level,
+        // and an incorrect block's overlay is the plain translucent cube
+        // whatever the mode.
+        const showPreview = verificationLevel === BlockVerificationLevel.Missing && this.#showBlockPreview;
         new BlockPreviewVerificationLevelParticleRender(
             dimensionLocation, this.instance.getBlockPermutation(location),
-            verificationLevel, lifetime, occlusionMask,
+            verificationLevel, lifetime, verificationLevels.occlusionMaskAt(location), showPreview,
         );
     }
 }

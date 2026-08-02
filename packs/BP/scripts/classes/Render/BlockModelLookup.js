@@ -1,4 +1,5 @@
-import { blockFaceTypes, blockKeySpecs, blockModels, blockOpaqueCubes } from "../../blockModels";
+import { blockKeySpecs, blockModels, blockOpaqueCubes } from "../../blockModels";
+import { faceAt } from "./FaceTable";
 import { whiteUvRect } from "../../blockAtlas";
 
 // A plain full cube, used to outline a block that is already visible in the
@@ -42,13 +43,34 @@ const WATER_BLOCK_IDS = new Set(["minecraft:water", "minecraft:flowing_water"]);
 // for a stair or a fence can carry it, and there is nothing for the pipeline
 // to bake. It is always a full source block, hence depth 0.
 //
-// Written the way blockModels is keyed - liquid_depth is the one property
-// that picks between water's models, so it survives the key reduction
+// Written the way blockModels is keyed: shape 0 of water's one property
+// shape, then that shape's values. liquid_depth is the one property that
+// picks between water's models, so it survives the key reduction
 // build_key_specs does and this is still a real key.
-const WATERLOGGED_WATER_STATE = "minecraft:water[liquid_depth=0]";
+const WATERLOGGED_WATER_STATE = "minecraft:water[0|0]";
 
 let waterFaces;
 let opaqueCubeIds;
+
+// Everything derived from a permutation that doesn't depend on where the
+// block stands, worked out once per distinct permutation instead of once per
+// block per render pass. Structure interns its permutations (see
+// Structure.#intern), so the same stair state anywhere in a build is the same
+// object and hits the same entry; a WeakMap means a structure that goes away
+// takes its entries with it.
+//
+// Resolving used to run per block per pass: two calls across the native
+// boundary for the id and the states, a state key built by string
+// concatenation, a hash lookup, and a fresh array from mapping the refs. The
+// verifier now needs a block's shape as well as the renderer, so doing that
+// twice per block was not an option.
+const resolvedByPermutation = new WeakMap();
+
+// A face covers the side of the block it sits on when it lies flat against
+// that side (which is what having a cull direction at all means - see
+// _cull_direction in tools/bake_block_models/main.py) AND spans the whole
+// 16x16 of it. Anything smaller leaves a gap around itself.
+const FULL_FACE_SIZE = 16;
 
 export class BlockModelLookup {
     // Whether a block of this type fills its whole cube with nothing
@@ -64,16 +86,58 @@ export class BlockModelLookup {
     }
 
     static getFaces(permutation) {
-        const blockId = permutation.type.id;
+        return BlockModelLookup.#resolve(permutation).faces;
+    }
+
+    // Which of the block's six sides it covers completely, as a bit per
+    // entry of CULL_OFFSETS (see ../Verifier/VerificationLevels.js). This is
+    // what lets a neighbor hide a face without being opaque itself: a
+    // see-through placeholder cube has nothing worth showing where another
+    // block is pressed against it, whatever that block is made of.
+    //
+    // Counts only the block's own shape. A waterlogged block's water fills
+    // the cube too, but it is a separate layer the model knows nothing about,
+    // and leaving it out only ever costs a cull.
+    static getCoverMask(permutation) {
+        return BlockModelLookup.#resolve(permutation).coverMask;
+    }
+
+    static #resolve(permutation) {
+        const cached = resolvedByPermutation.get(permutation);
+        if (cached !== void 0)
+            return cached;
+        const faces = BlockModelLookup.#lookupFaces(permutation);
+        const resolved = { faces, coverMask: BlockModelLookup.#coverMaskOf(faces) };
+        resolvedByPermutation.set(permutation, resolved);
+        return resolved;
+    }
+
+    static #lookupFaces(permutation) {
+        // Structure caches both of these onto the permutation when it interns
+        // it; reading them back beats `type.id` and `getAllStates()`, which
+        // are calls across the native boundary. A permutation that never went
+        // through Structure still works, just slower.
+        const blockId = permutation.typeId ?? permutation.type.id;
         const spec = blockKeySpecs[blockId];
         // No spec at all means the block id is absent from the Bedrock<->Java
         // mapping the pipeline was built from, so there is no model to find.
         if (spec === void 0)
             return UNKNOWN_CUBE_FACES;
-        const refs = BlockModelLookup.#lookup(blockId, spec, permutation.getAllStates());
+        const states = permutation.states ?? permutation.getAllStates();
+        const refs = BlockModelLookup.#lookup(blockId, spec, states);
         if (!refs)
             return UNKNOWN_CUBE_FACES;
-        return refs.map((index) => blockFaceTypes[index]);
+        return refs.map(faceAt);
+    }
+
+    static #coverMaskOf(faces) {
+        let mask = 0;
+        for (let i = 0; i < faces.length; i++) {
+            const face = faces[i];
+            if (face.cull !== void 0 && face.width === FULL_FACE_SIZE && face.height === FULL_FACE_SIZE)
+                mask |= 1 << face.cull;
+        }
+        return mask;
     }
 
     // The water filling a waterlogged block, as its own set of faces to draw
@@ -84,7 +148,7 @@ export class BlockModelLookup {
     static getWaterloggedFaces() {
         if (!waterFaces) {
             const refs = blockModels[WATERLOGGED_WATER_STATE] ?? [];
-            waterFaces = refs.map((index) => blockFaceTypes[index]);
+            waterFaces = refs.map(faceAt);
         }
         return waterFaces;
     }
@@ -111,7 +175,7 @@ export class BlockModelLookup {
     static #lookup(blockId, spec, states) {
         const shapes = spec.props;
         for (let i = 0; i < shapes.length; i++) {
-            const key = BlockModelLookup.#stateKey(blockId, shapes[i], states);
+            const key = BlockModelLookup.#stateKey(blockId, shapes[i], i, states);
             if (key === void 0)
                 continue;
             const refs = blockModels[key];
@@ -124,17 +188,22 @@ export class BlockModelLookup {
     // Undefined when the permutation doesn't carry every property the shape
     // names - that shape describes a block in some other configuration, so
     // the caller moves on to the next one rather than building a key that
-    // reads "ground_sign_direction=undefined" and can never hit.
-    static #stateKey(blockId, shape, states) {
-        let key = `${blockId}[`;
+    // reads "undefined" in a slot and can never hit.
+    //
+    // The key writes the shape's values without their names, since the shape
+    // already names them in this order (see _format_state_key in
+    // tools/bake_block_models/main.py). `shapeIndex` goes in because two of a
+    // hanging sign's shapes are the same length, so the values alone would
+    // not say which of them was read.
+    static #stateKey(blockId, shape, shapeIndex, states) {
+        let key = `${blockId}[${shapeIndex}|`;
         for (let i = 0; i < shape.length; i++) {
-            const name = shape[i];
-            const value = states[name];
+            const value = states[shape[i]];
             if (value === void 0)
                 return void 0;
             if (i > 0)
                 key += ",";
-            key += `${name}=${BlockModelLookup.#stateValue(value)}`;
+            key += BlockModelLookup.#stateValue(value);
         }
         return `${key}]`;
     }

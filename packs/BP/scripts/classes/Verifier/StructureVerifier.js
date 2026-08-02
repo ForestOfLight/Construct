@@ -1,5 +1,5 @@
 import { BlockVerifier } from "./BlockVerifier";
-import { VerificationLevels } from "./VerificationLevels";
+import { packCellFlags, VerificationLevels } from "./VerificationLevels";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "../Render/PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { BlockModelLookup } from "../Render/BlockModelLookup";
@@ -226,20 +226,40 @@ export class StructureVerifier {
         const globalLocation = this.instance.toGlobalCoords(location);
         const verificationLevel = this.getVerificationLevel(globalLocation);
         this.blockVerificationLevels.set(location, verificationLevel);
-        this.blockVerificationLevels.setOccluder(location, this.#isOccluder(location, verificationLevel));
+        this.blockVerificationLevels.setCellFlags(location, this.#cellFlags(location, verificationLevel));
         if (shouldRender && verificationLevel !== BlockVerificationLevel.Air) {
             const dimensionLocation = { dimension: this.instance.getDimension(), location: globalLocation };
             new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
         }
     }
 
-    #isOccluder(location, verificationLevel) {
+    // What this cell offers its neighbors to hide their faces behind: the
+    // sides it covers completely, and whether what covers them is opaque.
+    //
+    // Read off the STRUCTURE's block rather than the world's, which is what
+    // keeps this cheap: the permutation is already cached and interned, and
+    // its shape is resolved once per distinct permutation and remembered (see
+    // BlockModelLookup.getCoverMask). The three levels below are the ones
+    // where that answer also describes what will actually be standing there -
+    // Missing draws the structure's own block as the preview, Match has the
+    // identical block already placed, and TypeMatch has the same block id in a
+    // different state.
+    //
+    // NoMatch is deliberately left out. Something else entirely is placed
+    // there and only the world could say what, so the cell offers nothing and
+    // its neighbors keep every face.
+    #cellFlags(location, verificationLevel) {
         if (verificationLevel !== BlockVerificationLevel.Missing
             && verificationLevel !== BlockVerificationLevel.Match
             && verificationLevel !== BlockVerificationLevel.TypeMatch)
-            return false;
+            return 0;
         const permutation = this.instance.getBlockPermutation(location);
-        return permutation !== void 0 && BlockModelLookup.isOpaqueCube(permutation.typeId);
+        if (permutation === void 0)
+            return 0;
+        return packCellFlags(
+            BlockModelLookup.getCoverMask(permutation),
+            BlockModelLookup.isOpaqueCube(permutation.typeId),
+        );
     }
 
     getVerificationLevel(globalLocation) {

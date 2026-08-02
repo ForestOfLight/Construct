@@ -1,6 +1,7 @@
 import { MolangVariableMap } from "@minecraft/server";
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { BlockModelLookup, PLAIN_CUBE_FACES } from "../BlockModelLookup";
+import { coverCullMask, opaqueCullMask } from "../../Verifier/VerificationLevels";
 import { DEBUG_CONFIG } from "../../../consts";
 
 const BLOCK_CENTER = 0.5;
@@ -22,12 +23,23 @@ const BLOCK_CENTER = 0.5;
 const MISSING_SIZE_SCALAR = 1.00;
 const OVERLAY_SIZE_SCALAR = 1.01;
 
+// A missing block in a mode that draws no preview: a small see-through blue
+// cube floating in the middle of its cell rather than a stand-in for the block
+// itself. Nothing about it is trying to look like what belongs there, so it
+// takes none of the reasoning above about insets and seams - it is pulled well
+// inside its cell precisely so a run of them reads as a row of separate marks,
+// and it is never culled against its neighbors, because two of these sitting
+// side by side don't touch and each one has to stay whole to read as a mark.
+const PLAIN_MISSING_SIZE_SCALAR = 0.90;
+const PLAIN_MISSING_RGBA = { red: 0, green: 0, blue: 1, alpha: 0.2 };
+const PLAIN_MISSING_MATERIAL = "blend";
+
 // How a face the pipeline couldn't resolve is drawn: a see-through blue quad
 // rather than the block's own preview color. Solid white read as a real
 // block with a blank texture, which hid broken model/texture data instead of
 // advertising it; a translucent blue cube is unmistakable, and being
 // see-through also keeps it from hiding whatever is behind it.
-const MISSING_FACE_RGBA = { red: 0, green: 0, blue: 1, alpha: 0.2 };
+const MISSING_FACE_RGBA = { red: 0.3, green: 0.57, blue: 0.87, alpha: 0.2 };
 const MISSING_FACE_MATERIAL = "blend";
 
 // Water is the one block whose texture is authored see-through: Java draws it
@@ -43,13 +55,18 @@ const WATER_MATERIAL = "blend";
 export class BlockPreviewVerificationLevelParticleRender {
     lifetimeSeconds = 0;
 
-    constructor(dimensionLocation, targetPermutation, verificationLevel, lifetimeSeconds = 5, occlusionMask = 0) {
+    constructor(dimensionLocation, targetPermutation, verificationLevel, lifetimeSeconds = 5, occlusionMask = 0, showBlockPreview = true) {
         this.dimension = dimensionLocation.dimension;
         this.location = dimensionLocation.location;
         this.targetPermutation = targetPermutation;
         this.verificationLevel = verificationLevel;
         this.lifetimeSeconds = lifetimeSeconds;
         this.occlusionMask = occlusionMask;
+        this.showBlockPreview = showBlockPreview;
+        // The plain blue marker case, which overrides color, size, material and
+        // culling all at once. Only a missing block can take it: every other
+        // level draws over a block that is really there.
+        this.isPlainMissingCube = verificationLevel === BlockVerificationLevel.Missing && !showBlockPreview;
         this.#renderBlock();
     }
 
@@ -80,20 +97,32 @@ export class BlockPreviewVerificationLevelParticleRender {
         // resolved puts the block's own color back.
         let colorIsMissing = false;
 
-        const occlusionMask = this.occlusionMask;
+        // Two cull rules, because a face that draws a real texture and a face
+        // that draws the see-through blue placeholder are hidden by different
+        // things. An OPAQUE neighbor hides anything laid against it. A
+        // neighbor that merely covers the side - another placeholder cube, a
+        // stair's flat back, a pane of glass - hides only a placeholder face,
+        // which has no texture worth showing and exists to say "we don't know
+        // what goes here". That is what stops a run of unresolved blocks
+        // drawing every wall between them while still leaving a textured
+        // block's face visible where one stands beside it.
+        //
+        // Empty masks cull nothing, which is how the plain blue marker keeps
+        // all six of its sides: it is inset far enough that its neighbors never
+        // reach it, so any cull would open a hole in a cube standing in clear
+        // air rather than hide a face nobody can see.
+        const opaqueCull = this.isPlainMissingCube ? 0 : opaqueCullMask(this.occlusionMask);
+        const coverCull = this.isPlainMissingCube ? 0 : coverCullMask(this.occlusionMask);
 
         for (const { faces, material } of this.#getFaceLayers()) {
             for (const face of faces) {
                 try {
-                    // A face lying flat on the block's hull is hidden outright
-                    // by a neighbor that fills its own cube opaquely, so it
-                    // costs a particle and draws nothing. `cull` says which
-                    // neighbor that is (absent on the faces no neighbor can
-                    // reach - anything inside the block, and every diagonal),
-                    // and the mask says which of the six qualify.
-                    if (face.cull !== void 0 && (occlusionMask >> face.cull) & 1)
-                        continue;
                     const missing = face.missing === true;
+                    // `cull` is the neighbor that can hide this face, and is
+                    // absent on the faces none can reach - anything inside the
+                    // block, and every diagonal.
+                    if (face.cull !== void 0 && ((missing ? coverCull : opaqueCull) >> face.cull) & 1)
+                        continue;
                     if (missing !== colorIsMissing) {
                         scratch.molang.setColorRGBA("face_color", missing ? MISSING_FACE_RGBA : rgb);
                         colorIsMissing = missing;
@@ -115,9 +144,14 @@ export class BlockPreviewVerificationLevelParticleRender {
     // block, so a plain cube is enough and skips the model lookup entirely.
     // That also means those levels never show the water: the real block is
     // there in the world with its own water already drawn around it.
+    //
+    // A render mode with the preview switched off takes the same shortcut for
+    // Missing, which is the whole of what that setting costs: a missing block
+    // becomes one solid cube in its verification color instead of one particle
+    // per face of its model.
     #getFaceLayers() {
         const material = this.#verificationLevelToMaterial();
-        if (this.verificationLevel !== BlockVerificationLevel.Missing)
+        if (!this.showBlockPreview || this.verificationLevel !== BlockVerificationLevel.Missing)
             return [{ faces: PLAIN_CUBE_FACES, material }];
         const layers = [{
             faces: BlockModelLookup.getFaces(this.targetPermutation),
@@ -183,10 +217,11 @@ export class BlockPreviewVerificationLevelParticleRender {
         // while this is on.
         //
         // It must not assign back into `face`. Face descriptors are shared
-        // and deduplicated across every block that uses them (see
-        // blockFaceTypes), so writing through would corrupt the generated
-        // table for the rest of the session - including after debug mode is
-        // switched back off.
+        // and deduplicated across every block that uses them - a face is
+        // built once from the baked table and handed to every block that
+        // draws it (see FaceTable) - so writing through would corrupt it for
+        // the rest of the session, including after debug mode is switched
+        // back off.
         uv.x = DEBUG_CONFIG.enable ? DEBUG_CONFIG.render_all_textures_as.u : face.uv.x;
         uv.y = DEBUG_CONFIG.enable ? DEBUG_CONFIG.render_all_textures_as.v : face.uv.y;
         uvSize.x = face.uv.w;
@@ -205,23 +240,29 @@ export class BlockPreviewVerificationLevelParticleRender {
     }
 
     #verificationLevelToMaterial() {
+        if (this.isPlainMissingCube)
+            return PLAIN_MISSING_MATERIAL;
         return this.verificationLevel === BlockVerificationLevel.Missing ? "opaque" : "blend";
     }
 
     #verificationLevelToRGB() {
+        if (this.isPlainMissingCube)
+            return PLAIN_MISSING_RGBA;
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
                 return { red: 1, green: 0, blue: 0, alpha: 0.2 };
             case BlockVerificationLevel.TypeMatch:
                 return { red: 1, green: 1, blue: 0, alpha: 0.2 };
             case BlockVerificationLevel.Missing:
-                return { red: 0.5, green: 0.5, blue: 1, alpha: 1 };
+                return { red: 0.55, green: 0.8, blue: 1, alpha: 1 };
             default:
                 return void 0;
         }
     }
 
     #verificationLevelToSizeScalar() {
+        if (this.isPlainMissingCube)
+            return PLAIN_MISSING_SIZE_SCALAR;
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
                 return OVERLAY_SIZE_SCALAR;

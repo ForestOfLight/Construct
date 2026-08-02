@@ -9,6 +9,11 @@ export class OutlineParticleRender extends IOutlineRender {
     drawParticle = "construct:outline";
     drawFrequency;
     particleLifetime;
+    // Which halves of the outline this renderer is responsible for. Both, on
+    // its own; OutlineHybridRender switches one off so the other renderer can
+    // take that half instead.
+    drawVertices = true;
+    drawEdges = true;
     
     #drawParticles = [];
     #runner = void 0;
@@ -35,10 +40,12 @@ export class OutlineParticleRender extends IOutlineRender {
     }
 
     draw() {
-        this.drawParticles(this.getVerticeParticles(), () => { 
-            return { red: 1, green: 1, blue: 1, alpha: 1 }
-        });
-        this.drawParticles(this.getCubiodEdgeParticles(), this.getNextParticleColor.bind(this));
+        if (this.drawVertices)
+            this.drawParticles(this.getVerticeParticles(), () => {
+                return { red: 1, green: 1, blue: 1, alpha: 1 }
+            });
+        if (this.drawEdges)
+            this.drawParticles(this.getCubiodEdgeParticles(), this.getNextParticleColor.bind(this));
     }
 
     drawParticles(particleLocations, colorCallback) {

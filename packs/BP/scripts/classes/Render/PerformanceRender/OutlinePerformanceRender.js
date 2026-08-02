@@ -7,6 +7,11 @@ export class OutlinePerformanceRender extends IOutlineRender {
     dimension;
     min = new Vector();
     max = new Vector();
+    // Which halves of the outline this renderer is responsible for. Both, on
+    // its own; OutlineHybridRender switches one off so the other renderer can
+    // take that half instead.
+    drawVertices = true;
+    drawEdges = true;
     #shapes = [];
 
     constructor(dimension, min, max) {
@@ -28,10 +33,12 @@ export class OutlinePerformanceRender extends IOutlineRender {
 
     draw() {
         this.stopDraw();
-        this.drawShapes(this.getVerticeShapes(), () => { 
-            return { red: 1, green: 1, blue: 1, alpha: 1 }
-        });
-        this.drawShapes(this.getCubiodEdgeLines(), this.getNextLineColor.bind(this));
+        if (this.drawVertices)
+            this.drawShapes(this.getVerticeShapes(), () => {
+                return { red: 1, green: 1, blue: 1, alpha: 1 }
+            });
+        if (this.drawEdges)
+            this.drawShapes(this.getCubiodEdgeLines(), this.getNextLineColor.bind(this));
     }
 
     drawShapes(shapes, colorCallback) {

@@ -40,7 +40,7 @@ export class BlockVerificationLevelPerformanceRender {
             case BlockVerificationLevel.TypeMatch:
                 return { red: 1, green: 1, blue: 0, alpha: 1 };
             case BlockVerificationLevel.Missing:
-                return { red: 0, green: 0, blue: 1, alpha: 1 };
+                return { red: 0.3, green: 0.57, blue: 0.87, alpha: 1 };
             default:
                 return void 0;
         }

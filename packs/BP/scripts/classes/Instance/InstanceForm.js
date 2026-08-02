@@ -6,6 +6,7 @@ import { InstanceFormBuilder } from './InstanceFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { FlexibleInstanceMove } from './FlexibleInstanceMove';
 import { Builders } from '../Builder/Builders';
+import { RENDER_MODE_ORDER, RenderMode } from '../Enums/RenderMode';
 
 export class InstanceForm {
     instanceName;
@@ -176,7 +177,7 @@ export class InstanceForm {
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
             this.instance.setLayer(parseInt(response.formValues[1]));
-            this.instance.setPerformanceRenderingEnabled(response.formValues[2]);
+            this.instance.setRenderMode(RENDER_MODE_ORDER[response.formValues[2]] ?? RenderMode.Default);
         });
     }
 

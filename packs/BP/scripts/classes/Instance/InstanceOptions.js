@@ -1,6 +1,7 @@
 import { Vector } from "../../lib/Vector";
 import { world } from "@minecraft/server";
 import { Option } from "../Option";
+import { RenderMode } from "../Enums/RenderMode";
 
 export class InstanceOptions extends Option {
     #DP_NAMESPACE = "instanceOptions";
@@ -15,7 +16,7 @@ export class InstanceOptions extends Option {
         trackPlayerDistance: 5,
         particleLifetime: 10
     };
-    performanceRendering = false;
+    renderMode = RenderMode.Default;
 
     static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);
@@ -84,8 +85,8 @@ export class InstanceOptions extends Option {
         this.save();
     }
 
-    setPerformanceRenderingEnabled(enable) {
-        this.performanceRendering = enable;
+    setRenderMode(mode) {
+        this.renderMode = mode;
         this.save();
     }
 }

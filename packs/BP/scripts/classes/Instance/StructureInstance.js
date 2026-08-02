@@ -43,11 +43,11 @@ export class StructureInstance {
         if (!this.hasLocation())
             return;
         if (!this.outliner)
-            this.outliner = new StructureOutliner(this, { usePerformanceRendering: this.options.performanceRendering });
+            this.outliner = new StructureOutliner(this);
         if (!this.verifier)
             this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled });
         if (!this.verificationRenderer)
-            this.verificationRenderer = new VerificationRenderer(this, { usePerformanceRendering: this.options.performanceRendering });
+            this.verificationRenderer = new VerificationRenderer(this);
         if (!this.materials)
             this.materials = new StructureMaterials(this);
         this.outliner.refresh();
@@ -245,8 +245,8 @@ export class StructureInstance {
         this.verificationRenderer.refresh();
     }
 
-    setPerformanceRenderingEnabled(enable) {
-        this.options.setPerformanceRenderingEnabled(enable);
+    setRenderMode(mode) {
+        this.options.setRenderMode(mode);
         this.refreshBox();
     }
 
@@ -320,7 +320,7 @@ export class StructureInstance {
                 trackPlayerDistance: this.options.verifier.trackPlayerDistance,
                 particleLifetime: this.options.verifier.particleLifetime
             },
-            performanceRendering: this.options.performanceRendering
+            renderMode: this.options.renderMode
         };
     }
 
@@ -335,7 +335,7 @@ export class StructureInstance {
         this.options.setVerifierEnabled(newVerifierOptions.isEnabled);
         this.options.setVerifierDistance(newVerifierOptions.trackPlayerDistance);
         this.options.setVerifierParticleLifetime(newVerifierOptions.particleLifetime);
-        this.options.setPerformanceRenderingEnabled(newOptions.performanceRendering);
+        this.options.setRenderMode(newOptions.renderMode);
         this.options.save();
         this.refreshBox();
     }

@@ -16,10 +16,15 @@ from main import (
     REDSTONE_POWER_TINTS,
     white_swatch,
     _merge_coincident_faces,
+    _cull_interior_faces,
+    _join_coplanar_faces,
     _derive_width_height,
     build_block_models,
     build_face_types_and_refs,
     build_key_specs,
+    flatten_face_types,
+    FACE_ROW_WIDTH,
+    NO_CULL,
     project_uv,
     rekey_hanging_signs,
     WHITE_CUBE_FACES,
@@ -47,11 +52,15 @@ class FakeMcmeta:
 
 
 class FakeAtlas:
-    def __init__(self):
+    def __init__(self, transparent=()):
         self.added = []
+        self._transparent = set(transparent)
 
     def add(self, mcmeta, name):
         self.added.append(name)
+
+    def is_opaque(self, name):
+        return name not in self._transparent
 
 
 class BuildBlockModelsTest(unittest.TestCase):
@@ -498,6 +507,179 @@ class MergeCoincidentFacesTest(unittest.TestCase):
                 self.assertEqual(len(_merge_coincident_faces(faces)), 2)
 
 
+def _south_face(center, width=16, height=16, uv=None, texture="a", tintindex=-1, roll=0):
+    """A face on the south side of a block: normal +z, u running +x and v
+    running -y (the way the texture reads downward)."""
+    return {
+        "center": [Decimal(c) for c in center], "width": Decimal(width),
+        "height": Decimal(height), "normal": [0, 0, 1], "texture": texture,
+        "uv": [Decimal(c) for c in (uv or [0, 0, 16, 16])], "roll": roll,
+        "tintindex": tintindex, "uv_u": [1, 0, 0], "uv_v": [0, -1, 0],
+    }
+
+
+def _flat_face(y, facing, width=16, x=8, texture="a", element=0):
+    """A horizontal face at height `y`, pointing up (facing 1) or down
+    (facing -1), spanning the full 16 in z and `width` in x around `x`."""
+    return {
+        "center": [Decimal(x), Decimal(y), Decimal(8)], "width": Decimal(width),
+        "height": Decimal(16), "normal": [0, facing, 0], "texture": texture,
+        "uv": [Decimal(0), Decimal(0), Decimal(16), Decimal(16)],
+        "roll": 180 if facing > 0 else 0, "tintindex": -1,
+        "uv_u": [1, 0, 0], "uv_v": [0, 0, 1 if facing > 0 else -1],
+        "element": element,
+    }
+
+
+class CullInteriorFacesTest(unittest.TestCase):
+    """Faces sealed inside opaque geometry of the same block."""
+
+    def _base_box(self, texture="b", element=1):
+        """A solid slab from y=0 to y=3 - the beacon's obsidian base. Its top
+        face is what another element can be buried against, and its bottom
+        face is the far wall that makes the burial real."""
+        return [_flat_face(3, 1, texture=texture, element=element),
+                _flat_face(0, -1, texture=texture, element=element)]
+
+    def test_a_face_sealed_inside_a_box_is_dropped(self):
+        # the beacon's core sitting in its obsidian base: the core's underside
+        # looks down into solid obsidian and can never be seen
+        core_bottom = _flat_face(3, -1, width=10, texture="core", element=0)
+        faces = [core_bottom, *self._base_box()]
+        kept, dropped = _cull_interior_faces(faces, FakeAtlas())
+        self.assertEqual(dropped, 1)
+        self.assertNotIn(core_bottom, kept)
+
+    def test_both_sides_of_a_zero_thickness_plane_are_kept(self):
+        # An azalea's top leaf layer is one quad facing up and one facing
+        # down at the same height, with nothing between them. Each covers the
+        # other, but neither is buried - drop the down side and the block
+        # disappears when you look up at it from below.
+        up = _flat_face(16, 1, texture="block/azalea_top", element=0)
+        down = _flat_face(16, -1, texture="block/azalea_top|fy", element=0)
+        kept, dropped = _cull_interior_faces([up, down], FakeAtlas())
+        self.assertEqual(dropped, 0)
+        self.assertEqual(len(kept), 2)
+
+    def test_a_pair_that_buries_each_other_keeps_one_of_the_two(self):
+        # a double slab's seam: two boxes meeting at y=8, each with a far wall
+        bottom = [_flat_face(8, 1, element=0), _flat_face(0, -1, element=0)]
+        top = [_flat_face(8, -1, element=1), _flat_face(16, 1, element=1)]
+        kept, dropped = _cull_interior_faces([*bottom, *top], FakeAtlas())
+        self.assertEqual(dropped, 1)
+        self.assertEqual(len(kept), 3)
+
+    def test_a_see_through_box_hides_nothing(self):
+        core_bottom = _flat_face(3, -1, width=10, texture="core", element=0)
+        faces = [core_bottom, *self._base_box("block/glass")]
+        kept, dropped = _cull_interior_faces(
+            faces, FakeAtlas(transparent={"block/glass"}))
+        self.assertEqual(dropped, 0)
+        self.assertEqual(len(kept), 3)
+
+    def test_a_box_with_a_see_through_far_wall_hides_nothing(self):
+        # the near face is opaque, but you can still see in from underneath
+        core_bottom = _flat_face(3, -1, width=10, texture="core", element=0)
+        faces = [core_bottom,
+                 _flat_face(3, 1, texture="opaque", element=1),
+                 _flat_face(0, -1, texture="block/glass", element=1)]
+        kept, dropped = _cull_interior_faces(
+            faces, FakeAtlas(transparent={"block/glass"}))
+        self.assertEqual(dropped, 0)
+        self.assertEqual(len(kept), 3)
+
+    def test_a_partly_covered_face_is_kept_whole(self):
+        # splitting it would mint new geometry rather than remove any. The
+        # core's underside spans x 3-13; this base only reaches x 4-12.
+        core_bottom = _flat_face(3, -1, width=10, texture="core", element=0)
+        faces = [core_bottom,
+                 _flat_face(3, 1, width=8, element=1),
+                 _flat_face(0, -1, width=8, element=1)]
+        kept, dropped = _cull_interior_faces(faces, FakeAtlas())
+        self.assertEqual(dropped, 0)
+        self.assertEqual(len(kept), 3)
+
+    def test_faces_looking_the_same_way_are_left_alone(self):
+        # both are seen from the same side, so neither is an interior surface
+        # backing the other - this is _merge_coincident_faces's territory
+        faces = [_flat_face(3, 1, element=0), _flat_face(3, 1, width=8, element=1)]
+        kept, dropped = _cull_interior_faces(faces, FakeAtlas())
+        self.assertEqual(dropped, 0)
+        self.assertEqual(len(kept), 2)
+
+
+class JoinCoplanarFacesTest(unittest.TestCase):
+    """Neighboring quads that also sample neighboring parts of the texture
+    become one quad drawing exactly what the two drew."""
+
+    def test_two_quads_contiguous_in_world_and_texture_become_one(self):
+        left = _south_face([4, 8, 16], width=8, uv=[0, 0, 8, 16])
+        right = _south_face([12, 8, 16], width=8, uv=[8, 0, 16, 16])
+        kept, joined = _join_coplanar_faces([left, right])
+        self.assertEqual(joined, 1)
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(kept[0]["center"], [8, 8, 16])
+        self.assertEqual(kept[0]["width"], 16)
+        self.assertEqual(kept[0]["uv"], [0, 0, 16, 16])
+
+    def test_quads_sampling_the_identical_rect_are_never_joined(self):
+        # This is the texture drawn twice side by side, not one texture split
+        # across two quads. One quad over the pair would stretch a single
+        # copy across both at half the texel density.
+        left = _south_face([4, 8, 16], width=8, uv=[0, 0, 16, 16])
+        right = _south_face([12, 8, 16], width=8, uv=[0, 0, 16, 16])
+        kept, joined = _join_coplanar_faces([left, right])
+        self.assertEqual(joined, 0)
+        self.assertEqual(len(kept), 2)
+
+    def test_a_run_of_quads_collapses_to_a_single_one(self):
+        faces = [_south_face([2 + 4 * i, 8, 16], width=4,
+                             uv=[4 * i, 0, 4 * i + 4, 16]) for i in range(4)]
+        kept, joined = _join_coplanar_faces(faces)
+        self.assertEqual(joined, 3)
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(kept[0]["width"], 16)
+        self.assertEqual(kept[0]["uv"], [0, 0, 16, 16])
+
+    def test_quads_stacked_along_v_join_downward_through_the_texture(self):
+        # v runs the way the texture reads downward, so the quad higher up in
+        # the world is the one sampling the top of the texture
+        top = _south_face([8, 12, 16], height=8, uv=[0, 0, 16, 8])
+        bottom = _south_face([8, 4, 16], height=8, uv=[0, 8, 16, 16])
+        kept, joined = _join_coplanar_faces([top, bottom])
+        self.assertEqual(joined, 1)
+        self.assertEqual(kept[0]["center"], [8, 8, 16])
+        self.assertEqual(kept[0]["height"], 16)
+        self.assertEqual(kept[0]["uv"], [0, 0, 16, 16])
+
+    def test_a_gap_between_the_quads_blocks_the_join(self):
+        left = _south_face([2, 8, 16], width=4, uv=[0, 0, 8, 16])
+        away = _south_face([12, 8, 16], width=8, uv=[8, 0, 16, 16])
+        self.assertEqual(_join_coplanar_faces([left, away])[1], 0)
+
+    def test_mismatched_texel_density_blocks_the_join(self):
+        # contiguous both ways, but the right quad shows twice as much
+        # texture across the same span - joining would rescale both halves
+        left = _south_face([4, 8, 16], width=8, uv=[0, 0, 4, 16])
+        right = _south_face([12, 8, 16], width=8, uv=[4, 0, 16, 16])
+        self.assertEqual(_join_coplanar_faces([left, right])[1], 0)
+
+    def test_faces_disagreeing_on_what_they_draw_are_left_alone(self):
+        left = _south_face([4, 8, 16], width=8, uv=[0, 0, 8, 16])
+        for label, right in (
+            ("texture", _south_face([12, 8, 16], width=8, uv=[8, 0, 16, 16], texture="b")),
+            ("tintindex", _south_face([12, 8, 16], width=8, uv=[8, 0, 16, 16], tintindex=0)),
+            ("roll", _south_face([12, 8, 16], width=8, uv=[8, 0, 16, 16], roll=90)),
+        ):
+            with self.subTest(differing=label):
+                self.assertEqual(_join_coplanar_faces([left, right])[1], 0)
+
+    def test_quads_on_different_planes_are_left_alone(self):
+        near = _south_face([4, 8, 16], width=8, uv=[0, 0, 8, 16])
+        far = _south_face([12, 8, 0], width=8, uv=[8, 0, 16, 16])
+        self.assertEqual(_join_coplanar_faces([near, far])[1], 0)
+
+
 class ParticleTextureFallbackTest(unittest.TestCase):
     """A block whose model draws nothing at all (barrier, light, the fluids)
     is not broken data - Java just renders it some other way. Where the model
@@ -883,6 +1065,79 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
         self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
 
 
+class FlattenFaceTypesTest(unittest.TestCase):
+    """The descriptors go out as bare numbers, FACE_ROW_WIDTH to a face, and
+    the renderer builds a descriptor back out of a row only for the faces a
+    build draws (see FaceTable.js). These tests pin the layout the two sides
+    agree on."""
+
+    def _descriptor(self, **overrides):
+        descriptor = {
+            "center": [8, 16, 8], "width": 16, "height": 12,
+            "facing": [0, -1, 0], "roll": 180, "tintindex": -1,
+            "uv": {"x": 32, "y": 64, "w": 16, "h": 16},
+        }
+        descriptor.update(overrides)
+        return descriptor
+
+    def test_a_face_becomes_one_row_of_its_fields_in_order(self):
+        rows, _missing = flatten_face_types([self._descriptor(cull=1)])
+        self.assertEqual(rows, [
+            1,            # cull
+            0, -1, 0,     # facing
+            8, 16, 8,     # center
+            16, 12,       # width, height
+            180,          # roll
+            -1,           # tintindex
+            32, 64, 16, 16,  # uv x, y, w, h
+        ])
+
+    def test_a_row_is_exactly_as_wide_as_the_renderer_expects(self):
+        rows, _missing = flatten_face_types([self._descriptor(cull=1)])
+        self.assertEqual(len(rows), FACE_ROW_WIDTH)
+
+    def test_faces_land_at_their_own_index_times_the_row_width(self):
+        rows, _missing = flatten_face_types([
+            self._descriptor(cull=0), self._descriptor(cull=3), self._descriptor(cull=5),
+        ])
+        self.assertEqual(len(rows), 3 * FACE_ROW_WIDTH)
+        for index, cull in enumerate([0, 3, 5]):
+            self.assertEqual(rows[index * FACE_ROW_WIDTH], cull)
+
+    def test_a_face_no_neighbor_can_hide_takes_the_no_cull_stand_in(self):
+        # a row is bare numbers and can't leave a slot out the way the
+        # descriptor left the field off; NO_CULL is not a cull index, so the
+        # renderer can tell it apart and drop the field again
+        rows, _missing = flatten_face_types([self._descriptor()])
+        self.assertEqual(rows[0], NO_CULL)
+        self.assertNotIn(NO_CULL, range(6))
+
+    def test_missing_faces_come_back_as_indices_rather_than_a_column(self):
+        rows, missing = flatten_face_types([
+            self._descriptor(), self._descriptor(missing=True), self._descriptor(),
+        ])
+        self.assertEqual(missing, [1])
+        self.assertEqual(len(rows), 3 * FACE_ROW_WIDTH)
+
+    def test_no_missing_faces_gives_an_empty_list_not_a_row_of_flags(self):
+        _rows, missing = flatten_face_types([self._descriptor(), self._descriptor()])
+        self.assertEqual(missing, [])
+
+    def test_every_field_of_a_descriptor_survives_the_flattening(self):
+        # the guarantee the encoding rests on: nothing is dropped, only
+        # written differently
+        descriptor = self._descriptor(cull=4, missing=True)
+        rows, missing = flatten_face_types([descriptor])
+        rebuilt = {
+            "center": rows[4:7], "width": rows[7], "height": rows[8],
+            "facing": rows[1:4], "roll": rows[9], "tintindex": rows[10],
+            "uv": {"x": rows[11], "y": rows[12], "w": rows[13], "h": rows[14]},
+            "cull": rows[0],
+            "missing": 0 in missing,
+        }
+        self.assertEqual(rebuilt, descriptor)
+
+
 class CullDirectionTest(unittest.TestCase):
     """A face flush against the block hull and looking outward is hidden
     outright by a neighbor that fills its own cube opaquely, so it carries the
@@ -1024,10 +1279,6 @@ class OpaqueCubeIdsTest(unittest.TestCase):
         self.assertEqual(ids, ["minecraft:andesite", "minecraft:stone"])
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class HangingSignRekeyTest(unittest.TestCase):
     """blocksB2J lists one Bedrock permutation per Java state, so it names all
     four of a hanging sign's Bedrock states even though Bedrock only reads two
@@ -1120,10 +1371,10 @@ class BuildKeySpecsTest(unittest.TestCase):
         spec = specs.get(block_id)
         if spec is None:
             return None
-        for shape in spec["props"]:
+        for index, shape in enumerate(spec["props"]):
             if not all(name in states for name in shape):
                 continue
-            key = f"{block_id}[{','.join(f'{n}={states[n]}' for n in shape)}]"
+            key = f"{block_id}[{index}|{','.join(states[n] for n in shape)}]"
             if key in rekeyed:
                 return rekeyed[key]
         return None
@@ -1137,15 +1388,17 @@ class BuildKeySpecsTest(unittest.TestCase):
             "minecraft:oak_leaves[persistent_bit=1,update_bit=0]": [2],
         })
         self.assertEqual(specs["minecraft:oak_leaves"]["props"], [["persistent_bit"]])
+        # the key names the shape it read and that shape's values, not the
+        # property names - blockKeySpecs already carries those
         self.assertEqual(sorted(rekeyed), [
-            "minecraft:oak_leaves[persistent_bit=0]",
-            "minecraft:oak_leaves[persistent_bit=1]",
+            "minecraft:oak_leaves[0|0]",
+            "minecraft:oak_leaves[0|1]",
         ])
 
     def test_a_block_whose_properties_all_agree_is_keyed_on_none_of_them(self):
         specs, rekeyed = build_key_specs({"minecraft:stone[stone_type=stone]": [1]})
         self.assertEqual(specs["minecraft:stone"]["props"], [[]])
-        self.assertEqual(rekeyed, {"minecraft:stone[]": [1]})
+        self.assertEqual(rekeyed, {"minecraft:stone[0|]": [1]})
 
     def test_dropping_agreed_properties_never_merges_two_entries(self):
         # the guarantee the whole reduction rests on: two entries that differ
@@ -1214,7 +1467,7 @@ class BuildKeySpecsTest(unittest.TestCase):
         shape = specs["minecraft:x"]["props"][0]
         self.assertEqual(shape, ["a", "b"])
         for key in rekeyed:
-            self.assertIn(key, ["minecraft:x[a=0,b=0]", "minecraft:x[a=1,b=1]"])
+            self.assertIn(key, ["minecraft:x[0|0,0]", "minecraft:x[0|1,1]"])
 
     def test_every_key_resolves_back_to_its_own_model(self):
         block_models = {
@@ -1260,3 +1513,7 @@ class BuildKeySpecsTest(unittest.TestCase):
                          {"facing_direction": "2", "hanging": "0"}),
             [5],
         )
+
+
+if __name__ == "__main__":
+    unittest.main()

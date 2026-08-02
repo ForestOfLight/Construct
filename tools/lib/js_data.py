@@ -29,6 +29,37 @@ def parse(text):
     return json.loads(text, parse_float=Decimal)
 
 
+def render_number(value):
+    """A number as short as JS can read it back unchanged: an integral value
+    loses the decimal point it was carrying (0.0 -> 0, 180.0 -> 180), and
+    everything else keeps every digit it came with. Only ever drops zeroes
+    that were not telling us anything, so nothing rounds."""
+    if isinstance(value, bool):
+        raise TypeError("render_number does not take booleans")
+    if isinstance(value, Decimal):
+        if value == value.to_integral_value():
+            # normalize() would give 1.8E+2 for 180.0
+            return str(int(value))
+        return str(value.normalize())
+    if isinstance(value, int):
+        return str(value)
+    raise TypeError(f"cannot render {type(value).__name__} as a number")
+
+
+def render_rows(values, per_row):
+    """A flat list of numbers as a JS array literal, `per_row` of them per
+    line. One record per line keeps a generated table of hundreds of
+    thousands of numbers something a person can read and git can diff,
+    without the field names and nesting that made it large."""
+    if len(values) % per_row:
+        raise ValueError(f"{len(values)} values do not divide into rows of {per_row}")
+    lines = [
+        INDENT + ", ".join(render_number(v) for v in values[i:i + per_row])
+        for i in range(0, len(values), per_row)
+    ]
+    return "[\n" + ",\n".join(lines) + "\n]" if lines else "[]"
+
+
 def render(value, indent=0):
     """Serialize `value` in Construct's data-module style: 3-space indent,
     `"key" : value`, sorted keys, inline scalar arrays, verbatim numbers."""

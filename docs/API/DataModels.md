@@ -38,9 +38,18 @@ interface Instance {
         trackPlayerDistance: PROTO.Int8,
         particleLifetime: PROTO.Int32
     }),
-    performanceRendering: PROTO.Boolean
+    renderMode: PROTO.String
 }
 ```
+
+`renderMode` is one of `"default"`, `"performance"`, `"previewOnly"`, or `"classic"`. Any other value is treated as `"default"`. The modes differ in how missing and incorrect blocks are drawn — with a debug box, with a particle overlay, or with both — and in how the structure outline is drawn.
+
+| | Outline | Incorrect blocks | Missing blocks |
+| --- | --- | --- | --- |
+| `default` | debug line edges, particle corners | debug box + particle overlay | debug box + textured model |
+| `performance` | debug line edges, particle corners | debug box | debug box |
+| `previewOnly` | debug line edges, particle corners | particle overlay | textured model |
+| `classic` | all particles | particle overlay | small translucent blue cube |
 
 ## Builder
 
