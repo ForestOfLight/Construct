@@ -11,6 +11,7 @@ export class FlexibleInstanceMove {
     outliner;
     currentInstanceLocation;
     runner = void 0;
+    #velocity = new Vector();
 
     constructor(instance, player) {
         this.instance = instance;
@@ -63,17 +64,19 @@ export class FlexibleInstanceMove {
         const speedFactor = 0.5;
 
         const viewDir = playerMovement.getMajorDirectionFacing();
-        const forward = new Vector(viewDir.x, viewDir.y, viewDir.z);
-        const right = new Vector(forward.z, 0, -forward.x);
         const moveInput = playerMovement.getMovementVector();
-        let velocity = forward.multiply(moveInput.y).add(right.multiply(moveInput.x));
+        const velocity = this.#velocity.set(
+            viewDir.x * moveInput.y + viewDir.z * moveInput.x,
+            viewDir.y * moveInput.y,
+            viewDir.z * moveInput.y - viewDir.x * moveInput.x
+        );
 
         if (playerMovement.isJumping())
             velocity.y += 1;
         if (playerMovement.isSneaking())
             velocity.y -= 1;
 
-        return velocity.multiply(speedFactor);
+        return velocity.multiplyInPlace(speedFactor);
     }
 
     move(instanceVelocity) {
@@ -84,7 +87,11 @@ export class FlexibleInstanceMove {
     moveOutline() {
         const bounds = this.instance.getBounds();
         const minWorldLocation = this.currentInstanceLocation.floor()
-        const maxWorldLocation = minWorldLocation.add(Vector.from(bounds.max));
+        const maxWorldLocation = new Vector(
+            minWorldLocation.x + bounds.max.x,
+            minWorldLocation.y + bounds.max.y,
+            minWorldLocation.z + bounds.max.z
+        );
         this.outliner.setVertices(this.instance.getDimension(), minWorldLocation, maxWorldLocation);
     }
 

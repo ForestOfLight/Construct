@@ -4,7 +4,6 @@ export class Raycaster {
     static STEP_SIZE = 0.2;
 
     static getStructureBlocks(dimension, startLocation, direction, { maxDistance = 7, getFirst = true, collideWithWorldBlocks = true, useActiveLayer = true }) {
-        // Can probably be optimized by the fact that we only need full blocks and aren't checking for partial blocks
         const blocks = [];
         let location = startLocation;
         let distance = 0;

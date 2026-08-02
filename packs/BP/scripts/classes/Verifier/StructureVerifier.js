@@ -127,11 +127,11 @@ export class StructureVerifier {
     
     *verifyBlocks(shouldRender) {
         const bounds = this.instance.getActiveBounds();
+        const location = new Vector();
         for (let y = bounds.min.y; y < bounds.max.y; y++) {
             for (let z = bounds.min.z; z < bounds.max.z; z++) {
                 for (let x = bounds.min.x; x < bounds.max.x; x++) {
-                    const location = new Vector(x, y, z);
-                    this.verifyBlock(location, shouldRender);
+                    this.verifyBlock(location.set(x, y, z), shouldRender);
                 }
                 yield void 0;
             }
@@ -141,16 +141,17 @@ export class StructureVerifier {
     }
 
     verifyBlock(location, shouldRender) {
-        const verificationLevel = this.getVerificationLevel(location);
+        const globalLocation = this.instance.toGlobalCoords(location);
+        const verificationLevel = this.getVerificationLevel(globalLocation);
         this.blockVerificationLevels.set(location, verificationLevel);
         if (shouldRender && verificationLevel !== BlockVerificationLevel.Air) {
-            const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(location) };
+            const dimensionLocation = { dimension: this.instance.getDimension(), location: globalLocation };
             new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
         }
     }
 
-    getVerificationLevel(location) {
-        const worldBlock = this.instance.getDimension()?.getBlock(this.instance.toGlobalCoords(location));
+    getVerificationLevel(globalLocation) {
+        const worldBlock = this.instance.getDimension()?.getBlock(globalLocation);
         if (!worldBlock)
             return BlockVerificationLevel.Skipped;
         const blockVerifier = new BlockVerifier(worldBlock, this.instance);

@@ -99,7 +99,7 @@ export class OutlineParticleRender extends IOutlineRender {
         const edgePoints = [];
         for (const edge of edges) {
             const [startVertex, endVertex] = [this.vertices[edge[0]], this.vertices[edge[1]]];
-            const resolution = Math.min(Math.floor(endVertex.subtract(startVertex).length), 16);
+            const resolution = Math.min(Math.floor(endVertex.distance(startVertex)), 16);
             for (let i = 1; i < resolution; i++) {
                 const t = i / resolution;
                 edgePoints.push(startVertex.lerp(endVertex, t));
