@@ -25,7 +25,6 @@ export class StructureVerifier {
     particleLifetime;
     blocksPerTick;
 
-    locationsToVerify;
     blockVerificationLevels;
     isLocationPopulationComplete;
     isVerificationComplete;
@@ -54,7 +53,6 @@ export class StructureVerifier {
             this.instance.options.setVerifierEnabled(isEnabled);
             this.instance.options.setVerifierDistance(trackPlayerDistance);
         }
-        this.locationsToVerify = new Set();
     }
 
     startContinuousVerification() {
@@ -158,7 +156,6 @@ export class StructureVerifier {
 
     initVerification() {
         this.shouldStartNextVerification = false;
-        this.locationsToVerify.clear();
         this.blockVerificationLevels = this.#recycleVerificationLevels();
         this.isLocationPopulationComplete = false;
         this.isVerificationComplete = false;
@@ -270,6 +267,40 @@ export class StructureVerifier {
             const dimensionLocation = { dimension: this.instance.getDimension(), location: globalLocation };
             new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
         }
+    }
+
+    // Re-verify one cell outside the sweep, in response to a block change a
+    // player just made.
+    //
+    // Writes BOTH buffers. The front one is what the renderer reads, so it is
+    // what makes the change visible. The back one belongs to the in-flight
+    // sweep: if that sweep has already walked past this cell it still holds
+    // the stale value and would undo this patch at the next swap - for a whole
+    // sweep period, which is the latency this exists to remove. If it hasn't
+    // reached the cell yet it overwrites the patch with a fresh read of the
+    // same block, which is the same answer.
+    patchBlock(location) {
+        const front = this.lastCompleteVerificationLevels;
+        if (!front)
+            return;
+        let verificationLevel;
+        try {
+            verificationLevel = this.getVerificationLevel(this.instance.toGlobalCoords(location));
+        } catch {
+            // The sweep tracks unloaded chunks because it walks blindly. Here
+            // the player is standing next to the block they just changed, so
+            // the chunk is loaded by definition and a throw means something
+            // unexpected. Leave the cell as the sweep last saw it and let the
+            // next sweep settle it.
+            return;
+        }
+        const cellFlags = this.#cellFlags(location, verificationLevel);
+        front.set(location, verificationLevel);
+        front.setCellFlags(location, cellFlags);
+        // set() no-ops on an out-of-range index, so the two buffers disagreeing
+        // about bounds mid-refresh is safe.
+        this.blockVerificationLevels?.set(location, verificationLevel);
+        this.blockVerificationLevels?.setCellFlags(location, cellFlags);
     }
 
     // What this cell offers its neighbors to hide their faces behind: the

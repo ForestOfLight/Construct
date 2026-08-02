@@ -98,6 +98,29 @@ export class VerificationRenderer {
         this.#cursor = index >= volume ? 0 : index;
     }
 
+    // Draw one cell now, outside the cursor sweep.
+    //
+    // The debug box updates in place, which is instant and leaves no overlap.
+    // A particle cannot be recalled once spawned, so the stale one from the
+    // previous cursor pass lives out its lifetime alongside the new one - on a
+    // wrong-to-correct fix that reads as the old colour fading out under the
+    // new. Boxes are the responsive layer; particles catch up.
+    renderBlockAt(location) {
+        if (!this.#runner)
+            return;
+        const verificationLevels = this.instance.verifier.getLastVerificationLevels();
+        if (!verificationLevels)
+            return;
+        const bounds = this.instance.getActiveBounds();
+        const volume = Vector.volume(bounds.min, bounds.max);
+        if (volume <= 0)
+            return;
+        const lifetime = effectiveCycleSeconds(volume, this.instance.options.verifier.refreshSeconds);
+        this.#renderBlockVerificationLevel(
+            this.instance.getDimension(), location, verificationLevels.get(location), lifetime, verificationLevels,
+        );
+    }
+
     #locationAt(bounds, index) {
         const width = bounds.max.x - bounds.min.x;
         const depth = bounds.max.z - bounds.min.z;
