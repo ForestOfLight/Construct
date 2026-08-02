@@ -20,7 +20,7 @@ const BLOCK_CENTER = 0.5;
 // quite touching, and culling them opens a seam that shows at a grazing
 // angle. Setting this to 1.00 makes every cull exact, at the cost of a solid
 // missing region reading as one block-colored mass.
-const MISSING_SIZE_SCALAR = 1.00;
+const MISSING_SIZE_SCALAR = 0.995;
 const OVERLAY_SIZE_SCALAR = 1.01;
 
 // A missing block in a mode that draws no preview: a small see-through blue

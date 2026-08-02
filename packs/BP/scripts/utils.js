@@ -2,6 +2,7 @@ import { system, EntityComponentTypes, LiquidType, ItemStack } from '@minecraft/
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { specialItemPlacementConversions } from './options/easyPlaceConversions';
 import { blocks, block_sounds } from './blocks';
+import { blockPlacementSignal } from './classes/BlockPlacementSignal';
 
 export async function forceShow(player, form, timeout = Infinity) {
     const startTick = system.currentTick;
@@ -39,6 +40,11 @@ export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume 
         placedBlock.setPermutation(blockToPlace);
         handleWaterlogging(placedBlock, blockToPlace);
         playBlockPlacementSound(player, placedBlock, blockToPlace);
+        // The single choke point every easyPlace and fastEasyPlace call site
+        // funnels through, and the only moment at which the world has actually
+        // changed. setPermutation fires no event of its own, so this is the
+        // addon's only way to notice its own placements.
+        blockPlacementSignal.emit(placedBlock.dimension.id, placedBlock.location);
     });
 }
 
