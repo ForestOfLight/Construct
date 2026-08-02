@@ -1,12 +1,13 @@
-import { TicksPerSecond } from "@minecraft/server";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { showsBlockPreview, usesDebugMarkers, usesParticleOverlays } from "../Enums/RenderMode";
+import { BlockBudget } from "../Verifier/BlockBudget";
+import { blocksPerTick, effectiveCycleSeconds } from "../Verifier/RefreshRate";
 
-const RENDER_LIFETIME_FACTOR_TICKS = 1;
+const RENDER_INTERVAL_TICKS = 1;
 
 export class VerificationRenderer {
     instance;
@@ -19,6 +20,7 @@ export class VerificationRenderer {
 
     #runner;
     #cursor = 0;
+    #budget = new BlockBudget();
 
     constructor(instance) {
         this.instance = instance;
@@ -41,7 +43,7 @@ export class VerificationRenderer {
     }
 
     #startContinuousRendering() {
-        this.#runner = system.runInterval(() => this.#renderNextChunk(), RENDER_LIFETIME_FACTOR_TICKS);
+        this.#runner = system.runInterval(() => this.#renderNextChunk(), RENDER_INTERVAL_TICKS);
     }
 
     #stopContinuousRendering() {
@@ -50,6 +52,7 @@ export class VerificationRenderer {
         system.clearRun(this.#runner);
         this.#runner = void 0;
         this.#cursor = 0;
+        this.#budget.clear();
     }
 
     #renderNextChunk() {
@@ -57,24 +60,27 @@ export class VerificationRenderer {
         const volume = Vector.volume(bounds.min, bounds.max);
         if (volume <= 0)
             return;
-        const isLargeStructure = this.#shouldUseLargeStructureRendering(volume);
-        const chunkSize = isLargeStructure ? Math.min(bounds.max.x, bounds.max.z) : 1;
-        const lifetime = isLargeStructure
-            ? this.#getLargeStructureLifetime(bounds, volume, chunkSize)
-            : this.#getSmallStructureLifetime(bounds);
         const verificationLevels = this.instance.verifier.getLastVerificationLevels();
         if (!verificationLevels)
             return;
-        const dimension = this.instance.getDimension();
 
+        const refreshSeconds = this.instance.options.verifier.refreshSeconds;
+        const lifetime = this.#getLifetime(bounds, volume, refreshSeconds);
+        this.#budget.credit(blocksPerTick(volume, refreshSeconds));
+        if (this.#budget.isExhausted())
+            return;
+
+        const dimension = this.instance.getDimension();
         if (this.#cursor >= volume)
             this.#cursor = 0;
-        const end = Math.min(this.#cursor + chunkSize, volume);
-        for (let index = this.#cursor; index < end; index++) {
+        let index = this.#cursor;
+        while (index < volume && !this.#budget.isExhausted()) {
             const location = this.#locationAt(bounds, index);
             this.#renderBlockVerificationLevel(dimension, location, verificationLevels.get(location), lifetime, verificationLevels);
+            this.#budget.spend(1);
+            index++;
         }
-        this.#cursor = end === volume ? 0 : end;
+        this.#cursor = index >= volume ? 0 : index;
     }
 
     #locationAt(bounds, index) {
@@ -96,13 +102,26 @@ export class VerificationRenderer {
         };
     }
 
-    #getLargeStructureLifetime(bounds, volume, shortestSideLength) {
-        const maxChunk = (volume / shortestSideLength) / (bounds.max.y - bounds.min.y);
-        return (maxChunk * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
-    }
-
-    #getSmallStructureLifetime(bounds) {
-        return (bounds.max.x * (bounds.max.y - bounds.min.y) * bounds.max.z * RENDER_LIFETIME_FACTOR_TICKS) / TicksPerSecond;
+    // How long a particle lives, which is what decides how much of the
+    // structure is lit at once. Below the threshold the whole thing is lit.
+    // Above it, only a single layer-thick band is, sweeping upward.
+    //
+    // Dividing the full cycle by the height is what pins that band's cost:
+    //
+    //   concurrent = blocksPerSecond * lifetime
+    //              = (blocksPerTick * 20) * cycle / height
+    //              = volume / height          - one layer's area, constant
+    //
+    // so the number of simultaneous particles is independent of both the
+    // structure's size and the refresh rate. The setting changes how fast the
+    // band sweeps, never how much is alive. Dropping the divisor would light
+    // a 50-cubed build all at once - 125,000 particles instead of 2,500.
+    #getLifetime(bounds, volume, refreshSeconds) {
+        const cycle = effectiveCycleSeconds(volume, refreshSeconds);
+        if (!this.#shouldUseLargeStructureRendering(volume))
+            return cycle;
+        const height = Math.max(bounds.max.y - bounds.min.y, 1);
+        return cycle / height;
     }
 
     #shouldUseLargeStructureRendering(volume) {
