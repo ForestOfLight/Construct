@@ -1,8 +1,11 @@
-import { MolangVariableMap } from "@minecraft/server";
-import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
-import { Vector } from "../../../lib/Vector";
 import { DebugBox, debugDrawer } from "@minecraft/debug-utilities";
+import { getVerificationLevelColor, getVerificationLevelScale } from "./VerificationLevelStyle";
 
+// A single fire-and-forget box that expires on its own.
+//
+// The continuously-rendered overlay does NOT use this - it holds persistent
+// boxes through DebugBoxStore and mutates them in place. This is for one-shot
+// renders with a definite end, which today means the statistics form.
 export class BlockVerificationLevelPerformanceRender {
     dimension;
     location;
@@ -19,43 +22,17 @@ export class BlockVerificationLevelPerformanceRender {
 
     #renderBlock() {
         const dimensionLocation = this.#toRenderLocation(this.dimension, this.location);
-        const color = this.#getRGBByVerificationLevel();
+        const color = getVerificationLevelColor(this.verificationLevel);
         if (!color)
             return;
         const debugBox = new DebugBox(dimensionLocation);
         debugBox.color = color;
-        debugBox.scale = this.#getSizeScalarByVerificationLevel();
+        debugBox.scale = getVerificationLevelScale(this.verificationLevel);
         debugBox.timeLeft = this.lifetimeSeconds;
         debugDrawer.addShape(debugBox);
     }
 
     #toRenderLocation(dimension, location) {
         return { dimension, x: location.x + 0.5, y: location.y + 0.5, z: location.z + 0.5 };
-    }
-
-    #getRGBByVerificationLevel() {
-        switch (this.verificationLevel) {
-            case BlockVerificationLevel.NoMatch:
-                return { red: 1, green: 0, blue: 0, alpha: 1 };
-            case BlockVerificationLevel.TypeMatch:
-                return { red: 1, green: 1, blue: 0, alpha: 1 };
-            case BlockVerificationLevel.Missing:
-                return { red: 0.3, green: 0.57, blue: 0.87, alpha: 1 };
-            default:
-                return void 0;
-        }
-    }
-
-    #getSizeScalarByVerificationLevel() {
-        switch (this.verificationLevel) {
-            case BlockVerificationLevel.NoMatch:
-                return 1.01;
-            case BlockVerificationLevel.TypeMatch:
-                return 1.01;
-            case BlockVerificationLevel.Missing:
-                return 1.00;
-            default:
-                return 1.00;
-        }
     }
 }

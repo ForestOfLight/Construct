@@ -24,27 +24,35 @@ const OPPOSITE = 1;
 // One six-bit mask per entry of CULL_OFFSETS. Two of them are packed into a
 // single number in two places - what a cell records, and what
 // occlusionMaskAt returns - so they share the width and the shift.
-const COVER_MASK = 0b111111;
+const SIDE_MASK = 0b111111;
 const OPAQUE_SHIFT = 6;
 
-// What one cell of the grid records: the six sides its block covers
-// completely, and which of those it covers opaquely. Judged per block state
-// rather than per block id, so a slab, a stair or a closed door offers the
-// sides it really does seal (see BlockModelLookup.getCoverMasks).
-export function packCellFlags(coverMasks) {
-    return coverMasks & ((COVER_MASK << OPAQUE_SHIFT) | COVER_MASK);
+// What one cell of the grid records: the six sides sealed by something
+// opaque, and the six where the preview draws a translucent MARKER - an
+// incorrect block's overlay, or the placeholder cube standing in for a block
+// the pipeline could not resolve. Judged per block state rather than per
+// block id, so a slab, a stair or a closed door offers the sides it really
+// does seal (see BlockModelLookup.getSideMasks).
+//
+// The two are independent, not nested. A stone block is opaque on all six
+// sides and a marker on none; an overlay is the reverse. Deliberately NOT
+// "the sides this shape covers", which is what this used to be: a pane of
+// glass covers its whole side and hides nothing at all, and reading cover as
+// grounds for a cull is what made an incorrect block embedded in real glass
+// lose the very overlay marking it wrong.
+export function packCellFlags(sideMasks) {
+    return sideMasks & ((SIDE_MASK << OPAQUE_SHIFT) | SIDE_MASK);
 }
 
 // The two halves of what occlusionMaskAt returns, packed the same way round
-// as everywhere else: sides hidden by a merely solid neighbor, which hides
-// only a see-through placeholder face, and sides hidden by an opaque one,
-// which hides anything.
-export function coverCullMask(masks) {
-    return masks & COVER_MASK;
+// as everywhere else: sides facing a neighbor that draws a marker of its own,
+// and sides facing an opaque one.
+export function markerCullMask(masks) {
+    return masks & SIDE_MASK;
 }
 
 export function opaqueCullMask(masks) {
-    return (masks >> OPAQUE_SHIFT) & COVER_MASK;
+    return (masks >> OPAQUE_SHIFT) & SIDE_MASK;
 }
 
 export class VerificationLevels {
@@ -62,13 +70,12 @@ export class VerificationLevels {
         this.#sizeZ = Math.max(bounds.max.z - bounds.min.z, 0);
         this.#levels = new Uint8Array(this.#sizeX * this.#sizeY * this.#sizeZ);
         // What each cell offers its neighbors to hide behind: the sides it
-        // covers completely, and which of those it covers opaquely (see
-        // packCellFlags). Kept beside the levels rather than folded into them
-        // because it isn't a level - a cell's shape is what it is regardless
-        // of whether the block there matches - and the verifier already knows
-        // both by the time it has looked the cell up once.
-        // Uint16 rather than Uint8 because a cell now carries two six-bit
-        // masks: what it covers, and what it covers opaquely.
+        // seals opaquely, and the sides where it draws a translucent marker
+        // (see packCellFlags). Kept beside the levels rather than folded into
+        // them because it isn't a level - a cell's shape is what it is
+        // regardless of whether the block there matches - and the verifier
+        // already knows both by the time it has looked the cell up once.
+        // Uint16 rather than Uint8 because a cell carries two six-bit masks.
         this.#cellFlags = new Uint16Array(this.#levels.length);
     }
 
@@ -85,35 +92,38 @@ export class VerificationLevels {
     }
 
     set(location, verificationLevel) {
-        const index = this.#indexOf(location);
+        const index = this.indexOf(location);
         if (index === -1)
             return;
         this.#levels[index] = verificationLevel;
     }
 
     get(location) {
-        const index = this.#indexOf(location);
+        const index = this.indexOf(location);
         if (index === -1)
             return BlockVerificationLevel.Unknown;
         return this.#levels[index];
     }
 
     setCellFlags(location, flags) {
-        const index = this.#indexOf(location);
+        const index = this.indexOf(location);
         if (index === -1)
             return;
         this.#cellFlags[index] = flags;
     }
 
     // Both cull masks for the block at `location`, packed into one number -
-    // read them back with opaqueCullMask and coverCullMask.
+    // read them back with opaqueCullMask and markerCullMask.
     //
-    // A side goes into the cover mask when the neighbor beyond it turns a
-    // complete face back this way, and into the opaque mask when that same
-    // face is opaque as well. The opaque mask is therefore always a subset
-    // of the cover mask, which is what makes the two rules compose: an
-    // opaque face hides any face, a merely solid one hides only a
-    // see-through placeholder face that has nothing to show anyway.
+    // An opaque side hides anything laid against it. A marker side hides only
+    // another marker face, because two translucent markers meeting is the one
+    // case where the wall between them is noise rather than information -
+    // neither has a texture to show, and both say the same thing about the
+    // cell. Anything else showing through stays drawn, which is what keeps an
+    // incorrect block visible through the real glass it is embedded in.
+    //
+    // The two are read independently: a neighbor can be one, the other, both
+    // in different directions, or neither.
     //
     // Both are read off the ONE side the neighbor turns this way, not off
     // the neighbor as a whole. A bottom slab is opaque downwards and open
@@ -131,7 +141,7 @@ export class VerificationLevels {
     // punches a hole in the model.
     occlusionMaskAt(location) {
         let opaqueMask = 0;
-        let coverMask = 0;
+        let markerMask = 0;
         for (let direction = 0; direction < CULL_OFFSETS.length; direction++) {
             const offset = CULL_OFFSETS[direction];
             const index = this.#indexOfCoords(
@@ -141,13 +151,12 @@ export class VerificationLevels {
                 continue;
             const flags = this.#cellFlags[index];
             const side = direction ^ OPPOSITE;
-            if (!((flags >> side) & 1))
-                continue;
-            coverMask |= 1 << direction;
+            if ((flags >> side) & 1)
+                markerMask |= 1 << direction;
             if ((flags >> (side + OPAQUE_SHIFT)) & 1)
                 opaqueMask |= 1 << direction;
         }
-        return coverMask | (opaqueMask << OPAQUE_SHIFT);
+        return markerMask | (opaqueMask << OPAQUE_SHIFT);
     }
 
     countByLevel() {
@@ -157,7 +166,12 @@ export class VerificationLevels {
         return counts;
     }
 
-    #indexOf(location) {
+    // Public because the debug box store keys its persistent handles by the
+    // same index. The render cursor's own traversal order is a different one,
+    // so it cannot be reused for that.
+    //
+    // Returns -1 outside the grid.
+    indexOf(location) {
         return this.#indexOfCoords(location.x, location.y, location.z);
     }
 

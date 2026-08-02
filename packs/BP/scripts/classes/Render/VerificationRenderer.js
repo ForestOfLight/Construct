@@ -1,5 +1,5 @@
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/BlockVerificationLevelPerformanceRender";
+import { DebugBoxStore } from "./PerformanceRender/DebugBoxStore";
 import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
@@ -21,6 +21,7 @@ export class VerificationRenderer {
     #runner;
     #cursor = 0;
     #budget = new BlockBudget();
+    #boxStore = new DebugBoxStore();
 
     constructor(instance) {
         this.instance = instance;
@@ -47,6 +48,11 @@ export class VerificationRenderer {
     }
 
     #stopContinuousRendering() {
+        // Ahead of the runner guard on purpose. Persistent boxes outlive the
+        // runner that drew them, and an instance can be disabled without one
+        // ever having started - either way the boxes have to go, or they are
+        // left in the world with nothing holding a handle to them.
+        this.#boxStore.clear();
         if (!this.#runner)
             return;
         system.clearRun(this.#runner);
@@ -65,7 +71,16 @@ export class VerificationRenderer {
             return;
 
         const refreshSeconds = this.instance.options.verifier.refreshSeconds;
-        const lifetime = this.#getLifetime(bounds, volume, refreshSeconds);
+        // A particle lives exactly one full cursor cycle, so it is still alive
+        // when the cursor comes back around to redraw it and the whole
+        // structure stays lit at once rather than being swept in a band.
+        //
+        // That makes the simultaneous particle count the structure's volume,
+        // which the refresh rate does not bound - a slower setting redraws less
+        // often but each particle lives proportionally longer. What bounds it
+        // is face culling: occlusionMaskAt drops every face an opaque neighbor
+        // seals, so a solid build spawns its shell rather than its volume.
+        const lifetime = effectiveCycleSeconds(volume, refreshSeconds);
         this.#budget.credit(blocksPerTick(volume, refreshSeconds));
         if (this.#budget.isExhausted())
             return;
@@ -102,46 +117,23 @@ export class VerificationRenderer {
         };
     }
 
-    // How long a particle lives, which is what decides how much of the
-    // structure is lit at once. Below the threshold the whole thing is lit.
-    // Above it, only a single layer-thick band is, sweeping upward.
+    // The two layers stack rather than choosing between each other: the box
+    // marks the block, the particle shades it. Every level gets both in a mode
+    // that asks for both - Performance is the only one that skips the particle
+    // layer entirely.
     //
-    // Dividing the full cycle by the height is what pins that band's cost:
-    //
-    //   concurrent = blocksPerSecond * lifetime
-    //              = (blocksPerTick * 20) * cycle / height
-    //              = volume / height          - one layer's area, constant
-    //
-    // so the number of simultaneous particles is independent of both the
-    // structure's size and the refresh rate. The setting changes how fast the
-    // band sweeps, never how much is alive. Dropping the divisor would light
-    // a 50-cubed build all at once - 125,000 particles instead of 2,500.
-    #getLifetime(bounds, volume, refreshSeconds) {
-        const cycle = effectiveCycleSeconds(volume, refreshSeconds);
-        if (!this.#shouldUseLargeStructureRendering(volume))
-            return cycle;
-        const height = Math.max(bounds.max.y - bounds.min.y, 1);
-        return cycle / height;
-    }
-
-    #shouldUseLargeStructureRendering(volume) {
-        const maxVolume = 343;
-        return this.instance.hasLayerSelected() || volume > maxVolume;
-    }
-
+    // The box is handled before the early return below, and deliberately so: a
+    // cell that has just become Air or Match still needs its persistent box
+    // taken away, and returning first would strand it there permanently.
     #renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime, verificationLevels) {
-        if (verificationLevel === BlockVerificationLevel.Unknown || verificationLevel === BlockVerificationLevel.Air)
-            return;
         const dimensionLocation = {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)
         };
-        // The two layers stack rather than choosing between each other: the box
-        // marks the block, the particle shades it. Every level gets both in a
-        // mode that asks for both - Performance is the only one that skips the
-        // particle layer entirely.
         if (this.#useDebugMarkers)
-            new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, lifetime);
+            this.#boxStore.show(verificationLevels.indexOf(location), dimension, dimensionLocation.location, verificationLevel);
+        if (verificationLevel === BlockVerificationLevel.Unknown || verificationLevel === BlockVerificationLevel.Air)
+            return;
         if (!this.#useParticleOverlays)
             return;
         // Only a missing block has a model worth drawing - nothing else is

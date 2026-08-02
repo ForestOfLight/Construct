@@ -1,7 +1,7 @@
 import { MolangVariableMap } from "@minecraft/server";
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { BlockModelLookup, PLAIN_CUBE_FACES } from "../BlockModelLookup";
-import { coverCullMask, opaqueCullMask } from "../../Verifier/VerificationLevels";
+import { markerCullMask, opaqueCullMask } from "../../Verifier/VerificationLevels";
 import { DEBUG_CONFIG } from "../../../consts";
 
 const BLOCK_CENTER = 0.5;
@@ -97,31 +97,45 @@ export class BlockPreviewVerificationLevelParticleRender {
         // resolved puts the block's own color back.
         let colorIsMissing = false;
 
-        // Two cull rules, because a face that draws a real texture and a face
-        // that draws the see-through blue placeholder are hidden by different
-        // things. An OPAQUE neighbor hides anything laid against it. A
-        // neighbor that merely covers the side - another placeholder cube, a
-        // stair's flat back, a pane of glass - hides only a placeholder face,
-        // which has no texture worth showing and exists to say "we don't know
-        // what goes here". That is what stops a run of unresolved blocks
-        // drawing every wall between them while still leaving a textured
-        // block's face visible where one stands beside it.
+        // Two cull rules, because a face drawing a real texture and a face
+        // drawing a flat verification color are hidden by different things.
+        //
+        // An OPAQUE neighbor hides anything laid against it - that is the only
+        // thing that can hide a textured face, since anything less than opaque
+        // can be seen through.
+        //
+        // A MARKER face - an incorrect block's overlay, or the placeholder cube
+        // standing in for a block the pipeline could not resolve - is also
+        // hidden by a neighbor drawing a marker of its own. Two translucent
+        // markers meeting is the one case where the wall between them is noise:
+        // neither has a texture to show and both say the same thing about the
+        // cell, so a run of them reads as one volume instead of a stack of
+        // boxes. Merely covering the side is NOT enough, and used to be: a
+        // block embedded in real glass covers every side of it and hides
+        // nothing, which cost an incorrect block the very overlay marking it.
         //
         // Empty masks cull nothing, which is how the plain blue marker keeps
         // all six of its sides: it is inset far enough that its neighbors never
         // reach it, so any cull would open a hole in a cube standing in clear
         // air rather than hide a face nobody can see.
         const opaqueCull = this.isPlainMissingCube ? 0 : opaqueCullMask(this.occlusionMask);
-        const coverCull = this.isPlainMissingCube ? 0 : coverCullMask(this.occlusionMask);
+        const markerCull = this.isPlainMissingCube
+            ? 0
+            : opaqueCull | markerCullMask(this.occlusionMask);
 
-        for (const { faces, material } of this.#getFaceLayers()) {
+        for (const { faces, material, tintOnly } of this.#getFaceLayers()) {
+            // A whole layer of markers: the incorrect-block overlay, or a
+            // missing block drawn without its preview.
+            const layerCull = tintOnly ? markerCull : opaqueCull;
             for (const face of faces) {
                 try {
                     const missing = face.missing === true;
                     // `cull` is the neighbor that can hide this face, and is
                     // absent on the faces none can reach - anything inside the
-                    // block, and every diagonal.
-                    if (face.cull !== void 0 && ((missing ? coverCull : opaqueCull) >> face.cull) & 1)
+                    // block, and every diagonal. A face the model itself could
+                    // not resolve is a marker inside an otherwise real layer,
+                    // and goes by the marker rule on its own.
+                    if (face.cull !== void 0 && ((missing ? markerCull : layerCull) >> face.cull) & 1)
                         continue;
                     if (missing !== colorIsMissing) {
                         scratch.molang.setColorRGBA("face_color", missing ? MISSING_FACE_RGBA : rgb);
@@ -152,7 +166,7 @@ export class BlockPreviewVerificationLevelParticleRender {
     #getFaceLayers() {
         const material = this.#verificationLevelToMaterial();
         if (!this.showBlockPreview || this.verificationLevel !== BlockVerificationLevel.Missing)
-            return [{ faces: PLAIN_CUBE_FACES, material }];
+            return [{ faces: PLAIN_CUBE_FACES, material, tintOnly: true }];
         const layers = [{
             faces: BlockModelLookup.getFaces(this.targetBlock),
             material: BlockModelLookup.isWater(this.targetBlock) ? WATER_MATERIAL : material,

@@ -1,5 +1,6 @@
 import { BlockVerifier } from "./BlockVerifier";
 import { packCellFlags, VerificationLevels } from "./VerificationLevels";
+import { showsBlockPreview } from "../Enums/RenderMode";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "../Render/PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { BlockModelLookup } from "../Render/BlockModelLookup";
@@ -38,6 +39,7 @@ export class StructureVerifier {
     #populateJob = {};
     #origin;
     #skippedChunks;
+    #showBlockPreview = true;
     #blockBudget = new BlockBudget();
 
     constructor(instance, { isEnabled = false, trackPlayerDistance = 0, particleLifetime = 10, isStandalone = false, blocksPerTick = DEFAULT_BLOCKS_PER_TICK } = {}) {
@@ -161,6 +163,7 @@ export class StructureVerifier {
         this.isLocationPopulationComplete = false;
         this.isVerificationComplete = false;
         this.#pullBlocksPerTick();
+        this.#pullShowBlockPreview();
     }
 
     // Derived per verification rather than cached: selecting a layer shrinks
@@ -175,6 +178,18 @@ export class StructureVerifier {
         const bounds = this.instance.getActiveBounds();
         const volume = Vector.volume(bounds.min, bounds.max);
         this.blocksPerTick = blocksPerTickFor(volume, this.instance.options.verifier.refreshSeconds);
+    }
+
+    // Whether a missing block will be drawn as its own model, which decides
+    // what shape its cell offers its neighbors (see #cellFlags). Read once per
+    // verification rather than per block, the way the renderer does it.
+    //
+    // A standalone verifier has no instance options behind it and renders
+    // nothing, so the preview is assumed on and its cells describe themselves
+    // the same way the default mode would.
+    #pullShowBlockPreview() {
+        this.#showBlockPreview = this.isStandalone
+            || showsBlockPreview(this.instance.options.renderMode);
     }
 
     #recycleVerificationLevels() {
@@ -260,27 +275,42 @@ export class StructureVerifier {
     // What this cell offers its neighbors to hide their faces behind: the
     // sides it covers completely, and which of those it covers opaquely.
     //
-    // Read off the STRUCTURE's block rather than the world's, which is what
-    // keeps this cheap: the permutation is already cached and interned, and
-    // its shape is resolved once per distinct permutation and remembered (see
-    // BlockModelLookup.getCoverMasks). The three levels below are the ones
-    // where that answer also describes what will actually be standing there -
-    // Missing draws the structure's own block as the preview, Match has the
-    // identical block already placed, and TypeMatch has the same block id in a
-    // different state.
+    // Which shape answers that depends on what will actually be standing in
+    // the cell, and only two levels let the structure's own block speak for
+    // it - Missing, which draws that block as the preview, and Match, where
+    // the identical block is already placed. Reading it there is what keeps
+    // this cheap: the palette entry is interned and its shape resolved once
+    // per distinct block state (see BlockModelLookup.getSideMasks).
     //
-    // NoMatch is deliberately left out. Something else entirely is placed
-    // there and only the world could say what, so the cell offers nothing and
-    // its neighbors keep every face.
+    // An incorrect block of either kind answers with the overlay instead,
+    // because that plain cube is the only thing we know is drawn there.
+    //
+    // Everything else - air, skipped, unknown - offers nothing, and its
+    // neighbors keep every face.
     #cellFlags(location, verificationLevel) {
-        if (verificationLevel !== BlockVerificationLevel.Missing
-            && verificationLevel !== BlockVerificationLevel.Match
-            && verificationLevel !== BlockVerificationLevel.TypeMatch)
-            return 0;
+        switch (verificationLevel) {
+            case BlockVerificationLevel.NoMatch:
+            case BlockVerificationLevel.TypeMatch:
+                return packCellFlags(BlockModelLookup.getOverlaySideMasks());
+            case BlockVerificationLevel.Match:
+                return this.#structureCellFlags(location);
+            case BlockVerificationLevel.Missing:
+                // With the preview switched off a missing block is a small
+                // marker floating clear of its cell's sides, so it covers
+                // nothing - the block it stands for is not drawn and must not
+                // be allowed to hide a neighbor's faces behind a shape that
+                // isn't there.
+                return this.#showBlockPreview ? this.#structureCellFlags(location) : 0;
+            default:
+                return 0;
+        }
+    }
+
+    #structureCellFlags(location) {
         const structBlock = this.instance.getBlock(location);
         if (structBlock === void 0)
             return 0;
-        return packCellFlags(BlockModelLookup.getCoverMasks(structBlock));
+        return packCellFlags(BlockModelLookup.getSideMasks(structBlock));
     }
 
     getVerificationLevel(globalLocation) {

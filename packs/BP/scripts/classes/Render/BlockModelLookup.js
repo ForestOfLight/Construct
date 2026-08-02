@@ -76,6 +76,8 @@ const resolvedByBlock = new WeakMap();
 // rather than an object allocated per block state resolved.
 const OPAQUE_SHIFT = 6;
 
+let overlaySideMasks;
+
 export class BlockModelLookup {
     // `block` here and below is a structure's palette entry (see
     // Structure.#intern). A bare BlockPermutation still works - both readers
@@ -84,15 +86,16 @@ export class BlockModelLookup {
         return BlockModelLookup.#resolve(block).faces;
     }
 
-    // Which of the block's six sides it covers completely, as a bit per entry
-    // of CULL_OFFSETS (see ../Verifier/VerificationLevels.js), together with
-    // which of those it covers opaquely - the second six bits, OPAQUE_SHIFT
-    // up. Hand it straight to packCellFlags.
+    // What the block offers its neighbors to hide behind, as two six-bit masks
+    // packed into one number - the sides it draws a translucent MARKER on, and
+    // the sides it seals OPAQUELY, the latter OPAQUE_SHIFT up. Hand it straight
+    // to packCellFlags.
     //
-    // Two masks because the two hide different things. An opaque side hides
-    // any face pressed against it; a merely covered one hides only another
-    // see-through placeholder face, which has nothing worth showing there
-    // anyway. The opaque half is always a subset of the cover half.
+    // The two are independent. Stone is opaque on all six sides and a marker
+    // on none. The placeholder cube standing in for a block the pipeline could
+    // not resolve is the reverse. Glass is neither: it covers its whole side
+    // and hides nothing, which is precisely the case a "covers" mask could not
+    // express.
     //
     // Judged per block state, which is the whole point: a bottom slab seals
     // the block below it completely even though the id "slab" says nothing,
@@ -101,8 +104,29 @@ export class BlockModelLookup {
     // Counts only the block's own shape. A waterlogged block's water fills
     // the cube too, but it is a separate layer the model knows nothing about,
     // and leaving it out only ever costs a cull.
-    static getCoverMasks(block) {
-        return BlockModelLookup.#resolve(block).coverMasks;
+    static getSideMasks(block) {
+        return BlockModelLookup.#resolve(block).sideMasks;
+    }
+
+    // The same, for a cell whose preview is the plain translucent cube rather
+    // than a model: an incorrect block of either kind, which draws the overlay
+    // over whatever is really standing there.
+    //
+    // Derived from UNKNOWN_CUBE_FACES rather than written out, so it can't
+    // drift from the shape it describes: a full-size marker on all six sides,
+    // opaque on none. That is the same thing the overlay is, which is why the
+    // placeholder cube's faces stand in for it here.
+    //
+    // Deliberately NOT the structure block's own masks, even for a TypeMatch
+    // where the id matches. TypeMatch means the state differs, and a state can
+    // change the shape outright - a structure calling for a top slab against a
+    // world holding a bottom slab seals opposite sides of the cell. Trusting
+    // the model there would cull a neighbor's face against a side nothing
+    // covers. The overlay is the one thing we know is drawn.
+    static getOverlaySideMasks() {
+        if (overlaySideMasks === void 0)
+            overlaySideMasks = BlockModelLookup.#sideMasksOf(UNKNOWN_CUBE_FACES);
+        return overlaySideMasks;
     }
 
     static #resolve(block) {
@@ -110,7 +134,7 @@ export class BlockModelLookup {
         if (cached !== void 0)
             return cached;
         const faces = BlockModelLookup.#lookupFaces(block);
-        const resolved = { faces, coverMasks: BlockModelLookup.#coverMasksOf(faces) };
+        const resolved = { faces, sideMasks: BlockModelLookup.#sideMasksOf(faces) };
         resolvedByBlock.set(block, resolved);
         return resolved;
     }
@@ -132,23 +156,31 @@ export class BlockModelLookup {
         return refs.map(faceAt);
     }
 
-    // Both facts are baked onto the face (see mark_side_cover in
+    // Every fact this needs is baked onto the face (see mark_side_cover in
     // tools/bake_block_models/main.py), so this is a bit-or over the faces
     // rather than a geometry test - the bake already knows the face's size
     // and, from the atlas, whether its texture has anything see-through in
     // it, which nothing in the game can see.
-    static #coverMasksOf(faces) {
-        let cover = 0;
+    //
+    // A side counts as a marker when the face filling it is one the pipeline
+    // could not resolve, which is what gets drawn as the translucent
+    // placeholder. The bake keeps `missing` and `opaque` mutually exclusive
+    // for exactly this reason - a placeholder is drawn see-through however
+    // solid the white swatch behind it happens to be - so the two masks never
+    // claim the same side.
+    static #sideMasksOf(faces) {
+        let marker = 0;
         let opaque = 0;
         for (let i = 0; i < faces.length; i++) {
             const face = faces[i];
             if (!face.covers)
                 continue;
-            cover |= 1 << face.cull;
-            if (face.opaque)
+            if (face.missing)
+                marker |= 1 << face.cull;
+            else if (face.opaque)
                 opaque |= 1 << face.cull;
         }
-        return cover | (opaque << OPAQUE_SHIFT);
+        return marker | (opaque << OPAQUE_SHIFT);
     }
 
     // The water filling a waterlogged block, as its own set of faces to draw
