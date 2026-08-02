@@ -103,12 +103,20 @@ export class StructureVerifier {
     }
 
     #startVerificationRunner(shouldRender) {
+        this.#blockBudget.clear();
         this.#verification = this.verifyBlocks(shouldRender);
         this.#verifyRunner = system.runInterval(() => this.#verifyNextBlocks());
     }
 
+    // The budget is checked before the generator is advanced, not after. A
+    // resumed generator completes a whole chunk span before it reaches its
+    // own isExhausted() check, so calling next() on an empty budget would
+    // process ~16 blocks regardless of the rate - which would flatten the
+    // entire slow end of the refresh setting.
     #verifyNextBlocks() {
-        this.#blockBudget.reset(this.blocksPerTick);
+        this.#blockBudget.credit(this.blocksPerTick);
+        if (this.#blockBudget.isExhausted())
+            return;
         try {
             this.#verification.next();
         } catch (error) {

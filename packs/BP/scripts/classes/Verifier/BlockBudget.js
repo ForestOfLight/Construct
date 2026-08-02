@@ -1,11 +1,21 @@
-const MIN_BLOCKS_PER_TICK = 1;
-
-/** Tracks how many blocks are left to process before a verification must wait for the next tick. */
+/**
+ * A token bucket for how much verification work may happen this tick.
+ *
+ * Credit accumulates rather than being replaced, so a rate below one block
+ * per tick is expressible - a slow refresh setting on a small structure
+ * needs a fraction of a block per tick, and the old whole-block floor made
+ * every slider stop past ~18s behave identically.
+ *
+ * Work overshoots: a chunk span spends up to 16 blocks in one go. That is
+ * allowed to drive the balance negative, and the generator then waits
+ * however many ticks it takes to earn the debt back, so the average
+ * converges on the requested rate.
+ */
 export class BlockBudget {
     #remaining = 0;
 
-    reset(blocksPerTick) {
-        this.#remaining = Math.max(MIN_BLOCKS_PER_TICK, blocksPerTick);
+    credit(blocksPerTick) {
+        this.#remaining += blocksPerTick;
     }
 
     spend(blockCount) {
@@ -14,5 +24,9 @@ export class BlockBudget {
 
     isExhausted() {
         return this.#remaining <= 0;
+    }
+
+    clear() {
+        this.#remaining = 0;
     }
 }
