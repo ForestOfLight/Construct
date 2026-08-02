@@ -178,6 +178,7 @@ export class InstanceForm {
             this.instance.setVerifierEnabled(response.formValues[0]);
             this.instance.setLayer(parseInt(response.formValues[1]));
             this.instance.setRenderMode(RENDER_MODE_ORDER[response.formValues[2]] ?? RenderMode.Default);
+            this.instance.setVerifierRefreshSeconds(parseInt(response.formValues[3]));
         });
     }
 

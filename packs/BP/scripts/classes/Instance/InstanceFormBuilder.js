@@ -4,6 +4,7 @@ import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { InstanceStatistics } from './InstanceStatistics';
 import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
 import { RENDER_MODE_LABELS, RENDER_MODE_ORDER } from '../Enums/RenderMode';
+import { MAX_REFRESH_SECONDS, MIN_REFRESH_SECONDS, REFRESH_SECONDS_STEP } from '../Verifier/RefreshRate';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -64,6 +65,16 @@ export class InstanceFormBuilder {
                 {
                     defaultValueIndex: Math.max(RENDER_MODE_ORDER.indexOf(instance.options.renderMode), 0),
                     tooltip: { translate: 'construct.instance.option.rendermode.description' }
+                }
+            )
+            .slider(
+                { translate: 'construct.instance.option.refreshrate' },
+                MIN_REFRESH_SECONDS,
+                MAX_REFRESH_SECONDS,
+                {
+                    defaultValue: instance.options.verifier.refreshSeconds,
+                    valueStep: REFRESH_SECONDS_STEP,
+                    tooltip: { translate: 'construct.instance.option.refreshrate.description' }
                 }
             )
             .submitButton({ translate: 'construct.menu.submit' });
