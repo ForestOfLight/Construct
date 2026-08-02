@@ -1,7 +1,7 @@
 import { FaceTable } from "./FaceTable";
 import { CubeFaceLibrary } from "./CubeFaceLibrary";
 import { BlockModelKeyResolver } from "./BlockModelKeyResolver";
-import { packSideMasks } from "../../Verifier/VerificationLevels";
+import { CellFlags } from "../../Verifier/CellFlags";
 
 class BlockModelResolver {
     #waterBlockIds = new Set(["minecraft:water", "minecraft:flowing_water"]);
@@ -92,5 +92,5 @@ export const blockModelResolver = new BlockModelResolver({
     keyResolver: new BlockModelKeyResolver(),
     faceReader: FaceTable.faceAt,
     unknownFaces: CubeFaceLibrary.createPlainUnknownCubeFaces(),
-    sideMaskPacker: packSideMasks
+    sideMaskPacker: CellFlags.pack
 });

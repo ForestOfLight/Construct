@@ -3,7 +3,7 @@ import { boxStyleOf } from "../VerificationStyle";
 
 const BLOCK_CENTER = 0.5;
 
-// Persistent debug boxes, one per cell, keyed by VerificationLevels.indexOf.
+// Persistent debug boxes, one per cell, keyed by VerificationGrid.indexOf.
 //
 // A DebugShape with no timeLeft never expires, and its colour and scale are
 // plain mutable properties, so a level change is two assignments rather than an

@@ -1,5 +1,5 @@
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
-import { markerCullMask, opaqueCullMask } from "../../Verifier/VerificationLevels";
+import { CellFlags } from "../../Verifier/CellFlags";
 import { CubeFaceLibrary } from "../model/CubeFaceLibrary";
 import { blockModelResolver } from "../model/BlockModelResolver";
 import { UNRESOLVED_FACE_STYLE, WATER_MATERIAL, particleStyleOf } from "../VerificationStyle";
@@ -42,8 +42,8 @@ export class PreviewParticleLayer {
     #cullMasks(cell) {
         if (this.#isMarkerCube(cell.verificationLevel))
             return { opaque: 0, marker: 0 };
-        const opaque = opaqueCullMask(cell.occlusionMask);
-        return { opaque, marker: opaque | markerCullMask(cell.occlusionMask) };
+        const opaque = CellFlags.opaqueMask(cell.occlusionMask);
+        return { opaque, marker: opaque | CellFlags.markerMask(cell.occlusionMask) };
     }
 
     // Usually one layer - the block's shape - but a waterlogged block is two.

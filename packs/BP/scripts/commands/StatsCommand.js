@@ -29,8 +29,7 @@ export class StatsCommand extends Command {
     }
 
     async getStatsMessage(instance) {
-        const verifierOptions = { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true };
-        this.structureVerifier = new StructureVerifier(instance, verifierOptions);
+        this.structureVerifier = StructureVerifier.standalone(instance, { particleLifetime: 1*TicksPerSecond });
         const verification = await this.structureVerifier.verifyStructure(true);
         const statistics = new InstanceStatistics(instance, verification);
         const statsMessage = statistics.getMessage();

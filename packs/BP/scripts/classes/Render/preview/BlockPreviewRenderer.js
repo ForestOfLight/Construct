@@ -1,7 +1,7 @@
 import { system } from "@minecraft/server";
 import { BlockVerificationLevel } from "../../Enums/BlockVerificationLevel";
 import { renderProfileOf } from "../../Enums/RenderMode";
-import { effectiveCycleSeconds } from "../../Verifier/RefreshRate";
+import { RefreshRate } from "../../Verifier/RefreshRate";
 import { Vector } from "../../../lib/Vector";
 import { DebugBoxLayer } from "./DebugBoxLayer";
 import { PreviewParticleLayer } from "./PreviewParticleLayer";
@@ -90,29 +90,29 @@ export class BlockPreviewRenderer {
         const volume = Vector.volume(bounds.min, bounds.max);
         if (volume <= 0)
             return void 0;
-        const verificationLevels = this.instance.verifier.getLastVerificationLevels();
-        if (!verificationLevels?.matchesBounds(bounds))
+        const grid = this.instance.verifier.getCompletedGrid();
+        if (!grid?.matchesBounds(bounds))
             return void 0;
         this.#boxes.retarget(bounds);
         return {
             bounds,
             volume,
-            verificationLevels,
+            grid,
             dimension: this.instance.getDimension(),
             // A particle lives exactly one full cursor cycle, so it is still
             // alive when the cursor comes back around to redraw it and the whole
             // structure stays lit at once rather than being swept in a band.
-            lifetimeSeconds: effectiveCycleSeconds(volume, this.instance.options.verifier.refreshSeconds)
+            lifetimeSeconds: RefreshRate.cycleSeconds(volume, this.instance.options.verifier.refreshSeconds)
         };
     }
 
     #drawCell(frame, location) {
-        const verificationLevel = frame.verificationLevels.get(location);
+        const verificationLevel = frame.grid.get(location);
         const origin = this.instance.toGlobalCoords(location);
         // Before the early return below, and deliberately so: a cell that has
         // just become Air or Match still needs its persistent box taken away.
         if (this.#profile.debugMarkers) {
-            const index = frame.verificationLevels.indexOf(location);
+            const index = frame.grid.indexOf(location);
             this.#boxes.draw(index, frame.dimension, origin, verificationLevel);
         }
         if (!this.#profile.particleOverlays)
@@ -125,7 +125,7 @@ export class BlockPreviewRenderer {
             block: this.instance.getBlock(location),
             verificationLevel,
             lifetimeSeconds: frame.lifetimeSeconds,
-            occlusionMask: frame.verificationLevels.occlusionMaskAt(location)
+            occlusionMask: frame.grid.occlusionMaskAt(location)
         });
     }
 }

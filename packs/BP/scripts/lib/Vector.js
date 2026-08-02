@@ -159,8 +159,8 @@ export class Vector {
 
 Vector.up = Object.freeze(new Vector(0, 1, 0));
 Vector.down = Object.freeze(new Vector(0, -1, 0));
-Vector.right = Object.freeze(new Vector(1, 0, 0));
-Vector.left = Object.freeze(new Vector(-1, 0, 0));
-Vector.forward = Object.freeze(new Vector(0, 0, 1));
-Vector.backward = Object.freeze(new Vector(0, 0, -1));
+Vector.north = Object.freeze(new Vector(0, 0, -1));
+Vector.south = Object.freeze(new Vector(0, 0, 1));
+Vector.east = Object.freeze(new Vector(1, 0, 0));
+Vector.west = Object.freeze(new Vector(-1, 0, 0));
 Vector.zero = Object.freeze(new Vector(0, 0, 0));

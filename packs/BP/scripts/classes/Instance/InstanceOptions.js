@@ -2,7 +2,7 @@ import { Vector } from "../../lib/Vector";
 import { world } from "@minecraft/server";
 import { Option } from "../Option";
 import { RenderMode } from "../Enums/RenderMode";
-import { DEFAULT_REFRESH_SECONDS, MAX_REFRESH_SECONDS, MIN_REFRESH_SECONDS } from "../Verifier/RefreshRate";
+import { RefreshRate } from "../Verifier/RefreshRate";
 
 // Hoisted so load() can merge them back over a stored options object.
 // loadFromDP shallow-assigns, so a stored verifier replaces this whole
@@ -11,7 +11,7 @@ const VERIFIER_DEFAULTS = Object.freeze({
     isEnabled: true,
     trackPlayerDistance: 5,
     particleLifetime: 10,
-    refreshSeconds: DEFAULT_REFRESH_SECONDS
+    refreshSeconds: RefreshRate.DEFAULT_SECONDS
 });
 
 export class InstanceOptions extends Option {
@@ -101,7 +101,7 @@ export class InstanceOptions extends Option {
     }
 
     setVerifierRefreshSeconds(seconds) {
-        this.verifier.refreshSeconds = Math.min(MAX_REFRESH_SECONDS, Math.max(MIN_REFRESH_SECONDS, seconds));
+        this.verifier.refreshSeconds = RefreshRate.clampSeconds(seconds);
         this.save();
     }
 

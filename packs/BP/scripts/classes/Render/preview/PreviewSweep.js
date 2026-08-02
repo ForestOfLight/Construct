@@ -1,5 +1,5 @@
 import { BlockBudget } from "../../Verifier/BlockBudget";
-import { blocksPerTick } from "../../Verifier/RefreshRate";
+import { RefreshRate } from "../../Verifier/RefreshRate";
 
 // The render cursor: walks the structure a slice at a time, wrapping forever,
 // spending from a budget that paces it to the refresh setting.
@@ -13,7 +13,7 @@ export class PreviewSweep {
     }
 
     *locations(bounds, volume, refreshSeconds) {
-        this.#budget.credit(blocksPerTick(volume, refreshSeconds));
+        this.#budget.credit(RefreshRate.blocksPerTick(volume, refreshSeconds));
         if (this.#budget.isExhausted())
             return;
         if (this.#cursor >= volume)

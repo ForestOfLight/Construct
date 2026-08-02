@@ -1,12 +1,12 @@
 import { Vector } from "../../../lib/Vector.js";
 
 export class Cuboid {
-    static edges = [ // Indecies specifically for Cuboid.cornersOf()
+    static #edges = [
         [0, 1], [0, 2], [0, 4], [1, 3],
         [1, 5], [2, 3], [2, 6], [3, 7],
         [4, 5], [4, 6], [5, 7], [6, 7]
     ];
-    static maxSegmentsPerEdge = 16;
+    static #maxSegmentsPerEdge = 16;
 
     constructor(min, max) {
         this.min = Vector.from(min);
@@ -28,12 +28,11 @@ export class Cuboid {
     }
 
     static segmentCount(start, end) {
-        return Math.min(Math.floor(end.distance(start)), Cuboid.maxSegmentsPerEdge);
+        return Math.min(Math.floor(end.distance(start)), Cuboid.#maxSegmentsPerEdge);
     }
 
-    // Evenly spaced points along each edge, excluding the corners themselves.
     static *edgePoints(corners) {
-        for (const [startIndex, endIndex] of Cuboid.edges) {
+        for (const [startIndex, endIndex] of Cuboid.#edges) {
             const start = corners[startIndex];
             const end = corners[endIndex];
             const segments = Cuboid.segmentCount(start, end);
@@ -42,9 +41,8 @@ export class Cuboid {
         }
     }
 
-    // The same subdivision as start/end pairs, for renderers that draw lines.
     static *edgeSegments(corners) {
-        for (const [startIndex, endIndex] of Cuboid.edges) {
+        for (const [startIndex, endIndex] of Cuboid.#edges) {
             const start = corners[startIndex];
             const end = corners[endIndex];
             const segments = Cuboid.segmentCount(start, end);

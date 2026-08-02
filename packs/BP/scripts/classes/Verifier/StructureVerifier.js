@@ -1,357 +1,158 @@
-import { BlockVerifier } from "./BlockVerifier";
-import { packCellFlags, VerificationLevels } from "./VerificationLevels";
-import { renderProfileOf } from "../Enums/RenderMode";
-import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { drawExpiringDebugBox } from "../Render/preview/ExpiringDebugBox";
-import { blockModelResolver } from "../Render/model/BlockModelResolver";
-import { system, TicksPerSecond } from "@minecraft/server";
+import { system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
-import { SkippedChunkTracker } from "./SkippedChunkTracker";
-import { BlockBudget } from "./BlockBudget";
-import { blocksPerTick as blocksPerTickFor } from "./RefreshRate";
+import { CellVerifier } from "./CellVerifier";
+import { GridBuffers } from "./GridBuffers";
+import { DebugBoxSweepObserver, SilentSweepObserver } from "./SweepObserver";
+import { VerificationRun } from "./VerificationRun";
+import { VerificationSweep } from "./VerificationSweep";
+import { InstanceVerifierSettings, StandaloneVerifierSettings } from "./VerifierSettings";
 
-const MIN_TRACK_PLAYER_DISTANCE = 0;
-const MAX_TRACK_PLAYER_DISTANCE = 7;
-const MIN_LIFETIME = 8;
-const DEFAULT_BLOCKS_PER_TICK = 10;
-const CHUNK_SIZE = 16;
-const CHUNK_MASK = CHUNK_SIZE - 1;
-const CHUNK_SHIFT = 4;
-const CHUNK_KEY_STRIDE = 4194304;
 const ORIGIN = Object.freeze({ x: 0, y: 0, z: 0 });
 
+// Keeps an instance's verification grid current: a sweep that walks the whole
+// structure on a loop, plus point patches for blocks a player just changed.
 export class StructureVerifier {
-    instance;
-    particleLifetime;
-    blocksPerTick;
+    #instance;
+    #settings;
+    #buffers = new GridBuffers();
+    #run;
+    #loop;
+    #isPassPending = false;
 
-    blockVerificationLevels;
-    isLocationPopulationComplete;
-    isVerificationComplete;
-    shouldStartNextVerification;
-    lastCompleteVerificationLevels;
+    static forInstance(instance) {
+        return new StructureVerifier(instance, new InstanceVerifierSettings(instance));
+    }
 
-    #runner;
-    #verifyRunner;
-    #verification;
-    #resolveVerification;
-    #populateJob = {};
-    #origin;
-    #skippedChunks;
-    #showBlockPreview = true;
-    #blockBudget = new BlockBudget();
+    static standalone(instance, options) {
+        return new StructureVerifier(instance, new StandaloneVerifierSettings(options));
+    }
 
-    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, particleLifetime = 10, isStandalone = false, blocksPerTick = DEFAULT_BLOCKS_PER_TICK } = {}) {
-        this.instance = instance;
-        this.particleLifetime = Math.max(particleLifetime, MIN_LIFETIME);
-        this.blocksPerTick = blocksPerTick;
-        if (isStandalone) {
-            this.isStandalone = isStandalone;
-            this.enabled = isEnabled;
-            this.trackPlayerDistance = trackPlayerDistance;
-        } else {
-            this.instance.options.setVerifierEnabled(isEnabled);
-            this.instance.options.setVerifierDistance(trackPlayerDistance);
+    constructor(instance, settings) {
+        this.#instance = instance;
+        this.#settings = settings;
+    }
+
+    isEnabled() {
+        return this.#settings.isEnabled();
+    }
+
+    getCompletedGrid() {
+        return this.#buffers.completed();
+    }
+
+    // Anything that moves the active bounds comes through here - a move, a
+    // resize, a layer change - so the pass in flight is abandoned rather than
+    // finished against bounds that no longer exist.
+    refresh() {
+        this.#stopLoop();
+        this.#cancelRun();
+        if (this.#instance.isEnabled())
+            this.#startLoop();
+    }
+
+    // Resolves with the newly completed grid, or with the previous one if the
+    // pass was cut short.
+    async verifyStructure(shouldRender = false) {
+        if (!this.isEnabled())
+            return void 0;
+        const bounds = this.#instance.getActiveBounds();
+        const volume = Vector.volume(bounds.min, bounds.max);
+        if (volume <= 0)
+            return this.#buffers.completed();
+        this.#cancelRun();
+        const run = this.#beginRun(bounds, volume, shouldRender);
+        this.#finishRun(run, await run.start());
+        return this.#buffers.completed();
+    }
+
+    // Re-verifies one cell outside the sweep, for a block a player just changed.
+    //
+    // Writes BOTH grids. The completed one is what the renderer reads, so it is
+    // what makes the change visible. The filling one belongs to the in-flight
+    // sweep: if that sweep has already walked past this cell it still holds the
+    // stale value and would undo the patch at the next commit - for a whole
+    // sweep period, which is the latency this exists to remove.
+    patchCell(location) {
+        const completed = this.#buffers.completed();
+        if (!completed)
+            return;
+        const cell = this.#tryVerifyCell(location);
+        if (!cell)
+            return;
+        completed.setCell(location, cell.verificationLevel, cell.flags);
+        // setCell no-ops on an out-of-range location, so the two grids
+        // disagreeing about bounds mid-refresh is safe.
+        this.#buffers.filling()?.setCell(location, cell.verificationLevel, cell.flags);
+    }
+
+    // The sweep tracks unreadable chunks because it walks blindly. Here the
+    // player is standing next to the block they just changed, so the chunk is
+    // loaded by definition and a throw means something unexpected. Leave the
+    // cell as the sweep last saw it and let the next pass settle it.
+    #tryVerifyCell(location) {
+        try {
+            return this.#newCellVerifier().verify(location);
+        } catch {
+            return void 0;
         }
     }
 
-    startContinuousVerification() {
-        this.shouldStartNextVerification = true;
-        this.#runner = system.runInterval(() => {
-            if (this.shouldStartNextVerification)
+    #startLoop() {
+        this.#isPassPending = true;
+        this.#loop = system.runInterval(() => {
+            if (this.#isPassPending)
                 this.verifyStructure();
         });
     }
 
-    stopContinuousVerification() {
-        if (!this.#runner)
+    #stopLoop() {
+        if (!this.#loop)
             return;
-        system.clearRun(this.#runner);
-        this.#runner = void 0;
+        system.clearRun(this.#loop);
+        this.#loop = void 0;
     }
 
-    refresh() {
-        this.stopContinuousVerification();
-        if (!this.instance.isEnabled())
+    #beginRun(bounds, volume, shouldRender) {
+        this.#isPassPending = false;
+        this.#run = new VerificationRun(
+            this.#newSweep(bounds, shouldRender),
+            this.#settings.blocksPerTick(volume)
+        );
+        return this.#run;
+    }
+
+    // Guarded on identity because cancelling settles the previous run's promise,
+    // and the call awaiting it resumes after the replacement is already in place.
+    #finishRun(run, didComplete) {
+        if (this.#run === run)
+            this.#run = void 0;
+        if (!didComplete)
             return;
-        this.startContinuousVerification();
+        this.#buffers.commit();
+        this.#isPassPending = true;
     }
 
-    isEnabled() {
-        if (this.isStandalone)
-            return this.enabled;
-        return this.instance.options.verifier.isEnabled;
+    #cancelRun() {
+        this.#run?.cancel();
     }
 
-    getTrackPlayerDistance() {
-        let distance;
-        if (this.isStandalone)
-            distance = this.trackPlayerDistance;
-        else
-            distance = this.instance.options.verifier.trackPlayerDistance
-        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, distance));
-    }
-
-    async verifyStructure(shouldRender = false) {
-        if (!this.isEnabled())
-            return;
-        this.#cancelVerification();
-        this.initVerification();
-        return new Promise((resolve) => {
-            this.#resolveVerification = resolve;
-            this.#startVerificationRunner(shouldRender);
+    #newSweep(bounds, shouldRender) {
+        return new VerificationSweep({
+            bounds,
+            grid: this.#buffers.beginPass(bounds),
+            origin: this.#instance.toGlobalCoords(ORIGIN),
+            cellVerifier: this.#newCellVerifier(),
+            observer: this.#newObserver(shouldRender)
         });
     }
 
-    #startVerificationRunner(shouldRender) {
-        this.#blockBudget.clear();
-        this.#verification = this.verifyBlocks(shouldRender);
-        this.#verifyRunner = system.runInterval(() => this.#verifyNextBlocks());
+    #newCellVerifier() {
+        return new CellVerifier(this.#instance, this.#settings.showsBlockPreview());
     }
 
-    // The budget is checked before the generator is advanced, not after. A
-    // resumed generator completes a whole chunk span before it reaches its
-    // own isExhausted() check, so calling next() on an empty budget would
-    // process ~16 blocks regardless of the rate - which would flatten the
-    // entire slow end of the refresh setting.
-    #verifyNextBlocks() {
-        this.#blockBudget.credit(this.blocksPerTick);
-        if (this.#blockBudget.isExhausted())
-            return;
-        try {
-            this.#verification.next();
-        } catch (error) {
-            this.#settleVerification(this.lastCompleteVerificationLevels);
-            throw error;
-        }
-    }
-
-    #cancelVerification() {
-        if (!this.#verification)
-            return;
-        this.#settleVerification(this.lastCompleteVerificationLevels);
-    }
-
-    #completeVerification() {
-        const completedVerificationLevels = this.blockVerificationLevels;
-        this.blockVerificationLevels = this.lastCompleteVerificationLevels;
-        this.lastCompleteVerificationLevels = completedVerificationLevels;
-        this.shouldStartNextVerification = true;
-        this.#settleVerification(completedVerificationLevels);
-    }
-
-    #settleVerification(verificationLevels) {
-        const resolve = this.#resolveVerification;
-        this.#stopVerificationRunner();
-        this.#resolveVerification = void 0;
-        resolve?.(verificationLevels);
-    }
-
-    #stopVerificationRunner() {
-        if (this.#verifyRunner !== void 0)
-            system.clearRun(this.#verifyRunner);
-        this.#verifyRunner = void 0;
-        this.#verification = void 0;
-    }
-
-    initVerification() {
-        this.shouldStartNextVerification = false;
-        this.blockVerificationLevels = this.#recycleVerificationLevels();
-        this.isLocationPopulationComplete = false;
-        this.isVerificationComplete = false;
-        this.#pullBlocksPerTick();
-        this.#pullShowBlockPreview();
-    }
-
-    // Derived per verification rather than cached: selecting a layer shrinks
-    // the active volume, and the cycle should tighten to match without the
-    // player touching the setting.
-    //
-    // Skipped when standalone - the statistics form builds its own verifier
-    // with an explicit rate and no instance options behind it.
-    #pullBlocksPerTick() {
-        if (this.isStandalone)
-            return;
-        const bounds = this.instance.getActiveBounds();
-        const volume = Vector.volume(bounds.min, bounds.max);
-        this.blocksPerTick = blocksPerTickFor(volume, this.instance.options.verifier.refreshSeconds);
-    }
-
-    // Whether a missing block will be drawn as its own model, which decides
-    // what shape its cell offers its neighbors (see #cellFlags). Read once per
-    // verification rather than per block, the way the renderer does it.
-    //
-    // A standalone verifier has no instance options behind it and renders
-    // nothing, so the preview is assumed on and its cells describe themselves
-    // the same way the default mode would.
-    #pullShowBlockPreview() {
-        this.#showBlockPreview = this.isStandalone
-            || renderProfileOf(this.instance.options.renderMode).blockPreview;
-    }
-
-    #recycleVerificationLevels() {
-        const bounds = this.instance.getActiveBounds();
-        if (!this.blockVerificationLevels?.matchesBounds(bounds))
-            return new VerificationLevels(bounds);
-        this.blockVerificationLevels.clear();
-        return this.blockVerificationLevels;
-    }
-    
-    *verifyBlocks(shouldRender) {
-        const bounds = this.instance.getActiveBounds();
-        this.#origin = this.instance.toGlobalCoords(ORIGIN);
-        this.#skippedChunks = new SkippedChunkTracker();
-        const location = new Vector();
-        for (let y = bounds.min.y; y < bounds.max.y; y++) {
-            this.#skippedChunks.startLayer();
-            for (let z = bounds.min.z; z < bounds.max.z; z++)
-                yield* this.#verifyBlockRow(location, bounds, y, z, shouldRender);
-        }
-        this.isVerificationComplete = true;
-        this.#completeVerification();
-    }
-
-    *#verifyBlockRow(location, bounds, y, z, shouldRender) {
-        for (let x = bounds.min.x; x < bounds.max.x;) {
-            const spanStartX = x;
-            x = this.#verifyChunkSpan(location, bounds, x, y, z, shouldRender);
-            this.#blockBudget.spend(x - spanStartX);
-            if (this.#blockBudget.isExhausted())
-                yield void 0;
-        }
-    }
-
-    #verifyChunkSpan(location, bounds, startX, y, z, shouldRender) {
-        const chunkKey = this.#chunkKeyOf(startX, z);
-        const endX = Math.min(this.#chunkEndX(startX), bounds.max.x);
-        if (this.#skippedChunks.isSkipped(chunkKey))
-            this.#skipBlocks(location, startX, endX, y, z);
-        else
-            this.#verifyBlocksInChunk(location, chunkKey, startX, endX, y, z, shouldRender);
-        return endX;
-    }
-
-    #verifyBlocksInChunk(location, chunkKey, startX, endX, y, z, shouldRender) {
-        let x = startX;
-        try {
-            for (; x < endX; x++)
-                this.verifyBlock(location.set(x, y, z), shouldRender);
-        } catch (error) {
-            if (!this.#skippedChunks.trackError(error, chunkKey))
-                throw error;
-            this.#skipBlocks(location, x, endX, y, z);
-        }
-    }
-
-    #skipBlocks(location, startX, endX, y, z) {
-        for (let x = startX; x < endX; x++)
-            this.blockVerificationLevels.set(location.set(x, y, z), BlockVerificationLevel.Skipped);
-    }
-
-    #chunkKeyOf(x, z) {
-        const chunkX = (x + this.#origin.x) >> CHUNK_SHIFT;
-        const chunkZ = (z + this.#origin.z) >> CHUNK_SHIFT;
-        return chunkX * CHUNK_KEY_STRIDE + chunkZ;
-    }
-
-    #chunkEndX(x) {
-        return x + CHUNK_SIZE - ((x + this.#origin.x) & CHUNK_MASK);
-    }
-
-    verifyBlock(location, shouldRender) {
-        const globalLocation = this.instance.toGlobalCoords(location);
-        const verificationLevel = this.getVerificationLevel(globalLocation);
-        this.blockVerificationLevels.set(location, verificationLevel);
-        this.blockVerificationLevels.setCellFlags(location, this.#cellFlags(location, verificationLevel));
-        if (shouldRender && verificationLevel !== BlockVerificationLevel.Air)
-            drawExpiringDebugBox(this.instance.getDimension(), globalLocation, verificationLevel, this.particleLifetime / TicksPerSecond);
-    }
-
-    // Re-verify one cell outside the sweep, in response to a block change a
-    // player just made.
-    //
-    // Writes BOTH buffers. The front one is what the renderer reads, so it is
-    // what makes the change visible. The back one belongs to the in-flight
-    // sweep: if that sweep has already walked past this cell it still holds
-    // the stale value and would undo this patch at the next swap - for a whole
-    // sweep period, which is the latency this exists to remove. If it hasn't
-    // reached the cell yet it overwrites the patch with a fresh read of the
-    // same block, which is the same answer.
-    patchBlock(location) {
-        const front = this.lastCompleteVerificationLevels;
-        if (!front)
-            return;
-        let verificationLevel;
-        try {
-            verificationLevel = this.getVerificationLevel(this.instance.toGlobalCoords(location));
-        } catch {
-            // The sweep tracks unloaded chunks because it walks blindly. Here
-            // the player is standing next to the block they just changed, so
-            // the chunk is loaded by definition and a throw means something
-            // unexpected. Leave the cell as the sweep last saw it and let the
-            // next sweep settle it.
-            return;
-        }
-        const cellFlags = this.#cellFlags(location, verificationLevel);
-        front.set(location, verificationLevel);
-        front.setCellFlags(location, cellFlags);
-        // set() no-ops on an out-of-range index, so the two buffers disagreeing
-        // about bounds mid-refresh is safe.
-        this.blockVerificationLevels?.set(location, verificationLevel);
-        this.blockVerificationLevels?.setCellFlags(location, cellFlags);
-    }
-
-    // What this cell offers its neighbors to hide their faces behind: the
-    // sides it covers completely, and which of those it covers opaquely.
-    //
-    // Which shape answers that depends on what will actually be standing in
-    // the cell, and only two levels let the structure's own block speak for
-    // it - Missing, which draws that block as the preview, and Match, where
-    // the identical block is already placed. Reading it there is what keeps
-    // this cheap: the palette entry is interned and its shape resolved once
-    // per distinct block state (see BlockModel.sideMasksOf).
-    //
-    // An incorrect block of either kind answers with the overlay instead,
-    // because that plain cube is the only thing we know is drawn there.
-    //
-    // Everything else - air, skipped, unknown - offers nothing, and its
-    // neighbors keep every face.
-    #cellFlags(location, verificationLevel) {
-        switch (verificationLevel) {
-            case BlockVerificationLevel.NoMatch:
-            case BlockVerificationLevel.TypeMatch:
-                return packCellFlags(blockModelResolver.overlaySideMasks());
-            case BlockVerificationLevel.Match:
-                return this.#structureCellFlags(location);
-            case BlockVerificationLevel.Missing:
-                // With the preview switched off a missing block is a small
-                // marker floating clear of its cell's sides, so it covers
-                // nothing - the block it stands for is not drawn and must not
-                // be allowed to hide a neighbor's faces behind a shape that
-                // isn't there.
-                return this.#showBlockPreview ? this.#structureCellFlags(location) : 0;
-            default:
-                return 0;
-        }
-    }
-
-    #structureCellFlags(location) {
-        const structBlock = this.instance.getBlock(location);
-        if (structBlock === void 0)
-            return 0;
-        return packCellFlags(blockModelResolver.sideMasksOf(structBlock));
-    }
-
-    getVerificationLevel(globalLocation) {
-        const dimension = this.instance.getDimension();
-        const worldBlock = dimension?.getBlock(globalLocation);
-        if (!worldBlock)
-            return BlockVerificationLevel.Skipped;
-        const blockVerifier = new BlockVerifier(worldBlock, this.instance);
-        return blockVerifier.verify();
-    }
-
-    getLastVerificationLevels() {
-        return this.lastCompleteVerificationLevels;
+    #newObserver(shouldRender) {
+        if (!shouldRender)
+            return new SilentSweepObserver();
+        return new DebugBoxSweepObserver(this.#instance, this.#settings.particleLifetimeSeconds());
     }
 }

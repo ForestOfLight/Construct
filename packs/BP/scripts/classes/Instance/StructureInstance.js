@@ -45,7 +45,7 @@ export class StructureInstance {
         if (!this.outliner)
             this.outliner = new StructureOutliner(this);
         if (!this.verifier)
-            this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled });
+            this.verifier = StructureVerifier.forInstance(this);
         if (!this.previewRenderer)
             this.previewRenderer = new BlockPreviewRenderer(this);
         if (!this.materials)

@@ -2,16 +2,6 @@
 packs/BP/scripts/blockAtlas.js, and packs/BP/scripts/blockModels.js from Java
 block model/texture data (misode/mcmeta) and Bedrock<->Java state mapping
 (PrismarineJS/minecraft-data), for the textured block preview renderer.
-
-Run it directly, from anywhere, to regenerate those three files in place:
-
-    python tools/bake_block_models/main.py
-
-Needs Pillow (see requirements.txt) and pulls ~100MB over the network, so it
-is a deliberate step to run when Minecraft updates rather than something a
-build triggers. Regolith also runs it as the `fetch_block_models` filter on
-the release profile; the only difference there is that ROOT_DIR points at the
-project root, since a filter's working directory is regolith's temp export.
 """
 
 import json
@@ -21,17 +11,17 @@ from pathlib import Path
 
 from PIL import Image
 
-from atlas_uv import WHITE_TEXTURE, inset_by_half_texel, project_uv, white_swatch
-from b2j_fixups import rekey_hanging_signs
-from b2j_source import fetch_b2j, manifest_version
-from block_models import build_block_models
-from face_reduction import ReductionStats
-from face_table import build_face_types_and_refs
-from key_specs import build_key_specs
-from mcmeta_source import McmetaSource
-from neighbor_culling import mark_side_cover
-from output import write_outputs
-from texture_atlas import TextureAtlas
+from atlas.uv import WHITE_TEXTURE, inset_by_half_texel, project_uv, white_swatch
+from sources.fixups import rekey_hanging_signs
+from sources.b2j import fetch_b2j, manifest_version
+from blocks.block_models import build_block_models
+from blocks.face_reduction import ReductionStats
+from output.face_table import build_face_types_and_refs
+from output.key_specs import build_key_specs
+from sources.mcmeta import McmetaSource
+from blocks.neighbor_culling import mark_side_cover
+from output.files import write_outputs
+from atlas.packing import TextureAtlas
 
 MANIFEST_PATH = ("packs", "BP", "manifest.json")
 WHITE_TEXTURE_PATH = ("packs", "RP", "textures", "particle", "white.png")

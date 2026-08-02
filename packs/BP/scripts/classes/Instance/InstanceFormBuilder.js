@@ -4,7 +4,7 @@ import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { InstanceStatistics } from './InstanceStatistics';
 import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
 import { RENDER_MODE_LABELS, RENDER_MODE_ORDER } from '../Enums/RenderMode';
-import { MAX_REFRESH_SECONDS, MIN_REFRESH_SECONDS, REFRESH_SECONDS_STEP } from '../Verifier/RefreshRate';
+import { RefreshRate } from '../Verifier/RefreshRate';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -45,7 +45,7 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
         if (this.structureVerifier)
             throw new Error('StructureVerifier is already running.');
-        this.structureVerifier = new StructureVerifier(instance, { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true });
+        this.structureVerifier = StructureVerifier.standalone(instance, { particleLifetime: 1*TicksPerSecond });
         const verification = await this.structureVerifier.verifyStructure(true);
         const statistics = new InstanceStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
@@ -69,11 +69,11 @@ export class InstanceFormBuilder {
             )
             .slider(
                 { translate: 'construct.instance.option.refreshrate' },
-                MIN_REFRESH_SECONDS,
-                MAX_REFRESH_SECONDS,
+                RefreshRate.MIN_SECONDS,
+                RefreshRate.MAX_SECONDS,
                 {
                     defaultValue: instance.options.verifier.refreshSeconds,
-                    valueStep: REFRESH_SECONDS_STEP,
+                    valueStep: RefreshRate.SECONDS_STEP,
                     tooltip: { translate: 'construct.instance.option.refreshrate.description' }
                 }
             )

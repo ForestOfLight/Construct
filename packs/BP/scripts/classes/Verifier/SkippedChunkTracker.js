@@ -1,11 +1,11 @@
 const UNLOADED_CHUNK_ERROR = 'LocationInUnloadedChunkError';
 const OUT_OF_BOUNDS_ERROR = 'LocationOutOfWorldBoundariesError';
 
-/**
- * Remembers which chunks cannot be read so they are only probed once per verification.
- * Chunk load state is column-wide, so unloaded chunks stay skipped for every layer.
- * World boundaries depend on the layer, so those chunks are only skipped within it.
- */
+// Remembers which chunks cannot be read so they are only probed once per sweep.
+//
+// Chunk load state is column-wide, so an unloaded chunk stays skipped for every
+// layer. World boundaries depend on the layer, so those chunks are only skipped
+// within the one that found them.
 export class SkippedChunkTracker {
     #unloadedChunks = new Set();
     #outOfBoundsChunks = new Set();
