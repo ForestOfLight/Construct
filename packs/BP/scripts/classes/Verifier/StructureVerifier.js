@@ -132,8 +132,8 @@ export class StructureVerifier {
                 for (let x = bounds.min.x; x < bounds.max.x; x++) {
                     const location = new Vector(x, y, z);
                     this.verifyBlock(location, shouldRender);
-                    yield void 0;
                 }
+                yield void 0;
             }
         }
         this.isVerificationComplete = true;

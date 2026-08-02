@@ -1,3 +1,4 @@
+import { Vector } from '../../lib/Vector.js';
 import { BlockVerificationLevel } from '../Enums/BlockVerificationLevel.js';
 
 export class InstanceStatistics {
@@ -8,7 +9,7 @@ export class InstanceStatistics {
 
     getNonAirBlocks() {
         const activeBounds = this.instance.getActiveBounds();
-        return activeBounds.min.volume(activeBounds.max) - this.statistics[BlockVerificationLevel.Air];
+        return Vector.volume(activeBounds.min, activeBounds.max) - this.statistics[BlockVerificationLevel.Air];
     }
 
     getStat(blockVerificationLevel) {

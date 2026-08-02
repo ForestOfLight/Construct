@@ -3,6 +3,7 @@ import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "./PerformanceRender/BlockVerificationLevelPerformanceRender";
 import { BlockPreviewVerificationLevelParticleRender } from "./ParticleRender/BlockPreviewVerificationLevelParticleRender";
 import { system } from "@minecraft/server";
+import { Vector } from "../../lib/Vector";
 
 const RENDER_LIFETIME_FACTOR_TICKS = 1;
 
@@ -41,7 +42,7 @@ export class VerificationRenderer {
 
     #renderNextChunk() {
         const bounds = this.instance.getActiveBounds();
-        const volume = bounds.min.volume(bounds.max);
+        const volume = Vector.volume(bounds.min, bounds.max);
         if (volume <= 0)
             return;
         const isLargeStructure = this.#shouldUseLargeStructureRendering(volume);

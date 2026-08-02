@@ -107,8 +107,8 @@ export class StructureInstance {
         const min = this.structure.getMin();
         const max = this.structure.getMax();
         return {
-            min: new Vector(min.x, layer - 1, min.z),
-            max: new Vector(max.x, layer, max.z)
+            min: { x: min.x, y: layer - 1, z: min.z },
+            max: { x: max.x, y: layer, z: max.z }
         };
     }
 
@@ -289,11 +289,19 @@ export class StructureInstance {
     }
 
     toGlobalCoords(structureLocation) {
-        return Vector.from(structureLocation).add(this.options.worldLocation);
+        return {
+            x: structureLocation.x + this.options.worldLocation.x,
+            y: structureLocation.y + this.options.worldLocation.y,
+            z: structureLocation.z + this.options.worldLocation.z
+        };
     }
 
     toStructureCoords(worldLocation) {
-        return Vector.from(worldLocation).subtract(this.options.worldLocation);
+        return {
+            x: worldLocation.x - this.options.worldLocation.x,
+            y: worldLocation.y - this.options.worldLocation.y,
+            z: worldLocation.z - this.options.worldLocation.z
+        };
     }
 
     asPacket() {

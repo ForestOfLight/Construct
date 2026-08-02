@@ -21,11 +21,11 @@ export class Structure {
     }
 
     getMin() {
-        return new Vector(0, 0, 0);
+        return { x: 0, y: 0, z: 0 };
     }
 
     getMax() {
-        return Vector.from(this.#size);
+        return this.#size;
     }
 
     getBlockPermutation(structureLocation) {

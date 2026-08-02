@@ -4,7 +4,7 @@ export class BlockVerifier {
     constructor(block, instance) {
         this.block = block;
         this.instance = instance;
-        this.blockLocationInStructure = instance.toStructureCoords(block.location);
+        this.blockLocationInStructure = instance.toStructureCoords({ x: block.x, y: block.y, z: block.z });
     }
 
     verify() {
