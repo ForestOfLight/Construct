@@ -5,8 +5,13 @@ from decimal import Decimal
 from PIL import Image
 
 from main import (
+    _CUBE_FACES,
+    _CULL_DIRECTIONS,
+    _cull_direction,
     _derive_roll,
     _facing,
+    build_opaque_cube_ids,
+    WHITE_TEXTURE,
     inset_by_half_texel,
     REDSTONE_POWER_TINTS,
     white_swatch,
@@ -180,6 +185,29 @@ class BuildBlockModelsTest(unittest.TestCase):
             ["block/stone_top", "block/stone_bottom", "block/stone_side", "block/stone_side",
              "block/stone_side", "block/stone_side"],
         )
+
+    def test_zero_area_faces_are_dropped_along_with_their_textures(self):
+        # a flat plane (a rail, a redstone wire) still lists the four faces
+        # standing on its zero-thickness edges; they cover no pixels, so they
+        # have no business in the baked table or in the atlas
+        mcmeta = FakeMcmeta(
+            blockstates={"rail": {"variants": {"": {"model": "block/rail"}}}},
+            models={"block/rail": {"textures": {}, "elements": [{
+                "from": [0, 0, 0], "to": [16, 0, 16],
+                "faces": {
+                    "up": {"texture": "block/rail"},
+                    "north": {"texture": "block/rail_edge"},
+                    "east": {"texture": "block/rail_edge"},
+                },
+            }]}},
+        )
+        atlas = FakeAtlas()
+        b2j = {"minecraft:rail[]": "minecraft:rail"}
+        block_models = build_block_models(mcmeta, b2j, atlas)
+        faces = block_models["minecraft:rail[]"]
+        self.assertEqual(len(faces), 1)
+        self.assertEqual(faces[0]["normal"], [0, 1, 0])
+        self.assertEqual(atlas.added, ["block/rail"])
 
     def test_block_with_real_properties_selects_matching_variant(self):
         mcmeta = FakeMcmeta(
@@ -853,6 +881,147 @@ class BuildFaceTypesAndRefsTest(unittest.TestCase):
         self.assertEqual(face_type["roll"], 90)
         self.assertEqual(face_type["tintindex"], 0)
         self.assertEqual(face_type["uv"], {"x": 1, "y": 2, "w": 3, "h": 4})
+
+
+class CullDirectionTest(unittest.TestCase):
+    """A face flush against the block hull and looking outward is hidden
+    outright by a neighbor that fills its own cube opaquely, so it carries the
+    index of that neighbor's direction and the renderer skips it."""
+
+    DOWN, UP, NORTH, SOUTH, WEST, EAST = range(6)
+
+    def test_each_side_of_a_full_cube_names_the_neighbor_beyond_it(self):
+        for center, normal, expected in (
+            ([8, 16, 8], [0, 1, 0], self.UP),
+            ([8, 0, 8], [0, -1, 0], self.DOWN),
+            ([8, 8, 0], [0, 0, -1], self.NORTH),
+            ([8, 8, 16], [0, 0, 1], self.SOUTH),
+            ([0, 8, 8], [-1, 0, 0], self.WEST),
+            ([16, 8, 8], [1, 0, 0], self.EAST),
+        ):
+            self.assertEqual(_cull_direction(center, normal), expected, normal)
+
+    def test_the_cull_direction_indexes_the_offset_to_that_neighbor(self):
+        # the renderer walks this exact table (CULL_OFFSETS in
+        # VerificationLevels.js) to find the block to ask about, so an index
+        # that doesn't line up with the offsets culls against the wrong side
+        self.assertEqual(_CULL_DIRECTIONS[_cull_direction([8, 16, 8], [0, 1, 0])], [0, 1, 0])
+        self.assertEqual(_CULL_DIRECTIONS[_cull_direction([0, 8, 8], [-1, 0, 0])], [-1, 0, 0])
+
+    def test_a_face_looking_into_the_block_is_not_culled(self):
+        # the inside of a hollow shape - a cauldron's inner wall sits on no
+        # hull plane at all, but a face on the hull looking inward (the
+        # underside of a lid flush with the block top) is seen from within
+        self.assertIsNone(_cull_direction([8, 16, 8], [0, -1, 0]))
+        self.assertIsNone(_cull_direction([0, 8, 8], [1, 0, 0]))
+
+    def test_a_face_held_off_the_hull_is_not_culled(self):
+        # a cactus side sits a pixel in from the block edge; the strip of
+        # block beside it stays visible however solid the neighbor is, which
+        # is the case Java's own cullface flag gets wrong for our renderer
+        self.assertIsNone(_cull_direction([1, 8, 8], [-1, 0, 0]))
+        self.assertIsNone(_cull_direction([8, 15, 8], [0, 1, 0]))
+
+    def test_a_diagonal_face_has_no_neighbor_that_can_hide_it(self):
+        half = Decimal(1) / Decimal(2).sqrt()
+        self.assertIsNone(_cull_direction([8, 8, 0], [half, 0, -half]))
+
+    def test_a_full_cubes_faces_carry_their_cull_into_the_face_type_table(self):
+        block_models = {"a": [
+            {"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
+             "roll": 180, "tintindex": -1, "uv": {"x": 0, "y": 0, "w": 16, "h": 16}},
+            {"center": [8, 8, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
+             "roll": 180, "tintindex": -1, "uv": {"x": 0, "y": 0, "w": 16, "h": 16}},
+        ]}
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertEqual(face_types[result["a"][0]]["cull"], self.UP)
+        # a face floating in the middle of the block carries no cull at all,
+        # rather than a null the renderer would have to test for
+        self.assertNotIn("cull", face_types[result["a"][1]])
+
+    def test_two_faces_alike_but_for_their_cull_stay_separate_face_types(self):
+        # same quad, same texture, but one sits on the block top and one a
+        # pixel below it; merging them would cull the floating one
+        block_models = {
+            "a": [{"center": [8, 16, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
+                   "roll": 180, "tintindex": -1, "uv": {"x": 0, "y": 0, "w": 16, "h": 16}}],
+            "b": [{"center": [8, 15, 8], "width": 16, "height": 16, "normal": [0, 1, 0],
+                   "roll": 180, "tintindex": -1, "uv": {"x": 0, "y": 0, "w": 16, "h": 16}}],
+        }
+        face_types, result = build_face_types_and_refs(block_models)
+        self.assertNotEqual(result["a"][0], result["b"][0])
+
+
+class OpaqueCubeIdsTest(unittest.TestCase):
+    """Only a block that fills its whole cube with nothing see-through may
+    hide a neighbor's faces."""
+
+    class FakeOpacityAtlas:
+        def __init__(self, transparent=()):
+            self._transparent = set(transparent)
+
+        def is_opaque(self, name):
+            return name not in self._transparent
+
+    def _cube(self, texture="block/stone", **overrides):
+        return [dict({
+            "center": face["center"], "width": 16, "height": 16,
+            "normal": face["normal"], "texture": texture,
+        }, **overrides) for face in _CUBE_FACES]
+
+    def test_a_full_cube_of_opaque_texture_qualifies(self):
+        ids = build_opaque_cube_ids(
+            {"minecraft:stone[]": self._cube()}, self.FakeOpacityAtlas(),
+        )
+        self.assertEqual(ids, ["minecraft:stone"])
+
+    def test_one_see_through_texel_anywhere_disqualifies_the_block(self):
+        ids = build_opaque_cube_ids(
+            {"minecraft:glass[]": self._cube("block/glass")},
+            self.FakeOpacityAtlas(transparent={"block/glass"}),
+        )
+        self.assertEqual(ids, [])
+
+    def test_a_shape_that_does_not_fill_its_cube_does_not_qualify(self):
+        slab = self._cube()[:5]
+        ids = build_opaque_cube_ids({"minecraft:slab[]": slab}, self.FakeOpacityAtlas())
+        self.assertEqual(ids, [])
+
+    def test_a_cube_shrunk_off_the_hull_does_not_qualify(self):
+        # six faces of the right size, but held a pixel in from every side -
+        # the gap around them is exactly what a neighbor would not cover
+        shrunk = [dict(face, center=[c - 1 for c in face["center"]]) for face in self._cube()]
+        ids = build_opaque_cube_ids({"minecraft:x[]": shrunk}, self.FakeOpacityAtlas())
+        self.assertEqual(ids, [])
+
+    def test_an_unresolved_block_does_not_qualify(self):
+        # the missing-block cube is a full cube of the white swatch, which is
+        # opaque - but it stands for "we don't know what this is", and a block
+        # we can't model can't be trusted to hide anything
+        ids = build_opaque_cube_ids(
+            {"minecraft:mystery[]": [dict(face, texture=WHITE_TEXTURE)
+                                     for face in WHITE_CUBE_FACES]},
+            self.FakeOpacityAtlas(),
+        )
+        self.assertEqual(ids, [])
+
+    def test_a_block_qualifies_only_if_every_one_of_its_states_does(self):
+        # the renderer asks about a neighbor by block id alone, so one state
+        # that doesn't fill its cube has to disqualify the whole id
+        block_models = {
+            "minecraft:water[liquid_depth=0]": self._cube("block/water_still"),
+            "minecraft:water[liquid_depth=1]": self._cube("block/water_still")[:5],
+        }
+        ids = build_opaque_cube_ids(block_models, self.FakeOpacityAtlas())
+        self.assertEqual(ids, [])
+
+    def test_ids_come_out_sorted_so_the_generated_file_does_not_churn(self):
+        block_models = {
+            "minecraft:stone[]": self._cube(),
+            "minecraft:andesite[]": self._cube(),
+        }
+        ids = build_opaque_cube_ids(block_models, self.FakeOpacityAtlas())
+        self.assertEqual(ids, ["minecraft:andesite", "minecraft:stone"])
 
 
 if __name__ == "__main__":

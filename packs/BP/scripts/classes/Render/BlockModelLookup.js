@@ -1,4 +1,4 @@
-import { blockFaceTypes, blockKeySpecs, blockModels } from "../../blockModels";
+import { blockFaceTypes, blockKeySpecs, blockModels, blockOpaqueCubes } from "../../blockModels";
 import { whiteUvRect } from "../../blockAtlas";
 
 // A plain full cube, used to outline a block that is already visible in the
@@ -9,13 +9,18 @@ import { whiteUvRect } from "../../blockAtlas";
 // bottom faces is the reverse of the way the face actually looks - see
 // _facing in filters/fetch_block_models/main.py, which is what generates the
 // same field for every real block's faces.
+//
+// `cull` is the neighbor that hides each face, indexed the same way the baked
+// table indexes it (see CULL_OFFSETS in ../Verifier/VerificationLevels.js).
+// It follows the face's real outward normal, not `facing` - the top face is
+// pointed downward here and still culled by the block above.
 export const PLAIN_CUBE_FACES = [
-    { center: [8, 16, 8], width: 16, height: 16, facing: [0, -1, 0], roll: 180, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 0, 8], width: 16, height: 16, facing: [0, 1, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 8, 0], width: 16, height: 16, facing: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [8, 8, 16], width: 16, height: 16, facing: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [16, 8, 8], width: 16, height: 16, facing: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
-    { center: [0, 8, 8], width: 16, height: 16, facing: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect },
+    { center: [8, 16, 8], width: 16, height: 16, facing: [0, -1, 0], roll: 180, tintindex: -1, uv: whiteUvRect, cull: 1 },
+    { center: [8, 0, 8], width: 16, height: 16, facing: [0, 1, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 0 },
+    { center: [8, 8, 0], width: 16, height: 16, facing: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 2 },
+    { center: [8, 8, 16], width: 16, height: 16, facing: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 3 },
+    { center: [16, 8, 8], width: 16, height: 16, facing: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 5 },
+    { center: [0, 8, 8], width: 16, height: 16, facing: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 4 },
 ];
 
 // Mirrors filters/fetch_block_models/main.py's WHITE_CUBE_FACES: used when a
@@ -43,8 +48,21 @@ const WATER_BLOCK_IDS = new Set(["minecraft:water", "minecraft:flowing_water"]);
 const WATERLOGGED_WATER_STATE = "minecraft:water[liquid_depth=0]";
 
 let waterFaces;
+let opaqueCubeIds;
 
 export class BlockModelLookup {
+    // Whether a block of this type fills its whole cube with nothing
+    // see-through, and so hides any face pressed flat against it. The baked
+    // list only holds ids every one of whose states qualifies (see
+    // build_opaque_cube_ids in tools/bake_block_models/main.py), which is
+    // what lets this be a type-id lookup rather than a model lookup - it is
+    // asked once per neighbor of every block drawn.
+    static isOpaqueCube(blockTypeId) {
+        if (!opaqueCubeIds)
+            opaqueCubeIds = new Set(blockOpaqueCubes);
+        return opaqueCubeIds.has(blockTypeId);
+    }
+
     static getFaces(permutation) {
         const blockId = permutation.type.id;
         const spec = blockKeySpecs[blockId];

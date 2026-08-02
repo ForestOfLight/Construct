@@ -227,5 +227,44 @@ class TextureAtlasTest(unittest.TestCase):
             atlas.pack()
 
 
+class IsOpaqueTest(unittest.TestCase):
+    """Whether a texture can hide what's behind it, which is what decides
+    whether a block may cull its neighbors' faces (see main.py)."""
+
+    def test_a_fully_solid_texture_is_opaque(self):
+        atlas = TextureAtlas()
+        atlas.add_image("block/stone", _solid((16, 16), (128, 128, 128, 255)))
+        self.assertTrue(atlas.is_opaque("block/stone"))
+
+    def test_a_single_see_through_texel_is_enough_to_disqualify_it(self):
+        # a glass texture is solid but for its pane's edges; a leaf texture is
+        # riddled with holes. Either way the face behind shows through
+        image = _solid((16, 16), (200, 200, 255, 255))
+        image.putpixel((3, 4), (0, 0, 0, 0))
+        atlas = TextureAtlas()
+        atlas.add_image("block/glass", image)
+        self.assertFalse(atlas.is_opaque("block/glass"))
+
+    def test_a_partly_translucent_texture_is_not_opaque(self):
+        # water's texture carries an alpha of 180 across the whole image -
+        # never fully see-through, never fully solid either
+        atlas = TextureAtlas()
+        atlas.add_image("block/water_still", _solid((16, 16), (63, 118, 228, 180)))
+        self.assertFalse(atlas.is_opaque("block/water_still"))
+
+    def test_an_overlay_that_fills_its_base_leaves_the_composite_opaque(self):
+        mcmeta = FakeMcmeta({
+            "block/base": _solid((2, 2), (120, 80, 40, 255)),
+            "block/overlay": _solid((2, 2), (0, 255, 0, 128)),
+        })
+        atlas = TextureAtlas()
+        name = compose_textures("block/base", "block/overlay")
+        atlas.add(mcmeta, name)
+        self.assertTrue(atlas.is_opaque(name))
+
+    def test_a_texture_that_was_never_added_is_not_opaque(self):
+        self.assertFalse(TextureAtlas().is_opaque("block/nothing"))
+
+
 if __name__ == "__main__":
     unittest.main()

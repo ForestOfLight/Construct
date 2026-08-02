@@ -387,6 +387,63 @@ def _is_vertical(normal):
     return abs(Decimal(normal[1])) >= _VERTICAL_TOLERANCE
 
 
+# The six directions a face can be culled against, as offsets to the
+# neighboring block. A face's 'cull' is an index into this table, and the
+# renderer keeps the same table (CULL_OFFSETS in VerificationLevels.js) to
+# turn that index back into the neighbor to ask about. The order is
+# arbitrary but shared, so changing it here means changing it there.
+_CULL_DIRECTIONS = [
+    [0, -1, 0],  # 0 down
+    [0, 1, 0],   # 1 up
+    [0, 0, -1],  # 2 north
+    [0, 0, 1],   # 3 south
+    [-1, 0, 0],  # 4 west
+    [1, 0, 0],   # 5 east
+]
+
+# Which coordinate of a face's center has to sit on the block hull for the
+# face to lie flush against the neighbor in that direction: the low face of
+# the block sits at 0, the high face at 16.
+_HULL_LOW, _HULL_HIGH = Decimal(0), Decimal(16)
+
+
+def _cull_direction(center, normal):
+    """The index into _CULL_DIRECTIONS of the neighbor that hides this face,
+    or None if no neighbor can.
+
+    A face is hidden by its neighbor exactly when it lies flat on the block's
+    own hull looking outward: it is then coplanar with the neighbor's facing
+    surface, and inside the 16x16 footprint that surface covers, so a
+    neighbor that fills its cube opaquely leaves nothing of it visible. Both
+    halves matter - a face on the hull plane but looking inward (the inside
+    of a hollow shape) is seen from within the block, and an outward face
+    held off the hull (a cactus side, inset a pixel) has a sliver of block
+    beside it that stays visible.
+
+    This is derived from the geometry rather than read from Java's own
+    "cullface" (which model_resolver parses and nothing consumes). Java's
+    flag is the more aggressive of the two - it culls faces that are merely
+    near the hull, cactus sides among them - and that extra reach is exactly
+    what our renderer cannot afford, since a preview block is drawn slightly
+    inset or slightly oversized rather than filling its cube. Everything
+    Java's flag covers that is genuinely flush, this covers too."""
+    if not _is_cardinal(normal):
+        return None
+    axis = next(i for i, c in enumerate(normal) if c)
+    plane = _HULL_HIGH if Decimal(normal[axis]) > 0 else _HULL_LOW
+    if Decimal(center[axis]) != plane:
+        return None
+    return _CULL_DIRECTIONS.index([1 if i == axis and plane == _HULL_HIGH
+                                   else -1 if i == axis else 0 for i in range(3)])
+
+
+def _is_cardinal(normal):
+    """Whether `normal` points exactly along one world axis. A diagonal face
+    (a cross-shaped plant, a lever's stem) never lies flush against a
+    neighbor, so it has no cull direction at all."""
+    return sorted(abs(Decimal(c)) for c in normal) == [Decimal(0), Decimal(0), Decimal(1)]
+
+
 def root_dir():
     root = os.environ.get("ROOT_DIR")
     return Path(root) if root else Path(__file__).resolve().parents[2]
@@ -494,6 +551,16 @@ def build_block_models(mcmeta, b2j, atlas):
         faces = []
         for element in elements:
             for face in element["faces"].values():
+                width, height = _derive_width_height(face["extent"], face["uv_u"], face["uv_v"])
+                # a quad with no area covers no pixels whatever it is textured
+                # with, and Java models are full of them - the four "sides" of
+                # a flat plane, every face of an element flattened to nothing
+                # by its blockstate rotation. Dropping them here keeps them out
+                # of the atlas, the face-type table and the reference lists
+                # entirely, rather than baking a face the renderer would have
+                # to look up and skip on every block it draws.
+                if width == 0 or height == 0:
+                    continue
                 # a hardcoded block-entity shape's face may ask for a
                 # mirrored copy of its texture (see model_resolver.
                 # resolve_elements's 'flip') - "|" can't appear in a real
@@ -504,7 +571,6 @@ def build_block_models(mcmeta, b2j, atlas):
                 # dot model's overlay stays out of the power ramp
                 if state_tint and face["tintindex"] >= 0:
                     texture = tinted(texture, state_tint)
-                width, height = _derive_width_height(face["extent"], face["uv_u"], face["uv_v"])
                 faces.append({
                     "center": face["center"],
                     "width": width,
@@ -675,10 +741,15 @@ def build_face_types_and_refs(block_models):
             # straight up or down (see _facing). Resolving it here keeps the
             # rule in one place, next to the roll that is measured about it.
             facing = _facing(face["normal"])
+            # Derived from the outward normal, which is why it happens here
+            # and not from the published 'facing' - a face pointing straight
+            # up is published pointing down, and reading the cull direction
+            # off that would have every top face culled by the block below.
+            cull = _cull_direction(face["center"], face["normal"])
             key = (
                 tuple(face["center"]), face["width"], face["height"], tuple(facing),
                 face["roll"], face["tintindex"],
-                uv["x"], uv["y"], uv["w"], uv["h"], missing,
+                uv["x"], uv["y"], uv["w"], uv["h"], missing, cull,
             )
             if key not in face_type_index:
                 face_type_index[key] = len(face_types)
@@ -695,10 +766,58 @@ def build_face_types_and_refs(block_models):
                 # descriptor is written out literally
                 if missing:
                     descriptor["missing"] = True
+                # likewise absent rather than null on the ~64% of faces that
+                # no neighbor can hide; the renderer reads "no cull" off the
+                # field being undefined
+                if cull is not None:
+                    descriptor["cull"] = cull
                 face_types.append(descriptor)
             refs.append(face_type_index[key])
         block_models[bedrock_state] = refs
     return face_types, block_models
+
+
+def build_opaque_cube_ids(block_models, atlas):
+    """The Bedrock block ids that fill their whole cube with nothing
+    see-through, sorted. These are the blocks allowed to hide a neighbor's
+    faces (see _cull_direction); everything else leaves its neighbors alone.
+
+    Call this BEFORE project_uv, while faces still carry a 'texture' name -
+    the atlas is what knows whether that texture has any transparency in it.
+
+    Judged per block id rather than per state, because that is all the
+    renderer can ask about cheaply: a live neighbor arrives as a permutation
+    whose states would have to be rebuilt into a lookup key to say anything
+    finer, and it is asked about six times per block drawn. So an id only
+    qualifies if EVERY one of its states is a full opaque cube - which throws
+    away nothing real, since a block whose shape varies by state (a slab, a
+    fluid at any depth) has states that don't fill their cube and could never
+    have qualified as a whole anyway."""
+    faces_by_id = {}
+    for bedrock_state, faces in block_models.items():
+        faces_by_id.setdefault(bedrock_state.split("[", 1)[0], []).append(faces)
+    return sorted(
+        block_id for block_id, states in faces_by_id.items()
+        if all(_is_opaque_cube(faces, atlas) for faces in states)
+    )
+
+
+def _is_opaque_cube(faces, atlas):
+    """Whether one state's faces are a full cube of opaque texture: six
+    faces, one flush against each neighbor, each spanning its whole side."""
+    if len(faces) != len(_CULL_DIRECTIONS):
+        return False
+    culls = set()
+    for face in faces:
+        if face.get("missing"):
+            return False
+        if face["width"] != 16 or face["height"] != 16:
+            return False
+        cull = _cull_direction(face["center"], face["normal"])
+        if cull is None or not atlas.is_opaque(face["texture"]):
+            return False
+        culls.add(cull)
+    return len(culls) == len(_CULL_DIRECTIONS)
 
 
 def _parse_state_key(bedrock_state):
@@ -797,6 +916,9 @@ def build(root):
     atlas.add_image(WHITE_TEXTURE, white_swatch(Image.open(white_path)))
 
     block_models = build_block_models(mcmeta, b2j, atlas)
+    # while the faces still name their textures, which is what says whether a
+    # block is see-through - project_uv drops the names a few lines down
+    opaque_cube_ids = build_opaque_cube_ids(block_models, atlas)
     atlas_image, atlas_manifest = atlas.pack()
     # Everything that samples the swatch - the exported whiteUvRect and
     # project_uv's fallback for a texture that never made it into the atlas -
@@ -807,10 +929,11 @@ def build(root):
     block_models = project_uv(block_models, atlas_manifest)
     face_types, block_models = build_face_types_and_refs(block_models)
     key_specs, block_models = build_key_specs(block_models)
-    return atlas_image, white_rect, face_types, block_models, key_specs
+    return atlas_image, white_rect, face_types, block_models, key_specs, opaque_cube_ids
 
 
-def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs):
+def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs,
+                  opaque_cube_ids):
     atlas_path = root / "packs" / "RP" / "textures" / "particle" / "vanilla_block_atlas.png"
     atlas_image.save(atlas_path)
 
@@ -832,7 +955,10 @@ def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_s
         # keyed on only the properties that choose between a block's models,
         # so the renderer needs blockKeySpecs to build a key that hits
         "export const blockModels = " + render(block_models) + ";\n\n"
-        "export const blockKeySpecs = " + render(key_specs) + ";"
+        "export const blockKeySpecs = " + render(key_specs) + ";\n\n"
+        # the ids allowed to hide a neighbor's faces; the renderer turns this
+        # into a Set once and asks it about a neighbor six times per block
+        "export const blockOpaqueCubes = " + render(opaque_cube_ids) + ";"
     )
     models_js_path.write_text(models_js_contents, encoding="utf-8")
 
@@ -841,8 +967,7 @@ def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_s
 
 def main():
     root = root_dir()
-    atlas_image, white_rect, face_types, block_models, key_specs = build(root)
-    write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs)
+    write_outputs(root, *build(root))
 
 
 if __name__ == "__main__":

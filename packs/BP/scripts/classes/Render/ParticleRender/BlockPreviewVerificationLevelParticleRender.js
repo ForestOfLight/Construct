@@ -5,6 +5,23 @@ import { DEBUG_CONFIG } from "../../../consts";
 
 const BLOCK_CENTER = 0.5;
 
+// A block that isn't there yet is drawn slightly inside its cell so a run of
+// them reads as separate blocks rather than one mass, and one that's there
+// but wrong is drawn slightly outside its cell so it wraps the real block
+// instead of z-fighting with it.
+//
+// The inset is the one thing keeping neighbor culling from being exactly
+// invisible. A face is culled when the neighboring cell holds something that
+// fills its cube (see StructureVerifier's #isOccluder), and against a block
+// already placed in the world that is exact - it really does fill it. But two
+// missing blocks side by side are each drawn a twentieth of a block short of
+// their shared boundary, so the faces they present to each other are not
+// quite touching, and culling them opens a seam that shows at a grazing
+// angle. Setting this to 1.00 makes every cull exact, at the cost of a solid
+// missing region reading as one block-colored mass.
+const MISSING_SIZE_SCALAR = 1.00;
+const OVERLAY_SIZE_SCALAR = 1.01;
+
 // How a face the pipeline couldn't resolve is drawn: a see-through blue quad
 // rather than the block's own preview color. Solid white read as a real
 // block with a blank texture, which hid broken model/texture data instead of
@@ -26,12 +43,13 @@ const WATER_MATERIAL = "blend";
 export class BlockPreviewVerificationLevelParticleRender {
     lifetimeSeconds = 0;
 
-    constructor(dimensionLocation, targetPermutation, verificationLevel, lifetimeSeconds = 5) {
+    constructor(dimensionLocation, targetPermutation, verificationLevel, lifetimeSeconds = 5, occlusionMask = 0) {
         this.dimension = dimensionLocation.dimension;
         this.location = dimensionLocation.location;
         this.targetPermutation = targetPermutation;
         this.verificationLevel = verificationLevel;
         this.lifetimeSeconds = lifetimeSeconds;
+        this.occlusionMask = occlusionMask;
         this.#renderBlock();
     }
 
@@ -62,9 +80,19 @@ export class BlockPreviewVerificationLevelParticleRender {
         // resolved puts the block's own color back.
         let colorIsMissing = false;
 
+        const occlusionMask = this.occlusionMask;
+
         for (const { faces, material } of this.#getFaceLayers()) {
             for (const face of faces) {
                 try {
+                    // A face lying flat on the block's hull is hidden outright
+                    // by a neighbor that fills its own cube opaquely, so it
+                    // costs a particle and draws nothing. `cull` says which
+                    // neighbor that is (absent on the faces no neighbor can
+                    // reach - anything inside the block, and every diagonal),
+                    // and the mask says which of the six qualify.
+                    if (face.cull !== void 0 && (occlusionMask >> face.cull) & 1)
+                        continue;
                     const missing = face.missing === true;
                     if (missing !== colorIsMissing) {
                         scratch.molang.setColorRGBA("face_color", missing ? MISSING_FACE_RGBA : rgb);
@@ -111,8 +139,6 @@ export class BlockPreviewVerificationLevelParticleRender {
     // The spare slot in `uv` is unused - ten values don't divide into three
     // vectors, and a wasted slot is free where a fifth call would not be.
     #renderFace(scratch, face, material, sizeScalar) {
-        if (face.width === 0 || face.height === 0)
-            return;
         const { molang, location, normal, size, uv, uvSize } = scratch;
 
         // Scale each face's offset from the block's center outward/inward by
@@ -198,11 +224,11 @@ export class BlockPreviewVerificationLevelParticleRender {
     #verificationLevelToSizeScalar() {
         switch (this.verificationLevel) {
             case BlockVerificationLevel.NoMatch:
-                return 1.01;
+                return OVERLAY_SIZE_SCALAR;
             case BlockVerificationLevel.TypeMatch:
-                return 1.01;
+                return OVERLAY_SIZE_SCALAR;
             case BlockVerificationLevel.Missing:
-                return 0.90;
+                return MISSING_SIZE_SCALAR;
             default:
                 return 1.00;
         }

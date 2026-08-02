@@ -2,16 +2,26 @@ import { BlockVerifier } from "./BlockVerifier";
 import { VerificationLevels } from "./VerificationLevels";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { BlockVerificationLevelPerformanceRender } from "../Render/PerformanceRender/BlockVerificationLevelPerformanceRender";
+import { BlockModelLookup } from "../Render/BlockModelLookup";
 import { system, TicksPerSecond } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
+import { SkippedChunkTracker } from "./SkippedChunkTracker";
+import { BlockBudget } from "./BlockBudget";
 
 const MIN_TRACK_PLAYER_DISTANCE = 0;
 const MAX_TRACK_PLAYER_DISTANCE = 7;
 const MIN_LIFETIME = 8;
+const DEFAULT_BLOCKS_PER_TICK = 10;
+const CHUNK_SIZE = 16;
+const CHUNK_MASK = CHUNK_SIZE - 1;
+const CHUNK_SHIFT = 4;
+const CHUNK_KEY_STRIDE = 4194304;
+const ORIGIN = Object.freeze({ x: 0, y: 0, z: 0 });
 
 export class StructureVerifier {
     instance;
     particleLifetime;
+    blocksPerTick;
 
     locationsToVerify;
     blockVerificationLevels;
@@ -21,13 +31,18 @@ export class StructureVerifier {
     lastCompleteVerificationLevels;
 
     #runner;
-    #verifyJob;
+    #verifyRunner;
+    #verification;
     #resolveVerification;
     #populateJob = {};
+    #origin;
+    #skippedChunks;
+    #blockBudget = new BlockBudget();
 
-    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, particleLifetime = 10, isStandalone = false } = {}) {
+    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, particleLifetime = 10, isStandalone = false, blocksPerTick = DEFAULT_BLOCKS_PER_TICK } = {}) {
         this.instance = instance;
         this.particleLifetime = Math.max(particleLifetime, MIN_LIFETIME);
+        this.blocksPerTick = blocksPerTick;
         if (isStandalone) {
             this.isStandalone = isStandalone;
             this.enabled = isEnabled;
@@ -83,14 +98,28 @@ export class StructureVerifier {
         this.initVerification();
         return new Promise((resolve) => {
             this.#resolveVerification = resolve;
-            this.#verifyJob = system.runJob(this.verifyBlocks(shouldRender));
+            this.#startVerificationRunner(shouldRender);
         });
     }
 
+    #startVerificationRunner(shouldRender) {
+        this.#verification = this.verifyBlocks(shouldRender);
+        this.#verifyRunner = system.runInterval(() => this.#verifyNextBlocks());
+    }
+
+    #verifyNextBlocks() {
+        this.#blockBudget.reset(this.blocksPerTick);
+        try {
+            this.#verification.next();
+        } catch (error) {
+            this.#settleVerification(this.lastCompleteVerificationLevels);
+            throw error;
+        }
+    }
+
     #cancelVerification() {
-        if (!this.#verifyJob)
+        if (!this.#verification)
             return;
-        system.clearJob(this.#verifyJob);
         this.#settleVerification(this.lastCompleteVerificationLevels);
     }
 
@@ -104,9 +133,16 @@ export class StructureVerifier {
 
     #settleVerification(verificationLevels) {
         const resolve = this.#resolveVerification;
-        this.#verifyJob = void 0;
+        this.#stopVerificationRunner();
         this.#resolveVerification = void 0;
         resolve?.(verificationLevels);
+    }
+
+    #stopVerificationRunner() {
+        if (this.#verifyRunner !== void 0)
+            system.clearRun(this.#verifyRunner);
+        this.#verifyRunner = void 0;
+        this.#verification = void 0;
     }
 
     initVerification() {
@@ -127,31 +163,88 @@ export class StructureVerifier {
     
     *verifyBlocks(shouldRender) {
         const bounds = this.instance.getActiveBounds();
+        this.#origin = this.instance.toGlobalCoords(ORIGIN);
+        this.#skippedChunks = new SkippedChunkTracker();
         const location = new Vector();
         for (let y = bounds.min.y; y < bounds.max.y; y++) {
-            for (let z = bounds.min.z; z < bounds.max.z; z++) {
-                for (let x = bounds.min.x; x < bounds.max.x; x++) {
-                    this.verifyBlock(location.set(x, y, z), shouldRender);
-                }
-                yield void 0;
-            }
+            this.#skippedChunks.startLayer();
+            for (let z = bounds.min.z; z < bounds.max.z; z++)
+                yield* this.#verifyBlockRow(location, bounds, y, z, shouldRender);
         }
         this.isVerificationComplete = true;
         this.#completeVerification();
+    }
+
+    *#verifyBlockRow(location, bounds, y, z, shouldRender) {
+        for (let x = bounds.min.x; x < bounds.max.x;) {
+            const spanStartX = x;
+            x = this.#verifyChunkSpan(location, bounds, x, y, z, shouldRender);
+            this.#blockBudget.spend(x - spanStartX);
+            if (this.#blockBudget.isExhausted())
+                yield void 0;
+        }
+    }
+
+    #verifyChunkSpan(location, bounds, startX, y, z, shouldRender) {
+        const chunkKey = this.#chunkKeyOf(startX, z);
+        const endX = Math.min(this.#chunkEndX(startX), bounds.max.x);
+        if (this.#skippedChunks.isSkipped(chunkKey))
+            this.#skipBlocks(location, startX, endX, y, z);
+        else
+            this.#verifyBlocksInChunk(location, chunkKey, startX, endX, y, z, shouldRender);
+        return endX;
+    }
+
+    #verifyBlocksInChunk(location, chunkKey, startX, endX, y, z, shouldRender) {
+        let x = startX;
+        try {
+            for (; x < endX; x++)
+                this.verifyBlock(location.set(x, y, z), shouldRender);
+        } catch (error) {
+            if (!this.#skippedChunks.trackError(error, chunkKey))
+                throw error;
+            this.#skipBlocks(location, x, endX, y, z);
+        }
+    }
+
+    #skipBlocks(location, startX, endX, y, z) {
+        for (let x = startX; x < endX; x++)
+            this.blockVerificationLevels.set(location.set(x, y, z), BlockVerificationLevel.Skipped);
+    }
+
+    #chunkKeyOf(x, z) {
+        const chunkX = (x + this.#origin.x) >> CHUNK_SHIFT;
+        const chunkZ = (z + this.#origin.z) >> CHUNK_SHIFT;
+        return chunkX * CHUNK_KEY_STRIDE + chunkZ;
+    }
+
+    #chunkEndX(x) {
+        return x + CHUNK_SIZE - ((x + this.#origin.x) & CHUNK_MASK);
     }
 
     verifyBlock(location, shouldRender) {
         const globalLocation = this.instance.toGlobalCoords(location);
         const verificationLevel = this.getVerificationLevel(globalLocation);
         this.blockVerificationLevels.set(location, verificationLevel);
+        this.blockVerificationLevels.setOccluder(location, this.#isOccluder(location, verificationLevel));
         if (shouldRender && verificationLevel !== BlockVerificationLevel.Air) {
             const dimensionLocation = { dimension: this.instance.getDimension(), location: globalLocation };
             new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
         }
     }
 
+    #isOccluder(location, verificationLevel) {
+        if (verificationLevel !== BlockVerificationLevel.Missing
+            && verificationLevel !== BlockVerificationLevel.Match
+            && verificationLevel !== BlockVerificationLevel.TypeMatch)
+            return false;
+        const permutation = this.instance.getBlockPermutation(location);
+        return permutation !== void 0 && BlockModelLookup.isOpaqueCube(permutation.typeId);
+    }
+
     getVerificationLevel(globalLocation) {
-        const worldBlock = this.instance.getDimension()?.getBlock(globalLocation);
+        const dimension = this.instance.getDimension();
+        const worldBlock = dimension?.getBlock(globalLocation);
         if (!worldBlock)
             return BlockVerificationLevel.Skipped;
         const blockVerifier = new BlockVerifier(worldBlock, this.instance);

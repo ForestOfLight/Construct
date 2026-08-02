@@ -60,7 +60,7 @@ export class VerificationRenderer {
         const end = Math.min(this.#cursor + chunkSize, volume);
         for (let index = this.#cursor; index < end; index++) {
             const location = this.#locationAt(bounds, index);
-            this.#renderBlockVerificationLevel(dimension, location, verificationLevels.get(location), lifetime);
+            this.#renderBlockVerificationLevel(dimension, location, verificationLevels.get(location), lifetime, verificationLevels);
         }
         this.#cursor = end === volume ? 0 : end;
     }
@@ -98,15 +98,21 @@ export class VerificationRenderer {
         return this.instance.hasLayerSelected() || volume > maxVolume;
     }
 
-    #renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime) {
+    #renderBlockVerificationLevel(dimension, location, verificationLevel, lifetime, verificationLevels) {
         if (verificationLevel === BlockVerificationLevel.Unknown || verificationLevel === BlockVerificationLevel.Air)
             return;
         const dimensionLocation = {
             dimension: dimension,
             location: this.instance.toGlobalCoords(location)
         };
-        const targetPermutation = this.#usePerformanceRendering ? undefined : this.instance.getBlockPermutation(location);
-        const blockVerificationLevelType = this.#usePerformanceRendering ? BlockVerificationLevelPerformanceRender : BlockPreviewVerificationLevelParticleRender;
-        new blockVerificationLevelType(dimensionLocation, targetPermutation, verificationLevel, lifetime);
+        if (this.#usePerformanceRendering) {
+            new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, lifetime);
+            return;
+        }
+        const occlusionMask = verificationLevels.occlusionMaskAt(location);
+        new BlockPreviewVerificationLevelParticleRender(
+            dimensionLocation, this.instance.getBlockPermutation(location),
+            verificationLevel, lifetime, occlusionMask,
+        );
     }
 }

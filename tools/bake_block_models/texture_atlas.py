@@ -143,6 +143,24 @@ class TextureAtlas:
             image = image.transpose(_FLIP_TRANSFORMS[flip[i:i + 2]])
         return image
 
+    def is_opaque(self, name):
+        """Whether every texel of an added texture is fully opaque.
+
+        This is what decides whether a block can hide the faces of its
+        neighbors (see main.py's build_opaque_cube_ids): a full cube of glass
+        or leaves is the same shape as one of stone, and only the alpha
+        channel tells them apart. A single see-through texel is enough to
+        disqualify a texture - the face behind it would show through exactly
+        there - so this is an all-or-nothing test rather than a threshold.
+
+        An unknown name is not opaque. That direction is the safe one: the
+        cost of missing a cull is a particle that didn't need drawing, where
+        the cost of a wrong cull is a hole in the model."""
+        image = self._images.get(name)
+        if image is None:
+            return False
+        return image.getextrema()[3][0] == 255
+
     def add_image(self, name, image):
         """Inserts a texture that isn't sourced from mcmeta (e.g. the
         existing plain white fallback texture)."""
