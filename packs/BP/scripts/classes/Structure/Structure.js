@@ -62,7 +62,7 @@ export class Structure {
     // its shape - or undefined where the structure has no block. Entries are
     // interned, so every cell holding the same block state shares one object,
     // which is what lets a block's resolved model be cached against it (see
-    // BlockModelLookup).
+    // BlockModel).
     getBlock(structureLocation) {
         const index = this.#toIndex(structureLocation);
         if (index === void 0)

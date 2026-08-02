@@ -1,12 +1,12 @@
 import { Vector } from "../../lib/Vector";
-import { StructureOutliner } from "../Render/StructureOutliner";
+import { StructureOutliner } from "../Render/outline/StructureOutliner";
 import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
 import { world, system, TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
-import { VerificationRenderer } from "../Render/VerificationRenderer";
+import { BlockPreviewRenderer } from "../Render/preview/BlockPreviewRenderer";
 import { instanceCollection } from "../Instance/InstanceCollection";
 import { InstanceExistsError } from "../Errors/InstanceExistsError";
 
@@ -15,7 +15,7 @@ export class StructureInstance {
     structure = void 0;
     outliner = void 0;
     verifier = void 0;
-    verificationRenderer = void 0;
+    previewRenderer = void 0;
     materials = void 0;
     flexMovingPlayerId = void 0;
 
@@ -35,7 +35,7 @@ export class StructureInstance {
         delete this.structure;
         delete this.outliner;
         delete this.verifier;
-        delete this.verificationRenderer;
+        delete this.previewRenderer;
         delete this.materials;
     }
 
@@ -46,13 +46,13 @@ export class StructureInstance {
             this.outliner = new StructureOutliner(this);
         if (!this.verifier)
             this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled });
-        if (!this.verificationRenderer)
-            this.verificationRenderer = new VerificationRenderer(this);
+        if (!this.previewRenderer)
+            this.previewRenderer = new BlockPreviewRenderer(this);
         if (!this.materials)
             this.materials = new StructureMaterials(this);
         this.outliner.refresh();
         this.verifier.refresh();
-        this.verificationRenderer.refresh();
+        this.previewRenderer.refresh();
         this.materials.refresh();
     }
 
@@ -231,7 +231,7 @@ export class StructureInstance {
     setVerifierEnabled(enable) {
         this.options.setVerifierEnabled(enable);
         this.verifier.refresh();
-        this.verificationRenderer.refresh();
+        this.previewRenderer.refresh();
     }
 
     setVerifierDistance(distance) {
@@ -242,13 +242,13 @@ export class StructureInstance {
         } else {
             this.options.verifier.particleLifetime = 10;
         }
-        this.verificationRenderer.refresh();
+        this.previewRenderer.refresh();
     }
 
     setVerifierRefreshSeconds(seconds) {
         this.options.setVerifierRefreshSeconds(seconds);
         this.verifier.refresh();
-        this.verificationRenderer.refresh();
+        this.previewRenderer.refresh();
     }
 
     setRenderMode(mode) {

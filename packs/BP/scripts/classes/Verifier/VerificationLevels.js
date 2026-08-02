@@ -32,7 +32,7 @@ const OPAQUE_SHIFT = 6;
 // incorrect block's overlay, or the placeholder cube standing in for a block
 // the pipeline could not resolve. Judged per block state rather than per
 // block id, so a slab, a stair or a closed door offers the sides it really
-// does seal (see BlockModelLookup.getSideMasks).
+// does seal (see BlockModel.sideMasksOf).
 //
 // The two are independent, not nested. A stone block is opaque on all six
 // sides and a marker on none; an overlay is the reverse. Deliberately NOT
@@ -42,6 +42,12 @@ const OPAQUE_SHIFT = 6;
 // lose the very overlay marking it wrong.
 export function packCellFlags(sideMasks) {
     return sideMasks & ((SIDE_MASK << OPAQUE_SHIFT) | SIDE_MASK);
+}
+
+// The other end of the same packing, for whoever derives the two masks - see
+// BlockModel.sideMasksOf.
+export function packSideMasks(markerMask, opaqueMask) {
+    return (markerMask & SIDE_MASK) | ((opaqueMask & SIDE_MASK) << OPAQUE_SHIFT);
 }
 
 // The two halves of what occlusionMaskAt returns, packed the same way round

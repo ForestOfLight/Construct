@@ -1,9 +1,9 @@
 import { BlockVerifier } from "./BlockVerifier";
 import { packCellFlags, VerificationLevels } from "./VerificationLevels";
-import { showsBlockPreview } from "../Enums/RenderMode";
+import { renderProfileOf } from "../Enums/RenderMode";
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { BlockVerificationLevelPerformanceRender } from "../Render/PerformanceRender/BlockVerificationLevelPerformanceRender";
-import { BlockModelLookup } from "../Render/BlockModelLookup";
+import { drawExpiringDebugBox } from "../Render/preview/ExpiringDebugBox";
+import { blockModelResolver } from "../Render/model/BlockModelResolver";
 import { system, TicksPerSecond } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { SkippedChunkTracker } from "./SkippedChunkTracker";
@@ -186,7 +186,7 @@ export class StructureVerifier {
     // the same way the default mode would.
     #pullShowBlockPreview() {
         this.#showBlockPreview = this.isStandalone
-            || showsBlockPreview(this.instance.options.renderMode);
+            || renderProfileOf(this.instance.options.renderMode).blockPreview;
     }
 
     #recycleVerificationLevels() {
@@ -263,10 +263,8 @@ export class StructureVerifier {
         const verificationLevel = this.getVerificationLevel(globalLocation);
         this.blockVerificationLevels.set(location, verificationLevel);
         this.blockVerificationLevels.setCellFlags(location, this.#cellFlags(location, verificationLevel));
-        if (shouldRender && verificationLevel !== BlockVerificationLevel.Air) {
-            const dimensionLocation = { dimension: this.instance.getDimension(), location: globalLocation };
-            new BlockVerificationLevelPerformanceRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
-        }
+        if (shouldRender && verificationLevel !== BlockVerificationLevel.Air)
+            drawExpiringDebugBox(this.instance.getDimension(), globalLocation, verificationLevel, this.particleLifetime / TicksPerSecond);
     }
 
     // Re-verify one cell outside the sweep, in response to a block change a
@@ -311,7 +309,7 @@ export class StructureVerifier {
     // it - Missing, which draws that block as the preview, and Match, where
     // the identical block is already placed. Reading it there is what keeps
     // this cheap: the palette entry is interned and its shape resolved once
-    // per distinct block state (see BlockModelLookup.getSideMasks).
+    // per distinct block state (see BlockModel.sideMasksOf).
     //
     // An incorrect block of either kind answers with the overlay instead,
     // because that plain cube is the only thing we know is drawn there.
@@ -322,7 +320,7 @@ export class StructureVerifier {
         switch (verificationLevel) {
             case BlockVerificationLevel.NoMatch:
             case BlockVerificationLevel.TypeMatch:
-                return packCellFlags(BlockModelLookup.getOverlaySideMasks());
+                return packCellFlags(blockModelResolver.overlaySideMasks());
             case BlockVerificationLevel.Match:
                 return this.#structureCellFlags(location);
             case BlockVerificationLevel.Missing:
@@ -341,7 +339,7 @@ export class StructureVerifier {
         const structBlock = this.instance.getBlock(location);
         if (structBlock === void 0)
             return 0;
-        return packCellFlags(BlockModelLookup.getSideMasks(structBlock));
+        return packCellFlags(blockModelResolver.sideMasksOf(structBlock));
     }
 
     getVerificationLevel(globalLocation) {

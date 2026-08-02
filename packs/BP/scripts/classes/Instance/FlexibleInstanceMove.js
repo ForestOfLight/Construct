@@ -1,5 +1,5 @@
 import { InputPermissionCategory, world, system } from "@minecraft/server";
-import { OutlineParticleRender } from "../Render/ParticleRender/OutlineParticleRender";
+import { ParticleOutlineRenderer } from "../Render/outline/ParticleOutlineRenderer";
 import { MENU_ITEM } from "../../consts";
 import { Vector } from "../../lib/Vector";
 import { PlayerMovement } from "../PlayerMovement";
@@ -41,8 +41,8 @@ export class FlexibleInstanceMove {
         this.instance.disable();
         const bounds = this.instance.getBounds();
         const maxWorldLocation = this.currentInstanceLocation.add(Vector.from(bounds.max));
-        this.outliner = new OutlineParticleRender(this.instance.getDimension(), this.currentInstanceLocation, maxWorldLocation, 1, 1);
-        this.outliner.startDraw();
+        this.outliner = new ParticleOutlineRenderer(this.instance.getDimension(), this.currentInstanceLocation, maxWorldLocation, 1, 1);
+        this.outliner.start();
     }
 
     prepPlayerForMovement() {
@@ -92,7 +92,7 @@ export class FlexibleInstanceMove {
             minWorldLocation.y + bounds.max.y,
             minWorldLocation.z + bounds.max.z
         );
-        this.outliner.setVertices(this.instance.getDimension(), minWorldLocation, maxWorldLocation);
+        this.outliner.setBounds(this.instance.getDimension(), minWorldLocation, maxWorldLocation);
     }
 
     onPlayerUseItem(event) {
@@ -108,7 +108,7 @@ export class FlexibleInstanceMove {
 
     finish() {
         system.clearRun(this.runner);
-        this.outliner.stopDraw();
+        this.outliner.stop();
         this.outliner = void 0;
         this.instance.move(this.instance.getDimension().id, this.currentInstanceLocation);
         this.instance.enable();

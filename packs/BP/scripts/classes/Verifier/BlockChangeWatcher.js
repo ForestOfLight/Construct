@@ -78,11 +78,11 @@ export class BlockChangeWatcher {
     patchCell(dimensionId, worldLocation) {
         const instances = instanceCollection.getInstancesAt(dimensionId, worldLocation);
         for (const instance of instances) {
-            if (!instance.verifier || !instance.verificationRenderer)
+            if (!instance.verifier || !instance.previewRenderer)
                 continue;
             const location = instance.toStructureCoords(worldLocation);
             instance.verifier.patchBlock(location);
-            instance.verificationRenderer.renderBlockAt(location);
+            instance.previewRenderer.renderBlockAt(location);
         }
     }
 }

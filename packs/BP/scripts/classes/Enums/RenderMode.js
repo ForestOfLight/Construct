@@ -55,22 +55,6 @@ const PROFILES = Object.freeze({
 
 // Modes are read back off disk, so an unrecognized one falls back to the
 // default rather than rendering nothing at all.
-function profileOf(mode) {
+export function renderProfileOf(mode) {
     return PROFILES[mode] ?? PROFILES[RenderMode.Default];
-}
-
-export function usesDebugMarkers(mode) {
-    return profileOf(mode).debugMarkers;
-}
-
-export function usesParticleOverlays(mode) {
-    return profileOf(mode).particleOverlays;
-}
-
-export function showsBlockPreview(mode) {
-    return profileOf(mode).blockPreview;
-}
-
-export function usesHybridOutline(mode) {
-    return profileOf(mode).hybridOutline;
 }
