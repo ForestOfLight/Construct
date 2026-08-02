@@ -234,12 +234,12 @@ export class StructureVerifier {
     }
 
     // What this cell offers its neighbors to hide their faces behind: the
-    // sides it covers completely, and whether what covers them is opaque.
+    // sides it covers completely, and which of those it covers opaquely.
     //
     // Read off the STRUCTURE's block rather than the world's, which is what
     // keeps this cheap: the permutation is already cached and interned, and
     // its shape is resolved once per distinct permutation and remembered (see
-    // BlockModelLookup.getCoverMask). The three levels below are the ones
+    // BlockModelLookup.getCoverMasks). The three levels below are the ones
     // where that answer also describes what will actually be standing there -
     // Missing draws the structure's own block as the preview, Match has the
     // identical block already placed, and TypeMatch has the same block id in a
@@ -253,13 +253,10 @@ export class StructureVerifier {
             && verificationLevel !== BlockVerificationLevel.Match
             && verificationLevel !== BlockVerificationLevel.TypeMatch)
             return 0;
-        const permutation = this.instance.getBlockPermutation(location);
-        if (permutation === void 0)
+        const structBlock = this.instance.getBlock(location);
+        if (structBlock === void 0)
             return 0;
-        return packCellFlags(
-            BlockModelLookup.getCoverMask(permutation),
-            BlockModelLookup.isOpaqueCube(permutation.typeId),
-        );
+        return packCellFlags(BlockModelLookup.getCoverMasks(structBlock));
     }
 
     getVerificationLevel(globalLocation) {

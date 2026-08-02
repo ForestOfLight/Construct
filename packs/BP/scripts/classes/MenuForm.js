@@ -5,6 +5,7 @@ import { InstanceForm } from './Instance/InstanceForm';
 import { BuilderForm } from './Builder/BuilderForm';
 import { InstanceExistsError } from './Errors/InstanceExistsError';
 import { StructureNotFoundError } from './Errors/StructureNotFoundError';
+import { getDefaultRenderMode } from '../options/defaultRenderMode';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
@@ -65,7 +66,7 @@ export class MenuForm {
             if (!structureId)
                 return void 0;
             try {
-                instanceCollection.add(instanceName, structureId);
+                instanceCollection.add(instanceName, structureId, { renderMode: getDefaultRenderMode(this.player.id) });
             } catch (error) {
                 if (error instanceof InstanceExistsError || error instanceof StructureNotFoundError) {
                     error.sendTo(this.player);

@@ -82,10 +82,10 @@ function onPlayerInteractWithBlock(event) {
 
 function processEasyPlace(player) {
     if (!player || !isHoldingActionItem(player)) return;
-    const structureBlock = Raycaster.getTargetedStructureBlock(player, { isFirst: true });
-    if (!structureBlock)
+    const hit = Raycaster.getTargetedStructureBlock(player, { isFirst: true });
+    if (!hit)
         return;
-    const worldBlock = player.dimension.getBlock(structureBlock.location);
+    const worldBlock = player.dimension.getBlock(hit.location);
     if (!worldBlock)
         return;
     if (locationsPlacedLastTick.has(JSON.stringify(worldBlock.location)))
@@ -94,7 +94,7 @@ function processEasyPlace(player) {
     system.runTimeout(() => {
         locationsPlacedLastTick.delete(JSON.stringify(worldBlock.location));
     }, 2);
-    tryPlaceBlock(player, worldBlock, structureBlock.permutation);
+    tryPlaceBlock(player, worldBlock, hit.block);
 }
 
 function preventAction(event, player) {
@@ -117,12 +117,12 @@ function isHoldingActionItem(player) {
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
     if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock)) return;
-    structureBlock = tryConvertBannedToValidBlock(structureBlock);
+    let permutation = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.Creative) {
-        placeBlock(player, worldBlock, structureBlock);
+        placeBlock(player, worldBlock, permutation);
     } else if (player.getGameMode() === GameMode.Survival) {
-        structureBlock = tryConvertToDefaultState(structureBlock);
-        tryPlaceBlockSurvival(player, worldBlock, structureBlock);
+        permutation = tryConvertToDefaultState(permutation);
+        tryPlaceBlockSurvival(player, worldBlock, permutation);
     }
 }
 
@@ -133,7 +133,7 @@ function locationIsPlaceable(player, worldBlock) {
 export function isBannedBlock(player, structureBlock) {
     if (!structureBlock)
         return true;
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const blockId = structureBlock.typeId.replace('minecraft:', '');
     if (bannedBlocks.includes(blockId))
         return true;
     if (bannedDimensionBlocks[player.dimension.id.replace('minecraft:', '')]?.includes(blockId))
@@ -141,44 +141,49 @@ export function isBannedBlock(player, structureBlock) {
     const allowedStates = whitelistedBlockStates[blockId];
     if (allowedStates) {
         for (const [stateKey, stateValue] of Object.entries(allowedStates)) {
-            if (structureBlock.getState(stateKey) !== stateValue)
+            if (structureBlock.states[stateKey] !== stateValue)
                 return true;
         }
     }
     return false;
 }
 
+// Takes the structure's block (see Structure.#intern) and gives back a real
+// BlockPermutation, which is what everything downstream of here places. The
+// waterlogging that decides the bubble column's replacement lives on the
+// structure's block rather than in the permutation, so this is the last step
+// that can read it.
 function tryConvertBannedToValidBlock(structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const blockId = structureBlock.typeId.replace('minecraft:', '');
     if (Object.keys(bannedToValidBlockMap).includes(blockId))
-        return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.getAllStates());
+        return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.states);
     if (blockId === "bubble_column" && structureBlock.isWaterlogged)
         return BlockPermutation.resolve('minecraft:water');
-    return structureBlock;
+    return structureBlock.permutation;
 }
 
-function tryConvertToDefaultState(structureBlock) {
+function tryConvertToDefaultState(permutation) {
     const newStates = {};
-    for (const [stateKey, stateValue] of Object.entries(structureBlock.getAllStates())) {
+    for (const [stateKey, stateValue] of Object.entries(permutation.getAllStates())) {
         if (resetToBlockStates[stateKey] !== void 0 && stateValue !== resetToBlockStates[stateKey])
             newStates[stateKey] = resetToBlockStates[stateKey];
         else
             newStates[stateKey] = stateValue;
     }
-    return BlockPermutation.resolve(structureBlock.type.id, newStates);
+    return BlockPermutation.resolve(permutation.type.id, newStates);
 }
 
-function tryPlaceBlockSurvival(player, block, structureBlock) {
-    const placeableItemStack = getPlaceableItemStack(structureBlock);
+function tryPlaceBlockSurvival(player, block, permutation) {
+    const placeableItemStack = getPlaceableItemStack(permutation);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse)
-        placeBlock(player, block, structureBlock, itemSlotToUse);
+        placeBlock(player, block, permutation, itemSlotToUse);
 }
 
-function getPlaceableItemStack(structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
+function getPlaceableItemStack(permutation) {
+    const blockId = permutation.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
-    return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
+    return newItemId ? new ItemStack(newItemId) : permutation.getItemStack();
 }
 
 function isBlockInsidePlayer(player, worldBlock) {

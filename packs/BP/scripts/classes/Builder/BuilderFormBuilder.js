@@ -6,10 +6,10 @@ export class BuilderFormBuilder {
     static buildBuilderOptions(player) {
         const form = new ModalFormData()
             .title(MenuFormBuilder.menuTitle);
-        for (const optionId of BuilderOptions.getOptionIds()) {
-            const option = BuilderOptions.get(optionId);
-            form.toggle(option.displayName, { defaultValue: option.isEnabled(player.id), tooltip: option.description });
-        }
+        // Each option adds its own control, so the form stays one control per
+        // option in order and BuilderForm can keep reading formValues by index.
+        for (const optionId of BuilderOptions.getOptionIds())
+            BuilderOptions.get(optionId).addControlTo(form, player.id);
         form.submitButton({ translate: "construct.menu.submit" });
         return form;
     }

@@ -23,12 +23,22 @@ export class InstanceOptions extends Option {
         return options.structureId;
     }
 
-    constructor(instanceName, structureId) {
+    // defaults hold the creating player's preferences. They are applied after
+    // load so that the class defaults above are what they replace, and an
+    // instance that already has saved options is never touched - load only
+    // finds something when this name has been used before.
+    constructor(instanceName, structureId, defaults = {}) {
         super();
         this.instanceName = instanceName;
         this.structureId = structureId;
         this.load();
+        this.#applyDefaults(defaults);
         this.save();
+    }
+
+    #applyDefaults({ renderMode }) {
+        if (renderMode !== void 0)
+            this.renderMode = renderMode;
     }
 
     save() {

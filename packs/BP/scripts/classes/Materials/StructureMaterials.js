@@ -55,7 +55,7 @@ class StructureMaterials {
 
     *populateAll() {
         for (let layer = 0; layer < this.instance.getMaxLayer(); layer++) {
-            for (const block of this.instance.getLayerBlockPermutations(layer)) {
+            for (const block of this.instance.getLayerBlocks(layer)) {
                 this.countBlock(block)
                 yield void 0;
             }
@@ -68,7 +68,7 @@ class StructureMaterials {
             for (let z = bounds.min.z; z < bounds.max.z; z++) {
                 for (let x = bounds.min.x; x < bounds.max.x; x++) {
                     const location = new Vector(x, y, z);
-                    const block = this.instance.getBlockPermutation(location);
+                    const block = this.instance.getBlock(location);
                     if (!block) continue;
                     this.countBlock(block);
                     yield void 0;
@@ -78,7 +78,7 @@ class StructureMaterials {
     }
 
     countBlock(block) {
-        const itemStack = block?.getItemStack();
+        const itemStack = block?.permutation.getItemStack();
         const typeId = itemStack?.typeId;
         if (!typeId) return;
         if (!this.#materials[typeId])

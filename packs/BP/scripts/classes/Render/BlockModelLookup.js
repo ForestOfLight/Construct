@@ -1,4 +1,4 @@
-import { blockKeySpecs, blockModels, blockOpaqueCubes } from "../../blockModels";
+import { blockKeySpecs, blockModels } from "../../blockModels";
 import { faceAt } from "./FaceTable";
 import { whiteUvRect } from "../../blockAtlas";
 
@@ -15,13 +15,19 @@ import { whiteUvRect } from "../../blockAtlas";
 // table indexes it (see CULL_OFFSETS in ../Verifier/VerificationLevels.js).
 // It follows the face's real outward normal, not `facing` - the top face is
 // pointed downward here and still culled by the block above.
+//
+// `covers` says the face fills that whole side of the block, so a neighbor
+// pressed against it has nothing showing there. Deliberately without the
+// `opaque` a baked face would carry beside it: these cubes are drawn
+// see-through, so they hide another placeholder's faces but never a real
+// block's.
 export const PLAIN_CUBE_FACES = [
-    { center: [8, 16, 8], width: 16, height: 16, facing: [0, -1, 0], roll: 180, tintindex: -1, uv: whiteUvRect, cull: 1 },
-    { center: [8, 0, 8], width: 16, height: 16, facing: [0, 1, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 0 },
-    { center: [8, 8, 0], width: 16, height: 16, facing: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 2 },
-    { center: [8, 8, 16], width: 16, height: 16, facing: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 3 },
-    { center: [16, 8, 8], width: 16, height: 16, facing: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 5 },
-    { center: [0, 8, 8], width: 16, height: 16, facing: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 4 },
+    { center: [8, 16, 8], width: 16, height: 16, facing: [0, -1, 0], roll: 180, tintindex: -1, uv: whiteUvRect, cull: 1, covers: true },
+    { center: [8, 0, 8], width: 16, height: 16, facing: [0, 1, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 0, covers: true },
+    { center: [8, 8, 0], width: 16, height: 16, facing: [0, 0, -1], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 2, covers: true },
+    { center: [8, 8, 16], width: 16, height: 16, facing: [0, 0, 1], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 3, covers: true },
+    { center: [16, 8, 8], width: 16, height: 16, facing: [1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 5, covers: true },
+    { center: [0, 8, 8], width: 16, height: 16, facing: [-1, 0, 0], roll: 0, tintindex: -1, uv: whiteUvRect, cull: 4, covers: true },
 ];
 
 // Mirrors filters/fetch_block_models/main.py's WHITE_CUBE_FACES: used when a
@@ -39,7 +45,7 @@ const WATER_BLOCK_IDS = new Set(["minecraft:water", "minecraft:flowing_water"]);
 // The state a waterlogged block's water is drawn as. Bedrock doesn't keep
 // waterlogging in the block's permutation the way Java keeps a `waterlogged`
 // property - the water is a second liquid layer the structure reports
-// separately (see Structure.getBlockPermutation) - so no blockModels entry
+// separately (see Structure.getBlock) - so no blockModels entry
 // for a stair or a fence can carry it, and there is nothing for the pipeline
 // to bake. It is always a full source block, hence depth 0.
 //
@@ -50,94 +56,99 @@ const WATER_BLOCK_IDS = new Set(["minecraft:water", "minecraft:flowing_water"]);
 const WATERLOGGED_WATER_STATE = "minecraft:water[0|0]";
 
 let waterFaces;
-let opaqueCubeIds;
 
-// Everything derived from a permutation that doesn't depend on where the
-// block stands, worked out once per distinct permutation instead of once per
-// block per render pass. Structure interns its permutations (see
-// Structure.#intern), so the same stair state anywhere in a build is the same
-// object and hits the same entry; a WeakMap means a structure that goes away
-// takes its entries with it.
+// Everything derived from a block that doesn't depend on where it stands,
+// worked out once per distinct block state instead of once per block per
+// render pass. Structure interns its palette entries (see Structure.#intern),
+// so the same stair state anywhere in a build is the same object and hits the
+// same entry; a WeakMap means a structure that goes away takes its entries
+// with it.
 //
 // Resolving used to run per block per pass: two calls across the native
 // boundary for the id and the states, a state key built by string
 // concatenation, a hash lookup, and a fresh array from mapping the refs. The
 // verifier now needs a block's shape as well as the renderer, so doing that
 // twice per block was not an option.
-const resolvedByPermutation = new WeakMap();
+const resolvedByBlock = new WeakMap();
 
-// A face covers the side of the block it sits on when it lies flat against
-// that side (which is what having a cull direction at all means - see
-// _cull_direction in tools/bake_block_models/main.py) AND spans the whole
-// 16x16 of it. Anything smaller leaves a gap around itself.
-const FULL_FACE_SIZE = 16;
+// Where the opaque half of the packed cover masks starts. Both halves are
+// six bits, one per entry of CULL_OFFSETS, and they ride home in one number
+// rather than an object allocated per block state resolved.
+const OPAQUE_SHIFT = 6;
 
 export class BlockModelLookup {
-    // Whether a block of this type fills its whole cube with nothing
-    // see-through, and so hides any face pressed flat against it. The baked
-    // list only holds ids every one of whose states qualifies (see
-    // build_opaque_cube_ids in tools/bake_block_models/main.py), which is
-    // what lets this be a type-id lookup rather than a model lookup - it is
-    // asked once per neighbor of every block drawn.
-    static isOpaqueCube(blockTypeId) {
-        if (!opaqueCubeIds)
-            opaqueCubeIds = new Set(blockOpaqueCubes);
-        return opaqueCubeIds.has(blockTypeId);
+    // `block` here and below is a structure's palette entry (see
+    // Structure.#intern). A bare BlockPermutation still works - both readers
+    // below fall back to the API - just slower.
+    static getFaces(block) {
+        return BlockModelLookup.#resolve(block).faces;
     }
 
-    static getFaces(permutation) {
-        return BlockModelLookup.#resolve(permutation).faces;
-    }
-
-    // Which of the block's six sides it covers completely, as a bit per
-    // entry of CULL_OFFSETS (see ../Verifier/VerificationLevels.js). This is
-    // what lets a neighbor hide a face without being opaque itself: a
-    // see-through placeholder cube has nothing worth showing where another
-    // block is pressed against it, whatever that block is made of.
+    // Which of the block's six sides it covers completely, as a bit per entry
+    // of CULL_OFFSETS (see ../Verifier/VerificationLevels.js), together with
+    // which of those it covers opaquely - the second six bits, OPAQUE_SHIFT
+    // up. Hand it straight to packCellFlags.
+    //
+    // Two masks because the two hide different things. An opaque side hides
+    // any face pressed against it; a merely covered one hides only another
+    // see-through placeholder face, which has nothing worth showing there
+    // anyway. The opaque half is always a subset of the cover half.
+    //
+    // Judged per block state, which is the whole point: a bottom slab seals
+    // the block below it completely even though the id "slab" says nothing,
+    // because a top slab is the same id and seals the other way.
     //
     // Counts only the block's own shape. A waterlogged block's water fills
     // the cube too, but it is a separate layer the model knows nothing about,
     // and leaving it out only ever costs a cull.
-    static getCoverMask(permutation) {
-        return BlockModelLookup.#resolve(permutation).coverMask;
+    static getCoverMasks(block) {
+        return BlockModelLookup.#resolve(block).coverMasks;
     }
 
-    static #resolve(permutation) {
-        const cached = resolvedByPermutation.get(permutation);
+    static #resolve(block) {
+        const cached = resolvedByBlock.get(block);
         if (cached !== void 0)
             return cached;
-        const faces = BlockModelLookup.#lookupFaces(permutation);
-        const resolved = { faces, coverMask: BlockModelLookup.#coverMaskOf(faces) };
-        resolvedByPermutation.set(permutation, resolved);
+        const faces = BlockModelLookup.#lookupFaces(block);
+        const resolved = { faces, coverMasks: BlockModelLookup.#coverMasksOf(faces) };
+        resolvedByBlock.set(block, resolved);
         return resolved;
     }
 
-    static #lookupFaces(permutation) {
-        // Structure caches both of these onto the permutation when it interns
-        // it; reading them back beats `type.id` and `getAllStates()`, which
-        // are calls across the native boundary. A permutation that never went
-        // through Structure still works, just slower.
-        const blockId = permutation.typeId ?? permutation.type.id;
+    static #lookupFaces(block) {
+        // A palette entry carries both of these already; reading them back
+        // beats `type.id` and `getAllStates()`, which are calls across the
+        // native boundary.
+        const blockId = block.typeId ?? block.type.id;
         const spec = blockKeySpecs[blockId];
         // No spec at all means the block id is absent from the Bedrock<->Java
         // mapping the pipeline was built from, so there is no model to find.
         if (spec === void 0)
             return UNKNOWN_CUBE_FACES;
-        const states = permutation.states ?? permutation.getAllStates();
+        const states = block.states ?? block.getAllStates();
         const refs = BlockModelLookup.#lookup(blockId, spec, states);
         if (!refs)
             return UNKNOWN_CUBE_FACES;
         return refs.map(faceAt);
     }
 
-    static #coverMaskOf(faces) {
-        let mask = 0;
+    // Both facts are baked onto the face (see mark_side_cover in
+    // tools/bake_block_models/main.py), so this is a bit-or over the faces
+    // rather than a geometry test - the bake already knows the face's size
+    // and, from the atlas, whether its texture has anything see-through in
+    // it, which nothing in the game can see.
+    static #coverMasksOf(faces) {
+        let cover = 0;
+        let opaque = 0;
         for (let i = 0; i < faces.length; i++) {
             const face = faces[i];
-            if (face.cull !== void 0 && face.width === FULL_FACE_SIZE && face.height === FULL_FACE_SIZE)
-                mask |= 1 << face.cull;
+            if (!face.covers)
+                continue;
+            cover |= 1 << face.cull;
+            if (face.opaque)
+                opaque |= 1 << face.cull;
         }
-        return mask;
+        return cover | (opaque << OPAQUE_SHIFT);
     }
 
     // The water filling a waterlogged block, as its own set of faces to draw
@@ -153,8 +164,8 @@ export class BlockModelLookup {
         return waterFaces;
     }
 
-    static isWater(permutation) {
-        return WATER_BLOCK_IDS.has(permutation.type.id);
+    static isWater(block) {
+        return WATER_BLOCK_IDS.has(block.typeId ?? block.type.id);
     }
 
     // blockModels is keyed on only the properties that actually choose between

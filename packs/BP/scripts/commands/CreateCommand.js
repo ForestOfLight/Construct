@@ -3,6 +3,7 @@ import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, sy
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
 import { StructureNotFoundError } from '../classes/Errors/StructureNotFoundError';
+import { getDefaultRenderMode } from '../options/defaultRenderMode';
 
 export class CreateCommand extends Command {
     constructor() {
@@ -34,7 +35,10 @@ export class CreateCommand extends Command {
     }
 
     addStructure(origin, instanceName, structureId) {
-        instanceCollection.add(instanceName, structureId);
+        // A command block or the console has no builder behind it, so those
+        // fall back to the plain default rather than anyone's preference.
+        const playerId = origin.getType() === 'Player' ? origin.getSource().id : void 0;
+        instanceCollection.add(instanceName, structureId, { renderMode: getDefaultRenderMode(playerId) });
         origin.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
     }
 

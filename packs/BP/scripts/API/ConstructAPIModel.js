@@ -53,7 +53,8 @@ export const BuilderModel = PROTO.Object({
     easyPlace: PROTO.Boolean,
     fastEasyPlace: PROTO.Boolean,
     materialGrabber: PROTO.Boolean,
-    materialInstanceName: PROTO.String
+    materialInstanceName: PROTO.String,
+    defaultRenderMode: PROTO.String
 });
 
 export const BuilderIdParameterModel = PROTO.Object({

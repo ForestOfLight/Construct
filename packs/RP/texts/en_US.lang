@@ -92,6 +92,7 @@ construct.blockinfo.waterlogged=§7isWaterlogged: §3true
 ## Builder Options
 construct.option.enabled= is now enabled!
 construct.option.disabled= is now disabled.
+construct.option.setto= is now set to §f
 construct.option.easyplace.name=Easy Place
 construct.option.easyplace.description=Always place the correct structure block.
 construct.option.easyplace.howto=Hold the Easy Place item in your offhand and place blocks in an instance to have them be corrected automatically.
@@ -105,6 +106,8 @@ construct.option.materialgrabber.howto=Interact with inventories using the Mater
 construct.option.materialgrabber.grabbed.zero=§7Grabbed 0 items.
 construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
+construct.option.defaultrendermode.name=Default Render Mode
+construct.option.defaultrendermode.description=The render mode given to instances you create. Existing instances keep the mode set in their own settings.
 
 ## Commands
 construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.

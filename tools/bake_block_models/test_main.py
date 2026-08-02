@@ -10,7 +10,12 @@ from main import (
     _cull_direction,
     _derive_roll,
     _facing,
-    build_opaque_cube_ids,
+    mark_side_cover,
+    _covers_side,
+    _cull_column,
+    CULL_MASK,
+    COVERS_SIDE,
+    OPAQUE_SIDE,
     WHITE_TEXTURE,
     inset_by_half_texel,
     REDSTONE_POWER_TINTS,
@@ -1207,9 +1212,11 @@ class CullDirectionTest(unittest.TestCase):
         self.assertNotEqual(result["a"][0], result["b"][0])
 
 
-class OpaqueCubeIdsTest(unittest.TestCase):
-    """Only a block that fills its whole cube with nothing see-through may
-    hide a neighbor's faces."""
+class SideCoverTest(unittest.TestCase):
+    """What each face offers the neighbor pressed against it: whether it
+    covers that side of the block at all, and whether it does so opaquely.
+    Judged one face at a time, so a shape that only seals some of its sides
+    still gets to hide a neighbor's faces on those."""
 
     class FakeOpacityAtlas:
         def __init__(self, transparent=()):
@@ -1224,59 +1231,101 @@ class OpaqueCubeIdsTest(unittest.TestCase):
             "normal": face["normal"], "texture": texture,
         }, **overrides) for face in _CUBE_FACES]
 
-    def test_a_full_cube_of_opaque_texture_qualifies(self):
-        ids = build_opaque_cube_ids(
-            {"minecraft:stone[]": self._cube()}, self.FakeOpacityAtlas(),
-        )
-        self.assertEqual(ids, ["minecraft:stone"])
+    def _mark(self, faces, atlas=None):
+        mark_side_cover({"minecraft:x[]": faces}, atlas or self.FakeOpacityAtlas())
+        return faces
 
-    def test_one_see_through_texel_anywhere_disqualifies_the_block(self):
-        ids = build_opaque_cube_ids(
-            {"minecraft:glass[]": self._cube("block/glass")},
+    def test_every_side_of_a_full_opaque_cube_covers_opaquely(self):
+        faces = self._mark(self._cube())
+        self.assertTrue(all(_covers_side(face) for face in faces))
+        self.assertTrue(all(face["opaque"] for face in faces))
+
+    def test_one_see_through_texel_anywhere_costs_the_face_its_opacity(self):
+        faces = self._mark(
+            self._cube("block/glass"),
             self.FakeOpacityAtlas(transparent={"block/glass"}),
         )
-        self.assertEqual(ids, [])
+        # still covers - a pane of glass leaves nothing of a neighbor's face
+        # visible around it, only through it
+        self.assertTrue(all(_covers_side(face) for face in faces))
+        self.assertFalse(any(face["opaque"] for face in faces))
 
-    def test_a_shape_that_does_not_fill_its_cube_does_not_qualify(self):
-        slab = self._cube()[:5]
-        ids = build_opaque_cube_ids({"minecraft:slab[]": slab}, self.FakeOpacityAtlas())
-        self.assertEqual(ids, [])
+    def test_a_slab_seals_the_side_it_covers_and_no_other(self):
+        # the whole point of judging per face: the bottom of a bottom slab
+        # seals the block below it completely, whatever the id "slab" as a
+        # whole can say
+        bottom = dict(self._cube()[1])                       # y=0, looking down
+        top = dict(self._cube()[0], center=[8, 8, 8])        # the slab's own top
+        faces = self._mark([bottom, top])
+        self.assertTrue(bottom["opaque"])       # flush on the hull
+        self.assertFalse(_covers_side(top))     # mid-block, seals nothing
+        self.assertFalse(top["opaque"])
 
-    def test_a_cube_shrunk_off_the_hull_does_not_qualify(self):
-        # six faces of the right size, but held a pixel in from every side -
-        # the gap around them is exactly what a neighbor would not cover
-        shrunk = [dict(face, center=[c - 1 for c in face["center"]]) for face in self._cube()]
-        ids = build_opaque_cube_ids({"minecraft:x[]": shrunk}, self.FakeOpacityAtlas())
-        self.assertEqual(ids, [])
+    def test_a_face_smaller_than_its_side_seals_nothing(self):
+        faces = self._mark([dict(self._cube()[0], width=8)])
+        self.assertFalse(_covers_side(faces[0]))
+        self.assertFalse(faces[0]["opaque"])
 
-    def test_an_unresolved_block_does_not_qualify(self):
+    def test_a_face_held_off_the_hull_seals_nothing(self):
+        # right size, but a pixel in - the sliver of the neighbor's face
+        # beside it stays visible
+        faces = self._mark([dict(self._cube()[0], center=[8, 15, 8])])
+        self.assertFalse(_covers_side(faces[0]))
+        self.assertFalse(faces[0]["opaque"])
+
+    def test_an_unresolved_cube_covers_but_never_opaquely(self):
         # the missing-block cube is a full cube of the white swatch, which is
-        # opaque - but it stands for "we don't know what this is", and a block
-        # we can't model can't be trusted to hide anything
-        ids = build_opaque_cube_ids(
-            {"minecraft:mystery[]": [dict(face, texture=WHITE_TEXTURE)
-                                     for face in WHITE_CUBE_FACES]},
-            self.FakeOpacityAtlas(),
+        # opaque - but it stands for "we don't know what this is" and is drawn
+        # see-through, so it may only hide another placeholder's faces
+        faces = self._mark([dict(face, texture=WHITE_TEXTURE)
+                            for face in WHITE_CUBE_FACES])
+        self.assertTrue(all(_covers_side(face) for face in faces))
+        self.assertFalse(any(face["opaque"] for face in faces))
+
+    def test_states_of_one_id_are_judged_apart(self):
+        # a top slab and a bottom slab share an id and seal opposite sides;
+        # judged as one id they would intersect to nothing
+        block_models = {
+            "minecraft:slab[top_slot_bit=0]": [self._cube()[1]],  # y=0, down
+            "minecraft:slab[top_slot_bit=1]": [self._cube()[0]],  # y=16, up
+        }
+        mark_side_cover(block_models, self.FakeOpacityAtlas())
+        for faces in block_models.values():
+            self.assertTrue(faces[0]["opaque"])
+
+    def test_it_reports_how_many_faces_came_out_opaque(self):
+        self.assertEqual(
+            mark_side_cover({"minecraft:stone[]": self._cube()},
+                            self.FakeOpacityAtlas()),
+            len(_CUBE_FACES),
         )
-        self.assertEqual(ids, [])
 
-    def test_a_block_qualifies_only_if_every_one_of_its_states_does(self):
-        # the renderer asks about a neighbor by block id alone, so one state
-        # that doesn't fill its cube has to disqualify the whole id
-        block_models = {
-            "minecraft:water[liquid_depth=0]": self._cube("block/water_still"),
-            "minecraft:water[liquid_depth=1]": self._cube("block/water_still")[:5],
-        }
-        ids = build_opaque_cube_ids(block_models, self.FakeOpacityAtlas())
-        self.assertEqual(ids, [])
 
-    def test_ids_come_out_sorted_so_the_generated_file_does_not_churn(self):
-        block_models = {
-            "minecraft:stone[]": self._cube(),
-            "minecraft:andesite[]": self._cube(),
-        }
-        ids = build_opaque_cube_ids(block_models, self.FakeOpacityAtlas())
-        self.assertEqual(ids, ["minecraft:andesite", "minecraft:stone"])
+class CullColumnTest(unittest.TestCase):
+    """The cull column carries the direction plus the two cover bits, since
+    neither bit can be set on a face without a cull direction to begin with."""
+
+    def test_a_face_no_neighbor_can_hide_writes_the_sentinel(self):
+        self.assertEqual(_cull_column({}), NO_CULL)
+
+    def test_the_direction_survives_the_flags(self):
+        column = _cull_column({"cull": 5, "covers": True, "opaque": True})
+        self.assertEqual(column & CULL_MASK, 5)
+        self.assertTrue(column & COVERS_SIDE)
+        self.assertTrue(column & OPAQUE_SIDE)
+
+    def test_a_cullable_face_that_covers_nothing_carries_neither_flag(self):
+        column = _cull_column({"cull": 2})
+        self.assertEqual(column, 2)
+
+    def test_every_direction_stays_distinguishable_from_the_sentinel(self):
+        for cull in range(len(_CULL_DIRECTIONS)):
+            for covers in (False, True):
+                for opaque in (False, covers):
+                    column = _cull_column(
+                        {"cull": cull, "covers": covers, "opaque": opaque})
+                    self.assertNotEqual(column, NO_CULL)
+                    self.assertEqual(column & CULL_MASK, cull)
 
 
 class HangingSignRekeyTest(unittest.TestCase):

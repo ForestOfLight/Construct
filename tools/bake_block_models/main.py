@@ -1027,10 +1027,16 @@ def build_face_types_and_refs(block_models):
             # up is published pointing down, and reading the cull direction
             # off that would have every top face culled by the block below.
             cull = _cull_direction(face["center"], face["normal"])
+            # what this face offers the neighbor on the other side of it. The
+            # geometry half is settled here; the opacity half was settled by
+            # mark_side_cover, back when the face still named its texture.
+            covers = _covers_side(face)
+            opaque = covers and face.get("opaque", False)
             key = (
                 tuple(face["center"]), face["width"], face["height"], tuple(facing),
                 face["roll"], face["tintindex"],
                 uv["x"], uv["y"], uv["w"], uv["h"], missing, cull,
+                covers, opaque,
             )
             if key not in face_type_index:
                 face_type_index[key] = len(face_types)
@@ -1052,6 +1058,13 @@ def build_face_types_and_refs(block_models):
                 # field being undefined
                 if cull is not None:
                     descriptor["cull"] = cull
+                # only ever set on a face that has a cull direction, since
+                # covering a side means lying flat on it, which is the same
+                # condition
+                if covers:
+                    descriptor["covers"] = True
+                if opaque:
+                    descriptor["opaque"] = True
                 face_types.append(descriptor)
             refs.append(face_type_index[key])
         block_models[bedrock_state] = refs
@@ -1070,6 +1083,15 @@ FACE_ROW_WIDTH = 15
 # no cull direction at all. Not a valid cull index (they are 0-5), so the
 # renderer can test for it rather than needing a column of its own.
 NO_CULL = -1
+# What a face offers the neighbor on the other side of it, packed into the
+# spare bits of the cull column rather than given columns of their own: both
+# are only ever set on a face that HAS a cull direction, so they have nowhere
+# else to be, and two more columns would have cost ~67,000 numbers in the
+# generated module to carry two bits apiece. FaceTable reads them back with
+# the same masks - see FACE_CULL_MASK there.
+CULL_MASK = 0b111
+COVERS_SIDE = 0b1000   # the face spans its whole side of the block
+OPAQUE_SIDE = 0b10000  # ...and nothing shows through it
 
 
 def flatten_face_types(face_types):
@@ -1093,7 +1115,7 @@ def flatten_face_types(face_types):
     for index, descriptor in enumerate(face_types):
         uv = descriptor["uv"]
         rows.extend([
-            descriptor.get("cull", NO_CULL),
+            _cull_column(descriptor),
             *descriptor["facing"],
             *descriptor["center"],
             descriptor["width"],
@@ -1107,47 +1129,82 @@ def flatten_face_types(face_types):
     return rows, missing_indices
 
 
-def build_opaque_cube_ids(block_models, atlas):
-    """The Bedrock block ids that fill their whole cube with nothing
-    see-through, sorted. These are the blocks allowed to hide a neighbor's
-    faces (see _cull_direction); everything else leaves its neighbors alone.
+def _cull_column(descriptor):
+    """The cull column of a face's row: which neighbor hides it, plus what it
+    offers that neighbor in return (see COVERS_SIDE / OPAQUE_SIDE)."""
+    cull = descriptor.get("cull")
+    if cull is None:
+        return NO_CULL
+    return (cull
+            | (COVERS_SIDE if descriptor.get("covers") else 0)
+            | (OPAQUE_SIDE if descriptor.get("opaque") else 0))
+
+
+# A face covers the side of the block it lies on only if it spans the whole
+# of it. Anything narrower leaves a margin of the neighbor's face showing
+# around it, so it hides nothing.
+_FULL_SIDE = 16
+
+
+def _covers_side(face):
+    """Whether the face fills its whole side of the block, so a neighbor
+    pressed against it has nothing showing around the edges. Lying flat on
+    the hull is what having a cull direction means, so that is half the test
+    and the size is the other half."""
+    return (
+        face["width"] == _FULL_SIDE and face["height"] == _FULL_SIDE
+        and _cull_direction(face["center"], face["normal"]) is not None
+    )
+
+
+def mark_side_cover(block_models, atlas):
+    """Records on every face that covers its whole side of the block whether
+    it does so opaquely. Mutates `block_models`; returns how many faces came
+    out opaque, for the bake to report.
 
     Call this BEFORE project_uv, while faces still carry a 'texture' name -
     the atlas is what knows whether that texture has any transparency in it.
 
-    Judged per block id rather than per state, because that is all the
-    renderer can ask about cheaply: a live neighbor arrives as a permutation
-    whose states would have to be rebuilt into a lookup key to say anything
-    finer, and it is asked about six times per block drawn. So an id only
-    qualifies if EVERY one of its states is a full opaque cube - which throws
-    away nothing real, since a block whose shape varies by state (a slab, a
-    fluid at any depth) has states that don't fill their cube and could never
-    have qualified as a whole anyway."""
-    faces_by_id = {}
-    for bedrock_state, faces in block_models.items():
-        faces_by_id.setdefault(bedrock_state.split("[", 1)[0], []).append(faces)
-    return sorted(
-        block_id for block_id, states in faces_by_id.items()
-        if all(_is_opaque_cube(faces, atlas) for faces in states)
-    )
+    This is judged per face, which is what makes neighbor culling work for
+    the blocks people actually build with. It used to be judged per block id:
+    an id could hide a neighbor's faces only if EVERY one of its states was a
+    full opaque cube in all six directions, because a live neighbor arrives
+    as a permutation and rebuilding it into a lookup key six times per block
+    drawn was too much to pay. That rule threw away every block whose shape
+    varies by state - a bottom slab still seals the block below it completely,
+    but its id also covers the top slab, and the two intersect to nothing.
+    170 block ids were losing the ability entirely, 68 slabs and 64 stairs
+    among them.
 
+    What changed is that the renderer no longer asks per neighbor per
+    direction. It resolves a block's shape once per distinct state and
+    remembers it (BlockModelLookup.#resolve), and the verifier records the
+    resulting masks into the grid as it walks it, so a per-state answer costs
+    the same lookup the per-id one did. All this pass has to do is put the
+    two facts where the face table can carry them.
 
-def _is_opaque_cube(faces, atlas):
-    """Whether one state's faces are a full cube of opaque texture: six
-    faces, one flush against each neighbor, each spanning its whole side."""
-    if len(faces) != len(_CULL_DIRECTIONS):
-        return False
-    culls = set()
-    for face in faces:
-        if face.get("missing"):
-            return False
-        if face["width"] != 16 or face["height"] != 16:
-            return False
-        cull = _cull_direction(face["center"], face["normal"])
-        if cull is None or not atlas.is_opaque(face["texture"]):
-            return False
-        culls.add(cull)
-    return len(culls) == len(_CULL_DIRECTIONS)
+    Only opacity is settled here, because only the atlas knows it. Whether a
+    face covers its side at all is plain geometry, so build_face_types_and_refs
+    works that out for itself from the size and cull direction it already has.
+
+    `missing` disqualifies a face from the opaque half but not the cover
+    half, which is the same split the two masks have always had: a cube
+    standing in for something the pipeline could not resolve is drawn
+    see-through, so it hides another see-through placeholder pressed against
+    it but nothing real.
+
+    Skipping this pass costs culls rather than causing them - every face
+    would read as see-through and hide only placeholders - which is the safe
+    direction, so the count it returns is printed rather than asserted on."""
+    opaque = 0
+    for faces in block_models.values():
+        for face in faces:
+            face["opaque"] = (
+                _covers_side(face) and not face.get("missing")
+                and atlas.is_opaque(face["texture"])
+            )
+            opaque += face["opaque"]
+    return opaque
 
 
 def _parse_state_key(bedrock_state):
@@ -1293,7 +1350,9 @@ def build(root):
     _report_face_reduction(stats)
     # while the faces still name their textures, which is what says whether a
     # block is see-through - project_uv drops the names a few lines down
-    opaque_cube_ids = build_opaque_cube_ids(block_models, atlas)
+    opaque_faces = mark_side_cover(block_models, atlas)
+    print(f"[fetch_block_models] {opaque_faces} faces seal their side of the "
+          f"block opaquely, and may hide a neighbor's")
     atlas_image, atlas_manifest = atlas.pack()
     # Everything that samples the swatch - the exported whiteUvRect and
     # project_uv's fallback for a texture that never made it into the atlas -
@@ -1304,11 +1363,10 @@ def build(root):
     block_models = project_uv(block_models, atlas_manifest)
     face_types, block_models = build_face_types_and_refs(block_models)
     key_specs, block_models = build_key_specs(block_models)
-    return atlas_image, white_rect, face_types, block_models, key_specs, opaque_cube_ids
+    return atlas_image, white_rect, face_types, block_models, key_specs
 
 
-def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs,
-                  opaque_cube_ids):
+def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_specs):
     atlas_path = root / "packs" / "RP" / "textures" / "particle" / "vanilla_block_atlas.png"
     atlas_image.save(atlas_path)
 
@@ -1337,10 +1395,7 @@ def write_outputs(root, atlas_image, white_rect, face_types, block_models, key_s
         # keyed on only the properties that choose between a block's models,
         # so the renderer needs blockKeySpecs to build a key that hits
         "export const blockModels = " + render(block_models) + ";\n\n"
-        "export const blockKeySpecs = " + render(key_specs) + ";\n\n"
-        # the ids allowed to hide a neighbor's faces; the renderer turns this
-        # into a Set once and asks it about a neighbor six times per block
-        "export const blockOpaqueCubes = " + render(opaque_cube_ids) + ";"
+        "export const blockKeySpecs = " + render(key_specs) + ";"
     )
     models_js_path.write_text(models_js_contents, encoding="utf-8")
 

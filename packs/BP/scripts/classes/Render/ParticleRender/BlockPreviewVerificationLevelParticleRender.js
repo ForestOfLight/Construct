@@ -55,10 +55,10 @@ const WATER_MATERIAL = "blend";
 export class BlockPreviewVerificationLevelParticleRender {
     lifetimeSeconds = 0;
 
-    constructor(dimensionLocation, targetPermutation, verificationLevel, lifetimeSeconds = 5, occlusionMask = 0, showBlockPreview = true) {
+    constructor(dimensionLocation, targetBlock, verificationLevel, lifetimeSeconds = 5, occlusionMask = 0, showBlockPreview = true) {
         this.dimension = dimensionLocation.dimension;
         this.location = dimensionLocation.location;
-        this.targetPermutation = targetPermutation;
+        this.targetBlock = targetBlock;
         this.verificationLevel = verificationLevel;
         this.lifetimeSeconds = lifetimeSeconds;
         this.occlusionMask = occlusionMask;
@@ -72,7 +72,7 @@ export class BlockPreviewVerificationLevelParticleRender {
 
     #renderBlock() {
         const rgb = this.#verificationLevelToRGB();
-        if (!rgb || !this.targetPermutation)
+        if (!rgb || !this.targetBlock)
             return;
         const sizeScalar = this.#verificationLevelToSizeScalar();
 
@@ -129,7 +129,7 @@ export class BlockPreviewVerificationLevelParticleRender {
                     }
                     this.#renderFace(scratch, face, missing ? MISSING_FACE_MATERIAL : material, sizeScalar);
                 } catch (error) {
-                    console.warn(`Failed to render face for block ${this.targetPermutation.type.id} at location ${JSON.stringify(this.location)} with verification level ${this.verificationLevel}:`, error, error.stack);
+                    console.warn(`Failed to render face for block ${this.targetBlock.typeId} at location ${JSON.stringify(this.location)} with verification level ${this.verificationLevel}:`, error, error.stack);
                 }
             }
         }
@@ -154,13 +154,13 @@ export class BlockPreviewVerificationLevelParticleRender {
         if (!this.showBlockPreview || this.verificationLevel !== BlockVerificationLevel.Missing)
             return [{ faces: PLAIN_CUBE_FACES, material }];
         const layers = [{
-            faces: BlockModelLookup.getFaces(this.targetPermutation),
-            material: BlockModelLookup.isWater(this.targetPermutation) ? WATER_MATERIAL : material,
+            faces: BlockModelLookup.getFaces(this.targetBlock),
+            material: BlockModelLookup.isWater(this.targetBlock) ? WATER_MATERIAL : material,
         }];
         // Bedrock keeps a waterlogged block's water outside the permutation,
         // so no model the pipeline bakes can include it; the block's own
         // faces are only ever the stair/fence/whatever standing in it.
-        if (this.targetPermutation.isWaterlogged)
+        if (this.targetBlock.isWaterlogged)
             layers.push({ faces: BlockModelLookup.getWaterloggedFaces(), material: WATER_MATERIAL });
         return layers;
     }

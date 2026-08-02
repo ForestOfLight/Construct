@@ -61,6 +61,9 @@ interface Builder {
     easyPlace: PROTO.Boolean,
     fastEasyPlace: PROTO.Boolean,
     materialGrabber: PROTO.Boolean,
-    materialInstanceName: PROTO.String
+    materialInstanceName: PROTO.String,
+    defaultRenderMode: PROTO.String
 }
 ```
+
+`defaultRenderMode` takes the same values as an instance's `renderMode`, and is the mode given to instances this builder creates. Changing it does not affect instances that already exist. A value that is not one of the four modes is ignored, leaving the builder's current preference in place.

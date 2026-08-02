@@ -19,6 +19,16 @@ const FACE_ROW_WIDTH = 15;
 // the way they always have, as the field being absent.
 const NO_CULL = -1;
 
+// The cull column carries two more bits above the direction itself: whether
+// the face spans its whole side of the block, and whether it does so
+// opaquely (see COVERS_SIDE / OPAQUE_SIDE in tools/bake_block_models/
+// main.py). They ride here rather than in columns of their own because
+// neither can be set on a face without a cull direction - covering a side
+// means lying flat on it, which is what having a cull direction means.
+const FACE_CULL_MASK = 0b111;
+const FACE_COVERS_SIDE = 0b1000;
+const FACE_OPAQUE_SIDE = 0b10000;
+
 const faceCount = blockFaceData.length / FACE_ROW_WIDTH;
 
 // One slot per face, left as a hole until something asks for that face.
@@ -36,7 +46,8 @@ const missingFaces = new Set(blockMissingFaces);
 
 // The face at `index` in the baked table, as the descriptor the renderer
 // reads: `center`, `facing`, `width`, `height`, `roll`, `tintindex`, `uv`,
-// and `cull` only when a neighbor can hide it.
+// and - only when a neighbor can hide it - `cull`, plus `covers` and
+// `opaque` for what this face offers the neighbor in return.
 //
 // Shared, and treated as frozen by everything that reads one - the same
 // descriptor is handed to every block that draws that face, so writing
@@ -69,8 +80,13 @@ export function faceAt(index) {
         },
     };
     const cull = blockFaceData[at + FACE_CULL];
-    if (cull !== NO_CULL)
-        face.cull = cull;
+    if (cull !== NO_CULL) {
+        face.cull = cull & FACE_CULL_MASK;
+        if (cull & FACE_COVERS_SIDE)
+            face.covers = true;
+        if (cull & FACE_OPAQUE_SIDE)
+            face.opaque = true;
+    }
     if (missingFaces.has(index))
         face.missing = true;
     materialized[index] = face;

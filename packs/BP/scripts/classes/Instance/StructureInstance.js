@@ -21,9 +21,9 @@ export class StructureInstance {
 
     #cachedDimension = void 0;
 
-    constructor(instanceName, structureId) {
+    constructor(instanceName, structureId, defaults = {}) {
         this.structure = new Structure(structureId);
-        this.options = new InstanceOptions(instanceName, structureId);
+        this.options = new InstanceOptions(instanceName, structureId, defaults);
         this.refreshBox();
         this.subscribeToEvents();
     }
@@ -112,28 +112,28 @@ export class StructureInstance {
         };
     }
 
-    getBlockPermutation(structureLocation) {
-        return this.structure.getBlockPermutation(structureLocation);
+    getBlock(structureLocation) {
+        return this.structure.getBlock(structureLocation);
     }
 
-    getBlockPermutations(structureLocations) {
-        return this.structure.getBlockPermutations(structureLocations);
+    getBlocks(structureLocations) {
+        return this.structure.getBlocks(structureLocations);
     }
 
     getLayerBlocks(layer) {
-        return this.structure.getLayerBlockPermutations(layer);
+        return this.structure.getLayerBlocks(layer);
     }
 
-    getAllBlockPermutations() {
-        return this.structure.getAllBlockPermutations();
+    getAllBlocks() {
+        return this.structure.getAllBlocks();
     }
 
     getActiveBlocks() {
         if (!this.options.isEnabled)
             throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
-            return this.getLayerBlockPermutations(this.getLayer() - 1);
-        return this.getAllBlockPermutations();
+            return this.getLayerBlocks(this.getLayer() - 1);
+        return this.getAllBlocks();
     }
 
     isLocationActive(dimensionId, structureLocation, { useActiveLayer = true } = {}) {

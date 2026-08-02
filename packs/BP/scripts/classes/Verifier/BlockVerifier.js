@@ -8,24 +8,24 @@ export class BlockVerifier {
     }
 
     verify() {
-        const structPermutation = this.instance.getBlockPermutation(this.blockLocationInStructure);
-        return this.evaluate(this.block, structPermutation);
+        const structBlock = this.instance.getBlock(this.blockLocationInStructure);
+        return this.evaluate(this.block, structBlock);
     }
 
-    evaluate(worldBlock, structPermutation) {
-        if (!structPermutation)
+    evaluate(worldBlock, structBlock) {
+        if (!structBlock)
             return BlockVerificationLevel.Air;
-        if (structPermutation.typeId === "minecraft:air")
+        if (structBlock.typeId === "minecraft:air")
             return worldBlock.isAir ? BlockVerificationLevel.Air : BlockVerificationLevel.NoMatch;
         if (worldBlock.isAir)
             return BlockVerificationLevel.Missing;
-        if (worldBlock.typeId !== structPermutation.typeId)
+        if (worldBlock.typeId !== structBlock.typeId)
             return BlockVerificationLevel.NoMatch;
-        if (worldBlock.isWaterlogged !== structPermutation.isWaterlogged)
+        if (worldBlock.isWaterlogged !== structBlock.isWaterlogged)
             return BlockVerificationLevel.TypeMatch;
-        if (!structPermutation.hasStates)
+        if (!structBlock.hasStates)
             return BlockVerificationLevel.Match;
-        if (worldBlock.permutation.matches(structPermutation.typeId, structPermutation.states))
+        if (worldBlock.permutation.matches(structBlock.typeId, structBlock.states))
             return BlockVerificationLevel.Match;
         return BlockVerificationLevel.TypeMatch;
     }

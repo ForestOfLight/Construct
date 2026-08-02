@@ -147,7 +147,7 @@ class TextureAtlas:
         """Whether every texel of an added texture is fully opaque.
 
         This is what decides whether a block can hide the faces of its
-        neighbors (see main.py's build_opaque_cube_ids): a full cube of glass
+        neighbors (see main.py's mark_side_cover): a full side of glass
         or leaves is the same shape as one of stone, and only the alpha
         channel tells them apart. A single see-through texel is enough to
         disqualify a texture - the face behind it would show through exactly

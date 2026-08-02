@@ -65,13 +65,13 @@ function isHoldingActionItem(player) {
 function tryPlaceBlock(event, player, block, structureBlock) {
     if (shouldPreventAction(player, structureBlock))
         return preventAction(event, player);
-    structureBlock = tryConvertBannedToValidBlock(structureBlock);
+    let permutation = tryConvertBannedToValidBlock(structureBlock);
     if (player.getGameMode() === GameMode.Creative) {
         event.cancel = true;
-        placeBlock(player, block, structureBlock);
+        placeBlock(player, block, permutation);
     } else if (player.getGameMode() === GameMode.Survival) {
-        structureBlock = tryConvertToDefaultState(structureBlock);
-        tryPlaceBlockSurvival(event, player, block, structureBlock);
+        permutation = tryConvertToDefaultState(permutation);
+        tryPlaceBlockSurvival(event, player, block, permutation);
     }
 }
 
@@ -87,7 +87,7 @@ function preventAction(event, player) {
 }
 
 function isBannedBlock(player, structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const blockId = structureBlock.typeId.replace('minecraft:', '');
     if (bannedBlocks.includes(blockId))
         return true;
     if (bannedDimensionBlocks[player.dimension.id.replace('minecraft:', '')]?.includes(blockId))
@@ -95,46 +95,51 @@ function isBannedBlock(player, structureBlock) {
     const allowedStates = whitelistedBlockStates[blockId];
     if (allowedStates) {
         for (const [stateKey, stateValue] of Object.entries(allowedStates)) {
-            if (structureBlock.getState(stateKey) !== stateValue)
+            if (structureBlock.states[stateKey] !== stateValue)
                 return true;
         }
     }
     return false;
 }
 
+// Takes the structure's block (see Structure.#intern) and gives back a real
+// BlockPermutation, which is what everything downstream of here places. The
+// waterlogging that decides the bubble column's replacement lives on the
+// structure's block rather than in the permutation, so this is the last step
+// that can read it.
 function tryConvertBannedToValidBlock(structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
+    const blockId = structureBlock.typeId.replace('minecraft:', '');
     if (Object.keys(bannedToValidBlockMap).includes(blockId))
-        return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.getAllStates());
+        return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.states);
     if (blockId === "bubble_column" && structureBlock.isWaterlogged)
         return BlockPermutation.resolve('minecraft:water');
-    return structureBlock;
+    return structureBlock.permutation;
 }
 
-function tryConvertToDefaultState(structureBlock) {
+function tryConvertToDefaultState(permutation) {
     const newStates = {};
-    for (const [stateKey, stateValue] of Object.entries(structureBlock.getAllStates())) {
+    for (const [stateKey, stateValue] of Object.entries(permutation.getAllStates())) {
         if (resetToBlockStates[stateKey] !== void 0 && stateValue !== resetToBlockStates[stateKey])
             newStates[stateKey] = resetToBlockStates[stateKey];
         else
             newStates[stateKey] = stateValue;
     }
-    return BlockPermutation.resolve(structureBlock.type.id, newStates);
+    return BlockPermutation.resolve(permutation.type.id, newStates);
 }
 
-function tryPlaceBlockSurvival(event, player, block, structureBlock) {
-    const placeableItemStack = getPlaceableItemStack(structureBlock);
+function tryPlaceBlockSurvival(event, player, block, permutation) {
+    const placeableItemStack = getPlaceableItemStack(permutation);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse) {
         event.cancel = true;
-        placeBlock(player, block, structureBlock, itemSlotToUse);
+        placeBlock(player, block, permutation, itemSlotToUse);
     } else {
         preventAction(event, player);
     }
 }
 
-function getPlaceableItemStack(structureBlock) {
-    const blockId = structureBlock.type.id.replace('minecraft:', '');
+function getPlaceableItemStack(permutation) {
+    const blockId = permutation.type.id.replace('minecraft:', '');
     const newItemId = blockIdToItemStackMap[blockId];
-    return newItemId ? new ItemStack(newItemId) : structureBlock.getItemStack();
+    return newItemId ? new ItemStack(newItemId) : permutation.getItemStack();
 }

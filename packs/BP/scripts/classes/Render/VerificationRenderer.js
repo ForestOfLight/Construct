@@ -131,7 +131,7 @@ export class VerificationRenderer {
         // whatever the mode.
         const showPreview = verificationLevel === BlockVerificationLevel.Missing && this.#showBlockPreview;
         new BlockPreviewVerificationLevelParticleRender(
-            dimensionLocation, this.instance.getBlockPermutation(location),
+            dimensionLocation, this.instance.getBlock(location),
             verificationLevel, lifetime, verificationLevels.occlusionMaskAt(location), showPreview,
         );
     }

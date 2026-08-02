@@ -21,29 +21,30 @@ const CULL_OFFSETS = [
 // the block above means asking what IT covers below.
 const OPPOSITE = 1;
 
-// What one cell of the grid records: the six sides its block covers
-// completely, plus whether that block is opaque as well as solid.
+// One six-bit mask per entry of CULL_OFFSETS. Two of them are packed into a
+// single number in two places - what a cell records, and what
+// occlusionMaskAt returns - so they share the width and the shift.
 const COVER_MASK = 0b111111;
-const OPAQUE_BIT = 1 << 6;
+const OPAQUE_SHIFT = 6;
 
-// Where occlusionMaskAt puts the second of the two masks it returns. Both are
-// six bits, so they ride home in one number rather than an object allocated
-// per block drawn.
-const COVER_CULL_SHIFT = 6;
-
-export function packCellFlags(coverMask, isOpaque) {
-    return (coverMask & COVER_MASK) | (isOpaque ? OPAQUE_BIT : 0);
+// What one cell of the grid records: the six sides its block covers
+// completely, and which of those it covers opaquely. Judged per block state
+// rather than per block id, so a slab, a stair or a closed door offers the
+// sides it really does seal (see BlockModelLookup.getCoverMasks).
+export function packCellFlags(coverMasks) {
+    return coverMasks & ((COVER_MASK << OPAQUE_SHIFT) | COVER_MASK);
 }
 
-// The two halves of what occlusionMaskAt returns: sides hidden by an opaque
-// neighbor, which hides anything, and sides hidden by a merely solid one,
-// which only hides a see-through placeholder face.
-export function opaqueCullMask(masks) {
+// The two halves of what occlusionMaskAt returns, packed the same way round
+// as everywhere else: sides hidden by a merely solid neighbor, which hides
+// only a see-through placeholder face, and sides hidden by an opaque one,
+// which hides anything.
+export function coverCullMask(masks) {
     return masks & COVER_MASK;
 }
 
-export function coverCullMask(masks) {
-    return (masks >> COVER_CULL_SHIFT) & COVER_MASK;
+export function opaqueCullMask(masks) {
+    return (masks >> OPAQUE_SHIFT) & COVER_MASK;
 }
 
 export class VerificationLevels {
@@ -61,12 +62,14 @@ export class VerificationLevels {
         this.#sizeZ = Math.max(bounds.max.z - bounds.min.z, 0);
         this.#levels = new Uint8Array(this.#sizeX * this.#sizeY * this.#sizeZ);
         // What each cell offers its neighbors to hide behind: the sides it
-        // covers completely, plus whether that cover is opaque (see
+        // covers completely, and which of those it covers opaquely (see
         // packCellFlags). Kept beside the levels rather than folded into them
         // because it isn't a level - a cell's shape is what it is regardless
         // of whether the block there matches - and the verifier already knows
         // both by the time it has looked the cell up once.
-        this.#cellFlags = new Uint8Array(this.#levels.length);
+        // Uint16 rather than Uint8 because a cell now carries two six-bit
+        // masks: what it covers, and what it covers opaquely.
+        this.#cellFlags = new Uint16Array(this.#levels.length);
     }
 
     matchesBounds(bounds) {
@@ -106,11 +109,16 @@ export class VerificationLevels {
     // read them back with opaqueCullMask and coverCullMask.
     //
     // A side goes into the cover mask when the neighbor beyond it turns a
-    // complete face back this way, and into the opaque mask when that
-    // neighbor is opaque as well. The opaque mask is therefore always a
-    // subset of the cover mask, which is what makes the two rules compose:
-    // an opaque neighbor hides any face, a merely solid one hides only a
+    // complete face back this way, and into the opaque mask when that same
+    // face is opaque as well. The opaque mask is therefore always a subset
+    // of the cover mask, which is what makes the two rules compose: an
+    // opaque face hides any face, a merely solid one hides only a
     // see-through placeholder face that has nothing to show anyway.
+    //
+    // Both are read off the ONE side the neighbor turns this way, not off
+    // the neighbor as a whole. A bottom slab is opaque downwards and open
+    // upwards, and gets to hide the top face of the block beneath it without
+    // claiming anything about the block above.
     //
     // Built once per block rather than asked one face at a time: a block has
     // six neighbors however many faces it has, and every face of a full cube
@@ -132,13 +140,14 @@ export class VerificationLevels {
             if (index === -1)
                 continue;
             const flags = this.#cellFlags[index];
-            if (!((flags >> (direction ^ OPPOSITE)) & 1))
+            const side = direction ^ OPPOSITE;
+            if (!((flags >> side) & 1))
                 continue;
             coverMask |= 1 << direction;
-            if (flags & OPAQUE_BIT)
+            if ((flags >> (side + OPAQUE_SHIFT)) & 1)
                 opaqueMask |= 1 << direction;
         }
-        return opaqueMask | (coverMask << COVER_CULL_SHIFT);
+        return coverMask | (opaqueMask << OPAQUE_SHIFT);
     }
 
     countByLevel() {

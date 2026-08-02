@@ -27,10 +27,12 @@ class InstanceCollection {
         });
     }
 
-    add(instanceName, structureId) {
+    // defaults are for a brand new instance only - loadExistingInstances takes
+    // the other path, so nothing here can overwrite what an instance saved.
+    add(instanceName, structureId, defaults = {}) {
         if (this.instances[instanceName])
             throw new InstanceExistsError(instanceName);
-        const instance = new StructureInstance(instanceName, structureId);
+        const instance = new StructureInstance(instanceName, structureId, defaults);
         this.instances[instanceName] = instance;
         return instance;
     }
@@ -79,7 +81,7 @@ class InstanceCollection {
         const instance = this.getInstanceAt(dimensionId, location);
         if (!instance)
             return void 0;
-        return instance.getBlockPermutation(instance.toStructureCoords(location));
+        return instance.getBlock(instance.toStructureCoords(location));
     }
 
     getWorldStructureIds() {
