@@ -1,7 +1,5 @@
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 
-const AIR = "minecraft:air";
-
 export class BlockVerifier {
     constructor(block, instance) {
         this.block = block;
@@ -17,7 +15,7 @@ export class BlockVerifier {
     evaluate(worldBlock, structPermutation) {
         if (!structPermutation)
             return BlockVerificationLevel.Air;
-        if (structPermutation.typeId === AIR)
+        if (structPermutation.typeId === "minecraft:air")
             return worldBlock.isAir ? BlockVerificationLevel.Air : BlockVerificationLevel.NoMatch;
         if (worldBlock.isAir)
             return BlockVerificationLevel.Missing;
@@ -27,8 +25,8 @@ export class BlockVerifier {
             return BlockVerificationLevel.TypeMatch;
         if (!structPermutation.hasStates)
             return BlockVerificationLevel.Match;
-        return worldBlock.permutation.matches(structPermutation.typeId, structPermutation.states)
-            ? BlockVerificationLevel.Match
-            : BlockVerificationLevel.TypeMatch;
+        if (worldBlock.permutation.matches(structPermutation.typeId, structPermutation.states))
+            return BlockVerificationLevel.Match;
+        return BlockVerificationLevel.TypeMatch;
     }
 }
