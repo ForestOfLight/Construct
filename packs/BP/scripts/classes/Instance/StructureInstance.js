@@ -245,6 +245,12 @@ export class StructureInstance {
         this.verificationRenderer.refresh();
     }
 
+    setVerifierRefreshSeconds(seconds) {
+        this.options.setVerifierRefreshSeconds(seconds);
+        this.verifier.refresh();
+        this.verificationRenderer.refresh();
+    }
+
     setRenderMode(mode) {
         this.options.setRenderMode(mode);
         this.refreshBox();

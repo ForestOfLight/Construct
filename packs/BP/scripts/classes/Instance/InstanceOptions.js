@@ -2,6 +2,17 @@ import { Vector } from "../../lib/Vector";
 import { world } from "@minecraft/server";
 import { Option } from "../Option";
 import { RenderMode } from "../Enums/RenderMode";
+import { DEFAULT_REFRESH_SECONDS, MAX_REFRESH_SECONDS, MIN_REFRESH_SECONDS } from "../Verifier/RefreshRate";
+
+// Hoisted so load() can merge them back over a stored options object.
+// loadFromDP shallow-assigns, so a stored verifier replaces this whole
+// object and any field added since it was saved comes back undefined.
+const VERIFIER_DEFAULTS = Object.freeze({
+    isEnabled: true,
+    trackPlayerDistance: 5,
+    particleLifetime: 10,
+    refreshSeconds: DEFAULT_REFRESH_SECONDS
+});
 
 export class InstanceOptions extends Option {
     #DP_NAMESPACE = "instanceOptions";
@@ -11,11 +22,7 @@ export class InstanceOptions extends Option {
     dimensionId = void 0;
     worldLocation = new Vector();
     currentLayer = 0;
-    verifier = {
-        isEnabled: true,
-        trackPlayerDistance: 5,
-        particleLifetime: 10
-    };
+    verifier = { ...VERIFIER_DEFAULTS };
     renderMode = RenderMode.Default;
 
     static getInstanceStructureId(instanceName) {
@@ -48,6 +55,9 @@ export class InstanceOptions extends Option {
     load() {
         this.loadFromDP(this.#DP_NAMESPACE, this.instanceName);
         this.worldLocation = Vector.from(this.worldLocation);
+        // Merge the defaults back underneath a stored verifier object, so an
+        // instance saved before a field existed doesn't load it as undefined.
+        this.verifier = { ...VERIFIER_DEFAULTS, ...this.verifier };
     }
     
     clear() {
@@ -87,6 +97,11 @@ export class InstanceOptions extends Option {
 
     setVerifierDistance(distance) {
         this.verifier.trackPlayerDistance = distance;
+        this.save();
+    }
+
+    setVerifierRefreshSeconds(seconds) {
+        this.verifier.refreshSeconds = Math.min(MAX_REFRESH_SECONDS, Math.max(MIN_REFRESH_SECONDS, seconds));
         this.save();
     }
 
