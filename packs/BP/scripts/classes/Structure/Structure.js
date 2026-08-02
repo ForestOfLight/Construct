@@ -16,7 +16,7 @@ export class Structure {
         if (!this.#structure)
             throw new StructureNotFoundError(structureId);
         this.#structure.saveToWorld();
-        this.#size = this.#structure.size;
+        this.#size = { ...this.#structure.size };
     }
 
     getHeight() {
