@@ -7,6 +7,7 @@ import { system, TicksPerSecond } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { SkippedChunkTracker } from "./SkippedChunkTracker";
 import { BlockBudget } from "./BlockBudget";
+import { blocksPerTick as blocksPerTickFor } from "./RefreshRate";
 
 const MIN_TRACK_PLAYER_DISTANCE = 0;
 const MAX_TRACK_PLAYER_DISTANCE = 7;
@@ -159,6 +160,21 @@ export class StructureVerifier {
         this.blockVerificationLevels = this.#recycleVerificationLevels();
         this.isLocationPopulationComplete = false;
         this.isVerificationComplete = false;
+        this.#pullBlocksPerTick();
+    }
+
+    // Derived per verification rather than cached: selecting a layer shrinks
+    // the active volume, and the cycle should tighten to match without the
+    // player touching the setting.
+    //
+    // Skipped when standalone - the statistics form builds its own verifier
+    // with an explicit rate and no instance options behind it.
+    #pullBlocksPerTick() {
+        if (this.isStandalone)
+            return;
+        const bounds = this.instance.getActiveBounds();
+        const volume = Vector.volume(bounds.min, bounds.max);
+        this.blocksPerTick = blocksPerTickFor(volume, this.instance.options.verifier.refreshSeconds);
     }
 
     #recycleVerificationLevels() {
