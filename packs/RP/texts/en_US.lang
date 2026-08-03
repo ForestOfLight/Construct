@@ -37,13 +37,13 @@ construct.instance.option.validation.description=Shows missing and incorrect blo
 construct.instance.option.layer=Layer
 construct.instance.option.layer.description=Changes the active layer. Use 0 for all layers.
 construct.instance.option.rendermode=Render Mode
-construct.instance.option.rendermode.description=How the instance is drawn. Debug shapes cost far less clientside performance than particles, but only particles can show a missing block's real texture. Classic uses particles for everything.
+construct.instance.option.rendermode.description=How the instance is drawn. Performance mode is great for FPS.
 construct.instance.option.rendermode.default=Default
 construct.instance.option.rendermode.performance=Performance
 construct.instance.option.rendermode.previewonly=Ghost Preview
 construct.instance.option.rendermode.classic=Classic
 construct.instance.option.refreshrate=Refresh Rate (seconds)
-construct.instance.option.refreshrate.description=How long a full rescan takes. Blocks you place or break update instantly; this controls how quickly other changes, like pistons or fire, are noticed. Higher is lighter on the server.
+construct.instance.option.refreshrate.description=How long a full rescan takes. This controls how quickly changes not caused directly by the player are noticed. Low values can be laggy.
 construct.instance.materials.noinventory=§cNo player inventory found.
 construct.instance.materials.missing.header=§cMaterials Missing From Inventory:
 construct.instance.materials.missing.button=Show Missing Materials
@@ -109,7 +109,7 @@ construct.option.materialgrabber.grabbed.zero=§7Grabbed 0 items.
 construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
 construct.option.defaultrendermode.name=Default Render Mode
-construct.option.defaultrendermode.description=The render mode given to instances you create. Existing instances keep the mode set in their own settings.
+construct.option.defaultrendermode.description=The render mode given to instances you create.
 
 ## Commands
 construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
