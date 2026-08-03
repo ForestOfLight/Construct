@@ -14,7 +14,8 @@ export class MaterialGrabberForm {
             return forceShow(this.player, MaterialGrabberFormBuilder.buildInstanceSelector(this.player)).then((response) => {
                 if (response.canceled)
                     return;
-                const selectedInstanceName = instanceCollection.getInstanceNames()[response.selection];
+                const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
+                const selectedInstanceName = instanceNames[response.selection];
                 if (selectedInstanceName) {
                     this.setActiveInstance(selectedInstanceName);
                     this.player.sendMessage({ translate: 'construct.materials.grabber.menu.success', with: [selectedInstanceName] });

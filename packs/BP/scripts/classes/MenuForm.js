@@ -34,15 +34,16 @@ export class MenuForm {
                 if (response.canceled)
                     return void 0;
                 let selection = response.selection;
+                const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
                 if (selection === 0) {
                     new BuilderForm(this.player);
                     return void 0;
-                } else if (selection == instanceCollection.getInstanceNames().length + 2) {
+                } else if (selection == instanceNames.length + 2) {
                     MenuFormBuilder.buildHowTo().show(this.player);
                     return void 0;
                 } else {
                     selection--;
-                    const selectedInstanceName = instanceCollection.getInstanceNames()[selection];
+                    const selectedInstanceName = instanceNames[selection];
                     return selectedInstanceName || this.createNewInstance();
                 }
             });

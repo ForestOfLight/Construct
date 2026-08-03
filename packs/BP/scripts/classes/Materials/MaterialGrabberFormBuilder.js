@@ -18,9 +18,7 @@ export class MaterialGrabberFormBuilder {
         body.rawtext.push({ text: '\n' });
         body.rawtext.push({ translate: 'construct.materials.grabber.menu.selectinstance' });
         allInstanceNameForm.body(body);
-        instanceCollection.getInstanceNames().forEach(instanceName => {
-            allInstanceNameForm.button(`§2${instanceName}`);
-        });
+        MenuFormBuilder.addInstanceButtons(allInstanceNameForm);
         return allInstanceNameForm;
     }
 }

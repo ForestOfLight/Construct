@@ -9,12 +9,17 @@ export class MenuFormBuilder {
             .title(this.menuTitle)
             .body({ translate: 'construct.mainmenu.selectinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.settings' });
-        instanceCollection.getInstanceNames().forEach(instanceName => {
-            allInstanceNameForm.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
-        });
+        MenuFormBuilder.addInstanceButtons(allInstanceNameForm);
         allInstanceNameForm.button({ translate: 'construct.mainmenu.newinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.howto' });
         return allInstanceNameForm;
+    }
+
+    static addInstanceButtons(form) {
+        const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
+        instanceNames.forEach(instanceName => {
+            form.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
+        });
     }
 
     static buildNewInstance() {
@@ -28,7 +33,9 @@ export class MenuFormBuilder {
         const allStructuresForm = new ActionFormData()
             .title(this.menuTitle)
             .body({ translate: 'construct.mainmenu.selectstructure.header' });
-        instanceCollection.getWorldStructureIds().forEach(structureId => {
+        const worldStructureIds = instanceCollection.getWorldStructureIds();
+        worldStructureIds.sort((a, b) => a.localeCompare(b));
+        worldStructureIds.forEach(structureId => {
             const structureName = structureId.replace('mystructure:', '');
             allStructuresForm.button(`§2${structureName}`);
         });

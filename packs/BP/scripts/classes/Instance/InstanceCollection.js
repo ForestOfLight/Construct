@@ -53,7 +53,19 @@ class InstanceCollection {
     }
 
     getInstanceNames() {
-        return Object.keys(this.instances);
+        return Object.keys(this.instances).sort((a, b) => a.localeCompare(b));
+    }
+
+    getInstanceNamesSortedByEnabled() {
+        const instanceNames = this.getInstanceNames();
+        instanceNames.sort((a, b) => {
+            const aEnabled = this.get(a).isEnabled();
+            const bEnabled = this.get(b).isEnabled();
+            if (aEnabled === bEnabled)
+                return a.localeCompare(b);
+            return bEnabled ? 1 : -1;
+        });
+        return instanceNames;
     }
 
     getInstancesAt(dimensionId, location, options = {}) {
