@@ -1,11 +1,11 @@
 import { TicksPerSecond } from "@minecraft/server";
 
 export class RefreshRate {
-    static MAX_BLOCKS_PER_TICK = 20;
+    static MAX_BLOCKS_PER_TICK = 30;
 
-    static MIN_SECONDS = 3;
+    static MIN_SECONDS = 1;
     static MAX_SECONDS = 60;
-    static SECONDS_STEP = 3;
+    static SECONDS_STEP = 1;
     static DEFAULT_SECONDS = 15;
 
     static clampSeconds(seconds) {
