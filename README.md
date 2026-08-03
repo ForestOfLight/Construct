@@ -70,7 +70,8 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Material list
 - [x] Flexible structure movement
 - [x] Translation support
-- [ ] Block texture display
+- [x] Block texture display
+- [ ] Mirroring and Rotation
 
 ## Issues & Suggestions
 
