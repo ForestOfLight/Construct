@@ -2,6 +2,8 @@ import { system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { CellVerifier } from "./CellVerifier";
 import { GridBuffers } from "./GridBuffers";
+import { PriorityPass } from "./PriorityPass";
+import { RefreshRate } from "./RefreshRate";
 import { DebugBoxSweepObserver, SilentSweepObserver } from "./SweepObserver";
 import { VerificationRun } from "./VerificationRun";
 import { VerificationSweep } from "./VerificationSweep";
@@ -11,6 +13,7 @@ export class StructureVerifier {
     #instance;
     #settings;
     #buffers = new GridBuffers();
+    #priorityPass = new PriorityPass();
     #run;
     #loop;
     #isPassPending = false;
@@ -36,9 +39,11 @@ export class StructureVerifier {
         return this.#buffers.completed();
     }
 
-    refresh() {
+    refresh(isPriority = false) {
         this.#stopLoop();
         this.#cancelRun();
+        if (isPriority)
+            this.#priorityPass.arm();
         if (this.#instance.isEnabled())
             this.#startLoop();
     }
@@ -95,9 +100,15 @@ export class StructureVerifier {
         this.#isPassPending = false;
         this.#run = new VerificationRun(
             this.#newSweep(bounds, shouldRender),
-            this.#settings.blocksPerTick(volume)
+            this.#blocksPerTick(volume)
         );
         return this.#run;
+    }
+
+    #blocksPerTick(volume) {
+        if (this.#priorityPass.isArmed())
+            return RefreshRate.priorityBlocksPerTick();
+        return this.#settings.blocksPerTick(volume);
     }
 
     #finishRun(run, didComplete) {
@@ -105,6 +116,7 @@ export class StructureVerifier {
             this.#run = void 0;
         if (!didComplete)
             return;
+        this.#priorityPass.disarm();
         this.#buffers.commit();
         this.#isPassPending = true;
     }

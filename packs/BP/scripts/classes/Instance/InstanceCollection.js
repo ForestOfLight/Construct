@@ -27,8 +27,6 @@ class InstanceCollection {
         });
     }
 
-    // defaults are for a brand new instance only - loadExistingInstances takes
-    // the other path, so nothing here can overwrite what an instance saved.
     add(instanceName, structureId, defaults = {}) {
         if (this.instances[instanceName])
             throw new InstanceExistsError(instanceName);

@@ -51,8 +51,8 @@ export class StructureInstance {
         if (!this.materials)
             this.materials = new StructureMaterials(this);
         this.outliner.refresh();
-        this.verifier.refresh();
-        this.previewRenderer.refresh();
+        this.verifier.refresh(true);
+        this.previewRenderer.refresh(true);
         this.materials.refresh();
     }
 

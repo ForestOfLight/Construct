@@ -12,6 +12,10 @@ export class RefreshRate {
         return Math.min(RefreshRate.MAX_SECONDS, Math.max(RefreshRate.MIN_SECONDS, seconds));
     }
 
+    static priorityBlocksPerTick() {
+        return RefreshRate.MAX_BLOCKS_PER_TICK;
+    }
+
     static blocksPerTick(volume, refreshSeconds) {
         if (volume <= 0)
             return 0;

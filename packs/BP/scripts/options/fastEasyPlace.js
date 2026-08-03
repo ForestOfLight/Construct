@@ -148,11 +148,6 @@ export function isBannedBlock(player, structureBlock) {
     return false;
 }
 
-// Takes the structure's block (see Structure.#intern) and gives back a real
-// BlockPermutation, which is what everything downstream of here places. The
-// waterlogging that decides the bubble column's replacement lives on the
-// structure's block rather than in the permutation, so this is the last step
-// that can read it.
 function tryConvertBannedToValidBlock(structureBlock) {
     const blockId = structureBlock.typeId.replace('minecraft:', '');
     if (Object.keys(bannedToValidBlockMap).includes(blockId))

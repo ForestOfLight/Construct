@@ -13,9 +13,7 @@ export class FaceTable {
 
     static NO_CULL = -1;
 
-    // The cull column carries two extra bits above the direction: whether the face
-    // spans its whole side of the block, and whether it does so opaquely. They
-    // ride here because neither can be set on a face without a cull direction.
+    // The cull column carries two extra bits above the direction: whether the face spans its whole side of the block, and whether it does so opaquely.
     static FACE_CULL_MASK = 0b111;
     static FACE_COVERS_SIDE = 0b1000;
     static FACE_OPAQUE_SIDE = 0b10000;

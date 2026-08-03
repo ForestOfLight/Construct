@@ -21,8 +21,7 @@ export class Side {
         Vector.east
     ]);
 
-    // The order above is laid out in opposite pairs, so flipping the low bit
-    // turns a side into the one facing back at it.
+    // The order above is laid out in opposite pairs, so flipping the low bit turns a side into the one facing back at it.
     static opposite(side) {
         return side ^ 1;
     }

@@ -4,9 +4,6 @@ import { Option } from "../Option";
 import { RenderMode } from "../Enums/RenderMode";
 import { RefreshRate } from "../Verifier/RefreshRate";
 
-// Hoisted so load() can merge them back over a stored options object.
-// loadFromDP shallow-assigns, so a stored verifier replaces this whole
-// object and any field added since it was saved comes back undefined.
 const VERIFIER_DEFAULTS = Object.freeze({
     isEnabled: true,
     trackPlayerDistance: 5,
@@ -30,10 +27,6 @@ export class InstanceOptions extends Option {
         return options.structureId;
     }
 
-    // defaults hold the creating player's preferences. They are applied after
-    // load so that the class defaults above are what they replace, and an
-    // instance that already has saved options is never touched - load only
-    // finds something when this name has been used before.
     constructor(instanceName, structureId, defaults = {}) {
         super();
         this.instanceName = instanceName;
@@ -55,8 +48,6 @@ export class InstanceOptions extends Option {
     load() {
         this.loadFromDP(this.#DP_NAMESPACE, this.instanceName);
         this.worldLocation = Vector.from(this.worldLocation);
-        // Merge the defaults back underneath a stored verifier object, so an
-        // instance saved before a field existed doesn't load it as undefined.
         this.verifier = { ...VERIFIER_DEFAULTS, ...this.verifier };
     }
     

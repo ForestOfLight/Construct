@@ -2,16 +2,9 @@ import { world } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { StructureNotFoundError } from "../Errors/StructureNotFoundError";
 
-// A cell nothing has been read out of yet. Zero, so a freshly allocated
-// #paletteSlots is entirely unread without having to fill it.
 const NOT_LOADED = 0;
-// A cell the structure reports no block for. A palette slot of its own, so
-// "read it and there was nothing" stays distinct from "not read yet" without a
-// second array to say which.
 const NO_BLOCK = 1;
 
-// The widths #paletteSlots steps through as the palette outgrows them, and the
-// largest slot each can hold.
 const SLOT_WIDTHS = [
     { maxSlot: 0xFF, ArrayType: Uint8Array },
     { maxSlot: 0xFFFF, ArrayType: Uint16Array },
@@ -23,16 +16,9 @@ export class Structure {
     #structure;
     #size;
 
-    // The palette slot standing in each cell, indexed by #toIndex. One typed
-    // array covering the structure's whole volume rather than a Map keyed by
-    // index: a Map costs a hash and a probe on every lookup and tens of bytes
-    // per entry, where this is a single indexed read and - for the majority of
-    // builds, whose palette fits in a byte - one byte per cell.
     #paletteSlots;
     #widthIndex = 0;
 
-    // Slot 0 is never stored and slot 1 is NO_BLOCK, so both read back as
-    // undefined and the first real block lands at slot 2.
     #palette = [void 0, void 0];
     #slotsByKey = new Map();
 
@@ -58,11 +44,6 @@ export class Structure {
         return this.#size;
     }
 
-    // The structure's block at a location as a palette entry - see #intern for
-    // its shape - or undefined where the structure has no block. Entries are
-    // interned, so every cell holding the same block state shares one object,
-    // which is what lets a block's resolved model be cached against it (see
-    // BlockModel).
     getBlock(structureLocation) {
         const index = this.#toIndex(structureLocation);
         if (index === void 0)
@@ -70,15 +51,11 @@ export class Structure {
         const slot = this.#paletteSlots[index];
         if (slot !== NOT_LOADED)
             return this.#palette[slot];
-        // Interning a new block can widen #paletteSlots, so this reads the
-        // field back rather than holding onto the array across the call.
         const loadedSlot = this.#loadSlot(structureLocation);
         this.#paletteSlots[index] = loadedSlot;
         return this.#palette[loadedSlot];
     }
 
-    // Floored rather than assumed whole: the raycaster walks in fractional
-    // steps and asks for each cell it passes through (see Raycaster).
     #toIndex(structureLocation) {
         const x = Math.floor(structureLocation.x);
         const y = Math.floor(structureLocation.y);
@@ -95,13 +72,6 @@ export class Structure {
         return this.#intern(blockPermutation, this.#structure.getIsWaterlogged(structureLocation));
     }
 
-    // Blocks are handed out as plain entries -
-    //   { permutation, typeId, states, hasStates, isWaterlogged }
-    // - rather than as the engine's BlockPermutation with those properties
-    // written onto it. The id, the states and the waterlogging are all wanted
-    // per block per render pass and reading them off the handle every time
-    // crosses the native boundary, but caching them ON the handle would break
-    // the day the API grows a real property of the same name.
     #intern(blockPermutation, isWaterlogged) {
         const typeId = blockPermutation.type.id;
         const states = blockPermutation.getAllStates();
@@ -123,10 +93,6 @@ export class Structure {
         return slot;
     }
 
-    // A structure with more distinct block states than a cell can hold moves up
-    // a width, one whole-array copy each time. Both steps are rare - a byte
-    // covers 254 block states, which is most builds outright - and the array is
-    // never wider than the palette in it needs.
     #widenPaletteSlots() {
         this.#widthIndex++;
         this.#paletteSlots = new SLOT_WIDTHS[this.#widthIndex].ArrayType(this.#paletteSlots);

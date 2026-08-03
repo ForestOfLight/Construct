@@ -3,10 +3,6 @@ import { world } from "@minecraft/server";
 
 const DP_NAMESPACE = "builderOptions";
 
-// A per-player on/off option. The form control and the chat line that
-// announces a change both live here rather than in BuilderForm, so an option
-// with a different shape - see BuilderChoiceOption - can present itself
-// differently without the form learning about it.
 export class BuilderOption {
     identifier;
     displayName;
@@ -33,8 +29,6 @@ export class BuilderOption {
         return world.getDynamicProperty(this.dynamicPropertyKey(playerId)) === true;
     }
 
-    // The shape-agnostic reader, for callers that hold an option id rather
-    // than a particular option. For an on/off option the value is the toggle.
     getValue(playerId) {
         return this.isEnabled(playerId);
     }
@@ -60,8 +54,6 @@ export class BuilderOption {
         form.toggle(this.displayName, { defaultValue: this.isEnabled(playerId), tooltip: this.description });
     }
 
-    // Returns the message to announce this change with, or nothing when the
-    // value the player submitted is the one they already had.
     applyFormValue(playerId, formValue) {
         const changedToValue = this.setValue(playerId, formValue);
         if (changedToValue === void 0)

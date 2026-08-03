@@ -1,14 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { RefreshRate } from '../packs/BP/scripts/classes/Verifier/RefreshRate.js';
+import { TicksPerSecond } from '@minecraft/server';
 
 const CLOSE = 1e-9;
 
-const TICKS_PER_SECOND = 20;
-
-// The cap is a tuning number and is expected to move with frame-time
-// measurement, so only the default is pinned to a literal. Everything below
-// derives its expectations from MAX_BLOCKS_PER_TICK instead.
 test('the default refresh is 15 seconds', () => {
     assert.equal(RefreshRate.DEFAULT_SECONDS, 15);
 });
@@ -18,8 +14,7 @@ test('a small structure runs well under the cap', () => {
     assert.ok(RefreshRate.blocksPerTick(343, 15) < RefreshRate.MAX_BLOCKS_PER_TICK);
 });
 
-// Big enough that 15s would demand more than any plausible cap.
-const CAPPED_VOLUME = RefreshRate.MAX_BLOCKS_PER_TICK * 15 * TICKS_PER_SECOND * 10;
+const CAPPED_VOLUME = RefreshRate.MAX_BLOCKS_PER_TICK * 15 * TicksPerSecond * 10;
 
 test('a large structure is clamped to the cap', () => {
     assert.equal(RefreshRate.blocksPerTick(CAPPED_VOLUME, 15), RefreshRate.MAX_BLOCKS_PER_TICK);
@@ -31,7 +26,7 @@ test('an uncapped structure hits the requested cycle exactly', () => {
 });
 
 test('a capped structure reports the cycle it actually achieves, not the one requested', () => {
-    const achieved = CAPPED_VOLUME / (RefreshRate.MAX_BLOCKS_PER_TICK * TICKS_PER_SECOND);
+    const achieved = CAPPED_VOLUME / (RefreshRate.MAX_BLOCKS_PER_TICK * TicksPerSecond);
     assert.ok(achieved > 15, 'this volume must actually be cap-bound for the test to mean anything');
     assert.ok(Math.abs(RefreshRate.cycleSeconds(CAPPED_VOLUME, 15) - achieved) < CLOSE);
 });

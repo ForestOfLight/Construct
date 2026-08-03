@@ -40,20 +40,6 @@ export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume 
         placedBlock.setPermutation(blockToPlace);
         handleWaterlogging(placedBlock, blockToPlace);
         playBlockPlacementSound(player, placedBlock, blockToPlace);
-        // The single choke point every easyPlace and fastEasyPlace call site
-        // funnels through. setPermutation fires no event of its own, so this
-        // is the addon's only way to notice its own placements.
-        //
-        // Deferred a tick rather than emitted here. setPermutation has changed
-        // this block, but the neighbor updates it triggers are queued and have
-        // not run yet - so a subscriber reading the surrounding blocks now
-        // sees their state from BEFORE this placement. A wall stacked on a
-        // wall would report the one below it as still unconnected. Waiting a
-        // tick gives subscribers the settled world that a real block event
-        // would have handed them.
-        //
-        // Read off the block now, though: the Block handle is not guaranteed
-        // to still be valid a tick from now.
         const dimensionId = placedBlock.dimension.id;
         const { x, y, z } = placedBlock.location;
         system.run(() => blockPlacementSignal.emit(dimensionId, { x, y, z }));

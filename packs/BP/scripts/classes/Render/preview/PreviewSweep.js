@@ -1,11 +1,15 @@
 import { BlockBudget } from "../../Verifier/BlockBudget";
+import { PriorityPass } from "../../Verifier/PriorityPass";
 import { RefreshRate } from "../../Verifier/RefreshRate";
 
-// The render cursor: walks the structure a slice at a time, wrapping forever,
-// spending from a budget that paces it to the refresh setting.
 export class PreviewSweep {
     #cursor = 0;
     #budget = new BlockBudget();
+    #priorityPass = new PriorityPass();
+
+    arm() {
+        this.#priorityPass.arm();
+    }
 
     reset() {
         this.#cursor = 0;
@@ -13,7 +17,7 @@ export class PreviewSweep {
     }
 
     *locations(bounds, volume, refreshSeconds) {
-        this.#budget.credit(RefreshRate.blocksPerTick(volume, refreshSeconds));
+        this.#budget.credit(this.#blocksPerTick(volume, refreshSeconds));
         if (this.#budget.isExhausted())
             return;
         if (this.#cursor >= volume)
@@ -23,8 +27,16 @@ export class PreviewSweep {
             this.#budget.spend(1);
             this.#cursor++;
         }
-        if (this.#cursor >= volume)
+        if (this.#cursor >= volume) {
             this.#cursor = 0;
+            this.#priorityPass.disarm();
+        }
+    }
+
+    #blocksPerTick(volume, refreshSeconds) {
+        if (this.#priorityPass.isArmed())
+            return RefreshRate.priorityBlocksPerTick();
+        return RefreshRate.blocksPerTick(volume, refreshSeconds);
     }
 }
 

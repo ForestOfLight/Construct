@@ -11,9 +11,6 @@ test('a span ends at the next chunk boundary', () => {
     assert.equal(ALIGNED.endOfSpanX(16), 32);
 });
 
-// A structure rarely sits on a chunk boundary, so the first span of a row is
-// usually a partial one - splitting on the structure's own 16s instead would
-// attribute two different chunks' failures to one key.
 test('spans follow the world chunk grid, not the structure', () => {
     const offset = new ChunkGrid({ x: 5, y: 0, z: 0 });
     assert.equal(offset.endOfSpanX(0), 11);

@@ -13,7 +13,7 @@ export class MoveCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             optionalParameters: [
-                { name: 'dimensionId', type: CustomCommandParamType.Enum }, // Enum defined in PlaceCommand.js
+                { name: 'dimensionId', type: CustomCommandParamType.Enum }, // Enum defined in PlaceCommand
                 { name: 'location', type: CustomCommandParamType.Location }
             ],
             permissionLevel: CommandPermissionLevel.Any,

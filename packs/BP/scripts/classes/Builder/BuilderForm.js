@@ -18,8 +18,6 @@ export class BuilderForm {
     applySettings(formValues) {
         const optionIds = BuilderOptions.getOptionIds();
         for (let i = 0; i < optionIds.length; i++) {
-            // An option announces its own change, and says nothing when the
-            // submitted value matches the one already stored.
             const message = BuilderOptions.get(optionIds[i]).applyFormValue(this.player.id, formValues[i]);
             if (message)
                 this.player.sendMessage(message);

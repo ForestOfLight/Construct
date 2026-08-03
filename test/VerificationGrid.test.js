@@ -45,8 +45,6 @@ test('counts are tallied per level', () => {
     assert.equal(counts[BlockVerificationLevel.Unknown], 5);
 });
 
-// The heart of the culling: a face is hidden by the ONE side its neighbor turns
-// back towards it, not by the neighbor as a whole.
 test('an opaque neighbor hides only the face it turns this way', () => {
     const cells = grid();
     const above = { x: 1, y: 2, z: 1 };
@@ -56,7 +54,6 @@ test('an opaque neighbor hides only the face it turns this way', () => {
     assert.equal(CellFlags.markerMask(occlusion), 0);
 });
 
-// A bottom slab is opaque downwards and open upwards.
 test('a one-sided neighbor makes no claim about its far side', () => {
     const cells = grid();
     const slab = { x: 1, y: 1, z: 1 };

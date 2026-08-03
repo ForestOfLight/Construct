@@ -35,8 +35,6 @@ export class CreateCommand extends Command {
     }
 
     addStructure(origin, instanceName, structureId) {
-        // A command block or the console has no builder behind it, so those
-        // fall back to the plain default rather than anyone's preference.
         const playerId = origin.getType() === 'Player' ? origin.getSource().id : void 0;
         instanceCollection.add(instanceName, structureId, { renderMode: getDefaultRenderMode(playerId) });
         origin.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
