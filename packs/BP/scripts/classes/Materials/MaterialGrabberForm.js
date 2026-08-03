@@ -11,10 +11,10 @@ export class MaterialGrabberForm {
 
     show() {
         try {
-            return forceShow(this.player, MaterialGrabberFormBuilder.buildInstanceSelector(this.player)).then((response) => {
+            const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
+            return forceShow(this.player, MaterialGrabberFormBuilder.buildInstanceSelector(this.player, instanceNames)).then((response) => {
                 if (response.canceled)
                     return;
-                const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
                 const selectedInstanceName = instanceNames[response.selection];
                 if (selectedInstanceName) {
                     this.setActiveInstance(selectedInstanceName);

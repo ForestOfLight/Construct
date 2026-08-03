@@ -4,22 +4,17 @@ import { instanceCollection } from './Instance/InstanceCollection';
 export class MenuFormBuilder {
     static menuTitle = { translate: 'construct.mainmenu.title' };
 
-    static buildAllInstanceName() {
+    static buildAllInstanceName(instanceNames) {
         const allInstanceNameForm = new ActionFormData()
             .title(this.menuTitle)
             .body({ translate: 'construct.mainmenu.selectinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.settings' });
-        MenuFormBuilder.addInstanceButtons(allInstanceNameForm);
+        instanceNames.forEach(instanceName => {
+            allInstanceNameForm.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
+        });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.newinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.howto' });
         return allInstanceNameForm;
-    }
-
-    static addInstanceButtons(form) {
-        const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
-        instanceNames.forEach(instanceName => {
-            form.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
-        });
     }
 
     static buildNewInstance() {

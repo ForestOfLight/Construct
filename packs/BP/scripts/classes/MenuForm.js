@@ -30,11 +30,11 @@ export class MenuForm {
 
     async getInstanceNameFromForm() {
         try {
-            return forceShow(this.player, MenuFormBuilder.buildAllInstanceName()).then((response) => {
+            const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
+            return forceShow(this.player, MenuFormBuilder.buildAllInstanceName(instanceNames)).then((response) => {
                 if (response.canceled)
                     return void 0;
                 let selection = response.selection;
-                const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
                 if (selection === 0) {
                     new BuilderForm(this.player);
                     return void 0;
@@ -83,7 +83,9 @@ export class MenuForm {
         return MenuFormBuilder.buildAllStructures().show(this.player).then((response) => {
             if (response.canceled)
                 return void 0;
-            const selectedStructureId = instanceCollection.getWorldStructureIds()[response.selection];
+            const worldStructureIds = instanceCollection.getWorldStructureIds();
+            worldStructureIds.sort((a, b) => a.localeCompare(b));
+            const selectedStructureId = worldStructureIds[response.selection];
             return selectedStructureId || this.getOtherStructureId();
         });
     }

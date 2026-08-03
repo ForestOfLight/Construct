@@ -6,7 +6,7 @@ import { Builders } from "../Builder/Builders";
 export class MaterialGrabberFormBuilder {
     static menuTitle = { rawtext: [MenuFormBuilder.menuTitle, { translate: 'construct.materials.grabber.menu.title' }] };
 
-    static buildInstanceSelector(player) {
+    static buildInstanceSelector(player, instanceNames) {
         const allInstanceNameForm = new ActionFormData()
             .title(this.menuTitle);
         const currInstanceName = Builders.get(player.id).materialInstanceName;
@@ -18,7 +18,9 @@ export class MaterialGrabberFormBuilder {
         body.rawtext.push({ text: '\n' });
         body.rawtext.push({ translate: 'construct.materials.grabber.menu.selectinstance' });
         allInstanceNameForm.body(body);
-        MenuFormBuilder.addInstanceButtons(allInstanceNameForm);
+        instanceNames.forEach(instanceName => {
+            allInstanceNameForm.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
+        });
         return allInstanceNameForm;
     }
 }
