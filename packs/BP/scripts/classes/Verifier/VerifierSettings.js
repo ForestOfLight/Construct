@@ -11,9 +11,8 @@ class ParticleLifetime {
     static toSeconds(ticks) {
         return Math.max(ticks, ParticleLifetime.MIN_TICKS) / TicksPerSecond;
     }
-}
+}    
 
-// Where a verifier reads its settings from.
 export class InstanceVerifierSettings {
     #instance;
 
@@ -25,16 +24,10 @@ export class InstanceVerifierSettings {
         return this.#verifierOptions().isEnabled;
     }
 
-    // Derived per pass rather than cached: selecting a layer shrinks the active
-    // volume, and the cycle should tighten to match without the player touching
-    // the refresh setting.
     blocksPerTick(volume) {
         return RefreshRate.blocksPerTick(volume, this.#verifierOptions().refreshSeconds);
     }
 
-    // Whether a missing block will be drawn as its own model, which decides
-    // what shape its cell offers its neighbors. Read once per pass rather than
-    // per block, the way the renderer does it.
     showsBlockPreview() {
         return renderProfileOf(this.#instance.options.renderMode).blockPreview;
     }
@@ -48,9 +41,6 @@ export class InstanceVerifierSettings {
     }
 }
 
-// A verifier with no instance options behind it, for the one-shot sweep behind
-// the statistics form. It renders no preview of its own, so its cells describe
-// themselves the way the default render mode would.
 export class StandaloneVerifierSettings {
     #blocksPerTick;
     #particleLifetimeTicks;

@@ -1,13 +1,9 @@
-const CHUNK_SIZE = 16;
-const CHUNK_MASK = CHUNK_SIZE - 1;
-const CHUNK_SHIFT = 4;
-// Wide enough that no chunk X can collide with another chunk's Z.
-const CHUNK_KEY_STRIDE = 4194304;
-
-// Maps structure-local coordinates onto the world chunks they land in, so the
-// sweep can walk one chunk's worth of a row at a time and skip whole chunks it
-// has already found unreadable.
 export class ChunkGrid {
+    #chunkSize = 16;
+    #chunkMask = this.#chunkSize - 1;
+    #chunkShift = 4;
+    #chunkKeyStride = 4194304;
+
     #origin;
 
     constructor(origin) {
@@ -15,13 +11,12 @@ export class ChunkGrid {
     }
 
     keyAt(x, z) {
-        const chunkX = (x + this.#origin.x) >> CHUNK_SHIFT;
-        const chunkZ = (z + this.#origin.z) >> CHUNK_SHIFT;
-        return chunkX * CHUNK_KEY_STRIDE + chunkZ;
+        const chunkX = (x + this.#origin.x) >> this.#chunkShift;
+        const chunkZ = (z + this.#origin.z) >> this.#chunkShift;
+        return chunkX * this.#chunkKeyStride + chunkZ;
     }
 
-    // The first x past the chunk that x falls in.
     endOfSpanX(x) {
-        return x + CHUNK_SIZE - ((x + this.#origin.x) & CHUNK_MASK);
+        return x + this.#chunkSize - ((x + this.#origin.x) & this.#chunkMask);
     }
 }

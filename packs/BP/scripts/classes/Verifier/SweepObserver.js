@@ -1,10 +1,6 @@
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { drawExpiringDebugBox } from "../Render/preview/ExpiringDebugBox";
 
-// What a sweep does with each cell beyond recording it. The continuous sweep
-// draws nothing itself - the preview renderer reads the finished grid on its
-// own schedule - so this exists for the one-shot sweep behind the statistics
-// form, which has no renderer to hand off to.
 export class SilentSweepObserver {
     onCellVerified() {}
 }

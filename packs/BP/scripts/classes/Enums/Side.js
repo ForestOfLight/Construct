@@ -1,9 +1,7 @@
 import { Vector } from "../../lib/Vector.js";
 
-// The six sides of a block, in the order the baked face table indexes them (see
-// _CULL_DIRECTIONS in tools/bake_block_models/main.py). A baked face's cull
-// value is a subscript into this, so reordering it alone would cull against the
-// wrong side of the block.
+// The six sides of a block, in the order the baked face table indexes them (see _CULL_DIRECTIONS in tools/bake_block_models/main.py).
+// A baked face's cull value is a subscript into this, so reordering it alone would cull against the wrong side of the block.
 export class Side {
     static Down = 0;
     static Up = 1;

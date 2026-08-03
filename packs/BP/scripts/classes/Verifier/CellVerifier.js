@@ -1,12 +1,6 @@
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { BlockComparator } from "./BlockComparator";
 import { CellShape } from "./CellShape";
 
-// Verifies a single cell of a structure: how the world block there compares to
-// the one the structure wants, and the shape that answer gives its neighbors.
-//
-// Throws whatever the dimension throws for an unreadable chunk. Callers decide
-// what an unreadable cell means to them.
 export class CellVerifier {
     #instance;
     #shape;
@@ -29,6 +23,24 @@ export class CellVerifier {
         const worldBlock = this.#instance.getDimension()?.getBlock(globalLocation);
         if (!worldBlock)
             return BlockVerificationLevel.Skipped;
-        return BlockComparator.compare(worldBlock, this.#instance.getBlock(location));
+        return this.#compare(worldBlock, this.#instance.getBlock(location));
+    }
+
+    #compare(worldBlock, structureBlock) {
+        if (!structureBlock)
+            return BlockVerificationLevel.Air;
+        if (structureBlock.typeId === "minecraft:air")
+            return worldBlock.isAir ? BlockVerificationLevel.Air : BlockVerificationLevel.NoMatch;
+        if (worldBlock.isAir)
+            return BlockVerificationLevel.Missing;
+        if (worldBlock.typeId !== structureBlock.typeId)
+            return BlockVerificationLevel.NoMatch;
+        if (worldBlock.isWaterlogged !== structureBlock.isWaterlogged)
+            return BlockVerificationLevel.TypeMatch;
+        if (!structureBlock.hasStates)
+            return BlockVerificationLevel.Match;
+        if (worldBlock.permutation.matches(structureBlock.typeId, structureBlock.states))
+            return BlockVerificationLevel.Match;
+        return BlockVerificationLevel.TypeMatch;
     }
 }

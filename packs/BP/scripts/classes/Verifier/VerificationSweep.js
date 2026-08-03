@@ -3,13 +3,6 @@ import { Vector } from "../../lib/Vector";
 import { ChunkGrid } from "./ChunkGrid";
 import { SkippedChunkTracker } from "./SkippedChunkTracker";
 
-// One full pass over a structure's active bounds, filling a grid as it goes.
-//
-// Written as a generator so it can be paced across ticks: run() yields the
-// number of blocks each step covered, and whoever drives it decides when to ask
-// for the next one. A step is one chunk's worth of a row, which is the largest
-// unit that can be attributed to a single chunk when it turns out to be
-// unreadable.
 export class VerificationSweep {
     #bounds;
     #grid;
@@ -71,8 +64,6 @@ export class VerificationSweep {
         this.#observer.onCellVerified(location, verificationLevel);
     }
 
-    // Only the level, because a skipped cell offers its neighbors nothing and
-    // the grid was cleared to exactly that before the pass began.
     #markSkipped(startX, endX, y, z) {
         for (let x = startX; x < endX; x++)
             this.#grid.setLevel(this.#location.set(x, y, z), BlockVerificationLevel.Skipped);

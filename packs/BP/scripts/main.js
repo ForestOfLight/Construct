@@ -1,6 +1,6 @@
 // Setup
 import './classes/Builder/Builders';
-import './classes/Verifier/BlockChangeWatcher';
+import './classes/BlockChangeWatcher';
 
 // Options
 import './options/easyPlace';

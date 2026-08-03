@@ -1,13 +1,6 @@
 import { system } from "@minecraft/server";
 import { BlockBudget } from "./BlockBudget";
 
-// Paces one sweep across ticks and settles when it ends, whether it finished,
-// was cancelled, or threw.
-//
-// The budget is spent by this class rather than by the sweep so that a step is
-// never started without the credit to pay for it. A step costs up to a whole
-// chunk span, so a sweep that checked its own budget mid-step would cover ~16
-// blocks regardless of the rate, flattening the slow end of the setting.
 export class VerificationRun {
     #sweep;
     #blocksPerTick;
@@ -23,7 +16,6 @@ export class VerificationRun {
         this.#completion = new Promise((resolve) => { this.#settle = resolve; });
     }
 
-    // Resolves true if the sweep ran to the end, false if it was cut short.
     start() {
         this.#steps = this.#sweep.run();
         this.#runner = system.runInterval(() => this.#advance());

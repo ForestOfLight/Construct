@@ -1,11 +1,3 @@
-const UNLOADED_CHUNK_ERROR = 'LocationInUnloadedChunkError';
-const OUT_OF_BOUNDS_ERROR = 'LocationOutOfWorldBoundariesError';
-
-// Remembers which chunks cannot be read so they are only probed once per sweep.
-//
-// Chunk load state is column-wide, so an unloaded chunk stays skipped for every
-// layer. World boundaries depend on the layer, so those chunks are only skipped
-// within the one that found them.
 export class SkippedChunkTracker {
     #unloadedChunks = new Set();
     #outOfBoundsChunks = new Set();
@@ -19,11 +11,11 @@ export class SkippedChunkTracker {
     }
 
     trackError(error, chunkKey) {
-        if (error?.name === UNLOADED_CHUNK_ERROR) {
+        if (error?.name === 'LocationInUnloadedChunkError') {
             this.#unloadedChunks.add(chunkKey);
             return true;
         }
-        if (error?.name === OUT_OF_BOUNDS_ERROR) {
+        if (error?.name === 'LocationOutOfWorldBoundariesError') {
             this.#outOfBoundsChunks.add(chunkKey);
             return true;
         }
