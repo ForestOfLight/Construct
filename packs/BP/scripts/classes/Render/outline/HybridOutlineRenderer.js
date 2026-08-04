@@ -6,11 +6,11 @@ export class HybridOutlineRenderer extends OutlineRenderer {
     #edgeRenderer;
     #cornerRenderer;
 
-    constructor(dimension, min, max) {
+    constructor(dimension, min, max, particleTiming) {
         super(dimension, min, max);
         this.#edgeRenderer = new DebugOutlineRenderer(dimension, min, max);
         this.#edgeRenderer.drawCorners = false;
-        this.#cornerRenderer = new ParticleOutlineRenderer(dimension, min, max);
+        this.#cornerRenderer = new ParticleOutlineRenderer(dimension, min, max, particleTiming);
         this.#cornerRenderer.drawEdges = false;
     }
 
@@ -25,9 +25,10 @@ export class HybridOutlineRenderer extends OutlineRenderer {
     }
 
     setBounds(dimension, min, max) {
-        super.setBounds(dimension, min, max);
+        const changed = super.setBounds(dimension, min, max);
         this.#edgeRenderer.setBounds(dimension, min, max);
         this.#cornerRenderer.setBounds(dimension, min, max);
+        return changed;
     }
 
     addStandaloneCorners(locations) {

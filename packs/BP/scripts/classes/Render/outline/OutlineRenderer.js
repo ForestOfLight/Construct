@@ -7,6 +7,7 @@ export class OutlineRenderer {
     cuboid;
     drawCorners = true;
     drawEdges = true;
+    #standaloneCorners = [];
 
     cornerColor = Object.freeze({ red: 1, green: 1, blue: 1, alpha: 1 });
     edgeColors = Object.freeze([
@@ -19,12 +20,16 @@ export class OutlineRenderer {
     }
 
     setBounds(dimension, min, max) {
+        if (dimension === this.dimension && this.cuboid.matches(min, max))
+            return false;
         this.#assignBounds(dimension, min, max);
+        return true;
     }
 
     addStandaloneCorners(locations) {
         for (const location of locations)
-            this.corners.push(Vector.from(location));
+            this.#standaloneCorners.push(Vector.from(location));
+        this.#collectCorners();
     }
 
     start() {
@@ -38,6 +43,12 @@ export class OutlineRenderer {
     #assignBounds(dimension, min, max) {
         this.dimension = dimension;
         this.cuboid = new Cuboid(min, max);
-        this.corners = this.cuboid.corners;
+        this.#collectCorners();
+    }
+
+    #collectCorners() {
+        this.corners = this.#standaloneCorners.length === 0
+            ? this.cuboid.corners
+            : [...this.cuboid.corners, ...this.#standaloneCorners];
     }
 }

@@ -1,8 +1,6 @@
 import { StructureNotFoundError } from "../../Errors/StructureNotFoundError";
-import { renderProfileOf } from "../../Enums/RenderMode";
 import { Cuboid } from "./Cuboid";
-import { HybridOutlineRenderer } from "./HybridOutlineRenderer.js";
-import { ParticleOutlineRenderer } from "./ParticleOutlineRenderer.js";
+import { createOutlineRenderer } from "./createOutlineRenderer.js";
 
 export class StructureOutliner {
     instance;
@@ -49,8 +47,6 @@ export class StructureOutliner {
     }
 
     #createRenderer(view) {
-        const profile = renderProfileOf(this.instance.options.renderMode);
-        const Renderer = profile.hybridOutline ? HybridOutlineRenderer : ParticleOutlineRenderer;
-        return new Renderer(view.dimension, view.min, view.max);
+        return createOutlineRenderer(this.instance.getRenderMode(), view.dimension, view.min, view.max);
     }
 }

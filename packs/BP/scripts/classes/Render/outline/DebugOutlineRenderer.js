@@ -4,9 +4,29 @@ import { OutlineRenderer } from "./OutlineRenderer.js";
 export class DebugOutlineRenderer extends OutlineRenderer {
     CORNER_SPHERE_SCALE = 0.1;
     #shapes = [];
+    #isDrawing = false;
 
     start() {
         this.stop();
+        this.#isDrawing = true;
+        this.#draw();
+    }
+
+    stop() {
+        this.#isDrawing = false;
+        for (const shape of this.#shapes)
+            shape.remove();
+        this.#shapes.length = 0;
+    }
+
+    setBounds(dimension, min, max) {
+        const changed = super.setBounds(dimension, min, max);
+        if (changed && this.#isDrawing)
+            this.start();
+        return changed;
+    }
+
+    #draw() {
         if (this.drawCorners) {
             for (const corner of this.corners) {
                 const cornerSphereShape = this.#cornerSphere(corner);
@@ -21,12 +41,6 @@ export class DebugOutlineRenderer extends OutlineRenderer {
                 this.#add(edgeShape, color);
             }
         }
-    }
-
-    stop() {
-        for (const shape of this.#shapes)
-            shape.remove();
-        this.#shapes.length = 0;
     }
 
     #add(shape, color) {

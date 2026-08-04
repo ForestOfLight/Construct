@@ -1,8 +1,7 @@
 import { MolangVariableMap, system, TicksPerSecond } from "@minecraft/server";
 import { OutlineRenderer } from "./OutlineRenderer.js";
 
-const DEFAULT_DRAW_INTERVAL_TICKS = 10;
-const DEFAULT_LIFETIME_TICKS = 20;
+const DEFAULT_TIMING = Object.freeze({ drawIntervalTicks: 10, lifetimeTicks: 20 });
 
 export class ParticleOutlineRenderer extends OutlineRenderer {
     #outlineParticle = "construct:outline";
@@ -11,8 +10,9 @@ export class ParticleOutlineRenderer extends OutlineRenderer {
     #lifetimeSeconds;
     #runner;
 
-    constructor(dimension, min, max, drawIntervalTicks = DEFAULT_DRAW_INTERVAL_TICKS, lifetimeTicks = DEFAULT_LIFETIME_TICKS) {
+    constructor(dimension, min, max, timing) {
         super(dimension, min, max);
+        const { drawIntervalTicks, lifetimeTicks } = { ...DEFAULT_TIMING, ...timing };
         this.#drawIntervalTicks = drawIntervalTicks;
         this.#lifetimeSeconds = lifetimeTicks / TicksPerSecond;
     }

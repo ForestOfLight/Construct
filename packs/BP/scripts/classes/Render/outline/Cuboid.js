@@ -51,6 +51,11 @@ export class Cuboid {
         }
     }
 
+    matches(min, max) {
+        return this.min.x === min.x && this.min.y === min.y && this.min.z === min.z
+            && this.max.x === max.x && this.max.y === max.y && this.max.z === max.z;
+    }
+
     edgePoints() {
         return Cuboid.edgePoints(this.corners);
     }
