@@ -29,6 +29,8 @@ export class InstanceInfoCommand extends Command {
             { text: '\n' },
             this.getLayerText(instance),
             { text: '\n' },
+            this.getRenderModeText(instance),
+            { text: '\n' },
             this.getVerifierText(instance),
             { text: '\n' },
             this.getSizeText(instance)
@@ -49,7 +51,7 @@ export class InstanceInfoCommand extends Command {
         if (!instance.hasLocation())
             return { translate: 'construct.commands.instanceinfo.noLocation' };
         const { dimensionId, location } = instance.getLocation();
-        return { translate: 'construct.commands.instanceinfo.location', with: [location.toString(), dimensionId.replace('minecraft:', '')] };
+        return { translate: 'construct.commands.instanceinfo.location', with: [Vector.from(location).toString(), dimensionId.replace('minecraft:', '')] };
     }
 
     getEnabledText(instance) {
@@ -60,6 +62,10 @@ export class InstanceInfoCommand extends Command {
         return { translate: 'construct.commands.instanceinfo.layer', with: [String(instance.getLayer()), String(instance.getMaxLayer())] };
     }
 
+    getRenderModeText(instance) {
+        return { translate: 'construct.commands.instanceinfo.renderMode', with: [String(instance.getRenderMode())] };
+    }
+
     getVerifierText(instance) {
         const verifier = instance.options.verifier;
         return { translate: 'construct.commands.instanceinfo.verifier', with: [String(verifier.isEnabled)] };
@@ -67,7 +73,7 @@ export class InstanceInfoCommand extends Command {
 
     getSizeText(instance) {
         const bounds = instance.getBounds();
-        return { translate: 'construct.commands.instanceinfo.size', with: [bounds.max.toString(), Vector.volume(bounds.min, bounds.max).toString()] };
+        return { translate: 'construct.commands.instanceinfo.size', with: [Vector.from(bounds.max).toString(), Vector.volume(bounds.min, bounds.max).toString()] };
     }
 }
 

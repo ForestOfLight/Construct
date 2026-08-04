@@ -40,7 +40,7 @@ construct.instance.option.rendermode=Render Mode
 construct.instance.option.rendermode.description=How the instance is drawn. Performance mode is great for FPS.
 construct.instance.option.rendermode.default=Default
 construct.instance.option.rendermode.performance=Performance
-construct.instance.option.rendermode.previewonly=Ghost Preview
+construct.instance.option.rendermode.previewonly=Texture Preview
 construct.instance.option.rendermode.classic=Classic
 construct.instance.option.refreshrate=Refresh Rate (seconds)
 construct.instance.option.refreshrate.description=How long a full rescan takes. This controls how quickly changes not caused directly by the player are noticed. Low values can be laggy.
@@ -185,6 +185,7 @@ construct.commands.instanceinfo.location=§7Location:§r %1 in %2	## Insert stri
 construct.commands.instanceinfo.noLocation=§7Location:§r (none)	## Used when the instance has no saved location
 construct.commands.instanceinfo.enabled=§7Enabled:§r %1	## Insert string: true/false indicating whether the instance is enabled
 construct.commands.instanceinfo.layer=§7Layer:§r %1 / %2	## Insert strings: current layer, max layer
+construct.commands.instanceinfo.renderMode=§7Render Mode:§r %1	## Insert string: render mode
 construct.commands.instanceinfo.verifier=§7Verifier running:§r %1	## Insert string: true/false indicating whether the verifier is running
 construct.commands.instanceinfo.size=§7Size:§r %1 (%2 blocks)	## Insert strings: size (x, y, z), total block volume count
 

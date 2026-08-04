@@ -29,7 +29,7 @@ Rename an existing instance.
 | `<instanceName>` | Current instance name. |
 | `<newInstanceName>` | Desired new name. Errors if already in use. |
  
-### `construct:list`
+### `construct:instances`
 List all registered instances and their status.
  
 > Prints each instance name, its bound structure ID, enabled/disabled state, and placed location (if any).
@@ -110,7 +110,7 @@ Enable or disable a per-player builder option. Must be run as a player source.
 
 ## Information
  
-### `construct:info <instanceName>`
+### `construct:instanceinfo <instanceName>`
 Print instance details to chat.
  
 > Outputs: bound structure ID, enabled state, placed location and dimension, current layer, verifier enabled, structure bounds (min/max). Equivalent to the data shown in the instance menu body.
