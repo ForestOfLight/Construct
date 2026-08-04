@@ -15,8 +15,9 @@
 
 Give yourself the tools to ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
 
-- **Easy Place**: Always places blocks correctly.
+- **Structure Hologram**
 - **Block Validation**: Highlights incorrect blocks.
+- **Easy Place**: Always places blocks correctly.
 - **Material Grabbing**: Pulls required materials from chests in just one click.
 - **Layered Building**: Build structures in layers.
 - **Structure Management**: Create and edit many structures at once.
@@ -73,6 +74,7 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Block texture display
 - [x] Pick structure block
 - [ ] Mirroring and Rotation
+- [ ] Simpler Structure Import/Export
 
 ## Issues & Suggestions
 
