@@ -13,7 +13,7 @@
 
 ---
 
-Give yourself the tools to ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
+Ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and more:
 
 - **Structure Hologram**
 - **Block Validation**: Highlights incorrect blocks.
@@ -50,7 +50,7 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
     1. Move the `Construct[BP]` to your `com.mojang/development_behavior_packs` folder.
     2. Drop your `.mcstructure` file in Construct's `Construct[BP]/structures` folder. 
     3. Restart your world.
-    4. Your structure should now be in in Construct's structure list!
+    4. Your structure should now be in Construct's structure list!
 - For devices that cannot export .mcstructure files:
     1. Export your world file.
     2. Go to https://holoprint-mc.github.io/ and use its "Extract From World" feature to get your .mcstructures.
