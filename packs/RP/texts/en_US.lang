@@ -91,6 +91,8 @@ construct.blockinfo.noeasyplace=§e[Cannot be Easy Placed]	## When the targeted 
 construct.blockinfo.unknown=§7Unknown
 construct.blockinfo.waterlogged=§7isWaterlogged: §3true
 
+construct.pickblock.inventoryfull=§cCannot pick structure block: inventory is full.
+
 ## Builder Options
 construct.option.enabled= is now enabled!
 construct.option.disabled= is now disabled.

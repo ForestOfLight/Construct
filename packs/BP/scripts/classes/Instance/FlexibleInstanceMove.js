@@ -1,9 +1,11 @@
 import { InputPermissionCategory, world, system } from "@minecraft/server";
-import { ParticleOutlineRenderer } from "../Render/outline/ParticleOutlineRenderer";
+import { createOutlineRenderer } from "../Render/outline/createOutlineRenderer";
 import { MENU_ITEM } from "../../consts";
 import { Vector } from "../../lib/Vector";
 import { PlayerMovement } from "../PlayerMovement";
 import { Builders } from "../Builder/Builders";
+
+const MOVE_OUTLINE_TIMING = Object.freeze({ drawIntervalTicks: 1, lifetimeTicks: 1 });
 
 export class FlexibleInstanceMove {
     player;
@@ -39,9 +41,14 @@ export class FlexibleInstanceMove {
     prepInstanceForMovement() {
         this.instance.flexMovingPlayerId = this.player.id;
         this.instance.disable();
-        const bounds = this.instance.getBounds();
-        const maxWorldLocation = this.currentInstanceLocation.add(Vector.from(bounds.max));
-        this.outliner = new ParticleOutlineRenderer(this.instance.getDimension(), this.currentInstanceLocation, maxWorldLocation, 1, 1);
+        const { min, max } = this.outlineBounds();
+        this.outliner = createOutlineRenderer(
+            this.instance.getRenderMode(),
+            this.instance.getDimension(),
+            min,
+            max,
+            MOVE_OUTLINE_TIMING
+        );
         this.outliner.start();
     }
 
@@ -85,14 +92,17 @@ export class FlexibleInstanceMove {
     }
     
     moveOutline() {
+        const { min, max } = this.outlineBounds();
+        this.outliner.setBounds(this.instance.getDimension(), min, max);
+    }
+
+    outlineBounds() {
         const bounds = this.instance.getBounds();
-        const minWorldLocation = this.currentInstanceLocation.floor()
-        const maxWorldLocation = new Vector(
-            minWorldLocation.x + bounds.max.x,
-            minWorldLocation.y + bounds.max.y,
-            minWorldLocation.z + bounds.max.z
-        );
-        this.outliner.setBounds(this.instance.getDimension(), minWorldLocation, maxWorldLocation);
+        const origin = this.currentInstanceLocation.floor();
+        return {
+            min: origin.add(bounds.min),
+            max: origin.add(bounds.max)
+        };
     }
 
     onPlayerUseItem(event) {

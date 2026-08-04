@@ -6,6 +6,7 @@ import { placeBlock, fetchMatchingItemSlot } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
 import { Vector } from '../lib/Vector';
+import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
 
 const locationsPlacedLastTick = new Set();
 const ACTION_ITEM = 'construct:easy_place';
@@ -116,12 +117,13 @@ function isHoldingActionItem(player) {
 }
 
 function tryPlaceBlock(player, worldBlock, structureBlock) {
-    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock)) return;
-    let permutation = tryConvertBannedToValidBlock(structureBlock);
+    if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock))
+        return;
+    let permutation = StructureBlockConverter.fromBannedBlockToValidPermutation(structureBlock);
     if (player.getGameMode() === GameMode.Creative) {
         placeBlock(player, worldBlock, permutation);
     } else if (player.getGameMode() === GameMode.Survival) {
-        permutation = tryConvertToDefaultState(permutation);
+        permutation = StructureBlockConverter.toDefaultState(permutation);
         tryPlaceBlockSurvival(player, worldBlock, permutation);
     }
 }
@@ -148,37 +150,11 @@ export function isBannedBlock(player, structureBlock) {
     return false;
 }
 
-function tryConvertBannedToValidBlock(structureBlock) {
-    const blockId = structureBlock.typeId.replace('minecraft:', '');
-    if (Object.keys(bannedToValidBlockMap).includes(blockId))
-        return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.states);
-    if (blockId === "bubble_column" && structureBlock.isWaterlogged)
-        return BlockPermutation.resolve('minecraft:water');
-    return structureBlock.permutation;
-}
-
-function tryConvertToDefaultState(permutation) {
-    const newStates = {};
-    for (const [stateKey, stateValue] of Object.entries(permutation.getAllStates())) {
-        if (resetToBlockStates[stateKey] !== void 0 && stateValue !== resetToBlockStates[stateKey])
-            newStates[stateKey] = resetToBlockStates[stateKey];
-        else
-            newStates[stateKey] = stateValue;
-    }
-    return BlockPermutation.resolve(permutation.type.id, newStates);
-}
-
 function tryPlaceBlockSurvival(player, block, permutation) {
-    const placeableItemStack = getPlaceableItemStack(permutation);
+    const placeableItemStack = StructureBlockConverter.toPlaceableItemStack(permutation);
     const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
     if (itemSlotToUse)
         placeBlock(player, block, permutation, itemSlotToUse);
-}
-
-function getPlaceableItemStack(permutation) {
-    const blockId = permutation.type.id.replace('minecraft:', '');
-    const newItemId = blockIdToItemStackMap[blockId];
-    return newItemId ? new ItemStack(newItemId) : permutation.getItemStack();
 }
 
 function isBlockInsidePlayer(player, worldBlock) {

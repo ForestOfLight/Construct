@@ -251,6 +251,10 @@ export class StructureInstance {
         this.previewRenderer.refresh();
     }
 
+    getRenderMode() {
+        return this.options.renderMode;
+    }
+
     setRenderMode(mode) {
         this.options.setRenderMode(mode);
         this.refreshBox();

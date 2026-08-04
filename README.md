@@ -71,6 +71,7 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Flexible structure movement
 - [x] Translation support
 - [x] Block texture display
+- [x] Pick structure block
 - [ ] Mirroring and Rotation
 
 ## Issues & Suggestions
