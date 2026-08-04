@@ -163,11 +163,11 @@ construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "
 
 ## construct:nextlayer
 construct.commands.nextlayer=Step a Construct instance one layer up.
-construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.	## Insert strings: instance name, layer number
+construct.commands.nextlayer.success=§aInstance "%1" increased to layer %2.	## Insert strings: instance name, layer number
 
 ## construct:prevlayer
 construct.commands.prevlayer=Step a Construct instance one layer down.
-construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.	## Insert strings: instance name, layer number
+construct.commands.prevlayer.success=§aInstance "%1" decreased to layer %2.	## Insert strings: instance name, layer number
 
 ## construct:verifier
 construct.commands.verifier=Toggle block validation overlay for a Construct instance.
