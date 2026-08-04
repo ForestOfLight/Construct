@@ -14,3 +14,5 @@ Detailed information about the available API endpoints can be found in the follo
 
 - [Endpoints](./API/Endpoints.md)
 - [Data Models](./API/DataModels.md)
+
+Construct's API will follow semantic versioning, and any breaking changes will be documented in the release notes.
