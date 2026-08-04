@@ -79,6 +79,7 @@ function onPlayerInteractWithBlock(event) {
     const { player, block, isFirstEvent } = event;
     if (!player || !isFirstEvent || !block || !builderOption.isEnabled(player.id) || !isHoldingActionItem(player)) return;
     preventAction(event, player);
+    processEasyPlace(player);
 }
 
 function processEasyPlace(player) {
