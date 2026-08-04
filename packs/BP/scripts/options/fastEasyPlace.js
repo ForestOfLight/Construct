@@ -120,11 +120,15 @@ function isHoldingActionItem(player) {
 function tryPlaceBlock(player, worldBlock, structureBlock) {
     if (isBannedBlock(player, structureBlock) || !locationIsPlaceable(player, worldBlock))
         return;
+    const gameMode = player.getGameMode();
     let permutation = StructureBlockConverter.fromBannedBlockToValidPermutation(structureBlock);
-    if (player.getGameMode() === GameMode.Creative) {
-        placeBlock(player, worldBlock, permutation);
-    } else if (player.getGameMode() === GameMode.Survival) {
+    if (gameMode === GameMode.Survival)
         permutation = StructureBlockConverter.toDefaultState(permutation);
+    if (!isSupported(worldBlock, permutation))
+        return;
+    if (gameMode === GameMode.Creative) {
+        placeBlock(player, worldBlock, permutation);
+    } else if (gameMode === GameMode.Survival) {
         tryPlaceBlockSurvival(player, worldBlock, permutation);
     }
 }
@@ -149,6 +153,10 @@ export function isBannedBlock(player, structureBlock) {
         }
     }
     return false;
+}
+
+function isSupported(worldBlock, permutationToPlace) {
+    return worldBlock.canPlace(permutationToPlace);
 }
 
 function tryPlaceBlockSurvival(player, block, permutation) {

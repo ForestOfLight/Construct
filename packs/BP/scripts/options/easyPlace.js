@@ -66,12 +66,16 @@ function isHoldingActionItem(player) {
 function tryPlaceBlock(event, player, block, structureBlock) {
     if (shouldPreventAction(player, structureBlock))
         return preventAction(event, player);
+    const gameMode = player.getGameMode();
     let permutation = StructureBlockConverter.fromBannedBlockToValidPermutation(structureBlock);
-    if (player.getGameMode() === GameMode.Creative) {
+    if (gameMode === GameMode.Survival)
+        permutation = StructureBlockConverter.toDefaultState(permutation);
+    if (!isSupported(block, permutation))
+        return preventAction(event, player);
+    if (gameMode === GameMode.Creative) {
         event.cancel = true;
         placeBlock(player, block, permutation);
-    } else if (player.getGameMode() === GameMode.Survival) {
-        permutation = StructureBlockConverter.toDefaultState(permutation);
+    } else if (gameMode === GameMode.Survival) {
         tryPlaceBlockSurvival(event, player, block, permutation);
     }
 }
@@ -101,6 +105,10 @@ function isBannedBlock(player, structureBlock) {
         }
     }
     return false;
+}
+
+function isSupported(worldBlock, permutationToPlace) {
+    return worldBlock.canPlace(permutationToPlace);
 }
 
 function tryPlaceBlockSurvival(event, player, block, permutation) {
