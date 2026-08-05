@@ -1,6 +1,6 @@
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class NextLayerCommand extends Command {
     constructor() {
@@ -16,7 +16,7 @@ export class NextLayerCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         instance.increaseLayer();
         origin.sendMessage({ translate: 'construct.commands.nextlayer.success', with: [instanceName, String(instance.getLayer())] });
         return { status: CustomCommandStatus.Success };

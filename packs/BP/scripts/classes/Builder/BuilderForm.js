@@ -18,31 +18,9 @@ export class BuilderForm {
     applySettings(formValues) {
         const optionIds = BuilderOptions.getOptionIds();
         for (let i = 0; i < optionIds.length; i++) {
-            const option = BuilderOptions.get(optionIds[i]);
-            const changedToValue = option.setValue(this.player.id, formValues[i]);
-            if (changedToValue === true) {
-                this.player.sendMessage({ rawtext: [
-                    { text: `§a` },
-                    option.displayName,
-                    { translate: 'construct.option.enabled' },
-                    { text: `§7 ` },
-                    option.howToUse
-                ]});
-            } else if (changedToValue === false) {
-                this.player.sendMessage({ rawtext: [
-                    { text: `§c` },
-                    option.displayName,
-                    { translate: 'construct.option.disabled' }
-                ]});
-            }
+            const message = BuilderOptions.get(optionIds[i]).applyFormValue(this.player.id, formValues[i]);
+            if (message)
+                this.player.sendMessage(message);
         }
-    }
-
-    valueChangedToEnabled(hasChanged, newValue) {
-        return hasChanged && newValue === true;
-    }
-
-    valueChangedToDisabled(hasChanged, newValue) {
-        return hasChanged && newValue === false;
     }
 }

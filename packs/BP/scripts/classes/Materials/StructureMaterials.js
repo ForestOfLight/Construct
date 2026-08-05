@@ -4,11 +4,11 @@ import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 
 class StructureMaterials {
     instance;
-    materials;
+    #materials;
 
     constructor(instance) {
         this.instance = instance;
-        this.materials = {};
+        this.#materials = {};
     }
 
     refresh() {
@@ -31,26 +31,26 @@ class StructureMaterials {
     }
 
     get materials() {
-        return this.materials;
+        return this.#materials;
     }
 
     get(itemType) {
-        return this.materials[itemType];
+        return this.#materials[itemType];
     }
 
     isEmpty() {
-        return Object.keys(this.materials).length === 0;
+        return Object.keys(this.#materials).length === 0;
     }
 
     has(itemType) {
-        return this.materials[itemType] !== undefined;
+        return this.#materials[itemType] !== undefined;
     }
 
     remove(itemType, amount) {
-        if (!this.materials[itemType]) return;
-        this.materials[itemType].count -= amount;
-        if (this.materials[itemType].count <= 0)
-            delete this.materials[itemType];
+        if (!this.#materials[itemType]) return;
+        this.#materials[itemType].count -= amount;
+        if (this.#materials[itemType].count <= 0)
+            delete this.#materials[itemType];
     }
 
     *populateAll() {
@@ -78,21 +78,21 @@ class StructureMaterials {
     }
 
     countBlock(block) {
-        const itemStack = block?.getItemStack();
+        const itemStack = block?.permutation.getItemStack();
         const typeId = itemStack?.typeId;
         if (!typeId) return;
-        if (!this.materials[typeId])
-            this.materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
-        this.materials[typeId].count++;
+        if (!this.#materials[typeId])
+            this.#materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
+        this.#materials[typeId].count++;
     }
 
     clear() {
-        for (const key in this.materials)
-            delete this.materials[key];
+        for (const key in this.#materials)
+            delete this.#materials[key];
     }
 
     formatString(otherMaterials = void 0) {
-        const materials = otherMaterials || this.materials;
+        const materials = otherMaterials || this.#materials;
         let message = { rawtext: [] };
         const sortedTypes = Object.keys(materials).sort(
             (a, b) => materials[b].count - materials[a].count
@@ -126,7 +126,7 @@ class StructureMaterials {
     }
 
     getMaterialsDifference(container) {
-        const missingMaterials = JSON.parse(JSON.stringify(this.materials));
+        const missingMaterials = JSON.parse(JSON.stringify(this.#materials));
         for (let slotIndex = 0; slotIndex < container.size; slotIndex++) {
             const slot = container.getSlot(slotIndex);
             if (slot.hasItem()) {

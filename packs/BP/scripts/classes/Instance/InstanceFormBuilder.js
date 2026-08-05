@@ -1,8 +1,10 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
-import { StructureStatistics } from '../Structure/StructureStatistics';
+import { InstanceStatistics } from './InstanceStatistics';
 import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
+import { RENDER_MODE_LABELS, RENDER_MODE_ORDER } from '../Enums/RenderMode';
+import { RefreshRate } from '../Verifier/RefreshRate';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -43,9 +45,9 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
         if (this.structureVerifier)
             throw new Error('StructureVerifier is already running.');
-        this.structureVerifier = new StructureVerifier(instance, { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true });
+        this.structureVerifier = StructureVerifier.standalone(instance, { particleLifetime: 1*TicksPerSecond });
         const verification = await this.structureVerifier.verifyStructure(true);
-        const statistics = new StructureStatistics(instance, verification);
+        const statistics = new InstanceStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
         this.structureVerifier = void 0;
         buildStatisticsForm.body(statsMessage);
@@ -57,6 +59,24 @@ export class InstanceFormBuilder {
             .title(MenuFormBuilder.menuTitle)
             .toggle({ translate: 'construct.instance.option.validation' }, { defaultValue: instance.options.verifier.isEnabled, tooltip: { translate: 'construct.instance.option.validation.description' }})
             .slider({ translate: 'construct.instance.option.layer'}, 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: { translate: 'construct.instance.option.layer.description' }})
+            .dropdown(
+                { translate: 'construct.instance.option.rendermode' },
+                RENDER_MODE_ORDER.map(mode => ({ translate: RENDER_MODE_LABELS[mode] })),
+                {
+                    defaultValueIndex: Math.max(RENDER_MODE_ORDER.indexOf(instance.options.renderMode), 0),
+                    tooltip: { translate: 'construct.instance.option.rendermode.description' }
+                }
+            )
+            .slider(
+                { translate: 'construct.instance.option.refreshrate' },
+                RefreshRate.MIN_SECONDS,
+                RefreshRate.MAX_SECONDS,
+                {
+                    defaultValue: instance.options.verifier.refreshSeconds,
+                    valueStep: RefreshRate.SECONDS_STEP,
+                    tooltip: { translate: 'construct.instance.option.refreshrate.description' }
+                }
+            )
             .submitButton({ translate: 'construct.menu.submit' });
     }
 

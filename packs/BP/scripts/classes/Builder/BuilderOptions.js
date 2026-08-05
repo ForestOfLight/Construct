@@ -17,6 +17,10 @@ export class BuilderOptions {
         return this.options[optionId].isEnabled(playerId);
     }
 
+    static getValue(optionId, playerId) {
+        return this.options[optionId].getValue(playerId);
+    }
+
     static setValue(optionId, playerId, value) {
         return this.options[optionId].setValue(playerId, value);
     }

@@ -1,6 +1,6 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class LayerCommand extends Command {
     constructor() {
@@ -17,7 +17,7 @@ export class LayerCommand extends Command {
     }
 
     run(origin, instanceName, layer) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         const max = instance.getMaxLayer();
         if (layer < 0 || layer > max) {
             origin.sendMessage({ translate: 'construct.commands.layer.outOfBounds', with: [String(layer), instanceName, String(max)] });

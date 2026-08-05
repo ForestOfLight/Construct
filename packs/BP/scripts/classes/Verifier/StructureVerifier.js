@@ -1,144 +1,147 @@
-import { BlockVerifier } from "./BlockVerifier";
-import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { BlockVerificationLevelRender } from "../Render/BlockVerificationLevelRender";
-import { system, TicksPerSecond } from "@minecraft/server";
+import { system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
-
-const MIN_TRACK_PLAYER_DISTANCE = 0;
-const MAX_TRACK_PLAYER_DISTANCE = 7;
-const MIN_LIFETIME = 8;
+import { CellVerifier } from "./CellVerifier";
+import { GridBuffers } from "./GridBuffers";
+import { PriorityPass } from "./PriorityPass";
+import { RefreshRate } from "./RefreshRate";
+import { DebugBoxSweepObserver, SilentSweepObserver } from "./SweepObserver";
+import { VerificationRun } from "./VerificationRun";
+import { VerificationSweep } from "./VerificationSweep";
+import { InstanceVerifierSettings, StandaloneVerifierSettings } from "./VerifierSettings";
 
 export class StructureVerifier {
-    instance;
-    particleLifetime;
+    #instance;
+    #settings;
+    #buffers = new GridBuffers();
+    #priorityPass = new PriorityPass();
+    #run;
+    #loop;
+    #isPassPending = false;
 
-    locationsToVerify;
-    blockVerificationLevels;
-    isLocationPopulationComplete;
-    isVerificationComplete;
-    shouldStartNextVerification;
-    lastCompleteVerificationLevels;
-
-    #runner;
-    #verifyJob;
-    #populateJob = {};
-
-    constructor(instance, { isEnabled = false, trackPlayerDistance = 0, particleLifetime = 10, isStandalone = false } = {}) {
-        this.instance = instance;
-        this.particleLifetime = Math.max(particleLifetime, MIN_LIFETIME);
-        if (isStandalone) {
-            this.isStandalone = isStandalone;
-            this.enabled = isEnabled;
-            this.trackPlayerDistance = trackPlayerDistance;
-        } else {
-            this.instance.options.setVerifierEnabled(isEnabled);
-            this.instance.options.setVerifierDistance(trackPlayerDistance);
-        }
-        this.locationsToVerify = new Set();
+    static forInstance(instance) {
+        return new StructureVerifier(instance, new InstanceVerifierSettings(instance));
     }
 
-    startContinuousVerification() {
-        this.shouldStartNextVerification = true;
-        this.#runner = system.runInterval(() => {
-            if (this.shouldStartNextVerification)
-                this.verifyStructure();
-        });
+    static standalone(instance, options) {
+        return new StructureVerifier(instance, new StandaloneVerifierSettings(options));
     }
 
-    stopContinuousVerification() {
-        if (!this.#runner)
-            return;
-        system.clearRun(this.#runner);
-        this.#runner = void 0;
-    }
-
-    refresh() {
-        this.stopContinuousVerification();
-        if (!this.instance.isEnabled())
-            return;
-        this.startContinuousVerification();
+    constructor(instance, settings) {
+        this.#instance = instance;
+        this.#settings = settings;
     }
 
     isEnabled() {
-        if (this.isStandalone)
-            return this.enabled;
-        return this.instance.options.verifier.isEnabled;
+        return this.#settings.isEnabled();
     }
 
-    getTrackPlayerDistance() {
-        let distance;
-        if (this.isStandalone)
-            distance = this.trackPlayerDistance;
-        else
-            distance = this.instance.options.verifier.trackPlayerDistance
-        return Math.min(MAX_TRACK_PLAYER_DISTANCE, Math.max(MIN_TRACK_PLAYER_DISTANCE, distance));
+    getCompletedGrid() {
+        return this.#buffers.completed();
+    }
+
+    refresh(isPriority = false) {
+        this.#stopLoop();
+        this.#cancelRun();
+        if (isPriority)
+            this.#priorityPass.arm();
+        if (this.#instance.isEnabled())
+            this.#startLoop();
     }
 
     async verifyStructure(shouldRender = false) {
         if (!this.isEnabled())
+            return void 0;
+        const bounds = this.#instance.getActiveBounds();
+        const volume = Vector.volume(bounds.min, bounds.max);
+        if (volume <= 0)
+            return this.#buffers.completed();
+        this.#cancelRun();
+        const run = this.#beginRun(bounds, volume, shouldRender);
+        this.#finishRun(run, await run.start());
+        return this.#buffers.completed();
+    }
+
+    patchCell(location) {
+        const completed = this.#buffers.completed();
+        if (!completed)
             return;
-        this.initVerification();
-        return new Promise(async (resolve) => {
-            if (this.#verifyJob)
-                system.clearJob(this.#verifyJob);
-            this.#verifyJob = system.runJob(this.verifyBlocks(shouldRender));
-            const checker = system.runInterval(() => {
-                if (this.isVerificationComplete) {
-                    system.clearRun(checker);
-                    this.lastCompleteVerificationLevels = JSON.parse(JSON.stringify(this.blockVerificationLevels));
-                    this.shouldStartNextVerification = true;
-                    resolve(this.blockVerificationLevels);
-                }
-            }, 1);
+        const cell = this.#tryVerifyCell(location);
+        if (!cell)
+            return;
+        completed.setCell(location, cell.verificationLevel, cell.flags);
+        const filling = this.#buffers.filling()
+        filling?.setCell(location, cell.verificationLevel, cell.flags);
+    }
+
+    #tryVerifyCell(location) {
+        try {
+            return this.#newCellVerifier().verify(location);
+        } catch {
+            return void 0;
+        }
+    }
+
+    #startLoop() {
+        this.#isPassPending = true;
+        this.#loop = system.runInterval(() => {
+            if (this.#isPassPending)
+                this.verifyStructure();
         });
     }
 
-    initVerification() {
-        this.shouldStartNextVerification = false;
-        this.locationsToVerify.clear();
-        this.blockVerificationLevels = { correctlyAir: 0 };
-        this.isLocationPopulationComplete = false;
-        this.isVerificationComplete = false;
-    }
-    
-    *verifyBlocks(shouldRender) {
-        const bounds = this.instance.getActiveBounds();
-        for (let y = bounds.min.y; y < bounds.max.y; y++) {
-            for (let z = bounds.min.z; z < bounds.max.z; z++) {
-                for (let x = bounds.min.x; x < bounds.max.x; x++) {
-                    const location = new Vector(x, y, z);
-                    this.verifyBlock(location, shouldRender);
-                    yield void 0;
-                }
-            }
-        }
-        this.isVerificationComplete = true;
+    #stopLoop() {
+        if (!this.#loop)
+            return;
+        system.clearRun(this.#loop);
+        this.#loop = void 0;
     }
 
-    verifyBlock(location, shouldRender) {
-        const verificationLevel = this.getVerificationLevel(location);
-        if (verificationLevel === BlockVerificationLevel.Air) {
-            this.blockVerificationLevels.correctlyAir++;
-        } else {
-            this.blockVerificationLevels[JSON.stringify(location)] = verificationLevel;
-            if (shouldRender) {
-                const dimensionLocation = { dimension: this.instance.getDimension(), location: this.instance.toGlobalCoords(location) };
-                new BlockVerificationLevelRender(dimensionLocation, verificationLevel, this.particleLifetime/TicksPerSecond);
-            }
-        }
+    #beginRun(bounds, volume, shouldRender) {
+        this.#isPassPending = false;
+        this.#run = new VerificationRun(
+            this.#newSweep(bounds, shouldRender),
+            this.#blocksPerTick(volume)
+        );
+        return this.#run;
     }
 
-    getVerificationLevel(location) {
-        const worldBlock = this.instance.getDimension()?.getBlock(this.instance.toGlobalCoords(location));
-        if (!worldBlock)
-            return BlockVerificationLevel.Skipped;
-        const blockVerifier = new BlockVerifier(worldBlock, this.instance);
-        return blockVerifier.verify();
+    #blocksPerTick(volume) {
+        if (this.#priorityPass.isArmed())
+            return RefreshRate.priorityBlocksPerTick();
+        return this.#settings.blocksPerTick(volume);
     }
 
-    getLastVerificationLevels() {
-        if (!this.lastCompleteVerificationLevels)
-            return {};
-        return this.lastCompleteVerificationLevels;
+    #finishRun(run, didComplete) {
+        if (this.#run === run)
+            this.#run = void 0;
+        if (!didComplete)
+            return;
+        this.#priorityPass.disarm();
+        this.#buffers.commit();
+        this.#isPassPending = true;
+    }
+
+    #cancelRun() {
+        this.#run?.cancel();
+    }
+
+    #newSweep(bounds, shouldRender) {
+        return new VerificationSweep({
+            bounds,
+            grid: this.#buffers.beginPass(bounds),
+            origin: this.#instance.toGlobalCoords({ x: 0, y: 0, z: 0 }),
+            cellVerifier: this.#newCellVerifier(),
+            observer: this.#newObserver(shouldRender)
+        });
+    }
+
+    #newCellVerifier() {
+        return new CellVerifier(this.#instance, this.#settings.showsBlockPreview());
+    }
+
+    #newObserver(shouldRender) {
+        if (!shouldRender)
+            return new SilentSweepObserver();
+        return new DebugBoxSweepObserver(this.#instance, this.#settings.particleLifetimeSeconds());
     }
 }

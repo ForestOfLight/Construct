@@ -1080,6 +1080,10 @@ export const blocks = {
          "west" : "chiseled_bookshelf_side"
       }
    },
+   "chiseled_cinnabar" : {
+      "sound" : "cinnabar",
+      "textures" : "chiseled_cinnabar"
+   },
    "chiseled_copper" : {
       "sound" : "copper",
       "textures" : "chiseled_copper"
@@ -1139,6 +1143,10 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "chiseled_stone_bricks"
    },
+   "chiseled_sulfur" : {
+      "sound" : "sulfur",
+      "textures" : "chiseled_sulfur"
+   },
    "chiseled_tuff" : {
       "sound" : "tuff",
       "textures" : {
@@ -1162,6 +1170,46 @@ export const blocks = {
    "chorus_plant" : {
       "sound" : "stone",
       "textures" : "chorus_plant"
+   },
+   "cinnabar" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar"
+   },
+   "cinnabar_brick_double_slab" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar_bricks"
+   },
+   "cinnabar_brick_slab" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar_bricks"
+   },
+   "cinnabar_brick_stairs" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar_bricks"
+   },
+   "cinnabar_brick_wall" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar_bricks"
+   },
+   "cinnabar_bricks" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar_bricks"
+   },
+   "cinnabar_double_slab" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar"
+   },
+   "cinnabar_slab" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar"
+   },
+   "cinnabar_stairs" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar"
+   },
+   "cinnabar_wall" : {
+      "sound" : "cinnabar",
+      "textures" : "cinnabar"
    },
    "clay" : {
       "isotropic" : true,
@@ -2500,7 +2548,6 @@ export const blocks = {
          "up" : "still_water_grey"
       }
    },
-   "format_version" : "1.21.40",
    "frame" : {
       "sound" : "itemframe",
       "textures" : "itemframe_background"
@@ -2568,6 +2615,10 @@ export const blocks = {
    "gold_ore" : {
       "sound" : "stone",
       "textures" : "gold_ore"
+   },
+   "golden_dandelion" : {
+      "sound" : "grass",
+      "textures" : "golden_dandelion"
    },
    "golden_rail" : {
       "sound" : "metal",
@@ -4426,6 +4477,26 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "polished_blackstone"
    },
+   "polished_cinnabar" : {
+      "sound" : "cinnabar",
+      "textures" : "polished_cinnabar"
+   },
+   "polished_cinnabar_double_slab" : {
+      "sound" : "cinnabar",
+      "textures" : "polished_cinnabar"
+   },
+   "polished_cinnabar_slab" : {
+      "sound" : "cinnabar",
+      "textures" : "polished_cinnabar"
+   },
+   "polished_cinnabar_stairs" : {
+      "sound" : "cinnabar",
+      "textures" : "polished_cinnabar"
+   },
+   "polished_cinnabar_wall" : {
+      "sound" : "cinnabar",
+      "textures" : "polished_cinnabar"
+   },
    "polished_deepslate" : {
       "isotropic" : false,
       "sound" : "deepslate",
@@ -4483,6 +4554,26 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "polished_granite"
    },
+   "polished_sulfur" : {
+      "sound" : "sulfur",
+      "textures" : "polished_sulfur"
+   },
+   "polished_sulfur_double_slab" : {
+      "sound" : "sulfur",
+      "textures" : "polished_sulfur"
+   },
+   "polished_sulfur_slab" : {
+      "sound" : "sulfur",
+      "textures" : "polished_sulfur"
+   },
+   "polished_sulfur_stairs" : {
+      "sound" : "sulfur",
+      "textures" : "polished_sulfur"
+   },
+   "polished_sulfur_wall" : {
+      "sound" : "sulfur",
+      "textures" : "polished_sulfur"
+   },
    "polished_tuff" : {
       "sound" : "polished_tuff",
       "textures" : "polished_tuff"
@@ -4514,6 +4605,10 @@ export const blocks = {
    "potatoes" : {
       "sound" : "grass",
       "textures" : "potatoes"
+   },
+   "potent_sulfur" : {
+      "sound" : "potent_sulfur",
+      "textures" : "potent_sulfur"
    },
    "powder_snow" : {
       "isotropic" : false,
@@ -5743,6 +5838,57 @@ export const blocks = {
    "structure_void" : {
       "textures" : "flattened_structure_void"
    },
+   "sulfur" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur"
+   },
+   "sulfur_brick_double_slab" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur_bricks"
+   },
+   "sulfur_brick_slab" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur_bricks"
+   },
+   "sulfur_brick_stairs" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur_bricks"
+   },
+   "sulfur_brick_wall" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur_bricks"
+   },
+   "sulfur_bricks" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur_bricks"
+   },
+   "sulfur_double_slab" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur"
+   },
+   "sulfur_slab" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur"
+   },
+   "sulfur_spike" : {
+      "sound" : "sulfur",
+      "textures" : {
+         "down" : "sulfur_spike_frustum",
+         "east" : "sulfur_spike_base",
+         "north" : "sulfur_spike_tip",
+         "south" : "sulfur_spike_middle",
+         "up" : "sulfur_spike_base",
+         "west" : "sulfur_spike_merge"
+      }
+   },
+   "sulfur_stairs" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur"
+   },
+   "sulfur_wall" : {
+      "sound" : "sulfur",
+      "textures" : "sulfur"
+   },
    "sunflower" : {
       "carried_textures" : "sunflower_carried",
       "sound" : "grass",
@@ -6850,7 +6996,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.ancient_debris",
+            "sound" : "place.ancient_debris",
             "volume" : 1.0
          },
          "power.off" : {
@@ -6953,7 +7099,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.azalea_leaves",
+            "sound" : "place.azalea_leaves",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7127,7 +7273,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.bamboo_wood_hanging_sign",
+            "sound" : "place.bamboo_wood_hanging_sign",
             "volume" : 1.0
          }
       }
@@ -7151,7 +7297,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.basalt",
+            "sound" : "place.basalt",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7219,7 +7365,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.bone_block",
+            "sound" : "place.bone_block",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7299,7 +7445,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : 1.0,
-            "sound" : "dig.candle",
+            "sound" : "place.candle",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7333,7 +7479,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.cave_vines",
+            "sound" : "place.cave_vines",
             "volume" : 1.0
          }
       },
@@ -7359,7 +7505,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.chain",
+            "sound" : "place.chain",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7488,7 +7634,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.cherry_wood_hanging_sign",
+            "sound" : "place.cherry_wood_hanging_sign",
             "volume" : 1.0
          }
       }
@@ -7535,6 +7681,25 @@ export const block_sounds = {
       "pitch" : 1.0,
       "volume" : 1.0
    },
+   "cinnabar" : {
+      "events" : {
+         "break" : {
+            "pitch" : 0.80,
+            "sound" : "block.cinnabar.break"
+         },
+         "hit" : {
+            "pitch" : 0.50,
+            "sound" : "block.cinnabar.hit",
+            "volume" : 0.30
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.cinnabar.place"
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
    "cloth" : {
       "events" : {
          "break" : {
@@ -7554,7 +7719,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.cloth",
+            "sound" : "place.cloth",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7588,7 +7753,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 0.80 ],
-            "sound" : "dig.wood",
+            "sound" : "place.wood",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7630,7 +7795,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.copper",
+            "sound" : "place.copper",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7750,7 +7915,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : 0.80,
-            "sound" : "break.copper_grate",
+            "sound" : "place.copper_grate",
             "volume" : 1.0
          }
       },
@@ -7776,7 +7941,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.coral",
+            "sound" : "place.coral",
             "volume" : 1.0
          },
          "power.off" : {
@@ -7843,7 +8008,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : 1.0,
-            "sound" : "break.decorated_pot",
+            "sound" : "place.decorated_pot",
             "volume" : 1.0
          },
          "shatter_pot" : {
@@ -8059,7 +8224,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : 1.50,
-            "sound" : "break.frog_spawn",
+            "sound" : "place.frog_spawn",
             "volume" : 0.20
          }
       }
@@ -8082,7 +8247,7 @@ export const block_sounds = {
             "volume" : 1.0
          },
          "place" : {
-            "sound" : "break.froglight",
+            "sound" : "place.froglight",
             "volume" : 1.0
          }
       },
@@ -8107,7 +8272,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.fungus",
+            "sound" : "place.fungus",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8141,7 +8306,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.stone",
+            "sound" : "place.stone",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8175,7 +8340,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.grass",
+            "sound" : "place.grass",
             "volume" : 0.80
          }
       },
@@ -8201,7 +8366,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.grass",
+            "sound" : "place.grass",
             "volume" : 0.80
          },
          "power.off" : {
@@ -8235,7 +8400,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.gravel",
+            "sound" : "place.gravel",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8303,7 +8468,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.hanging_sign",
+            "sound" : "place.hanging_sign",
             "volume" : 1.0
          }
       }
@@ -8327,7 +8492,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : 0.80,
-            "sound" : "break.heavy_core",
+            "sound" : "place.heavy_core",
             "volume" : 1.0
          }
       },
@@ -8353,7 +8518,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.honey_block",
+            "sound" : "place.honey_block",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8479,7 +8644,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.wood",
+            "sound" : "place.wood",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8606,7 +8771,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 0.80 ],
-            "sound" : "dig.wood",
+            "sound" : "place.wood",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8640,7 +8805,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.lodestone",
+            "sound" : "place.lodestone",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8745,7 +8910,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 1.20, 1.250 ],
-            "sound" : "dig.stone",
+            "sound" : "place.stone",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8785,7 +8950,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : 0.80,
-            "sound" : "block.mob_spawner.break"
+            "sound" : "block.mob_spawner.place"
          }
       },
       "pitch" : 1.0,
@@ -8925,7 +9090,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.nether_brick",
+            "sound" : "place.nether_brick",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8959,7 +9124,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.nether_gold_ore",
+            "sound" : "place.nether_gold_ore",
             "volume" : 1.0
          },
          "power.off" : {
@@ -8993,7 +9158,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 1.20, 1.250 ],
-            "sound" : "dig.nether_sprouts",
+            "sound" : "place.nether_sprouts",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9027,7 +9192,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.nether_wart",
+            "sound" : "place.nether_wart",
             "volume" : 0.70
          },
          "power.off" : {
@@ -9133,7 +9298,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.nether_wood_hanging_sign",
+            "sound" : "place.nether_wood_hanging_sign",
             "volume" : 1.0
          }
       }
@@ -9157,7 +9322,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.netherite",
+            "sound" : "place.netherite",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9191,7 +9356,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.netherrack",
+            "sound" : "place.netherrack",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9230,7 +9395,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.stone",
+            "sound" : "place.stone",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9264,7 +9429,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 0.80 ],
-            "sound" : "dig.nylium",
+            "sound" : "place.nylium",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9386,6 +9551,28 @@ export const block_sounds = {
       "pitch" : 1.20,
       "volume" : 1.0
    },
+   "potent_sulfur" : {
+      "events" : {
+         "ambient" : {
+            "sound" : "block.potent_sulfur.ambient"
+         },
+         "break" : {
+            "pitch" : 0.80,
+            "sound" : "block.potent_sulfur.break"
+         },
+         "hit" : {
+            "pitch" : 0.50,
+            "sound" : "block.potent_sulfur.hit",
+            "volume" : 0.30
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.potent_sulfur.place"
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
    "powder_snow" : {
       "events" : {
          "break" : {
@@ -9405,7 +9592,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.powder_snow",
+            "sound" : "place.powder_snow",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9483,7 +9670,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.roots",
+            "sound" : "place.roots",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9518,7 +9705,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.sand",
+            "sound" : "place.sand",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9587,7 +9774,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.sculk",
+            "sound" : "place.sculk",
             "volume" : 1.0
          }
       },
@@ -9614,7 +9801,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.sculk_catalyst",
+            "sound" : "place.sculk_catalyst",
             "volume" : 1.0
          }
       }
@@ -9673,7 +9860,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.sculk_shrieker",
+            "sound" : "place.sculk_shrieker",
             "volume" : 1.0
          }
       }
@@ -9698,7 +9885,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "break.sculk_vein",
+            "sound" : "place.sculk_vein",
             "volume" : 1.0
          }
       }
@@ -9735,7 +9922,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.shroomlight",
+            "sound" : "place.shroomlight",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9769,7 +9956,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "mob.slime.big",
+            "sound" : "place.slime.big",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9834,7 +10021,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.snow",
+            "sound" : "place.snow",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9868,7 +10055,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.soul_sand",
+            "sound" : "place.soul_sand",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9902,7 +10089,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.soul_soil",
+            "sound" : "place.soul_soil",
             "volume" : 1.0
          },
          "power.off" : {
@@ -9996,7 +10183,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.stem",
+            "sound" : "place.stem",
             "volume" : 1.0
          },
          "power.off" : {
@@ -10038,7 +10225,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.stone",
+            "sound" : "place.stone",
             "volume" : 1.0
          },
          "power.off" : {
@@ -10054,6 +10241,25 @@ export const block_sounds = {
          },
          "pressure_plate.click_on" : {
             "sound" : "click_on.stone_pressure_plate"
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
+   "sulfur" : {
+      "events" : {
+         "break" : {
+            "pitch" : 0.80,
+            "sound" : "block.sulfur.break"
+         },
+         "hit" : {
+            "pitch" : 0.50,
+            "sound" : "block.sulfur.hit",
+            "volume" : 0.30
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.sulfur.place"
          }
       },
       "pitch" : 1.0,
@@ -10275,7 +10481,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.stone",
+            "sound" : "place.stone",
             "volume" : 1.0
          },
          "power.off" : {
@@ -10331,7 +10537,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "dig.vines",
+            "sound" : "place.vines",
             "volume" : 1.0
          },
          "power.off" : {
@@ -10361,7 +10567,7 @@ export const block_sounds = {
             "sound" : "step.web"
          },
          "place" : {
-            "sound" : "break.web"
+            "sound" : "place.web"
          }
       },
       "pitch" : 1.0,
@@ -10462,7 +10668,7 @@ export const block_sounds = {
          },
          "place" : {
             "pitch" : [ 0.80, 0.80 ],
-            "sound" : "dig.wood",
+            "sound" : "place.wood",
             "volume" : 1.0
          },
          "power.off" : {

@@ -13,6 +13,10 @@ export class Builder {
         return BuilderOptions.isEnabled(optionId, this.playerId);
     }
 
+    getOptionValue(optionId) {
+        return BuilderOptions.getValue(optionId, this.playerId);
+    }
+
     setOption(optionId, value) {
         return BuilderOptions.setValue(optionId, this.playerId, value);
     }
@@ -27,7 +31,8 @@ export class Builder {
             easyPlace: this.isOptionEnabled('easyPlace'),
             fastEasyPlace: this.isOptionEnabled('fastEasyPlace'),
             materialGrabber: this.isOptionEnabled('materialGrabber'),
-            materialInstanceName: this.materialInstanceName
+            materialInstanceName: this.materialInstanceName,
+            defaultRenderMode: this.getOptionValue('defaultRenderMode')
         };
     }
 
@@ -35,6 +40,7 @@ export class Builder {
         this.setOption('easyPlace', builderOptions.easyPlace);
         this.setOption('fastEasyPlace', builderOptions.fastEasyPlace);
         this.setOption('materialGrabber', builderOptions.materialGrabber);
+        this.setOption('defaultRenderMode', builderOptions.defaultRenderMode);
         this.materialInstanceName = builderOptions.materialInstanceName;
     }
 }

@@ -1,6 +1,6 @@
 import { Command } from '../classes/Commands/Command';
 import { CustomCommandParamType, CustomCommandStatus, CommandPermissionLevel, system } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class DeleteCommand extends Command {
     constructor() {
@@ -16,9 +16,9 @@ export class DeleteCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         system.run(() => {
-            structureCollection.delete(instanceName);
+            instanceCollection.delete(instanceName);
             origin.sendMessage({ translate: 'construct.commands.delete.success', with: [instanceName] });
         });
         return { status: CustomCommandStatus.Success };

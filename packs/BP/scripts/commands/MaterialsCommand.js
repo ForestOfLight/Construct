@@ -1,6 +1,6 @@
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, EntityComponentTypes, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 import { NotAPlayerError } from '../classes/Errors/NotAPlayerError';
 
@@ -21,7 +21,7 @@ export class MaterialsCommand extends Command {
     }
 
     run(origin, instanceName, missing) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         const onlyMissing = missing === true;
         if (onlyMissing)
             this.assertIsPlayer(origin);

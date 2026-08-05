@@ -13,18 +13,19 @@
 
 ---
 
-Give yourself the tools to ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and several more:
+Ease the survival building process with Construct, an addon designed to help you transfer your builds from creative to survival. Construct offers these convenient features and more:
 
-- **Easy Place**: Always places blocks correctly.
+- **Structure Hologram**
 - **Block Validation**: Highlights incorrect blocks.
+- **Easy Place**: Always places blocks correctly.
 - **Material Grabbing**: Pulls required materials from chests in just one click.
 - **Layered Building**: Build structures in layers.
 - **Structure Management**: Create and edit many structures at once.
 - **Structure Importing**: Import structures from other worlds quickly and easily.
 
 <div align="center">
-    <a href="./demo.png">
-        <img src="./demo.png" alt="Construct Structure Demo" height="350">
+    <a href="./demo.gif">
+        <img src="./demo.gif" alt="Construct Structure Demo" height="350">
     </a>
 </div>
 
@@ -49,7 +50,7 @@ Construct uses Minecraft's vanilla structure system so that you can easily creat
     1. Move the `Construct[BP]` to your `com.mojang/development_behavior_packs` folder.
     2. Drop your `.mcstructure` file in Construct's `Construct[BP]/structures` folder. 
     3. Restart your world.
-    4. Your structure should now be in in Construct's structure list!
+    4. Your structure should now be in Construct's structure list!
 - For devices that cannot export .mcstructure files:
     1. Export your world file.
     2. Go to https://holoprint-mc.github.io/ and use its "Extract From World" feature to get your .mcstructures.
@@ -77,7 +78,10 @@ Need help, want to discuss technical Minecraft, or follow future updates? [**Joi
 - [x] Material list
 - [x] Flexible structure movement
 - [x] Translation support
-- [ ] Block texture display
+- [x] Block texture display
+- [x] Pick structure block
+- [ ] Mirroring and Rotation
+- [ ] Simpler Structure Import/Export
 
 ## Issues & Suggestions
 

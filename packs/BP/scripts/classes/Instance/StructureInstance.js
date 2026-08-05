@@ -1,13 +1,13 @@
 import { Vector } from "../../lib/Vector";
-import { StructureOutliner } from "../Render/StructureOutliner";
+import { StructureOutliner } from "../Render/outline/StructureOutliner";
 import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
 import { InstanceOptions } from "./InstanceOptions";
 import { world, system, TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
-import { VerificationRenderer } from "../Render/VerificationRenderer";
-import { structureCollection } from "../Structure/StructureCollection";
+import { BlockPreviewRenderer } from "../Render/preview/BlockPreviewRenderer";
+import { instanceCollection } from "../Instance/InstanceCollection";
 import { InstanceExistsError } from "../Errors/InstanceExistsError";
 
 export class StructureInstance {
@@ -15,13 +15,15 @@ export class StructureInstance {
     structure = void 0;
     outliner = void 0;
     verifier = void 0;
-    verificationRenderer = void 0;
+    previewRenderer = void 0;
     materials = void 0;
     flexMovingPlayerId = void 0;
 
-    constructor(instanceName, structureId) {
+    #cachedDimension = void 0;
+
+    constructor(instanceName, structureId, defaults = {}) {
         this.structure = new Structure(structureId);
-        this.options = new InstanceOptions(instanceName, structureId);
+        this.options = new InstanceOptions(instanceName, structureId, defaults);
         this.refreshBox();
         this.subscribeToEvents();
     }
@@ -33,7 +35,7 @@ export class StructureInstance {
         delete this.structure;
         delete this.outliner;
         delete this.verifier;
-        delete this.verificationRenderer;
+        delete this.previewRenderer;
         delete this.materials;
     }
 
@@ -43,14 +45,14 @@ export class StructureInstance {
         if (!this.outliner)
             this.outliner = new StructureOutliner(this);
         if (!this.verifier)
-            this.verifier = new StructureVerifier(this, { isEnabled: this.options.verifier.isEnabled });
-        if (!this.verificationRenderer)
-            this.verificationRenderer = new VerificationRenderer(this);
+            this.verifier = StructureVerifier.forInstance(this);
+        if (!this.previewRenderer)
+            this.previewRenderer = new BlockPreviewRenderer(this);
         if (!this.materials)
             this.materials = new StructureMaterials(this);
         this.outliner.refresh();
-        this.verifier.refresh();
-        this.verificationRenderer.refresh();
+        this.verifier.refresh(true);
+        this.previewRenderer.refresh(true);
         this.materials.refresh();
     }
 
@@ -71,7 +73,9 @@ export class StructureInstance {
     }
 
     getDimension() {
-        return this.options?.getDimension();
+        if (!this.#cachedDimension)
+            this.#cachedDimension = this.options?.getDimension();
+        return this.#cachedDimension;
     }
     
     getLayer() {
@@ -79,7 +83,7 @@ export class StructureInstance {
     }
 
     getMaxLayer() {
-        return this.structure.getHeight();
+        return this.structure?.getHeight();
     }
 
     getBounds() {
@@ -103,8 +107,8 @@ export class StructureInstance {
         const min = this.structure.getMin();
         const max = this.structure.getMax();
         return {
-            min: new Vector(min.x, layer - 1, min.z),
-            max: new Vector(max.x, layer, max.z)
+            min: { x: min.x, y: layer - 1, z: min.z },
+            max: { x: max.x, y: layer, z: max.z }
         };
     }
 
@@ -197,7 +201,7 @@ export class StructureInstance {
     }
 
     rename(newName) {
-        if (structureCollection.has(newName))
+        if (instanceCollection.has(newName))
             throw new InstanceExistsError(newName);
         this.options.rename(newName);
     }
@@ -227,7 +231,7 @@ export class StructureInstance {
     setVerifierEnabled(enable) {
         this.options.setVerifierEnabled(enable);
         this.verifier.refresh();
-        this.verificationRenderer.refresh();
+        this.previewRenderer.refresh();
     }
 
     setVerifierDistance(distance) {
@@ -238,7 +242,22 @@ export class StructureInstance {
         } else {
             this.options.verifier.particleLifetime = 10;
         }
-        this.verificationRenderer.refresh();
+        this.previewRenderer.refresh();
+    }
+
+    setVerifierRefreshSeconds(seconds) {
+        this.options.setVerifierRefreshSeconds(seconds);
+        this.verifier.refresh();
+        this.previewRenderer.refresh();
+    }
+
+    getRenderMode() {
+        return this.options.renderMode;
+    }
+
+    setRenderMode(mode) {
+        this.options.setRenderMode(mode);
+        this.refreshBox();
     }
 
     increaseLayer() {
@@ -280,11 +299,19 @@ export class StructureInstance {
     }
 
     toGlobalCoords(structureLocation) {
-        return Vector.from(structureLocation).add(this.options.worldLocation);
+        return {
+            x: structureLocation.x + this.options.worldLocation.x,
+            y: structureLocation.y + this.options.worldLocation.y,
+            z: structureLocation.z + this.options.worldLocation.z
+        };
     }
 
     toStructureCoords(worldLocation) {
-        return Vector.from(worldLocation).subtract(this.options.worldLocation);
+        return {
+            x: worldLocation.x - this.options.worldLocation.x,
+            y: worldLocation.y - this.options.worldLocation.y,
+            z: worldLocation.z - this.options.worldLocation.z
+        };
     }
 
     asPacket() {
@@ -302,14 +329,15 @@ export class StructureInstance {
                 isEnabled: this.options.verifier.isEnabled,
                 trackPlayerDistance: this.options.verifier.trackPlayerDistance,
                 particleLifetime: this.options.verifier.particleLifetime
-            }
+            },
+            renderMode: this.options.renderMode
         };
     }
 
     setOptions(newOptions) {
         const newVerifierOptions = newOptions.verifier;
         if (newOptions.name !== this.getName())
-            structureCollection.rename(this.getName(), newOptions.name);
+            instanceCollection.rename(this.getName(), newOptions.name);
         this.setStructure(newOptions.structureId);
         this.options.setEnabled(newOptions.isEnabled);
         this.options.move(newOptions.dimensionId, newOptions.location);
@@ -317,6 +345,7 @@ export class StructureInstance {
         this.options.setVerifierEnabled(newVerifierOptions.isEnabled);
         this.options.setVerifierDistance(newVerifierOptions.trackPlayerDistance);
         this.options.setVerifierParticleLifetime(newVerifierOptions.particleLifetime);
+        this.options.setRenderMode(newOptions.renderMode);
         this.options.save();
         this.refreshBox();
     }

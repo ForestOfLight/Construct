@@ -24,7 +24,8 @@ export const InstanceModel = PROTO.Object({
         isEnabled: PROTO.Boolean,
         trackPlayerDistance: PROTO.Int8,
         particleLifetime: PROTO.Int32
-    })
+    }),
+    renderMode: PROTO.String
 });
 
 export const InstancesModel = PROTO.Array(InstanceModel);
@@ -52,7 +53,8 @@ export const BuilderModel = PROTO.Object({
     easyPlace: PROTO.Boolean,
     fastEasyPlace: PROTO.Boolean,
     materialGrabber: PROTO.Boolean,
-    materialInstanceName: PROTO.String
+    materialInstanceName: PROTO.String,
+    defaultRenderMode: PROTO.String
 });
 
 export const BuilderIdParameterModel = PROTO.Object({

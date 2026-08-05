@@ -12,7 +12,7 @@ Create a new instance bound to a structure.
 | `<instanceName>` | Unique name for this instance. |
 | `<structureId>` | ID of a structure saved in the world (without the `mystructure:` prefix). |
  
-> Corresponds to the "create new instance" flow in the main menu. Errors if `instanceName` is already taken or `structureId` does not exist.
+> Errors if `instanceName` is already taken or `structureId` does not exist.
  
 ### `construct:delete <instanceName>`
 Permanently delete an instance.
@@ -20,8 +20,6 @@ Permanently delete an instance.
 | Argument | Description |
 |---|---|
 | `<instanceName>` | Name of the instance to delete. |
- 
-> Calls `structureCollection.delete()`. Also disables the instance and clears its saved dynamic properties before removal.
  
 ### `construct:rename <instanceName> <newInstanceName>`
 Rename an existing instance.
@@ -31,10 +29,10 @@ Rename an existing instance.
 | `<instanceName>` | Current instance name. |
 | `<newInstanceName>` | Desired new name. Errors if already in use. |
  
-### `construct:list`
+### `construct:instances`
 List all registered instances and their status.
  
-> Prints each instance name, its bound structure ID, enabled/disabled state, and placed location (if any). Useful for scripting and quick inspection without opening the GUI.
+> Prints each instance name, its bound structure ID, enabled/disabled state, and placed location (if any).
  
 ## Placement & Movement
  
@@ -46,7 +44,7 @@ Enable and place an instance at a location.
 | `<instanceName>` | Instance to place. |
 | `<x y z>` | World coordinates. Errors if omitted. Supports tilde (`~`) notation. |
  
-> Equivalent to the "Place" button in the instance menu — enables the instance and calls `move()` in one step. If the instance already has a location, this is a move, not a fresh place.
+> If the instance already has a location, this is a move, not a fresh place.
  
 ### `construct:move <instanceName> [x y z]`
 Reposition a placed instance without toggling its enabled state.
@@ -83,7 +81,7 @@ Set the active layer of an instance.
 ### `construct:nextlayer <instanceName>`
 Step the layer up by one (wraps from max back to `0`).
  
-> Mirrors the "Next layer" button. Wrapping from max → `0` restores the whole-structure view.
+> Mirrors the "Next layer" button.
  
 ### `construct:prevlayer <instanceName>`
 Step the layer down by one (wraps from `0` back to max).
@@ -112,7 +110,7 @@ Enable or disable a per-player builder option. Must be run as a player source.
 
 ## Information
  
-### `construct:info <instanceName>`
+### `construct:instanceinfo <instanceName>`
 Print instance details to chat.
  
 > Outputs: bound structure ID, enabled state, placed location and dimension, current layer, verifier enabled, structure bounds (min/max). Equivalent to the data shown in the instance menu body.
@@ -134,10 +132,8 @@ Print the material list for an instance.
 
 ## Utility
  
-### `construct:item`
+### `construct:construct`
 Give yourself the Construct menu item.
- 
-> Already implemented as a native custom command. Needs to be refactored to fit the new command pipeline.
  
 ### `construct:tag <instanceName>`
 Rename the held Construct item to an instance name for quick-open. Errors if the item is not a construct item or if the instance name is not registered.
@@ -145,5 +141,3 @@ Rename the held Construct item to an instance name for quick-open. Errors if the
 | Argument | Description |
 |---|---|
 | `<instanceName>` | Instance name to embed in the item's `nameTag`. Using the item in-world will jump straight to that instance's menu. |
- 
-> The item-use handler in `construct.js` already checks `itemStack.nameTag` against known instance names; this command just makes it easy to tag an item without renaming it in an anvil.

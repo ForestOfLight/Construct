@@ -1,6 +1,6 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class RenameCommand extends Command {
     constructor() {
@@ -17,12 +17,12 @@ export class RenameCommand extends Command {
     }
 
     run(origin, instanceName, newName) {
-        const instance = structureCollection.get(instanceName);
-        if (structureCollection.has(newName)) {
+        const instance = instanceCollection.get(instanceName);
+        if (instanceCollection.has(newName)) {
             origin.sendMessage({ translate: 'construct.error.instanceExists', with: [newName] });
             return void 0;
         }
-        structureCollection.rename(instanceName, newName);
+        instanceCollection.rename(instanceName, newName);
         origin.sendMessage({ translate: 'construct.commands.rename.success', with: [instanceName, newName] });
         return { status: CustomCommandStatus.Success };
     }

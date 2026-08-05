@@ -1,22 +1,18 @@
-import { structureCollection } from "./Structure/StructureCollection";
+import { instanceCollection } from "./Instance/InstanceCollection";
 
 export class Raycaster {
     static STEP_SIZE = 0.2;
 
     static getStructureBlocks(dimension, startLocation, direction, { maxDistance = 7, getFirst = true, collideWithWorldBlocks = true, useActiveLayer = true }) {
-        // Can probably be optimized by the fact that we only need full blocks and aren't checking for partial blocks
         const blocks = [];
         let location = startLocation;
         let distance = 0;
         while (distance < maxDistance) {
-            const structure = structureCollection.getStructure(dimension.id, location, { useActiveLayer });
-            if (structure) {
-                const block = structure.getBlock(structure.toStructureCoords(location));
-                if (block?.type.id !== 'minecraft:air') {
-                    blocks.push({
-                        permutation: block,
-                        location: location
-                    });
+            const instance = instanceCollection.getInstanceAt(dimension.id, location, { useActiveLayer });
+            if (instance) {
+                const block = instance.getBlock(instance.toStructureCoords(location));
+                if (block?.typeId !== 'minecraft:air') {
+                    blocks.push({ block, location, instance});
                     if (getFirst)
                         break;
                 }

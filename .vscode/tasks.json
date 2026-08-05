@@ -64,6 +64,33 @@
                 "echo": true,
                 "close": true
             }
+        },
+        {
+            "label": "bake: block models",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "tools/bake_block_models/main.py"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new",
+                "close": false
+            }
+        },
+        {
+            "label": "regolith: release",
+            "type": "shell",
+            "command": "regolith run release",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new",
+                "close": false
+            }
         }
     ]
 }

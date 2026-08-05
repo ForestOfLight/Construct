@@ -2,7 +2,7 @@ import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, EntityComponentTypes, EquipmentSlot, system } from '@minecraft/server';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 import { MENU_ITEM } from '../consts';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class TagCommand extends Command {
     constructor() {
@@ -19,7 +19,7 @@ export class TagCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         const player = origin.getSource();
         const equipment = player.getComponent(EntityComponentTypes.Equippable);
         const itemStack = equipment?.getEquipment(EquipmentSlot.Mainhand);

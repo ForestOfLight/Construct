@@ -1,13 +1,15 @@
 // Setup
 import './classes/Builder/Builders';
+import './classes/BlockChangeWatcher';
 
 // Options
 import './options/easyPlace';
 import './options/fastEasyPlace';
 import './options/materialGrabber';
+import './options/defaultRenderMode';
 
-// Menu item handler
-import './classes/MenuItemHandler';
+// Interaction Handling
+import './classes/MenuItemInteractions';
 
 // Commands
 import './commands/ConstructCommand';

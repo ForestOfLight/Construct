@@ -1,9 +1,9 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, TicksPerSecond } from '@minecraft/server';
 import { InstanceFormBuilder } from '../classes/Instance/InstanceFormBuilder';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { StructureVerifier } from '../classes/Verifier/StructureVerifier';
-import { StructureStatistics } from '../classes/Structure/StructureStatistics';
+import { InstanceStatistics } from '../classes/Instance/InstanceStatistics';
 
 export class StatsCommand extends Command {
     constructor() {
@@ -19,7 +19,7 @@ export class StatsCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         if (this.structureVerifier)
             return { status: CustomCommandStatus.Failure, error: 'construct.commands.stats.alreadyRunning' };
         system.run(async () => {
@@ -29,10 +29,9 @@ export class StatsCommand extends Command {
     }
 
     async getStatsMessage(instance) {
-        const verifierOptions = { isEnabled: true, particleLifetime: 1*TicksPerSecond, isStandalone: true };
-        this.structureVerifier = new StructureVerifier(instance, verifierOptions);
+        this.structureVerifier = StructureVerifier.standalone(instance, { particleLifetime: 1*TicksPerSecond });
         const verification = await this.structureVerifier.verifyStructure(true);
-        const statistics = new StructureStatistics(instance, verification);
+        const statistics = new InstanceStatistics(instance, verification);
         const statsMessage = statistics.getMessage();
         this.structureVerifier = void 0;
         return statsMessage;

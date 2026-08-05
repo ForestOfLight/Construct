@@ -2,6 +2,7 @@ import { system, EntityComponentTypes, LiquidType, ItemStack } from '@minecraft/
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { specialItemPlacementConversions } from './options/easyPlaceConversions';
 import { blocks, block_sounds } from './blocks';
+import { blockPlacementSignal } from './classes/BlockPlacementSignal';
 
 export async function forceShow(player, form, timeout = Infinity) {
     const startTick = system.currentTick;
@@ -32,6 +33,23 @@ export function fetchMatchingItemSlot(entity, itemToMatchId) {
     return smallestItemSlot;
 }
 
+export function fetchMatchingItemSlotIndex(entity, itemToMatchId) {
+    if (!itemToMatchId)
+        return void 0;
+    const inventory = entity.getComponent(EntityComponentTypes.Inventory)?.container;
+    if (!inventory)
+        return void 0;
+    let smallestItemSlotIndex;
+    for (let index = 0; index < inventory.size; index++) {
+        const itemSlot = inventory.getSlot(index);
+        if (itemSlot.hasItem() && itemSlot?.typeId === itemToMatchId) {
+            if (smallestItemSlotIndex === void 0 || itemSlot.amount < inventory.getSlot(smallestItemSlotIndex).amount)
+                smallestItemSlotIndex = index;
+        }
+    }
+    return smallestItemSlotIndex;
+}
+
 export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume = void 0) {
     system.run(() => {
         if (itemSlotToConsume)
@@ -39,6 +57,9 @@ export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume 
         placedBlock.setPermutation(blockToPlace);
         handleWaterlogging(placedBlock, blockToPlace);
         playBlockPlacementSound(player, placedBlock, blockToPlace);
+        const dimensionId = placedBlock.dimension.id;
+        const { x, y, z } = placedBlock.location;
+        system.run(() => blockPlacementSignal.emit(dimensionId, { x, y, z }));
     });
 }
 

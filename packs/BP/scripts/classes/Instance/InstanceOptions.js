@@ -1,6 +1,15 @@
 import { Vector } from "../../lib/Vector";
 import { world } from "@minecraft/server";
 import { Option } from "../Option";
+import { RenderMode } from "../Enums/RenderMode";
+import { RefreshRate } from "../Verifier/RefreshRate";
+
+const VERIFIER_DEFAULTS = Object.freeze({
+    isEnabled: true,
+    trackPlayerDistance: 5,
+    particleLifetime: 10,
+    refreshSeconds: RefreshRate.DEFAULT_SECONDS
+});
 
 export class InstanceOptions extends Option {
     #DP_NAMESPACE = "instanceOptions";
@@ -10,23 +19,26 @@ export class InstanceOptions extends Option {
     dimensionId = void 0;
     worldLocation = new Vector();
     currentLayer = 0;
-    verifier = {
-        isEnabled: true,
-        trackPlayerDistance: 5,
-        particleLifetime: 10
-    };
+    verifier = { ...VERIFIER_DEFAULTS };
+    renderMode = RenderMode.Default;
 
     static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);
         return options.structureId;
     }
 
-    constructor(instanceName, structureId) {
+    constructor(instanceName, structureId, defaults = {}) {
         super();
         this.instanceName = instanceName;
         this.structureId = structureId;
         this.load();
+        this.#applyDefaults(defaults);
         this.save();
+    }
+
+    #applyDefaults({ renderMode }) {
+        if (renderMode !== void 0)
+            this.renderMode = renderMode;
     }
 
     save() {
@@ -36,6 +48,7 @@ export class InstanceOptions extends Option {
     load() {
         this.loadFromDP(this.#DP_NAMESPACE, this.instanceName);
         this.worldLocation = Vector.from(this.worldLocation);
+        this.verifier = { ...VERIFIER_DEFAULTS, ...this.verifier };
     }
     
     clear() {
@@ -78,8 +91,18 @@ export class InstanceOptions extends Option {
         this.save();
     }
 
+    setVerifierRefreshSeconds(seconds) {
+        this.verifier.refreshSeconds = RefreshRate.clampSeconds(seconds);
+        this.save();
+    }
+
     setVerifierParticleLifetime(lifetime) {
         this.verifier.particleLifetime = lifetime;
+        this.save();
+    }
+
+    setRenderMode(mode) {
+        this.renderMode = mode;
         this.save();
     }
 }

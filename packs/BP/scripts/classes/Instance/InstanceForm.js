@@ -1,4 +1,4 @@
-import { structureCollection } from '../Structure/StructureCollection';
+import { instanceCollection } from './InstanceCollection';
 import { MenuForm } from '../MenuForm';
 import { forceShow } from '../../utils';
 import { InstanceButtons } from '../Enums/InstanceButtons';
@@ -6,6 +6,7 @@ import { InstanceFormBuilder } from './InstanceFormBuilder';
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { FlexibleInstanceMove } from './FlexibleInstanceMove';
 import { Builders } from '../Builder/Builders';
+import { RENDER_MODE_ORDER, RenderMode } from '../Enums/RenderMode';
 
 export class InstanceForm {
     instanceName;
@@ -38,7 +39,7 @@ export class InstanceForm {
     constructor(player, instanceName) {
         this.player = player;
         this.instanceName = instanceName;
-        this.instance = structureCollection.get(this.instanceName);
+        this.instance = instanceCollection.get(this.instanceName);
         this.show();
     }
 
@@ -84,7 +85,7 @@ export class InstanceForm {
                 this.renameInstanceForm();
                 break;
             case InstanceButtons.Delete:
-                structureCollection.delete(this.instanceName);
+                instanceCollection.delete(this.instanceName);
                 break;
             case InstanceButtons.NextLayer:
                 this.instance.increaseLayer();
@@ -128,7 +129,7 @@ export class InstanceForm {
                 return;
             }
             try {
-                structureCollection.rename(this.instanceName, newName);
+                instanceCollection.rename(this.instanceName, newName);
                 this.instanceName = newName;
             } catch (e) {
                 this.player.sendMessage({ translate: 'construct.instance.rename.error', with: [e.message] });
@@ -176,6 +177,8 @@ export class InstanceForm {
                 return;
             this.instance.setVerifierEnabled(response.formValues[0]);
             this.instance.setLayer(parseInt(response.formValues[1]));
+            this.instance.setRenderMode(RENDER_MODE_ORDER[response.formValues[2]] ?? RenderMode.Default);
+            this.instance.setVerifierRefreshSeconds(parseInt(response.formValues[3]));
         });
     }
 

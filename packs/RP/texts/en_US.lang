@@ -36,6 +36,14 @@ construct.instance.option.validation=Block Validation
 construct.instance.option.validation.description=Shows missing and incorrect block overlay.
 construct.instance.option.layer=Layer
 construct.instance.option.layer.description=Changes the active layer. Use 0 for all layers.
+construct.instance.option.rendermode=Render Mode
+construct.instance.option.rendermode.description=How the instance is drawn. Performance mode is great for FPS.
+construct.instance.option.rendermode.default=Default
+construct.instance.option.rendermode.performance=Performance
+construct.instance.option.rendermode.previewonly=Hologram Only
+construct.instance.option.rendermode.classic=Classic
+construct.instance.option.refreshrate=Refresh Rate (seconds)
+construct.instance.option.refreshrate.description=How long a full rescan takes. This controls how quickly changes not caused directly by the player are noticed. Low values can be laggy.
 construct.instance.materials.noinventory=§cNo player inventory found.
 construct.instance.materials.missing.header=§cMaterials Missing From Inventory:
 construct.instance.materials.missing.button=Show Missing Materials
@@ -78,13 +86,17 @@ construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 comman
 ## Structure Block Info Display
 construct.blockinfo.header=Structure:
 construct.blockinfo.none=§7None
-construct.blockinfo.nosupply= §c[No Supply]	## When the targeted block is not in the player's inventory
+construct.blockinfo.nosupply=§c[No Supply]	## When the targeted block is not in the player's inventory
+construct.blockinfo.noeasyplace=§e[Cannot be Easy Placed]	## When the targeted block cannot be easyPlaced
 construct.blockinfo.unknown=§7Unknown
 construct.blockinfo.waterlogged=§7isWaterlogged: §3true
+
+construct.pickblock.inventoryfull=§cCannot pick structure block: inventory is full.
 
 ## Builder Options
 construct.option.enabled= is now enabled!
 construct.option.disabled= is now disabled.
+construct.option.setto= is now set to §f
 construct.option.easyplace.name=Easy Place
 construct.option.easyplace.description=Always place the correct structure block.
 construct.option.easyplace.howto=Hold the Easy Place item in your offhand and place blocks in an instance to have them be corrected automatically.
@@ -98,6 +110,8 @@ construct.option.materialgrabber.howto=Interact with inventories using the Mater
 construct.option.materialgrabber.grabbed.zero=§7Grabbed 0 items.
 construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
+construct.option.defaultrendermode.name=Default Render Mode
+construct.option.defaultrendermode.description=The render mode given to instances you create.
 
 ## Commands
 construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
@@ -149,11 +163,11 @@ construct.commands.layer.outOfBounds=§cLayer %1 is out of bounds for instance "
 
 ## construct:nextlayer
 construct.commands.nextlayer=Step a Construct instance one layer up.
-construct.commands.nextlayer.success=§aInstance "%1" advanced to layer %2.	## Insert strings: instance name, layer number
+construct.commands.nextlayer.success=§aInstance "%1" increased to layer %2.	## Insert strings: instance name, layer number
 
 ## construct:prevlayer
 construct.commands.prevlayer=Step a Construct instance one layer down.
-construct.commands.prevlayer.success=§aInstance "%1" stepped back to layer %2.	## Insert strings: instance name, layer number
+construct.commands.prevlayer.success=§aInstance "%1" decreased to layer %2.	## Insert strings: instance name, layer number
 
 ## construct:verifier
 construct.commands.verifier=Toggle block validation overlay for a Construct instance.
@@ -173,6 +187,7 @@ construct.commands.instanceinfo.location=§7Location:§r %1 in %2	## Insert stri
 construct.commands.instanceinfo.noLocation=§7Location:§r (none)	## Used when the instance has no saved location
 construct.commands.instanceinfo.enabled=§7Enabled:§r %1	## Insert string: true/false indicating whether the instance is enabled
 construct.commands.instanceinfo.layer=§7Layer:§r %1 / %2	## Insert strings: current layer, max layer
+construct.commands.instanceinfo.renderMode=§7Render Mode:§r %1	## Insert string: render mode
 construct.commands.instanceinfo.verifier=§7Verifier running:§r %1	## Insert string: true/false indicating whether the verifier is running
 construct.commands.instanceinfo.size=§7Size:§r %1 (%2 blocks)	## Insert strings: size (x, y, z), total block volume count
 

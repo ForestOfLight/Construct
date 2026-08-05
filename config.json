@@ -8,7 +8,16 @@
 	},
 	"regolith": {
 		"dataPath": "./packs/data",
-		"filterDefinitions": {},
+		"filterDefinitions": {
+			"fetch_block_data": {
+				"runWith": "python",
+				"script": "./filters/fetch_block_data/main.py"
+			},
+			"fetch_block_models": {
+				"runWith": "python",
+				"script": "./tools/bake_block_models/main.py"
+			}
+		},
 		"formatVersion": "1.4.0",
 		"profiles": {
 			"default": {
@@ -30,6 +39,19 @@
 					"bpName": "project.name+'[BP]'"
 				},
 				"filters": []
+			},
+            "release": {
+      	       "export": {
+        	       "build": "standard",
+					"readOnly": false,
+					"target": "local",
+					"rpName": "project.name+'[RP]'",
+					"bpName": "project.name+'[BP]'"
+              	},
+             	"filters": [
+					{ "filter": "fetch_block_data" },
+					{ "filter": "fetch_block_models" }
+      			]
 			}
 		}
 	}

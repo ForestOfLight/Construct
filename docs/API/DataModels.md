@@ -37,9 +37,12 @@ interface Instance {
         isEnabled: PROTO.Boolean,
         trackPlayerDistance: PROTO.Int8,
         particleLifetime: PROTO.Int32
-    })
+    }),
+    renderMode: PROTO.String
 }
 ```
+
+`renderMode` is one of `"default"`, `"performance"`, `"previewOnly"`, or `"classic"`. Any other value is treated as `"default"`.
 
 ## Builder
 
@@ -51,6 +54,8 @@ interface Builder {
     easyPlace: PROTO.Boolean,
     fastEasyPlace: PROTO.Boolean,
     materialGrabber: PROTO.Boolean,
-    materialInstanceName: PROTO.String
+    materialInstanceName: PROTO.String,
+    defaultRenderMode: PROTO.String
 }
 ```
+`defaultRenderMode` is one of `"default"`, `"performance"`, `"previewOnly"`, or `"classic"`. Any other value is treated as `"default"`.

@@ -4,3 +4,5 @@
 docs/superpowers
 .claude
 node_modules/
+.worktrees
+__pycache__/

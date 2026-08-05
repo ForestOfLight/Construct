@@ -1,6 +1,6 @@
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class VerifierCommand extends Command {
     constructor() {
@@ -17,7 +17,7 @@ export class VerifierCommand extends Command {
     }
 
     run(origin, instanceName, state) {
-        const instance = structureCollection.get(instanceName);
+        const instance = instanceCollection.get(instanceName);
         if (state)
             instance.setVerifierEnabled(true);
         else

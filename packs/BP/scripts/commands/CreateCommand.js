@@ -1,8 +1,9 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
-import { structureCollection } from '../classes/Structure/StructureCollection';
+import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
 import { StructureNotFoundError } from '../classes/Errors/StructureNotFoundError';
+import { getDefaultRenderMode } from '../options/defaultRenderMode';
 
 export class CreateCommand extends Command {
     constructor() {
@@ -34,7 +35,8 @@ export class CreateCommand extends Command {
     }
 
     addStructure(origin, instanceName, structureId) {
-        structureCollection.add(instanceName, structureId);
+        const playerId = origin.getType() === 'Player' ? origin.getSource().id : void 0;
+        instanceCollection.add(instanceName, structureId, { renderMode: getDefaultRenderMode(playerId) });
         origin.sendMessage({ translate: 'construct.commands.create.success', with: [instanceName, structureId] });
     }
 
