@@ -15,4 +15,4 @@ class ConstructAPI extends AddonAPIServer {
     }
 }
 
-export const constructAPI = new ConstructAPI("1.0.0");
+export const constructAPI = new ConstructAPI("2.0.0");
