@@ -24,8 +24,8 @@ Ease the survival building process with Construct, an addon designed to help you
 - **Structure Importing**: Import structures from other worlds quickly and easily.
 
 <div align="center">
-    <a href="./demo.png">
-        <img src="./demo.png" alt="Construct Structure Demo" height="350">
+    <a href="./demo.gif">
+        <img src="./demo.gif" alt="Construct Structure Demo" height="350">
     </a>
 </div>
 
