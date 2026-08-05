@@ -51,11 +51,6 @@ jobs:
             VERSION=${{ github.event.release.tag_name }}
             set -euo pipefail
 
-            # Read the game version from manifest.json
-            MIN_ENGINE_VERSION=$(sed -E 's,//.*$,,' "$BP_SOURCE/manifest.json" | jq -r '.header.min_engine_version | @csv')
-            IFS=',' read -r LEADING MAJOR MINOR <<< "$MIN_ENGINE_VERSION"
-            ENGINE_PREFIX="${MAJOR}.${MINOR}"
-
             # Fetch all Bedrock versions from CurseForge API
             CF_VERSIONS_HTTP=$(curl -sS -L \
                 -o curseforge-versions.json \
@@ -76,21 +71,23 @@ jobs:
                 exit 1
             fi
 
-            # Extract all game version IDs whose name matches the game version from the manifest.json
-            GAME_VERSION_IDS=$(jq -c --arg prefix "$ENGINE_PREFIX" '
-                if type == "array" then
-                  [ .[] | select((.name // "") | startswith($prefix)) | .id ]
-                elif (type == "object" and has("data") and (.data | type == "array")) then
-                  [ .data[] | select((.name // "") | startswith($prefix)) | .id ]
-                else
-                  []
+            # Pick the latest version (highest ID among entries with a Bedrock version name)
+            LATEST_VERSION=$(jq -c '
+                if type == "array" then .
+                elif (type == "object" and has("data") and (.data | type == "array")) then .data
+                else []
                 end
+                | [ .[] | select((.name // "") | test("^[0-9]+\\.[0-9]+")) ]
+                | max_by(.id)
             ' curseforge-versions.json)
-            if [ "$GAME_VERSION_IDS" = "[]" ]; then
-                echo "No matching CurseForge versions found for engine prefix $ENGINE_PREFIX"
+            if [ -z "$LATEST_VERSION" ] || [ "$LATEST_VERSION" = "null" ]; then
+                echo "Could not determine latest CurseForge game version"
+                cat curseforge-versions.json
                 exit 1
             fi
-            echo "Found CurseForge version IDs for game version $ENGINE_PREFIX: $GAME_VERSION_IDS"
+            LATEST_VERSION_NAME=$(echo "$LATEST_VERSION" | jq -r '.name')
+            GAME_VERSION_IDS=$(echo "$LATEST_VERSION" | jq -c '[.id]')
+            echo "Using latest CurseForge game version: $LATEST_VERSION_NAME (ID: $(echo "$LATEST_VERSION" | jq -r '.id'))"
 
             PACK_FILENAME=${PROJECT_NAME}-$VERSION.mcaddon
 
