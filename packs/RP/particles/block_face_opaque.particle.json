@@ -53,6 +53,9 @@
 					"variable.face_color.b",
 					1
 				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "variable.lifetime"
 			}
 		}
 	}
