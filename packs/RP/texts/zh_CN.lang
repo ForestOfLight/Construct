@@ -36,6 +36,14 @@ construct.instance.option.validation=方块检验
 construct.instance.option.validation.description=检验并显示项目中缺失和摆放错误的方块
 construct.instance.option.layer=层级
 construct.instance.option.layer.description=更改显示层级, 调整至 0 时显示完整结构
+construct.instance.option.rendermode=渲染模式
+construct.instance.option.rendermode.description=投影的渲染方式，分为全息模式和性能模式(性能模式可以减少卡顿)。
+construct.instance.option.rendermode.default=默认(性能、全息结合)
+construct.instance.option.rendermode.performance=性能(仅轮廓)
+construct.instance.option.rendermode.previewonly=全息(有纹理)
+construct.instance.option.rendermode.classic=经典(旧版)
+construct.instance.option.refreshrate=刷新速率/s
+construct.instance.option.refreshrate.description=进行完整重新扫描的速度 重新扫描会发现非玩家引起变化，故低值可能会导致变化有延迟。
 construct.instance.materials.noinventory=§c无法读取到玩家背包
 construct.instance.materials.missing.header=§c背包中缺失的材料:
 construct.instance.materials.missing.button=显示缺失材料
@@ -79,12 +87,16 @@ construct.mainmenu.howto.remove.body=§7- 使用§f/structure delete§7命令从
 construct.blockinfo.header=结构:
 construct.blockinfo.none=§7无
 construct.blockinfo.nosupply= §c[缺少材料]
+construct.blockinfo.noeasyplace=§e[无法便捷放置]	## When the targeted block cannot be easyPlaced
 construct.blockinfo.unknown=§7未知
 construct.blockinfo.waterlogged=§3是§7含水方块
+
+construct.pickblock.inventoryfull=§c无法拾取结构方块: 背包满了
 
 ## Builder Options
 construct.option.enabled=现已启用!
 construct.option.disabled=现已禁用!
+construct.option.setto= is now set to §f
 construct.option.easyplace.name=便捷放置
 construct.option.easyplace.description=帮助正确放置结构中的方块
 construct.option.easyplace.howto=将"便捷放置器"物品放在副手槽位, 在项目中放置方块时自动修正方块
@@ -98,6 +110,8 @@ construct.option.materialgrabber.howto=使用"材料收集器"物品与箱子等
 construct.option.materialgrabber.grabbed.zero=§7已收集 0 个物品
 construct.option.materialgrabber.grabbed.one=§a已收集 1 个物品
 construct.option.materialgrabber.grabbed.many=§a已收集 %s 个物品
+construct.option.defaultrendermode.name=默认渲染模式
+construct.option.defaultrendermode.description=你创建的项目的渲染模式
 
 ## Commands
 construct.commands.construct=获得投影构筑菜单物品，可以使用它打开投影构筑菜单
@@ -173,6 +187,7 @@ construct.commands.instanceinfo.location=§7位置:§r %2的%1
 construct.commands.instanceinfo.noLocation=§7位置:§r (无)
 construct.commands.instanceinfo.enabled=§7启用状态:§r %1
 construct.commands.instanceinfo.layer=§7层级:§r %1 / %2
+construct.commands.instanceinfo.renderMode=§7渲染模式:§r %1	## Insert string: render mode
 construct.commands.instanceinfo.verifier=§7检验状态:§r %1
 construct.commands.instanceinfo.size=§7尺寸:§r %1 (共%2个方块)
 
