@@ -20,7 +20,7 @@ export class OutlineRenderer {
     }
 
     setBounds(dimension, min, max) {
-        if (dimension === this.dimension && this.cuboid.matches(min, max))
+        if (dimension?.id === this.dimension?.id && this.cuboid.matches(min, max))
             return false;
         this.#assignBounds(dimension, min, max);
         return true;

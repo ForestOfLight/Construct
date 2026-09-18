@@ -73,7 +73,7 @@ export class StructureInstance {
     }
 
     getDimension() {
-        if (!this.#cachedDimension)
+        if (!this.#cachedDimension || this.#cachedDimension.id !== this.options?.dimensionId)
             this.#cachedDimension = this.options?.getDimension();
         return this.#cachedDimension;
     }
