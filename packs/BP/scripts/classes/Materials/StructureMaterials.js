@@ -5,23 +5,33 @@ import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 class StructureMaterials {
     instance;
     #materials;
+    #populateJobId;
 
     constructor(instance) {
         this.instance = instance;
         this.#materials = {};
+        this.#populateJobId = void 0;
     }
 
     refresh() {
+        this.cancelPopulate();
         this.clear();
         this.populateInstance();
+    }
+
+    cancelPopulate() {
+        if (this.#populateJobId === void 0)
+            return;
+        system.clearJob(this.#populateJobId);
+        this.#populateJobId = void 0;
     }
 
     populateInstance() {
         try {
             if (this.instance.hasLocation() && this.instance.isEnabled())
-                system.runJob(this.populateActive());
+                this.#populateJobId = system.runJob(this.populateActive());
             else
-                system.runJob(this.populateAll());
+                this.#populateJobId = system.runJob(this.populateAll());
         } catch (error) {
             if (error instanceof InstanceNotPlacedError)
                 this.clear();
@@ -60,6 +70,7 @@ class StructureMaterials {
                 yield void 0;
             }
         }
+        this.#populateJobId = void 0;
     }
 
     *populateActive() {
@@ -75,6 +86,7 @@ class StructureMaterials {
                 }
             }
         }
+        this.#populateJobId = void 0;
     }
 
     countBlock(block) {
