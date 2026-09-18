@@ -101,22 +101,15 @@ class StructureMaterials {
             let count = materials[blockType].count;
             let countStr = '';
             const stackSize = materials[blockType].stackSize;
-            const fullShulker = 27 * stackSize;
-            if (count >= fullShulker)
-                countStr = `${Math.floor(count / fullShulker)}\uE200`;
-            if (count > fullShulker && count % fullShulker > 0)
-                countStr += ' + ';
-            count %= fullShulker;
-            if (count >= stackSize && stackSize > 1) {
-                const numStacks = Math.floor(count / stackSize);
-                countStr += `${numStacks} stack`;
-                if (numStacks > 1)
-                    countStr += 's';
+            const shulkerSize = 27 * stackSize;
+            if (count >= shulkerSize) {
+                countStr += this.#formatShulkerCountString(count, shulkerSize);
+                count %= shulkerSize;
             }
-            if (count > stackSize && count % stackSize > 0)
-                countStr += ' + ';
-            if (stackSize > 1)
+            if (count >= stackSize && stackSize > 1) {
+                countStr += this.#formatStackCountString(count, stackSize);
                 count %= stackSize;
+            }
             if (count > 0)
                 countStr += count;
             message.rawtext.push({ text: '§3' });
@@ -124,6 +117,26 @@ class StructureMaterials {
             message.rawtext.push({ text: `§f: ${countStr}\n` });
         }
         return message;
+    }
+
+    #formatShulkerCountString(count, shulkerSize) {
+        const numShulkers = Math.floor(count / shulkerSize);
+        let formattedShulkerCount = '';
+        formattedShulkerCount = numShulkers + `\uE200`;
+        if (count > shulkerSize && count % shulkerSize > 0)
+            formattedShulkerCount += ' + ';
+        return formattedShulkerCount;
+    }
+
+    #formatStackCountString(count, stackSize) {
+        const numStacks = Math.floor(count / stackSize);
+        let formattedStackCount = '';
+        formattedStackCount += `${numStacks} stack`;
+        if (numStacks > 1)
+            formattedStackCount += 's';
+        if (count > stackSize && count % stackSize > 0)
+            formattedStackCount += ' + ';
+        return formattedStackCount;
     }
 
     getMaterialsDifference(container) {
