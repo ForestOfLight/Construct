@@ -107,7 +107,7 @@ class StructureMaterials {
             if (count > fullShulker && count % fullShulker > 0)
                 countStr += ' + ';
             count %= fullShulker;
-            if (count >= stackSize) {
+            if (count >= stackSize && stackSize > 1) {
                 const numStacks = Math.floor(count / stackSize);
                 countStr += `${numStacks} stack`;
                 if (numStacks > 1)
@@ -115,7 +115,8 @@ class StructureMaterials {
             }
             if (count > stackSize && count % stackSize > 0)
                 countStr += ' + ';
-            count %= stackSize;
+            if (stackSize > 1)
+                count %= stackSize;
             if (count > 0)
                 countStr += count;
             message.rawtext.push({ text: '§3' });
