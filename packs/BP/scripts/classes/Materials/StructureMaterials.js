@@ -5,23 +5,33 @@ import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 class StructureMaterials {
     instance;
     #materials;
+    #populateJobId;
 
     constructor(instance) {
         this.instance = instance;
         this.#materials = {};
+        this.#populateJobId = void 0;
     }
 
     refresh() {
+        this.cancelPopulate();
         this.clear();
         this.populateInstance();
+    }
+
+    cancelPopulate() {
+        if (this.#populateJobId === void 0)
+            return;
+        system.clearJob(this.#populateJobId);
+        this.#populateJobId = void 0;
     }
 
     populateInstance() {
         try {
             if (this.instance.hasLocation() && this.instance.isEnabled())
-                system.runJob(this.populateActive());
+                this.#populateJobId = system.runJob(this.populateActive());
             else
-                system.runJob(this.populateAll());
+                this.#populateJobId = system.runJob(this.populateAll());
         } catch (error) {
             if (error instanceof InstanceNotPlacedError)
                 this.clear();
@@ -60,6 +70,7 @@ class StructureMaterials {
                 yield void 0;
             }
         }
+        this.#populateJobId = void 0;
     }
 
     *populateActive() {
@@ -75,6 +86,7 @@ class StructureMaterials {
                 }
             }
         }
+        this.#populateJobId = void 0;
     }
 
     countBlock(block) {
@@ -101,21 +113,15 @@ class StructureMaterials {
             let count = materials[blockType].count;
             let countStr = '';
             const stackSize = materials[blockType].stackSize;
-            const fullShulker = 27 * stackSize;
-            if (count >= fullShulker)
-                countStr = `${Math.floor(count / fullShulker)}\uE200`;
-            if (count > fullShulker && count % fullShulker > 0)
-                countStr += ' + ';
-            count %= fullShulker;
-            if (count >= stackSize) {
-                const numStacks = Math.floor(count / stackSize);
-                countStr += `${numStacks} stack`;
-                if (numStacks > 1)
-                    countStr += 's';
+            const shulkerSize = 27 * stackSize;
+            if (count >= shulkerSize) {
+                countStr += this.#formatShulkerCountString(count, shulkerSize);
+                count %= shulkerSize;
             }
-            if (count > stackSize && count % stackSize > 0)
-                countStr += ' + ';
-            count %= stackSize;
+            if (count >= stackSize && stackSize > 1) {
+                countStr += this.#formatStackCountString(count, stackSize);
+                count %= stackSize;
+            }
             if (count > 0)
                 countStr += count;
             message.rawtext.push({ text: '§3' });
@@ -123,6 +129,26 @@ class StructureMaterials {
             message.rawtext.push({ text: `§f: ${countStr}\n` });
         }
         return message;
+    }
+
+    #formatShulkerCountString(count, shulkerSize) {
+        const numShulkers = Math.floor(count / shulkerSize);
+        let formattedShulkerCount = '';
+        formattedShulkerCount = numShulkers + `\uE200`;
+        if (count > shulkerSize && count % shulkerSize > 0)
+            formattedShulkerCount += ' + ';
+        return formattedShulkerCount;
+    }
+
+    #formatStackCountString(count, stackSize) {
+        const numStacks = Math.floor(count / stackSize);
+        let formattedStackCount = '';
+        formattedStackCount += `${numStacks} stack`;
+        if (numStacks > 1)
+            formattedStackCount += 's';
+        if (count > stackSize && count % stackSize > 0)
+            formattedStackCount += ' + ';
+        return formattedStackCount;
     }
 
     getMaterialsDifference(container) {

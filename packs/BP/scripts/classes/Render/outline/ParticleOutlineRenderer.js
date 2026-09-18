@@ -44,7 +44,7 @@ export class ParticleOutlineRenderer extends OutlineRenderer {
 
     #spawn(location, color) {
         const molang = new MolangVariableMap();
-        molang.setColorRGBA("dot_color", color);
+        molang.setColorRGB("dot_color", color);
         molang.setFloat("lifetime", this.#lifetimeSeconds);
         try {
             this.dimension.spawnParticle(this.#outlineParticle, location, molang);

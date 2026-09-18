@@ -1,5 +1,6 @@
 import { MolangVariableMap } from "@minecraft/server";
 import { DEBUG_CONFIG } from "../../../consts";
+import { MaterialType } from "../VerificationStyle";
 
 const BLOCK_CENTER = 0.5;
 const PIXELS_PER_BLOCK = 16;
@@ -24,7 +25,7 @@ export class FaceParticleSpawner {
     }
 
     spawnFace(face, color, material, scale) {
-        this.#setColor(color);
+        this.#setColor(color, material);
         this.#setGeometry(face, scale);
         this.#setUv(face);
         try {
@@ -34,10 +35,13 @@ export class FaceParticleSpawner {
         }
     }
 
-    #setColor(color) {
+    #setColor(color, material) {
         if (color === this.#color)
             return;
-        this.#molang.setColorRGBA("face_color", color);
+        if (material === MaterialType.OPAQUE)
+            this.#molang.setColorRGB("face_color", color);
+        else
+            this.#molang.setColorRGBA("face_color", color);
         this.#color = color;
     }
 

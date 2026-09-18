@@ -1,7 +1,6 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
-import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, 
-    blockIdToItemStackMap } from './easyPlaceConversions';
+import { EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
 import { placeBlock, fetchMatchingItemSlot } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';

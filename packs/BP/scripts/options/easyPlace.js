@@ -2,7 +2,7 @@ import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
-import { bannedBlocks, bannedToValidBlockMap, whitelistedBlockStates, resetToBlockStates, bannedDimensionBlocks, blockIdToItemStackMap } from './easyPlaceConversions';
+import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
 import { fetchMatchingItemSlot, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
 

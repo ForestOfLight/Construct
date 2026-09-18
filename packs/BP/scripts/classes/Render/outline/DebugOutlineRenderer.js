@@ -36,7 +36,7 @@ export class DebugOutlineRenderer extends OutlineRenderer {
         if (this.drawEdges) {
             let index = 0;
             for (const [start, end] of this.cuboid.edgeSegments()) {
-                const edgeShape = new DebugLine(start, end);
+                const edgeShape = new DebugLine({ dimension: this.dimension, ...start }, end);
                 const color = this.edgeColors[index++ % this.edgeColors.length];
                 this.#add(edgeShape, color);
             }
