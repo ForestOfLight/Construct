@@ -44,18 +44,17 @@ construct.instance.option.rendermode.previewonly=Hologram Only
 construct.instance.option.rendermode.classic=Classic
 construct.instance.option.refreshrate=Refresh Rate (seconds)
 construct.instance.option.refreshrate.description=How long a full rescan takes. This controls how quickly changes not caused directly by the player are noticed. Low values can be laggy.
-construct.instance.materials.missing.header=§cMissing Materials:
-construct.instance.materials.missing.button=Show Missing Materials
+construct.instance.materials.missing.header=§cUnplaced Materials:
+construct.instance.materials.missing.button=Show Unplaced Materials
 construct.instance.materials.layer= §7(layer %s)	## Is added to the header when the instance is in layer mode. Insert string: layer number
 construct.instance.materials.all.header=§aAll Materials:
 construct.instance.materials.all.button=Show All Materials
 construct.instance.materials.subtractinventory.button=Subtract Inventory as Collected Items
 construct.instance.materials.unscanned.title=§eNot all of the build has been checked in the world yet.
-construct.instance.materials.unscanned.body=§7%s blocks weren't loaded, so their materials are listed as missing. Go near the build to update this list.	## Insert string: number of blocks not yet checked, already formatted with thousands separators
-construct.instance.materials.placeinstance=§7Place the instance to see only missing materials.
-construct.instance.materials.verifieroff=§7Turn on the verifier to see only missing materials.
+construct.instance.materials.unscanned.body=§7%s blocks weren't checked. Go near the build and wait to update this list.	## Insert string: number of blocks not yet checked, already formatted with thousands separators
+construct.instance.materials.placeinstance=§7Place the instance to see only unplaced materials.
+construct.instance.materials.verifieroff=§7Turn on the verifier to see only unplaced materials.
 construct.instance.materials.empty=§7(no materials)
-construct.instance.materials.counting=§7Counting materials...
 
 construct.materials.grabber.menu.title= Material Grabber
 construct.materials.grabber.menu.success=§7Selected instance for material grabber: §2%s	## Insert string: instance name
@@ -205,9 +204,9 @@ construct.commands.stats.alreadyRunning=§cA verification is already in progress
 ## construct:materials
 construct.commands.materials=Print the material list for a Construct instance.
 construct.commands.materials.headerAll=§aMaterials for "%1":§r	## Insert string: instance name
-construct.commands.materials.headerMissing=§aMissing materials for "%1":§r	## Insert string: instance name
+construct.commands.materials.headerMissing=§aUnplaced materials for "%1":§r	## Insert string: instance name
 construct.commands.materials.headerMissingInventory=§aMaterials missing from your inventory for "%1":§r	## Insert string: instance name
-construct.commands.materials.headerMissingBoth=§aMissing materials for "%1", minus your inventory:§r	## Insert string: instance name
+construct.commands.materials.headerMissingBoth=§aUnplaced materials for "%1", minus your inventory:§r	## Insert string: instance name
 construct.commands.materials.empty=§7(no materials)
 
 ## construct:tag

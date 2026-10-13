@@ -208,7 +208,6 @@ export class InstanceForm {
     #countWorldMaterials(page) {
         if (page !== MaterialsPage.Missing || !this.instance.canShowWorldMaterials())
             return Promise.resolve(void 0);
-        this.player.onScreenDisplay.setActionBar({ translate: 'construct.instance.materials.counting' });
         return this.instance.getWorldMaterials();
     }
 }
