@@ -1,5 +1,5 @@
 import { instanceCollection } from './InstanceCollection';
-import { MenuForm } from '../MenuForm';
+import { MenuForm } from '../Menu/MenuForm';
 import { forceShow } from '../../utils';
 import { InstanceButtons } from '../Enums/InstanceButtons';
 import { InstanceFormBuilder } from './InstanceFormBuilder';

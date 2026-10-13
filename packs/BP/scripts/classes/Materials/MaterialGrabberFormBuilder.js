@@ -1,5 +1,5 @@
 import { ActionFormData } from "@minecraft/server-ui";
-import { MenuFormBuilder } from "../MenuFormBuilder";
+import { MenuFormBuilder } from "../Menu/MenuFormBuilder";
 import { instanceCollection } from "../Instance/InstanceCollection";
 import { Builders } from "../Builder/Builders";
 

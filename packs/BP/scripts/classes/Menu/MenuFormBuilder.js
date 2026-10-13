@@ -1,5 +1,5 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
-import { instanceCollection } from './Instance/InstanceCollection';
+import { instanceCollection } from '../Instance/InstanceCollection';
 
 export class MenuFormBuilder {
     static menuTitle = { translate: 'construct.mainmenu.title' };

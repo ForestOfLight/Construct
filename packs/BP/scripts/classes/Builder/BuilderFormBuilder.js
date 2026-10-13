@@ -1,5 +1,5 @@
 import { ModalFormData } from "@minecraft/server-ui";
-import { MenuFormBuilder } from "../MenuFormBuilder";
+import { MenuFormBuilder } from "../Menu/MenuFormBuilder";
 import { BuilderOptions } from "./BuilderOptions";
 
 export class BuilderFormBuilder {

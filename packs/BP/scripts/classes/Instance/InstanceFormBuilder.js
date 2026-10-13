@@ -1,5 +1,5 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
-import { MenuFormBuilder } from '../MenuFormBuilder';
+import { MenuFormBuilder } from '../Menu/MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { InstanceStatistics } from './InstanceStatistics';
 import { TicksPerSecond, world } from '@minecraft/server';

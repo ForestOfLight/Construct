@@ -1,11 +1,11 @@
-import { forceShow } from '../utils';
-import { instanceCollection } from './Instance/InstanceCollection';
+import { forceShow } from '../../utils';
+import { instanceCollection } from '../Instance/InstanceCollection';
 import { MenuFormBuilder } from './MenuFormBuilder';
-import { InstanceForm } from './Instance/InstanceForm';
-import { BuilderForm } from './Builder/BuilderForm';
-import { InstanceExistsError } from './Errors/InstanceExistsError';
-import { StructureNotFoundError } from './Errors/StructureNotFoundError';
-import { getDefaultRenderMode } from '../options/defaultRenderMode';
+import { InstanceForm } from '../Instance/InstanceForm';
+import { BuilderForm } from '../Builder/BuilderForm';
+import { InstanceExistsError } from '../Errors/InstanceExistsError';
+import { StructureNotFoundError } from '../Errors/StructureNotFoundError';
+import { getDefaultRenderMode } from '../../options/defaultRenderMode';
 
 export class MenuForm {
     constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
