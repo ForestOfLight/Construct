@@ -153,20 +153,22 @@ class StructureMaterials {
         return formattedStackCount;
     }
 
-    getMaterialsDifference(container) {
-        const missingMaterials = JSON.parse(JSON.stringify(this.#materials));
+    static subtractInventory(materials, container) {
+        const remaining = {};
+        for (const [typeId, entry] of Object.entries(materials))
+            remaining[typeId] = { count: entry.count, stackSize: entry.stackSize };
         for (let slotIndex = 0; slotIndex < container.size; slotIndex++) {
             const slot = container.getSlot(slotIndex);
-            if (slot.hasItem()) {
-                const itemType = slot.getItem().typeId;
-                if (!missingMaterials[itemType])
-                    continue;
-                missingMaterials[itemType].count -= slot.amount;
-                if (missingMaterials[itemType].count <= 0)
-                    delete missingMaterials[itemType];
-            }
+            if (!slot.hasItem())
+                continue;
+            const entry = remaining[slot.typeId];
+            if (!entry)
+                continue;
+            entry.count -= slot.amount;
+            if (entry.count <= 0)
+                delete remaining[slot.typeId];
         }
-        return missingMaterials;
+        return remaining;
     }
 }
 

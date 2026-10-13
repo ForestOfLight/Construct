@@ -5,6 +5,7 @@ import { InstanceStatistics } from './InstanceStatistics';
 import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
 import { RENDER_MODE_LABELS, RENDER_MODE_ORDER } from '../Enums/RenderMode';
 import { RefreshRate } from '../Verifier/RefreshRate';
+import { StructureMaterials } from '../Materials/StructureMaterials';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -96,7 +97,7 @@ export class InstanceFormBuilder {
             if (instance.hasLayerSelected())
                 bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
             bodyText.rawtext.push({ text: `§f\n\n` });
-            bodyText.rawtext.push(materials.formatString(materials.getMaterialsDifference(inventoryContainer)));
+            bodyText.rawtext.push(materials.formatString(StructureMaterials.subtractInventory(materials.materials, inventoryContainer)));
             buttonText = "construct.instance.materials.all.button";
         } else {
             bodyText.rawtext.push({ translate: `construct.instance.materials.all.header` });

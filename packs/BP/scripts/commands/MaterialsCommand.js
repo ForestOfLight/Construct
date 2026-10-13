@@ -3,6 +3,7 @@ import { Command } from '../classes/Commands/Command';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 import { NotAPlayerError } from '../classes/Errors/NotAPlayerError';
+import { StructureMaterials } from '../classes/Materials/StructureMaterials';
 
 export class MaterialsCommand extends Command {
     constructor() {
@@ -52,7 +53,7 @@ export class MaterialsCommand extends Command {
             const inventoryComponent = player?.getComponent(EntityComponentTypes.Inventory);
             container = inventoryComponent?.container;
         }
-        const materialsMap = onlyMissing ? materials.getMaterialsDifference(container) : void 0;
+        const materialsMap = onlyMissing ? StructureMaterials.subtractInventory(materials.materials, container) : void 0;
         return materials.formatString(materialsMap);
     }
 }
