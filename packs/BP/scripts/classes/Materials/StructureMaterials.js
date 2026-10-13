@@ -45,23 +45,8 @@ class StructureMaterials {
         return this.#materials;
     }
 
-    get(itemType) {
-        return this.#materials[itemType];
-    }
-
     isEmpty() {
         return Object.keys(this.#materials).length === 0;
-    }
-
-    has(itemType) {
-        return this.#materials[itemType] !== undefined;
-    }
-
-    remove(itemType, amount) {
-        if (!this.#materials[itemType]) return;
-        this.#materials[itemType].count -= amount;
-        if (this.#materials[itemType].count <= 0)
-            delete this.#materials[itemType];
     }
 
     *populateAll() {

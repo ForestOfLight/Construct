@@ -3,6 +3,7 @@ import { EntityComponentTypes, ItemStack, Player, world, system, EquipmentSlot }
 import { MaterialGrabberForm } from '../classes/Materials/MaterialGrabberForm';
 import { Builders } from '../classes/Builder/Builders';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
+import { StructureMaterials } from '../classes/Materials/StructureMaterials';
 
 const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
@@ -75,43 +76,43 @@ function openInstanceSelectionForm(player, event) {
 function tryGrabMaterials(player, target, focusedInstanceName, event) {
     if (target instanceof Player)
         return;
-    const materials = getActiveMaterials(focusedInstanceName);
-    if (!materials)
+    const baseMaterials = instanceCollection.get(focusedInstanceName).getActiveMaterials();
+    if (!baseMaterials)
         return;
     const targetContainer = target.getComponent(EntityComponentTypes.Inventory)?.container;
-    if (!targetContainer || materials.isEmpty())
+    if (!targetContainer || baseMaterials.isEmpty())
         return;
     event.cancel = true;
-    system.run(() => transferMaterialsToPlayer(player, targetContainer, materials));
+    system.run(() => grabMaterials(player, targetContainer, focusedInstanceName));
 }
 
-function getActiveMaterials(focusedInstanceName) {
-    const instance = instanceCollection.get(focusedInstanceName);
-    return instance?.getActiveMaterials();
+async function grabMaterials(player, targetContainer, instanceName) {
+    const materials = await getMaterialsToGrab(instanceName);
+    if (!materials || !player.isValid || !targetContainer.isValid)
+        return;
+    transferMaterialsToPlayer(player, targetContainer, materials);
+}
+
+async function getMaterialsToGrab(instanceName) {
+    const instance = instanceCollection.get(instanceName);
+    const worldMaterials = await instance.getWorldMaterials();
+    if (!instanceCollection.has(instanceName))
+        return void 0;
+    return worldMaterials?.materials ?? instance.getActiveMaterials()?.materials;
 }
 
 function transferMaterialsToPlayer(player, targetContainer, materials) {
     const playerContainer = player.getComponent(EntityComponentTypes.Inventory)?.container;
     if (!playerContainer)
         return;
-    ignoreAlreadyGathered(materials, playerContainer);
+    const stillNeeded = StructureMaterials.subtractInventory(materials, playerContainer);
     let transferCount = 0;
     for (let slotIndex = 0; slotIndex < targetContainer.size; slotIndex++) {
         const slot = targetContainer.getSlot(slotIndex);
-        transferCount += tryTransferToPlayer(slot, playerContainer, materials);
+        transferCount += tryTransferToPlayer(slot, playerContainer, stillNeeded);
     }
     playSoundEffect(player, transferCount);
     sendTransferMessage(player, transferCount);
-    materials.refresh();
-}
-
-function ignoreAlreadyGathered(materials, playerContainer) {
-    for (let slotIndex = 0; slotIndex < playerContainer.size; slotIndex++) {
-        const slot = playerContainer.getSlot(slotIndex);
-        if (slot.hasItem()) {
-            materials.remove(slot.typeId, slot.amount);
-        }
-    }
 }
 
 function sendTransferMessage(player, transferCount) {
@@ -123,12 +124,12 @@ function sendTransferMessage(player, transferCount) {
         player.onScreenDisplay.setActionBar({ translate: 'construct.option.materialgrabber.grabbed.many', with: [String(transferCount)] });
 }
 
-function tryTransferToPlayer(slot, playerContainer, materials) {
-    if (slot.hasItem() && materials.has(slot.typeId) && !isBannedItemType(slot.typeId)) {
-        const grabAmount = Math.min(slot.amount, materials.get(slot.typeId).count);
-        if (grabAmount > 0)
-            return tryTransferAmountToPlayer(slot, playerContainer, materials, grabAmount);
-    }
+function tryTransferToPlayer(slot, playerContainer, stillNeeded) {
+    if (!slot.hasItem() || isBannedItemType(slot.typeId))
+        return 0;
+    const grabAmount = Math.min(slot.amount, stillNeeded[slot.typeId]?.count ?? 0);
+    if (grabAmount > 0)
+        return tryTransferAmountToPlayer(slot, playerContainer, stillNeeded, grabAmount);
     return 0;
 }
 
@@ -137,13 +138,13 @@ function playSoundEffect(player, transferCount) {
         player.dimension.playSound('block.itemframe.remove_item', player.location, { pitch: 1.2 });
 }
 
-function tryTransferAmountToPlayer(slot, playerContainer, materials, grabAmount) {
+function tryTransferAmountToPlayer(slot, playerContainer, stillNeeded, grabAmount) {
     const itemStack = slot.getItem();
     if (canAddItem(playerContainer, itemStack)) {
         const itemStackToAdd = itemStack.clone();
         itemStackToAdd.amount = grabAmount;
         addItem(playerContainer, itemStackToAdd);
-        materials.remove(itemStack.typeId, grabAmount);
+        stillNeeded[itemStack.typeId].count -= grabAmount;
         removeAmount(slot, grabAmount);
         return grabAmount;
     }
