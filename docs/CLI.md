@@ -126,7 +126,7 @@ Print the material list for an instance.
 | Argument | Description |
 |---|---|
 | `<instanceName>` | Name of the instance. |
-| `subtractWorld` | When `true`, show only materials for blocks not yet built correctly in the world (the Material List's default page). Uses the verifier's last known state of each block, so parts of the build that have not been loaded since the instance was placed or the world was loaded are counted as missing, with a note saying how many. Fails if the instance is not placed or its verifier is off. |
+| `subtractWorld` | When `true`, show only materials for blocks unplaced in the world. Uses the verifier's last known state of each block, so parts of the build that have not been loaded since the instance was placed or the world was loaded are counted as missing, with a note saying how many. Fails if the instance is not placed or its verifier is off. |
 | `subtractInventory` | When `true`, also subtract the items in the player's inventory. Can only be used by a player source. |
 
 > Respects the active layer: if a layer is set, only that layer's material counts are shown. To subtract only your inventory, pass `false` for `subtractWorld`, e.g. `/construct:materials house false true`.
