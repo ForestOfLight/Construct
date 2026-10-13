@@ -45,8 +45,7 @@ export class WorldMaterials {
         if (!this.#pending)
             return;
         system.clearJob(this.#pending.jobId);
-        this.#pending.resolve(void 0);
-        this.#pending = void 0;
+        this.#settle(this.#pending, void 0);
     }
 
     static #keyFor(knownGrid, bounds) {
@@ -69,10 +68,20 @@ export class WorldMaterials {
     }
 
     *#run(knownGrid, bounds, result, pending) {
-        yield* this.#tallyMissing(knownGrid, bounds, result);
+        try {
+            yield* this.#tallyMissing(knownGrid, bounds, result);
+        } catch (error) {
+            this.#settle(pending, void 0);
+            throw error;
+        }
         this.#cached = { key: pending.key, result };
-        this.#pending = void 0;
-        pending.resolve(result);
+        this.#settle(pending, result);
+    }
+
+    #settle(pending, value) {
+        if (this.#pending === pending)
+            this.#pending = void 0;
+        pending.resolve(value);
     }
 
     *#tallyMissing(knownGrid, bounds, result) {

@@ -94,6 +94,8 @@ async function grabMaterials(player, targetContainer, instanceName) {
 }
 
 async function getMaterialsToGrab(instanceName) {
+    if (!instanceCollection.has(instanceName))
+        return void 0;
     const instance = instanceCollection.get(instanceName);
     const worldMaterials = await instance.getWorldMaterials();
     if (!instanceCollection.has(instanceName))

@@ -186,7 +186,7 @@ export class InstanceForm {
 
     async materialsForm(page = MaterialsPage.Missing) {
         const worldMaterials = await this.#countWorldMaterials(page);
-        if (!instanceCollection.has(this.instanceName))
+        if (!instanceCollection.has(this.instanceName) || !this.player.isValid)
             return;
         const { form, buttons } = InstanceFormBuilder.buildMaterialList(this.instance, page, worldMaterials);
         const response = await forceShow(this.player, form);

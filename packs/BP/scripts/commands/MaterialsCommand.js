@@ -31,8 +31,10 @@ export class MaterialsCommand extends Command {
         if (subtractWorld && !instance.canShowWorldMaterials())
             return { status: CustomCommandStatus.Failure, message: this.worldUnavailableKey(instance) };
         system.run(async () => {
+            if (!instanceCollection.has(instanceName))
+                return;
             const message = await this.buildMessage(origin, instance, instanceName, subtractWorld, subtractInventory);
-            if (message)
+            if (message && !this.isSourceGone(origin))
                 origin.sendMessage(message);
         });
         return { status: CustomCommandStatus.Success };
@@ -55,7 +57,7 @@ export class MaterialsCommand extends Command {
         let unscannedNote;
         if (subtractWorld) {
             const worldMaterials = await instance.getWorldMaterials();
-            if (!worldMaterials || !instanceCollection.has(instanceName))
+            if (!worldMaterials || !instanceCollection.has(instanceName) || this.isSourceGone(origin))
                 return void 0;
             materials = worldMaterials.materials;
             unscannedNote = WorldMaterials.formatUnscannedNote(worldMaterials.unscannedCount);
@@ -74,6 +76,10 @@ export class MaterialsCommand extends Command {
         else
             rawtext.push(list);
         return { rawtext };
+    }
+
+    isSourceGone(origin) {
+        return origin.getSource()?.isValid === false;
     }
 
     inventoryOf(origin) {
