@@ -1,6 +1,7 @@
 import { ItemStack, system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
+import { StructureBlockConverter } from "../Structure/StructureBlockConverter";
 
 class StructureMaterials {
     instance;
@@ -90,12 +91,13 @@ class StructureMaterials {
     }
 
     countBlock(block) {
-        const itemStack = block?.permutation.getItemStack();
-        const typeId = itemStack?.typeId;
-        if (!typeId) return;
-        if (!this.#materials[typeId])
-            this.#materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
-        this.#materials[typeId].count++;
+        if (!block) return;
+        for (const itemStack of StructureBlockConverter.toPlaceableItemStacks(block.permutation)) {
+            const typeId = itemStack.typeId;
+            if (!this.#materials[typeId])
+                this.#materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
+            this.#materials[typeId].count++;
+        }
     }
 
     clear() {

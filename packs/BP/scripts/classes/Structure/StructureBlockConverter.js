@@ -1,5 +1,6 @@
-import { BlockPermutation } from "@minecraft/server";
-import { bannedToValidBlockMap, resetToBlockStates, blockIdToItemStackMap } from "../../options/easyPlaceConversions";
+import { BlockPermutation, BlockTypes, ItemStack } from "@minecraft/server";
+import { applyConversionPatterns } from "../../utils";
+import { bannedToValidBlockPatterns, resetToBlockStates, blockIdToItemStackPatterns } from "../../options/easyPlaceConversions";
 
 export class StructureBlockConverter {
     static sanitizeToPermutation(structureBlock) {
@@ -7,16 +8,16 @@ export class StructureBlockConverter {
         return StructureBlockConverter.toDefaultState(permutation);
     }
 
-    static sanitizeToPlaceableItemStack(structureBlock) {
+    static sanitizeToPlaceableItemStacks(structureBlock) {
         const permutation = StructureBlockConverter.sanitizeToPermutation(structureBlock);
-        return StructureBlockConverter.toPlaceableItemStack(permutation);
+        return StructureBlockConverter.toPlaceableItemStacks(permutation);
     }
 
     static fromBannedBlockToValidPermutation(structureBlock) {
-        const blockId = structureBlock.typeId.replace('minecraft:', '');
-        if (Object.keys(bannedToValidBlockMap).includes(blockId))
-            return BlockPermutation.resolve(bannedToValidBlockMap[blockId], structureBlock.states);
-        if (blockId === "bubble_column" && structureBlock.isWaterlogged)
+        const validBlockId = applyConversionPatterns(structureBlock.typeId, bannedToValidBlockPatterns, BlockTypes)?.[0];
+        if (validBlockId)
+            return BlockPermutation.resolve(validBlockId, structureBlock.states);
+        if (structureBlock.typeId === "minecraft:bubble_column" && structureBlock.isWaterlogged)
             return BlockPermutation.resolve('minecraft:water');
         return structureBlock.permutation;
     }
@@ -32,9 +33,11 @@ export class StructureBlockConverter {
         return BlockPermutation.resolve(permutation.type.id, newStates);
     }
 
-    static toPlaceableItemStack(permutation) {
-        const blockId = permutation.type.id.replace('minecraft:', '');
-        const newItemId = blockIdToItemStackMap[blockId];
-        return newItemId ? new ItemStack(newItemId) : permutation.getItemStack();
+    static toPlaceableItemStacks(permutation) {
+        const newItemIds = applyConversionPatterns(permutation.type.id, blockIdToItemStackPatterns);
+        if (newItemIds)
+            return newItemIds.map((itemId) => new ItemStack(itemId));
+        const itemStack = permutation.getItemStack();
+        return itemStack ? [itemStack] : [];
     }
 }

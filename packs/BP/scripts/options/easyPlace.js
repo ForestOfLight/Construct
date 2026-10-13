@@ -1,9 +1,9 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
-import { fetchMatchingItemSlot, placeBlock } from '../utils';
+import { hasItems, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
 
 const builderOption = new BuilderOption({
@@ -112,11 +112,10 @@ function isSupported(worldBlock, permutationToPlace) {
 }
 
 function tryPlaceBlockSurvival(event, player, block, permutation) {
-    const placeableItemStack = StructureBlockConverter.toPlaceableItemStack(permutation);
-    const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
-    if (itemSlotToUse) {
+    const itemIdsToConsume = StructureBlockConverter.toPlaceableItemStacks(permutation).map((itemStack) => itemStack.typeId);
+    if (hasItems(player, itemIdsToConsume)) {
         event.cancel = true;
-        placeBlock(player, block, permutation, itemSlotToUse);
+        placeBlock(player, block, permutation, itemIdsToConsume);
     } else {
         preventAction(event, player);
     }

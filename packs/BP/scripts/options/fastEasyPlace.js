@@ -1,7 +1,7 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
-import { placeBlock, fetchMatchingItemSlot } from '../utils';
+import { placeBlock, hasItems } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
 import { Vector } from '../lib/Vector';
@@ -159,10 +159,9 @@ function isSupported(worldBlock, permutationToPlace) {
 }
 
 function tryPlaceBlockSurvival(player, block, permutation) {
-    const placeableItemStack = StructureBlockConverter.toPlaceableItemStack(permutation);
-    const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
-    if (itemSlotToUse)
-        placeBlock(player, block, permutation, itemSlotToUse);
+    const itemIdsToConsume = StructureBlockConverter.toPlaceableItemStacks(permutation).map((itemStack) => itemStack.typeId);
+    if (hasItems(player, itemIdsToConsume))
+        placeBlock(player, block, permutation, itemIdsToConsume);
 }
 
 function isBlockInsidePlayer(player, worldBlock) {

@@ -23,7 +23,7 @@ export class StructurePickBlock {
         const hit = Raycaster.getTargetedStructureBlock(player, { isFirst: true, collideWithWorldBlocks: true, useActiveLayer: true });
         if (!hit?.block)
             return void 0;
-        return StructureBlockConverter.sanitizeToPlaceableItemStack(hit?.block);
+        return StructureBlockConverter.sanitizeToPlaceableItemStacks(hit?.block)[0];
     }
 
     static #swapItemIntoHotbar(player, sourceSlotIndex, hotbarReplacementSlot) {
