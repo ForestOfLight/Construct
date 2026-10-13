@@ -16,11 +16,11 @@ export class InstanceForm {
         isEnabled: [
             InstanceButtons.NextLayer,
             InstanceButtons.PreviousLayer,
+            InstanceButtons.Settings,
+            InstanceButtons.Materials,
+            InstanceButtons.Statistics,
             InstanceButtons.Move,
             InstanceButtons.FlexibleMove,
-            InstanceButtons.Settings,
-            InstanceButtons.Statistics,
-            InstanceButtons.Materials,
             InstanceButtons.Rename,
             InstanceButtons.Disable
         ],
@@ -36,7 +36,7 @@ export class InstanceForm {
             InstanceButtons.Delete,
             InstanceButtons.MainMenu
         ]
-    }
+    };
 
     constructor(player, instanceName) {
         this.player = player;
