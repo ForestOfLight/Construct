@@ -120,15 +120,16 @@ Run the structure verifier and print statistics.
  
 > Triggers a standalone `StructureVerifier` pass (same as the "Statistics" button) and sends the result to chat. Errors if a verifier is already running on this instance.
  
-### `construct:materials <instanceName> [missing]`
+### `construct:materials <instanceName> [subtractWorld] [subtractInventory]`
 Print the material list for an instance.
- 
+
 | Argument | Description |
 |---|---|
 | `<instanceName>` | Name of the instance. |
-| `missing` | When present, show only materials the player does not have in their inventory (mirrors the "missing only" toggle). Can only be used by a player source. |
- 
-> Respects the active layer: if a layer is set, only that layer's material counts are shown.
+| `subtractWorld` | When `true`, show only materials for blocks not yet built correctly in the world (the Material List's default page). Uses the verifier's last known state of each block, so parts of the build that have not been loaded since the instance was placed or the world was loaded are counted as missing, with a note saying how many. Fails if the instance is not placed or its verifier is off. |
+| `subtractInventory` | When `true`, also subtract the items in the player's inventory. Can only be used by a player source. |
+
+> Respects the active layer: if a layer is set, only that layer's material counts are shown. To subtract only your inventory, pass `false` for `subtractWorld`, e.g. `/construct:materials house false true`.
 
 ## Utility
  
