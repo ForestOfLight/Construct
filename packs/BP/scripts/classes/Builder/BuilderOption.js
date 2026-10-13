@@ -46,6 +46,22 @@ export class BuilderOption {
         return void 0;
     }
 
+    getValueNames() {
+        return ['true', 'false'];
+    }
+
+    parseValue(input) {
+        if (input === 'true')
+            return true;
+        if (input === 'false')
+            return false;
+        return void 0;
+    }
+
+    formatValue(value) {
+        return { text: String(value) };
+    }
+
     save(playerId, value) {
         world.setDynamicProperty(this.dynamicPropertyKey(playerId), value);
     }

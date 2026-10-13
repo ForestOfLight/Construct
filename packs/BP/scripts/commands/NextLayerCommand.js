@@ -1,13 +1,13 @@
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { instanceCollection } from '../classes/Instance/InstanceCollection';
+import { resolveCommandInstance } from '../options/cliDefaultInstance';
 
 export class NextLayerCommand extends Command {
     constructor() {
         super({
             name: 'nextlayer',
             description: 'construct.commands.nextlayer',
-            mandatoryParameters: [
+            optionalParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
@@ -16,9 +16,9 @@ export class NextLayerCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = instanceCollection.get(instanceName);
+        const instance = resolveCommandInstance(origin, instanceName);
         instance.increaseLayer();
-        origin.sendMessage({ translate: 'construct.commands.nextlayer.success', with: [instanceName, String(instance.getLayer())] });
+        origin.sendMessage({ translate: 'construct.commands.nextlayer.success', with: [instance.getName(), String(instance.getLayer())] });
         return { status: CustomCommandStatus.Success };
     }
 }

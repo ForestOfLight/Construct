@@ -7,6 +7,7 @@ import './options/easyPlace';
 import './options/fastEasyPlace';
 import './options/materialGrabber';
 import './options/defaultRenderMode';
+import './options/cliDefaultInstance';
 
 // Interaction Handling
 import './classes/MenuItemInteractions';
@@ -20,11 +21,12 @@ import './commands/InstancesCommand';
 import './commands/PlaceCommand';
 import './commands/MoveCommand';
 import './commands/EnableCommand';
+import './commands/DisableCommand';
 import './commands/LayerCommand';
 import './commands/NextLayerCommand';
 import './commands/PrevLayerCommand';
 import './commands/VerifierCommand';
-import './commands/BuilderCommand';
+import './commands/OptionCommand';
 import './commands/InstanceInfoCommand';
 import './commands/StatsCommand';
 import './commands/MaterialsCommand';

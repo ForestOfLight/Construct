@@ -118,6 +118,9 @@ construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
 construct.option.defaultrendermode.name=Default Render Mode
 construct.option.defaultrendermode.description=The render mode given to instances you create.
+construct.option.clidefaultinstance.name=CLI Default Instance
+construct.option.clidefaultinstance.description=The instance used by commands when you leave out the instance name.
+construct.option.clidefaultinstance.standingLocation=Use standing location
 
 ## Commands
 construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
@@ -157,10 +160,13 @@ construct.commands.move.success=§aMoved instance "%1" to %2 in %3.	## Insert st
 construct.commands.move.locationRequired=§cMust provide a dimension and coordinates when not running as a player.
 
 ## construct:enable
-construct.commands.enable=Enable or disable a Construct instance.
-construct.commands.enable.true=§aEnabled instance "%1".	## Insert string: instance name
-construct.commands.enable.false=§aDisabled instance "%1".	## Insert string: instance name
+construct.commands.enable=Enable a placed Construct instance.
+construct.commands.enable.success=§aEnabled instance "%1".	## Insert string: instance name
 construct.commands.error.noLocation=§cInstance "%1" has no saved location.
+
+## construct:disable
+construct.commands.disable=Disable a Construct instance.
+construct.commands.disable.success=§aDisabled instance "%1".	## Insert string: instance name
 
 ## construct:layer
 construct.commands.layer=Set the active layer of a Construct instance (Use 0 for the whole structure).
@@ -180,10 +186,11 @@ construct.commands.verifier=Toggle block validation overlay for a Construct inst
 construct.commands.verifier.enabled=§aEnabled verifier for instance "%1".	## Insert string: instance name
 construct.commands.verifier.disabled=§aDisabled verifier for instance "%1".	## Insert string: instance name
 
-## construct:builder
-construct.commands.builder=Toggle your Construct builder options.
-construct.commands.builder.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
-construct.commands.builder.unknownOption=§cUnknown option "%1".	## Insert string: option name
+## construct:option
+construct.commands.option=Change one of your Construct builder options.
+construct.commands.option.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
+construct.commands.option.unknownOption=§cUnknown option "%1".	## Insert string: option name
+construct.commands.option.invalidValue=§cInvalid value "%1" for option "%2". Valid values: %3	## Insert strings: given value, option name, comma-separated list of valid values
 
 ## construct:instanceinfo
 construct.commands.instanceinfo=Print Construct instance details to chat.
@@ -221,3 +228,5 @@ construct.error.instanceExists=§cInstance "%1" already exists. Try again with a
 construct.error.structureNotFound=§cStructure ID "%1" not found. If you're looking for a structure that you put in the structures folder, please restart your world and try again.	## Insert string: structure name
 construct.error.dimensionNotFound=§cDimension "%1" not found.	## Insert string: dimension name
 construct.error.notAPlayer=§cThis command can only be used by players.
+construct.error.instanceNameRequired=§cAn instance name is required when not running as a player.
+construct.error.notInInstance=§cYou are not standing in an instance. Provide an instance name or set a CLI Default Instance in your builder options.

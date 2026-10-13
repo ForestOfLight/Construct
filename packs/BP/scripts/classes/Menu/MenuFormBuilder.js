@@ -9,8 +9,9 @@ export class MenuFormBuilder {
             .title(this.menuTitle)
             .body({ translate: 'construct.mainmenu.selectinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.settings' });
-        instanceNames.forEach(instanceName => {
-            allInstanceNameForm.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
+        const coloredInstanceNames = instanceCollection.colorInstanceNamesByEnabled(instanceNames);
+        coloredInstanceNames.forEach(instanceName => {
+            allInstanceNameForm.button(instanceName);
         });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.newinstance' });
         allInstanceNameForm.button({ translate: 'construct.mainmenu.howto' });

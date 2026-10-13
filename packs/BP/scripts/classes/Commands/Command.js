@@ -1,10 +1,11 @@
-import { CustomCommandParamType, CustomCommandSource, CustomCommandStatus, Player, RawMessageError, system } from "@minecraft/server";
+import { CustomCommandParamType, CustomCommandSource, CustomCommandStatus, Player, system } from "@minecraft/server";
 import { Commands } from "./Commands.js";
 import { BlockCommandOrigin } from "./BlockCommandOrigin";
 import { EntityCommandOrigin } from "./EntityCommandOrigin";
 import { ServerCommandOrigin } from "./ServerCommandOrigin";
 import { PlayerCommandOrigin } from "./PlayerCommandOrigin";
 import { PACK_IDENTIFIER } from "../../consts.js";
+import { CommandResponseError } from "../Errors/CommandResponseError";
 
 export class Command {
     customCommand;
@@ -64,7 +65,7 @@ export class Command {
             try {
                 return this.customCommand.callback(source, ...args);
             } catch (error) {
-                if (error instanceof RawMessageError)
+                if (error instanceof CommandResponseError)
                     error.sendTo(source);
                 else
                     throw error;

@@ -18,8 +18,9 @@ export class MaterialGrabberFormBuilder {
         body.rawtext.push({ text: '\n' });
         body.rawtext.push({ translate: 'construct.materials.grabber.menu.selectinstance' });
         allInstanceNameForm.body(body);
-        instanceNames.forEach(instanceName => {
-            allInstanceNameForm.button(`${instanceCollection.get(instanceName).isEnabled() ? '§2' : '§c'}${instanceName}`);
+        const coloredInstanceNames = instanceCollection.colorInstanceNamesByEnabled(instanceNames);
+        coloredInstanceNames.forEach(instanceName => {
+            allInstanceNameForm.button(instanceName);
         });
         return allInstanceNameForm;
     }

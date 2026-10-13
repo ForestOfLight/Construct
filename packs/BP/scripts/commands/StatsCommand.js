@@ -1,7 +1,7 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, TicksPerSecond } from '@minecraft/server';
 import { InstanceFormBuilder } from '../classes/Instance/InstanceFormBuilder';
-import { instanceCollection } from '../classes/Instance/InstanceCollection';
+import { resolveCommandInstance } from '../options/cliDefaultInstance';
 import { StructureVerifier } from '../classes/Verifier/StructureVerifier';
 import { InstanceStatistics } from '../classes/Instance/InstanceStatistics';
 
@@ -10,7 +10,7 @@ export class StatsCommand extends Command {
         super({
             name: 'stats',
             description: 'construct.commands.stats',
-            mandatoryParameters: [
+            optionalParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
@@ -19,7 +19,7 @@ export class StatsCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = instanceCollection.get(instanceName);
+        const instance = resolveCommandInstance(origin, instanceName);
         if (this.structureVerifier)
             return { status: CustomCommandStatus.Failure, error: 'construct.commands.stats.alreadyRunning' };
         system.run(async () => {

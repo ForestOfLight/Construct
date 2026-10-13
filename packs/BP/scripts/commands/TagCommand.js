@@ -2,7 +2,7 @@ import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, EntityComponentTypes, EquipmentSlot, system } from '@minecraft/server';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 import { MENU_ITEM } from '../consts';
-import { instanceCollection } from '../classes/Instance/InstanceCollection';
+import { resolveCommandInstance } from '../options/cliDefaultInstance';
 
 export class TagCommand extends Command {
     constructor() {
@@ -10,7 +10,7 @@ export class TagCommand extends Command {
             name: 'tag',
             description: 'construct.commands.tag',
             allowedSources: [PlayerCommandOrigin],
-            mandatoryParameters: [
+            optionalParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
@@ -19,16 +19,16 @@ export class TagCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = instanceCollection.get(instanceName);
+        const instance = resolveCommandInstance(origin, instanceName);
         const player = origin.getSource();
         const equipment = player.getComponent(EntityComponentTypes.Equippable);
         const itemStack = equipment?.getEquipment(EquipmentSlot.Mainhand);
         if (itemStack?.typeId !== MENU_ITEM)
             return { status: CustomCommandStatus.Failure, message: 'construct.commands.tag.notHoldingItem' };
         system.run(() => {
-            itemStack.nameTag = instanceName;
+            itemStack.nameTag = instance.getName();
             equipment.setEquipment(EquipmentSlot.Mainhand, itemStack);
-            origin.sendMessage({ translate: 'construct.commands.tag.success', with: [instanceName] });
+            origin.sendMessage({ translate: 'construct.commands.tag.success', with: [instance.getName()] });
         });
         return { status: CustomCommandStatus.Success };
     }

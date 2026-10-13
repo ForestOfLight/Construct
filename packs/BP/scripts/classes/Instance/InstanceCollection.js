@@ -56,7 +56,7 @@ class InstanceCollection {
         return Object.keys(this.instances).sort((a, b) => a.localeCompare(b));
     }
 
-    getInstanceNamesSortedByEnabled() {
+    getInstanceNamesSortedByEnabled({ color = false } = {}) {
         const instanceNames = this.getInstanceNames();
         instanceNames.sort((a, b) => {
             const aEnabled = this.get(a).isEnabled();
@@ -65,7 +65,13 @@ class InstanceCollection {
                 return a.localeCompare(b);
             return bEnabled ? 1 : -1;
         });
-        return instanceNames;
+        if (!color)
+            return instanceNames;
+        return this.colorInstanceNamesByEnabled(instanceNames);
+    }
+
+    colorInstanceNamesByEnabled(instanceNames) {
+        return instanceNames.map(name => `${this.get(name).isEnabled() ? '§2' : '§c'}${name}`);
     }
 
     getInstancesAt(dimensionId, location, options = {}) {
