@@ -93,7 +93,7 @@ function preventAction(event, player) {
 
 function isBannedBlock(player, structureBlock) {
     const blockId = structureBlock.typeId.replace('minecraft:', '');
-    if (bannedBlocks.includes(blockId))
+    if (bannedBlocks.some((pattern) => pattern.test(blockId)))
         return true;
     if (bannedDimensionBlocks[player.dimension.id.replace('minecraft:', '')]?.includes(blockId))
         return true;

@@ -1,6 +1,6 @@
 export const bannedBlocks = [
-    'air', 'bed', 'piston_arm_collision', 'sticky_piston_arm_collision', "skeleton_skull", 'standing_banner', 'wall_banner',
-    '_door', 'dried_ghast', 'shulker_box'
+    /^air$/, /^bed$/, /^(sticky_)?piston_arm_collision$/, /^skeleton_skull$/, /^(standing|wall)_banner$/,
+    /_door$/, /^dried_ghast$/, /shulker_box$/
 ];
 
 export const bannedDimensionBlocks = {
