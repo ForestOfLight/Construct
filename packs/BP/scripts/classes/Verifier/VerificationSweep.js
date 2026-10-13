@@ -1,20 +1,22 @@
-import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
-import { Vector } from "../../lib/Vector";
-import { ChunkGrid } from "./ChunkGrid";
-import { SkippedChunkTracker } from "./SkippedChunkTracker";
+import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel.js";
+import { Vector } from "../../lib/Vector.js";
+import { ChunkGrid } from "./ChunkGrid.js";
+import { SkippedChunkTracker } from "./SkippedChunkTracker.js";
 
 export class VerificationSweep {
     #bounds;
     #grid;
+    #knownGrid;
     #cellVerifier;
     #observer;
     #chunks;
     #skippedChunks = new SkippedChunkTracker();
     #location = new Vector();
 
-    constructor({ bounds, grid, cellVerifier, observer, origin }) {
+    constructor({ bounds, grid, cellVerifier, observer, origin, knownGrid }) {
         this.#bounds = bounds;
         this.#grid = grid;
+        this.#knownGrid = knownGrid;
         this.#cellVerifier = cellVerifier;
         this.#observer = observer;
         this.#chunks = new ChunkGrid(origin);
@@ -61,6 +63,7 @@ export class VerificationSweep {
     #verifyCell(location) {
         const { verificationLevel, flags } = this.#cellVerifier.verify(location);
         this.#grid.setCell(location, verificationLevel, flags);
+        this.#knownGrid.setLevel(location, verificationLevel);
         this.#observer.onCellVerified(location, verificationLevel);
     }
 

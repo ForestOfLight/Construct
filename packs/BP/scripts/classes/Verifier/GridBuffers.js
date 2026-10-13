@@ -1,8 +1,10 @@
-import { VerificationGrid } from "./VerificationGrid";
+import { KnownStateGrid } from "./KnownStateGrid.js";
+import { VerificationGrid } from "./VerificationGrid.js";
 
 export class GridBuffers {
     #completed;
     #filling;
+    #known;
 
     completed() {
         return this.#completed;
@@ -10,6 +12,15 @@ export class GridBuffers {
 
     filling() {
         return this.#filling;
+    }
+
+    known() {
+        return this.#known;
+    }
+
+    syncKnown(anchor, bounds) {
+        this.#known ??= new KnownStateGrid();
+        this.#known.syncAnchor(anchor, bounds);
     }
 
     beginPass(bounds) {
