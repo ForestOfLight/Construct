@@ -63,6 +63,7 @@ construct.structure.statistics.skipped=§c[!] This analysis skipped %s blocks.	#
 construct.structure.statistics.correct=§7Correct: §a%s	## Insert string: number of correctly placed blocks
 construct.structure.statistics.stateincorrect=§7Block State Incorrect: §e%s	## Insert string: number of incorrectly stated blocks
 construct.structure.statistics.incorrect=§7Incorrect: §c%s	## Insert string: number of incorrectly placed blocks
+construct.structure.statistics.shouldbeair=§7Should Be Air: §d%s	## Insert string: number of blocks placed where the structure has air
 construct.structure.statistics.missing=§7Missing: §3%s	## Insert string: number of missing blocks
 
 construct.mainmenu.title=§l§2Construct	## This is the name of the pack.

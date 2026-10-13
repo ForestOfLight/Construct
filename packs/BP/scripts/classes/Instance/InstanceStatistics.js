@@ -36,6 +36,7 @@ export class InstanceStatistics {
         message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.correct', with: [this.formatStat(this.getStat(BlockVerificationLevel.Match))] }, { text: '\n' }] });
         message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.stateincorrect', with: [this.formatStat(this.getStat(BlockVerificationLevel.TypeMatch))] }, { text: '\n' }] });
         message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.incorrect', with: [this.formatStat(this.getStat(BlockVerificationLevel.NoMatch))] }, { text: '\n' }] });
+        message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.shouldbeair', with: [this.formatStat(this.getStat(BlockVerificationLevel.ShouldBeAir))] }, { text: '\n' }] });
         message.rawtext.push({ rawtext: [{ translate: 'construct.structure.statistics.missing', with: [this.formatStat(this.getStat(BlockVerificationLevel.Missing))] }, { text: '\n' }] });
         return message;
     }

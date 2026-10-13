@@ -55,6 +55,7 @@ construct.structure.statistics.skipped=§c[!]本次分析跳过了%s个方块	##
 construct.structure.statistics.correct=§7正确的方块: §a%s	## 插入字符串: 正确放置的方块数量
 construct.structure.statistics.stateincorrect=§7方块状态有误: §e%s	## 插入字符串: 状态错误的方块数量
 construct.structure.statistics.incorrect=§7方块位置有误: §c%s	## 插入字符串: 位置错误的方块数量
+construct.structure.statistics.shouldbeair=§7应为空气: §d%s	## 插入字符串: 结构中应为空气却放置了方块的数量
 construct.structure.statistics.missing=§7缺失方块: §3%s	## 插入字符串: 缺失的方块数量
 
 ## Structure Block Info Display

@@ -30,7 +30,7 @@ export class CellVerifier {
         if (!structureBlock)
             return BlockVerificationLevel.Air;
         if (structureBlock.typeId === "minecraft:air")
-            return worldBlock.isAir ? BlockVerificationLevel.Air : BlockVerificationLevel.NoMatch;
+            return worldBlock.isAir ? BlockVerificationLevel.Air : BlockVerificationLevel.ShouldBeAir;
         if (worldBlock.isAir)
             return BlockVerificationLevel.Missing;
         if (worldBlock.typeId !== structureBlock.typeId)

@@ -28,6 +28,9 @@ const PARTICLE_STYLES = Object.freeze({
     [BlockVerificationLevel.TypeMatch]: Object.freeze({
         color: { red: 1, green: 1, blue: 0, alpha: 0.2 }, scale: OVERLAY_SCALE, material: MaterialType.BLEND
     }),
+    [BlockVerificationLevel.ShouldBeAir]: Object.freeze({
+        color: { red: 0.55, green: 0, blue: 1, alpha: 0.2 }, scale: OVERLAY_SCALE, material: MaterialType.BLEND
+    }),
     [BlockVerificationLevel.Missing]: Object.freeze({
         color: { red: 0.55, green: 0.8, blue: 1, alpha: 1 }, scale: MISSING_SCALE, material: MaterialType.OPAQUE
     })
@@ -43,6 +46,9 @@ const BOX_STYLES = Object.freeze({
     }),
     [BlockVerificationLevel.TypeMatch]: Object.freeze({
         color: { red: 1, green: 1, blue: 0, alpha: 1 }, scale: OVERLAY_SCALE
+    }),
+    [BlockVerificationLevel.ShouldBeAir]: Object.freeze({
+        color: { red: 0.55, green: 0, blue: 1, alpha: 1 }, scale: OVERLAY_SCALE
     }),
     [BlockVerificationLevel.Missing]: Object.freeze({
         color: { red: 0.3, green: 0.57, blue: 0.87, alpha: 1 }, scale: 1.00
