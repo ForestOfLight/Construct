@@ -2,10 +2,12 @@ import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { MenuFormBuilder } from '../MenuFormBuilder';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { InstanceStatistics } from './InstanceStatistics';
-import {EntityComponentTypes, TicksPerSecond, world} from '@minecraft/server';
+import { TicksPerSecond, world } from '@minecraft/server';
 import { RENDER_MODE_LABELS, RENDER_MODE_ORDER } from '../Enums/RenderMode';
 import { RefreshRate } from '../Verifier/RefreshRate';
-import { StructureMaterials } from '../Materials/StructureMaterials';
+import { WorldMaterials } from '../Materials/WorldMaterials';
+import { MaterialsPage } from '../Enums/MaterialsPage';
+import { MaterialsButtons } from '../Enums/MaterialsButtons';
 
 export class InstanceFormBuilder {
     static structureVerifier;
@@ -81,34 +83,42 @@ export class InstanceFormBuilder {
             .submitButton({ translate: 'construct.menu.submit' });
     }
 
-    static buildMaterialList(instance, onlyMissing = false, player = false) {
-        const materials = instance.getActiveMaterials();
+    static buildMaterialList(instance, page, worldMaterials) {
+        const showsMissing = page === MaterialsPage.Missing && worldMaterials !== void 0;
+        const baseMaterials = instance.getActiveMaterials();
         const form = new ActionFormData()
             .title(MenuFormBuilder.menuTitle)
-        const bodyText = { rawtext: [] };
-        let buttonText = void 0;
-        if (onlyMissing) {
-            const inventoryContainer = player?.getComponent(EntityComponentTypes.Inventory)?.container;
-            if (!inventoryContainer) {
-                form.body({ translate: 'construct.instance.materials.noinventory' });
-                return form;
-            }
-            bodyText.rawtext.push({ translate: 'construct.instance.materials.missing.header' });
-            if (instance.hasLayerSelected())
-                bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
-            bodyText.rawtext.push({ text: `§f\n\n` });
-            bodyText.rawtext.push(materials.formatString(StructureMaterials.subtractInventory(materials.materials, inventoryContainer)));
-            buttonText = "construct.instance.materials.all.button";
-        } else {
-            bodyText.rawtext.push({ translate: `construct.instance.materials.all.header` });
-            if (instance.hasLayerSelected())
-                bodyText.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
-            bodyText.rawtext.push({ text: `§f\n\n` });
-            bodyText.rawtext.push(materials.formatString());
-            buttonText = "construct.instance.materials.missing.button";
-        }
-        form.body(bodyText);
-        form.button({ translate: buttonText });
-        return form;
+        const body = { rawtext: [] };
+        body.rawtext.push({ translate: showsMissing ? 'construct.instance.materials.missing.header' : 'construct.instance.materials.all.header' });
+        if (instance.hasLayerSelected())
+            body.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(instance.getLayer())] });
+        body.rawtext.push({ text: '§f\n\n' });
+        const note = showsMissing
+            ? WorldMaterials.formatUnscannedNote(worldMaterials.unscannedCount)
+            : InstanceFormBuilder.#worldUnavailableNote(instance);
+        if (note)
+            body.rawtext.push(note, { text: '§f\n\n' });
+        const list = baseMaterials.formatString(showsMissing ? worldMaterials.materials : void 0);
+        body.rawtext.push(list.rawtext.length > 0 ? list : { translate: 'construct.instance.materials.empty' });
+        form.body(body);
+        const buttons = InstanceFormBuilder.#materialListButtons(instance, showsMissing);
+        buttons.forEach(button => form.button({ translate: button }));
+        return { form, buttons };
+    }
+
+    static #worldUnavailableNote(instance) {
+        if (!instance.isEnabled())
+            return { translate: 'construct.instance.materials.placeinstance' };
+        if (!instance.canShowWorldMaterials())
+            return { translate: 'construct.instance.materials.verifieroff' };
+        return void 0;
+    }
+
+    static #materialListButtons(instance, showsMissing) {
+        if (showsMissing)
+            return [MaterialsButtons.ShowAll, MaterialsButtons.SubtractInventory];
+        if (instance.canShowWorldMaterials())
+            return [MaterialsButtons.ShowMissing, MaterialsButtons.SubtractInventory];
+        return [MaterialsButtons.SubtractInventory];
     }
 }

@@ -7,6 +7,8 @@ import { FormCancelationReason } from '@minecraft/server-ui';
 import { FlexibleInstanceMove } from './FlexibleInstanceMove';
 import { Builders } from '../Builder/Builders';
 import { RENDER_MODE_ORDER, RenderMode } from '../Enums/RenderMode';
+import { MaterialsPage } from '../Enums/MaterialsPage';
+import { MaterialsButtons } from '../Enums/MaterialsButtons';
 
 export class InstanceForm {
     instanceName;
@@ -182,11 +184,31 @@ export class InstanceForm {
         });
     }
 
-    materialsForm(onlyShowMissingMaterials = false) {
-        forceShow(this.player, InstanceFormBuilder.buildMaterialList(this.instance, onlyShowMissingMaterials, this.player)).then((response) => {
-            if (response.canceled) return;
-            if (response.selection === 0)
-                this.materialsForm(!onlyShowMissingMaterials);
-        });
+    async materialsForm(page = MaterialsPage.Missing) {
+        const worldMaterials = await this.#countWorldMaterials(page);
+        if (!instanceCollection.has(this.instanceName))
+            return;
+        const { form, buttons } = InstanceFormBuilder.buildMaterialList(this.instance, page, worldMaterials);
+        const response = await forceShow(this.player, form);
+        if (response.canceled)
+            return;
+        switch (buttons[response.selection]) {
+            case MaterialsButtons.ShowAll:
+                this.materialsForm(MaterialsPage.All);
+                break;
+            case MaterialsButtons.ShowMissing:
+                this.materialsForm(MaterialsPage.Missing);
+                break;
+            case MaterialsButtons.SubtractInventory:
+                this.materialsForm(page);
+                break;
+        }
+    }
+
+    #countWorldMaterials(page) {
+        if (page !== MaterialsPage.Missing || !this.instance.canShowWorldMaterials())
+            return Promise.resolve(void 0);
+        this.player.onScreenDisplay.setActionBar({ translate: 'construct.instance.materials.counting' });
+        return this.instance.getWorldMaterials();
     }
 }
