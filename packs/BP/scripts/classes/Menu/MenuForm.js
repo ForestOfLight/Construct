@@ -30,11 +30,6 @@ export class MenuForm {
         const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
 
         const form = new CustomForm(this.player, MenuForm.title);
-        form.button({ translate: 'construct.menu.settings' }, () => {
-            form.close();
-            new BuilderForm(this.player)
-        });
-        form.spacer();
         form.label({ translate: 'construct.menu.selectinstance' });
         form.spacer();
         instanceNames.forEach(instanceName => {
@@ -47,6 +42,10 @@ export class MenuForm {
         form.button({ translate: 'construct.menu.newinstance' }, () => {
             form.close();
             this.showCreateNewInstance();
+        });
+        form.button({ translate: 'construct.menu.settings' }, () => {
+            form.close();
+            new BuilderForm(this.player)
         });
         form.button({ translate: 'construct.menu.howto' }, () => {
             form.close();

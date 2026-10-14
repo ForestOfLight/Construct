@@ -1,6 +1,7 @@
-import { BuilderFormBuilder } from "./BuilderFormBuilder";
 import { BuilderOptions } from "./BuilderOptions";
-import { forceShow } from '../../utils';
+import { CustomForm } from "@minecraft/server-ui";
+import { MenuForm } from "../Menu/MenuForm";
+import { FormUtils } from "../Menu/FormUtils";
 
 export class BuilderForm {
     constructor(player) {
@@ -9,18 +10,14 @@ export class BuilderForm {
     }
 
     show() {
-        forceShow(this.player, BuilderFormBuilder.buildBuilderOptions(this.player)).then((response) => {
-            if (response.canceled) return;
-            this.applySettings(response.formValues);
+        const form = new CustomForm(this.player, MenuForm.title);
+        for (const optionId of BuilderOptions.getOptionIds())
+            BuilderOptions.get(optionId).addControlTo(form, this.player);
+        form.spacer();
+        form.button({ text: '<' }, () => {
+            form.close();
+            new MenuForm(this.player)
         });
-    }
-
-    applySettings(formValues) {
-        const optionIds = BuilderOptions.getOptionIds();
-        for (let i = 0; i < optionIds.length; i++) {
-            const message = BuilderOptions.get(optionIds[i]).applyFormValue(this.player.id, formValues[i]);
-            if (message)
-                this.player.sendMessage(message);
-        }
+        FormUtils.tryShow(form);
     }
 }

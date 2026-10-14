@@ -7,6 +7,7 @@ import { StructureMaterials } from '../classes/Materials/StructureMaterials';
 
 const builderOption = new BuilderOption({
     identifier: 'materialGrabber',
+    order: 3,
     displayName: { translate: 'construct.option.materialgrabber.name' },
     description: { translate: 'construct.option.materialgrabber.description' },
     howToUse: { translate: 'construct.option.materialgrabber.howto' },

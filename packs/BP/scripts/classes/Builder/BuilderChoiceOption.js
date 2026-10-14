@@ -1,17 +1,16 @@
+import { ObservableNumber } from "@minecraft/server-ui";
 import { BuilderOption } from "./BuilderOption";
 import { world } from "@minecraft/server";
 
 export class BuilderChoiceOption extends BuilderOption {
     choices;
     choiceLabels;
-    choiceNames;
     defaultValue;
 
-    constructor({ identifier, displayName, description, choices, choiceLabels, choiceNames = choices, defaultValue, onChangeCallback = () => {} }) {
-        super({ identifier, displayName, description, howToUse: description });
+    constructor({ identifier, order, displayName, description, choices, choiceLabels, defaultValue, onChangeCallback = () => {} }) {
+        super({ identifier, order, displayName, description, howToUse: description });
         this.choices = choices;
         this.choiceLabels = choiceLabels;
-        this.choiceNames = choiceNames;
         this.defaultValue = defaultValue;
         this.onChange = onChangeCallback;
     }
@@ -25,12 +24,11 @@ export class BuilderChoiceOption extends BuilderOption {
     }
 
     getValueNames() {
-        return typeof this.choiceNames === 'function' ? this.choiceNames() : this.choiceNames;
+        return this.getChoices();
     }
 
     parseValue(input) {
-        const index = this.getValueNames().indexOf(input);
-        return index === -1 ? void 0 : this.getChoices()[index];
+        return this.getChoices().includes(input) ? input : void 0;
     }
 
     formatValue(value) {
@@ -61,11 +59,12 @@ export class BuilderChoiceOption extends BuilderOption {
         return this.getChoiceLabels()[this.getChoices().indexOf(value)];
     }
 
-    addControlTo(form, playerId) {
-        form.dropdown(this.displayName, this.getChoiceLabels(), {
-            defaultValueIndex: Math.max(this.getChoices().indexOf(this.getValue(playerId)), 0),
-            tooltip: this.description
-        });
+    addControlTo(form, player) {
+        const currChoiceIndex = Math.max(this.getChoices().indexOf(this.getValue(player.id)), 0);
+        const choice = new ObservableNumber(currChoiceIndex, { clientWritable: true });
+        const choices = this.getChoiceLabels().map((label, index) => ({ label, value: index }));
+        form.dropdown(this.displayName, choice, choices, { description: this.description });
+        choice.subscribe((value) => player.sendMessage(this.applyFormValue(player.id, value)));
     }
 
     applyFormValue(playerId, formValue) {

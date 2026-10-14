@@ -1,3 +1,4 @@
+import { ObservableBoolean } from "@minecraft/server-ui";
 import { BuilderOptions } from "./BuilderOptions";
 import { world } from "@minecraft/server";
 
@@ -5,14 +6,16 @@ const DP_NAMESPACE = "builderOptions";
 
 export class BuilderOption {
     identifier;
+    order;
     displayName;
     description;
     howToUse;
     #onEnable;
     #onDisable;
 
-    constructor({ identifier, displayName, description, howToUse, onEnableCallback = () => {}, onDisableCallback = () => {} }) {
+    constructor({ identifier, order = 0, displayName, description, howToUse, onEnableCallback = () => {}, onDisableCallback = () => {} }) {
         this.identifier = identifier;
+        this.order = order;
         this.displayName = displayName;
         this.description = description;
         this.howToUse = howToUse;
@@ -66,15 +69,17 @@ export class BuilderOption {
         world.setDynamicProperty(this.dynamicPropertyKey(playerId), value);
     }
 
-    addControlTo(form, playerId) {
-        form.toggle(this.displayName, { defaultValue: this.isEnabled(playerId), tooltip: this.description });
+    addControlTo(form, player) {
+        const enabled = new ObservableBoolean(this.isEnabled(player.id), { clientWritable: true });
+        form.toggle(this.displayName, enabled, { description: this.description });
+        enabled.subscribe((value) => player.sendMessage(this.applyFormValue(player.id, value)));
     }
 
     applyFormValue(playerId, formValue) {
         const changedToValue = this.setValue(playerId, formValue);
         if (changedToValue === void 0)
             return void 0;
-        if (changedToValue)
+        if (changedToValue) {
             return { rawtext: [
                 { text: `§a` },
                 this.displayName,
@@ -82,6 +87,7 @@ export class BuilderOption {
                 { text: `§7 ` },
                 this.howToUse
             ]};
+        }
         return { rawtext: [
             { text: `§c` },
             this.displayName,

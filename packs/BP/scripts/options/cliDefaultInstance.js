@@ -4,8 +4,7 @@ import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 import { InstanceNameRequiredError } from '../classes/Errors/InstanceNameRequiredError';
 import { NotInInstanceError } from '../classes/Errors/NotInInstanceError';
 
-const USE_STANDING_LOCATION = '';
-const USE_STANDING_LOCATION_NAME = 'construct:standing_location';
+const USE_STANDING_LOCATION = 'construct:standing_location';
 
 function getInstanceChoices() {
     return instanceCollection.getInstanceNamesSortedByEnabled().filter(name => name !== USE_STANDING_LOCATION);
@@ -13,14 +12,14 @@ function getInstanceChoices() {
 
 const builderOption = new BuilderChoiceOption({
     identifier: 'cliDefaultInstance',
+    order: 5,
     displayName: { translate: 'construct.option.clidefaultinstance.name' },
     description: { translate: 'construct.option.clidefaultinstance.description' },
     choices: () => [USE_STANDING_LOCATION, ...getInstanceChoices()],
     choiceLabels: () => [
         { translate: 'construct.option.clidefaultinstance.standingLocation' },
-        ...getInstanceChoices().map(instanceName => ({ text: instanceCollection.colorInstanceNameByEnabled(instanceName) }))
+        ...getInstanceChoices().map(instanceName => ({ text: instanceName }))
     ],
-    choiceNames: () => [USE_STANDING_LOCATION_NAME, ...getInstanceChoices()],
     defaultValue: USE_STANDING_LOCATION
 });
 

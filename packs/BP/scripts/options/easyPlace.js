@@ -8,6 +8,7 @@ import { Builders } from '../classes/Builder/Builders';
 
 const builderOption = new BuilderOption({
     identifier: 'easyPlace',
+    order: 1,
     displayName: { translate: 'construct.option.easyplace.name' },
     description: { translate: 'construct.option.easyplace.description' },
     howToUse: { translate: 'construct.option.easyplace.howto' },

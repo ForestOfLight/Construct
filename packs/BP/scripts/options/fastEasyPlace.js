@@ -13,6 +13,7 @@ const runnerByPlayer = {};
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
+    order: 2,
     displayName: { translate: 'construct.option.fasteasyplace.name' },
     description: { translate: 'construct.option.fasteasyplace.description' },
     howToUse: { translate: 'construct.option.fasteasyplace.howto' },

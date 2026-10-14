@@ -3,6 +3,7 @@ import { RENDER_MODE_LABELS, RENDER_MODE_ORDER, RenderMode } from '../classes/En
 
 const builderOption = new BuilderChoiceOption({
     identifier: 'defaultRenderMode',
+    order: 4,
     displayName: { translate: 'construct.option.defaultrendermode.name' },
     description: { translate: 'construct.option.defaultrendermode.description' },
     choices: RENDER_MODE_ORDER,
