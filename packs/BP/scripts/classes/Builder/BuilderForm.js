@@ -14,7 +14,7 @@ export class BuilderForm {
         for (const optionId of BuilderOptions.getOptionIds())
             BuilderOptions.get(optionId).addControlTo(form, this.player);
         form.spacer();
-        form.button({ text: '<' }, () => {
+        form.button({ text: '<<' }, () => {
             form.close();
             new MenuForm(this.player)
         });

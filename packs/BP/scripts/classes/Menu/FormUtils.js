@@ -4,7 +4,7 @@ export class FormUtils {
     static LIST_PAGE_SIZE = 20;
 
     static tryShow(form) {
-        form.show().catch(error => {
+        return form.show().catch(error => {
             this.player.sendMessage({ translate: 'construct.menu.open.error' });
             console.error(error);
         });
