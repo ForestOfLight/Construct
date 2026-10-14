@@ -4,7 +4,7 @@ import { BuilderForm } from '../Builder/BuilderForm';
 import { getDefaultRenderMode } from '../../options/defaultRenderMode';
 import { world } from '@minecraft/server';
 import { CustomForm, ObservableBoolean, ObservableString, ObservableUIRawMessage } from '@minecraft/server-ui';
-import { FormPagination } from './FormPagination';
+import { FormUtils } from './FormUtils';
 
 export class MenuForm {
     static title = { translate: 'construct.menu.title' };
@@ -52,7 +52,7 @@ export class MenuForm {
             form.close();
             this.showHowTo();
         });
-        this.tryShow(form);
+        FormUtils.tryShow(form);
     }
 
     showCreateNewInstance() {
@@ -62,12 +62,12 @@ export class MenuForm {
 
         const form = new CustomForm(this.player, MenuForm.title);
         form.textField({ translate: 'construct.menu.newinstance.prompt' }, observableInstanceName);
-        FormPagination.buildListWithFilter(form, worldStructureIds, (structureId) => {
+        FormUtils.buildPaginatedListWithFilter(form, worldStructureIds, (structureId) => {
             const instanceName = observableInstanceName.getData();
             this.#addInstance(form, instanceName, structureId);
         }, { translate: 'construct.menu.selectstructure.header' });
         this.#addOtherStructureInput(form, observableInstanceName);
-        this.tryShow(form);
+        FormUtils.tryShow(form);
     }
 
     #addOtherStructureInput(form, observableInstanceName) {
@@ -113,13 +113,6 @@ export class MenuForm {
         form.divider();
         form.label(removeMessage);
         form.closeButton();
-        this.tryShow(form);
-    }
-
-    tryShow(form) {
-        form.show().catch(error => {
-            this.player.sendMessage({ translate: 'construct.menu.open.error' });
-            console.error(error);
-        });
+        FormUtils.tryShow(form);
     }
 }

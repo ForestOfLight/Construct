@@ -1,5 +1,5 @@
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
-import { MenuFormBuilder } from '../Menu/MenuFormBuilder';
+import { MenuForm} from '../Menu/MenuForm';
 import { StructureVerifier } from '../Verifier/StructureVerifier';
 import { InstanceStatistics } from './InstanceStatistics';
 import { TicksPerSecond, world } from '@minecraft/server';
@@ -15,7 +15,7 @@ export class InstanceFormBuilder {
     static buildInstance(instance, options) {
         const location = instance.getLocation();
         const form = new ActionFormData()
-            .title(MenuFormBuilder.menuTitle)
+            .title(MenuForm.title)
         const body = { rawtext: [
             { translate: 'construct.instance.menu.body', with: [instance.getName(), instance.getStructureId()] }
         ]};
@@ -38,14 +38,14 @@ export class InstanceFormBuilder {
 
     static buildRenameInstance(currentName) {
         return new ModalFormData()
-            .title(MenuFormBuilder.menuTitle)
+            .title(MenuForm.title)
             .textField({ translate: 'construct.instance.menu.rename' }, currentName)
             .submitButton({ translate: 'construct.menu.instance.button.rename' });
     }
 
     static async buildStatistics(instance) {
         const buildStatisticsForm = new ActionFormData()
-            .title(MenuFormBuilder.menuTitle)
+            .title(MenuForm.title)
         if (this.structureVerifier)
             throw new Error('StructureVerifier is already running.');
         this.structureVerifier = StructureVerifier.standalone(instance, { particleLifetime: 1*TicksPerSecond });
@@ -59,7 +59,7 @@ export class InstanceFormBuilder {
 
     static buildSettings(instance) {
         return new ModalFormData()
-            .title(MenuFormBuilder.menuTitle)
+            .title(MenuForm.title)
             .toggle({ translate: 'construct.instance.option.validation' }, { defaultValue: instance.options.verifier.isEnabled, tooltip: { translate: 'construct.instance.option.validation.description' }})
             .slider({ translate: 'construct.instance.option.layer'}, 0, instance.getMaxLayer(), { defaultValue: instance.getLayer(), valueStep: 1, tooltip: { translate: 'construct.instance.option.layer.description' }})
             .dropdown(
@@ -87,7 +87,7 @@ export class InstanceFormBuilder {
         const showsMissing = page === MaterialsPage.Missing && worldMaterials !== void 0;
         const baseMaterials = instance.getActiveMaterials();
         const form = new ActionFormData()
-            .title(MenuFormBuilder.menuTitle)
+            .title(MenuForm.title)
         const body = { rawtext: [] };
         body.rawtext.push({ translate: showsMissing ? 'construct.instance.materials.missing.header' : 'construct.instance.materials.all.header' });
         if (instance.hasLayerSelected())

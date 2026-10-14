@@ -1,9 +1,19 @@
 import { ObservableBoolean, ObservableString } from "@minecraft/server-ui";
 
-export class FormPagination {
+export class FormUtils {
     static LIST_PAGE_SIZE = 20;
 
-    static buildListWithFilter(form, options, selectionCallback, filterLabel = 'Filter') {
+    static tryShow(form) {
+        form.show().catch(error => {
+            this.player.sendMessage({ translate: 'construct.menu.open.error' });
+            console.error(error);
+        });
+    }
+
+    static buildPaginatedListWithFilter(form, options, selectionCallback, filterLabel = 'Filter') {
+        if (options.length <= FormUtils.LIST_PAGE_SIZE)
+            return FormUtils.buildPaginatedList(form, options, selectionCallback);
+
         const filter = new ObservableString('', { clientWritable: true });
         form.textField(filterLabel, filter, { description: 'Filter results' });
         form.spacer();
@@ -13,31 +23,31 @@ export class FormPagination {
             return term ? options.filter(o => String(o).toLowerCase().includes(term)) : options;
         };
 
-        const refresh = FormPagination.#build(form, options, getOptions, selectionCallback);
+        const refresh = FormUtils.#build(form, options, getOptions, selectionCallback);
         filter.subscribe(() => refresh());
         return refresh;
     }
 
-    static buildList(form, options, selectionCallback) {
-        return FormPagination.#build(form, options, () => options, selectionCallback);
+    static buildPaginatedList(form, options, selectionCallback) {
+        return FormUtils.#build(form, options, () => options, selectionCallback);
     }
 
     static #build(form, allOptions, getOptions, selectionCallback) {
         const noResultsVisible = new ObservableBoolean(false, { clientWritable: true });
         form.label({ translate: 'construct.menu.pagination.noresults' }, { visible: noResultsVisible });
-        const slots = FormPagination.#buildSlots(form, selectionCallback);
+        const slots = FormUtils.#buildSlots(form, selectionCallback);
         const pageIndicator = new ObservableString('', { clientWritable: true });
         const pagingVisible = new ObservableBoolean(false, { clientWritable: true });
         let page = 0;
 
-        const render = () => FormPagination.#renderPage(getOptions(), slots, page, pageIndicator, noResultsVisible);
-        pagingVisible.setData(FormPagination.#totalPages(allOptions) > 1);
+        const render = () => FormUtils.#renderPage(getOptions(), slots, page, pageIndicator, noResultsVisible);
+        pagingVisible.setData(FormUtils.#totalPages(allOptions) > 1);
 
         form.divider({ visible: pagingVisible });
         form.label(pageIndicator, { visible: pagingVisible });
         form.spacer({ visible: pagingVisible });
         form.button({ text: '>' }, () => {
-            if (page < FormPagination.#totalPages(getOptions()) - 1)
+            if (page < FormUtils.#totalPages(getOptions()) - 1)
                 page++;
             render();
         }, { visible: pagingVisible });
@@ -54,7 +64,7 @@ export class FormPagination {
 
     static #buildSlots(form, selectionCallback) {
         const slots = [];
-        for (let i = 0; i < FormPagination.LIST_PAGE_SIZE; i++) {
+        for (let i = 0; i < FormUtils.LIST_PAGE_SIZE; i++) {
             const label = new ObservableString('', { clientWritable: true });
             const visible = new ObservableBoolean(false, { clientWritable: true });
             slots.push({ label, visible });
@@ -64,13 +74,13 @@ export class FormPagination {
     }
 
     static #totalPages(options) {
-        return Math.max(1, Math.ceil(options.length / FormPagination.LIST_PAGE_SIZE));
+        return Math.max(1, Math.ceil(options.length / FormUtils.LIST_PAGE_SIZE));
     }
 
     static #renderPage(options, slots, page, pageIndicator, noResultsVisible) {
-        const pages = FormPagination.#totalPages(options);
-        const start = page * FormPagination.LIST_PAGE_SIZE;
-        for (let i = 0; i < FormPagination.LIST_PAGE_SIZE; i++) {
+        const pages = FormUtils.#totalPages(options);
+        const start = page * FormUtils.LIST_PAGE_SIZE;
+        for (let i = 0; i < FormUtils.LIST_PAGE_SIZE; i++) {
             const option = options[start + i];
             slots[i].label.setData(option ?? '');
             slots[i].visible.setData(Boolean(option));
