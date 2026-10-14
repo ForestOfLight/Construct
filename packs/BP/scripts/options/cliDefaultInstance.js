@@ -18,7 +18,7 @@ const builderOption = new BuilderChoiceOption({
     choices: () => [USE_STANDING_LOCATION, ...getInstanceChoices()],
     choiceLabels: () => [
         { translate: 'construct.option.clidefaultinstance.standingLocation' },
-        ...instanceCollection.colorInstanceNamesByEnabled(getInstanceChoices()).map(instanceName => ({ text: instanceName }))
+        ...getInstanceChoices().map(instanceName => ({ text: instanceCollection.colorInstanceNameByEnabled(instanceName) }))
     ],
     choiceNames: () => [USE_STANDING_LOCATION_NAME, ...getInstanceChoices()],
     defaultValue: USE_STANDING_LOCATION

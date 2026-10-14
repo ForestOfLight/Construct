@@ -67,11 +67,11 @@ class InstanceCollection {
         });
         if (!color)
             return instanceNames;
-        return this.colorInstanceNamesByEnabled(instanceNames);
+        return instanceNames.map(name => this.colorInstanceNameByEnabled(name));
     }
 
-    colorInstanceNamesByEnabled(instanceNames) {
-        return instanceNames.map(name => `${this.get(name).isEnabled() ? '§2' : '§c'}${name}`);
+    colorInstanceNameByEnabled(name) {
+        return `${this.get(name).isEnabled() ? '§2' : '§c'}${name}`;
     }
 
     getInstancesAt(dimensionId, location, options = {}) {

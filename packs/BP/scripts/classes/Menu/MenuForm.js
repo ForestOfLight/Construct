@@ -1,19 +1,20 @@
-import { forceShow } from '../../utils';
 import { instanceCollection } from '../Instance/InstanceCollection';
-import { MenuFormBuilder } from './MenuFormBuilder';
 import { InstanceForm } from '../Instance/InstanceForm';
 import { BuilderForm } from '../Builder/BuilderForm';
-import { InstanceExistsError } from '../Errors/InstanceExistsError';
-import { StructureNotFoundError } from '../Errors/StructureNotFoundError';
 import { getDefaultRenderMode } from '../../options/defaultRenderMode';
+import { world } from '@minecraft/server';
+import { CustomForm, ObservableBoolean, ObservableString, ObservableUIRawMessage } from '@minecraft/server-ui';
+import { FormPagination } from './FormPagination';
 
 export class MenuForm {
+    static title = { translate: 'construct.menu.title' };
+
     constructor(player, { jumpToInstance = false, instanceName = void 0 } = {}) {
         this.player = player;
         this.show(jumpToInstance, instanceName);
     }
 
-    async show(jumpToInstance = false, instanceName = void 0) {
+    show(jumpToInstance = false, instanceName = void 0) {
         if (jumpToInstance) {
             if (!instanceName)
                 instanceName = instanceCollection.getInstanceAt(this.player.dimension.id, this.player.location, { useActiveLayer: false })?.getName();
@@ -22,82 +23,103 @@ export class MenuForm {
                 return;
             }
         }
-        instanceName = await this.getInstanceNameFromForm();
-        if (!instanceName)
-            return;
+        this.showInstanceSelection();
+    }
+
+    showInstanceSelection() {
+        const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
+
+        const form = new CustomForm(this.player, MenuForm.title);
+        form.button({ translate: 'construct.menu.settings' }, () => {
+            form.close();
+            new BuilderForm(this.player)
+        });
+        form.spacer();
+        form.label({ translate: 'construct.menu.selectinstance' });
+        form.spacer();
+        instanceNames.forEach(instanceName => {
+            form.button(instanceName, () => {
+                form.close();
+                new InstanceForm(this.player, instanceName);
+            });
+        });
+        form.divider();
+        form.button({ translate: 'construct.menu.newinstance' }, () => {
+            form.close();
+            this.showCreateNewInstance();
+        });
+        form.button({ translate: 'construct.menu.howto' }, () => {
+            form.close();
+            this.showHowTo();
+        });
+        this.tryShow(form);
+    }
+
+    showCreateNewInstance() {
+        const observableInstanceName = new ObservableString('My Instance', { clientWritable: true });
+        const worldStructureIds = instanceCollection.getWorldStructureIds();
+        worldStructureIds.sort((a, b) => a.localeCompare(b));
+
+        const form = new CustomForm(this.player, MenuForm.title);
+        form.textField({ translate: 'construct.menu.newinstance.prompt' }, observableInstanceName);
+        FormPagination.buildListWithFilter(form, worldStructureIds, (structureId) => {
+            const instanceName = observableInstanceName.getData();
+            this.#addInstance(form, instanceName, structureId);
+        }, { translate: 'construct.menu.selectstructure.header' });
+        this.#addOtherStructureInput(form, observableInstanceName);
+        this.tryShow(form);
+    }
+
+    #addOtherStructureInput(form, observableInstanceName) {
+        const notFoundMessage = { translate: 'construct.menu.selectstructure.other.notfound' };
+        const foundMessage = { translate: 'construct.menu.selectstructure.other.found' };
+        const tipMessage = { translate: 'construct.menu.selectstructure.other.description' };
+        const observableOtherStructure = new ObservableString('', { clientWritable: true });
+        const otherDescription = new ObservableUIRawMessage(tipMessage, { clientWritable: true });
+        const otherFound = new ObservableBoolean(false, { clientWritable: true });
+        observableOtherStructure.subscribe(value => {
+            const structureId = value.trim();
+            const found = structureId !== '' && world.structureManager.get(structureId) !== void 0;
+            otherFound.setData(found);
+            otherDescription.setData(structureId === '' ? tipMessage : found ? foundMessage : notFoundMessage);
+        });
+        form.textField({ translate: 'construct.menu.selectstructure.other' }, observableOtherStructure, { description: otherDescription });
+        form.button({ translate: 'construct.menu.selectstructure.other.submit' }, () => {
+            const instanceName = observableInstanceName.getData();
+            const structureId = observableOtherStructure.getData().trim()
+            this.#addInstance(form, instanceName, structureId);
+        }, { visible: otherFound });
+    }
+
+    #addInstance(form, instanceName, structureId) {
+        instanceCollection.add(instanceName, structureId, { renderMode: getDefaultRenderMode(this.player.id) });
+        form.close();
         new InstanceForm(this.player, instanceName);
     }
 
-    async getInstanceNameFromForm() {
-        try {
-            const instanceNames = instanceCollection.getInstanceNamesSortedByEnabled();
-            return forceShow(this.player, MenuFormBuilder.buildAllInstanceName(instanceNames)).then((response) => {
-                if (response.canceled)
-                    return void 0;
-                let selection = response.selection;
-                if (selection === 0) {
-                    new BuilderForm(this.player);
-                    return void 0;
-                } else if (selection == instanceNames.length + 2) {
-                    MenuFormBuilder.buildHowTo().show(this.player);
-                    return void 0;
-                } else {
-                    selection--;
-                    const selectedInstanceName = instanceNames[selection];
-                    return selectedInstanceName || this.createNewInstance();
-                }
-            });
-        } catch (error) {
-            if (error.message === 'Menu timed out.') {
-                this.player.sendMessage({ translate: 'construct.menu.open.timeout' });
-                return void 0;
-            }
-            throw error;
-        }
+    showHowTo() {
+        const addMessage = { rawtext: [
+            { translate: 'construct.menu.howto.add.header' }, { text: '\n' },
+            { translate: 'construct.menu.howto.add.structureblock' }, { text: '\n' },
+            { translate: 'construct.menu.howto.add.or' }, { text: '\n' },
+            { translate: 'construct.menu.howto.add.mcstructure' }, { text: '\n' }
+        ]};
+        const removeMessage = { rawtext: [
+            { translate: 'construct.menu.howto.remove.header' }, { text: '\n' },
+            { translate: 'construct.menu.howto.remove.body' }, { text: '\n' }
+        ]};
+        const form = new CustomForm(this.player, MenuForm.title);
+        form.label(addMessage);
+        form.divider();
+        form.label(removeMessage);
+        form.closeButton();
+        this.tryShow(form);
     }
 
-    async createNewInstance() {
-        return MenuFormBuilder.buildNewInstance().show(this.player).then(async (response) => {
-            if (response.canceled)
-                return void 0;
-            const instanceName = response.formValues[0];
-            if (instanceName === '')
-                return void 0;
-            const structureId = await this.getStructureId();
-            if (!structureId)
-                return void 0;
-            try {
-                instanceCollection.add(instanceName, structureId, { renderMode: getDefaultRenderMode(this.player.id) });
-            } catch (error) {
-                if (error instanceof InstanceExistsError || error instanceof StructureNotFoundError) {
-                    error.sendTo(this.player);
-                    return void 0;
-                }
-                throw error;
-            }
-            return instanceName;
-        });
-    }
-
-    async getStructureId() {
-        return MenuFormBuilder.buildAllStructures().show(this.player).then((response) => {
-            if (response.canceled)
-                return void 0;
-            const worldStructureIds = instanceCollection.getWorldStructureIds();
-            worldStructureIds.sort((a, b) => a.localeCompare(b));
-            const selectedStructureId = worldStructureIds[response.selection];
-            return selectedStructureId || this.getOtherStructureId();
-        });
-    }
-
-    getOtherStructureId() {
-        return MenuFormBuilder.buildOtherStructure().show(this.player).then((response) => {
-            if (response.canceled)
-                return void 0;
-            const structureId = response.formValues[0];
-            if (structureId === '')
-                return void 0;
-            return structureId;
+    tryShow(form) {
+        form.show().catch(error => {
+            this.player.sendMessage({ translate: 'construct.menu.open.error' });
+            console.error(error);
         });
     }
 }
