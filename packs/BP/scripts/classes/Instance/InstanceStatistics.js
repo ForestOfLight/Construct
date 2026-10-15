@@ -42,6 +42,6 @@ export class InstanceStatistics {
     }
 
     formatStat(stat) {
-        return `${stat.num} (${stat.percent.toFixed(2)}%%)`;
+        return `${stat.num} (${stat.percent.toFixed(2)}%)`;
     }
 }

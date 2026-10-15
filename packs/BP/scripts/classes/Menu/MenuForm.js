@@ -1,5 +1,5 @@
 import { instanceCollection } from '../Instance/InstanceCollection';
-import { InstanceForm } from '../Instance/InstanceForm';
+import { InstanceForm } from '../Instance/Form/InstanceForm';
 import { BuilderForm } from '../Builder/BuilderForm';
 import { getDefaultRenderMode } from '../../options/defaultRenderMode';
 import { world } from '@minecraft/server';

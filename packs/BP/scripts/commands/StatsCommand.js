@@ -1,6 +1,5 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, TicksPerSecond } from '@minecraft/server';
-import { InstanceFormBuilder } from '../classes/Instance/InstanceFormBuilder';
 import { resolveCommandInstance } from '../options/cliDefaultInstance';
 import { StructureVerifier } from '../classes/Verifier/StructureVerifier';
 import { InstanceStatistics } from '../classes/Instance/InstanceStatistics';

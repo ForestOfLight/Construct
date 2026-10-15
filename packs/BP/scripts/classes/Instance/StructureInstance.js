@@ -1,4 +1,3 @@
-import { Vector } from "../../lib/Vector";
 import { StructureOutliner } from "../Render/outline/StructureOutliner";
 import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
