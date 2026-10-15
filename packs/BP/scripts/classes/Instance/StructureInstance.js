@@ -173,6 +173,18 @@ export class StructureInstance {
         return this.worldMaterials.compute();
     }
 
+    getCollectedMaterials() {
+        return this.options.collectedMaterials;
+    }
+
+    addCollectedMaterials(collected) {
+        this.options.addCollectedMaterials(collected);
+    }
+
+    clearCollectedMaterials() {
+        this.options.clearCollectedMaterials();
+    }
+
     canShowWorldMaterials() {
         return this.isEnabled() && this.verifier?.isEnabled() === true;
     }

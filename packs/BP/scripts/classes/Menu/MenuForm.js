@@ -61,6 +61,7 @@ export class MenuForm {
 
         const form = new CustomForm(this.player, MenuForm.title);
         form.textField({ translate: 'construct.menu.newinstance.prompt' }, observableInstanceName);
+        form.spacer();
         FormUtils.buildPaginatedListWithFilter(form, worldStructureIds, (structureId) => {
             const instanceName = observableInstanceName.getData();
             this.#addInstance(form, instanceName, structureId);

@@ -56,7 +56,7 @@ export class InstanceForm {
             form.close();
             this.startFlexibleMovement();
         }, { visible: showManage });
-        form.divider({ visible: showToggle })
+        form.divider({ visible: showManage });
         form.button(enableButtonLabel, () => {
             if (this.instance.isEnabled())
                 this.instance.disable();
@@ -136,7 +136,7 @@ export class InstanceForm {
         confirmationBox.button1({ translate: 'construct.instance.delete.confirm' });
         confirmationBox.button2({ translate: 'construct.instance.delete.cancel' });
         const result = await FormUtils.tryShow(confirmationBox);
-        if (result === 1)
+        if (result?.selection === 1)
             instanceCollection.delete(this.instanceName);
         else
             this.show();

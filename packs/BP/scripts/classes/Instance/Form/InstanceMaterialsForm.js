@@ -3,9 +3,10 @@ import { EntityComponentTypes } from "@minecraft/server";
 import { FormUtils } from "../../Menu/FormUtils";
 import { MenuForm } from "../../Menu/MenuForm";
 import { MaterialsButtons } from "../../Enums/MaterialsButtons";
-import { StructureMaterials } from "../../Materials/StructureMaterials";
+import { CollectedMaterials } from "../../Materials/CollectedMaterials";
 import { WorldMaterials } from "../../Materials/WorldMaterials";
 import { InstanceForm } from "./InstanceForm";
+import { InstanceCollectedForm } from "./InstanceCollectedForm";
 import { instanceCollection } from "../InstanceCollection";
 
 export class InstanceMaterialsForm {
@@ -20,20 +21,38 @@ export class InstanceMaterialsForm {
     async show() {
         const canShowWorld = this.instance.canShowWorldMaterials();
         const showMissing = new ObservableBoolean(canShowWorld, { clientWritable: true });
-        const subtractInventory = new ObservableBoolean(false, { clientWritable: true });
+        const subtractCollected = new ObservableBoolean(false, { clientWritable: true });
         const body = new ObservableUIRawMessage(await this.#buildBody(canShowWorld, false));
         if (!this.#isStillValid())
             return;
-        const refresh = () => this.#refresh(body, showMissing.getData(), subtractInventory.getData());
+        const refresh = () => this.#refresh(body, showMissing.getData(), subtractCollected.getData());
         showMissing.subscribe(refresh);
-        subtractInventory.subscribe(refresh);
+        subtractCollected.subscribe(refresh);
 
         const form = new CustomForm(this.player, MenuForm.title);
         form.toggle({ translate: MaterialsButtons.ShowMissing }, showMissing, { visible: canShowWorld });
-        form.toggle({ translate: MaterialsButtons.SubtractInventory }, subtractInventory);
+        form.toggle({ translate: MaterialsButtons.SubtractCollected }, subtractCollected);
         form.divider();
         form.label(body);
         form.spacer();
+        const showAddInventory = new ObservableBoolean(true, { clientWritable: true });
+        const showInventoryAdded = new ObservableBoolean(false, { clientWritable: true });
+        const inventoryAddedMessage = new ObservableUIRawMessage({ text: '' });
+        form.button(this.#getAddInventoryLabel(), () => {
+            inventoryAddedMessage.setData(this.#addInventoryToCollected());
+            showAddInventory.setData(false);
+            showInventoryAdded.setData(true);
+            refresh();
+        }, {
+            tooltip: { translate: 'construct.instance.materials.addinventory.description' },
+            visible: showAddInventory
+        });
+        form.label(inventoryAddedMessage, { visible: showInventoryAdded });
+        form.spacer({ visible: showInventoryAdded });
+        form.button({ translate: MaterialsButtons.ViewCollected }, () => {
+            form.close();
+            new InstanceCollectedForm(this.player, this.instance);
+        });
         form.button('<<', () => {
             form.close();
             new InstanceForm(this.player, this.instance.getName());
@@ -41,24 +60,40 @@ export class InstanceMaterialsForm {
         FormUtils.tryShow(form);
     }
 
-    async #refresh(body, showMissing, subtractInventory) {
+    #getInventoryMatches() {
+        const inventory = this.player.getComponent(EntityComponentTypes.Inventory)?.container;
+        if (!inventory)
+            return new CollectedMaterials();
+        return CollectedMaterials.fromInventory(inventory, this.instance.getActiveMaterials().materials);
+    }
+
+    #getAddInventoryLabel() {
+        return { translate: MaterialsButtons.AddInventory, with: [String(this.#getInventoryMatches().getTotal())] };
+    }
+
+    #addInventoryToCollected() {
+        const matches = this.#getInventoryMatches();
+        this.instance.addCollectedMaterials(matches);
+        return { translate: 'construct.instance.materials.addinventory.success', with: [String(matches.getTotal())] };
+    }
+
+    async #refresh(body, showMissing, subtractCollected) {
         const renderId = ++this.#renderId;
-        const message = await this.#buildBody(showMissing, subtractInventory);
+        const message = await this.#buildBody(showMissing, subtractCollected);
         if (renderId !== this.#renderId || !this.#isStillValid())
             return;
         body.setData(message);
     }
 
-    async #buildBody(showMissing, subtractInventory) {
+    async #buildBody(showMissing, subtractCollected) {
         const worldMaterials = showMissing && this.instance.canShowWorldMaterials()
             ? await this.instance.getWorldMaterials()
             : void 0;
         const showsMissing = worldMaterials !== void 0;
         const baseMaterials = this.instance.getActiveMaterials();
         let materials = showsMissing ? worldMaterials.materials : baseMaterials.materials;
-        const inventory = this.player.getComponent(EntityComponentTypes.Inventory)?.container;
-        if (subtractInventory && inventory)
-            materials = StructureMaterials.subtractInventory(materials, inventory);
+        if (subtractCollected)
+            materials = this.instance.getCollectedMaterials().subtractFrom(materials);
 
         const body = { rawtext: [] };
         body.rawtext.push({ translate: showsMissing ? 'construct.instance.materials.missing.header' : 'construct.instance.materials.all.header' });
