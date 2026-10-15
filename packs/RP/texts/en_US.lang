@@ -99,6 +99,7 @@ construct.menu.settings=Builder Settings
 construct.menu.newinstance=Create New Instance
 construct.menu.newinstance.prompt=Enter a name for the new instance:
 construct.menu.selectstructure.header=Select a structure below
+construct.menu.selectstructure.path=Folder
 construct.menu.selectstructure.other=Other Structure ID
 construct.menu.selectstructure.other.description=Structure ID not recognized by Construct? Type its name here to see if Minecraft can find it.
 construct.menu.selectstructure.other.notfound=Structure not found.

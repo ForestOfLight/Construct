@@ -62,12 +62,18 @@ export class MenuForm {
         const form = new CustomForm(this.player, MenuForm.title);
         form.textField({ translate: 'construct.menu.newinstance.prompt' }, observableInstanceName);
         form.spacer();
-        FormUtils.buildPaginatedListWithFilter(form, worldStructureIds, (structureId) => {
+        form.label({ translate: 'construct.menu.selectstructure.header' });
+        const structureEntries = worldStructureIds.map(structureId => ({ path: MenuForm.#toStructurePath(structureId), value: structureId }));
+        FormUtils.buildFolderedList(form, structureEntries, (structureId) => {
             const instanceName = observableInstanceName.getData();
             this.#addInstance(form, instanceName, structureId);
-        }, { translate: 'construct.menu.selectstructure.header' });
+        }, { translate: 'construct.menu.selectstructure.path' });
         this.#addOtherStructureInput(form, observableInstanceName);
         FormUtils.tryShow(form);
+    }
+
+    static #toStructurePath(structureId) {
+        return structureId.replace(':', '/');
     }
 
     #addOtherStructureInput(form, observableInstanceName) {
