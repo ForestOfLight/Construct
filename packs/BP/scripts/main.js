@@ -2,6 +2,10 @@
 import './classes/Builder/Builders';
 import './classes/BlockChangeWatcher';
 
+// Admin Options
+import './options/admin/disableEasyPlace';
+import './options/admin/disableFastEasyPlace';
+
 // Options
 import './options/easyPlace';
 import './options/fastEasyPlace';
@@ -27,6 +31,7 @@ import './commands/NextLayerCommand';
 import './commands/PrevLayerCommand';
 import './commands/VerifierCommand';
 import './commands/OptionCommand';
+import './commands/AdminCommand';
 import './commands/InstanceInfoCommand';
 import './commands/StatsCommand';
 import './commands/MaterialsCommand';

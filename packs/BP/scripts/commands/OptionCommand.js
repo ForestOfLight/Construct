@@ -27,6 +27,10 @@ export class OptionCommand extends Command {
             origin.sendMessage({ translate: 'construct.commands.option.unknownOption', with: [builderOption] });
             return void 0;
         }
+        if (option.isLocked(origin.getSource().id)) {
+            origin.sendMessage({ translate: 'construct.commands.option.locked', with: { rawtext: [{ text: builderOption }, option.lockReason] } });
+            return void 0;
+        }
         const value = option.parseValue(input);
         if (value === void 0) {
             origin.sendMessage({ translate: 'construct.commands.option.invalidValue', with: [input, builderOption, option.getValueNames().join(', ')] });

@@ -6,6 +6,7 @@ import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
 import { Vector } from '../lib/Vector';
 import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
+import { disableFastEasyPlace } from './admin/disableFastEasyPlace';
 
 const locationsPlacedLastTick = new Set();
 const ACTION_ITEM = 'construct:easy_place';
@@ -17,6 +18,10 @@ const builderOption = new BuilderOption({
     displayName: { translate: 'construct.option.fasteasyplace.name' },
     description: { translate: 'construct.option.fasteasyplace.description' },
     howToUse: { translate: 'construct.option.fasteasyplace.howto' },
+    lock: {
+        isLocked: () => disableFastEasyPlace.isEnabled(),
+        reason: { translate: 'construct.option.lockedbyadmin' }
+    },
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });

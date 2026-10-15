@@ -7,8 +7,8 @@ export class BuilderChoiceOption extends BuilderOption {
     choiceLabels;
     defaultValue;
 
-    constructor({ identifier, order, displayName, description, choices, choiceLabels, defaultValue, onChangeCallback = () => {} }) {
-        super({ identifier, order, displayName, description, howToUse: description });
+    constructor({ identifier, order, displayName, description, choices, choiceLabels, defaultValue, lock = void 0, onChangeCallback = () => {} }) {
+        super({ identifier, order, displayName, description, howToUse: description, lock });
         this.choices = choices;
         this.choiceLabels = choiceLabels;
         this.defaultValue = defaultValue;
@@ -36,6 +36,8 @@ export class BuilderChoiceOption extends BuilderOption {
     }
 
     getValue(playerId) {
+        if (this.isLocked(playerId))
+            return this.defaultValue;
         const stored = world.getDynamicProperty(this.dynamicPropertyKey(playerId));
         return this.getChoices().includes(stored) ? stored : this.defaultValue;
     }
@@ -45,7 +47,7 @@ export class BuilderChoiceOption extends BuilderOption {
     }
 
     setValue(playerId, value) {
-        if (!this.getChoices().includes(value))
+        if (this.isLocked(playerId) || !this.getChoices().includes(value))
             return void 0;
         const previous = this.getValue(playerId);
         this.save(playerId, value);
@@ -63,7 +65,7 @@ export class BuilderChoiceOption extends BuilderOption {
         const currChoiceIndex = Math.max(this.getChoices().indexOf(this.getValue(player.id)), 0);
         const choice = new ObservableNumber(currChoiceIndex, { clientWritable: true });
         const choices = this.getChoiceLabels().map((label, index) => ({ label, value: index }));
-        form.dropdown(this.displayName, choice, choices, { description: this.description });
+        form.dropdown(this.displayName, choice, choices, this.controlOptions(player.id));
         choice.subscribe((value) => player.sendMessage(this.applyFormValue(player.id, value)));
     }
 

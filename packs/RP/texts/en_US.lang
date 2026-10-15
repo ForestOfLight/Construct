@@ -125,6 +125,7 @@ construct.pickblock.inventoryfull=§cCannot pick structure block: inventory is f
 construct.option.enabled= is now enabled!
 construct.option.disabled= is now disabled.
 construct.option.setto= is now set to §f
+construct.option.lockedbyadmin=§cDisabled by an admin.
 construct.option.easyplace.name=Easy Place
 construct.option.easyplace.description=Always place the correct structure block.
 construct.option.easyplace.howto=Hold the Easy Place item in your offhand and place blocks in an instance to have them be corrected automatically.
@@ -132,6 +133,12 @@ construct.option.easyplace.actionprevented=§cAction prevented by Easy Place.
 construct.option.fasteasyplace.name=Fast Easy Place
 construct.option.fasteasyplace.description=Place correct structure blocks just by clicking on them.
 construct.option.fasteasyplace.howto=Hold the Easy Place item in your main hand and use it on missing blocks in a structure to place them.
+
+## Admin Options
+construct.adminoption.disableeasyplace.name=Disable Easy Place
+construct.adminoption.disableeasyplace.description=Prevent all builders from using Easy Place.
+construct.adminoption.disablefasteasyplace.name=Disable Fast Easy Place
+construct.adminoption.disablefasteasyplace.description=Prevent all builders from using Fast Easy Place.
 construct.option.materialgrabber.name=Material Grabber
 construct.option.materialgrabber.description=Pulls structure items from inventories.
 construct.option.materialgrabber.howto=Interact with inventories using the Material Grabber item to pull structure items from them.
@@ -213,6 +220,13 @@ construct.commands.option=Change one of your Construct builder options.
 construct.commands.option.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
 construct.commands.option.unknownOption=§cUnknown option "%1".	## Insert string: option name
 construct.commands.option.invalidValue=§cInvalid value "%1" for option "%2". Valid values: %3	## Insert strings: given value, option name, comma-separated list of valid values
+construct.commands.option.locked=§cOption "%1" cannot be changed: %2	## Insert strings: option name, reason the option is locked
+
+## construct:admin
+construct.commands.admin=Change Construct admin options.
+construct.commands.admin.success=§aSet admin option "%1" to %2.	## Insert strings: option name, option value
+construct.commands.admin.unknownOption=§cUnknown admin option "%1".	## Insert string: option name
+construct.commands.admin.invalidValue=§cInvalid value "%1" for admin option "%2". Expected one of: %3.	## Insert strings: given value, option name, comma-separated valid values
 
 ## construct:instanceinfo
 construct.commands.instanceinfo=Print Construct instance details to chat.

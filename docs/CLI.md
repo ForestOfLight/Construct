@@ -144,6 +144,21 @@ Change one of your builder options. Must be run as a player source.
  
 > Does the same thing as the Builder Options form. Turning on `easyPlace`, `fastEasyPlace` or `materialGrabber` gives you its action item, and turning it off removes the item. Options are saved per player. If an instance is itself named `standing`, `standing` still means "use standing location", so pick that instance from the menu instead.
 
+### `/construct:admin [optionId] [value]`
+Change a world-wide admin option. Requires admin (operator) permission. Run with no arguments (as a player) to open the Admin Options form.
+
+| Argument | Description |
+|---|---|
+| `[optionId]` | The admin option to change. See the table below. |
+| `[value]` | The new value. Valid values depend on the option. |
+
+| `optionId` | Valid values | Effect |
+|---|---|---|
+| `disableEasyPlace` | `true`, `false` | Locks `easyPlace` off for every builder. Players' own settings are kept and come back once this is turned off. |
+| `disableFastEasyPlace` | `true`, `false` | Locks `fastEasyPlace` off for every builder. Players' own settings are kept and come back once this is turned off. |
+
+> State is saved per-world via dynamic properties.
+
 ## Information
  
 ### `/construct:instanceinfo [instanceName]`

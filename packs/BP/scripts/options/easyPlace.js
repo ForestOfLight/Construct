@@ -5,6 +5,7 @@ import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
 import { hasItems, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
+import { disableEasyPlace } from './admin/disableEasyPlace';
 
 const builderOption = new BuilderOption({
     identifier: 'easyPlace',
@@ -12,6 +13,10 @@ const builderOption = new BuilderOption({
     displayName: { translate: 'construct.option.easyplace.name' },
     description: { translate: 'construct.option.easyplace.description' },
     howToUse: { translate: 'construct.option.easyplace.howto' },
+    lock: {
+        isLocked: () => disableEasyPlace.isEnabled(),
+        reason: { translate: 'construct.option.lockedbyadmin' }
+    },
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
