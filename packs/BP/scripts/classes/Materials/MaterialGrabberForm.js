@@ -30,7 +30,7 @@ export class MaterialGrabberForm {
             form.close();
             this.setActiveInstance(instanceName);
             this.player.sendMessage({ translate: 'construct.materials.grabber.menu.success', with: [instanceName] });
-        });
+        }, 'Filter', { getImage: instanceName => FormUtils.getEnabledImage(instanceCollection.get(instanceName).isEnabled()) });
         FormUtils.tryShow(form);
     }
 

@@ -1,5 +1,6 @@
 import { PaginatedListForm } from "./PaginatedListForm";
 import { FolderedListForm } from "./FolderedListForm";
+import { RESOURCE_PACK_UUID } from "../../consts";
 
 export class FormUtils {
     static tryShow(form) {
@@ -9,8 +10,8 @@ export class FormUtils {
         });
     }
 
-    static buildPaginatedListWithFilter(form, options, selectionCallback, filterLabel = 'Filter') {
-        return PaginatedListForm.buildWithFilter(form, options, selectionCallback, filterLabel);
+    static buildPaginatedListWithFilter(form, options, selectionCallback, filterLabel = 'Filter', listOptions = {}) {
+        return PaginatedListForm.buildWithFilter(form, options, selectionCallback, filterLabel, listOptions);
     }
 
     static buildPaginatedList(form, options, selectionCallback) {
@@ -19,5 +20,9 @@ export class FormUtils {
 
     static buildFolderedList(form, entries, selectionCallback, pathLabel = 'Path') {
         return new FolderedListForm(form, entries, selectionCallback, pathLabel);
+    }
+
+    static getEnabledImage(isEnabled) {
+        return { imagePackId: RESOURCE_PACK_UUID, imageSrc: isEnabled ? 'textures/ui/enabled.png' : 'textures/ui/disabled.png' };
     }
 }

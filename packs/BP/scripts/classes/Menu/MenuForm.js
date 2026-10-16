@@ -36,7 +36,7 @@ export class MenuForm {
             form.button(instanceName, () => {
                 form.close();
                 new InstanceForm(this.player, instanceName);
-            });
+            }, { imageDetails: FormUtils.getEnabledImage(instanceCollection.get(instanceName).isEnabled()) });
         });
         form.divider();
         form.button({ translate: 'construct.menu.newinstance' }, () => {
