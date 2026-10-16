@@ -49,8 +49,7 @@
 					"bpName": "project.name+'[BP]'"
               	},
              	"filters": [
-					{ "filter": "fetch_block_data" },
-					{ "filter": "fetch_block_models" }
+					{ "filter": "fetch_block_data" }
       			]
 			}
 		}
