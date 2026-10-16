@@ -67,6 +67,8 @@ export class MenuForm {
             this.#addInstance(form, instanceName, structureId);
         }, { translate: 'construct.menu.selectstructure.header' });
         this.#addOtherStructureInput(form, observableInstanceName);
+        form.spacer();
+        this.#addBackButton(form);
         FormUtils.tryShow(form);
     }
 
@@ -112,7 +114,15 @@ export class MenuForm {
         form.label(addMessage);
         form.divider();
         form.label(removeMessage);
-        form.closeButton();
+        form.spacer();
+        this.#addBackButton(form);
         FormUtils.tryShow(form);
+    }
+
+    #addBackButton(form) {
+        form.button({ text: '<<' }, () => {
+            form.close();
+            this.showInstanceSelection();
+        });
     }
 }
