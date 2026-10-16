@@ -74,7 +74,7 @@ export class InstanceForm {
         form.button({ translate: InstanceButtons.Delete }, () => {
             form.close();
             this.#deleteWithConfirmation();
-        });
+        }, { imageDetails: FormUtils.getImage('textures/ui/caution.png') });
         form.button({ translate: InstanceButtons.MainMenu }, () => {
             form.close();
             new MenuForm(this.player, { jumpToInstance: false });

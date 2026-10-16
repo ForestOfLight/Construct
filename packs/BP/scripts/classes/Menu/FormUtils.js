@@ -22,7 +22,11 @@ export class FormUtils {
         return new FolderedListForm(form, entries, selectionCallback, pathLabel);
     }
 
+    static getImage(imageSrc) {
+        return { imagePackId: RESOURCE_PACK_UUID, imageSrc };
+    }
+
     static getEnabledImage(isEnabled) {
-        return { imagePackId: RESOURCE_PACK_UUID, imageSrc: isEnabled ? 'textures/ui/enabled.png' : 'textures/ui/disabled.png' };
+        return FormUtils.getImage(isEnabled ? 'textures/ui/enabled.png' : 'textures/ui/disabled.png');
     }
 }
