@@ -1,5 +1,5 @@
 import { Command } from '../classes/Commands/Command';
-import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus } from '@minecraft/server';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 
 export class RenameCommand extends Command {
@@ -17,7 +17,7 @@ export class RenameCommand extends Command {
     }
 
     run(origin, instanceName, newName) {
-        const instance = instanceCollection.get(instanceName);
+        instanceCollection.get(instanceName);
         if (instanceCollection.has(newName)) {
             origin.sendMessage({ translate: 'construct.error.instanceExists', with: [newName] });
             return void 0;

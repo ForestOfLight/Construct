@@ -46,7 +46,7 @@ class BlockInfo {
     static getFormattedHeader(instance = void 0) {
         return { rawtext: [
             { translate: 'construct.blockinfo.header' },
-            (instance != void 0) ? { text: ` §7${instance.getName()}\n` } : { text: '\n' }
+            (instance === void 0) ? { text: '\n' } : { text: ` §7${instance.getName()}\n` }
         ]};
     }
 

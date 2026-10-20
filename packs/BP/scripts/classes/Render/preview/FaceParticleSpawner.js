@@ -63,8 +63,8 @@ export class FaceParticleSpawner {
     }
 
     #setUv(face) {
-        this.#uv.x = DEBUG_CONFIG.enable ? DEBUG_CONFIG.render_all_textures_as.u : face.uv.x;
-        this.#uv.y = DEBUG_CONFIG.enable ? DEBUG_CONFIG.render_all_textures_as.v : face.uv.y;
+        this.#uv.x = DEBUG_CONFIG.enable ? DEBUG_CONFIG.renderAllTexturesAs.u : face.uv.x;
+        this.#uv.y = DEBUG_CONFIG.enable ? DEBUG_CONFIG.renderAllTexturesAs.v : face.uv.y;
         this.#uvSize.x = face.uv.w;
         this.#uvSize.y = face.uv.h;
         this.#molang.setVector3("uv", this.#uv);

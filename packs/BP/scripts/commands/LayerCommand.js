@@ -1,5 +1,5 @@
 import { Command } from '../classes/Commands/Command';
-import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus } from '@minecraft/server';
 import { resolveCommandInstance } from '../options/cliDefaultInstance';
 
 export class LayerCommand extends Command {

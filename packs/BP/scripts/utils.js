@@ -120,11 +120,12 @@ function handleWaterlogging(block, structureBlock) {
         block.setWaterlogged(true);
 }
 
+/* eslint-disable camelcase */
 function playBlockPlacementSound(player, block, structureBlock) {
     const blockId = structureBlock.type.id.replace('minecraft:', '');
     const blockData = blocks[blockId];
-    let blockSound = blockData?.sound || 'stone';
-    let blockSoundId = block_sounds[blockSound].events.place?.sound
+    const blockSound = blockData?.sound || 'stone';
+    const blockSoundId = block_sounds[blockSound].events.place?.sound
         || block_sounds[block_sounds[blockSound].base].events.place?.sound;
     player.dimension.playSound(blockSoundId, block.location);
 }

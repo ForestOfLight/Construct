@@ -34,14 +34,14 @@ export class StructurePickBlock {
         }
         const emptyHotbarSlotIndex = StructurePickBlock.#getFirstEmptyHotbarSlotIndex(inventoryContainer);
         const sourceSlot = inventoryContainer.getSlot(sourceSlotIndex);
-        if (emptyHotbarSlotIndex !== void 0) {
+        if (emptyHotbarSlotIndex === void 0) {
+            StructurePickBlock.#swapSlots(sourceSlot, hotbarReplacementSlot)
+        } else {
             const itemToMove = sourceSlot.getItem();
             sourceSlot.setItem(void 0);
             const emptyHotbarSlot = inventoryContainer.getSlot(emptyHotbarSlotIndex);
             emptyHotbarSlot.setItem(itemToMove);
             player.selectedSlotIndex = emptyHotbarSlotIndex;
-        } else {
-            StructurePickBlock.#swapSlots(sourceSlot, hotbarReplacementSlot)
         }
     }
 

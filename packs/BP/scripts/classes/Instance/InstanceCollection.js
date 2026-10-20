@@ -82,9 +82,9 @@ class InstanceCollection {
                 if (error instanceof StructureNotFoundError || error instanceof InvalidStructureError) {
                     this.delete(instance.name);
                     return false;
-                } else {
+                } 
                     throw error;
-                }
+                
             }
         });
     }

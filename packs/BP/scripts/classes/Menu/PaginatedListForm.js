@@ -77,7 +77,7 @@ export class PaginatedListForm {
         for (let i = 0; i < PaginatedListForm.PAGE_SIZE; i++) {
             const option = options[start + i];
             this.#slots[i].option = option;
-            this.#slots[i].label.setData(option !== void 0 ? this.#getLabel(option) : '');
+            this.#slots[i].label.setData(option === void 0 ? '' : this.#getLabel(option));
             this.#slots[i].visible.setData(option !== void 0);
             if (option !== void 0 && this.#slots[i].image)
                 PaginatedListForm.#setImage(this.#slots[i].image, this.#getImage(option));

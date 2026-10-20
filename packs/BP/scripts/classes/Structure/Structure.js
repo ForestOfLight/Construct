@@ -99,31 +99,31 @@ export class Structure {
     }
 
     *getBlocks(locations) {
-        for (const location of locations) {
+        for (const location of locations) 
             yield this.getBlock(location);
-        }
+        
     }
 
     *getLayerBlocks(layer) {
         for (let x = 0; x < this.#size.x; x++) {
-            for (let z = 0; z < this.#size.z; z++) {
+            for (let z = 0; z < this.#size.z; z++) 
                 yield this.getBlock({ x, y: layer, z });
-            }
+            
         }
     }
 
     *getAllBlocks() {
-        for (let y = 0; y < this.#size.y; y++) {
+        for (let y = 0; y < this.#size.y; y++) 
             yield * this.getLayerBlocks(y);
-        }
+        
     }
 
     getLayerLocations(layer) {
         const locations = new Set();
         for (let x = 0; x < this.#size.x; x++) {
-            for (let z = 0; z < this.#size.z; z++) {
+            for (let z = 0; z < this.#size.z; z++) 
                 locations.add(new Vector(x, layer, z));
-            }
+            
         }
         return locations;
     }
@@ -132,9 +132,9 @@ export class Structure {
         const locations = new Set();
         for (let y = 0; y < this.#size.y; y++) {
             const layerLocations = this.getLayerLocations(y);
-            for (const location of layerLocations) {
+            for (const location of layerLocations) 
                 locations.add(location);
-            }
+            
         }
         return locations;
     }

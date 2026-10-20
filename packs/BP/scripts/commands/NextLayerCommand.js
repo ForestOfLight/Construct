@@ -1,4 +1,4 @@
-import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
 import { resolveCommandInstance } from '../options/cliDefaultInstance';
 

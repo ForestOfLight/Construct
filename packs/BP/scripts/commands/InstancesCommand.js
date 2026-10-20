@@ -1,4 +1,4 @@
-import { CommandPermissionLevel, CustomCommandStatus, system } from '@minecraft/server';
+import { CommandPermissionLevel, CustomCommandStatus } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 

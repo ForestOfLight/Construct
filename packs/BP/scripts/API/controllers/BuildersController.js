@@ -17,7 +17,7 @@ export class BuildersController extends APIController {
             const builder = this.#context.get(playerId);
             return builder.asPacket();
         } catch(error) {
-            if (error instanceof BuilderNotFoundErrors)
+            if (error instanceof BuilderNotFoundError)
                 throw new APICallerError(error);
             throw error;
         }

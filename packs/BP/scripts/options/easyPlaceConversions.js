@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export const bannedBlocks = [
     /^air$/, /^bed$/, /^(sticky_)?piston_arm_collision$/, /^skeleton_skull$/, /^(standing|wall)_banner$/,
     /_door$/, /^dried_ghast$/, /shulker_box$/
