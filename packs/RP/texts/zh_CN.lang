@@ -24,26 +24,35 @@ construct.menu.instance.unknownOption=§c未知选项: %s
 construct.menu.instance.nameEmpty=§c项目名称不能为空
 
 construct.instance.flexibleMove.alreadyMoving=§c此项目已处于移动状态
-construct.instance.flexibleMove.start=§a正在移动"%s", 完成后使用"投影构筑菜单"确认	## 插入字符串: 实例名称
-construct.instance.flexibleMove.finish=§a已将"%1"移动至%2	## 插入字符串: 项目名称, 坐标
+construct.instance.flexibleMove.start=§a正在移动"%s", 完成后使用"投影构筑菜单"确认
+construct.instance.flexibleMove.finish=§a已将"%1"移动至%2
 construct.instance.rename.error=§c重命名项目时出错: %s
 construct.instance.validation.alreadyRunning=§c检验已在进行中, 请稍后
 construct.instance.validation.formfail=§c创建统计表单时出错
-construct.instance.menu.body=项目: §a%1\n§f结构: §2%2	## 插入字符串: 项目名称, 结构名称
-construct.instance.menu.location=§7(%4 %1 %2 %3 )	## 当项目已放置时添加到主体; 插入字符串: x, y, z 坐标, 维度
+construct.instance.menu.body=项目: §a%1\n§f结构: §2%2
+construct.instance.menu.location=§7(%4 %1 %2 %3 )
 construct.instance.menu.rename=请输入项目的新名称:
 construct.instance.option.validation=方块检验
 construct.instance.option.validation.description=检验并显示项目中缺失和摆放错误的方块
 construct.instance.option.layer=层级
 construct.instance.option.layer.description=更改显示层级, 调整至 0 时显示完整结构
-construct.instance.materials.missing.header=§c缺失的材料:
+construct.instance.option.rendermode=渲染模式
+construct.instance.option.rendermode.description=投影的渲染方式，分为全息模式和性能模式(性能模式可以减少卡顿)。
+construct.instance.option.rendermode.default=默认(性能、全息结合)
+construct.instance.option.rendermode.performance=性能(仅轮廓)
+construct.instance.option.rendermode.previewonly=全息(有纹理)
+construct.instance.option.rendermode.classic=经典(旧版)
+construct.instance.option.refreshrate=刷新速率/s
+construct.instance.option.refreshrate.description=进行完整重新扫描的速度 重新扫描会发现非玩家引起变化，故低值可能会导致变化有延迟。
+construct.instance.materials.noinventory=§c无法读取到玩家背包
+construct.instance.materials.missing.header=§c背包中缺失的材料:
 construct.instance.materials.missing.button=显示缺失材料
-construct.instance.materials.layer= §7(第%s层)	## 当项目处于层级模式时添加到标题; 插入字符串: 图层编号
+construct.instance.materials.layer= §7(第%s层)
 construct.instance.materials.all.header=§a所有材料:
 construct.instance.materials.all.button=显示所有材料
 
 construct.materials.grabber.menu.title=材料收集器
-construct.materials.grabber.menu.success=§7成功选择"§2%s§f"为材料收集器的目标项目	## 插入字符串: 项目名称
+construct.materials.grabber.menu.success=§7成功选择"§2%s§f"为材料收集器的目标项目
 construct.materials.grabber.menu.header=§7当前项目: 
 construct.materials.grabber.menu.noinstance=§7无
 construct.materials.grabber.menu.selectinstance=§7请选择一个项目:
@@ -84,15 +93,20 @@ construct.menu.howto.add.mcstructure=§7-将§f.mcstructure§7文件添加到此
 construct.menu.howto.remove.header=§c如何移除结构:
 construct.menu.howto.remove.body=§7-使用§f/structure delete§7命令从存档中移除结构
 
-## Commands
-construct.commands.construct=获得投影构筑菜单物品,可以使用它打开投影构筑菜单
-construct.commands.construct.denyorigin=此命令只能由玩家使用
-construct.commands.construct.fail=§c给予投影构筑菜单物品时发生错误
-construct.commands.construct.success=§a您已获得投影构筑菜单物品, 右键(长按)使用它以打开投影构筑菜单
+## Structure Block Info Display
+construct.blockinfo.header=结构:
+construct.blockinfo.none=§7无
+construct.blockinfo.nosupply= §c[缺少材料]
+construct.blockinfo.noeasyplace=§e[无法便捷放置]	## When the targeted block cannot be easyPlaced
+construct.blockinfo.unknown=§7未知
+construct.blockinfo.waterlogged=§3是§7含水方块
 
-## Options
+construct.pickblock.inventoryfull=§c无法拾取结构方块: 背包满了
+
+## Builder Options
 construct.option.enabled=现已启用!
 construct.option.disabled=现已禁用!
+construct.option.setto= is now set to §f
 construct.option.easyplace.name=便捷放置
 construct.option.easyplace.description=帮助正确放置结构中的方块
 construct.option.easyplace.howto=将"便捷放置器"物品放在副手槽位, 在项目中放置方块时自动修正方块
@@ -105,4 +119,106 @@ construct.option.materialgrabber.description=从箱子等容器中获取建筑�
 construct.option.materialgrabber.howto=使用"材料收集器"物品与箱子等容器交互, 即可从中获取建筑所需物品
 construct.option.materialgrabber.grabbed.zero=§7已收集 0 个物品
 construct.option.materialgrabber.grabbed.one=§a已收集 1 个物品
-construct.option.materialgrabber.grabbed.many=§a已收集 %s 个物品	## 插入字符串: 收集给玩家的物品数
+construct.option.materialgrabber.grabbed.many=§a已收集 %s 个物品
+construct.option.defaultrendermode.name=默认渲染模式
+construct.option.defaultrendermode.description=你创建的项目的渲染模式
+
+## Commands
+construct.commands.construct=获得投影构筑菜单物品，可以使用它打开投影构筑菜单
+construct.commands.construct.fail=§c给予投影构筑菜单物品时发生错误
+construct.commands.construct.success=§a您已获得投影构筑菜单物品, 右键(长按)使用它以打开投影构筑菜单
+
+## construct:create
+construct.commands.create=创建一个绑定至结构的新投影项目
+construct.commands.create.success=§a已创建绑定至结构"%2"的项目"%1"
+construct.commands.create.unknownStructure=§c未在世界上找到ID为"%1"的结构
+
+## construct:delete
+construct.commands.delete=永久删除一个投影项目
+construct.commands.delete.success=§a已删除项目"%1"
+
+## construct:rename
+construct.commands.rename=重命名一个已有的投影项目
+construct.commands.rename.success=§a已将项目"%1"重命名为"%2"
+
+## construct:instances
+construct.commands.instances=列出所有已注册的投影项目
+construct.commands.instances.empty=§7没有已注册的项目
+construct.commands.instances.header=§a已注册的项目 (%1):§r
+construct.commands.instances.row=§a%1§r §8[§r%2§8]§r §7%3§r
+construct.commands.instances.row.enabled=已启用
+construct.commands.instances.row.disabled=已禁用
+construct.commands.instances.row.location= 位于%2的%1
+construct.commands.instances.row.nolocation= (无位置)
+
+## construct:place
+construct.commands.place=在世界上放置一个投影项目
+construct.commands.place.success=§a已将项目"%1"放置在%3的%2
+
+## construct:move
+construct.commands.move=重新定位一个投影项目而不改变其启用状态
+construct.commands.move.success=§a已将项目"%1"移动至%3的%2
+construct.commands.move.locationRequired=§c非玩家执行时必须提供维度和坐标
+
+## construct:enable
+construct.commands.enable=启用或禁用一个投影项目
+construct.commands.enable.true=§a已启用项目"%1"
+construct.commands.enable.false=§a已禁用项目"%1"
+construct.commands.error.noLocation=§c项目"%1"没有保存的位置
+
+## construct:layer
+construct.commands.layer=设置投影项目的激活层（使用0表示整个结构）
+construct.commands.layer.success=§a已将项目"%1"的层级设为%2
+construct.commands.layer.outOfBounds=§c层级%1超出项目"%2"的范围（最大%3）
+
+## construct:nextlayer
+construct.commands.nextlayer=将投影项目的层级提高一层
+construct.commands.nextlayer.success=§a项目"%1"已前进至层级%2
+
+## construct:prevlayer
+construct.commands.prevlayer=将投影项目的层级降低一层
+construct.commands.prevlayer.success=§a项目"%1"已后退至层级%2
+
+## construct:verifier
+construct.commands.verifier=切换投影项目的方块检验覆盖层
+construct.commands.verifier.enabled=§a已启用项目"%1"的检验功能
+construct.commands.verifier.disabled=§a已禁用项目"%1"的检验功能
+
+## construct:builder
+construct.commands.builder=切换你的投影构建器选项
+construct.commands.builder.success=§a已将选项"%1"设为%2
+construct.commands.builder.unknownOption=§c未知选项"%1"
+
+## construct:instanceinfo
+construct.commands.instanceinfo=在聊天栏打印投影项目详情
+construct.commands.instanceinfo.header=§a=== "%1" 的项目信息 ===§r
+construct.commands.instanceinfo.structure=§7结构:§r %1
+construct.commands.instanceinfo.location=§7位置:§r %2的%1
+construct.commands.instanceinfo.noLocation=§7位置:§r (无)
+construct.commands.instanceinfo.enabled=§7启用状态:§r %1
+construct.commands.instanceinfo.layer=§7层级:§r %1 / %2
+construct.commands.instanceinfo.renderMode=§7渲染模式:§r %1	## Insert string: render mode
+construct.commands.instanceinfo.verifier=§7检验状态:§r %1
+construct.commands.instanceinfo.size=§7尺寸:§r %1 (共%2个方块)
+
+## construct:stats
+construct.commands.stats=运行投影结构检验并打印统计数据
+construct.commands.stats.alreadyRunning=§c检验已在进行中, 请稍后
+
+## construct:materials
+construct.commands.materials=打印投影项目的材料列表
+construct.commands.materials.headerAll=§a"%1"的材料:§r
+construct.commands.materials.headerMissing=§a"%1"的缺失材料:§r
+construct.commands.materials.empty=§7(无材料)
+
+## construct:tag
+construct.commands.tag=将手持的投影构筑物品重命名为项目名称以快速打开
+construct.commands.tag.success=§a已将手持的投影构筑物品标记为项目"%1"
+construct.commands.tag.notHoldingItem=§c你必须手持一个投影构筑物品
+## Errors
+construct.error.invalidCommandSource=§c此命令无法从此来源执行
+construct.error.instanceNotFound=§c未找到项目"%1"
+construct.error.instanceExists=§c项目"%1"已存在。请尝试使用其他名称
+construct.error.structureNotFound=§c未找到结构ID"%1"。若你查找的是已放入structures文件夹的结构, 请重启世界后重试
+construct.error.dimensionNotFound=§c未找到维度"%1"
+construct.error.notAPlayer=§c此命令只能由玩家使用
