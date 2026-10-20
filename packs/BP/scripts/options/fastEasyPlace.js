@@ -4,13 +4,14 @@ import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './e
 import { placeBlock, hasItems } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
+import { PlayerRunners } from '../classes/Builder/PlayerRunners';
 import { Vector } from '../lib/Vector';
 import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
 import { disableFastEasyPlace } from './admin/disableFastEasyPlace';
 
 const locationsPlacedLastTick = new Set();
 const ACTION_ITEM = 'construct:easy_place';
-const runnerByPlayer = {};
+const placingRunners = new PlayerRunners(system);
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
@@ -60,19 +61,19 @@ system.runInterval(onPlacingTick);
 world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteractWithBlock);
 world.afterEvents.itemStartUse.subscribe(onItemStartUse);
 world.afterEvents.itemStopUse.subscribe(onItemStopUse);
+world.beforeEvents.playerLeave.subscribe((event) => {
+    if (event.player)
+        placingRunners.stop(event.player.id);
+});
 
 function onItemStartUse(event) {
     if (event.itemStack?.typeId !== ACTION_ITEM)
         return;
-    runnerByPlayer[event.source.id] = system.runInterval((() => onPlacingTick(event.source)));
+    placingRunners.start(event.source.id, () => onPlacingTick(event.source));
 }
 
 function onItemStopUse(event) {
-    if (event.itemStack?.typeId !== ACTION_ITEM)
-        return;
-    const playerRunnerId = runnerByPlayer[event.source.id];
-    if (playerRunnerId)
-        system.clearRun(playerRunnerId);
+    placingRunners.stop(event.source.id);
 }
 
 function onPlacingTick(player) {
