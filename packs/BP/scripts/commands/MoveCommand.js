@@ -1,7 +1,7 @@
 import { Command } from '../classes/Commands/Command';
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, world } from '@minecraft/server';
 import { Vector } from '../lib/Vector';
-import { instanceCollection } from '../classes/Instance/InstanceCollection';
+import { resolveCommandInstance } from '../options/cliDefaultInstance';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 
 export class MoveCommand extends Command {
@@ -9,10 +9,8 @@ export class MoveCommand extends Command {
         super({
             name: 'move',
             description: 'construct.commands.move',
-            mandatoryParameters: [
-                { name: 'instanceName', type: CustomCommandParamType.String }
-            ],
             optionalParameters: [
+                { name: 'instanceName', type: CustomCommandParamType.String },
                 { name: 'dimensionId', type: CustomCommandParamType.Enum }, // Enum defined in PlaceCommand
                 { name: 'location', type: CustomCommandParamType.Location }
             ],
@@ -22,7 +20,7 @@ export class MoveCommand extends Command {
     }
 
     run(origin, instanceName, dimensionId, location) {
-        const instance = instanceCollection.get(instanceName);
+        const instance = resolveCommandInstance(origin, instanceName);
         if (dimensionId === void 0 || location === void 0) {
             if (!(origin instanceof PlayerCommandOrigin))
                 return { status: CustomCommandStatus.Failure, message: 'construct.commands.move.locationRequired' };
@@ -34,7 +32,7 @@ export class MoveCommand extends Command {
         const flooredLocation = Vector.from(location).floor();
         system.run(() => {
             instance.move(dimensionId, flooredLocation);
-            origin.sendMessage({ translate: 'construct.commands.move.success', with: [instanceName, flooredLocation.toString(), dimensionId.replace('minecraft:', '')] });
+            origin.sendMessage({ translate: 'construct.commands.move.success', with: [instance.getName(), flooredLocation.toString(), dimensionId.replace('minecraft:', '')] });
         });
         return { status: CustomCommandStatus.Success };
     }

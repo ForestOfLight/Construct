@@ -1,6 +1,6 @@
 import { world, system, EntityComponentTypes, EntitySwingSource, EquipmentSlot, HeldItemOption, GameMode } from '@minecraft/server';
 import { MENU_ITEM } from '../consts';
-import { MenuForm } from './MenuForm';
+import { MenuForm } from './Menu/MenuForm';
 import { instanceCollection } from './Instance/InstanceCollection';
 import { Builders } from './Builder/Builders';
 import { StructurePickBlock } from "./Structure/StructurePickBlock";

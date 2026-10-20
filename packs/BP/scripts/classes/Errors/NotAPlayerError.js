@@ -7,6 +7,6 @@ export class NotAPlayerError extends CommandResponseError {
     }
 
     getRawMessage() {
-        return { translate: 'construct.commands.error.notAPlayer' };
+        return { translate: 'construct.error.notAPlayer' };
     }
 }

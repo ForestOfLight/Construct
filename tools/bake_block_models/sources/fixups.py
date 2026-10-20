@@ -12,14 +12,17 @@ from sources.b2j import parse_java_state
 _HANGING_SIGN_SUFFIX = "_hanging_sign"
 
 # Stair "shape" (straight/inner_*/outer_*) is a Java render-time value
-# computed from neighboring blocks, not real placed state. Bedrock's stair
-# states carry no such property, so blocksB2J fills it with an arbitrary
+# computed from neighboring blocks. Before Bedrock 1.26.50, Bedrock's stair
+# states carried no such property, so blocksB2J filled it with an arbitrary
 # placeholder ("outer_right") on every plain stair state, which resolves to
 # the corner model - a quarter-width top step - for every stair block.
 # "straight" is the correct model for an isolated preview block with no
-# neighbor context.
+# neighbor context. From 1.26.50 Bedrock stores the corner itself as
+# minecraft:corner, and the mapping carries it through to Java's shape, so
+# only states without it get the placeholder overridden.
 _STAIR_SHAPES = {"inner_left", "inner_right", "outer_left", "outer_right", "straight"}
 _STRAIGHT_STAIR = "straight"
+_BEDROCK_STAIR_CORNER = "minecraft:corner="
 
 # Java splits a potted plant into a block id per plant (potted_dandelion,
 # potted_cactus, ...) while Bedrock keeps every pot as one flower_pot block
@@ -42,7 +45,7 @@ def corrected_java_state(bedrock_state, java_state):
     if override:
         return override[0], dict(override[1])
     java_block_id, properties = parse_java_state(java_state)
-    if properties.get("shape") in _STAIR_SHAPES:
+    if properties.get("shape") in _STAIR_SHAPES and _BEDROCK_STAIR_CORNER not in bedrock_state:
         properties["shape"] = _STRAIGHT_STAIR
     return java_block_id, properties
 

@@ -1,16 +1,22 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
-import { BlockPermutation, EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
+import { EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
-import { fetchMatchingItemSlot, placeBlock } from '../utils';
+import { hasItems, placeBlock } from '../utils';
 import { Builders } from '../classes/Builder/Builders';
+import { disableEasyPlace } from './admin/disableEasyPlace';
 
 const builderOption = new BuilderOption({
     identifier: 'easyPlace',
+    order: 1,
     displayName: { translate: 'construct.option.easyplace.name' },
     description: { translate: 'construct.option.easyplace.description' },
     howToUse: { translate: 'construct.option.easyplace.howto' },
+    lock: {
+        isLocked: () => disableEasyPlace.isEnabled(),
+        reason: { translate: 'construct.option.lockedbyadmin' }
+    },
     onEnableCallback: (playerId) => giveActionItem(playerId),
     onDisableCallback: (playerId) => removeActionItem(playerId)
 });
@@ -93,7 +99,7 @@ function preventAction(event, player) {
 
 function isBannedBlock(player, structureBlock) {
     const blockId = structureBlock.typeId.replace('minecraft:', '');
-    if (bannedBlocks.includes(blockId))
+    if (bannedBlocks.some((pattern) => pattern.test(blockId)))
         return true;
     if (bannedDimensionBlocks[player.dimension.id.replace('minecraft:', '')]?.includes(blockId))
         return true;
@@ -112,11 +118,10 @@ function isSupported(worldBlock, permutationToPlace) {
 }
 
 function tryPlaceBlockSurvival(event, player, block, permutation) {
-    const placeableItemStack = StructureBlockConverter.toPlaceableItemStack(permutation);
-    const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
-    if (itemSlotToUse) {
+    const itemIdsToConsume = StructureBlockConverter.toPlaceableItemStacks(permutation).map((itemStack) => itemStack.typeId);
+    if (hasItems(player, itemIdsToConsume)) {
         event.cancel = true;
-        placeBlock(player, block, permutation, itemSlotToUse);
+        placeBlock(player, block, permutation, itemIdsToConsume);
     } else {
         preventAction(event, player);
     }

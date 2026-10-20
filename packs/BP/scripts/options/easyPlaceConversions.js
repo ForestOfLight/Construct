@@ -1,12 +1,6 @@
 export const bannedBlocks = [
-    'air', 'bed', 'piston_arm_collision', 'sticky_piston_arm_collision', "skeleton_skull", 'standing_banner', 'wall_banner',
-    'wooden_door', 'spruce_door', 'birch_door', 'jungle_door', 'acacia_door', 'dark_oak_door', 'mangrove_door', 'cherry_door', 'pale_oak_door', 
-    'bamboo_door', 'iron_door', 'crimson_door', 'warped_door', 'copper_door', 'exposed_copper_door', 'weathered_copper_door', 'oxidized_copper_door',
-    'waxed_copper_door', 'waxed_exposed_copper_door', 'waxed_weathered_copper_door', 'waxed_oxidized_copper_door',
-    'seagrass', 'kelp', 'dried_ghast', 'undyed_shulker_box', 'white_shulker_box', 'orange_shulker_box', 'magenta_shulker_box',
-    'light_blue_shulker_box', 'yellow_shulker_box', 'lime_shulker_box', 'pink_shulker_box', 'gray_shulker_box',
-    'light_gray_shulker_box', 'cyan_shulker_box', 'purple_shulker_box', 'blue_shulker_box', 'brown_shulker_box',
-    'green_shulker_box', 'red_shulker_box', 'black_shulker_box'
+    /^air$/, /^bed$/, /^(sticky_)?piston_arm_collision$/, /^skeleton_skull$/, /^(standing|wall)_banner$/,
+    /_door$/, /^dried_ghast$/, /shulker_box$/
 ];
 
 export const bannedDimensionBlocks = {
@@ -20,16 +14,11 @@ export const whitelistedBlockStates = {
     'lava': { liquid_depth: 0 }
 };
 
-export const bannedToValidBlockMap = {
-    'lit_furnace': 'furnace',
-    'lit_smoker': 'smoker',
-    'lit_blast_furnace': 'blast_furnace',
-    'lit_redstone_ore': 'redstone_ore',
-    'lit_redstone_lamp': 'redstone_lamp',
-    'unlit_redstone_torch': 'redstone_torch',
-    'powered_comparator': 'unpowered_comparator',
-    'powered_repeater': 'unpowered_repeater'
-};
+export const bannedToValidBlockPatterns = [
+    { input: /^lit_(?!pumpkin$)(.+)$/, output: ['$1'] },
+    { input: /^unlit_(.+)$/, output: ['$1'] },
+    { input: /^powered_(.+)$/, output: ['unpowered_$1'] }
+];
 
 export const resetToBlockStates = {
     growth: 0,
@@ -45,15 +34,13 @@ export const resetToBlockStates = {
     end_portal_eye_bit: false
 };
 
-export const blockIdToItemStackMap = {
-    'water': 'water_bucket',
-    'lava': 'lava_bucket',
-    'fire': 'fire_charge',
-    'soul_fire': 'fire_charge',
-};
+export const blockIdToItemStackPatterns = [
+    { input: /^water$/, output: ['water_bucket'] },
+    { input: /^lava$/, output: ['lava_bucket'] },
+    { input: /^(soul_)?fire$/, output: ['fire_charge'] },
+    { input: /^(.*_)?double_(.*slab)$/, output: ['$1$2', '$1$2'] }
+];
 
-export const specialItemPlacementConversions = {
-    'water_bucket': 'bucket',
-    'lava_bucket': 'bucket',
-    'powder_snow_bucket': 'bucket'
-};
+export const specialItemPlacementConversions = [
+    { input: /^.+_bucket$/, output: ['bucket'] }
+];

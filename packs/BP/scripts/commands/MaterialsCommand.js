@@ -3,6 +3,8 @@ import { Command } from '../classes/Commands/Command';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
 import { PlayerCommandOrigin } from '../classes/Commands/PlayerCommandOrigin';
 import { NotAPlayerError } from '../classes/Errors/NotAPlayerError';
+import { StructureMaterials } from '../classes/Materials/StructureMaterials';
+import { WorldMaterials } from '../classes/Materials/WorldMaterials';
 
 export class MaterialsCommand extends Command {
     constructor() {
@@ -13,29 +15,28 @@ export class MaterialsCommand extends Command {
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             optionalParameters: [
-                { name: 'missing', type: CustomCommandParamType.Boolean }
+                { name: 'subtractWorld', type: CustomCommandParamType.Boolean },
+                { name: 'subtractInventory', type: CustomCommandParamType.Boolean }
             ],
             permissionLevel: CommandPermissionLevel.Any,
-            callback: (origin, instanceName, missing) => this.run(origin, instanceName, missing)
+            callback: (origin, instanceName, subtractWorld, subtractInventory) =>
+                this.run(origin, instanceName, subtractWorld === true, subtractInventory === true)
         });
     }
 
-    run(origin, instanceName, missing) {
+    run(origin, instanceName, subtractWorld, subtractInventory) {
         const instance = instanceCollection.get(instanceName);
-        const onlyMissing = missing === true;
-        if (onlyMissing)
+        if (subtractInventory)
             this.assertIsPlayer(origin);
-        const headerKey = onlyMissing ? 'construct.commands.materials.headerMissing' : 'construct.commands.materials.headerAll';
-        const rawtext = [
-            { translate: headerKey, with: [instanceName] },
-            { text: '\n' }
-        ];
-        const list = this.getMaterialList(origin, instance, onlyMissing);
-        if (!list.rawtext || list.rawtext.length === 0)
-            rawtext.push({ translate: 'construct.commands.materials.empty' });
-        else
-            rawtext.push(list);
-        origin.sendMessage({ rawtext });
+        if (subtractWorld && !instance.canShowWorldMaterials())
+            return { status: CustomCommandStatus.Failure, message: this.worldUnavailableKey(instance) };
+        system.run(async () => {
+            if (!instanceCollection.has(instanceName))
+                return;
+            const message = await this.buildMessage(origin, instance, instanceName, subtractWorld, subtractInventory);
+            if (message && !this.isSourceGone(origin))
+                origin.sendMessage(message);
+        });
         return { status: CustomCommandStatus.Success };
     }
 
@@ -44,16 +45,55 @@ export class MaterialsCommand extends Command {
             throw new NotAPlayerError();
     }
 
-    getMaterialList(origin, instance, onlyMissing) {
-        const materials = instance.getActiveMaterials();
-        let container;
-        if (onlyMissing) {
-            const player = origin.getSource();
-            const inventoryComponent = player?.getComponent(EntityComponentTypes.Inventory);
-            container = inventoryComponent?.container;
+    worldUnavailableKey(instance) {
+        if (!instance.isEnabled())
+            return 'construct.instance.materials.placeinstance';
+        return 'construct.instance.materials.verifieroff';
+    }
+
+    async buildMessage(origin, instance, instanceName, subtractWorld, subtractInventory) {
+        const baseMaterials = instance.getActiveMaterials();
+        let materials = baseMaterials.materials;
+        let unscannedNote;
+        if (subtractWorld) {
+            const worldMaterials = await instance.getWorldMaterials();
+            if (!worldMaterials || !instanceCollection.has(instanceName) || this.isSourceGone(origin))
+                return void 0;
+            materials = worldMaterials.materials;
+            unscannedNote = WorldMaterials.formatUnscannedNote(worldMaterials.unscannedCount);
         }
-        const materialsMap = onlyMissing ? materials.getMaterialsDifference(container) : void 0;
-        return materials.formatString(materialsMap);
+        if (subtractInventory)
+            materials = StructureMaterials.subtractInventory(materials, this.inventoryOf(origin));
+        const rawtext = [
+            { translate: this.headerKey(subtractWorld, subtractInventory), with: [instanceName] },
+            { text: '\n' }
+        ];
+        if (unscannedNote)
+            rawtext.push(unscannedNote, { text: '§r\n' });
+        const list = baseMaterials.formatString(materials);
+        if (list.rawtext.length === 0)
+            rawtext.push({ translate: 'construct.commands.materials.empty' });
+        else
+            rawtext.push(list);
+        return { rawtext };
+    }
+
+    isSourceGone(origin) {
+        return origin.getSource()?.isValid === false;
+    }
+
+    inventoryOf(origin) {
+        return origin.getSource()?.getComponent(EntityComponentTypes.Inventory)?.container;
+    }
+
+    headerKey(subtractWorld, subtractInventory) {
+        if (subtractWorld && subtractInventory)
+            return 'construct.commands.materials.headerMissingBoth';
+        if (subtractWorld)
+            return 'construct.commands.materials.headerMissing';
+        if (subtractInventory)
+            return 'construct.commands.materials.headerMissingInventory';
+        return 'construct.commands.materials.headerAll';
     }
 }
 

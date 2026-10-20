@@ -219,6 +219,39 @@ class BuildBlockModelsTest(unittest.TestCase):
         faces = block_models["minecraft:oak_stairs[weirdo_direction=3]"]
         self.assertEqual(faces[0]["width"], 16)
 
+    def test_stair_shape_is_kept_when_bedrock_carries_the_corner(self):
+        # From Bedrock 1.26.50 a stair stores its corner as minecraft:corner,
+        # and blocksB2J maps it onto the matching Java shape - which is then
+        # real data, not a placeholder to override.
+        mcmeta = FakeMcmeta(
+            blockstates={"oak_stairs": {"variants": {
+                "facing=north,half=bottom,shape=straight": {"model": "block/oak_stairs"},
+                "facing=north,half=bottom,shape=outer_right": {"model": "block/oak_stairs_outer"},
+            }}},
+            models={
+                "block/oak_stairs": {"textures": {}, "elements": [{
+                    "from": [0, 0, 0], "to": [16, 16, 16],
+                    "faces": {"up": {"texture": "block/oak_planks"}},
+                }]},
+                "block/oak_stairs_outer": {"textures": {}, "elements": [{
+                    "from": [0, 0, 0], "to": [8, 16, 8],
+                    "faces": {"up": {"texture": "block/oak_planks"}},
+                }]},
+            },
+        )
+        atlas = FakeAtlas()
+        b2j = {
+            "minecraft:oak_stairs[minecraft:corner=outer_right,weirdo_direction=3]":
+                "minecraft:oak_stairs[facing=north,half=bottom,shape=outer_right]",
+            "minecraft:oak_stairs[minecraft:corner=none,weirdo_direction=3]":
+                "minecraft:oak_stairs[facing=north,half=bottom,shape=straight]",
+        }
+        block_models = build_block_models(mcmeta, b2j, atlas)
+        corner = block_models["minecraft:oak_stairs[minecraft:corner=outer_right,weirdo_direction=3]"]
+        straight = block_models["minecraft:oak_stairs[minecraft:corner=none,weirdo_direction=3]"]
+        self.assertEqual(corner[0]["width"], 8)
+        self.assertEqual(straight[0]["width"], 16)
+
 
 class RedstonePowerTintTest(unittest.TestCase):
     def _mcmeta(self):

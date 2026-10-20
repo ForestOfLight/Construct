@@ -39,6 +39,13 @@ export class StructureVerifier {
         return this.#buffers.completed();
     }
 
+    getKnownState() {
+        if (!this.isEnabled())
+            return void 0;
+        this.#syncKnownState();
+        return this.#buffers.known();
+    }
+
     refresh(isPriority = false) {
         this.#stopLoop();
         this.#cancelRun();
@@ -63,14 +70,15 @@ export class StructureVerifier {
 
     patchCell(location) {
         const completed = this.#buffers.completed();
-        if (!completed)
+        const known = this.#buffers.known();
+        if (!completed && !known)
             return;
         const cell = this.#tryVerifyCell(location);
         if (!cell)
             return;
-        completed.setCell(location, cell.verificationLevel, cell.flags);
-        const filling = this.#buffers.filling()
-        filling?.setCell(location, cell.verificationLevel, cell.flags);
+        completed?.setCell(location, cell.verificationLevel, cell.flags);
+        this.#buffers.filling()?.setCell(location, cell.verificationLevel, cell.flags);
+        known?.setLevel(location, cell.verificationLevel);
     }
 
     #tryVerifyCell(location) {
@@ -98,11 +106,20 @@ export class StructureVerifier {
 
     #beginRun(bounds, volume, shouldRender) {
         this.#isPassPending = false;
+        this.#syncKnownState();
         this.#run = new VerificationRun(
             this.#newSweep(bounds, shouldRender),
             this.#blocksPerTick(volume)
         );
         return this.#run;
+    }
+
+    #syncKnownState() {
+        const { dimensionId, location } = this.#instance.getLocation();
+        this.#buffers.syncKnown(
+            { dimensionId, worldLocation: location, structureId: this.#instance.getStructureId() },
+            this.#instance.getBounds()
+        );
     }
 
     #blocksPerTick(volume) {
@@ -129,6 +146,7 @@ export class StructureVerifier {
         return new VerificationSweep({
             bounds,
             grid: this.#buffers.beginPass(bounds),
+            knownGrid: this.#buffers.known(),
             origin: this.#instance.toGlobalCoords({ x: 0, y: 0, z: 0 }),
             cellVerifier: this.#newCellVerifier(),
             observer: this.#newObserver(shouldRender)

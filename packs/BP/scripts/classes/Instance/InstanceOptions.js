@@ -3,6 +3,7 @@ import { world } from "@minecraft/server";
 import { Option } from "../Option";
 import { RenderMode } from "../Enums/RenderMode";
 import { RefreshRate } from "../Verifier/RefreshRate";
+import { CollectedMaterials } from "../Materials/CollectedMaterials";
 
 const VERIFIER_DEFAULTS = Object.freeze({
     isEnabled: true,
@@ -21,6 +22,7 @@ export class InstanceOptions extends Option {
     currentLayer = 0;
     verifier = { ...VERIFIER_DEFAULTS };
     renderMode = RenderMode.Default;
+    collectedMaterials = new CollectedMaterials();
 
     static getInstanceStructureId(instanceName) {
         const options = new InstanceOptions(instanceName, void 0);
@@ -49,6 +51,8 @@ export class InstanceOptions extends Option {
         this.loadFromDP(this.#DP_NAMESPACE, this.instanceName);
         this.worldLocation = Vector.from(this.worldLocation);
         this.verifier = { ...VERIFIER_DEFAULTS, ...this.verifier };
+        if (!(this.collectedMaterials instanceof CollectedMaterials))
+            this.collectedMaterials = new CollectedMaterials(this.collectedMaterials);
     }
     
     clear() {
@@ -103,6 +107,16 @@ export class InstanceOptions extends Option {
 
     setRenderMode(mode) {
         this.renderMode = mode;
+        this.save();
+    }
+
+    addCollectedMaterials(collected) {
+        this.collectedMaterials.addAll(collected);
+        this.save();
+    }
+
+    clearCollectedMaterials() {
+        this.collectedMaterials.clear();
         this.save();
     }
 }

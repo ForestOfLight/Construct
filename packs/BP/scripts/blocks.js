@@ -481,9 +481,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "black_concrete"
    },
+   "black_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "black_concrete"
+   },
    "black_concrete_powder" : {
       "sound" : "sand",
       "textures" : "black_concrete_powder"
+   },
+   "black_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "black_concrete"
+   },
+   "black_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "black_concrete"
    },
    "black_glazed_terracotta" : {
       "sound" : "stone",
@@ -515,6 +527,18 @@ export const blocks = {
    "black_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_black"
+   },
+   "black_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "black_wool_double_slab"
+   },
+   "black_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "black_wool_slab"
+   },
+   "black_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "black_wool_stairs"
    },
    "blackstone" : {
       "sound" : "stone",
@@ -575,9 +599,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "blue_concrete"
    },
+   "blue_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "blue_concrete"
+   },
    "blue_concrete_powder" : {
       "sound" : "sand",
       "textures" : "blue_concrete_powder"
+   },
+   "blue_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "blue_concrete"
+   },
+   "blue_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "blue_concrete"
    },
    "blue_glazed_terracotta" : {
       "sound" : "stone",
@@ -617,6 +653,18 @@ export const blocks = {
    "blue_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_blue"
+   },
+   "blue_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "blue_wool_double_slab"
+   },
+   "blue_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "blue_wool_slab"
+   },
+   "blue_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "blue_wool_stairs"
    },
    "bone_block" : {
       "sound" : "bone_block",
@@ -711,9 +759,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "brown_concrete"
    },
+   "brown_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "brown_concrete"
+   },
    "brown_concrete_powder" : {
       "sound" : "sand",
       "textures" : "brown_concrete_powder"
+   },
+   "brown_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "brown_concrete"
+   },
+   "brown_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "brown_concrete"
    },
    "brown_glazed_terracotta" : {
       "sound" : "stone",
@@ -760,6 +820,18 @@ export const blocks = {
    "brown_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_brown"
+   },
+   "brown_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "brown_wool_double_slab"
+   },
+   "brown_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "brown_wool_slab"
+   },
+   "brown_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "brown_wool_stairs"
    },
    "bubble_column" : {
       "isotropic" : false,
@@ -1707,9 +1779,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "cyan_concrete"
    },
+   "cyan_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "cyan_concrete"
+   },
    "cyan_concrete_powder" : {
       "sound" : "sand",
       "textures" : "cyan_concrete_powder"
+   },
+   "cyan_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "cyan_concrete"
+   },
+   "cyan_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "cyan_concrete"
    },
    "cyan_glazed_terracotta" : {
       "sound" : "stone",
@@ -1741,6 +1825,18 @@ export const blocks = {
    "cyan_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_cyan"
+   },
+   "cyan_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "cyan_wool_double_slab"
+   },
+   "cyan_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "cyan_wool_slab"
+   },
+   "cyan_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "cyan_wool_stairs"
    },
    "damaged_anvil" : {
       "sound" : "anvil",
@@ -2705,9 +2801,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "gray_concrete"
    },
+   "gray_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "gray_concrete"
+   },
    "gray_concrete_powder" : {
       "sound" : "sand",
       "textures" : "gray_concrete_powder"
+   },
+   "gray_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "gray_concrete"
+   },
+   "gray_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "gray_concrete"
    },
    "gray_glazed_terracotta" : {
       "sound" : "stone",
@@ -2740,6 +2848,18 @@ export const blocks = {
       "sound" : "cloth",
       "textures" : "wool_colored_gray"
    },
+   "gray_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "gray_wool_double_slab"
+   },
+   "gray_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "gray_wool_slab"
+   },
+   "gray_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "gray_wool_stairs"
+   },
    "green_candle" : {
       "carried_textures" : "green_candle_carried",
       "sound" : "candle",
@@ -2764,9 +2884,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "green_concrete"
    },
+   "green_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "green_concrete"
+   },
    "green_concrete_powder" : {
       "sound" : "sand",
       "textures" : "green_concrete_powder"
+   },
+   "green_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "green_concrete"
+   },
+   "green_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "green_concrete"
    },
    "green_glazed_terracotta" : {
       "sound" : "stone",
@@ -2798,6 +2930,18 @@ export const blocks = {
    "green_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_green"
+   },
+   "green_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "green_wool_double_slab"
+   },
+   "green_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "green_wool_slab"
+   },
+   "green_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "green_wool_stairs"
    },
    "grindstone" : {
       "sound" : "stone",
@@ -3268,9 +3412,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "light_blue_concrete"
    },
+   "light_blue_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "light_blue_concrete"
+   },
    "light_blue_concrete_powder" : {
       "sound" : "sand",
       "textures" : "light_blue_concrete_powder"
+   },
+   "light_blue_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "light_blue_concrete"
+   },
+   "light_blue_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "light_blue_concrete"
    },
    "light_blue_glazed_terracotta" : {
       "sound" : "stone",
@@ -3303,6 +3459,18 @@ export const blocks = {
       "sound" : "cloth",
       "textures" : "wool_colored_light_blue"
    },
+   "light_blue_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "light_blue_wool_double_slab"
+   },
+   "light_blue_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "light_blue_wool_slab"
+   },
+   "light_blue_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "light_blue_wool_stairs"
+   },
    "light_gray_candle" : {
       "carried_textures" : "light_gray_candle_carried",
       "sound" : "candle",
@@ -3327,9 +3495,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "light_gray_concrete"
    },
+   "light_gray_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "light_gray_concrete"
+   },
    "light_gray_concrete_powder" : {
       "sound" : "sand",
       "textures" : "light_gray_concrete_powder"
+   },
+   "light_gray_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "light_gray_concrete"
+   },
+   "light_gray_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "light_gray_concrete"
    },
    "light_gray_shulker_box" : {
       "sound" : "stone",
@@ -3357,6 +3537,18 @@ export const blocks = {
    "light_gray_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_silver"
+   },
+   "light_gray_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "light_gray_wool_double_slab"
+   },
+   "light_gray_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "light_gray_wool_slab"
+   },
+   "light_gray_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "light_gray_wool_stairs"
    },
    "light_weighted_pressure_plate" : {
       "sound" : "metal",
@@ -3404,9 +3596,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "lime_concrete"
    },
+   "lime_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "lime_concrete"
+   },
    "lime_concrete_powder" : {
       "sound" : "sand",
       "textures" : "lime_concrete_powder"
+   },
+   "lime_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "lime_concrete"
+   },
+   "lime_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "lime_concrete"
    },
    "lime_glazed_terracotta" : {
       "sound" : "stone",
@@ -3438,6 +3642,18 @@ export const blocks = {
    "lime_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_lime"
+   },
+   "lime_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "lime_wool_double_slab"
+   },
+   "lime_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "lime_wool_slab"
+   },
+   "lime_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "lime_wool_stairs"
    },
    "lit_blast_furnace" : {
       "sound" : "stone",
@@ -3558,9 +3774,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "magenta_concrete"
    },
+   "magenta_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "magenta_concrete"
+   },
    "magenta_concrete_powder" : {
       "sound" : "sand",
       "textures" : "magenta_concrete_powder"
+   },
+   "magenta_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "magenta_concrete"
+   },
+   "magenta_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "magenta_concrete"
    },
    "magenta_glazed_terracotta" : {
       "sound" : "stone",
@@ -3592,6 +3820,18 @@ export const blocks = {
    "magenta_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_magenta"
+   },
+   "magenta_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "magenta_wool_double_slab"
+   },
+   "magenta_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "magenta_wool_slab"
+   },
+   "magenta_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "magenta_wool_stairs"
    },
    "magma" : {
       "isotropic" : true,
@@ -4007,13 +4247,30 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "orange_concrete"
    },
+   "orange_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "orange_concrete"
+   },
    "orange_concrete_powder" : {
       "sound" : "sand",
       "textures" : "orange_concrete_powder"
    },
+   "orange_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "orange_concrete"
+   },
+   "orange_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "orange_concrete"
+   },
    "orange_glazed_terracotta" : {
       "sound" : "stone",
       "textures" : "orange_glazed_terracotta"
+   },
+   "orange_poplar_leaves" : {
+      "ambient_occlusion_exponent" : 0.80,
+      "sound" : "poplar_leaves",
+      "textures" : "orange_poplar_leaves"
    },
    "orange_shulker_box" : {
       "sound" : "stone",
@@ -4045,6 +4302,18 @@ export const blocks = {
    "orange_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_orange"
+   },
+   "orange_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "orange_wool_double_slab"
+   },
+   "orange_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "orange_wool_slab"
+   },
+   "orange_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "orange_wool_stairs"
    },
    "oxeye_daisy" : {
       "sound" : "grass",
@@ -4294,9 +4563,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "pink_concrete"
    },
+   "pink_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "pink_concrete"
+   },
    "pink_concrete_powder" : {
       "sound" : "sand",
       "textures" : "pink_concrete_powder"
+   },
+   "pink_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "pink_concrete"
+   },
+   "pink_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "pink_concrete"
    },
    "pink_glazed_terracotta" : {
       "sound" : "stone",
@@ -4337,6 +4618,18 @@ export const blocks = {
    "pink_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_pink"
+   },
+   "pink_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "pink_wool_double_slab"
+   },
+   "pink_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "pink_wool_slab"
+   },
+   "pink_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "pink_wool_stairs"
    },
    "piston" : {
       "carried_textures" : {
@@ -4594,6 +4887,82 @@ export const blocks = {
       "sound" : "polished_tuff",
       "textures" : "polished_tuff"
    },
+   "poplar_button" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_door" : {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "poplar_door_bottom",
+         "side" : "poplar_door_top",
+         "up" : "poplar_door_bottom"
+      }
+   },
+   "poplar_double_slab" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_fence" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_fence_gate" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_hanging_sign" : {
+      "sound" : "hanging_sign",
+      "textures" : "poplar_planks"
+   },
+   "poplar_log" : {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "poplar_log_top",
+         "side" : "poplar_log_side",
+         "up" : "poplar_log_top"
+      }
+   },
+   "poplar_planks" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_pressure_plate" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_sapling" : {
+      "sound" : "grass",
+      "textures" : "poplar_sapling"
+   },
+   "poplar_shelf" : {
+      "sound" : "shelf",
+      "textures" : "poplar_shelf"
+   },
+   "poplar_slab" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_stairs" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_standing_sign" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_trapdoor" : {
+      "sound" : "wood",
+      "textures" : "poplar_trapdoor"
+   },
+   "poplar_wall_sign" : {
+      "sound" : "wood",
+      "textures" : "poplar_planks"
+   },
+   "poplar_wood" : {
+      "sound" : "wood",
+      "textures" : "poplar_log_side"
+   },
    "poppy" : {
       "sound" : "grass",
       "textures" : "poppy"
@@ -4706,9 +5075,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "purple_concrete"
    },
+   "purple_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "purple_concrete"
+   },
    "purple_concrete_powder" : {
       "sound" : "sand",
       "textures" : "purple_concrete_powder"
+   },
+   "purple_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "purple_concrete"
+   },
+   "purple_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "purple_concrete"
    },
    "purple_glazed_terracotta" : {
       "sound" : "stone",
@@ -4740,6 +5121,18 @@ export const blocks = {
    "purple_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_purple"
+   },
+   "purple_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "purple_wool_double_slab"
+   },
+   "purple_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "purple_wool_slab"
+   },
+   "purple_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "purple_wool_stairs"
    },
    "purpur_block" : {
       "sound" : "stone",
@@ -4858,9 +5251,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "red_concrete"
    },
+   "red_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "red_concrete"
+   },
    "red_concrete_powder" : {
       "sound" : "sand",
       "textures" : "red_concrete_powder"
+   },
+   "red_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "red_concrete"
+   },
+   "red_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "red_concrete"
    },
    "red_flower" : {
       "sound" : "grass",
@@ -4906,6 +5311,11 @@ export const blocks = {
    "red_nether_brick_wall" : {
       "sound" : "nether_brick",
       "textures" : "red_nether_brick_wall"
+   },
+   "red_poplar_leaves" : {
+      "ambient_occlusion_exponent" : 0.80,
+      "sound" : "poplar_leaves",
+      "textures" : "red_poplar_leaves"
    },
    "red_sand" : {
       "ambient_occlusion_exponent" : 0.550,
@@ -4957,6 +5367,9 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "red_sandstone_wall"
    },
+   "red_shrub" : {
+      "sound" : "red_shrub"
+   },
    "red_shulker_box" : {
       "sound" : "stone",
       "textures" : "red_shulker_box"
@@ -4987,6 +5400,18 @@ export const blocks = {
    "red_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_red"
+   },
+   "red_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "red_wool_double_slab"
+   },
+   "red_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "red_wool_slab"
+   },
+   "red_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "red_wool_stairs"
    },
    "redstone_block" : {
       "sound" : "stone",
@@ -5209,6 +5634,9 @@ export const blocks = {
          "up" : "seagrass_short",
          "west" : "seagrass_tall_top_b"
       }
+   },
+   "shelf_mushroom" : {
+      "sound" : "shelf_mushroom"
    },
    "short_dry_grass" : {
       "sound" : "grass",
@@ -5666,6 +6094,9 @@ export const blocks = {
          "west" : "stonecutter2_saw"
       }
    },
+   "straw_bed" : {
+      "sound" : "straw_bed"
+   },
    "stripped_acacia_log" : {
       "sound" : "wood",
       "textures" : {
@@ -5797,6 +6228,18 @@ export const blocks = {
       "sound" : "wood",
       "textures" : "stripped_pale_oak_log_side"
    },
+   "stripped_poplar_log" : {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "stripped_poplar_log_top",
+         "side" : "stripped_poplar_log_side",
+         "up" : "stripped_poplar_log_top"
+      }
+   },
+   "stripped_poplar_wood" : {
+      "sound" : "wood",
+      "textures" : "stripped_poplar_log_side"
+   },
    "stripped_spruce_log" : {
       "sound" : "wood",
       "textures" : {
@@ -5871,7 +6314,7 @@ export const blocks = {
       "textures" : "sulfur"
    },
    "sulfur_spike" : {
-      "sound" : "sulfur",
+      "sound" : "sulfur_spike",
       "textures" : {
          "down" : "sulfur_spike_frustum",
          "east" : "sulfur_spike_base",
@@ -6761,9 +7204,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "white_concrete"
    },
+   "white_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "white_concrete"
+   },
    "white_concrete_powder" : {
       "sound" : "sand",
       "textures" : "white_concrete_powder"
+   },
+   "white_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "white_concrete"
+   },
+   "white_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "white_concrete"
    },
    "white_glazed_terracotta" : {
       "sound" : "stone",
@@ -6799,6 +7254,18 @@ export const blocks = {
    "white_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_white"
+   },
+   "white_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "white_wool_double_slab"
+   },
+   "white_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "white_wool_slab"
+   },
+   "white_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "white_wool_stairs"
    },
    "wildflowers" : {
       "carried_textures" : "wildflowers_carried",
@@ -6865,9 +7332,21 @@ export const blocks = {
       "sound" : "stone",
       "textures" : "yellow_concrete"
    },
+   "yellow_concrete_double_slab" : {
+      "sound" : "stone",
+      "textures" : "yellow_concrete"
+   },
    "yellow_concrete_powder" : {
       "sound" : "sand",
       "textures" : "yellow_concrete_powder"
+   },
+   "yellow_concrete_slab" : {
+      "sound" : "stone",
+      "textures" : "yellow_concrete"
+   },
+   "yellow_concrete_stairs" : {
+      "sound" : "stone",
+      "textures" : "yellow_concrete"
    },
    "yellow_flower" : {
       "sound" : "grass",
@@ -6876,6 +7355,11 @@ export const blocks = {
    "yellow_glazed_terracotta" : {
       "sound" : "stone",
       "textures" : "yellow_glazed_terracotta"
+   },
+   "yellow_poplar_leaves" : {
+      "ambient_occlusion_exponent" : 0.80,
+      "sound" : "poplar_leaves",
+      "textures" : "yellow_poplar_leaves"
    },
    "yellow_shulker_box" : {
       "sound" : "stone",
@@ -6903,6 +7387,18 @@ export const blocks = {
    "yellow_wool" : {
       "sound" : "cloth",
       "textures" : "wool_colored_yellow"
+   },
+   "yellow_wool_double_slab" : {
+      "sound" : "cloth",
+      "textures" : "yellow_wool_double_slab"
+   },
+   "yellow_wool_slab" : {
+      "sound" : "cloth",
+      "textures" : "yellow_wool_slab"
+   },
+   "yellow_wool_stairs" : {
+      "sound" : "cloth",
+      "textures" : "yellow_wool_stairs"
    },
    "zombie_head" : {
       "sound" : "stone",
@@ -7061,7 +7557,7 @@ export const block_sounds = {
          },
          "item.use.on" : {
             "pitch" : 0.80,
-            "sound" : "use.azalea"
+            "sound" : "missing.legacyref"
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
@@ -7095,7 +7591,7 @@ export const block_sounds = {
          },
          "item.use.on" : {
             "pitch" : 0.80,
-            "sound" : "use.azalea_leaves"
+            "sound" : "missing.legacyref"
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
@@ -7327,7 +7823,7 @@ export const block_sounds = {
          },
          "item.use.on" : {
             "pitch" : 0.80,
-            "sound" : "use.big_dripleaf"
+            "sound" : "missing.legacyref"
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
@@ -8139,7 +8635,7 @@ export const block_sounds = {
          "default" : "",
          "hit" : {
             "pitch" : 0.60,
-            "sound" : "block.dried_ghast.hit",
+            "sound" : "missing.legacyref",
             "volume" : 0.20
          },
          "place" : {
@@ -8906,7 +9402,7 @@ export const block_sounds = {
          },
          "item.use.on" : {
             "pitch" : 1.20,
-            "sound" : "use.anvil"
+            "sound" : "missing.legacyref"
          },
          "place" : {
             "pitch" : [ 1.20, 1.250 ],
@@ -9551,6 +10047,27 @@ export const block_sounds = {
       "pitch" : 1.20,
       "volume" : 1.0
    },
+   "poplar_leaves" : {
+      "events" : {
+         "ambient" : "block.poplar_leaves.ambient",
+         "break" : {
+            "pitch" : 1.20,
+            "sound" : "block.poplar_leaves.break",
+            "volume" : 0.80
+         },
+         "default" : "",
+         "hit" : {
+            "pitch" : 0.80,
+            "sound" : "block.poplar_leaves.hit"
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.poplar_leaves.place"
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
    "potent_sulfur" : {
       "events" : {
          "ambient" : {
@@ -9588,7 +10105,7 @@ export const block_sounds = {
          },
          "item.use.on" : {
             "pitch" : 0.80,
-            "sound" : "use.powder_snow"
+            "sound" : "missing.legacyref"
          },
          "place" : {
             "pitch" : [ 0.80, 1.0 ],
@@ -9602,6 +10119,21 @@ export const block_sounds = {
          "power.on" : {
             "pitch" : 0.60,
             "sound" : "block.click"
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
+   "red_shrub" : {
+      "events" : {
+         "break" : {
+            "pitch" : 1.20,
+            "sound" : "block.red_shrub.break",
+            "volume" : 0.80
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.red_shrub.place"
          }
       },
       "pitch" : 1.0,
@@ -9899,6 +10431,21 @@ export const block_sounds = {
          "multi_swap" : "block.shelf.multi_swap",
          "place_item" : "block.shelf.place_item",
          "single_swap" : "block.shelf.single_swap"
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
+   "shelf_mushroom" : {
+      "events" : {
+         "break" : {
+            "pitch" : 1.20,
+            "sound" : "block.shelf_mushroom.break",
+            "volume" : 0.80
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.shelf_mushroom.place"
+         }
       },
       "pitch" : 1.0,
       "volume" : 1.0
@@ -10246,6 +10793,31 @@ export const block_sounds = {
       "pitch" : 1.0,
       "volume" : 1.0
    },
+   "straw_bed" : {
+      "events" : {
+         "break" : {
+            "pitch" : 1.20,
+            "sound" : "block.straw_bed.break",
+            "volume" : 0.80
+         },
+         "hit" : {
+            "pitch" : 0.50,
+            "sound" : "block.straw_bed.hit",
+            "volume" : 0.30
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.straw_bed.place"
+         },
+         "straw_bed.break_leave" : {
+            "pitch" : 1.0,
+            "sound" : "block.straw_bed.break_leave",
+            "volume" : 1.0
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
    "sulfur" : {
       "events" : {
          "break" : {
@@ -10260,6 +10832,27 @@ export const block_sounds = {
          "place" : {
             "pitch" : 0.80,
             "sound" : "block.sulfur.place"
+         }
+      },
+      "pitch" : 1.0,
+      "volume" : 1.0
+   },
+   "sulfur_spike" : {
+      "events" : {
+         "break" : {
+            "pitch" : 0.80,
+            "sound" : "block.sulfur_spike.break",
+            "volume" : 1.0
+         },
+         "hit" : {
+            "pitch" : 0.50,
+            "sound" : "block.sulfur_spike.hit",
+            "volume" : 0.30
+         },
+         "place" : {
+            "pitch" : 0.80,
+            "sound" : "block.sulfur_spike.place",
+            "volume" : 1.0
          }
       },
       "pitch" : 1.0,
@@ -10284,7 +10877,7 @@ export const block_sounds = {
          },
          "fall" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "fall.suspicious_gravel",
+            "sound" : "missing.legacyref",
             "volume" : 1.0
          },
          "hit" : {
@@ -10320,7 +10913,7 @@ export const block_sounds = {
          },
          "fall" : {
             "pitch" : [ 0.80, 1.0 ],
-            "sound" : "fall.suspicious_sand",
+            "sound" : "missing.legacyref",
             "volume" : 1.0
          },
          "hit" : {

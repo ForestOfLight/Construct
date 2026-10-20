@@ -1,23 +1,33 @@
 import { BuilderOption } from '../classes/Builder/BuilderOption';
 import { EntityComponentTypes, EquipmentSlot, GameMode, ItemStack, system, world } from '@minecraft/server';
 import { bannedBlocks, whitelistedBlockStates, bannedDimensionBlocks } from './easyPlaceConversions';
-import { placeBlock, fetchMatchingItemSlot } from '../utils';
+import { placeBlock, hasItems } from '../utils';
 import { Raycaster } from '../classes/Raycaster';
 import { Builders } from '../classes/Builder/Builders';
+import { PlayerRunners } from '../classes/Builder/PlayerRunners';
 import { Vector } from '../lib/Vector';
 import { StructureBlockConverter } from '../classes/Structure/StructureBlockConverter';
+import { disableFastEasyPlace } from './admin/disableFastEasyPlace';
 
 const locationsPlacedLastTick = new Set();
 const ACTION_ITEM = 'construct:easy_place';
-const runnerByPlayer = {};
+const placingRunners = new PlayerRunners(system);
 
 const builderOption = new BuilderOption({
     identifier: 'fastEasyPlace',
+    order: 2,
     displayName: { translate: 'construct.option.fasteasyplace.name' },
     description: { translate: 'construct.option.fasteasyplace.description' },
     howToUse: { translate: 'construct.option.fasteasyplace.howto' },
+    lock: {
+        isLocked: () => disableFastEasyPlace.isEnabled(),
+        reason: { translate: 'construct.option.lockedbyadmin' }
+    },
     onEnableCallback: (playerId) => giveActionItem(playerId),
-    onDisableCallback: (playerId) => removeActionItem(playerId)
+    onDisableCallback: (playerId) => {
+        placingRunners.stop(playerId);
+        removeActionItem(playerId);
+    }
 });
 
 function giveActionItem(playerId) {
@@ -54,19 +64,19 @@ system.runInterval(onPlacingTick);
 world.beforeEvents.playerInteractWithBlock.subscribe(onPlayerInteractWithBlock);
 world.afterEvents.itemStartUse.subscribe(onItemStartUse);
 world.afterEvents.itemStopUse.subscribe(onItemStopUse);
+world.beforeEvents.playerLeave.subscribe((event) => {
+    if (event.player)
+        placingRunners.stop(event.player.id);
+});
 
 function onItemStartUse(event) {
     if (event.itemStack?.typeId !== ACTION_ITEM)
         return;
-    runnerByPlayer[event.source.id] = system.runInterval((() => onPlacingTick(event.source)));
+    placingRunners.start(event.source.id, () => onPlacingTick(event.source));
 }
 
 function onItemStopUse(event) {
-    if (event.itemStack?.typeId !== ACTION_ITEM)
-        return;
-    const playerRunnerId = runnerByPlayer[event.source.id];
-    if (playerRunnerId)
-        system.clearRun(playerRunnerId);
+    placingRunners.stop(event.source.id);
 }
 
 function onPlacingTick(player) {
@@ -140,7 +150,7 @@ export function isBannedBlock(player, structureBlock) {
     if (!structureBlock)
         return true;
     const blockId = structureBlock.typeId.replace('minecraft:', '');
-    if (bannedBlocks.includes(blockId))
+    if (bannedBlocks.some((pattern) => pattern.test(blockId)))
         return true;
     if (bannedDimensionBlocks[player.dimension.id.replace('minecraft:', '')]?.includes(blockId))
         return true;
@@ -159,10 +169,9 @@ function isSupported(worldBlock, permutationToPlace) {
 }
 
 function tryPlaceBlockSurvival(player, block, permutation) {
-    const placeableItemStack = StructureBlockConverter.toPlaceableItemStack(permutation);
-    const itemSlotToUse = fetchMatchingItemSlot(player, placeableItemStack?.typeId);
-    if (itemSlotToUse)
-        placeBlock(player, block, permutation, itemSlotToUse);
+    const itemIdsToConsume = StructureBlockConverter.toPlaceableItemStacks(permutation).map((itemStack) => itemStack.typeId);
+    if (hasItems(player, itemIdsToConsume))
+        placeBlock(player, block, permutation, itemIdsToConsume);
 }
 
 function isBlockInsidePlayer(player, worldBlock) {

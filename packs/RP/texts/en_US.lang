@@ -6,13 +6,16 @@ construct.materialgrabber.name=Material Grabber
 ## Menus
 construct.menu.open.closechat=§8Close your chat window to access the menu.
 construct.menu.open.timeout=§8Menu timed out.
+construct.menu.open.error=§cError opening menu.
 construct.menu.submit=§2Apply
+construct.menu.pagination.filter=Filter results
+construct.menu.pagination.noresults=No results
 construct.menu.instance.button.unknown=Unknown
-construct.menu.instance.button.place=§aPlace Instance
-construct.menu.instance.button.enable=§aEnable Instance
-construct.menu.instance.button.disable=§cDisable Instance
-construct.menu.instance.button.rename=Rename Instance
-construct.menu.instance.button.delete=§cDelete Instance
+construct.menu.instance.button.place=Place
+construct.menu.instance.button.enable=Enable
+construct.menu.instance.button.disable=Disable
+construct.menu.instance.button.rename=Rename
+construct.menu.instance.button.delete=Delete
 construct.menu.instance.button.nextLayer=Increase Layer
 construct.menu.instance.button.previousLayer=Decrease Layer
 construct.menu.instance.button.move=Move Here
@@ -27,29 +30,52 @@ construct.instance.flexibleMove.alreadyMoving=§cThis instance is already being 
 construct.instance.flexibleMove.start=§aNow moving "%s". Use the Construct item when finished.	## Insert string: instance name
 construct.instance.flexibleMove.finish=§aMoved "%1" to %2.	## Insert strings: instance name, coordinates
 construct.instance.rename.error=§cError renaming instance: %s
+construct.instance.delete.title=Confirm Delete?
+construct.instance.delete.body=Are you sure you want to delete %s?
+construct.instance.delete.confirm=Delete
+construct.instance.delete.cancel=Cancel
 construct.instance.validation.alreadyRunning=§cA verification is already in progress. Please wait until it finishes.
 construct.instance.validation.formfail=§cFailed to build statistics form.
 construct.instance.menu.body=Instance: §a%1\n§fStructure: §2%2	## Insert strings: instance name, structure name
 construct.instance.menu.location=§7(%1 %2 %3 in %4)	## Is added to the body when the instance has is placed. Insert strings: x, y, z coordinates, dimension
-construct.instance.menu.rename=Enter a new name for the instance:
+construct.instance.menu.rename=Rename
 construct.instance.option.validation=Block Validation
 construct.instance.option.validation.description=Shows missing and incorrect block overlay.
 construct.instance.option.layer=Layer
 construct.instance.option.layer.description=Changes the active layer. Use 0 for all layers.
 construct.instance.option.rendermode=Render Mode
-construct.instance.option.rendermode.description=How the instance is drawn. Performance mode is great for FPS.
+construct.instance.option.rendermode.description=How the instance is drawn.
 construct.instance.option.rendermode.default=Default
+construct.instance.option.rendermode.default.description=Render both the lines and hologram for the prettiest experience.
 construct.instance.option.rendermode.performance=Performance
+construct.instance.option.rendermode.performance.description=Render only the lines for better performance. Great for FPS.
 construct.instance.option.rendermode.previewonly=Hologram Only
+construct.instance.option.rendermode.previewonly.description=Render only the hologram for a cleaner view.
 construct.instance.option.rendermode.classic=Classic
+construct.instance.option.rendermode.classic.description=Render using Construct's classic style.
 construct.instance.option.refreshrate=Refresh Rate (seconds)
-construct.instance.option.refreshrate.description=How long a full rescan takes. This controls how quickly changes not caused directly by the player are noticed. Low values can be laggy.
-construct.instance.materials.noinventory=§cNo player inventory found.
-construct.instance.materials.missing.header=§cMaterials Missing From Inventory:
-construct.instance.materials.missing.button=Show Missing Materials
+construct.instance.option.refreshrate.description=How long a full rescan takes. Block changes not caused by the player will take longer to be noticed at higher values. Low values can be laggy.
+construct.instance.materials.missing.header=§cUnplaced Materials:
+construct.instance.materials.missing.button=Show Unplaced Materials
 construct.instance.materials.layer= §7(layer %s)	## Is added to the header when the instance is in layer mode. Insert string: layer number
 construct.instance.materials.all.header=§aAll Materials:
 construct.instance.materials.all.button=Show All Materials
+construct.instance.materials.subtractcollected.button=Subtract Collected Items
+construct.instance.materials.addinventory.button=Add Inventory (%s items)	## Insert string: number of inventory items that are on the material list
+construct.instance.materials.addinventory.description=Adds the items in your inventory to the collected items list.
+construct.instance.materials.addinventory.success=§aYour inventory was added to the collected items list. §7(%s items)	## Insert string: number of items added
+construct.instance.materials.collected.button=View Collected Items
+construct.instance.materials.collected.header=Collected Items:
+construct.instance.materials.collected.empty=§7No collected items.
+construct.instance.materials.collected.clear=Clear Collected Items
+construct.instance.materials.collected.clear.title=Clear Collected Items?
+construct.instance.materials.collected.clear.body=Are you sure you want to clear the collected items for %s?	## Insert string: instance name
+construct.instance.materials.collected.clear.confirm=Clear
+construct.instance.materials.unscanned.title=§eNot all of the build has been checked in the world yet.
+construct.instance.materials.unscanned.body=§7%s blocks weren't checked. Go near the build and wait to update this list.	## Insert string: number of blocks not yet checked, already formatted with thousands separators
+construct.instance.materials.placeinstance=§7Place the instance to see only unplaced materials.
+construct.instance.materials.verifieroff=§7Turn on the verifier to see only unplaced materials.
+construct.instance.materials.empty=§7(no materials)
 
 construct.materials.grabber.menu.title= Material Grabber
 construct.materials.grabber.menu.success=§7Selected instance for material grabber: §2%s	## Insert string: instance name
@@ -63,25 +89,28 @@ construct.structure.statistics.skipped=§c[!] This analysis skipped %s blocks.	#
 construct.structure.statistics.correct=§7Correct: §a%s	## Insert string: number of correctly placed blocks
 construct.structure.statistics.stateincorrect=§7Block State Incorrect: §e%s	## Insert string: number of incorrectly stated blocks
 construct.structure.statistics.incorrect=§7Incorrect: §c%s	## Insert string: number of incorrectly placed blocks
+construct.structure.statistics.shouldbeair=§7Should Be Air: §d%s	## Insert string: number of blocks placed where the structure has air
 construct.structure.statistics.missing=§7Missing: §3%s	## Insert string: number of missing blocks
 
-construct.mainmenu.title=§l§2Construct	## This is the name of the pack.
-construct.mainmenu.selectinstance=Select an instance:
-construct.mainmenu.howto=How to Add/Remove Structures
-construct.mainmenu.settings=Builder Settings
-construct.mainmenu.newinstance=Create New Instance
-construct.mainmenu.newinstance.prompt=Enter a name for the new instance:
-construct.mainmenu.newinstance.placeholder=example_instance	## The placeholder text in the textbox where the user enters the instance name.
-construct.mainmenu.selectstructure.header=Select a structure:
-construct.mainmenu.selectstructure.other=Other
-construct.mainmenu.selectstructure.other.prompt=Enter the Structure ID:
-construct.mainmenu.selectstructure.other.placeholder=example_structure	## The placeholder text in the textbox where the user enters the structure name.
-construct.mainmenu.howto.add.header=§aHow to Add Structures:
-construct.mainmenu.howto.add.structureblock=§7Save a structure using a §fstructure block§7 or the §f/structure§7 command. This structure will only be available in the world you saved it in.
-construct.mainmenu.howto.add.or=§7§lOR§r
-construct.mainmenu.howto.add.mcstructure=§7To transfer structures §fbetween worlds§7: \n  1. Move Construct's behavior pack to your §fcom.mojang > development_behavior_packs§7. \n  2. Add a §f.mcstructure§7 file to the Construct behavior pack's §fstructures§7 folder. \n  3. Restart your world. \nYour structure should now be in the structures list. If it is not, select the §fOther§7 option and then use the filename (without '.mcstructure') as the §fStructure ID§7. After its first use, it will be added to the list of structures.
-construct.mainmenu.howto.remove.header=§cHow to Remove Structures:
-construct.mainmenu.howto.remove.body=§7- Use the §f/structure delete§7 command to remove a structure from the world.
+construct.menu.title=§l§2Construct	## This is the name of the pack.
+construct.menu.selectinstance=Select an instance:
+construct.menu.howto=How to Add/Remove Structures
+construct.menu.settings=Builder Settings
+construct.menu.newinstance=Create New Instance
+construct.menu.newinstance.prompt=Enter a name for the new instance:
+construct.menu.selectstructure.header=Select a structure below
+construct.menu.selectstructure.path=Folder
+construct.menu.selectstructure.other=Other Structure ID
+construct.menu.selectstructure.other.description=Structure ID not recognized by Construct? Type its name here to see if Minecraft can find it.
+construct.menu.selectstructure.other.notfound=Structure not found.
+construct.menu.selectstructure.other.found=Structure found!
+construct.menu.selectstructure.other.submit=Use this structure
+construct.menu.howto.add.header=§aHow to Add Structures:§r
+construct.menu.howto.add.structureblock=Save a structure using a structure block or the /structure command. This structure will only be available in the world you saved it in.
+construct.menu.howto.add.or=\n§2§lOR§r\n
+construct.menu.howto.add.mcstructure=To transfer structures between worlds:\n\n  1. Move Construct's behavior pack to your com.mojang > development_behavior_packs. \n  2. Add a .mcstructure file to the Construct behavior pack's structures folder. \n  3. Restart your world. \n\nYour structure should now be in the structures list. If it is not, enter the filename (without '.mcstructure') in the Other Structure ID field. After its first use, it will be added to the list of structures.
+construct.menu.howto.remove.header=§cHow to Remove Structures:§r
+construct.menu.howto.remove.body=Use the /structure delete command to remove a structure from the world.
 
 ## Structure Block Info Display
 construct.blockinfo.header=Structure:
@@ -97,6 +126,7 @@ construct.pickblock.inventoryfull=§cCannot pick structure block: inventory is f
 construct.option.enabled= is now enabled!
 construct.option.disabled= is now disabled.
 construct.option.setto= is now set to §f
+construct.option.lockedbyadmin=Disabled by an admin.
 construct.option.easyplace.name=Easy Place
 construct.option.easyplace.description=Always place the correct structure block.
 construct.option.easyplace.howto=Hold the Easy Place item in your offhand and place blocks in an instance to have them be corrected automatically.
@@ -104,6 +134,12 @@ construct.option.easyplace.actionprevented=§cAction prevented by Easy Place.
 construct.option.fasteasyplace.name=Fast Easy Place
 construct.option.fasteasyplace.description=Place correct structure blocks just by clicking on them.
 construct.option.fasteasyplace.howto=Hold the Easy Place item in your main hand and use it on missing blocks in a structure to place them.
+
+## Admin Options
+construct.adminoption.disableeasyplace.name=Disable Easy Place
+construct.adminoption.disableeasyplace.description=Prevent all builders from using Easy Place.
+construct.adminoption.disablefasteasyplace.name=Disable Fast Easy Place
+construct.adminoption.disablefasteasyplace.description=Prevent all builders from using Fast Easy Place.
 construct.option.materialgrabber.name=Material Grabber
 construct.option.materialgrabber.description=Pulls structure items from inventories.
 construct.option.materialgrabber.howto=Interact with inventories using the Material Grabber item to pull structure items from them.
@@ -112,6 +148,9 @@ construct.option.materialgrabber.grabbed.one=§aGrabbed 1 item.
 construct.option.materialgrabber.grabbed.many=§aGrabbed %s items.	## Insert string: number of items transferred to the player
 construct.option.defaultrendermode.name=Default Render Mode
 construct.option.defaultrendermode.description=The render mode given to instances you create.
+construct.option.clidefaultinstance.name=CLI Default Instance
+construct.option.clidefaultinstance.description=The instance used by commands when you leave out the instance name.
+construct.option.clidefaultinstance.standingLocation=Use standing location
 
 ## Commands
 construct.commands.construct=Gives you the Construct item. Use it to open the Construct menu.
@@ -151,10 +190,13 @@ construct.commands.move.success=§aMoved instance "%1" to %2 in %3.	## Insert st
 construct.commands.move.locationRequired=§cMust provide a dimension and coordinates when not running as a player.
 
 ## construct:enable
-construct.commands.enable=Enable or disable a Construct instance.
-construct.commands.enable.true=§aEnabled instance "%1".	## Insert string: instance name
-construct.commands.enable.false=§aDisabled instance "%1".	## Insert string: instance name
+construct.commands.enable=Enable a placed Construct instance.
+construct.commands.enable.success=§aEnabled instance "%1".	## Insert string: instance name
 construct.commands.error.noLocation=§cInstance "%1" has no saved location.
+
+## construct:disable
+construct.commands.disable=Disable a Construct instance.
+construct.commands.disable.success=§aDisabled instance "%1".	## Insert string: instance name
 
 ## construct:layer
 construct.commands.layer=Set the active layer of a Construct instance (Use 0 for the whole structure).
@@ -174,10 +216,18 @@ construct.commands.verifier=Toggle block validation overlay for a Construct inst
 construct.commands.verifier.enabled=§aEnabled verifier for instance "%1".	## Insert string: instance name
 construct.commands.verifier.disabled=§aDisabled verifier for instance "%1".	## Insert string: instance name
 
-## construct:builder
-construct.commands.builder=Toggle your Construct builder options.
-construct.commands.builder.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
-construct.commands.builder.unknownOption=§cUnknown option "%1".	## Insert string: option name
+## construct:option
+construct.commands.option=Change one of your Construct builder options.
+construct.commands.option.success=§aSet option "%1" to %2.	## Insert strings: option name, option value
+construct.commands.option.unknownOption=§cUnknown option "%1".	## Insert string: option name
+construct.commands.option.invalidValue=§cInvalid value "%1" for option "%2". Valid values: %3	## Insert strings: given value, option name, comma-separated list of valid values
+construct.commands.option.locked=§cOption "%1" cannot be changed: %2	## Insert strings: option name, reason the option is locked
+
+## construct:admin
+construct.commands.admin=Change Construct admin options.
+construct.commands.admin.success=§aSet admin option "%1" to %2.	## Insert strings: option name, option value
+construct.commands.admin.unknownOption=§cUnknown admin option "%1".	## Insert string: option name
+construct.commands.admin.invalidValue=§cInvalid value "%1" for admin option "%2". Expected one of: %3.	## Insert strings: given value, option name, comma-separated valid values
 
 ## construct:instanceinfo
 construct.commands.instanceinfo=Print Construct instance details to chat.
@@ -198,7 +248,9 @@ construct.commands.stats.alreadyRunning=§cA verification is already in progress
 ## construct:materials
 construct.commands.materials=Print the material list for a Construct instance.
 construct.commands.materials.headerAll=§aMaterials for "%1":§r	## Insert string: instance name
-construct.commands.materials.headerMissing=§aMissing materials for "%1":§r	## Insert string: instance name
+construct.commands.materials.headerMissing=§aUnplaced materials for "%1":§r	## Insert string: instance name
+construct.commands.materials.headerMissingInventory=§aMaterials missing from your inventory for "%1":§r	## Insert string: instance name
+construct.commands.materials.headerMissingBoth=§aUnplaced materials for "%1", minus your inventory:§r	## Insert string: instance name
 construct.commands.materials.empty=§7(no materials)
 
 ## construct:tag
@@ -213,3 +265,5 @@ construct.error.instanceExists=§cInstance "%1" already exists. Try again with a
 construct.error.structureNotFound=§cStructure ID "%1" not found. If you're looking for a structure that you put in the structures folder, please restart your world and try again.	## Insert string: structure name
 construct.error.dimensionNotFound=§cDimension "%1" not found.	## Insert string: dimension name
 construct.error.notAPlayer=§cThis command can only be used by players.
+construct.error.instanceNameRequired=§cAn instance name is required when not running as a player.
+construct.error.notInInstance=§cYou are not standing in an instance. Provide an instance name or set a CLI Default Instance in your builder options.

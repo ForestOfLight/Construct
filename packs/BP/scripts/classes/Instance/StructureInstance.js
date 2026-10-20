@@ -1,4 +1,3 @@
-import { Vector } from "../../lib/Vector";
 import { StructureOutliner } from "../Render/outline/StructureOutliner";
 import { StructureVerifier } from "../Verifier/StructureVerifier";
 import { Structure } from "../Structure/Structure";
@@ -6,6 +5,7 @@ import { InstanceOptions } from "./InstanceOptions";
 import { world, system, TicksPerSecond } from "@minecraft/server";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
 import { StructureMaterials } from "../Materials/StructureMaterials";
+import { WorldMaterials } from "../Materials/WorldMaterials";
 import { BlockPreviewRenderer } from "../Render/preview/BlockPreviewRenderer";
 import { instanceCollection } from "../Instance/InstanceCollection";
 import { InstanceExistsError } from "../Errors/InstanceExistsError";
@@ -17,6 +17,7 @@ export class StructureInstance {
     verifier = void 0;
     previewRenderer = void 0;
     materials = void 0;
+    worldMaterials = void 0;
     flexMovingPlayerId = void 0;
 
     #cachedDimension = void 0;
@@ -29,6 +30,7 @@ export class StructureInstance {
     }
 
     delete() {
+        this.worldMaterials?.cancel();
         this.disable();
         this.options.clear();
         delete this.options;
@@ -37,6 +39,7 @@ export class StructureInstance {
         delete this.verifier;
         delete this.previewRenderer;
         delete this.materials;
+        delete this.worldMaterials;
     }
 
     refreshBox() {
@@ -50,6 +53,8 @@ export class StructureInstance {
             this.previewRenderer = new BlockPreviewRenderer(this);
         if (!this.materials)
             this.materials = new StructureMaterials(this);
+        if (!this.worldMaterials)
+            this.worldMaterials = new WorldMaterials(this);
         this.outliner.refresh();
         this.verifier.refresh(true);
         this.previewRenderer.refresh(true);
@@ -160,6 +165,28 @@ export class StructureInstance {
 
     getActiveMaterials() {
         return this.materials;
+    }
+
+    getWorldMaterials() {
+        if (!this.worldMaterials)
+            return Promise.resolve(void 0);
+        return this.worldMaterials.compute();
+    }
+
+    getCollectedMaterials() {
+        return this.options.collectedMaterials;
+    }
+
+    addCollectedMaterials(collected) {
+        this.options.addCollectedMaterials(collected);
+    }
+
+    clearCollectedMaterials() {
+        this.options.clearCollectedMaterials();
+    }
+
+    canShowWorldMaterials() {
+        return this.isEnabled() && this.verifier?.isEnabled() === true;
     }
 
     isEnabled() {

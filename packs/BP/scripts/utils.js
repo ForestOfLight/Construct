@@ -1,4 +1,4 @@
-import { system, EntityComponentTypes, LiquidType, ItemStack } from '@minecraft/server';
+import { system, EntityComponentTypes, LiquidType, ItemStack, ItemTypes } from '@minecraft/server';
 import { FormCancelationReason } from '@minecraft/server-ui';
 import { specialItemPlacementConversions } from './options/easyPlaceConversions';
 import { blocks, block_sounds } from './blocks';
@@ -50,10 +50,42 @@ export function fetchMatchingItemSlotIndex(entity, itemToMatchId) {
     return smallestItemSlotIndex;
 }
 
-export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume = void 0) {
+export function hasItems(entity, itemIds) {
+    if (itemIds.length === 0)
+        return false;
+    const inventory = entity.getComponent(EntityComponentTypes.Inventory)?.container;
+    if (!inventory)
+        return false;
+    const missingCounts = {};
+    for (const itemId of itemIds)
+        missingCounts[itemId] = (missingCounts[itemId] || 0) + 1;
+    for (let index = 0; index < inventory.size; index++) {
+        const itemStack = inventory.getItem(index);
+        if (itemStack && missingCounts[itemStack.typeId] !== void 0)
+            missingCounts[itemStack.typeId] -= itemStack.amount;
+    }
+    return Object.values(missingCounts).every((count) => count <= 0);
+}
+
+export function applyConversionPatterns(id, patterns, typeRegistry = ItemTypes) {
+    const unprefixedId = id.replace('minecraft:', '');
+    for (const { input, output } of patterns) {
+        if (!input.test(unprefixedId))
+            continue;
+        const convertedIds = output.map((outputId) => unprefixedId.replace(input, outputId));
+        if (convertedIds.every((convertedId) => typeRegistry.get(convertedId.includes(':') ? convertedId : `minecraft:${convertedId}`)))
+            return convertedIds;
+    }
+    return void 0;
+}
+
+export function placeBlock(player, placedBlock, blockToPlace, itemIdsToConsume = []) {
     system.run(() => {
-        if (itemSlotToConsume)
-            consumeItem(itemSlotToConsume);
+        for (const itemId of itemIdsToConsume) {
+            const itemSlot = fetchMatchingItemSlot(player, itemId);
+            if (itemSlot)
+                consumeItem(player, itemSlot);
+        }
         placedBlock.setPermutation(blockToPlace);
         handleWaterlogging(placedBlock, blockToPlace);
         playBlockPlacementSound(player, placedBlock, blockToPlace);
@@ -63,15 +95,24 @@ export function placeBlock(player, placedBlock, blockToPlace, itemSlotToConsume 
     });
 }
 
-function consumeItem(itemSlot) {
-    if (specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]) {
-        itemSlot.setItem(new ItemStack(specialItemPlacementConversions[itemSlot.typeId.replace('minecraft:', '')]));
-    } else {
-        if (itemSlot.amount === 1)
-            itemSlot.setItem(void 0);
-        else
-            itemSlot.amount--;
+function consumeItem(player, itemSlot) {
+    const returnedItemIds = applyConversionPatterns(itemSlot.typeId, specialItemPlacementConversions) || [];
+    if (itemSlot.amount === 1)
+        itemSlot.setItem(void 0);
+    else
+        itemSlot.amount--;
+    for (const returnedItemId of returnedItemIds)
+        giveItem(player, itemSlot, new ItemStack(returnedItemId));
+}
+
+function giveItem(player, preferredSlot, itemStack) {
+    if (!preferredSlot.hasItem()) {
+        preferredSlot.setItem(itemStack);
+        return;
     }
+    const leftover = player.getComponent(EntityComponentTypes.Inventory)?.container?.addItem(itemStack);
+    if (leftover)
+        player.dimension.spawnItem(leftover, player.location);
 }
 
 function handleWaterlogging(block, structureBlock) {

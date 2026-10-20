@@ -1,6 +1,7 @@
 import { ItemStack, system } from "@minecraft/server";
 import { Vector } from "../../lib/Vector";
 import { InstanceNotPlacedError } from "../Errors/InstanceNotPlacedError";
+import { StructureBlockConverter } from "../Structure/StructureBlockConverter";
 
 class StructureMaterials {
     instance;
@@ -44,23 +45,8 @@ class StructureMaterials {
         return this.#materials;
     }
 
-    get(itemType) {
-        return this.#materials[itemType];
-    }
-
     isEmpty() {
         return Object.keys(this.#materials).length === 0;
-    }
-
-    has(itemType) {
-        return this.#materials[itemType] !== undefined;
-    }
-
-    remove(itemType, amount) {
-        if (!this.#materials[itemType]) return;
-        this.#materials[itemType].count -= amount;
-        if (this.#materials[itemType].count <= 0)
-            delete this.#materials[itemType];
     }
 
     *populateAll() {
@@ -90,12 +76,13 @@ class StructureMaterials {
     }
 
     countBlock(block) {
-        const itemStack = block?.permutation.getItemStack();
-        const typeId = itemStack?.typeId;
-        if (!typeId) return;
-        if (!this.#materials[typeId])
-            this.#materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
-        this.#materials[typeId].count++;
+        if (!block) return;
+        for (const itemStack of StructureBlockConverter.toPlaceableItemStacks(block.permutation)) {
+            const typeId = itemStack.typeId;
+            if (!this.#materials[typeId])
+                this.#materials[typeId] = { count: 0, stackSize: itemStack.maxAmount };
+            this.#materials[typeId].count++;
+        }
     }
 
     clear() {
@@ -151,20 +138,22 @@ class StructureMaterials {
         return formattedStackCount;
     }
 
-    getMaterialsDifference(container) {
-        const missingMaterials = JSON.parse(JSON.stringify(this.#materials));
+    static subtractInventory(materials, container) {
+        const remaining = {};
+        for (const [typeId, entry] of Object.entries(materials))
+            remaining[typeId] = { count: entry.count, stackSize: entry.stackSize };
         for (let slotIndex = 0; slotIndex < container.size; slotIndex++) {
             const slot = container.getSlot(slotIndex);
-            if (slot.hasItem()) {
-                const itemType = slot.getItem().typeId;
-                if (!missingMaterials[itemType])
-                    continue;
-                missingMaterials[itemType].count -= slot.amount;
-                if (missingMaterials[itemType].count <= 0)
-                    delete missingMaterials[itemType];
-            }
+            if (!slot.hasItem())
+                continue;
+            const entry = remaining[slot.typeId];
+            if (!entry)
+                continue;
+            entry.count -= slot.amount;
+            if (entry.count <= 0)
+                delete remaining[slot.typeId];
         }
-        return missingMaterials;
+        return remaining;
     }
 }
 

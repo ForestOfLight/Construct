@@ -1,6 +1,6 @@
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from '@minecraft/server';
 import { Command } from '../classes/Commands/Command';
-import { instanceCollection } from '../classes/Instance/InstanceCollection';
+import { resolveCommandInstance } from '../options/cliDefaultInstance';
 import { Vector } from '../lib/Vector';
 
 export class InstanceInfoCommand extends Command {
@@ -8,7 +8,7 @@ export class InstanceInfoCommand extends Command {
         super({
             name: 'instanceinfo',
             description: 'construct.commands.instanceinfo',
-            mandatoryParameters: [
+            optionalParameters: [
                 { name: 'instanceName', type: CustomCommandParamType.String }
             ],
             permissionLevel: CommandPermissionLevel.Any,
@@ -17,7 +17,7 @@ export class InstanceInfoCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = instanceCollection.get(instanceName);
+        const instance = resolveCommandInstance(origin, instanceName);
         const message = { rawtext: [
             this.getHeaderText(instance),
             { text: '\n' },

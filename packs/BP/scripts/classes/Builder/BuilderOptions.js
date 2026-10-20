@@ -10,7 +10,7 @@ export class BuilderOptions {
     }
 
     static getOptionIds() {
-        return Object.keys(this.options).sort((a, b) => a - b);
+        return Object.keys(this.options).sort((a, b) => this.options[a].order - this.options[b].order);
     }
 
     static isEnabled(optionId, playerId) {

@@ -15,6 +15,7 @@ export class CellShape {
         switch (verificationLevel) {
             case BlockVerificationLevel.NoMatch:
             case BlockVerificationLevel.TypeMatch:
+            case BlockVerificationLevel.ShouldBeAir:
                 return blockModelResolver.overlaySideMasks();
             case BlockVerificationLevel.Match:
                 return this.#structureBlockFlags(location);
