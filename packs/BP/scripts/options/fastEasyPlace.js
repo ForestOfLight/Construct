@@ -24,7 +24,10 @@ const builderOption = new BuilderOption({
         reason: { translate: 'construct.option.lockedbyadmin' }
     },
     onEnableCallback: (playerId) => giveActionItem(playerId),
-    onDisableCallback: (playerId) => removeActionItem(playerId)
+    onDisableCallback: (playerId) => {
+        placingRunners.stop(playerId);
+        removeActionItem(playerId);
+    }
 });
 
 function giveActionItem(playerId) {
