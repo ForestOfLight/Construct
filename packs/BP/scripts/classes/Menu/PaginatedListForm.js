@@ -1,7 +1,7 @@
 import { ObservableBoolean, ObservableString } from "@minecraft/server-ui";
 
 export class PaginatedListForm {
-    static PAGE_SIZE = 20;
+    static PAGE_SIZE = 10;
 
     #getOptions;
     #getLabel;
