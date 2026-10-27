@@ -41,14 +41,22 @@ export class InstanceForm {
             visible: showManage
         });
         form.spacer();
-        form.button({ translate: InstanceButtons.NextLayer }, () => {
-            this.instance.increaseLayer();
-            layer.setData(this.instance.getLayer());
-        }, { visible: showManage });
-        form.button({ translate: InstanceButtons.PreviousLayer }, () => {
-            this.instance.decreaseLayer();
-            layer.setData(this.instance.getLayer());
-        }, { visible: showManage });
+        form.multiButtonRow([
+            {
+                label: { translate: InstanceButtons.PreviousLayer },
+                onClick: () => {
+                    this.instance.decreaseLayer();
+                    layer.setData(this.instance.getLayer());
+                }
+            },
+            {
+                label: { translate: InstanceButtons.NextLayer },
+                onClick: () => {
+                    this.instance.increaseLayer();
+                    layer.setData(this.instance.getLayer());
+                }
+            }
+        ], { visible: showManage });
         form.divider();
     }
 
