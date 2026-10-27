@@ -27,16 +27,24 @@ export class PaginatedListForm {
         form.divider({ visible: this.#pagingVisible });
         form.label(this.#pageIndicator, { visible: this.#pagingVisible });
         form.spacer({ visible: this.#pagingVisible });
-        form.button({ text: '>' }, () => {
-            if (this.#page < PaginatedListForm.#totalPages(this.#getOptions()) - 1)
-                this.#page++;
-            this.#render();
-        }, { visible: this.#pagingVisible });
-        form.button({ text: '<' }, () => {
-            if (this.#page > 0)
-                this.#page--;
-            this.#render();
-        }, { visible: this.#pagingVisible });
+        form.multiButtonRow([
+            {
+                label: { text: '<' },
+                onClick: () => {
+                    if (this.#page > 0)
+                        this.#page--;
+                    this.#render();
+                }
+            },
+            {
+                label: { text: '>' },
+                onClick: () => {
+                    if (this.#page < PaginatedListForm.#totalPages(this.#getOptions()) - 1)
+                        this.#page++;
+                    this.#render();
+                }
+            }
+        ], { visible: this.#pagingVisible });
         form.spacer();
 
         this.#render();
