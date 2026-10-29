@@ -1,10 +1,6 @@
 import { BlockVerificationLevel } from "../Enums/BlockVerificationLevel";
 import { drawExpiringDebugBox } from "../Render/preview/ExpiringDebugBox";
 
-export class SilentSweepObserver {
-    onCellVerified() {}
-}
-
 export class DebugBoxSweepObserver {
     #instance;
     #lifetimeSeconds;

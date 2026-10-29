@@ -46,9 +46,9 @@ function removeActionItem(playerId) {
     }
     const equipment = player.getComponent(EntityComponentTypes.Equippable);
     const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
-    if (offhandItemStack?.typeId === 'construct:easy_place') {
+    if (offhandItemStack?.typeId === 'construct:easy_place') 
         equipment.setEquipment(EquipmentSlot.Offhand, void 0);
-    }
+    
 }
 
 world.beforeEvents.playerPlaceBlock.subscribe(onPlayerPlaceBlock);

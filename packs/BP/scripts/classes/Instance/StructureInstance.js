@@ -159,8 +159,7 @@ export class StructureInstance {
             throw new InstanceNotPlacedError(`[Construct] Instance '${this.options.instanceName}' is not placed.`);
         if (this.hasLayerSelected())
             return this.structure.getLayerLocations(this.getLayer()-1);
-        else
-            return this.structure.getAllLocations();
+        return this.structure.getAllLocations();
     }
 
     getActiveMaterials() {

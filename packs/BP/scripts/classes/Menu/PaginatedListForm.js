@@ -27,16 +27,24 @@ export class PaginatedListForm {
         form.divider({ visible: this.#pagingVisible });
         form.label(this.#pageIndicator, { visible: this.#pagingVisible });
         form.spacer({ visible: this.#pagingVisible });
-        form.button({ text: '>' }, () => {
-            if (this.#page < PaginatedListForm.#totalPages(this.#getOptions()) - 1)
-                this.#page++;
-            this.#render();
-        }, { visible: this.#pagingVisible });
-        form.button({ text: '<' }, () => {
-            if (this.#page > 0)
-                this.#page--;
-            this.#render();
-        }, { visible: this.#pagingVisible });
+        form.multiButtonRow([
+            {
+                label: { text: '<' },
+                onClick: () => {
+                    if (this.#page > 0)
+                        this.#page--;
+                    this.#render();
+                }
+            },
+            {
+                label: { text: '>' },
+                onClick: () => {
+                    if (this.#page < PaginatedListForm.#totalPages(this.#getOptions()) - 1)
+                        this.#page++;
+                    this.#render();
+                }
+            }
+        ], { visible: this.#pagingVisible });
         form.spacer();
 
         this.#render();
@@ -77,7 +85,7 @@ export class PaginatedListForm {
         for (let i = 0; i < PaginatedListForm.PAGE_SIZE; i++) {
             const option = options[start + i];
             this.#slots[i].option = option;
-            this.#slots[i].label.setData(option !== void 0 ? this.#getLabel(option) : '');
+            this.#slots[i].label.setData(option === void 0 ? '' : this.#getLabel(option));
             this.#slots[i].visible.setData(option !== void 0);
             if (option !== void 0 && this.#slots[i].image)
                 PaginatedListForm.#setImage(this.#slots[i].image, this.#getImage(option));

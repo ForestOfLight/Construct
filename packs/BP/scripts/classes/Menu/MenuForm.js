@@ -83,7 +83,10 @@ export class MenuForm {
             const structureId = value.trim();
             const found = structureId !== '' && world.structureManager.get(structureId) !== void 0;
             otherFound.setData(found);
-            otherDescription.setData(structureId === '' ? tipMessage : found ? foundMessage : notFoundMessage);
+            if (structureId === '')
+                otherDescription.setData(tipMessage);
+            else
+                otherDescription.setData(found ? foundMessage : notFoundMessage);
         });
         form.textField({ translate: 'construct.menu.selectstructure.other' }, observableOtherStructure, { description: otherDescription });
         form.button({ translate: 'construct.menu.selectstructure.other.submit' }, () => {

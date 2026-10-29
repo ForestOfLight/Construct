@@ -92,7 +92,7 @@ class StructureMaterials {
 
     formatString(otherMaterials = void 0) {
         const materials = otherMaterials || this.#materials;
-        let message = { rawtext: [] };
+        const message = { rawtext: [] };
         const sortedTypes = Object.keys(materials).sort(
             (a, b) => materials[b].count - materials[a].count
         );
@@ -120,8 +120,7 @@ class StructureMaterials {
 
     #formatShulkerCountString(count, shulkerSize) {
         const numShulkers = Math.floor(count / shulkerSize);
-        let formattedShulkerCount = '';
-        formattedShulkerCount = numShulkers + `\uE200`;
+        let formattedShulkerCount = numShulkers + `\uE200`;
         if (count > shulkerSize && count % shulkerSize > 0)
             formattedShulkerCount += ' + ';
         return formattedShulkerCount;

@@ -1,4 +1,4 @@
-import { world, system, EntityComponentTypes, EntitySwingSource, EquipmentSlot, HeldItemOption, GameMode } from '@minecraft/server';
+import { world, system, EntitySwingSource, HeldItemOption } from '@minecraft/server';
 import { MENU_ITEM } from '../consts';
 import { MenuForm } from './Menu/MenuForm';
 import { instanceCollection } from './Instance/InstanceCollection';
@@ -50,16 +50,6 @@ class MenuItemInteractions {
                 options.instanceName = instanceName;
         }
         new MenuForm(player, options);
-    }
-
-    static #getMainhandItemStack(player) {
-        const equippableComponent = player.getComponent(EntityComponentTypes.Equippable);
-        if (!equippableComponent)
-            return;
-        const mainhandSlot = equippableComponent.getEquipmentSlot(EquipmentSlot.Mainhand);
-        if (!mainhandSlot)
-            return;
-        return mainhandSlot.getItem();
     }
 }
 

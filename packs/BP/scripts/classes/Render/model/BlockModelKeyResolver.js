@@ -29,7 +29,7 @@ export class BlockModelKeyResolver {
                 return void 0;
             if (propertyIndex > 0)
                 key += ",";
-            key += typeof value === "boolean" ? (value ? 1 : 0) : value;
+            key += typeof value === "boolean" ? Number(value) : value;
         }
         return `${key}]`;
     }

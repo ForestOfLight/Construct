@@ -16,7 +16,7 @@ export class DeleteCommand extends Command {
     }
 
     run(origin, instanceName) {
-        const instance = instanceCollection.get(instanceName);
+        instanceCollection.get(instanceName);
         system.run(() => {
             instanceCollection.delete(instanceName);
             origin.sendMessage({ translate: 'construct.commands.delete.success', with: [instanceName] });

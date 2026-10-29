@@ -1,7 +1,6 @@
 import { Command } from '../classes/Commands/Command'; 
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, DimensionTypes, system, world } from '@minecraft/server';
 import { instanceCollection } from '../classes/Instance/InstanceCollection';
-import { InstanceExistsError } from '../classes/Errors/InstanceExistsError';
 import { Vector } from '../lib/Vector';
 
 export class PlaceCommand extends Command {

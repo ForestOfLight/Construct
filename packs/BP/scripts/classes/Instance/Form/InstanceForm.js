@@ -21,21 +21,46 @@ export class InstanceForm {
     show() {
         const label = new ObservableUIRawMessage(this.#getInstanceLabel());
         const showManage = new ObservableBoolean(this.#isEnabledAndPlaced());
-        const showPlace = new ObservableBoolean(!this.instance.hasLocation());
-        const showToggle = new ObservableBoolean(Boolean(this.instance.hasLocation()));
-        const refreshVisibility = () => {
-            showManage.setData(this.#isEnabledAndPlaced());
-            showPlace.setData(!this.instance.hasLocation());
-            showToggle.setData(Boolean(this.instance.hasLocation()));
-        };
-        const enableButtonLabel = new ObservableUIRawMessage(this.#getEnableButtonLabel());
 
-
-        let form = new CustomForm(this.player, MenuForm.title);
+        const form = new CustomForm(this.player, MenuForm.title);
         form.label(label);
         form.spacer();
         if (this.instance.hasLayers())
             this.#addLayerControls(form, showManage);
+        this.#addManagementControls(form, label, showManage);
+        form.divider({ visible: showManage });
+        this.#addEnablementControls(form, label, showManage);
+        FormUtils.tryShow(form);
+    }
+
+    #addLayerControls(form, showManage) {
+        const layer = new ObservableNumber(this.instance.getLayer(), { clientWritable: true });
+        layer.subscribe(newLayer => this.instance.setLayer(newLayer));
+        form.slider({ translate: 'construct.instance.option.layer' }, layer, 0, this.instance.getMaxLayer(), {
+            description: { translate: 'construct.instance.option.layer.description' },
+            visible: showManage
+        });
+        form.spacer();
+        form.multiButtonRow([
+            {
+                label: { translate: InstanceButtons.PreviousLayer },
+                onClick: () => {
+                    this.instance.decreaseLayer();
+                    layer.setData(this.instance.getLayer());
+                }
+            },
+            {
+                label: { translate: InstanceButtons.NextLayer },
+                onClick: () => {
+                    this.instance.increaseLayer();
+                    layer.setData(this.instance.getLayer());
+                }
+            }
+        ], { visible: showManage });
+        form.divider();
+    }
+
+    #addManagementControls(form, label, showManage) {
         form.button({ translate: InstanceButtons.Settings }, () => {
             form.close();
             new InstanceSettingsForm(this.player, this.instance);
@@ -56,7 +81,18 @@ export class InstanceForm {
             form.close();
             this.startFlexibleMovement();
         }, { visible: showManage });
-        form.divider({ visible: showManage });
+    }
+
+    #addEnablementControls(form, label, showManage) {
+        const showPlace = new ObservableBoolean(!this.instance.hasLocation());
+        const showToggle = new ObservableBoolean(Boolean(this.instance.hasLocation()));
+        const refreshVisibility = () => {
+            showManage.setData(this.#isEnabledAndPlaced());
+            showPlace.setData(!this.instance.hasLocation());
+            showToggle.setData(Boolean(this.instance.hasLocation()));
+        };
+        const enableButtonLabel = new ObservableUIRawMessage(this.#getEnableButtonLabel());
+
         form.button(enableButtonLabel, () => {
             if (this.instance.isEnabled())
                 this.instance.disable();
@@ -79,26 +115,6 @@ export class InstanceForm {
             form.close();
             new MenuForm(this.player, { jumpToInstance: false });
         });
-        FormUtils.tryShow(form);
-    }
-
-    #addLayerControls(form, showManage) {
-        const layer = new ObservableNumber(this.instance.getLayer(), { clientWritable: true });
-        layer.subscribe(newLayer => this.instance.setLayer(newLayer));
-        form.slider({ translate: 'construct.instance.option.layer' }, layer, 0, this.instance.getMaxLayer(), {
-            description: { translate: 'construct.instance.option.layer.description' },
-            visible: showManage
-        });
-        form.spacer();
-        form.button({ translate: InstanceButtons.NextLayer }, () => {
-            this.instance.increaseLayer();
-            layer.setData(this.instance.getLayer());
-        }, { visible: showManage });
-        form.button({ translate: InstanceButtons.PreviousLayer }, () => {
-            this.instance.decreaseLayer();
-            layer.setData(this.instance.getLayer());
-        }, { visible: showManage });
-        form.divider();
     }
 
     #isEnabledAndPlaced() {

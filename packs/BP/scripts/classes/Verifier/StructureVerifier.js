@@ -4,10 +4,12 @@ import { CellVerifier } from "./CellVerifier";
 import { GridBuffers } from "./GridBuffers";
 import { PriorityPass } from "./PriorityPass";
 import { RefreshRate } from "./RefreshRate";
-import { DebugBoxSweepObserver, SilentSweepObserver } from "./SweepObserver";
+import { DebugBoxSweepObserver } from "./DebugBoxSweepObserver";
+import { SilentSweepObserver } from "./SilentSweepObserver";
 import { VerificationRun } from "./VerificationRun";
 import { VerificationSweep } from "./VerificationSweep";
-import { InstanceVerifierSettings, StandaloneVerifierSettings } from "./VerifierSettings";
+import { InstanceVerifierSettings } from "./InstanceVerifierSettings";
+import { StandaloneVerifierSettings } from "./StandaloneVerifierSettings";
 
 export class StructureVerifier {
     #instance;

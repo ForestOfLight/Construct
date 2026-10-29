@@ -55,9 +55,9 @@ function removeActionItem(playerId) {
     }
     const equipment = player.getComponent(EntityComponentTypes.Equippable);
     const offhandItemStack = equipment?.getEquipment(EquipmentSlot.Offhand);
-    if (offhandItemStack?.typeId === ACTION_ITEM) {
+    if (offhandItemStack?.typeId === ACTION_ITEM) 
         equipment.setEquipment(EquipmentSlot.Offhand, void 0);
-    }
+    
 }
 
 system.runInterval(onPlacingTick);
@@ -135,11 +135,11 @@ function tryPlaceBlock(player, worldBlock, structureBlock) {
         permutation = StructureBlockConverter.toDefaultState(permutation);
     if (!isSupported(worldBlock, permutation))
         return;
-    if (gameMode === GameMode.Creative) {
+    if (gameMode === GameMode.Creative) 
         placeBlock(player, worldBlock, permutation);
-    } else if (gameMode === GameMode.Survival) {
+     else if (gameMode === GameMode.Survival) 
         tryPlaceBlockSurvival(player, worldBlock, permutation);
-    }
+    
 }
 
 function locationIsPlaceable(player, worldBlock) {
