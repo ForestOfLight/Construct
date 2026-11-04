@@ -91,12 +91,18 @@ class StructureMaterials {
     }
 
     formatString(otherMaterials = void 0) {
-        const materials = otherMaterials || this.#materials;
         const message = { rawtext: [] };
+        for (const line of this.formatLines(otherMaterials))
+            message.rawtext.push(line, { text: '\n' });
+        return message;
+    }
+
+    formatLines(otherMaterials = void 0) {
+        const materials = otherMaterials || this.#materials;
         const sortedTypes = Object.keys(materials).sort(
             (a, b) => materials[b].count - materials[a].count
         );
-        for (const blockType of sortedTypes) {
+        return sortedTypes.map(blockType => {
             let count = materials[blockType].count;
             let countStr = '';
             const stackSize = materials[blockType].stackSize;
@@ -111,11 +117,12 @@ class StructureMaterials {
             }
             if (count > 0)
                 countStr += count;
-            message.rawtext.push({ text: '§3' });
-            message.rawtext.push({ translate: new ItemStack(blockType).localizationKey })
-            message.rawtext.push({ text: `§f: ${countStr}\n` });
-        }
-        return message;
+            return { rawtext: [
+                { text: '§3' },
+                { translate: new ItemStack(blockType).localizationKey },
+                { text: `§f: ${countStr}` }
+            ]};
+        });
     }
 
     #formatShulkerCountString(count, shulkerSize) {

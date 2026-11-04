@@ -22,19 +22,21 @@ export class InstanceMaterialsForm {
         const canShowWorld = this.instance.canShowWorldMaterials();
         const showMissing = new ObservableBoolean(canShowWorld, { clientWritable: true });
         const subtractCollected = new ObservableBoolean(false, { clientWritable: true });
-        const body = new ObservableUIRawMessage(await this.#buildBody(canShowWorld, false));
+        const { header, lines } = await this.#buildBody(canShowWorld, false);
         if (!this.#isStillValid())
             return;
-        const refresh = () => this.#refresh(body, showMissing.getData(), subtractCollected.getData());
-        showMissing.subscribe(refresh);
-        subtractCollected.subscribe(refresh);
 
         const form = new CustomForm(this.player, MenuForm.title);
         form.toggle({ translate: MaterialsButtons.ShowMissing }, showMissing, { visible: canShowWorld });
         form.toggle({ translate: MaterialsButtons.SubtractCollected }, subtractCollected);
         form.divider();
-        form.label(body);
+        const headerMessage = new ObservableUIRawMessage(header);
+        form.label(headerMessage);
+        const body = FormUtils.buildPaginatedText(form, lines, { emptyMessage: { translate: 'construct.instance.materials.empty' } });
         form.spacer();
+        const refresh = () => this.#refresh(headerMessage, body, showMissing.getData(), subtractCollected.getData());
+        showMissing.subscribe(refresh);
+        subtractCollected.subscribe(refresh);
         const showAddInventory = new ObservableBoolean(true, { clientWritable: true });
         const showInventoryAdded = new ObservableBoolean(false, { clientWritable: true });
         const inventoryAddedMessage = new ObservableUIRawMessage({ text: '' });
@@ -77,12 +79,13 @@ export class InstanceMaterialsForm {
         return { translate: 'construct.instance.materials.addinventory.success', with: [String(matches.getTotal())] };
     }
 
-    async #refresh(body, showMissing, subtractCollected) {
+    async #refresh(headerMessage, body, showMissing, subtractCollected) {
         const renderId = ++this.#renderId;
-        const message = await this.#buildBody(showMissing, subtractCollected);
+        const { header, lines } = await this.#buildBody(showMissing, subtractCollected);
         if (renderId !== this.#renderId || !this.#isStillValid())
             return;
-        body.setData(message);
+        headerMessage.setData(header);
+        body.setLines(lines);
     }
 
     async #buildBody(showMissing, subtractCollected) {
@@ -95,19 +98,17 @@ export class InstanceMaterialsForm {
         if (subtractCollected)
             materials = this.instance.getCollectedMaterials().subtractFrom(materials);
 
-        const body = { rawtext: [] };
-        body.rawtext.push({ translate: showsMissing ? 'construct.instance.materials.missing.header' : 'construct.instance.materials.all.header' });
+        const header = { rawtext: [] };
+        header.rawtext.push({ translate: showsMissing ? 'construct.instance.materials.missing.header' : 'construct.instance.materials.all.header' });
         if (this.instance.hasLayerSelected())
-            body.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(this.instance.getLayer())] });
-        body.rawtext.push({ text: '§f\n\n' });
+            header.rawtext.push({ translate: 'construct.instance.materials.layer', with: [String(this.instance.getLayer())] });
         const note = showsMissing
             ? WorldMaterials.formatUnscannedNote(worldMaterials.unscannedCount)
             : this.#worldUnavailableNote();
         if (note)
-            body.rawtext.push(note, { text: '§f\n\n' });
-        const list = baseMaterials.formatString(materials);
-        body.rawtext.push(list.rawtext.length > 0 ? list : { translate: 'construct.instance.materials.empty' });
-        return body;
+            header.rawtext.push({ text: '§f\n\n' }, note);
+        header.rawtext.push({ text: '§f' });
+        return { header, lines: baseMaterials.formatLines(materials) };
     }
 
     #worldUnavailableNote() {

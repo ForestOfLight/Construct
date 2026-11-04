@@ -1,4 +1,5 @@
 import { ObservableBoolean, ObservableString } from "@minecraft/server-ui";
+import { PageControls } from "./PageControls";
 
 export class PaginatedListForm {
     static PAGE_SIZE = 10;
@@ -8,8 +9,7 @@ export class PaginatedListForm {
     #getImage;
     #getPagingOptions;
     #slots;
-    #pageIndicator;
-    #pagingVisible;
+    #controls;
     #noResultsVisible;
     #page = 0;
 
@@ -21,30 +21,18 @@ export class PaginatedListForm {
         this.#noResultsVisible = new ObservableBoolean(false, { clientWritable: true });
         form.label({ translate: 'construct.menu.pagination.noresults' }, { visible: this.#noResultsVisible });
         this.#slots = PaginatedListForm.#buildSlots(form, onSelect, getImage !== void 0);
-        this.#pageIndicator = new ObservableString('', { clientWritable: true });
-        this.#pagingVisible = new ObservableBoolean(false, { clientWritable: true });
-
-        form.divider({ visible: this.#pagingVisible });
-        form.label(this.#pageIndicator, { visible: this.#pagingVisible });
-        form.spacer({ visible: this.#pagingVisible });
-        form.multiButtonRow([
-            {
-                label: { text: '<' },
-                onClick: () => {
-                    if (this.#page > 0)
-                        this.#page--;
-                    this.#render();
-                }
+        this.#controls = new PageControls(form, {
+            onPrevious: () => {
+                if (this.#page > 0)
+                    this.#page--;
+                this.#render();
             },
-            {
-                label: { text: '>' },
-                onClick: () => {
-                    if (this.#page < PaginatedListForm.#totalPages(this.#getOptions()) - 1)
-                        this.#page++;
-                    this.#render();
-                }
+            onNext: () => {
+                if (this.#page < PaginatedListForm.#totalPages(this.#getOptions()) - 1)
+                    this.#page++;
+                this.#render();
             }
-        ], { visible: this.#pagingVisible });
+        });
         form.spacer();
 
         this.#render();
@@ -78,7 +66,6 @@ export class PaginatedListForm {
     }
 
     #render() {
-        this.#pagingVisible.setData(PaginatedListForm.#totalPages(this.#getPagingOptions()) > 1);
         const options = this.#getOptions();
         const pages = PaginatedListForm.#totalPages(options);
         const start = this.#page * PaginatedListForm.PAGE_SIZE;
@@ -90,7 +77,7 @@ export class PaginatedListForm {
             if (option !== void 0 && this.#slots[i].image)
                 PaginatedListForm.#setImage(this.#slots[i].image, this.#getImage(option));
         }
-        this.#pageIndicator.setData(`${this.#page + 1} / ${pages}`);
+        this.#controls.update(this.#page, pages, PaginatedListForm.#totalPages(this.#getPagingOptions()) > 1);
         this.#noResultsVisible.setData(options.length === 0);
     }
 
@@ -116,6 +103,6 @@ export class PaginatedListForm {
     }
 
     static #totalPages(options) {
-        return Math.max(1, Math.ceil(options.length / PaginatedListForm.PAGE_SIZE));
+        return PageControls.totalPages(options.length, PaginatedListForm.PAGE_SIZE);
     }
 }

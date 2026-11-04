@@ -14,7 +14,8 @@ export class InstanceCollectedForm {
     show() {
         const collected = this.instance.getCollectedMaterials();
         const form = new CustomForm(this.player, MenuForm.title);
-        form.label(this.#buildBody(collected));
+        form.label({ translate: 'construct.instance.materials.collected.header' });
+        FormUtils.buildPaginatedText(form, this.#buildLines(collected), { emptyMessage: { translate: 'construct.instance.materials.collected.empty' } });
         form.spacer();
         if (!collected.isEmpty()) {
             form.button({ translate: 'construct.instance.materials.collected.clear' }, () => {
@@ -29,17 +30,11 @@ export class InstanceCollectedForm {
         FormUtils.tryShow(form);
     }
 
-    #buildBody(collected) {
-        const body = { rawtext: [{ translate: 'construct.instance.materials.collected.header' }, { text: '§f\n\n' }] };
-        if (collected.isEmpty()) {
-            body.rawtext.push({ translate: 'construct.instance.materials.collected.empty' });
-            return body;
-        }
+    #buildLines(collected) {
         const materials = {};
         for (const [typeId, amount] of collected.entries())
             materials[typeId] = { count: amount, stackSize: new ItemStack(typeId).maxAmount };
-        body.rawtext.push(this.instance.getActiveMaterials().formatString(materials));
-        return body;
+        return this.instance.getActiveMaterials().formatLines(materials);
     }
 
     async #clearWithConfirmation() {

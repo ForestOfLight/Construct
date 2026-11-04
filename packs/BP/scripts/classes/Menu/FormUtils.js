@@ -1,5 +1,6 @@
 import { PaginatedListForm } from "./PaginatedListForm";
 import { FolderedListForm } from "./FolderedListForm";
+import { PaginatedTextForm } from "./PaginatedTextForm";
 import { RESOURCE_PACK_UUID } from "../../consts";
 
 export class FormUtils {
@@ -16,6 +17,10 @@ export class FormUtils {
 
     static buildPaginatedList(form, options, selectionCallback) {
         return PaginatedListForm.build(form, options, selectionCallback);
+    }
+
+    static buildPaginatedText(form, lines, textOptions = {}) {
+        return new PaginatedTextForm(form, lines, textOptions);
     }
 
     static buildFolderedList(form, entries, selectionCallback, pathLabel = 'Path') {
